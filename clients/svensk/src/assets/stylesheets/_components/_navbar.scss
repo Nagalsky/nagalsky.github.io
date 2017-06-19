@@ -1,0 +1,57 @@
+/* NAVBAR */
+
+$navbar-bg: $danger-color;
+
+.navbar {
+  background: $navbar-bg;
+  margin-bottom:0;
+  border: none;
+  border-radius: 0;
+  min-height: 100%;
+  .dropdown-menu {
+    border-color: $navbar-bg;
+    background: $navbar-bg;
+    >li {
+      >a {
+        color: $white;
+        font-weight:$font-bold;
+        padding: 5px 15px;
+        &:hover, &:focus {
+          background: darken($navbar-bg, 5%);
+        }
+      }
+    }
+  }
+}
+.navbar-header-nav {
+  @include respond-to(sm) {
+    margin: 0;
+  }
+  >li {
+    @include respond-to(sm-min) {
+      border-right: 1px solid darken($navbar-bg, 3%);
+    }
+    &.open, &.active {
+      >a {
+        background: darken($navbar-bg, 5%);
+        &:hover, &:focus {
+          background: darken($navbar-bg, 5%);
+        }
+      }
+    }
+    >a {
+      color: $white;
+      font-weight:$font-bold;
+      padding:8px 15px;
+      @include respond-to(md) {
+        padding:8px 12px;
+      }
+      @include respond-to(sm) {
+        padding:7.5px 15px;
+      }
+      &:hover, &:focus {
+        background: darken($navbar-bg, 5%);
+      }
+    }
+  }
+}

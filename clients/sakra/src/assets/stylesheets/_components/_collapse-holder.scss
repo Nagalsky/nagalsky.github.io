@@ -1,0 +1,45 @@
+/* COLLAPSE HOLDER */
+
+.collapse-holder {
+  padding: 20px;
+  border: 1px solid $mustyc;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.collapse-holder__header {
+  @extend .flex, .flex-between, .flex-item-center;
+}
+.collapse-holder__body--outer {
+  margin-top: 20px;
+}
+.collapse-holder__header-title {
+  margin-bottom: 0px;
+}
+.collapse-holder__body {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.collapse-trigger {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  background: $mustyc;
+  color: $limed-spruce;
+  @extend .flex, .flex-content-center, .flex-item-center;
+}
+.collapse-trigger {
+  &.collapsed {
+    .collapse-trigger__icon {
+      @extend .sakra-icon-plus;
+    }
+  }
+}
+.collapse-trigger__icon {
+  &:before {
+    margin-left: 0;
+    margin-right: 0;
+    line-height: normal;
+  }
+}

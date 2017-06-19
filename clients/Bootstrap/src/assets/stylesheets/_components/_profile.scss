@@ -1,0 +1,77 @@
+/* PROFILE */
+
+$profile-hero-height: 375px;
+$profile-hero-heights-sm: 94px;
+$profile-yellow-bg: $kournikova;
+$profile-hero-logo-width-sm: 142px;
+
+.profile__hero {
+  min-height: $profile-hero-height;
+  @extend .d-flex, .flex-column, .align-items-center, .justify-content-center;
+  @include media-breakpoint-down(md) {
+    min-height: $profile-hero-heights-sm;
+  }
+}
+.profile__hero--yellow {
+  background: $profile-yellow-bg;
+}
+.profile__hero__logo {
+  @extend .img-fluid;
+  @include media-breakpoint-down(xs) {
+    max-width: $profile-hero-logo-width-sm;
+  }
+}
+.profile {
+  margin-top: -35px;
+  font-size: 13px;
+  color: $gray;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: -25px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: -15px;
+  }
+  .list-social {
+    margin-bottom: 10px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+}
+.profile__avatar {
+  border: 6px solid $white;
+  border-radius: 10px;
+  width: 165px;
+  height: 165px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  position: relative;
+  //transform: translateY(-15px);
+  @include media-breakpoint-down(md) {
+    width: 130px;
+    height: 130px;
+    //transform: translateY(-35px);
+  }
+  @include media-breakpoint-down(xs) {
+    //transform: translateY(-5px);
+    width: 66px;
+    height: 66px;
+  }
+}
+.profile__description {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  @include media-breakpoint-down(md) {
+    padding-top: 35px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-top: 20px;
+  }
+}
+.profile__description__title {
+  color: $mine-shaft-dark;
+  margin-bottom: .5rem;
+}

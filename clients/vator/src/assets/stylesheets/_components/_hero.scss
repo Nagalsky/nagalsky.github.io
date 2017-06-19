@@ -1,0 +1,48 @@
+/* HERO */
+
+.hero {
+  min-height: 400px;
+  padding: 20px 250px;
+  text-align: center;
+  @include respond-to(md) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @include respond-to(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include respond-to(xs) {
+    min-height: 280px;
+  }
+  @extend .flex-centered, .flex-column;
+}
+
+.hero-blocks {
+  @extend .flex, .flex-wrap;
+  margin-bottom: 10px;
+  @include respond-to(xs) {
+    flex-direction: column;
+  }
+}
+.hero-blocks__item {
+  @extend .flex-centered, .flex-column;
+  flex: 1;
+  min-height: 390px;
+  padding: 20px 70px;
+  text-align: center;
+  @include respond-to(md) {
+    padding: 20px 15px;
+  }
+  @include respond-to(xs) {
+    min-height: 370px;
+  }
+  &+.hero-blocks__item {
+    @include respond-to(xs-min) {
+      margin-left: 20px;
+    }
+    @include respond-to(xs) {
+      margin-top: 10px;
+    }
+  }
+}

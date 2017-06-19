@@ -1,0 +1,61 @@
+/* OFFCANVAS */
+.offcanvas-holder {
+	@include clearfix();
+}
+.offcanvas-menu-trigger {
+	float: left;
+	color: $white;
+	font-size: 26px;
+	margin-top: -4px;
+	i {
+		&:before {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.offcanvas-menu-holder {
+	@include clearfix();
+	@include respond-to(xs) {
+		width: $offcanvas-width;
+		position: fixed;
+		z-index: 900;
+		height: 100%;
+		background: $offcanvas-bg;
+		top: 0;
+		left: 0;
+		transform: translate3d(-$offcanvas-width, 0px, 0px);
+		overflow-y: scroll;
+		@include transition(250ms);
+		padding: 5px 15px 15px 15px;
+		&.open {
+			transform: translate3d(0px, 0px, 0px);
+		}
+	}
+	.nav {
+		>li {
+			@include respond-to(xs) {
+				padding: 5px 0;
+			}
+		}
+	}
+}
+.offcanvas-header {
+	@include clearfix();
+	margin-bottom: 20px;
+}
+.offcanvas-logo {
+	float: left;
+	width: 94px;
+	margin-top: 5px;
+	img {
+		width: 100%;
+	}
+}
+.close-offcanvas {
+	float: right;
+	color: $white;
+	font-size: 22px;
+	margin-right: -10px;
+}

@@ -1,0 +1,37 @@
+/* SECTION */
+
+.section {
+	position: relative;
+	padding: 80px 0;
+	@include respond-to(xs) {
+		padding: 25px 0;
+	}
+}
+.section-header {
+	padding-bottom: 15px;
+}
+.section-sm-top {
+	padding-top: 40px;
+	@include respond-to(xs) {
+		padding: 25px 0;
+	}
+}
+
+.section-hero {
+	height: 100vh;
+	@include respond-to(xs) {
+		height: 240px;
+	}
+	&.section-hero-sm {
+		background-position: 50% 30%;
+		@include respond-to(xs-min) {
+			height: 430px;
+		}
+	}
+}
+
+.section-has-bg {
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

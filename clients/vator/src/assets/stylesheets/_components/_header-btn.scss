@@ -1,0 +1,67 @@
+/* HEADER BTN */
+
+$header__nav__trigger-width: 36px;
+$header__nav__trigger-height: 27px;
+$header__nav__trigger-span-height: 3px;
+.header__nav__trigger {
+  @include respond-to(xs-min) {
+    display: none;
+  }
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $header__nav__trigger-width;
+  height: $header__nav__trigger-height;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 500;
+}
+.header__nav__trigger__bar {
+  display: block;
+  position: absolute;
+  height: $header__nav__trigger-span-height;
+  width: 100%;
+  background: $white;
+  opacity: 1;
+  left: 0;
+  @include transition(250ms);
+  transform: translateY(-50%);
+  top: 50%;
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    height: $header__nav__trigger-span-height;
+    width: 100%;
+    background: $white;
+    opacity: 1;
+    left: 0;
+    @include transition(250ms);
+  }
+  &:before {
+    top: -12px;
+  }
+  &:after {
+    bottom: -12px;
+  }
+}
+.header__nav__trigger--is-active {
+  .header__nav__trigger__bar {
+    background: transparent;
+    &:before, &:after {
+      background: $gray-thin;
+    }
+    &:before {
+      transform: rotate(45deg);
+      top: 0px;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+}

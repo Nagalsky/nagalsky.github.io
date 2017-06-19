@@ -1,0 +1,102 @@
+/* NAV */
+
+$navbar-height: 74px;
+$navbar-height-xs: 58px;
+
+.navbar {
+	@include transition(450ms);
+	border: none;
+	border-radius: 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: transparent;
+	z-index: 300;
+	//min-height: $navbar-height;
+	@include respond-to(sm) {
+		background: rgba($black, .8);
+	}
+	@include respond-to(xs) {
+		min-height: $navbar-height-xs;
+	}
+	&.navbar-sticky {
+		background: rgba($black, .8);
+	}
+	&.navbar-dark {
+		background: rgba($black, .8);
+	}
+	&.navbar-black {
+		background: rgba($black, 1);
+	}
+}
+.navbar-nav {
+	@include respond-to(sm) {
+		margin-top: 0;
+	}
+	>li {
+		>a {
+			padding: 27px 40px;
+			font-size: 14px;
+			color: $white;
+			font-family: $font-base-bold;
+			@include respond-to(md) {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+			@include respond-to(sm) {
+				padding: 15px;
+			}
+			&:hover, &:focus, &.active {
+				background: transparent;
+				color: $link-color;
+			}
+		}
+		&:last-child {
+			>a {
+				padding-right: 15px;
+			}
+		}
+	}
+	&.navbar-nav-large {
+		>li {
+			>a {
+				font-size:12px;
+				padding: 27px 20px;
+				@include respond-to(md) {
+					padding:27px 10px;
+				}
+				@include respond-to(sm) {
+					padding: 15px;
+				}
+			}
+		}
+	}
+}
+.navbar-brand {
+	height: auto;
+	@include respond-to(sm) {
+		width: 200px;
+	}
+	>img {
+		width: 100%;
+	}
+}
+.navbar-collapse {
+	border: none;
+	box-shadow: none;
+}
+.navbar-toggle {
+	color: $white;
+	font-size: 26px;
+	margin: 0;
+}
+.navbar-btn {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	@include respond-to(sm) {
+		margin-left: 15px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+}

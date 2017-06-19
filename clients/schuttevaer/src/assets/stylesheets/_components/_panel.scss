@@ -1,0 +1,30 @@
+/* PANEL */
+
+.panel {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  font-family: $font-secondary;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.panel-sky {
+  .panel-body {
+    background: $sky;
+  }
+}
+.panel-body {
+  @include respond-to(sm-min) {
+    padding: 30px
+  }
+}
+
+.panel-heading, .panel-footer {
+  @include respond-to(sm-min) {
+    padding: 15px 30px
+  }
+}
+.panel__title {
+  font-size: 1.105em;
+}

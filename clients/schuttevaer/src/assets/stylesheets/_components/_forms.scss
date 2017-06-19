@@ -1,0 +1,74 @@
+/* FORMS */
+
+$field-border-color: $gray-soft;
+$filed-border-focus-color: $tundora;
+$filed-font-family: $font-secondary;
+$filed-font-weight: $font-bold;
+$filed-height: 43px;
+$filed-font-size: 18px;
+$filed-font-size-xs: 14px;
+$placeholder-color: $dover-gray-soft;
+$placeholder-font-size: 18px;
+$placeholder-font-family: $font-secondary;
+$placeholder-opacity: 0;
+$placeholder-font-weight: $font-bold;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius: 0;
+	font-size: $filed-font-size;
+	font-family: $filed-font-family;
+	font-weight: $filed-font-weight;
+	box-shadow: none;
+	height: $filed-height;
+	@include respond-to(xs) {
+		font-size: $filed-font-size-xs;
+	}
+	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-family, $font-weight: $placeholder-font-weight);
+	&:focus {
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+		box-shadow: none;
+	}
+}
+
+.form-group {
+	position: relative;
+}
+
+
+.form-search {
+	background: $wild-sand;
+	padding: 20px 0;
+	display: none;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 71px;
+	z-index: 300;
+	border-bottom: 1px solid $navbar-border-color;
+	@include respond-to(md) {
+		display: none !important;
+	}
+	.form-group {
+		margin-bottom: 0;
+		@extend .flex;
+	}
+	.form-control {
+		height: 45px;
+		box-shadow: none;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid $field-border-color;
+		padding: 0;
+		flex: 1;
+		@include custom-placeholder($color: $placeholder-color, $font-size: 22px, $font-family: $placeholder-font-family, $font-weight: $placeholder-font-weight);
+		&:focus {
+			border-color: $filed-border-focus-color;
+		}
+	}
+	.btn-submit {
+		flex-shrink: 0;
+		margin-left: 20px;
+	}
+}

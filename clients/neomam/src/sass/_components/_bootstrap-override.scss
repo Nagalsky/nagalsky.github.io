@@ -1,0 +1,93 @@
+/* BOOTSTRAP OVERRIDE */
+
+.container-xs {
+	width: 820px;
+	@include respond-to(sm) {
+		width: 750px;
+	}
+	@include respond-to(xs) {
+		width: 100%;
+	}
+}
+.container-sm {
+	width: 920px;
+	@include respond-to(sm) {
+		width: 750px;
+	}
+	@include respond-to(xs) {
+		width: 100%;
+	}
+}
+.container-lg {
+	max-width: 1260px;
+}
+.row-flex {
+	display: flex;
+	flex-direction: row;
+	@include respond-to(xs) {
+		display: block;
+	}
+}
+.row-no-padding {
+	>[class*='col-'] {
+		padding: 0;
+		@include respond-to(xs) {
+			padding-left:15px;
+			padding-right:15px;
+		}
+	}
+}
+
+
+.row-narrow {
+	margin: 0;
+	@include respond-to(xs) {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	>[class*='col-'] {
+		padding: 0 !important;
+		@include respond-to(xs) {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+	}
+}
+
+
+
+.row-flex-sm {
+	display: flex;
+	flex-direction: row;
+	@include respond-to(sm) {
+		flex-direction: column;
+	}
+}
+
+.container-fluid {
+	@include respond-to(xs-min) {
+		padding-left: 50px;
+		padding-right: 50px;
+		.row {
+			margin-left: -50px;
+			margin-right: -50px;
+		}
+		[class*='col-'] {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
+.row-flex-grid {
+	@include respond-to(xs-min) {
+		display: flex;
+		align-items: center;
+		&:before, &:after {
+			content: none;
+		}
+		>[class*='col-'] {
+			float: none;
+		}
+	}
+}

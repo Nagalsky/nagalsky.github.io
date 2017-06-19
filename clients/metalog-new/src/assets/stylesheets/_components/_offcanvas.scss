@@ -1,0 +1,69 @@
+/* OFFCANVAS */
+
+$offcanvas-width: 500px;
+$offcanvas-width-xs: 70%;
+$offcanvas-bg: $linen;
+
+#offcanvas {
+	@include clearfix();
+	@include respond-to(xs) {
+		@include transition(300ms);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 500;
+		height: 100%;
+		width: $offcanvas-width;
+		background: $offcanvas-bg;
+		overflow-y: scroll;
+		padding: 15px;
+		transform: translate3d($offcanvas-width, 0, 0);
+		&.open {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@include respond-to(xs) {
+		width: $offcanvas-width-xs;
+		transform: translate3d(100%, 0, 0);
+	}
+}
+
+.offcanvas-toggle {
+	color: $success;
+	font-size: 24px;
+	border: none;
+	margin-bottom: 0;
+	margin-top: 12px;
+	padding-bottom: 13px;
+}
+
+#offcanvas-mask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba($black, .65);
+	z-index: 60;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(250ms);
+	will-change: auto;
+	cursor: pointer;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.btn-offcanvas-close {
+	color: $success;
+	background: transparent;
+	border: none;
+	padding: 0px 5px 5px 0px;
+	font-size: 32px;
+	font-family: $font-bold;
+	@include respond-to(xs-min) {
+		display: none;
+	}
+}

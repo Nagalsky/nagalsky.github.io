@@ -1,0 +1,36 @@
+/* ALERT */
+
+.alert {
+  border-radius: 0;
+  font-family: $font-secondary;
+}
+
+.alert-has-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.alert-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $wild-sand;
+  margin-bottom: 0;
+  border-top: 1px solid $gray-soft;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include respond-to(xs) {
+    text-align: center;
+  }
+}
+.alert__btn-close {
+  flex-shrink: 0;
+  margin-left: 120px;
+  @include respond-to(md) {
+    margin-left: 80px;
+  }
+  @include respond-to(sm) {
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,65 @@
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+.timeline--white {
+  color: $white;
+}
+.timeline__item {
+  position: relative;
+  @include respond-to(xs) {
+    padding-left: 35px;
+  }
+  &:not(:last-child) {
+    padding-bottom: 70px;
+    @include respond-to(xs) {
+      padding-bottom: 35px;
+    }
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  &:before {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #e7553d;
+    left: -97.5px;
+    z-index: 20;
+    @include respond-to(sm) {
+      left: -57.5px;
+    }
+    @include respond-to(xs) {
+      left: 2.5px;
+    }
+  }
+  &:after {
+    width: 1px;
+    height: 100%;
+    background: #693f3c;
+    left: -90px;
+    z-index: 10;
+    @include respond-to(sm) {
+      left: -50px;
+    }
+    @include respond-to(xs) {
+      left: 10px;
+    }
+  }
+  &:last-child {
+    &:after {
+      content: none;
+    }
+  }
+}
+.timeline__counter {
+  color: #e7553d;
+}

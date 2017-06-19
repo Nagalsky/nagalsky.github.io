@@ -1,0 +1,40 @@
+/* PANEL */
+
+$panel-bg: $gallery;
+$panel-border-color: $alto;
+
+.panel {
+  border-radius: 0;
+  box-shadow: none;
+  background: $panel-bg;
+  border-color: $panel-border-color;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.panel-article {
+  .panel-body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.panel-article-img {
+  @extend .img-responsive, .center-block;
+  margin-bottom: 25px;
+  max-width: 440px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel-group {
+  .panel {
+    border-radius: 0;
+    margin-bottom: 0;
+    &+.panel {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+}

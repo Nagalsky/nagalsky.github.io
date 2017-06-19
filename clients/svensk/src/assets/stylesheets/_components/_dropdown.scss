@@ -1,0 +1,43 @@
+/* BOOTSTRAP DROPDOWN */
+
+.dropdown {
+  @include respond-to(sm-min) {
+    &:hover {
+      .dropdown-menu {
+        opacity:1;
+        visibility: visible;
+        display: block;
+        @include translate3d(0, 0px, 0);
+      }
+    }
+  }
+}
+.open {
+  .dropdown-menu {
+    opacity:1;
+    visibility: visible;
+    @include translate3d(0, 0px, 0);
+  }
+}
+.dropdown-menu {
+  @include transition(250ms);
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 12px;
+  @include respond-to(sm-min) {
+    @include translate3d(0, 20px, 0);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+  >li {
+    &.active {
+      >a {
+        background: darken($navbar-bg, 5%);
+        &:hover, &:focus {
+          background: darken($navbar-bg, 5%);
+        }
+      }
+    }
+  }
+}

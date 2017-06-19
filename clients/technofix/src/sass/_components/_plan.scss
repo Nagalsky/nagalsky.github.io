@@ -1,0 +1,106 @@
+/* PLAN */
+
+.plan-holder {
+	position: relative;
+	margin-bottom: 20px;
+	color: $white;
+	text-align: center;
+	&.plan-success {
+		.plan-header {
+			background: $success;
+		}
+	}
+	&.plan-gold {
+		.plan-header {
+			background: #dabd1c;
+		}
+	}
+	&.plan-gray {
+		.plan-header {
+			background: #dcddde;
+		}
+	}
+}
+.plan-header, .plan-pre-body, .plan-body, .plan-footer {
+	padding: 15px 15px;
+}
+.plan-header {
+	border-radius: 4px 4px 0 0;
+	background: rgba($black, .65);
+	text-align: center;
+}
+.plan-title {
+	color: $white;
+	font-family: $font-bold;
+}
+.plan-footer {
+	padding-left: 55px;
+	padding-right: 55px;
+	border-radius: 0 0 4px 4px;
+	@include respond-to(sm) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.plan-pre-body, .plan-footer {
+	background: rgba($black, .55);
+}
+.plan-pre-body {
+	min-height: 160px;
+	display: flex;
+	flex-direction: column;
+	@include respond-to(sm) {
+		min-height: 240px;
+	}
+	@include respond-to(xs) {
+		display: block;
+		min-height: auto;
+	}
+}
+.pre-body-content {
+	flex: 1;
+}
+.plan-price {
+	display: flex;
+	justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.plan-price-item {
+	font-family: $font-bold;
+	display: flex;
+	justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+.plan-price-item + .plan-price-item {
+	border-left: 1px solid $silver-chalice;
+	margin-left: 15px;
+	padding-left: 15px;
+}
+.plan-price-period {
+	color: $silver-chalice;
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+
+.plan-body {
+	background: rgba($black, .35);
+}
+
+.plan-list {
+	@extend .list-unstyled;
+	>li {
+		border-bottom: 1px dashed $silver-chalice;
+		padding: 7.5px 0;
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+
+

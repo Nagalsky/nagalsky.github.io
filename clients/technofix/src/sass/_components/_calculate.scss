@@ -1,0 +1,32 @@
+/* CALCULATE */
+
+.calculate-holder {
+	margin-bottom: 20px;
+}
+.calculate-item {
+	position: relative;
+	@include clearfix;
+	padding-right: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: 2px;
+	}
+	&.calculate-footer {
+		padding-top: 10px;
+		border-top: 1px solid darken($catswill-white, 20%);
+		.calculate-price {
+			font-size: 18px;
+			font-family: $font-bold;
+			top: 12px;
+		}
+	}
+}
+.calculate-price {
+	position: absolute;
+	top: 0;
+	right: 0;
+}

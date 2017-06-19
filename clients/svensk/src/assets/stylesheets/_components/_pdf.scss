@@ -1,0 +1,22 @@
+/* PDF */
+
+.pdf-holder {
+  position: relative;
+  @extend .flex, .flex-item-center;
+  flex-wrap: wrap;
+  line-height: 16px;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 30px;
+    background: url('../images/temp/pdf.svg') no-repeat 50% 50% / cover;
+    margin-right: 10px;
+  }
+}
+.pdf-holder__body {
+  font-weight: $font-bold;
+}
+.pdf-holder__title {
+  margin-bottom: 2px;
+}

@@ -1,0 +1,31 @@
+/* NOTIFICATION */
+
+.notification {
+	position: relative;
+	padding: 20px 0;
+	color: $white;
+	@include respond-to(xs) {
+		text-align: center;
+	}
+}
+.notification__danger {
+	background: #e7553d;
+}
+.notification__icon {
+	font-size: 58px;
+	display: inline-block;
+	@include respond-to(xs) {
+		margin-bottom: 10px;
+	}
+}
+.notification__title {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: $font-base-bold;
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+}
+.notification__text {
+	font-size: 18px;
+	font-family: $font-base-light;
+}

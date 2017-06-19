@@ -1,0 +1,149 @@
+/* NAV */
+.navbar {
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 900;
+	border-radius: 0;
+	margin-bottom: 0;
+	border: none;
+	@include transition(350ms);
+	@include respond-to(xs) {
+		padding-top: 15px;
+		padding-right: 15px;
+		background: rgba($black, .75);
+	}
+	&.navbar-scroll, &.navbar-dark {
+		background: rgba($black, .55);
+		padding: 15px 0 25px 0;
+		@include respond-to(xs) {
+			padding: 15px 15px 15px 0px;
+		}
+		.site-logo {
+			display: block;
+			@include respond-to(sm) {
+				display: none;
+			}
+		}
+		.navbar-nav {
+			margin-top: 10px;
+			@include respond-to(xs) {
+				margin-top: 0;
+			}
+		}
+	}
+	&.navbar-bg {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 15px 0 25px 0;
+		@include respond-to(xs) {
+			padding: 15px 15px 15px 0px;
+		}
+		.site-logo {
+			display: block;
+			@include respond-to(sm) {
+				display: none;
+			}
+		}
+		.navbar-nav {
+			margin-top: 10px;
+			@include respond-to(xs) {
+				margin-top: 0;
+			}
+		}
+	}
+	.dropdown {
+		&.open {
+			@include respond-to(xs) {
+				background: $outer-space;
+			}
+		}
+	}
+	.dropdown-menu {
+		min-width: 520px;
+		padding: 15px;
+		border-radius: 0;
+		background: rgba($black, .90);
+		border-top: 1px solid $blaze-orange;
+		@include respond-to(sm) {
+			min-width: 415px;
+		}
+		@include respond-to(xs) {
+			min-width: 100%;
+			padding: 5px 15px;
+		}
+	}
+	.site-logo {
+		float: left;
+		width: 120px;
+		margin-right: 40px;
+		margin-bottom: 0;
+		display: none;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.navbar-nav {
+	@include transition(350ms);
+	@include respond-to(xs) {
+		margin-top: 0;
+	}
+	>li {
+		margin-right: 30px;
+		@include respond-to(sm) {
+			margin-right: 20px;
+		}
+		@include respond-to(xs) {
+			margin-right: 0;
+			display: block;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.open {
+			>a {
+				background: transparent;
+				&:hover, &:focus {
+					background: transparent;
+				}
+			}
+		}
+		>a {
+			color: $white;
+			font-size: 16px;
+			text-transform: uppercase;
+			padding-left: 0;
+			padding-right: 0;
+			@include respond-to(xs) {
+				font-size: 14px;
+				padding: 5px 15px;
+			}
+			font-family: $font-bold;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			&:hover, &:focus, &.active {
+				background: transparent;
+				color: $white;
+			}
+			&.nav-phone {
+				background: rgba($black, .3);
+				display: block;
+				border-radius: 25px;
+				position: relative;
+				z-index: 100;
+				padding: 5px 15px;
+				&:hover, &:focus, &.active {
+					color: $link-color;
+				}
+				>span, i {
+					color: $blaze-orange;
+				}
+			}
+		}
+	}
+}

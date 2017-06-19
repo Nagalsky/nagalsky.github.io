@@ -1,0 +1,31 @@
+/* NAV */
+
+$nav-height: 50px;
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	border: none;
+	min-height: $nav-height;
+	font-family: $font-secondary;
+	box-shadow: 0px 0px 3px 1px rgba($black, .5);
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+.navbar-nav {
+	>li {
+		&.active {
+			a {
+				color: $black;
+			}
+		}
+		>a {
+			&:hover, &:focus, &:active {
+				color: $black;
+			} 
+		}
+	}
+}

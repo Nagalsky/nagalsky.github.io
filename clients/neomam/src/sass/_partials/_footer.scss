@@ -1,0 +1,43 @@
+/* FOOTER */
+
+$footer-bg: $cod-gray;
+$footer-color: $silver;
+$footer-fs: 14px;
+
+$footer-secondary-bg: $tuna;
+$footer-secondary-color: $gray;
+
+footer {
+	padding: 25px 0;
+	background: $footer-bg;
+	color: $footer-color;
+	font-size: $footer-fs;
+	@include respond-to(xs) {
+		text-align: center;
+	}
+}
+
+.footer--secondary {
+	background: $footer-secondary-bg;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	color: $footer-secondary-color;
+}
+
+.footer-logo {
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	img {
+		width: 100%;
+	}
+}
+.footer-address {
+	a {
+		color: $footer-color;
+		&:hover, &:focus {
+			color: $link-color;
+		}
+	}
+}

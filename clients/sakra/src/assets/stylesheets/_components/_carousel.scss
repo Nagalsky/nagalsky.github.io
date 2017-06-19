@@ -1,0 +1,218 @@
+/* CAROUSEL */
+
+.carousel-list {
+
+}
+.carousel-list--has-bg {
+  background: $mustyc;
+}
+.carousel-list--tabs {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: $mustyc;
+  }
+  .carousel-list__item {
+    background: $white;
+    &+.carousel-list__item {
+      margin-left: 5px;
+    }
+    &.active {
+      bottom: -1px;
+      .list-truncate__link {
+        top: -1px;
+        background: $white;
+      }
+    }
+  }
+  .carousel-list__link {
+    border: 1px solid $mustyc;
+    border-bottom: none;
+    background: $mustyc;
+    text-transform: none;
+  }
+}
+.carousel-list__item {
+  display: inline-block !important;
+  &.active {
+    .carousel-list__link {
+      color: $primary;
+      background: $white;
+      &:hover {
+        color: $primary;
+        background: $white;
+      }
+    }
+  }
+}
+.carousel-list__link {
+  color: $limed-spruce;
+  display: inline-block;
+  padding: 8.5px 15px;
+  text-transform: uppercase;
+  font-family: $font-base-semibold;
+  font-size: 14px;
+  position: relative;
+  &:hover, &.active {
+    color: $primary;
+    background: $white;
+  }
+}
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: $font-icons;
+    z-index: 300;
+    width: 40px;
+    height: 39px;
+    &:hover, &:focus {
+        outline: none;
+    }
+    &.slick-disabled {
+        opacity: 0;
+    }
+    &:before {
+        font-size: 20px;
+        line-height: 1;
+        color: $limed-spruce;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.slick-prev {
+    left: 0px;
+    @include gradient-horizontal($start-color: $white, $end-color: rgba($white, .25), $start-percent: 0%, $end-percent: 100%);
+    &:before {
+        content: '\e803';
+    }
+}
+
+.slick-next {
+    right: 0px;
+    @include gradient-horizontal($start-color: rgba($white, .25), $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+    &:before {
+        content: '\e804';
+    }
+}

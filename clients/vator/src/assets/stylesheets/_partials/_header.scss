@@ -1,0 +1,157 @@
+/* HEADER */
+
+$header-bg-xs: $gray-thin;
+$header-height-xs: 71px;
+
+.header {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  @include respond-to(xs) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $header-bg-xs;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: $header-height-xs;
+    z-index: 100;
+    box-shadow: 0px 0px 1px .5px rgba($white, .5);
+  }
+}
+.header__inner {
+  @include respond-to(xs-min) {
+    display: flex;
+  }
+}
+.header__logo-holder {
+  position: relative;
+  @include respond-to(xs-min) {
+    flex-basis: 200px;
+    margin-right: 30px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  @include respond-to(sm-min) {
+    flex-basis: 300px;
+  }
+}
+.header__logo {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  @include respond-to(xs) {
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* @include respond-to(xs-mini) {
+    max-width: 140px;
+  } */
+}
+.header__logo__img {
+  width: 100%;
+  max-width: 100%;
+}
+.header__nav-holder {
+  @include respond-to(xs-min) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  @include respond-to(xs) {
+    @include transition(250ms);
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -100;
+    background: $white;
+    padding-top: 20px;
+  }
+}
+.header__nav-holder--is-open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 300;
+}
+.header__nav-holder__item {
+  display: flex;
+  &:first-of-type {
+    order: 2;
+    @include respond-to(xs-min) {
+      margin-top: 7px;
+    }
+  }
+  &+.header__nav-holder__item {
+    @include respond-to(xs) {
+      margin-top: 10px;
+    }
+  }
+}
+.header__nav-holder__logo {
+  margin-bottom: 20px;
+  display: block;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__nav {
+  @extend .list-unstyled;
+  width: 100%;
+  display: block;
+  text-align: center;
+  @include respond-to(xs-min) {
+    text-align: right;
+  }
+}
+.header__nav__item {
+  display: inline-block;
+}
+.header__nav__link {
+  display: inline-block;
+  padding: 0px 7.5px;
+  color: $gray;
+  &:hover, &:focus {
+    color: $gold;
+  }
+}
+.header__nav__full {
+  display: flex;
+  text-align: center;
+  @include respond-to(xs) {
+    flex-direction: column;
+  }
+  .header__nav__item {
+    flex: 1;
+    &+.header__nav__item {
+      @include respond-to(xs-min) {
+        margin-left: 1px;
+      }
+      @include respond-to(xs) {
+        margin-top: 1px;
+      }
+    }
+  }
+  .header__nav__link {
+    display: block;
+    background: $gray-thin;
+    color: $white;
+    padding: 14.5px 15px;
+    font-size: 19px;
+    font-family: $font-third;
+    @include respond-to(sm) {
+      font-size: 14px;
+      padding: 10px 5px;
+    }
+    @include respond-to(xs) {
+      font-size: 16px;
+    }
+    &:hover, &:focus {
+      background: $gray;
+    }
+  }
+}

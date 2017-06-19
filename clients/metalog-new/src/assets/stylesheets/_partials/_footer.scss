@@ -1,0 +1,49 @@
+/* FOOTER */
+
+$footer-bg: $white;
+
+footer {
+	background: $footer-bg;
+}
+
+.footer-top {
+	padding: 60px 0 90px 0;
+	border-bottom: 8px solid $warning; 
+	@include respond-to(xs) {
+		padding: 25px 0;
+		border-bottom-width: 4px;
+	}
+}
+.footer__item {
+	@include respond-to(xs) {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+.footer__title {
+	margin-bottom: 3px;
+}
+.footer__text {
+	margin-bottom: 1px;
+}
+
+.footer-bottom {
+	padding: 50px 0;
+	@include respond-to(xs) {
+		padding: 25px 0;
+	}
+}
+
+.footer-nav {
+	text-align: center;
+}
+.footer-nav__item {
+	display: inline-block;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: $font-bold;
+}
+.footer-nav__link {
+	padding: 5px 15px;
+}

@@ -1,0 +1,79 @@
+/* RESET STYLES */
+
+* {
+	&:hover, &:focus, &:active {
+		outline: none !important;
+	}
+}
+
+a:hover, a:focus, a:visited {
+	text-decoration: none;
+	outline: none;
+	outline-offset: 0;
+}
+
+ol, ul {
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.relative {
+	position: relative;
+}
+.z-index {
+	position: relative;
+	z-index: 10;
+}
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.full-width {
+	width: 100%;
+	display: block;
+}
+.overflow {
+	overflow: hidden;
+}
+.push-xs-down {
+	@include respond-to(xs) {
+		margin-bottom: 25px;
+	}
+}
+.push-sm-down {
+	@include respond-to(sm) {
+		margin-bottom: 25px;
+	}
+}
+
+.divider {
+	height: 25px;
+	width: 100%;
+	display: block;
+	&.divider__lg {
+		height:60px;
+		@include respond-to(xs) {
+			height:35px;
+		}
+	}
+	&.divider__sm {
+		height:35px;
+	}
+	&.divider__xs {
+		height:20px;
+	}
+}
+.img-content {
+	@include respond-to(xs) {
+		max-width:400px;
+	}
+}
+
+.content-item-holder {
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}

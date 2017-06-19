@@ -1,0 +1,54 @@
+/* FOOTER */
+
+$footer-bg: $gallery;
+$footer-border: $alto;
+
+footer {
+  background: $footer-bg;
+  padding: 30px 0 20px 0;
+  border-top: 1px solid $footer-border;
+  @include respond-to(xs) {
+    font-size: $fs-sm;
+  }
+  address {
+  	a {
+  		color: $body-color;
+  		&:hover, &:focus {
+  			color: darken($link-color, 10%);
+  		}
+  	}
+  }
+}
+.footer-top-holder {
+  border-bottom: 1px solid $footer-border;
+  margin-bottom:20px;
+  @include respond-to(xs) {
+    padding-bottom:20px;
+  }
+}
+#footer-logo {
+  display: block;
+  max-width:165px;
+  width:100%;
+  @include respond-to(xs) {
+    max-width:220px;
+  }
+  img, svg {
+    width:100%;
+  }
+}
+.footer__item {
+  margin-bottom:35px;
+  @include respond-to(xs-min) {
+    &+.footer__item {
+      &:not(:last-child) {
+        border-left: 1px solid $footer-border;
+      }
+      &:nth-last-child(2) {
+        @include respond-to(sm) {
+          border: none;
+        }
+      }
+    }
+  }
+}

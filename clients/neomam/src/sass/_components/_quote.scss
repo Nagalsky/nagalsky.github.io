@@ -1,0 +1,37 @@
+/* QUOTE */
+
+.quote-holder {
+	position: relative;
+	font-size: 18px;
+	font-family: $font-secondary-italic;
+	padding: 30px 0;
+	z-index: 10;
+	@include respond-to(xs) {
+		font-size: 16px;
+	}
+	&:before, &:after {
+		font-family: 'fontello';
+		position: absolute;
+		color: $white;
+		font-size: 42px;
+		z-index: -1;
+		@include respond-to(xs) {
+			font-size: 34px;
+		}
+	}
+	&:before {
+		content: '\e805';
+		top: 5px;
+		left: 0;
+	}
+	&:after {
+		content: '\e806';
+		right: 0;
+		bottom: 5px;
+	}
+	&.quote__icon-danger {
+		&:before, &:after {
+			color: #c45b4b;
+		}
+	}
+}

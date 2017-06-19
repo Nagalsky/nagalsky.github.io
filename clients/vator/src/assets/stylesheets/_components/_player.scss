@@ -1,0 +1,20 @@
+/* PLAYER */
+.player-trigger {
+	position: relative;
+	display: block;
+	font-family: $font-icons;
+}
+.player-trigger--has-play-btn {
+	&:before {
+		@extend .vator-icon-play-button;
+		color: $white;
+		font-size: 4em;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.player-trigger__img {
+	@extend .img-responsive, .center-block;
+}

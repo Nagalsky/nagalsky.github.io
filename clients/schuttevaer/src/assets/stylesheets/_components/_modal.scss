@@ -1,0 +1,23 @@
+/* MODAL */
+
+.modal {
+  @include respond-to(xs-min) {
+    text-align: center;
+  }
+  &:before {
+    @include respond-to(xs-min) {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
+  }
+}
+
+.modal-dialog {
+  @include respond-to(xs-min) {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+}

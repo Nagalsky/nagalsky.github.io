@@ -1,0 +1,333 @@
+html, body {
+	font-family: $body-main-font;
+	color: $main-text-color;
+	-webkit-font-smoothing: antialiased;
+	font-size: $body-font-size;
+}
+
+body {
+	background: $boby-bg;
+	&.space-top {
+		padding-top: 82px;
+		@include respond-to(xs) {
+			padding-top: 65px;
+		}
+	}
+	&.offcanvas-open {
+		overflow: hidden;
+		&:before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($black, .5);
+			z-index: 800;
+			display: block;
+		}
+	}
+}
+
+
+* {
+	&:hover, &:focus {
+		outline: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: $title-color;
+	font-family: $font-light;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	small, .small {
+		color: inherit;
+		font-size: 50%;
+	}
+	&.title-large-margin {
+		margin-bottom: 45px;
+		@include respond-to(sm) {
+			margin-bottom: 20px;
+		}
+	}
+	a {
+		color: inherit;
+	}
+	&.title-md {
+		font-size: 36px;
+		@include respond-to(sm) {
+			font-size: 24px;
+		}
+	}
+}
+
+h1, .h1 {
+	font-size: 54px;
+	@include respond-to(sm) {
+		font-size: 38px;
+	}
+}
+h2, .h2 {
+	font-size: 48px;
+	@include respond-to(sm) {
+		font-size: 26px;
+	}
+}
+h3, .h3 {
+	font-size: 30px;
+	@include respond-to(sm) {
+		font-size: 21px;
+	}
+}
+h4, .h4 {
+	font-size: 24px;
+	@include respond-to(sm) {
+		font-size: 19px;
+	}
+}
+h5, .h5 {
+	font-size: 18px;
+	line-height: 1.4;
+	@include respond-to(sm) {
+		font-size: 16px;
+	}
+}
+h6, .h6 {
+	font-size: 14px;
+	@include respond-to(sm) {
+	}
+}
+
+.same-line-height {
+	line-height: 24px;
+}
+
+.title-bordered {
+	padding-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid transparent;
+	&.title-bordered-success {
+		border-bottom-color: rgba($success-secondary, .3);
+	}
+	&.title-bordered-success-soft {
+		border-bottom-color: $bondi-blue;
+	}
+}
+.title-icon {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	border-radius: 4px;
+	border: 2px solid $warning;
+	padding: 5px;
+	margin-right: 20px;
+	text-align: center;
+	img {
+		max-width: 100%;
+		vertical-align: initial;
+	}
+}
+
+.title-large-margin {
+	margin-bottom: 45px;
+	@include respond-to(xs) {
+		margin-bottom: 30px;
+	}
+}
+
+.title-sm-margin {
+	margin-bottom: 30px;
+	@include respond-to(xs) {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+a {
+	color: $link-color;
+	@include transition(250ms);
+	text-decoration: none;
+	&:hover, &:focus {
+		color: darken($link-color, 10%);
+		text-decoration: none;
+	}
+	&.link-success {
+		color: $blue-chill;
+		&:hover, &:focus {
+			color: darken($blue-chill, 5%);
+		}
+	}
+	&.link-warning {
+		color: $link-color;
+		&:hover, &:focus {
+			color: darken($link-color, 10%);
+		}
+	}
+}
+.link-add {
+	text-transform: uppercase;
+	font-size: 16px;
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 35px;
+	@include respond-to(xs) {
+		margin-bottom: 15px;
+	}
+}
+.link-add__icon {
+	margin-right: 5px;
+	font-size: 22px;
+	&:before {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+button {
+	@include transition(150ms);
+	border: none;
+	background: transparent;
+}
+p {
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.larger-fs {
+	font-size: 16px;
+	@include respond-to(xs) {
+		font-size: 14px;
+	}
+}
+
+.lead {
+	font-size: 20px;
+}
+
+/*Font classes*/
+.font-light {
+	font-family: $font-light;
+}
+.font-regular {
+	font-family: $font-regular;
+}
+.font-medium {
+	font-family: $font-medium;
+}
+.font-bold {
+	font-family: $font-bold;
+}
+
+
+/*Color classes*/
+.text-warning {
+	color: $warning;
+}
+.text-primary {
+	color: $primary;
+}
+.text-mutted {
+	color: $mutted;
+}
+.text-yellow {
+	color: $yellow;
+}
+.text-success {
+	color: $success;
+}
+.text-succes-soft {
+	color: $bondi-blue;
+}
+.text-success-light {
+	color: $success-lighten;
+}
+.text-success-secondary {
+	color: $success-secondary;
+}
+.text-gray {
+	color: $gray;
+}
+.text-gray-dark {
+	color: $gray-dark;
+}
+.text-info {
+	color: $info;
+}
+.text-danger {
+	color: $danger;
+}
+.text-secondary {
+	color: $secondary;
+}
+.text-white {
+	color: $white;
+}
+.text-black {
+	color: $black;
+}
+.text-gold {
+	color: #ffd800;
+}
+
+
+/*Background classes*/
+.bg-warning {
+	background-color: $warning;
+}
+.bg-primary {
+	background-color: $primary;
+}
+.bg-mutted {
+	background-color: $mutted;
+}
+.bg-yellow {
+	background-color: $yellow;
+}
+.bg-success {
+	background-color: $success;
+}
+.bg-success-secondary {
+	background-color: $success-secondary;
+}
+.bg-gray {
+	background-color: $gray;
+}
+.bg-gray-soft {
+	background: $desert-storm;
+}
+.bg-info {
+	background-color: $info;
+}
+.bg-danger {
+	background-color: $danger;
+}
+.bg-secondary {
+	background-color: $secondary;
+}
+.bg-gray-light {
+	background: $mystic;
+}
+
+.font-size-secondary {
+	font-size: $font-size-secondary;
+	@include respond-to(xs) {
+		font-size: 14px;
+	}
+}
+.font-size-xs {
+	font-size: $font-size-xs;
+}
+
+.text-shadow {
+	text-shadow: 0px 2px 1px rgba($black, .5);
+}
+
+.fs16 {
+	font-size: 16px;
+	line-height: 22px;
+}

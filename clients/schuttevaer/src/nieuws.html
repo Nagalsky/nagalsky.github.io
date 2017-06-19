@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<title>Nieuws page</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+</head>
+
+<body>
+
+	<div class="banner hidden-md hidden-sm hidden-xs">
+		<div class="container">
+			Banner goes here
+		</div><!-- container -->
+	</div><!-- banner -->
+
+	<header class="header">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	        <h1>
+	          <img src="assets/images/elements/logo.svg" class="navbar-brand__img" alt="">
+	          <span class="navbar-brand__title">Zoet, Zout & Zakelijk</span>
+	        </h1>
+	      </a>
+	    </div><!-- navbar-header -->
+
+	    <ul class="nav navbar-nav pull-right">
+	      <li class="navbar-nav__item hidden-md hidden-sm hidden-xs">
+	        <button type="button" class="btn btn-primary navbar-btn header__navbar-btn btn-bold">Abonneren</button>
+	      </li>
+	      <li class="navbar-nav__item">
+	        <button type="button" class="btn btn-link navbar-btn header__navbar-btn" data-toggle="modal" data-target="#modal-login">
+	          <span class="hidden-md hidden-sm hidden-xs">Inloggen</span>
+	          <i class="schuttevaer-icon-user visible-md visible-sm visible-xs"></i>
+	        </button>
+	      </li>
+	    </ul>
+	  </div><!-- container -->
+
+	  <nav class="navbar">
+	    <div class="container">
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+	      <div class="collapse navbar-collapse" id="navbar-collapse">
+	        <form action="" class="navbar__form-search visible-md visible-sm visible-xs">
+	          <div class="form-group">
+	            <input type="text" class="form-control" placeholder="Zoeken">
+	            <button type="submit" class="btn btn-submit">
+	              <i class="schuttevaer-icon-search"></i>
+	            </button>
+	          </div><!-- form-group -->
+	        </form>
+
+	        <ul class="nav navbar-nav navbar-nav--bold">
+	          <li class="navbar-nav__logo">
+	            <a href="#"><img src="assets/images/elements/logo.svg" class="navbar-nav__logo__img" alt=""></a>
+	          </li>
+	          <li class="navbar-nav__shrink"><a href="#">Home</a></li>
+	          <li class="active hidden-md hidden-sm hidden-xs"><a href="#">Nieuws</a></li>
+	          <li class="dropdown visible-md visible-sm visible-xs">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nieuws <span class="caret"></span></a>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Actueel</a></li>
+	              <li><a href="#">Cruise- en chartervaart</a></li>
+	              <li><a href="#">Havens en vaarwegen</a></li>
+	              <li><a href="#">Offshore</a></li>
+	              <li><a href="#">Scheepsbouw en reparatie</a></li>
+	              <li><a href="#">Schip en bedrijf</a></li>
+	              <li><a href="#">Techniek</a></li>
+	              <li><a href="#">Telematica</a></li>
+	              <li><a href="#">Varend bestaan</a></li>
+	              <li><a href="#">Vervoermarkt</a></li>
+	              <li><a href="#">Visserij</a></li>
+	              <li><a href="#">Zeevaart</a></li>
+	              <li><a href="#">Dossiers</a></li>
+	            </ul><!-- dropdown-menu -->
+	          </li><!-- dropdown -->
+	          <li><a href="#">Producten & Diensten</a></li>
+	          <li><a href="#">Branchegids</a></li>
+	          <li><a href="#">Vacatures</a></li>
+	          <li class="visible-md visible-sm visible-xs">
+	            <button type="button" class="btn btn-primary navbar-btn btn-block btn-bold">Abonneren</button>
+	          </li>
+	        </ul><!-- navbar-nav -->
+
+	        <ul class="nav navbar-nav navbar-nav--divider navbar-right text-uppercase">
+	          <li><a href="#">NIEUWSBRIEF</a></li>
+	          <li><a href="#">E-paper</a></li>
+	          <li class="hidden-md hidden-sm hidden-xs"><a href="#" class="navbar-form-search-trigger"><i class="schuttevaer-icon-search"></i></a></li>
+	        </ul><!-- navbar-nav -->
+	      </div><!-- /.navbar-collapse -->
+	    </div><!-- /.container -->
+
+	    <form action="" class="form-search">
+	      <div class="container">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Zoek op onderwerp, rubriek of bedrijf">
+	          <button type="submit" class="btn btn-primary btn-bold btn-submit btn-sm">Zoek</button>
+	        </div><!-- form-group -->
+	      </div><!-- container -->
+	    </form>
+
+	  </nav>
+
+	</header><!-- header -->
+
+
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-7 push-xs-down">
+						<h1 class="font-base font-black">Succes onder de hamer</h1>
+
+						<div class="content-item">
+							<ul class="list-share list-inline">
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--facebook">
+										<i class="schuttevaer-icon-facebook"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--twitter">
+										<i class="schuttevaer-icon-twitter"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--mail">
+										<i class="schuttevaer-icon-mail"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+							</ul><!-- list-share__item -->
+
+							<p class="font-secondary">ALMERE <span class="text-gray">- 8 JUNI 2017, 09:54</span></p>
+							<h3 class="fw-normal title-divider">Het antieke dagtochtenschip Succes wordt opnieuw online geveild, ditmaal via veilinghuis BVA-Auctions.com. De Succes is het oudste nog varende stoom-passagiersschip in Nederland. Bieden op de voormalig Pakjesboot 13 is mogelijk van 14 tot en met 21 juni 2017.</h3>
+
+							<figure class="lightbox__item">
+								<a href="assets/images/temp/nieuws_26825_18827_item_original.jpg" title="De in 1994 compleet gerestaureerde en gerenoveerde voormalige Rijn-stoomsleepboot Succes is 17 juni te bezichtigen in Almere. (Foto BVA Auctions)" class="lightbox-single content-img-link">
+									<img src="assets/images/temp/nieuws_26825_18827_item_original.jpg" alt="" class="content-img">
+								</a>
+								<figcaption>De in 1994 compleet gerestaureerde en gerenoveerde voormalige Rijn-stoomsleepboot Succes is 17 juni te bezichtigen in Almere. (Foto BVA Auctions)</figcaption>
+							</figure>
+
+							<p>De nostalgische Succes werd in 1897 als Rijn-stoomsleper gebouwd bij scheepswerf Boele in Bolnes. Het in 1994 gerestaureerde schip (38,46 X 7,02 meter) biedt ruimte voor 110 passagiers en is zowel voorzien van dieselmotoren als een complete stoominstallatie. De vraagprijs is 1.150.000 euro.</p>
+							<p>Het schip is bekend van ‘De Club van Sinterklaas' en de romantische Sinterklaasfilm ‘Pak van mijn hart'. Daarnaast deed ze regelmatig dienst als Pakjesboot 13 tijdens de landelijke intocht van Sinterklaas.</p>
+							<p>Op zaterdag 17 juni organiseert <a href="#" class="underline">BVA Auctions</a> een kijkdag. Geïnteresseerden krijgen tussen 10 en 12 uur de kans om het schip in Almere te bezichtigen.</p>
+							<p>Meer informatie over het schip en de veiling <a href="#" class="underline">klik hier</a>.</p>
+
+							<ul class="list-share list-inline">
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--facebook">
+										<i class="schuttevaer-icon-facebook"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--twitter">
+										<i class="schuttevaer-icon-twitter"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+								<li class="list-share__item">
+									<a href="#" class="list-share__link list-share__link--mail">
+										<i class="schuttevaer-icon-mail"></i>
+									</a><!-- list-link -->
+								</li><!-- list-share__item -->
+							</ul><!-- list-share__item -->
+
+
+							<ul class="list-arrow list-unstyled inline-block font-secondary">
+								<li class="list-arrow__item mr20 lead">
+									Meer in de rubriek:
+								</li><!-- list-arrow__item -->
+								<li class="list-arrow__item">
+									<a href="#" class="list-arrow__link">Cruise- en chartervaart</a>
+								</li><!-- list-arrow__item -->
+							</ul><!-- list-arrow -->
+
+						</div><!-- content-item -->
+
+
+						<div class="content-item">
+							<h3 class="title__has-divider">
+								<span class="title__has-divider__inner">Reacties (<span>0</span>)</span>
+							</h3>
+							<p class="text-bg text-bg-info">Om te reageren op dit bericht moet u ingelogd zijn. Klik <a href="$">hier</a> om in te loggen. Indien u nog geen account heeft kunt u zich <a href="#">hier</a> registreren om te kunnen reageren op Schuttevaer.nl. Uw reacties worden altijd ondertekend met uw volledige persoonsnaam.</p>
+							<p class="text-bg text-bg-info">Er zijn nog geen reacties op dit artikel.</p>
+						</div><!-- content-item -->
+
+						<div class="content-item">
+							<h3 class="title__has-divider">
+								<span class="title__has-divider__inner">Lees ook</span>
+							</h3>
+
+							<div class="block-link-holder">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="block-link-holder__item">
+											<a href="#" class="block-link-holder__link">BOEK: Stuwkracht in staal</a>
+											<div class="news-info">
+												<time class="news-info__time news-info__item">VANDAAG, 10:23</time>
+												<button class="news-info__reacties news-info__item">0 REACTIES</button>
+											</div><!-- news__info -->
+										</div><!-- block-link__item -->
+									</div><!-- col -->
+
+									<div class="col-sm-6">
+										<div class="block-link-holder__item">
+											<a href="#" class="block-link-holder__link">BOEK: Stuwkracht in staal</a>
+											<div class="news-info">
+												<time class="news-info__time news-info__item">VANDAAG, 10:23</time>
+												<button class="news-info__reacties news-info__item">0 REACTIES</button>
+											</div><!-- news__info -->
+										</div><!-- block-link__item -->
+									</div><!-- col -->
+
+									<div class="col-sm-6">
+										<div class="block-link-holder__item">
+											<a href="#" class="block-link-holder__link">BOEK: Stuwkracht in staal</a>
+											<div class="news-info">
+												<time class="news-info__time news-info__item">VANDAAG, 10:23</time>
+												<button class="news-info__reacties news-info__item">0 REACTIES</button>
+											</div><!-- news__info -->
+										</div><!-- block-link__item -->
+									</div><!-- col -->
+
+									<div class="col-sm-6">
+										<div class="block-link-holder__item">
+											<a href="#" class="block-link-holder__link">BOEK: Stuwkracht in staal</a>
+											<div class="news-info">
+												<time class="news-info__time news-info__item">VANDAAG, 10:23</time>
+												<button class="news-info__reacties news-info__item">0 REACTIES</button>
+											</div><!-- news__info -->
+										</div><!-- block-link__item -->
+									</div><!-- col -->
+								</div><!-- row -->
+							</div><!-- block-link -->
+						</div><!-- content-item -->
+					</div><!-- col -->
+
+					<div class="col-md-4 col-sm-5">
+						<h3 class="title__has-divider">
+							<span class="title__has-divider__inner">Meest gelezen</span>
+						</h3>
+
+						<ul class="list-counter list-unstyled">
+							<li class="list-counter__item">
+								<a href="#" class="list-counter__link">Franse schipper vaart stuurhut er af</a>
+							</li><!-- list-counter__item -->
+							<li class="list-counter__item">
+								<a href="#" class="list-counter__link">Olayla maakt water en stremt Canal du Nord</a>
+							</li><!-- list-counter__item -->
+							<li class="list-counter__item">
+								<a href="#" class="list-counter__link">Scheepswerf Hemiksem opnieuw failliet</a>
+							</li><!-- list-counter__item -->
+							<li class="list-counter__item">
+								<a href="#" class="list-counter__link">Auto bijna te water, schip remt val </a>
+							</li><!-- list-counter__item -->
+							<li class="list-counter__item">
+								<a href="#" class="list-counter__link">AIS gaat te slordig om met privacy</a>
+							</li><!-- list-counter__item -->
+						</ul><!-- list-counter -->
+
+
+						<h3 class="title__has-divider">
+							<a href="#" class="title__has-divider__inner">Focus op...</a>
+						</h3>
+
+						<div class="focus-on read-more">
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_67_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Pon Power BV</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_454827_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">DCS International bv</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_161_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Tosec</p>
+									<p>Specialist in plaat- en constructiewerk </p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_67_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Pon Power BV</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_454827_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">DCS International bv</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_161_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Tosec</p>
+									<p>Specialist in plaat- en constructiewerk </p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_67_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Pon Power BV</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_454827_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">DCS International bv</p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+
+							<a href="#" class="focus-on__item">
+								<div class="focus-on__item__logo">
+									<img src="assets/images/temp/focusopbedrijven_161_100.jpg" alt="" class="focus-on__item__img">
+								</div><!-- focus-on__item__logo -->
+
+								<div class="focus-on__item__description">
+									<p class="focus-on__item__title">Tosec</p>
+									<p>Specialist in plaat- en constructiewerk </p>
+								</div><!-- focus-on__item__description -->
+							</a><!-- focus-on__item -->
+						</div><!-- focus-on -->
+
+						<div class="banner banner--has-border">
+						</div><!-- banner -->
+
+					</div><!-- col -->
+				</div><!-- row -->
+
+			</div><!-- container -->
+		</section><!-- section -->
+	</main>
+
+
+	//= template/footer.html
+
+	//= template/modals.html
+
+	<!-- //= template/cookies.html -->
+
+
+	//= template/scripts-dependencies.html
+
+
+
+</body>
+</html>

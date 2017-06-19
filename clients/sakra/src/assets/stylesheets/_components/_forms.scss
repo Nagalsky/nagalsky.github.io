@@ -1,0 +1,98 @@
+/* FORMS */
+
+$placeholder-opacity: 0;
+$placeholder-color: $boulder;
+$placeholder-font-size: 16px;
+$placeholder-font-style: $font-base-regular;
+$field-focus: $primary;
+$field-height: 46px;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius: 0;
+	box-shadow: none;
+	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
+	height: $field-height;
+	&:focus {
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+		border-color: $field-focus;
+		box-shadow: inset 0 1px 1px rgba($limed-spruce, 0.075), 0 0 8px rgba($limed-spruce, 0.6);
+	}
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+select, select.form-control {
+	background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjI1NXB4IiBoZWlnaHQ9IjI1NXB4IiB2aWV3Qm94PSIwIDAgMjU1IDI1NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjU1IDI1NTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGcgaWQ9ImFycm93LWRyb3AtZG93biI+DQoJCTxwb2x5Z29uIHBvaW50cz0iMCw2My43NSAxMjcuNSwxOTEuMjUgMjU1LDYzLjc1IAkJIi8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 10px;
+}
+
+textarea, textarea.form-control {
+	resize: none;
+	height: 90px;
+	&.textarea--lg {
+		height: 190px;
+	}
+}
+
+label {
+	color: $mine-shaft;
+	font-weight: normal;
+	font-family: $font-base-semibold;
+	text-transform: uppercase;
+}
+
+fieldset {
+	&+fieldset {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid $mercury;
+	}
+}
+
+.form-login-holder {
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 2px solid rgba($white, .35);
+	width: 100%;
+	padding: 10px;
+	@include respond-to(xs-min) {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+	}
+}
+.form-login {
+	padding: 50px 30px;
+	background: $white;
+	@include respond-to(xs) {
+		padding: 20px 15px;
+	}
+}
+
+.form-control-static {
+	color: $mine-shaft;
+	text-transform: uppercase;
+	font-family: $font-base-semibold;
+}
+
+.form-group--has-pl {
+	padding-left: 25px;
+}
+
+.form-horizontal {
+	.control-label {
+		text-align: left;
+		padding-top: 13px;
+	}
+}
+
+.label__empty {
+	height: 16px;
+}

@@ -1,0 +1,27 @@
+/* TABS */
+
+.tabs-list {
+  @extend .flex, .list-unstyled;
+  margin-bottom: 0;
+  &+.tab-content {
+    margin-top: -2px;
+  }
+}
+.tabs-list__item {
+  flex: 1;
+  &.active {
+    .tabs-list__link {
+      color: $white;
+      background: $gray-thin;
+    }
+  }
+  &+.tabs-list__item {
+    margin-left: -2px;
+  }
+}
+
+.tabs-list__link {
+  display: block;
+  text-align: center;
+  @extend .btn, .btn-ghost-black;
+}

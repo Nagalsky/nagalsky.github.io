@@ -1,0 +1,116 @@
+/* FORMS */
+
+$field-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$field-border-color: $gray-thin;
+$field-color: $gray-soft;
+$field-height: 40px;
+$filed-font-size: 16px;
+$field-muted-color: $muted-soft;
+$placeholder-color: $gray-soft;
+$placeholder-opacity: 1;
+$placeholder-font-size: 14px;
+$label-color: $mine-shaft-thin;
+
+
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	height: $field-height;
+	color: $field-color;
+	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size);
+	font-family: $field-font-family;
+	font-size: $filed-font-size;
+	&:focus {
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity)
+	}
+}
+.form-control--mutted {
+	background: $field-muted-color;
+	border-color: $field-muted-color;
+	&:focus {
+		border-color: darken($field-muted-color, 10%);
+		background: $field-muted-color;
+	}
+}
+.form-control--rounded {
+	border-radius: 25px;
+}
+.form-control-lg {
+	height: 48px;
+	@include media-breakpoint-down(md) {
+		height: 40px;
+	}
+}
+
+.form-sublink {
+	float: right;
+	color: $gray-soft;
+	font-size: 12px;
+	margin-top: .4rem;
+}
+.form-text {
+	color: $gray-soft;
+	font-size: 13px;
+	&:not(:last-child) {
+		margin-bottom: 5px;
+		margin-top: 0;
+	}
+}
+
+label {
+	font-size: 16px;
+	color: $label-color;
+	margin-bottom: .25rem;
+}
+
+.form-group--search {
+	position: relative;
+	.btn-submit {
+		background: transparent;
+		border: none;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		color: $placeholder-color;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.form-group--search--left {
+	.form-control {
+		padding-left: 35px;
+	}
+	.btn-submit {
+		left: 10px;
+	}
+}
+.form-group--search--right {
+	.form-control {
+		padding-right: 35px;
+	}
+	.btn-submit {
+		right: 10px;
+	}
+}
+
+/* Validation styles */
+.has-danger, .has-danger .form-control-feedback, .has-danger .form-control-label, .has-danger .col-form-label, .has-danger .form-check-label, .has-danger .custom-control {
+	color: $danger;
+	.form-control {
+		border-color: $danger;
+	}
+}
+.has-warning, .has-warning .form-control-feedback, .has-warning .form-control-label, .has-warning .col-form-label, .has-warning .form-check-label, .has-warning .custom-control {
+	color: $warning;
+	.form-control {
+		border-color: $warning;
+	}
+}
+
+/* .has-success, .has-success .form-control-feedback, .has-success .form-control-label, .has-success .col-form-label, .has-success .form-check-label, .has-success .custom-control {
+	color: $success;
+	.form-control {
+		border-color: $success;
+	}
+} */

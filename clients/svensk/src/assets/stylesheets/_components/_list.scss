@@ -1,0 +1,21 @@
+/* LIST */
+
+.list {
+  @extend .list-unstyled, .align-self-bottom;
+}
+.list__item {
+  display: inline-block;
+  &+.header-list__item {
+    margin-left:1px;
+  }
+}
+
+.list-bullet, .list-numbered {
+  padding-left:12px;
+  >li {
+    font-weight:$font-bold;
+    &+li {
+      margin-top:8px;
+    }
+  }
+}

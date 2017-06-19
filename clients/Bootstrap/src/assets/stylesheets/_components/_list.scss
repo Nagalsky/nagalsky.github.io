@@ -1,0 +1,43 @@
+/* LIST */
+
+$list-dotted-color: $nobel;
+.list-dotted {
+  @extend .d-flex, .flex-wrap;
+}
+.list-dotted__item {
+  position: relative;
+  &+.list-dotted__item {
+      padding-left: .55rem;
+      margin-left: .5rem;
+    &:before {
+      content: '';
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $list-dotted-color;
+    }
+  }
+  &:last-child {
+    .list-dotted__link {
+      padding-right: 0;
+    }
+  }
+}
+.list-dotted__link {
+  color: $list-dotted-color;
+  &:hover, &:focus {
+    color: darken($list-dotted-color, 15%);
+  }
+}
+
+.list-social__link {
+  color: $ghost;
+  font-size: 18px;
+  &:hover, &:focus {
+    color: darken($ghost, 15%);
+  }
+}

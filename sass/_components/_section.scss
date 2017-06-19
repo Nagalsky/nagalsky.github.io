@@ -1,0 +1,50 @@
+/* SECTION */
+
+.section {
+	padding: 40px 0;
+	position: relative;
+	z-index: 10;
+	@include respond-to(sm-min) {
+		height: 100vh;
+	}
+	&:first-of-type {
+		@include respond-to(sm-min) {
+			height: calc(100vh - #{$nav-height});
+		}
+	}
+}
+.section-hero {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($black, .6);
+		z-index: -1;
+	}
+}
+.section-has-bg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.section-gradient {
+	@include gradient-radial($inner-color: #999, $outer-color: #555);
+}
+.section-gradient-test {
+	@include gradient-radial($inner-color: #555, $outer-color: #999);
+}
+
+.navbar-nav {
+	font-size: 24px;
+	>li {
+		>a {
+			font-weight: $font-bold;
+		}
+	}
+}
+

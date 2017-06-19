@@ -1,0 +1,117 @@
+/* BUTTONS */
+
+.btn {
+	border-radius: 0;
+	font-size: 16px;
+	border: none;
+	padding: 8px 16px;
+	&.btn-default {
+		background: $white;
+		border-bottom: 3px solid $alto;
+		&:hover, &:focus {
+			background: $alto;
+		}
+	}
+	&.btn-danger {
+		background: $text-danger;
+		color: $white;
+		border-bottom: 3px solid darken($text-danger, 10%);
+		&:hover, &:focus {
+			background: darken($text-danger, 10%);
+			color: $white;
+		}
+	}
+	&.btn-primary {
+		background: $cerulean;
+		color: $white;
+		border: 2px solid $cerulean;
+		&:hover, &:focus {
+			background: darken($cerulean, 5%);
+			border-color: darken($cerulean, 5%);
+			color: $white;
+		}
+	}
+	&.btn-ghost {
+		border: 2px solid $silver-soft;
+		color: $text-danger-soft;
+		&:hover, &:focus {
+			background: $silver-soft;
+			color: $text-danger-soft;
+		}
+	}
+	&.btn-ghost-danger {
+		border: 2px solid $text-danger-soft;
+		color: $text-danger-soft;
+		background: transparent;
+		&:hover, &:focus {
+			background: $text-danger-soft;
+			color: $white;
+		}
+	}
+	&.btn-medium {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	&.btn-long {
+		padding-left:85px;
+		padding-right:85px;
+	}
+	&.has-shadow {
+		box-shadow: 0px 0px 20px 0px rgba($black, .3);
+	}
+	&.btn-circle {
+		border-radius: 25px;
+	}
+	&.btn-rounded {
+		border-radius: 4px;
+	}
+}
+
+
+
+
+.btn-scroll-down {
+	font-size: 80px;
+	color: $white;
+	height: 112px;
+	width: 112px;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	margin-left: -56px;
+	@include transition(500ms);
+	@include respond-to(xs) {
+		font-size: 50px;
+		height: 70px;
+		width: 70px;
+		margin-left: -35px;
+	}
+	animation: bounce ease-in 2s infinite;
+	&:hover, &:focus {
+		color: $link-color;
+	}
+}
+
+.btn-scroll {
+	font-size: 12px;
+	text-transform: uppercase;
+	@extend .l-s-lg;
+	color: #cccccc;
+	font-family: $font-base-bold;
+}
+.btn-scroll__icon {
+	display: block;
+}
+
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		@include translate(0, 0);
+  	}
+	40% {
+		@include translate(0, -4px);
+  	}
+	60% {
+    	@include translate(0, -3px);
+  	}
+}

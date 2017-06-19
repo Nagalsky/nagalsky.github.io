@@ -1,0 +1,163 @@
+/* BUTTONS */
+.btn {
+	font-family: $font-bold;
+	font-size: 18px;
+	padding: 9.5px 12px;
+	border-width: 3px;
+	letter-spacing: 1px;
+	@include respond-to(md) {
+		font-size: 13px;
+		border-width: 1px;
+	}
+	&.btn-field {
+		padding-top: 7px;
+		padding-bottom: 7px;
+		@include respond-to(md) {
+			font-size: 18px;
+			border-width: 3px;
+		}
+	}
+	&.btn-default {
+		color: $dusty-gray;
+	}
+	&.btn-warning {
+		background: $warning;
+		border-color: $warning;
+		&:hover, &:focus {
+			border-color: darken($warning, 10%);
+			background: darken($warning, 5%);
+		}
+	}
+	&.btn-muttet {
+		background: $dusty-gray;
+		border-color: $dusty-gray;
+		&:hover, &:focus {
+			border-color: darken($dusty-gray, 10%);
+			background: darken($dusty-gray, 5%);
+		}
+	}
+	&.btn-success {
+		background: $success-secondary;
+		border-color: $success-secondary;
+		&:hover, &:focus {
+			border-color: darken($success-secondary, 10%);
+			background: darken($success-secondary, 5%);
+		}
+	}
+	&.btn-gray {
+		color: $dusty-gray;
+		background: $quill-gray;
+		border-color: $silver;
+		&:hover, &:focus {
+			color: darken($dusty-gray, 10%);
+			border-color: darken($silver, 10%);
+			background: darken($quill-gray, 5%);
+		}
+	}
+	&.btn-outline {
+		background: transparent;
+	}
+	&.btn-outline-warning {
+		border-color: $warning;
+		color: $warning;
+		&:hover, &:focus {
+			color: $white;
+			border-color: darken($warning, 10%);
+			background: darken($warning, 5%);
+		}
+	}
+	&.btn-outline-muttet {
+		border-color: $dusty-gray;
+		color: $dusty-gray;
+		&:hover, &:focus {
+			color: $white;
+			border-color: darken($dusty-gray, 10%);
+			background: darken($dusty-gray, 5%);
+		}
+	}
+	&.btn-outline-success {
+		border-color: $success-secondary;
+		color: $success-secondary;
+		&:hover, &:focus {
+			color: $white;
+			border-color: darken($success-secondary, 10%);
+			background: darken($success-secondary, 5%);
+		}
+	}
+	&.btn-outline-success--text-gray {
+		color: #999999;
+	}
+	&.btn-outline-primary {
+		border-color: $bahama-blue;
+		color: $bahama-blue;
+		&:hover, &:focus {
+			color: $white;
+			border-color: darken($bahama-blue, 10%);
+			background: darken($bahama-blue, 5%);
+		}
+	}
+	&.btn-uppercase {
+		text-transform: uppercase;
+	}
+	&.btn-treansparent {
+		background: transparent;
+	}
+	&.btn-xs {
+		border-width: 1px;
+		font-size: 16px;
+		letter-spacing: 0px;
+	}
+	&.btn-mini {
+		border-width: 1px;
+		font-size: 11px;
+		letter-spacing: 0px;
+	}
+	&.btn-regular {
+		font-family: $font-regular;
+	}
+	&.btn-hero-info {
+		overflow: hidden;
+		border-radius: 3px;
+		border: 2px solid $blue-lagoon;
+		color: $white;
+		text-align: left;
+		@include clearfix();
+		.btn-hero-text {
+			float: left;
+		}
+		.btn-hero-price {
+			float: right;
+			font-size: 48px;
+			line-height: 100%;
+			@include respond-to(sm) {
+				font-size: 30px;
+			}
+			>.currency {
+				font-size: 24px;
+				vertical-align: text-top;
+				@include respond-to(sm) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	&.btn-hero-success {
+		@include gradient-vertical($start-color: #019bab, $end-color: #008593, $start-percent: 50%, $end-percent: 50%);
+		&:hover, &:focus {
+			@include gradient-vertical($start-color: #019bab, $end-color: #019bab, $start-percent: 50%, $end-percent: 50%);
+		}
+	}
+	&.btn-long {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	&.btn-textarea {
+		height: 100px;
+		@include respond-to(xs) {
+			height: auto;
+		}
+	}
+	&.btn-text-break {
+		white-space: normal;
+	}
+}

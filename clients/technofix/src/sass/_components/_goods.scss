@@ -1,0 +1,78 @@
+/* GOODS */
+
+
+.goods--carousel {
+	&+.goods--carousel {
+		margin-top: 30px;
+	}
+}
+
+.goods--carousel {
+	.slick-slide {
+		color: $mine-shaft;
+	}
+	.slick-arrow {
+		&:before {
+			color: $silver-dark;
+			font-family: 'fontello';
+		}
+	}
+	.slick-prev {
+		@extend .icon-technofix-left-open;
+		@include respond-to(xs) {
+			left: -15px;
+		}
+	}
+	.slick-next {
+		@extend .icon-technofix-right-open;
+		@include respond-to(xs) {
+			right: -15px;
+		}
+	}
+}
+
+.goods__item {
+	padding-left: 15px;
+	padding-right: 15px;
+	&:hover {
+		.goods__img {
+			transform: scale(1.1, 1.1);
+		}
+	}
+}
+
+.good__inner {
+	position: relative;
+	padding: 30px 20px;
+	border: 1px solid $silver-dark;
+	text-align: center;
+	@include respond-to(xs-min) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@include respond-to(sm) {
+		padding: 25px 15px;
+	}
+}
+.goods__btn {
+	margin-top: auto;
+}
+.goods__title {
+	font-size: 20px;
+	font-family: $font-bold;
+	color: $mine-shaft;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.goods__title--sm {
+	font-size: 16px;
+	@include respond-to(md) {
+		font-size: 12px;
+	}
+}
+.goods__img {
+	@extend .img-responsive, .center-block;
+	margin-bottom: 15px;
+	@include transition(450ms);
+}
