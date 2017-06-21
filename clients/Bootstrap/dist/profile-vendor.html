@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="format-detection" content="telephone=no">
-	<title>Redownload page</title>
+	<title>Profile page</title>
 	<link rel="stylesheet" href="assets/stylesheets/main.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
@@ -20,16 +20,35 @@
 
 	<nav class="navbar navbar-toggleable-md navbar-light">
 	  <div class="container">
-	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-logged-in" aria-controls="navbar-collapse-logged-in" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <a class="navbar-brand" href="#">Bootstrap Themes</a>
 	
+	    <div class="collapse navbar-collapse" id="navbar-collapse-logged-in">
 	
-	    <div class="collapse navbar-collapse" id="navbar-collapse">
+	
 	      <form class="form-inline form-navbar my-2 my-lg-0 flex-last">
 	        <input class="form-control mr-sm-2" type="text" placeholder="Search">
 	      </form>
+	
+	      <ul class="navbar-nav flex-last hidden-md-down ml-2">
+	        <li class="nav-item dropdown">
+	          <a class="nav-link nav-link--user dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <img src="assets/images/temp/avatar.jpg" class="nav-link--user__img" alt="">
+	          </a>
+	          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#">Earnings</a>
+	            <a class="dropdown-item" href="#">Orders</a>
+	            <a class="dropdown-item" href="#">Themes</a>
+	            <a class="dropdown-item" href="#">Accounts</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Submit a theme</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Log out</a>
+	          </div>
+	        </li>
+	      </ul>
 	
 	      <ul class="navbar-nav mr-auto flex-first">
 	        <li class="nav-item dropdown">
@@ -49,61 +68,74 @@
 	          <a class="nav-link" href="#">Sell themes</a>
 	        </li>
 	      </ul>
-	    </div>
+	      <ul class="navbar-nav hidden-lg-up">
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Earnings</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Orders</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Themes</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Account</a>
+	        </li>
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Log out</a>
+	        </li>
+	      </ul>
+	    </div><!-- navbar-collapse -->
+	
 	  </div><!-- container -->
 	</nav>
 
-	<div class="search-box">
-		<div class="container">
-			<form action="">
-				<div class="row align-items-center">
-					<div class="col-lg-9 col-md-8 col-sm-8">
-						<div class="form-group mb-0">
-							<div class="form-group--search form-group--search--left">
-								<input type="email" class="form-control form-control--search form-control--transparent" id="searchEmail" placeholder="Search">
-								<button type="submit" class="btn-submit">
-									<i class="bootstrap-themes-icon-search"></i>
-								</button>
-							</div><!-- form-group--search -->
-					  </div><!-- form-group -->
-					</div><!--col-->
-	
-					<div class="col-lg-3 col-md-4 col-sm-4 hidden-sm-down">
-						<div class="form-inline justify-content-md-end">
-							<label class="mb-2 mr-md-1 mb-sm-0 fs-13 text-gray-soft" for="inlineFormCustomSelect">Sort by:</label>
-							<select class="custom-select form-control--transparent mb-sm-0 fs-13 text-gray-soft" id="inlineFormCustomSelect">
-						    <option selected>Popularity</option>
-						    <option value="1">One</option>
-						    <option value="2">Two</option>
-						    <option value="3">Three</option>
-						  </select>
-	
-						</div><!--form-inline-->
-					</div><!--col-->
-				</div><!--row-->
-			</form>
-		</div><!--container-->
-	</div><!--search-box-->
+	<main class="main">
 
-	<main class="main d-flex justify-content-center align-items-center">
+		<section class="profile__hero profile__hero--yellow">
+			<div class="container text-center">
+				<img src="assets/images/temp/profile-logo.png" class="profile__hero__logo" alt="">
+			</div><!-- container -->
+		</section><!-- hero -->
 
-		<section class="section">
-			<div class="container container--xs">
-				<img src="assets/images/elements/bootstrap-logo.svg" class="img-fluid mx-auto d-block mb-3" alt="">
-				<h1 class="mb-1 text-center">Need to re-download?</h1>
-				<p class="fs-14 text-gray text-center">No problem. We’ve got you covered. Just enter the email address you used to originally purchase the theme (or themes) and we’ll send you an email with brand new links to download all your past purchases.</p>
+		<section class="section section--pt-0">
+			<div class="container">
+				<div class="profile">
+					<div class="row">
+						<div class="col-lg-8 mb-2">
+							<div class="d-flex">
+								<div class="profile__avatar">
+									<img src="assets/images/temp/profile-avatar.png" class="img-fluid" alt="">
+								</div><!-- profile__avatar -->
 
-				<hr class="my-4">
+								<div class="profile__description">
+									<h4 class="profile__description__title">Tres Amibros</h4>
+									<p class="hidden-xs-down">We are professional developers for the world of the web and try really hard to make everything as cool as possible when you build it for the people.</p>
+								</div><!-- profile__description -->
+							</div><!-- d-flex -->
+							<p class="hidden-sm-up">We are professional developers for the world of the web and try really hard to make everything as cool as possible when you build it for the people.</p>
+						</div><!-- col -->
 
-				<form action="">
-					<div class="form-group mb-4">
-				    <label for="exampleInputEmail2">Email</label>
-				    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp2" placeholder="">
-				  </div><!-- form-group -->
-					<button type="submit" class="btn btn-brand btn-block">Send link to theme(s)</button>
-				</form>
+						<div class="col-md-4 d-lg-flex align-items-sm-center justify-content-md-end">
+							<a href="#" class="btn btn-brand">Edit your profile</a>
+						</div><!-- col -->
+					</div><!-- row -->
+				</div><!-- profile -->
+
+				<hr class="mt-0">
+
+				<div class="jumbotron jumbotron--transparent jumbotron--xl text-center mb-0">
+					<h5 class="mb-1">You haven’t published a theme yet!</h5>
+					<p class="text-gray-soft">Read the <a href="#">Theme Guidelines</a> and then <a href="#">submit a theme!</a></p>
+				</div><!--jumbotron-->
+
+
 			</div><!-- container -->
 		</section><!-- section -->
+
+
 
 	</main><!-- main -->
 
