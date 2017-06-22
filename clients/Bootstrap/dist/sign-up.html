@@ -57,9 +57,9 @@
 
 		<section class="section w-100">
 			<div class="container container--xs">
-				<img src="assets/images/elements/bootstrap-logo.svg" class="img-fluid mx-auto d-block mb-5" alt="">
+				<img src="assets/images/elements/bootstrap-logo.svg" class="img-fluid mx-auto d-block mb-3" alt="">
 				<h1 class="mb-1 text-center">Sign up to sell themes</h1>
-				<p class="fs-14 text-gray text-center">Instantly approved and can submit a theme in minutes.</p>
+				<p class="fs-14 text-gray text-center mb-5">Instantly approved and can submit a theme in minutes.</p>
 
 				<form action="">
 					<div class="form-group row">
@@ -107,10 +107,48 @@
 
 					<div class="form-group mb-4">
 						<label for="InputSupportEmail">Upload avatar and cover images</label>
-						
+						<div class="upload-image">
+							<div class="upload-image__item upload-image__cover-holder upload-image-placeholder">
+								<div class="upload-image__cover__overlay">
+									<span class="btn btn-brand btn-sm btn-file hidden-sm-down">
+									    Upload cover <input type="file">
+									</span><!--btn-->
+								</div><!--upload-image__cover__overlay-->
+							</div><!--upload-image__item-->
+
+							<div class="upload-image__item upload-image__avatar-holder">
+								<div class="d-flex align-items-center mb-3 mb-md-0">
+									<div class="upload-image__avatar-inner">
+										<div class="upload-image__avatar upload-image-placeholder">
+											<span class="btn btn-brand btn-sm btn-block btn-file hidden-sm-down">
+											    Upload avatar <input type="file">
+											</span><!--btn-->
+										</div><!--upload-image__avatar-->
+									</div><!--upload-image__avatar-inner-->
+
+									<div class="upload-image__description">
+										<h4>Company name</h4>
+										<p class="hidden-sm-down">This is the company bio and will be reflected once you enter something for your bio.</p>
+									</div><!--upload-image__description-->
+								</div><!--d-flex-->
+								<p class="hidden-md-up">This is the company bio and will be reflected once you enter something for your bio.</p>
+								<div class="d-flex justify-content-between align-items-center mt-3 hidden-md-up">
+									<span class="btn btn-brand btn-sm btn-file btn-block">
+									    Swap avatar <input type="file">
+									</span><!--btn-->
+
+									<span class="btn btn-brand btn-sm btn-block btn-file ml-3">
+											Swap cover <input type="file">
+									</span><!--btn-->
+								</div><!--d-flex-->
+							</div><!--upload-image__item-->
+						</div><!--upload-image-->
 					</div><!--form-group-->
 
-					<button type="submit" class="btn btn-brand btn-block btn-lg">Sign up</button>
+					<button type="submit" class="btn btn-brand btn-block btn-lg mb-4">Sign up</button>
+
+					<p class="text-gray-soft text-center fs-13 mb-2">By clicking “Sign up” you agree to our <a href="#">Terms of Service</a>.</p>
+					<p class="text-gray-soft text-center fs-13">Already have an account? <a href="#">Sign in</a></p>
 				</form>
 			</div><!-- container -->
 		</section><!-- section -->
@@ -174,6 +212,8 @@
 
 
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
 	<script src="../node_modules/tether/dist/js/tether.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="assets/javascript/scripts.js"></script>

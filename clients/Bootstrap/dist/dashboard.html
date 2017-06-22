@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="format-detection" content="telephone=no">
+	<title>Dashboard page</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/fav/manifest.json">
+	<link rel="shortcut icon" href="assets/images/fav/favicon.ico">
+	<meta name="msapplication-config" content="assets/images/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-toggleable-md navbar-light">
+	  <div class="container">
+	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-logged-in" aria-controls="navbar-collapse-logged-in" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Bootstrap Themes</a>
+
+	    <div class="collapse navbar-collapse" id="navbar-collapse-logged-in">
+
+
+	      <form class="form-inline form-navbar my-2 my-lg-0 flex-last">
+	        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+	      </form>
+
+	      <ul class="navbar-nav flex-last hidden-md-down ml-2">
+	        <li class="nav-item dropdown">
+	          <a class="nav-link nav-link--user dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <img src="assets/images/temp/avatar.jpg" class="nav-link--user__img" alt="">
+	          </a>
+	          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#">Earnings</a>
+	            <a class="dropdown-item" href="#">Orders</a>
+	            <a class="dropdown-item" href="#">Themes</a>
+	            <a class="dropdown-item" href="#">Accounts</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Submit a theme</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Log out</a>
+	          </div>
+	        </li>
+	      </ul>
+
+	      <ul class="navbar-nav mr-auto flex-first">
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            Categories
+	          </a>
+	          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#">Admin & Dashboard</a>
+	            <a class="dropdown-item" href="#">Landing</a>
+	            <a class="dropdown-item" href="#">Business / Marketing</a>
+	            <a class="dropdown-item" href="#">E-commerce</a>
+	            <a class="dropdown-item" href="#">Portfolio</a>
+	            <a class="dropdown-item" href="#">Other</a>
+	          </div>
+	        </li>
+	      </ul>
+	      <ul class="navbar-nav hidden-lg-up">
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Earnings</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Orders</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Themes</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Account</a>
+	        </li>
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Log out</a>
+	        </li>
+	      </ul>
+	    </div><!-- navbar-collapse -->
+
+	  </div><!-- container -->
+	</nav>
+
+
+	<main class="main">
+
+		<section class="section pt-1">
+			<div class="container">
+
+				<div class="d-md-flex justify-content-md-between align-items-md-center has-border has-border-md">
+					<ul class="nav sub-nav sub-nav--has-border sub-nav--has-h-scroll" role="tablist">
+					  <li class="nav-item active">
+					    <a class="nav-link sub-nav-link" data-toggle="tab" href="#earnings-tab" role="tab">Earnings</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" data-toggle="tab" href="#orders-tab" role="tab">Orders</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" data-toggle="tab" href="#themes-tab" role="tab">Themes</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" data-toggle="tab" href="#account-tab" role="tab">Account</a>
+					  </li>
+					</ul>
+					<a href="#" class="btn btn-outline-brand btn-sm hidden-sm-down">Submit a theme</a>
+				</div><!--d-flex-->
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="earnings-tab" role="tabpanel">
+						<div class="stat mt-3 mt-md-0">
+							<div class="stat__item">
+								<p>Monthly earnings (July 2017)</p>
+								<h2 class="stat__title"><small>$</small>54,345</h2>
+							</div><!--stat__item-->
+
+							<div class="stat__item">
+								<p>To be paid on 1/8/2017</p>
+								<h2 class="stat__title"><small>$</small>32,885</h2>
+							</div><!--stat__item-->
+
+							<div class="stat__item">
+								<p>Lifetime earnings</p>
+								<h2 class="stat__title"><small>$</small>284,299</h2>
+							</div><!--stat__item-->
+						</div><!--stat-->
+
+						<div class="chart-container hidden-sm-down mt-5" style="position: relative;">
+					    <canvas id="myChart" class="chart"></canvas>
+					</div>
+
+					</div><!--tab-pane-->
+
+
+					<div class="tab-pane fade" id="orders-tab" role="tabpanel">
+						<div class="table-responsive">
+							<table class="table">
+							  <thead>
+							    <tr>
+							      <th>Order</th>
+							      <th>Product</th>
+							      <th>Price</th>
+							      <th>Earned</th>
+										<th>Date</th>
+							      <th>Paid out</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+									<tr>
+							      <th>
+							      	<span class="text-brand">#1021</span>
+							      </th>
+							      <td>Kushie</td>
+							      <td>$29.00</td>
+							      <td>$20.30</td>
+										<td>10/5/17</td>
+										<td>No</td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div><!--table-responsive-->
+
+						<h2>Order #39</h2>
+						<div class="row">
+							<div class="col-xl-4 offset-xl-1 col-md-5 push-md-7 mb-md-0 mb-1">
+								<div class="card card--summary">
+								  <div class="card-block">
+								    <div class="card--summary__item">
+											<div class="card--summary__theme-thumb">
+												<img src="assets/images/temp/feature-screenshot-1.jpg" class="img-fluid" alt="">
+											</div><!--card--summary__theme-thumb-->
+											<div class="card--summary__theme-description">
+												<h5 class="card--summary__theme-title">Comme de Store</h5>
+												<p>Single use</p>
+												<div class="card--summary__theme-action">
+													<p class="card--summary__theme-price">$19</p>
+													<button type="button" class="close card--summary__theme-close" data-dismiss="card" aria-label="Close">
+												    <span aria-hidden="true">&times;</span>
+												  </button>
+													<a href="#" class="hidden-md-up">Remove</a>
+												</div><!--card--summary__theme-action-->
+											</div><!--card--summary__theme--description-->
+										</div><!--card--summary__item-->
+
+										<div class="card--summary__footer">
+											<p class="mb-0">Total</p>
+											<p><small>$</small>48</p>
+										</div><!--card--summary__footer-->
+								  </div><!--card-block-->
+								</div><!--card-->
+							</div><!--col-->
+
+							<div class="col-xl-7 col-md-7 pull-md-5">
+								<div class="theme-description__list mb-4">
+									<div class="theme-description__list__item">
+										<span class="theme-description__item__title">Payment status</span>
+										<span>Completed</span>
+									</div><!--theme-description__list__item-->
+									<div class="theme-description__list__item">
+										<span class="theme-description__item__title">Order date</span>
+										<span>10/15/2017</span>
+									</div><!--theme-description__list__item-->
+									<div class="theme-description__list__item">
+										<span class="theme-description__item__title">Customer name</span>
+										<span>Dave Gamache</span>
+									</div><!--theme-description__list__item-->
+									<div class="theme-description__list__item">
+										<span class="theme-description__item__title">Customer email.</span>
+										<span>dhgamache@gmail.com</span>
+									</div><!--theme-description__list__item-->
+								</div><!--theme-description__list-->
+
+								<div class="d-flex flex-column flex-md-row align-items-center mt-3">
+									<button type="submit" class="btn btn-brand btn-block">Refund</button>
+
+									<button type="submit" class="btn btn-brand btn-block ml-md-3 mt-md-0">Resend download link</button>
+								</div><!--d-flex-->
+							</div><!--col-->
+						</div><!--row-->
+					</div><!--tab-pane-->
+
+
+					<div class="tab-pane fade" id="themes-tab" role="tabpanel">
+						<div class="theme-card-holder mt-5">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="theme-card theme-card--xl">
+										<a href="#" class="theme-card__body">
+											<img src="assets/images/temp/theme-card-1.jpg" class="theme-card__img" alt="">
+											<div class="theme-card__body__overlay">
+												<button type="button" class="btn btn-brand">Live preview</button>
+											</div><!-- theme-card__body__overlay -->
+										</a><!-- theme-card__body -->
+
+										<div class="theme-card__footer">
+											<div class="theme-card__footer__item">
+												<p>Inspirat Dashboard</p>
+												<p class="theme-card__status theme-card__status--success">Live</p>
+											</div><!-- theme-card__footer__item -->
+
+											<div class="theme-card__footer__item">
+												<p>$29</p>
+												<ul class="list-dotted">
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Edit</a>
+													</li><!--list-dotted__item-->
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Delete</a>
+													</li><!--list-dotted__item-->
+												</ul><!--list-dotted-->
+											</div><!-- theme-card__footer__item -->
+										</div><!-- theme-card_w_footer -->
+									</div><!-- theme-card -->
+								</div><!-- col -->
+
+								<div class="col-md-4">
+									<div class="theme-card theme-card--xl">
+										<a href="#" class="theme-card__body">
+											<img src="assets/images/temp/theme-card-1.jpg" class="theme-card__img" alt="">
+											<div class="theme-card__body__overlay">
+												<button type="button" class="btn btn-brand">Live preview</button>
+											</div><!-- theme-card__body__overlay -->
+										</a><!-- theme-card__body -->
+
+										<div class="theme-card__footer">
+											<div class="theme-card__footer__item">
+												<p>Inspirat Dashboard</p>
+												<p class="theme-card__status theme-card__status--warning">Pending</p>
+											</div><!-- theme-card__footer__item -->
+
+											<div class="theme-card__footer__item">
+												<p>$29</p>
+												<ul class="list-dotted">
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Edit</a>
+													</li><!--list-dotted__item-->
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Delete</a>
+													</li><!--list-dotted__item-->
+												</ul><!--list-dotted-->
+											</div><!-- theme-card__footer__item -->
+										</div><!-- theme-card_w_footer -->
+									</div><!-- theme-card -->
+								</div><!-- col -->
+
+								<div class="col-md-4">
+									<div class="theme-card theme-card--xl">
+										<a href="#" class="theme-card__body">
+											<img src="assets/images/temp/theme-card-1.jpg" class="theme-card__img" alt="">
+											<div class="theme-card__body__overlay">
+												<button type="button" class="btn btn-brand">Live preview</button>
+											</div><!-- theme-card__body__overlay -->
+										</a><!-- theme-card__body -->
+
+										<div class="theme-card__footer">
+											<div class="theme-card__footer__item">
+												<p>Inspirat Dashboard</p>
+												<p class="theme-card__status theme-card__status--danger">Rejected</p>
+											</div><!-- theme-card__footer__item -->
+
+											<div class="theme-card__footer__item">
+												<p>$29</p>
+												<ul class="list-dotted">
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Edit</a>
+													</li><!--list-dotted__item-->
+													<li class="list-dotted__item">
+														<a href="#" class="list-dotted__link">Delete</a>
+													</li><!--list-dotted__item-->
+												</ul><!--list-dotted-->
+											</div><!-- theme-card__footer__item -->
+										</div><!-- theme-card_w_footer -->
+									</div><!-- theme-card -->
+								</div><!-- col -->
+							</div><!-- row -->
+						</div><!-- theme-card-holder -->
+					</div><!--tab-pane-->
+
+
+					<div class="tab-pane fade" id="account-tab" role="tabpanel">
+						<div class="row mt-5">
+							<div class="col-md-6 mb-3 mb-md-0">
+								<form action="">
+									<div class="form-group row">
+										<div class="col-md-6 mb-4 mb-md-0">
+											<label for="InputFirstName">First name</label>
+									    <input type="name" class="form-control" id="InputFirstName" placeholder="">
+										</div><!--col-->
+
+										<div class="col-md-6">
+											<label for="InputLastName">Last name</label>
+									    <input type="name" class="form-control" id="InputLastName" placeholder="">
+										</div><!--col-->
+								  </div><!--form-group-->
+
+									<div class="form-group">
+										<label for="InputEmail">Email</label>
+								    <input type="email" class="form-control" id="InputEmail" placeholder="">
+									</div><!--form-group-->
+
+									<div class="form-group">
+										<label for="InputPassword">Password</label>
+								    <input type="password" class="form-control" id="InputPassword" placeholder="">
+									</div><!--form-group-->
+
+									<div class="form-group">
+										<label for="InputCompanyName">Company name</label>
+										<input type="text" class="form-control" id="InputCompanyName" placeholder="">
+									</div><!--form-group-->
+
+									<div class="form-group">
+										<label for="InputCompanyBio">Company bio</label>
+										<span class="form-sublink">0/120</span>
+										<textarea name="" id="InputCompanyBio" cols="" rows="" class="form-control"></textarea>
+									</div><!--form-group-->
+
+									<div class="form-group">
+										<label for="InputCompanyURL">Company URL</label>
+										<input type="text" class="form-control" id="InputCompanyURL" placeholder="">
+									</div><!--form-group-->
+
+									<div class="form-group mb-4">
+										<label for="InputSupportEmail">Support email</label>
+										<small id="emailSupport" class="form-text">Address customers will contact you for support (can be same as your account email)</small>
+										<input type="text" class="form-control" id="InputSupportEmail" aria-describedby="emailSupport" placeholder="">
+									</div><!--form-group-->
+
+									<div class="form-group hidden-md-up">
+										<label for="InputSupportEmail">Upload avatar and cover images</label>
+										<div class="upload-image">
+											<div class="upload-image__item upload-image__cover-holder upload-image-placeholder">
+												<div class="upload-image__cover__overlay">
+													<span class="btn btn-brand btn-sm btn-file hidden-sm-down">
+													    Upload cover <input type="file">
+													</span><!--btn-->
+												</div><!--upload-image__cover__overlay-->
+											</div><!--upload-image__item-->
+
+											<div class="upload-image__item upload-image__avatar-holder">
+												<div class="d-flex align-items-center mb-3 mb-md-0">
+													<div class="upload-image__avatar-inner">
+														<div class="upload-image__avatar upload-image-placeholder">
+															<span class="btn btn-brand btn-sm btn-block btn-file hidden-sm-down">
+															    Upload avatar <input type="file">
+															</span><!--btn-->
+														</div><!--upload-image__avatar-->
+													</div><!--upload-image__avatar-inner-->
+
+													<div class="upload-image__description">
+														<h4>Company name</h4>
+														<p class="hidden-sm-down">This is the company bio and will be reflected once you enter something for your bio.</p>
+													</div><!--upload-image__description-->
+												</div><!--d-flex-->
+												<p class="hidden-md-up">This is the company bio and will be reflected once you enter something for your bio.</p>
+												<div class="d-flex justify-content-between align-items-center mt-3 hidden-md-up">
+													<span class="btn btn-brand btn-sm btn-file btn-block">
+													    Swap avatar <input type="file">
+													</span><!--btn-->
+
+													<span class="btn btn-brand btn-sm btn-block btn-file ml-3">
+															Swap cover <input type="file">
+													</span><!--btn-->
+												</div><!--d-flex-->
+											</div><!--upload-image__item-->
+										</div><!--upload-image-->
+									</div><!--form-group-->
+
+									<button type="submit" class="btn btn-outline-brand btn-lg">Cancel</button>
+									<button type="submit" class="btn btn-brand btn-lg">Save changes</button>
+								</form>
+							</div><!--col-->
+
+							<div class="col-md-6 hidden-sm-down">
+								<form action="">
+									<div class="form-group">
+										<label for="InputSupportEmail">Upload avatar and cover images</label>
+										<div class="upload-image">
+											<div class="upload-image__item upload-image__cover-holder upload-image-placeholder" style="background-image:url('assets/images/temp/uploaded-cover.png');">
+												<div class="upload-image__cover__overlay">
+													<span class="btn btn-brand btn-sm btn-file hidden-sm-down">
+													    Upload cover <input type="file">
+													</span><!--btn-->
+												</div><!--upload-image__cover__overlay-->
+											</div><!--upload-image__item-->
+
+											<div class="upload-image__item upload-image__avatar-holder">
+												<div class="d-flex align-items-center mb-3 mb-md-0">
+													<div class="upload-image__avatar-inner">
+														<div class="upload-image__avatar upload-image-placeholder"  style="background-image:url('assets/images/temp/profile-avatar.png');">
+															<span class="btn btn-brand btn-sm btn-block btn-file hidden-sm-down">
+															    Upload avatar <input type="file">
+															</span><!--btn-->
+														</div><!--upload-image__avatar-->
+													</div><!--upload-image__avatar-inner-->
+
+													<div class="upload-image__description">
+														<h4>Company name</h4>
+														<p class="hidden-sm-down">This is the company bio and will be reflected once you enter something for your bio.</p>
+													</div><!--upload-image__description-->
+												</div><!--d-flex-->
+												<p class="hidden-md-up">This is the company bio and will be reflected once you enter something for your bio.</p>
+												<div class="d-flex justify-content-between align-items-center mt-3 hidden-md-up">
+													<span class="btn btn-brand btn-sm btn-file btn-block">
+													    Swap avatar <input type="file">
+													</span><!--btn-->
+
+													<span class="btn btn-brand btn-sm btn-block btn-file ml-3">
+															Swap cover <input type="file">
+													</span><!--btn-->
+												</div><!--d-flex-->
+											</div><!--upload-image__item-->
+										</div><!--upload-image-->
+									</div><!--form-group-->
+								</form>
+							</div><!--col-->
+						</div><!--row-->
+					</div><!--tab-pane-->
+				</div><!--tab-content-->
+
+			</div><!-- container -->
+		</section><!-- section -->
+
+	</main><!-- main -->
+
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__item">
+					<form action="">
+						<div class="d-md-flex justify-content-between">
+							<div class="form-group">
+								<label for="footerEmail">Email address</label>
+								<small id="footerEmail" class="form-text">New themes or big discounts. Never spam.</small>
+							</div><!-- form-group -->
+	
+							<div class="d-flex align-items-start">
+								<div class="form-group w-100 mr-2">
+							    <input type="email" class="form-control form-control--mutted" id="footerEmail" aria-describedby="footerEmail" placeholder="Email address">
+							  </div><!-- form-group -->
+							  <button type="submit" class="btn btn-brand">Subscribe</button>
+							</div><!-- d-md-flex -->
+						</div><!-- d-flex -->
+					</form>
+				</div><!-- footer__item -->
+	
+				<div class="footer__item d-lg-flex justify-content-lg-between align-items-sm-center">
+					<ul class="nav sub-nav footer__sub-nav">
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Support</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Terms</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Privacy</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Licenses</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">FAQ</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Sell your themes</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Bootstrap</a>
+					  </li>
+					</ul><!-- footer__sub-nav -->
+	
+					<p class="hidden-sm-down">Trying to redownload a theme? Use our <a href="#">redownload page.</a></p>
+				</div><!-- footer__item -->
+			</div><!-- footer__inner -->
+		</div><!-- container -->
+	</footer>
+
+
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="../node_modules/tether/dist/js/tether.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/javascript/scripts.js"></script>
+
+	<script>
+		//Chart js initial
+		var ctx = document.getElementById("myChart").getContext('2d');
+		var myLineChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+			labels: ["Jul 1", "Jul 15", "Jul 15", "Jul 15", "Jul 15", "Jul 15", "Jul 15", "Jul 15", "Jul 15"],
+				datasets: [{
+						data: [0, 10, 5, 2, 20, 30, 45, 20, 30],
+						label: "Earnings",
+						backgroundColor: [
+							'rgba(121, 82, 179, .5)'
+						],
+						borderColor: [
+							'rgba(121, 82, 179, 1)'
+						]
+					}, {
+						data: [40, 20, 65, 25, 7, 140, 80, 40, 20, 65],
+						label: "Sales",
+						backgroundColor: [
+							'rgba(121, 82, 179, 0.2)'
+						],
+						borderColor: [
+							'rgba(121, 82, 179, 1)'
+						]
+					}
+				]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				}
+			}
+		});
+	</script>
+
+
+
+</body>
+</html>

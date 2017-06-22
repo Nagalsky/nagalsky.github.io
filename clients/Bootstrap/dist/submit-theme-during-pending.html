@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="format-detection" content="telephone=no">
+	<title>Submit theme during pending page</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/fav/manifest.json">
+	<link rel="shortcut icon" href="assets/images/fav/favicon.ico">
+	<meta name="msapplication-config" content="assets/images/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-toggleable-md navbar-light">
+	  <div class="container">
+	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-logged-in" aria-controls="navbar-collapse-logged-in" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Bootstrap Themes</a>
+
+	    <div class="collapse navbar-collapse" id="navbar-collapse-logged-in">
+
+
+	      <form class="form-inline form-navbar my-2 my-lg-0 flex-last">
+	        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+	      </form>
+
+	      <ul class="navbar-nav flex-last hidden-md-down ml-2">
+	        <li class="nav-item dropdown">
+	          <a class="nav-link nav-link--user dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <img src="assets/images/temp/avatar.jpg" class="nav-link--user__img" alt="">
+	          </a>
+	          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#">Earnings</a>
+	            <a class="dropdown-item" href="#">Orders</a>
+	            <a class="dropdown-item" href="#">Themes</a>
+	            <a class="dropdown-item" href="#">Accounts</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Submit a theme</a>
+	            <div class="dropdown-divider"></div>
+	            <a class="dropdown-item" href="#">Log out</a>
+	          </div>
+	        </li>
+	      </ul>
+
+	      <ul class="navbar-nav mr-auto flex-first">
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            Categories
+	          </a>
+	          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="#">Admin & Dashboard</a>
+	            <a class="dropdown-item" href="#">Landing</a>
+	            <a class="dropdown-item" href="#">Business / Marketing</a>
+	            <a class="dropdown-item" href="#">E-commerce</a>
+	            <a class="dropdown-item" href="#">Portfolio</a>
+	            <a class="dropdown-item" href="#">Other</a>
+	          </div>
+	        </li>
+	      </ul>
+	      <ul class="navbar-nav hidden-lg-up">
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Earnings</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Orders</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Themes</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Account</a>
+	        </li>
+	        <li class="nav-item-divider"></li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Log out</a>
+	        </li>
+	      </ul>
+	    </div><!-- navbar-collapse -->
+
+	  </div><!-- container -->
+	</nav>
+
+	<div class="alert alert-warning w-100 text-center" role="alert">
+		<div class="container">
+			This theme is currently “pending review”. Submitting an update will place this theme at the end of our review queue.
+		</div><!--container-->
+	</div><!--alert-->
+
+	<main class="main d-flex flex-column justify-content-center align-items-center">
+
+		<section class="section w-100">
+			<div class="container container--xs">
+				<img src="assets/images/elements/bootstrap-logo.svg" class="img-fluid mx-auto d-block mb-3" alt="">
+				<h1 class="mb-1 text-center">Update Inspiraat Theme</h1>
+				<p class="fs-14 text-gray text-center mb-5">Remember to review our <a href="#">Theme Guidelines</a> before updating!</p>
+
+				<form action="">
+					<div class="form-group">
+				    <label for="InputThemeName">Theme name</label>
+				    <input type="text" class="form-control" id="InputThemeName" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group mb-4">
+				    <label for="InputCategory">Category</label>
+						<select name="" id="InputCategory" class="form-control">
+							<option value=""></option>
+							<option value="">Lorem</option>
+							<option value="">Lorem</option>
+						</select>
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputSinglePrice">Multi Use price</label>
+						<small id="singlePrice" class="form-text">Price for Multi Use License. Typically ~4x Single Use price</small>
+				    <input type="text" class="form-control" id="InputSinglePrice" aria-describedby="singlePrice" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputExtendedPrice">Extended Use price</label>
+						<small id="extendedPrice" class="form-text">Price for Extended Use License. Typically ~25x Single Use price</small>
+				    <input type="text" class="form-control" id="InputExtendedPrice" aria-describedby="extendedPrice" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputCompatability">Compatability</label>
+						<small id="compatabilityPrice" class="form-text">Which version of Bootstrap does it work with?</small>
+						<select name="" id="compatabilityPrice" aria-describedby="extendedPrice" class="form-control">
+							<option value=""></option>
+							<option value="">Lorem</option>
+							<option value="">Lorem</option>
+						</select>
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputThemeNumber">Version</label>
+						<small id="themeNumber" class="form-text">Your theme's current version number is 1.0</small>
+				    <input type="text" class="form-control" id="InputThemeNumber" aria-describedby="themeNumber" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputCSSPreprocessor">CSS preprocessor</label>
+						<small id="CSSPreprocessor" class="form-text">What type of style language does your theme use?</small>
+						<select name="" id="InputCSSPreprocessor" aria-describedby="CSSPreprocessor" class="form-control">
+							<option value=""></option>
+							<option value="">Lorem</option>
+							<option value="">Lorem</option>
+						</select>
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputDescription">Description</label>
+						<small id="DescriptionHelp" class="form-text">Describe your theme using Markdown and then preview it!</small>
+						<textarea name="" id="InputDescription" cols="" rows="" class="form-control textarea--lg"></textarea>
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputExclusive">Is this theme a Bootstrap Theme exclusive?</label>
+						<small id="exclusiveHelp" class="form-text">Is this only being sold on this website? Remember, exclusives get better commissions!</small>
+				    <input type="text" class="form-control" id="InputExclusive" aria-describedby="exclusiveHelp" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputLiveURL">Live preview URL</label>
+						<small id="LiveURLHelp" class="form-text">Provide the URL to the live preview of your theme. The preview must be the current version of your uploaded theme. Your preview cannor remove our preview frame, contain advertisements or referral links. We also discourage source obfuscation as it will adversely affect your sales.</small>
+				    <input type="text" class="form-control" id="InputLiveURL" aria-describedby="LiveURLHelp" placeholder="">
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="">Upload a preview screenshot</label>
+						<small id="" class="form-text">730 x 548 pixel JPG/PNG screenshot no larger than 500mb. Please use a clean screenshot – no additional marketing text or imagery is allowed.</small>
+						<div class="upload-image">
+							<div class="upload-image__item upload-image__cover-holder upload-image-placeholder upload-image__cover-holder--xl">
+								<div class="upload-image__cover__overlay">
+									<span class="btn btn-brand btn-sm btn-file hidden-sm-down">
+									    Upload cover <input type="file">
+									</span><!--btn-->
+								</div><!--upload-image__cover__overlay-->
+							</div><!--upload-image__item-->
+							<div class="d-flex justify-content-between align-items-center mt-3 hidden-md-up">
+								<span class="btn btn-brand btn-sm btn-block btn-file">
+										Swap cover <input type="file">
+								</span><!--btn-->
+							</div><!--d-flex-->
+						</div><!--upload-image-->
+				  </div><!-- form-group -->
+
+					<div class="form-group mb-5">
+				    <label for="">Upload your theme .zip</label>
+						<small id="" class="form-text">Maximum file size is 500MB. If you’re not sure what the requirements of our themes are, check out our <a href="#">Theme requirements page</a> before submitting.</small>
+						<div class="d-flex align-items-center">
+							<span class="btn btn-brand btn-file mr-3">
+								Upload .zip <input type="file">
+							</span><!--btn-->
+							<span class="fs-12 text-gray-soft">No file selected</span>
+						</div><!--d-flex-->
+				  </div><!-- form-group -->
+
+					<hr class="my-4">
+
+					<div class="form-group">
+				    <label for="InputNotify">Notify existing customers of the update?</label>
+						<small id="notifyHelp" class="form-text">Do you want to send an email update to previous purchasers of this theme?</small>
+						<select name="" id="InputNotify" aria-describedby="notifyHelp" class="form-control">
+							<option value=""></option>
+							<option value="">Lorem</option>
+							<option value="">Lorem</option>
+						</select>
+				  </div><!-- form-group -->
+
+					<div class="form-group">
+				    <label for="InputDescription">Email message</label>
+						<small id="messageHelp" class="form-text">Write your email message using <a href="#">Markdown</a> <a href="#">and preview</a> it. This will go to all previous purchasers of the Inspiraat Dashboard and will include a link to download the update at the end of the email.</small>
+						<textarea name="" id="InputDescription" cols="" rows="" class="form-control textarea--lg" aria-describedby="messageHelp"></textarea>
+				  </div><!-- form-group -->
+
+					<hr class="my-4">
+
+					<div class="form-group">
+				    <label for="InputExplainTeam">Explain your update to our review team</label>
+						<small id="explainTeamHelp" class="form-text">Write a quick message explaining to our review team what you’ve updated. Being thorough and specific in this message will minimize review times.</small>
+						<textarea name="" id="InputExplainTeam" cols="" rows="" class="form-control textarea--md" aria-describedby="explainTeamHelp"></textarea>
+				  </div><!-- form-group -->
+
+					<hr class="my-4">
+
+					<div class="d-flex flex-column flex-md-row align-items-center mb-4">
+						<button type="submit" class="btn btn-brand btn-block btn-lg">Submit update for review</button>
+
+						<button type="submit" class="btn btn-outline-brand btn-block btn-lg ml-md-3 mt-md-0">Preview theme page</button>
+					</div><!--d-flex-->
+
+					<p class="text-center text-gray-soft fs-13">Write a quick message explaining to our review team what you’ve updated. Being thorough and specific in this message will minimize review times.</p>
+				</form>
+			</div><!-- container -->
+		</section><!-- section -->
+
+	</main><!-- main -->
+
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__item">
+					<form action="">
+						<div class="d-md-flex justify-content-between">
+							<div class="form-group">
+								<label for="footerEmail">Email address</label>
+								<small id="footerEmail" class="form-text">New themes or big discounts. Never spam.</small>
+							</div><!-- form-group -->
+	
+							<div class="d-flex align-items-start">
+								<div class="form-group w-100 mr-2">
+							    <input type="email" class="form-control form-control--mutted" id="footerEmail" aria-describedby="footerEmail" placeholder="Email address">
+							  </div><!-- form-group -->
+							  <button type="submit" class="btn btn-brand">Subscribe</button>
+							</div><!-- d-md-flex -->
+						</div><!-- d-flex -->
+					</form>
+				</div><!-- footer__item -->
+	
+				<div class="footer__item d-lg-flex justify-content-lg-between align-items-sm-center">
+					<ul class="nav sub-nav footer__sub-nav">
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Support</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Terms</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Privacy</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Licenses</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">FAQ</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Sell your themes</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link sub-nav-link" href="#">Bootstrap</a>
+					  </li>
+					</ul><!-- footer__sub-nav -->
+	
+					<p class="hidden-sm-down">Trying to redownload a theme? Use our <a href="#">redownload page.</a></p>
+				</div><!-- footer__item -->
+			</div><!-- footer__inner -->
+		</div><!-- container -->
+	</footer>
+
+
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="../node_modules/tether/dist/js/tether.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/javascript/scripts.js"></script>
+
+
+
+</body>
+</html>
