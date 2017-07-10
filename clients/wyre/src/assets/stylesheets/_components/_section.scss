@@ -12,19 +12,18 @@
 }
 
 .section--waves {
-  padding: 40% 0;
-  &:before {
-    @include media-breakpoint-up(md) {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background-image: url('../images/bg/waves.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  padding: 600px 0;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 1200px) {
+    padding: 300px 0;
+  }
+  @include media-breakpoint-up(md) {
+    background-image: url('../images/bg/waves.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
   }
   @include media-breakpoint-down(sm) {
     background: $sky;
