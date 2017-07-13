@@ -1,0 +1,45 @@
+/* SIDEBAR RIGHT */
+
+$sidebar-right-width: 5px;
+$sidebar-right-open-width: 330px;
+$sidebar-right-bg: #f5f7f8;
+$sibebar-border-color: #dde8ed;
+$sidebar-right-toggle-btn-color: $jungle-mist;
+$sidebar-right-toggle-btn-bg: #f5f7f8;
+$sidebar-right-toggle-btn-size: 35px;
+
+
+.sidebar__right {
+  @include transition(250ms);
+  width: $sidebar-right-width;
+  flex-shrink: 0;
+  background: $sidebar-right-bg;
+  padding: 30px 15px;
+  border-left: 1px solid $sibebar-border-color;
+  position: relative;
+}
+.sidebar__right--opened {
+  width: $sidebar-right-open-width;
+}
+
+.sidebar__right__toggle {
+  height: $sidebar-right-toggle-btn-size * 2;
+  width: $sidebar-right-toggle-btn-size;
+  @extend .d-flex, .align-items-center;
+  color: $sidebar-right-toggle-btn-color;
+  background: $sidebar-right-toggle-btn-bg;
+  font-size: 20px;
+  padding-left: 6px;
+  border-bottom-left-radius: 90px;
+  border-top-left-radius: 90px;
+  border-top: 1px solid $sidebar-right-toggle-btn-color;
+  border-left: 1px solid $sidebar-right-toggle-btn-color;
+  border-bottom: 1px solid $sidebar-right-toggle-btn-color;
+  position: absolute;
+  left: -$sidebar-right-toggle-btn-size;
+  top: 50%;
+  transform: translateY(-50%);
+  &:hover, &:focus {
+    color: darken($sidebar-right-toggle-btn-color, 10%);
+  }
+}
