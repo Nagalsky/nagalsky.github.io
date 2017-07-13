@@ -1,0 +1,21 @@
+/* BUTTONS */
+
+$btn-fs: 13px;
+$btn-ff: $font-base-bold;
+
+.btn {
+  font-size: $btn-fs;
+  font-family: $btn-ff;
+  padding: 0.5rem 1.4rem;
+  &.btn-sky {
+    background: $bright-turquoise;
+    color: $white;
+    &:hover, &:focus {
+      background: darken($bright-turquoise, 10%);
+      color: $white;
+    }
+  }
+  &.btn-rounded {
+    border-radius: 20px;
+  }
+}
