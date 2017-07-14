@@ -16,7 +16,7 @@ $dropdown-item-active-color: $shakespeare;
   border-color: $dropdown-border-color;
   padding-left: 7px;
   padding-right: 7px;
-  margin-top: .5rem;
+  margin-top: .7rem;
 }
 
 .dropdown-menu--has-arrow {
@@ -29,9 +29,6 @@ $dropdown-item-active-color: $shakespeare;
   	width: 0;
   	position: absolute;
   	pointer-events: none;
-    @include media-breakpoint-down(sm) {
-      content: none;
-    }
   }
   &:after {
   	border-bottom-color: $white;
@@ -58,11 +55,10 @@ $dropdown-item-active-color: $shakespeare;
 .dropdown-item {
   padding-left: 5px;
   padding-right: 5px;
-  font-size: 13px;
+  font-size: 14px;
   color: $dropdown-item-color;
   &:hover, &:focus {
     color: $dropdown-item-active-color;
-    background: transparent;
   }
   &+.dropdown-item {
     border-top: 1px solid $gallery;
