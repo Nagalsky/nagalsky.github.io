@@ -69,7 +69,19 @@
 	<main class="main d-flex">
 
 		<aside class="sidebar__left hidden-sm-down">
-			1
+			<ul class="sidebar-list list-unstyled">
+				<li class="sidebar-list__item sidebar-list__item--active">
+					<a href="#" class="sidebar-list__link">
+						<i class="sidebar-list__icon white-smoke-icon-cog"></i>
+					</a>
+				</li><!--list-sidebar__item-->
+
+				<li class="sidebar-list__item">
+					<a href="#" class="sidebar-list__link">
+						<i class="sidebar-list__icon white-smoke-icon-cog"></i>
+					</a>
+				</li><!--list-sidebar__item-->
+			</ul><!--list-sidebar-->
 		</aside><!--sidebar__left-->
 
 		<div class="tab-content d-flex flex-1">
@@ -79,29 +91,31 @@
 						<div class="d-sm-flex align-items-center mb-4">
 							<h6 class="mb-3 mb-sm-0 mr-auto">Writer</h6>
 
-							<a href="#" class="btn btn-secondary btn-content-sidebar-toggle mr-0 mr-sm-2 hidden-md-up">Sidebar</a>
+							<div class="d-inline-flex">
+								<a href="#" class="btn btn-secondary btn-content-sidebar-toggle mr-2 hidden-lg-up d-inline-flex">Sidebar</a>
 
-							<div class="dropdown d-inline-flex mr-0 mr-sm-2">
-							  <a class="btn btn-secondary dropdown-toggle dropdown-toggle--without-arrow" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Share
-							  </a>
+								<div class="dropdown mr-2 d-inline-flex">
+								  <a class="btn btn-secondary dropdown-toggle dropdown-toggle--without-arrow" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Share
+								  </a>
 
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu--has-arrow">
-				          <a class="dropdown-item text-facebook" href="#"><i class="white-smoke-icon-facebook-circled"></i> FaceBook</a>
-				          <a class="dropdown-item text-twitter" href="#"><i class="white-smoke-icon-twitter-circled"></i> Twitter</a>
-				        </div>
-							</div><!--dropdown-->
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu--has-arrow">
+					          <a class="dropdown-item text-facebook" href="#"><i class="white-smoke-icon-facebook-circled"></i> FaceBook</a>
+					          <a class="dropdown-item text-twitter" href="#"><i class="white-smoke-icon-twitter-circled"></i> Twitter</a>
+					        </div>
+								</div><!--dropdown-->
 
-							<div class="dropdown d-inline-flex">
-							  <a class="btn btn-secondary dropdown-toggle dropdown-toggle--without-arrow" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Export
-							  </a>
+								<div class="dropdown d-inline-flex">
+								  <a class="btn btn-secondary dropdown-toggle dropdown-toggle--without-arrow" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    Export
+								  </a>
 
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu--has-arrow">
-				          <a class="dropdown-item text-danger" href="#"><i class="white-smoke-icon-file-pdf"></i> PDF</a>
-				          <a class="dropdown-item text-twitter" href="#"><i class="white-smoke-icon-file-word"></i> WORD</a>
-				        </div>
-							</div><!--dropdown-->
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu--has-arrow">
+					          <a class="dropdown-item text-danger" href="#"><i class="white-smoke-icon-file-pdf"></i> PDF</a>
+					          <a class="dropdown-item text-twitter" href="#"><i class="white-smoke-icon-file-word"></i> WORD</a>
+					        </div>
+								</div><!--dropdown-->
+							</div><!--d-inline-flex-->
 						</div><!--d-sm-flex-->
 					</div><!--flex-1-->
 				</div><!--page-tab-content-->
@@ -112,9 +126,102 @@
 					</a>
 
 					<div class="sidebar__right__item">
-						<a href="#" class="sidebar__right__close hidden-md-up">
+						<a href="#" class="sidebar__right__close hidden-lg-up">
 							<i class="white-smoke-icon-cancel-circled"></i>
 						</a>
+
+						<div class="panel">
+							<div class="panel__body">
+								<p class="progress__title">18 / GRAMMAR</p>
+								<div class="d-flex justify-content-between align-items-center text-success-secondary">
+									<i class="progress__icon white-smoke-icon-cog"></i>
+
+									<div class="progress progress--success w-100">
+									  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div><!--progress-bar-->
+									</div><!--progress-->
+								</div><!--d-flex-->
+							</div><!--panel__body-->
+						</div><!--panel-->
+
+						<div class="panel">
+							<div class="panel__body">
+								<p class="progress__title">12 / SPELLING</p>
+								<div class="d-flex justify-content-between align-items-center text-danger-secondary">
+									<i class="progress__icon white-smoke-icon-cog"></i>
+
+									<div class="progress progress--danger w-100">
+									  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div><!--progress-bar-->
+									</div><!--progress-->
+								</div><!--d-flex-->
+							</div><!--panel__body-->
+						</div><!--panel-->
+
+						<div class="panel">
+							<div class="panel__body">
+								<p class="progress__title">10 / STYLING</p>
+								<div class="d-flex justify-content-between align-items-center text-pink-secondary">
+									<i class="progress__icon white-smoke-icon-cog"></i>
+
+									<div class="progress progress--pink w-100">
+									  <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div><!--progress-bar-->
+									</div><!--progress-->
+								</div><!--d-flex-->
+							</div><!--panel__body-->
+						</div><!--panel-->
+
+						<div class="knob my-4 d-flex justify-content-center align-items-center">
+							<input type="text" value="64" class="dial" data-readOnly="true" data-fgColor="#343f4b" data-bgColor="#dde8ed" data-width="46" style="height:46px !important;">
+							<p class="knob__title">Your Overall Score</p>
+						</div><!--knob-->
+
+						<hr>
+
+						<table class="table table--aside">
+							<tbody>
+						    <tr>
+						      <td>Sentence Length</td>
+						      <td class="text-success">Excellent</td>
+						    </tr>
+								<tr>
+						      <td>Sentence Structure</td>
+						      <td class="text-warning">Fair</td>
+						    </tr>
+								<tr>
+						      <td>Redundancy</td>
+						      <td class="text-success">Excellent</td>
+						    </tr>
+								<tr>
+						      <td>Voice</td>
+						      <td class="text-success">Excellent</td>
+						    </tr>
+								<tr>
+						      <td>Informal Expression</td>
+						      <td class="text-danger">Bad</td>
+						    </tr>
+								<tr>
+						      <td>Word Choice</td>
+						      <td class="text-success">Excellent</td>
+						    </tr>
+						  </tbody>
+						</table><!--table-->
+
+						<div class="stats">
+							<div class="stats__item">
+								<p class="stats__title">10</p>
+								<span>Sentense Count</span>
+							</div><!--stats__item-->
+
+							<div class="stats__item">
+								<p class="stats__title">10</p>
+								<span>Word Count</span>
+							</div><!--stats__item-->
+
+							<div class="stats__item">
+								<p class="stats__title">3000</p>
+								<span>Characters</span>
+							</div><!--stats__item-->
+						</div><!--stats-->
+
 					</div><!--sidebar__right__item-->
 				</aside><!--sidebar__right-->
 			</div><!--tab-pane-->
@@ -154,6 +261,7 @@
 
 
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/jquery-knob/dist/jquery.knob.min.js"></script>
 	<script src="../node_modules/tether/dist/js/tether.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="assets/javascript/scripts.js"></script>

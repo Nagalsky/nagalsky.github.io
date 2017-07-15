@@ -1,0 +1,45 @@
+/* PROGRESS */
+
+$progress-bg: #dde8ed;
+$progress-height: 5px;
+$progress-title-color: #4e5f70;
+
+.progress {
+  background: $progress-bg;
+  height: $progress-height;
+  border-radius: 2px;
+}
+.progress--success {
+  .progress-bar {
+    background: $success-secondary;
+  }
+}
+.progress--danger {
+  .progress-bar {
+    background: $danger-secondary;
+  }
+}
+.progress--pink {
+  .progress-bar {
+    background: $pink-secondary;
+  }
+}
+.progress-bar {
+  height: $progress-height;
+}
+
+
+.progress__title {
+  text-align: center;
+  font-size: 12px;
+  font-family: $font-base-semibold;
+  color: $progress-title-color;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+.progress__icon {
+  margin-right: 20px;
+  font-size: 20px;
+  flex-shrink: 0;
+}

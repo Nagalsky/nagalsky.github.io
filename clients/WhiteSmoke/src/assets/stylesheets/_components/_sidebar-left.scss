@@ -4,7 +4,42 @@ $sidebar-left-bg: $sky;
 
 .sidebar__left {
   background: $sidebar-left-bg;
-  padding: 30px 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 70px;
   flex-shrink: 0;
+}
+
+.sidebar-list__item {
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  &+.sidebar-list__item {
+    margin-top: 25px;
+  }
+}
+.sidebar-list__item--active {
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 8px 9px 0px;
+    border-color: transparent $white transparent transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .sidebar-list__link {
+    color: $white;
+  }
+}
+.sidebar-list__link {
+  font-size: 20px;
+  color: $sky-soft;
+  &:hover, &:focus {
+    color: $white;
+  }
 }

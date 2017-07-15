@@ -15,6 +15,7 @@ $(document).ready(function(){
 	});
 
 
-
+	//jQuery Knob initial
+	$(".dial").knob();
 
 });
