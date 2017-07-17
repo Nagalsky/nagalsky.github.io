@@ -4331,7 +4331,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, body, .sidebar__right__toggle, .tab-pane.active, .stats {
+.d-flex, body, .sidebar__right__toggle, .tab-content--flex .tab-pane.active, .stats {
   display: -ms-flexbox !important;
   display: flex !important; }
 
@@ -6529,6 +6529,10 @@ ol, ul {
   content: '\e805'; }
 
 /* '' */
+.white-smoke-icon-key-1:before {
+  content: '\e807'; }
+
+/* '' */
 .white-smoke-icon-menu:before {
   content: '\f008'; }
 
@@ -6637,6 +6641,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, .h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child {
     margin-bottom: 0; }
 
+h5, .h5 {
+  font-size: 17px; }
+
 h6, .h6 {
   font-size: 14px; }
 
@@ -6689,6 +6696,12 @@ p {
 .text-muted-soft {
   color: #343f4b !important; }
 
+.text-gray {
+  color: #576d82; }
+
+.text-gray-soft {
+  color: #8497a9; }
+
 .text-sky {
   color: #4BAED0 !important; }
 
@@ -6728,6 +6741,12 @@ p {
 
 .bg-muted-soft {
   background-color: #343f4b !important; }
+
+.bg-gray {
+  background-color: #576d82; }
+
+.bg-gray-soft {
+  background-color: #8497a9; }
 
 .bg-sky {
   background-color: #4BAED0 !important; }
@@ -6775,6 +6794,22 @@ p {
       border-color: #dde8ed;
       background: #e6ebee;
       color: #7a93ae; }
+  .btn.btn-primary {
+    border-color: #3da5dd;
+    background: #3da5dd;
+    color: #ffffff; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus {
+      border-color: #279bd9;
+      background: #279bd9;
+      color: #ffffff; }
+  .btn.btn-gray {
+    border-color: #7e8e9d;
+    background: #7e8e9d;
+    color: #ffffff; }
+    .btn.btn-gray:hover, .btn.btn-gray:focus {
+      border-color: #708192;
+      background: #708192;
+      color: #ffffff; }
   .btn.btn-sky-gradient {
     border-color: #99d1e4;
     background-image: linear-gradient(to bottom, #f9fdfe 0%, #f5fcfd 100%);
@@ -6795,8 +6830,12 @@ p {
       background-image: linear-gradient(to bottom, #fcead9 0%, #fcead9 100%);
       background-repeat: repeat-x;
       color: #6f451f; }
+  .btn.btn-sm, .btn-group-sm > .btn {
+    padding: 0.3rem 1.2rem; }
   .btn.btn-rounded {
     border-radius: 20px; }
+  .btn.btn-equal {
+    min-width: 90px; }
 
 /* SECTION */
 .section {
@@ -6805,7 +6844,7 @@ p {
 
 /* LIST */
 /* FLEX */
-.flex-1, .page-tab-content, .tab-pane.active {
+.flex-1, .tab-content--flex, .tab-content--flex .page-tab-content, .tab-content--flex .tab-pane.active {
   -ms-flex: 1;
   flex: 1; }
 
@@ -6918,11 +6957,8 @@ p {
   background: #f5f7f8;
   border-left: 1px solid #dde8ed;
   border-bottom: 1px solid #dde8ed;
-  position: relative; }
-  @media (min-width: 768px) {
-    .sidebar__right {
-      overflow-y: auto;
-      height: calc(100vh - 75px); } }
+  position: relative;
+  margin-bottom: 3px; }
   @media (max-width: 991px) {
     .sidebar__right {
       width: 100%;
@@ -6943,6 +6979,10 @@ p {
 
 .sidebar__right__item {
   padding: 28px 15px; }
+  @media (min-width: 768px) {
+    .sidebar__right__item {
+      overflow-y: auto;
+      height: calc(100vh - 80px); } }
   @media (min-width: 768px) {
     .sidebar__right__item {
       min-width: 330px; } }
@@ -6981,6 +7021,16 @@ p {
     color: #a1bbc7; }
 
 /* TAB */
+.nav-tabs-bordered .nav-link, .nav-tabs-bordered .nav-link.active {
+  color: #8598a9;
+  padding: .75rem .8rem;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+  .nav-tabs-bordered .nav-link:hover, .nav-tabs-bordered .nav-link:focus, .nav-tabs-bordered .nav-link.active:hover, .nav-tabs-bordered .nav-link.active:focus {
+    color: #8598a9; }
+  .nav-tabs-bordered .nav-link.active, .nav-tabs-bordered .nav-link.active.active {
+    border-color: #ccd4da; }
+
 .page-tab-content {
   padding: 28px 30px; }
   @media (max-width: 991px) {
@@ -7034,7 +7084,8 @@ p {
 
 .knob-wrap {
   height: 46px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .knob__title {
   text-transform: capitalize;
@@ -7076,6 +7127,201 @@ p {
   font-size: 18px;
   font-family: "OpenSans-Bold";
   margin-bottom: 5px; }
+
+/* BOOTSTRAP SWITCH */
+/**
+  * bootstrap-switch - Turn checkboxes and radio buttons into toggle switches.
+  *
+  * @version v3.3.4
+  * @homepage https://bttstrp.github.io/bootstrap-switch
+  * @author Mattia Larentis <mattia@larentis.eu> (http://larentis.eu)
+  * @license Apache-2.0
+  */
+.bootstrap-switch {
+  display: inline-block;
+  direction: ltr;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+
+.bootstrap-switch .bootstrap-switch-container {
+  display: inline-block;
+  top: 0;
+  border-radius: 4px;
+  transform: translate3d(0, 0, 0); }
+
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-label {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "OpenSans-Bold"; }
+
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off {
+  text-align: center;
+  z-index: 1; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  color: #fff;
+  background: #c8d1d8; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
+  color: #fff;
+  background: #c8d1d8; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
+  color: #fff;
+  background: #5cb85c; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning {
+  background: #f0ad4e;
+  color: #fff; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger {
+  color: #fff;
+  background: #d9534f; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+  color: #fff;
+  background: #c8d1d8; }
+
+.bootstrap-switch .bootstrap-switch-label {
+  text-align: center;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 100;
+  color: #333;
+  background: #7e8e9d; }
+
+.bootstrap-switch span::before {
+  content: "\200b"; }
+
+.bootstrap-switch .bootstrap-switch-handle-on {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px; }
+
+.bootstrap-switch .bootstrap-switch-handle-off {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
+
+.bootstrap-switch input[type='radio'],
+.bootstrap-switch input[type='checkbox'] {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden; }
+
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5; }
+
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5; }
+
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label {
+  padding: 6px 16px;
+  font-size: 18px;
+  line-height: 1.3333333; }
+
+.bootstrap-switch.bootstrap-switch-disabled,
+.bootstrap-switch.bootstrap-switch-readonly,
+.bootstrap-switch.bootstrap-switch-indeterminate {
+  cursor: default !important; }
+
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-label {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important; }
+
+.bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
+  transition: margin-left 0.5s; }
+
+.bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-on {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
+
+.bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-off {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px; }
+
+.bootstrap-switch.bootstrap-switch-focused {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
+
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px; }
+
+/* MODAL */
+.modal-content {
+  border-color: #669bae; }
+
+.modal-header {
+  background: #ffffff;
+  border-color: #cbd3da; }
+  @media (min-width: 768px) {
+    .modal-header {
+      padding: 25px 50px; } }
+
+.modal-body {
+  background: #f5f7f8; }
+  @media (min-width: 768px) {
+    .modal-body {
+      padding: 60px 50px; } }
 
 /* NAVBAR */
 .navbar {

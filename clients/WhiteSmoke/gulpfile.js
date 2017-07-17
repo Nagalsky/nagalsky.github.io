@@ -29,14 +29,14 @@ var path = {
     html: 'src/*.html',
     stylesheets: 'src/assets/stylesheets/*.scss',
     img: 'src/assets/images/**/*.*',
-    javascript: 'src/assets/javascript/**/*.js',
+    javascript: 'src/assets/javascript/**/*.*',
     fonts: 'src/assets/fonts/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
     stylesheets: 'src/assets/stylesheets/**/*.scss',
     img: 'src/assets/images/**/*.*',
-    javascript: 'src/assets/javascript/**/*.js',
+    javascript: 'src/assets/javascript/**/*.*',
     fonts: 'src/assets/fonts/**/*.*'
   }
 };
@@ -108,7 +108,7 @@ gulp.task('server:build', function() {
     server: {
       baseDir: "dist",
       routes: {
-        '/node_modules': 'node_modules'
+        '/bower_components': 'bower_components'
       }
     },
     notify: {

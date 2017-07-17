@@ -1,15 +1,34 @@
 /* TAB */
 
+
+.nav-tabs-bordered {
+  .nav-link, .nav-link.active {
+    color: #8598a9;
+    padding: .75rem .8rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    &:hover, &:focus {
+      color: #8598a9;
+    }
+    &.active {
+      border-color: #ccd4da;
+    }
+  }
+}
 .page-tab-content {
   padding: 28px 30px;
-  @extend .flex-1;
   @include media-breakpoint-down(md) {
     padding: 15px 15px;
   }
 }
-
-.tab-pane {
-  &.active {
-    @extend .d-flex, .flex-1;
+.tab-content--flex {
+  @extend .flex-1;
+  .page-tab-content {
+    @extend .flex-1;
+  }
+  .tab-pane {
+    &.active {
+      @extend .d-flex, .flex-1;
+    }
   }
 }

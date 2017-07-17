@@ -25,6 +25,26 @@ $btn-ff: $font-base-bold;
       color: #7a93ae;
     }
   }
+  &.btn-primary {
+    border-color: #3da5dd;
+    background: #3da5dd;
+    color: $white;
+    &:hover, &:focus {
+      border-color: darken(#3da5dd, 5%);;
+      background: darken(#3da5dd, 5%);
+      color: $white;
+    }
+  }
+  &.btn-gray {
+    border-color: #7e8e9d;
+    background: #7e8e9d;
+    color: $white;
+    &:hover, &:focus {
+      border-color: darken(#7e8e9d, 5%);
+      background: darken(#7e8e9d, 5%);
+      color: $white;
+    }
+  }
   &.btn-sky-gradient {
     border-color: #99d1e4;
     @include gradient-y($start-color: #f9fdfe, $end-color: #f5fcfd, $start-percent: 0%, $end-percent: 100%);
@@ -45,7 +65,13 @@ $btn-ff: $font-base-bold;
       color: #6f451f;
     }
   }
+  &.btn-sm {
+    padding: 0.3rem 1.2rem;
+  }
   &.btn-rounded {
     border-radius: 20px;
+  }
+  &.btn-equal {
+    min-width: 90px;
   }
 }

@@ -18,4 +18,7 @@ $(document).ready(function(){
 	//jQuery Knob initial
 	$(".dial").knob();
 
+	//Bootstrap switch initial
+	$("[name='switch-checkbox']").bootstrapSwitch();
+
 });
