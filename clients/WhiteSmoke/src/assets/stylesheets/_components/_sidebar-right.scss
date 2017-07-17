@@ -18,7 +18,10 @@ $sidebar-right-toggle-btn-size: 35px;
   border-left: 1px solid $sibebar-border-color;
   border-bottom: 1px solid $sibebar-border-color;
   position: relative;
-  margin-bottom: 3px;
+  @include media-breakpoint-up(md) {
+    overflow-y: auto;
+    height: calc(100vh - 75px);
+  }
   @include media-breakpoint-down(md) {
     width: 100%;
     position: absolute;

@@ -6775,6 +6775,26 @@ p {
       border-color: #dde8ed;
       background: #e6ebee;
       color: #7a93ae; }
+  .btn.btn-sky-gradient {
+    border-color: #99d1e4;
+    background-image: linear-gradient(to bottom, #f9fdfe 0%, #f5fcfd 100%);
+    background-repeat: repeat-x;
+    color: #005cbf; }
+    .btn.btn-sky-gradient:hover, .btn.btn-sky-gradient:focus {
+      border-color: #99d1e4;
+      background-image: linear-gradient(to bottom, #cdeef7 0%, #cbeff5 100%);
+      background-repeat: repeat-x;
+      color: #005cbf; }
+  .btn.btn-warning-gradient {
+    border-color: #ffbd81;
+    background-image: linear-gradient(to bottom, #fdf3ea 0%, #fcead9 100%);
+    background-repeat: repeat-x;
+    color: #6f451f; }
+    .btn.btn-warning-gradient:hover, .btn.btn-warning-gradient:focus {
+      border-color: #ffbd81;
+      background-image: linear-gradient(to bottom, #fcead9 0%, #fcead9 100%);
+      background-repeat: repeat-x;
+      color: #6f451f; }
   .btn.btn-rounded {
     border-radius: 20px; }
 
@@ -6898,8 +6918,11 @@ p {
   background: #f5f7f8;
   border-left: 1px solid #dde8ed;
   border-bottom: 1px solid #dde8ed;
-  position: relative;
-  margin-bottom: 3px; }
+  position: relative; }
+  @media (min-width: 768px) {
+    .sidebar__right {
+      overflow-y: auto;
+      height: calc(100vh - 75px); } }
   @media (max-width: 991px) {
     .sidebar__right {
       width: 100%;
@@ -7000,7 +7023,7 @@ p {
   text-transform: uppercase; }
 
 .progress__icon {
-  margin-right: 20px;
+  margin-right: 14px;
   font-size: 20px;
   -ms-flex-negative: 0;
   flex-shrink: 0; }

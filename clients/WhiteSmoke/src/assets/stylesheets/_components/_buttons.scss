@@ -25,6 +25,26 @@ $btn-ff: $font-base-bold;
       color: #7a93ae;
     }
   }
+  &.btn-sky-gradient {
+    border-color: #99d1e4;
+    @include gradient-y($start-color: #f9fdfe, $end-color: #f5fcfd, $start-percent: 0%, $end-percent: 100%);
+    color: #005cbf;
+    &:hover, &:focus {
+      border-color: #99d1e4;
+      @include gradient-y($start-color: darken(#f9fdfe, 10%), $end-color: darken(#f5fcfd, 10%), $start-percent: 0%, $end-percent: 100%);
+      color: #005cbf;
+    }
+  }
+  &.btn-warning-gradient {
+    border-color: #ffbd81;
+    @include gradient-y($start-color: #fdf3ea, $end-color: #fcead9, $start-percent: 0%, $end-percent: 100%);
+    color: #6f451f;
+    &:hover, &:focus {
+      border-color: #ffbd81;
+      @include gradient-y($start-color: #fcead9, $end-color: #fcead9, $start-percent: 0%, $end-percent: 100%);
+      color: #6f451f;
+    }
+  }
   &.btn-rounded {
     border-radius: 20px;
   }
