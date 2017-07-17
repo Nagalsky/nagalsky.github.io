@@ -7002,11 +7002,11 @@ p {
       padding: 15px 15px; } }
 
 .sidebar__right__toggle {
-  height: 70px;
-  width: 35px;
+  height: 40px;
+  width: 20px;
   color: #c1d2da;
   background: #f5f7f8;
-  font-size: 20px;
+  font-size: 14px;
   padding-left: 6px;
   border-bottom-left-radius: 90px;
   border-top-left-radius: 90px;
@@ -7014,7 +7014,7 @@ p {
   border-left: 1px solid #c1d2da;
   border-bottom: 1px solid #c1d2da;
   position: absolute;
-  left: -35px;
+  left: -20px;
   top: 50%;
   transform: translateY(-50%); }
   @media (max-width: 991px) {
@@ -7386,8 +7386,19 @@ video {
       padding: 5px; } }
 
 @media (min-width: 768px) {
-  .navbar-nav--bordered .nav-item + .nav-item {
-    border-left: 1px solid #a8bec9; } }
+  .navbar-nav--bordered .nav-item + .nav-item .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .navbar-nav--bordered .nav-item + .nav-item .nav-link:before {
+      content: '';
+      background: #a8bec9;
+      width: 1px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 1px; } }
 
 .navbar-nav--icons {
   font-size: 18px; }
@@ -7398,6 +7409,7 @@ video {
     color: #ffffff; }
 
 .nav-link {
+  position: relative;
   color: #a8bec9; }
   @media (min-width: 768px) {
     .nav-link {

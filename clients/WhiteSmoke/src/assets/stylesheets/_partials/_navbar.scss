@@ -51,8 +51,22 @@ $navbar-active-color: $white;
 .navbar-nav--bordered {
  .nav-item {
    &+.nav-item {
-     @include media-breakpoint-up(md) {
-       border-left: 1px solid $navbar-color;
+     .nav-link {
+       @include media-breakpoint-up(md) {
+         padding-left: 1rem;
+         padding-right: 1rem;
+         &:before {
+           content: '';
+           background: $navbar-color;
+           width: 1px;
+           height: 16px;
+           position: absolute;
+           left: 0;
+           top: 50%;
+           transform: translateY(-50%);
+           margin-top: 1px;
+         }
+       }
      }
    }
  }
@@ -71,6 +85,7 @@ $navbar-active-color: $white;
   }
 }
 .nav-link {
+  position: relative;
   @include media-breakpoint-up(md) {
     padding-top: 0;
     padding-bottom: 0;
