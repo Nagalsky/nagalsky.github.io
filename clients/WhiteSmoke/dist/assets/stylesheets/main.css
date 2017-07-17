@@ -6426,7 +6426,8 @@ a:hover, a:focus, a:visited {
   outline-offset: 0; }
 
 ol, ul {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-left: 15px; }
   ol:last-child, ul:last-child {
     margin-bottom: 0; }
 
@@ -6669,6 +6670,16 @@ p {
   margin-bottom: 20px; }
   p:last-child {
     margin-bottom: 0; }
+
+.title-underline {
+  color: #485462;
+  font-size: 15px;
+  font-family: "OpenSans-Semibold";
+  margin-bottom: .5rem; }
+
+.title-underline__span {
+  display: inline-block;
+  border-bottom: 1px solid #485462; }
 
 /*Font classes*/
 .font-base-light {
@@ -7314,14 +7325,33 @@ p {
 .modal-header {
   background: #ffffff;
   border-color: #cbd3da;
-  border-radius: 0.3rem 0.3rem 0 0; }
+  border-radius: 0.2rem 0.2rem 0 0; }
   @media (min-width: 768px) {
     .modal-header {
       padding: 25px 50px; } }
 
+.modal-header--sky {
+  background: #449ab8;
+  border-color: #449ab8;
+  color: #ffffff; }
+  .modal-header--sky .close {
+    color: #ffffff;
+    opacity: 1;
+    text-shadow: none; }
+
 @media (min-width: 768px) {
   .modal-body {
     padding: 60px 50px; } }
+
+.modal-content--sm .modal-header {
+  padding: 5px 15px; }
+
+.modal-content--sm .modal-body {
+  padding: 15px 15px; }
+
+/* VIDEO */
+video {
+  object-fit: cover; }
 
 /* NAVBAR */
 .navbar {

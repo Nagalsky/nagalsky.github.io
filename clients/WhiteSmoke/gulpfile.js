@@ -22,6 +22,7 @@ var path = {
     html: 'dist/',
     stylesheets: 'dist/assets/stylesheets/',
     img: 'dist/assets/images/',
+    video: 'dist/assets/video/',
     javascript: 'dist/assets/javascript/',
     fonts: 'dist/assets/fonts/'
   },
@@ -29,6 +30,7 @@ var path = {
     html: 'src/*.html',
     stylesheets: 'src/assets/stylesheets/*.scss',
     img: 'src/assets/images/**/*.*',
+    video: 'src/assets/video/**/*.*',
     javascript: 'src/assets/javascript/**/*.*',
     fonts: 'src/assets/fonts/**/*.*'
   },
@@ -36,6 +38,7 @@ var path = {
     html: 'src/**/*.html',
     stylesheets: 'src/assets/stylesheets/**/*.scss',
     img: 'src/assets/images/**/*.*',
+    video: 'src/assets/video/**/*.*',
     javascript: 'src/assets/javascript/**/*.*',
     fonts: 'src/assets/fonts/**/*.*'
   }
@@ -101,6 +104,15 @@ gulp.task('img:build', task.img = function () {
     }));
 });
 
+//Video
+gulp.task('video:build', task.video = function () {
+  gulp.src(path.src.video)
+    .pipe(gulp.dest(path.build.video))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 // Server
 gulp.task('server:build', function() {
   browserSync.init({
@@ -127,6 +139,7 @@ gulp.task('build', [
   'sass:build',
   'server:build',
   'img:build',
+  'video:build',
   'javascript:build',
   'fonts:build'
 ]);
@@ -140,6 +153,9 @@ gulp.task('watch', function () {
   });
   watch([path.watch.img], function (event, cb) {
     gulp.start('img:build');
+  });
+  watch([path.watch.video], function (event, cb) {
+    gulp.start('video:build');
   });
   watch([path.watch.javascript], function (event, cb) {
     gulp.start('javascript:build');
