@@ -1,0 +1,42 @@
+/* BUTTONS */
+
+.btn {
+  font-size: 24px;
+  font-family: $font-base-bold;
+  border-width: 2px;
+  padding: .78rem 4.4rem;
+  @include media-breakpoint-down(lg) {
+    padding: .7rem 3.4rem;
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: .6rem 3rem;
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: .5rem 1rem;
+    font-size: 16px;
+  }
+  &.btn-primary {
+    background: $primary;
+    border-color: $primary;
+    box-shadow: 10.607px 10.607px 25px 0px rgba($black, .18);
+    &:hover, &:focus {
+      background: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+      color: $white;
+      box-shadow: 0px 4px 10px 0px rgba(231, 85, 61, .35);
+    }
+  }
+  &.btn-outline-primary {
+    border-color: $primary;
+    box-shadow: 10.607px 10.607px 25px 0px rgba($black, .18);
+    color: $primary;
+    &:hover, &:focus {
+      background: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+      color: $white;
+      box-shadow: 0px 4px 10px 0px rgba(231, 85, 61, .35);
+    }
+  }
+}
