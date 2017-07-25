@@ -32,19 +32,19 @@ $(document).ready(function(){
     slidesToScroll: 1,
     arrows: true,
     fade: false,
-    //asNavFor: '.gallery__thumbnails',
+    asNavFor: '.gallery__thumbnails',
     lazyLoad: 'ondemand'
   });
-  // $('.gallery__thumbnails').slick({
-  //   arrows: false,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 5,
-  //   asNavFor: '.carousel--with-thumbnails',
-  //   dots: false,
-  //   centerMode: false,
-  //   focusOnSelect: true,
-  //   lazyLoad: 'ondemand'
-  // });
+  $('.gallery__thumbnails').slick({
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    asNavFor: '.carousel--with-thumbnails',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    lazyLoad: 'ondemand'
+  });
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('.carousel, .gallery__thumbnails').resize();
   });
