@@ -1,2 +1,94 @@
 /* CARD */
 
+.card {
+  box-shadow: 0px 0px 25px 0px rgba(33, 33, 33, 0.25);
+  border-radius: 10px;
+  border: none;
+  position: relative;
+}
+.card--xl {
+  .card-block {
+    @include media-breakpoint-up(lg) {
+      padding: 40px 80px;
+    }
+  }
+}
+.card--user {
+  margin-top: 60px;
+  .card-block {
+    padding-top: 65px;
+  }
+}
+.card--dark {
+  background: $shark;
+}
+.card--border-top {
+  border-top: 3px solid $primary;
+  .card-block {
+    &:before, &:after {
+      content: none;
+    }
+  }
+}
+.card-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 35px;
+    position: absolute;
+    background: $primary;
+  }
+  &:before {
+    top: -12px;
+    right: -50px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    bottom: -12px;
+    left: -50px;
+    transform: rotate(45deg);
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+}
+
+.card-block--gutter {
+  padding: 0;
+}
+.card__user-role {
+  color: $gray;
+  font-size: 14px;
+  font-family: $font-base-regular;
+}
+.card__user-role__span {
+  display: block;
+}
+.card__user-role__name {
+  font-size: 18px;
+  font-family: $font-base-bold;
+  color: $primary;
+}
+$card-avatar-size: 104px;
+.card__avatar {
+  width: $card-avatar-size;
+  height: $card-avatar-size;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  display: block;
+  position: absolute;
+  top: 0;
+  margin-top: -$card-avatar-size / 2;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $white;
+}
+.card__avatar__img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}

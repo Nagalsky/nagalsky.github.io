@@ -1,1 +1,37 @@
 /* NAVBAR */
+
+$navbar-bg: $mine-shaft;
+$navbar-height: 55px;
+
+.navbar {
+  background: $navbar-bg;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  min-height: $navbar-height;
+  >.container {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+.navbar-brand {
+  @include media-breakpoint-down(md) {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+.nav-link {
+  color: $white;
+  font-size: 14px;
+  font-family: $font-base-bold;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: .25rem;
+  top: 10px;
+  color: $white;
+}
+.navbar-toggler-right {
+  right: -5px;
+}

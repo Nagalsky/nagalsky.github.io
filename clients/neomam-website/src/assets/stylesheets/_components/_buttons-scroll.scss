@@ -1,0 +1,21 @@
+/* BUTTONS SCROLL */
+
+$btn-scroll-size: 50px;
+
+.btn-scroll {
+  width: $btn-scroll-size;
+  height: $btn-scroll-size;
+  border-radius: 50%;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+  color: $white;
+  position: absolute;
+  bottom: -$btn-scroll-size / 2;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $primary;
+  z-index: 50;
+  &:hover, &:focus {
+    color: $white;
+    background: darken($primary, 10%);
+  }
+}

@@ -6,17 +6,21 @@ html, body {
 	color: $body-main-color;
 	font-size: $body-font-size;
 	@include media-breakpoint-down(md) {
-		font-family: $body-font-size-md;
+		font-size: $body-font-size-md;
 	}
 }
 
-
+body {
+	padding-top: $navbar-height;
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;
 	margin-bottom: 20px;
 	font-family: $title-font-family;
+	color: $title-color;
 	font-weight: normal;
+	line-height: $title-line-height;
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -24,9 +28,21 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1, .h1 {
 	font-size: 48px;
+	@include media-breakpoint-down(lg) {
+		font-size: 42px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 36px;
+	}
 }
 h2, .h2 {
 	font-size: 40px;
+	@include media-breakpoint-down(lg) {
+		font-size: 38px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 32px;
+	}
 }
 h3, .h3 {
 	font-size: 28px;
@@ -38,10 +54,15 @@ h5, .h5 {
 	font-size: 18px;
 }
 h6, .h6 {
+	font-size: 16px;
 }
 
 b {
 	font-family: $font-base-bold;
+}
+
+.title {
+	letter-spacing: .2rem;
 }
 
 
@@ -53,6 +74,9 @@ a {
 		color: darken($link-color, 10%);
 		text-decoration: none;
 	}
+}
+.underline {
+	text-decoration: underline;
 }
 button {
 	@include transition(150ms);
@@ -70,7 +94,62 @@ p {
 		font-size: 14px;
 	}
 }
+.current-color {
+	a {
+		color: currentColor;
+		&:hover, &:focus {
+			color: darken($link-color, 10%);
+		}
+	}
+}
+address {
+	line-height: 1.2;
+	a {
+		color: currentColor;
+	}
+}
 
+.text-behind {
+	position: relative;
+	z-index: 10;
+	padding-top: 170px;
+	@include media-breakpoint-down(md) {
+		padding-top: 0px;
+	}
+	&:before {
+		content: attr(data-behind);
+		text-transform: uppercase;
+		color: $mercury;
+		font-size: 200px;
+		position: absolute;
+		left: 0%;
+		top: 0;
+		z-index: -1;
+		font-family: $font-secondary;
+		letter-spacing: 20px;
+		line-height: 1.5;
+		@include media-breakpoint-down(md) {
+			content: none;
+		}
+	}
+}
+.text-behind--gutter {
+	padding-top: 0;
+	&:before {
+		top: -25px;
+		line-height: 0;
+	}
+}
+.text-behind--dark {
+	&:before {
+		color: $tuna-soft;
+	}
+}
+.text-behind--left {
+	&:before {
+		margin-left: -40px;
+	}
+}
 
 
 /*Font classes*/
@@ -106,4 +185,9 @@ p {
 }
 .font-base-black {
 	font-family: $font-base-black;
+}
+
+
+.font-secondary {
+	font-family: $font-secondary;
 }

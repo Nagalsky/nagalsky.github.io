@@ -18,6 +18,7 @@ $placeholder-opacity: 0;
 	border-bottom: 1px solid $field-border-color;
 	padding-left: 0;
 	padding-right: 0;
+	background: transparent;
 	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
 	&:focus {
 		border-color: $field-focus-border-color;
@@ -30,7 +31,12 @@ label {
 	color: $label-color;
 	font-size: $label-fs;
 	font-family: $label-ff;
-	margin-bottom: 0;
+}
+
+textarea, textarea.form-control {
+	border: 1px solid $field-border-color;
+	resize: none;
+	min-height: 160px;
 }
 
 //Validation
