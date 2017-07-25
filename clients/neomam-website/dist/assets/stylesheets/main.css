@@ -533,7 +533,7 @@ mark,
 .blockquote-reverse .blockquote-footer::after {
   content: "\00A0 \2014"; }
 
-.img-fluid {
+.img-fluid, .navbar-brand__img {
   max-width: 100%;
   height: auto; }
 
@@ -6429,6 +6429,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     padding-top: .5rem;
     padding-bottom: .5rem; } }
 
+@media (max-width: 991px) {
+  .navbar-brand__img {
+    max-width: 190px; } }
+
 .nav-link {
   color: #ffffff;
   font-size: 14px;
@@ -6461,6 +6465,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     width: 1215px; } }
 
 .container--md {
+  max-width: 880px; }
+
+.container--sm {
   max-width: 880px; }
 
 /* RESET STYLES */
@@ -6751,9 +6758,15 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 28px; }
+  @media (max-width: 991px) {
+    h3, .h3 {
+      font-size: 24px; } }
 
 h4, .h4 {
   font-size: 24px; }
+  @media (max-width: 991px) {
+    h4, .h4 {
+      font-size: 20px; } }
 
 h5, .h5 {
   font-size: 18px; }
@@ -6763,6 +6776,12 @@ h6, .h6 {
 
 b {
   font-family: "Raleway-Bold"; }
+
+.title-lead {
+  font-size: 36px; }
+  @media (max-width: 991px) {
+    .title-lead {
+      font-size: 32px; } }
 
 .title {
   letter-spacing: .2rem; }
@@ -7095,6 +7114,9 @@ address {
 .text-gray-soft {
   color: #555555 !important; }
 
+.text-gray-bold {
+  color: #333333 !important; }
+
 .text-soft {
   color: #33353b !important; }
 
@@ -7127,6 +7149,9 @@ address {
 
 .bg-gray-soft {
   background-color: #555555 !important; }
+
+.bg-gray-bold {
+  background-color: #333333 !important; }
 
 .bg-soft {
   background-color: #33353b !important; }
@@ -7187,3 +7212,7 @@ address {
   .btn-scroll:hover, .btn-scroll:focus {
     color: #ffffff;
     background: #d6351b; }
+
+/* IMG */
+.img-has-shadow {
+  box-shadow: 0px 0px 15px 0px rgba(115, 115, 115, 0.5); }
