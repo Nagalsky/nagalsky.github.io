@@ -1,0 +1,131 @@
+/* LIST */
+
+.list-inline-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.list-icons  {
+  @extend .list-inline, .flex;
+}
+.list-icons--dark {
+  .list-icons__link {
+    color: $tundora;
+    &:hover, &:focus {
+      color: lighten($tundora, 25%);
+    }
+  }
+}
+.list-icons__item {
+  display: inline-flex;
+  &+.list-icons__item {
+    @include media-breakpoint-up(md) {
+      margin-left: 8px;
+    }
+  }
+}
+.list-icons__link {
+  color: $tundora;
+  font-size: 20px;
+  letter-spacing: 0;
+  @extend .flex-centered;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    color: $gray;
+  }
+  &:hover, &:focus {
+    color: $gray;
+  }
+}
+.list-icons__link--circled {
+  border-radius: 50%;
+  color: $white;
+  background: $gray;
+  width: 50px;
+  height: 50px;
+  &:hover, &:focus {
+    background: $primary;
+    color: $white;
+  }
+}
+.list-icons__link--circled--left {
+  .list-icons__icon {
+    &:before {
+      margin-left: 0;
+    }
+  }
+}
+.list-icons__link--circled--right {
+  .list-icons__icon {
+    &:before {
+      margin-right: 0;
+    }
+  }
+}
+
+.list {
+  @extend .list-inline;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.list__title {
+  font-family: $font-base-black;
+  color: $muted;
+  .list__link {
+    font-family: $font-base-black;
+    color: $muted;
+  }
+}
+.list__item {
+  line-height: 2.2;
+}
+.list__link {
+  display: block;
+  //text-overflow: ellipsis;
+  //overflow: hidden;
+  //white-space: nowrap;
+  word-break: break-word;
+  color: $dusty-gray-soft;
+}
+
+.list-credit-card {
+  @extend .list-inline;
+}
+.list-credit-card__item {
+  @extend .list-inline-item;
+}
+.list-credit-card__icon {
+  width: 30px;
+}
+
+.list-counter {
+  counter-reset: list;
+  @extend .list-unstyled;
+}
+.list-counter__item {
+  position: relative;
+  padding-left: 60px;
+  min-height: 40px;
+  @extend .flex, .flex-item-center;
+  &+.list-counter__item {
+    margin-top: 15px;
+  }
+  &:before {
+    background: $primary;
+    content: counter(list);
+    counter-increment: list;
+    color: $white;
+    font-family: $font-base-medium;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0px;
+    top: 50%;
+    margin-right: 20px;
+    @extend .flex-inline-centered;
+  }
+}

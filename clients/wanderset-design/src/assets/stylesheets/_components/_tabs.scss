@@ -1,0 +1,314 @@
+/* TABS */
+
+$tabs-border-color: $silver-chalise;
+$tabs-color: $tundora;
+$tabs-bg: $seashell;
+
+/* .tab-content {
+  overflow: hidden;
+  >.tab-pane {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -9999;
+    display: block;
+    height: 0;
+    &:not(.active) {
+      .masonry-grid {
+        position: absolute !important;
+        height: 0 !important;
+      }
+    }
+    &.active {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      z-index: 10;
+      height: auto;
+      .masonry-grid {
+        position: relative !important;
+      }
+    }
+  }
+} */
+
+
+.tabs {
+  @extend .list-unstyled, .flex;
+}
+.tabs--centered {
+  @extend .flex-content-center;
+}
+.tabs--right {
+  @extend .flex-end;
+}
+.tabs--right {
+  @extend .flex-end;
+}
+.tabs--full {
+  .tabs__item {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+.tabs--full-sm {
+  @include media-breakpoint-down(sm) {
+    .tabs__item {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}
+.tabs--full-md {
+  @include media-breakpoint-down(md) {
+    .tabs__item {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}
+.tabs--equal-width {
+  .tabs__item {
+    min-width: 120px;
+    @include media-breakpoint-down(sm) {
+      min-width: 0px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}
+.tabs--has-divider {
+  .tabs__item {
+    &+.tabs__item {
+      .tabs__link {
+        border-left: none;
+        &:before {
+          height: 24px;
+          content: '';
+          width: 2px;
+          display: inline-block;
+          background: $tabs-border-color;
+          position: absolute;
+          left: -1px;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-top: 0px;
+        }
+        //border-width: 2px;
+      }
+    }
+  }
+  .tabs__link {
+    border-top: none;
+    border-bottom: none;
+    background: $white;
+    padding: 27px 15px;
+    color: $silver-chalise;
+    @include media-breakpoint-down(xs) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &.active, &:hover {
+      background: $white;
+    }
+    &.active {
+      color: $tundora;
+      &:hover {
+        color: $tundora;
+      }
+    }
+    &:hover {
+      color: darken($silver-chalise, 15%);
+    }
+  }
+}
+.tabs--has-border {
+  padding: 15px;
+  border: 1px dashed $mercury;
+}
+
+.tabs--desktop-btn-view {
+  @include media-breakpoint-up(md) {
+    .tabs__item--btn {
+      &+.tabs__item--btn {
+        margin-left: 10px;
+        .tabs__link--btn {
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+    .tabs__link--btn {
+      border: 2px solid $muted-soft !important;
+      color: $muted-soft !important;
+      background: $white;
+      padding: 5px 39px;
+      &:hover, &:focus {
+        border-color: $muted-soft !important;
+        background: $muted-soft !important;
+        color: $white !important;
+      }
+      &.active {
+        background: $primary !important;
+        border-color: $primary !important;
+        color: $white !important;
+        &:hover, &:focus {
+          background: darken($primary, 10%) !important;
+          border-color: darken($primary, 10%) !important;
+          color: $white !important;
+        }
+        &.active {
+          background: $primary !important;
+          border-color: $primary !important;
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
+
+.tabs--has-dotted {
+  @include media-breakpoint-down(sm) {
+    background: $primary;
+    justify-content: space-around;
+  }
+  .tabs__item {
+    &+.tabs__item {
+      .tabs__link {
+        border: none;
+        @include media-breakpoint-up(md) {
+          &:before, &:after {
+            content: '';
+          }
+          &:before {
+            width: 3px;
+            height: 3px;
+            background: $silver-chalise-soft;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            transform: translateY(-50%);
+            top: 50%;
+          }
+        }
+        @include media-breakpoint-down(md) {
+        }
+      }
+    }
+  }
+  .tabs__link {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: $dove-gray-thin;
+    @include media-breakpoint-down(sm) {
+      letter-spacing: $body-kerning;
+    }
+    &:hover {
+      background: transparent;
+    }
+    &.active {
+      background: transparent;
+      @include media-breakpoint-down(sm) {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+      &:after {
+        opacity: 1;
+        @include media-breakpoint-down(sm) {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0px 4px 7px 4px;
+          border-color: transparent transparent $white transparent;
+          content: '';
+          position: absolute;
+        }
+      }
+      &:hover {
+        background: transparent;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+      color: $gray;
+      padding-left: 30px;
+      padding-right: 30px;
+      &:after {
+        content: '';
+        opacity: 0;
+        height: 3px;
+        width: 58px;
+        background: $tundora;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.active {
+        color: $gray-soft;
+        &:hover {
+          color: $gray-soft;
+        }
+      }
+      &:hover {
+        color: lighten($gray-soft, 10%);
+      }
+    }
+  }
+}
+
+.tabs__item {
+  &+.tabs__item {
+    .tabs__link {
+      border-left: 1px solid $tabs-border-color;
+    }
+  }
+}
+.tabs__link {
+  display: block;
+  text-align: center;
+  background: $tabs-bg;
+  color: $tundora;
+  border-top: 1px solid $tabs-border-color;
+  border-bottom: 1px solid $tabs-border-color;
+  padding: 14px 15px;
+  position: relative;
+  letter-spacing: 2px;
+  font-family: $font-base;
+  [class^="wanderset-icon-"]:before, [class*=" wanderset-icon-"]:before {
+    vertical-align: text-top;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    letter-spacing: .2px;
+  }
+  &.active {
+    background: $white;
+    color: $tundora;
+    border-bottom-color: transparent;
+    &:hover {
+      background: $white;
+      color: $tundora;
+      border-bottom-color: transparent;
+    }
+  }
+  &:hover {
+    background: rgba($tabs-bg, .5);
+  }
+}
+
+.tab-content {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

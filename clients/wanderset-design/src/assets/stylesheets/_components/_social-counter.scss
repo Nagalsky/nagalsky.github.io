@@ -1,0 +1,37 @@
+/* SOCIAL COUNTER */
+
+$social-counter-color: $gray-silver;
+$social-counter-border-color: $alto;
+
+.social-counter {
+  @extend .list-unstyled;
+}
+.social-counter__item {
+  color: $social-counter-color;
+  @extend .flex, .flex-item-center;
+  &+.social-counter__item {
+    margin-top: 30px;
+  }
+}
+.social-counter__icon {
+  flex-shrink: 0;
+  font-size: 23px;
+}
+.social-counter__info {
+  @extend .flex, .flex-column, .flex-1;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-left: 2px solid $social-counter-border-color;
+  font-size: 14px;
+  line-height: 1;
+}
+.social-counter__counter {
+  font-size: 19px;
+  color: $black;
+  font-family: $font-base-medium;
+  margin-bottom: 2px;
+  display: block;
+  line-height: 1;
+}

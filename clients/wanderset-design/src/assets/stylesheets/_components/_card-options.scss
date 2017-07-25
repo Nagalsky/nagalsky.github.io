@@ -1,0 +1,44 @@
+/* CARD OPTIONS */
+
+.card-options {
+  @extend .flex, .flex-wrap;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.card-options__item {
+  min-height: 100px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $silver;
+  color: $silver;
+  @extend .flex-inline-centered;
+  letter-spacing: 2.2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    padding: 15px;
+    min-width: 110px;
+  }
+  @include media-breakpoint-down(sm) {
+    flex: 1;
+    letter-spacing: 1.2px;
+  }
+  &.active {
+    color: $gray-soft;
+    border-color: $gray-soft;
+    &:hover {
+      color: $gray-soft;
+      border-color: $gray-soft;
+    }
+  }
+  &:hover {
+    color: $gray-soft;
+    border-color: $gray-soft;
+  }
+  &+.card-options__item {
+    margin-left: 20px;
+  }
+}

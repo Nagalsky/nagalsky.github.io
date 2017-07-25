@@ -1,0 +1,104 @@
+/* PAGINATION */
+
+$pagination-color: $dove-gray-soft;
+$pagination-color-active: $primary;
+
+.pagination {
+  border-radius: 0;
+}
+.page-item {
+  display: flex;
+  //margin: 0 .2em;
+  color: $pagination-color;
+  // width: 42px;
+  // height: 38px;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+  line-height: .9rem;
+  &:last-child {
+    .page-link {
+      border-radius: 0;
+    }
+  }
+  // @include media-breakpoint-down(md) {
+  //   width: 26px;
+  //   height: 26px;
+  // }
+  &:first-child, &:last-child {
+    .page-link {
+      border-radius: 0;
+    }
+  }
+}
+.page-link {
+  border: none;
+  color: $pagination-color;
+  font-size: 14px;
+  letter-spacing: normal;
+  padding: 0;
+  width: 42px;
+  height: 38px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 0;
+  @extend .flex-inline-centered;
+  @include media-breakpoint-down(md) {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  &:hover, &:focus {
+    color: $white;
+    background: $pagination-color;
+  }
+}
+.page-link--curent, .page-link--switch {
+  color: $pagination-color-active;
+  background: $primary;
+  color: $white;
+  &:hover, &:focus {
+    background: $primary;
+    color: $white;
+  }
+}
+.pagination__arrow {
+  position: relative;
+  padding: 10px 10px;
+  &:hover, &:focus {
+    background: transparent;
+    &.pagination__arrow--prev {
+      &:before {
+        border-color: transparent $pagination-color-active transparent transparent;
+      }
+    }
+    &.pagination__arrow--next {
+      &:before {
+        border-color: transparent transparent transparent $pagination-color-active;
+      }
+    }
+  }
+  &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -65%);
+    top: 50%;
+    left: 50%;
+    margin-bottom: -10px;
+  }
+  &.pagination__arrow--prev {
+    &:before {
+      border-width: 4px 8px 4px 0px;
+      border-color: transparent $pagination-color transparent transparent;
+    }
+  }
+  &.pagination__arrow--next {
+    &:before {
+      border-width: 4px 0px 4px 8px;
+      border-color: transparent transparent transparent $pagination-color;
+    }
+  }
+}

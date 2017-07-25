@@ -1,0 +1,112 @@
+/* DASHBOARD */
+
+.dashboard-row {
+  @extend .flex;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.dashboard-list {
+  @extend .list-unstyled;
+  flex-shrink: 0;
+  width: 100%;
+  margin-right: 70px;
+  @include media-breakpoint-up(md) {
+    max-width: 190px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-right: 0px;
+  }
+}
+.dashboard-list__item {
+  &.active {
+    .dashboard-list__link {
+      color: $muted;
+      &:hover, &:focus {
+        color: $muted;
+      }
+    }
+  }
+  &:first-child {
+    .dashboard-list__link {
+      padding-top: 3px;
+    }
+  }
+}
+.dashboard-list__link {
+  display: block;
+  font-family: $font-base-medium;
+  text-transform: uppercase;
+  color: $gray;
+  padding: 10.5px 0;
+  border-bottom: 1px solid $gray;
+  &:hover, &:focus {
+    color: $muted;
+  }
+}
+
+.dashboard-content {
+  flex: 1;
+}
+.dashboard__title {
+  margin-bottom: 10px;
+  @extend .h2, .title-bold;
+  color: $primary;
+}
+.dashboard-personal-card {
+  font-size: 13px;
+  color: $muted;
+  @extend .flex, .flex-column;
+  flex: 1;
+  font-family: $font-base-book;
+  line-height: 23.73px;
+  letter-spacing: normal;
+  @include media-breakpoint-down(xs) {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  address, .order-list {
+    margin-bottom: 25px;
+    color: $muted;
+  }
+  dt, dd {
+    font-size: 13px;
+    font-family: $font-base-book;
+    color: $muted;
+    text-transform: none;
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+.dashboard__subtitle {
+  font-size: 15px;
+  color: $muted;
+  font-family: $font-base-book;
+  letter-spacing: normal;
+}
+
+.dashboard-personal-card__title {
+  font-size: 16px;
+  @extend .title-bold;
+  color: $primary;
+  margin-bottom: 5px;
+  letter-spacing: $body-kerning;
+}
+.dashboard-personal-card__subtitle {
+  margin-bottom: 15px;
+}
+.dashboard-personal-card__btn {
+  margin-top: auto;
+  display: inline-table;
+  @include media-breakpoint-down(xs) {
+    margin-top: 10px;
+  }
+}

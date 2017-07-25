@@ -1,0 +1,137 @@
+/* billboard */
+.billboard {
+  position: relative;
+  z-index: 20;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  padding: 30px 0;
+  height: 400px;
+  @extend .flex-centered;
+  box-shadow:  inset  0  30px 30px -30px rgba($black, .13), inset  0 -30px 30px -30px rgba($black, .13);
+  background-size: cover;
+  text-align: center;
+
+  &.billboard--centered {
+    @extend .flex-item-center;
+  }
+  >.container {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+}
+.billboard--small {
+  height: 200px;
+}
+
+.billboard__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.billboard--dark {
+  color: $outer-space;
+  .billboard__title, .billboard__description, .billboard__subtitle a {
+    color: $outer-space;
+  }
+  .billboard__subtitle {
+    color: $blue;
+  }
+  .billboard__subtitle a {
+    &:hover, &:focus {
+      color: darken($outer-space, 10%);
+    }
+  }
+  .btn {
+    color: $blue;
+    border-color: $blue;
+    &:hover, &:focus {
+      color: $white;
+      background: $blue;
+      border-color: $blue;
+    }
+  }
+}
+.billboard--black {
+  color: $black;
+  .billboard__title, .billboard__description, .billboard__subtitle a {
+    color: $black;
+  }
+  .billboard__subtitle {
+    color: $black;
+  }
+  .billboard__subtitle a {
+    &:hover, &:focus {
+      color: darken($outer-space, 10%);
+    }
+  }
+  .btn {
+    color: $blue;
+    border-color: $blue;
+    &:hover, &:focus {
+      color: $white;
+      background: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.billboard__title {
+  @extend .title, .title-lg;
+  color: $white;
+  margin-bottom: 5px;
+}
+.billboard__subtitle {
+  @extend .title;
+  color: $white;
+  font-size: 11px;
+  margin-bottom: 10px;
+  font-family: $font-base-bold;
+  a {
+    color: $white;
+    &:hover, &:focus {
+      color: darken($white, 25%);
+    }
+  }
+}
+.billboard__description {
+  font-family: $font-secondary;
+  margin-bottom: 28px;
+  line-height: 21.73px;
+  letter-spacing: 0;
+}
+
+.billboard__panel {
+  position: relative;
+  padding: 33px 0px;
+  box-shadow: 0px 1px 5px 0px rgba($black, .3);
+  font-size: 15px;
+  font-family: $font-secondary;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: $muted;
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+    padding: 28px 0px;
+    margin-bottom: 5px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.btn-billboard {
+  padding: 7.5px 26px;
+  min-width: 136px;
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.billboard__text {
+  letter-spacing: normal;
+  font-size: 12px;
+}

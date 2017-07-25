@@ -1,0 +1,76 @@
+/* SIGN */
+
+.sign-holder {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  @extend .flex;
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+.sign__item {
+  flex: 1;
+  @extend .flex, .flex-column;
+  @include media-breakpoint-up(sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &+.sign__item {
+    margin-left: 60px;
+    padding-left: 60px;
+    border-left: 1px solid $gray;
+    @include media-breakpoint-down(sm) {
+      margin-left: 30px;
+      padding-left: 30px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-left: 0px;
+      padding-left: 0px;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-left: none;
+      border-top: 1px solid $gray;
+    }
+  }
+}
+.sign__btn {
+  flex: 1;
+  @extend .flex-centered, .flex-column;
+  min-height: 360px;
+  text-align: center;
+  border: 2px solid $muted;
+  color: $muted;
+  font-size: 16px;
+  @extend .font-secondary;
+  text-transform: none;
+  padding: 15px;
+  @include media-breakpoint-down(md) {
+    min-height: 280px;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 220px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 120px;
+  }
+  &:hover, &:focus {
+    border-color: $primary;
+    background: $primary;
+    color: $white;
+    .sign__btn__title {
+      color: $white;
+    }
+  }
+}
+.sign__btn__title {
+  display: block;
+  font-size: 24px;
+  color: $primary;
+  font-family: $font-base-bold;
+  text-transform: uppercase;
+  letter-spacing: $body-kerning;
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+}

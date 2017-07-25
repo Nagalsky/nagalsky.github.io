@@ -1,0 +1,315 @@
+/* LIFESTYLE */
+
+.lifestyle__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: rgba($black, .2);
+    @include transition(300ms);
+  }
+  &:hover, &:focus {
+    &:before {
+      opacity: 1;
+    }
+    .lifestyle__overlay {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+    .lifestyle__dot {
+      &:before, &:after {
+        border-color: transparent;
+        filter: blur(.5px);
+        transform: scale(4);
+        transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+        opacity: 1;
+      }
+      &:after {
+        transition-delay: 100ms;
+      }
+    }
+    .lifestyle__dot--sky {
+      // &:before {
+      //   animation: lifestyle__pulse-animate--sky 1s  ease-out;
+      // }
+    }
+    .lifestyle__dot--red {
+      // &:before {
+      //   animation: lifestyle__pulse-animate--red 1s  ease-out;
+      // }
+    }
+    .lifestyle__dot--yellow {
+      // &:before {
+      //   animation: lifestyle__pulse-animate--yellow 1s  ease-out;
+      // }
+    }
+    .lifestyle__dot--green {
+      // &:before {
+      //   animation: lifestyle__pulse-animate--green 1s  ease-out;
+      // }
+    }
+    .lifestyle__dot--purple {
+      // &:before {
+      //   animation: lifestyle__pulse-animate--purple 1s  ease-out;
+      // }
+    }
+  }
+}
+.lifestyle__item--individual {
+  &:hover, &:focus {
+    &:before {
+      opacity: 1;
+    }
+    .lifestyle__dot {
+      &:hover {
+        &:before, &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+.lifestyle__item--preview {
+  &:not(:last-child) {
+    margin-bottom: 28px;
+    max-width: 335px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.lifestyle__img {
+  width: 100%;
+}
+.lifestyle__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include transition(300ms);
+  background: linear-gradient(to bottom, rgba($black, 0) 0%, rgba($black, .6) 75%);
+  transform: translate3d(0,50%,0);
+  opacity: 0;
+}
+.lifestyle__dot {
+  z-index: 50;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  // &:before {
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   content: '';
+  //   border-radius: 50%;
+  // }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid rgba($primary, 0.7);
+    filter: blur(0);
+    transform-origin: 50%;
+    opacity: 0;
+  }
+  &:hover, &:focus {
+    &:before, &:after {
+      border-color: transparent;
+      filter: blur(.5px);
+      transform: scale(4);
+      transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+      opacity: 1;
+    }
+    &:after {
+      transition-delay: 100ms;
+    }
+  }
+}
+.lifestyle__dot--sky {
+  &:before, &:after {
+    border-color: rgba(#61d2fe, 1);
+  }
+}
+.lifestyle__dot--red {
+  &:before, &:after {
+    border-color: rgba(#ff5534, 1);
+  }
+}
+.lifestyle__dot--yellow {
+  &:before, &:after {
+    border-color: rgba(#ffd200, 1);
+  }
+}
+.lifestyle__dot--green {
+  &:before, &:after {
+    border-color: rgba(#49dc6a, 1);
+  }
+}
+.lifestyle__dot--purple {
+  &:before, &:after {
+    border-color: rgba(#6a71e5, 1);
+  }
+}
+
+
+
+
+
+
+
+@keyframes scale {
+  0% {
+      transform: scale(1.0);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.lifestyle__dot--sky {
+  background-color: #61d2fe;
+}
+@keyframes lifestyle__pulse-animate--sky {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#61d2fe, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#61d2fe, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#61d2fe, 0);
+  }
+}
+.lifestyle__dot--red {
+  background-color: #ff5534;
+}
+@keyframes lifestyle__pulse-animate--red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#ff5534, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#ff5534, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#ff5534, 0);
+  }
+}
+.lifestyle__dot--yellow {
+  background-color: #ffd200;
+}
+@keyframes lifestyle__pulse-animate--yellow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#ffd200, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#ffd200, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#ffd200, 0);
+  }
+}
+.lifestyle__dot--green {
+  background-color: #49dc6a;
+}
+@keyframes lifestyle__pulse-animate--green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#49dc6a, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#49dc6a, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#49dc6a, 0);
+  }
+}
+.lifestyle__dot--purple {
+  background-color: #6a71e5;
+}
+@keyframes lifestyle__pulse-animate--purple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#6a71e5, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#6a71e5, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#6a71e5, 0);
+  }
+}
+
+.lifestyle--highlighted {
+  position: relative;
+  &.active {
+    &:before, &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &:before, &:after {
+    content: '';
+    height: 4px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(250ms);
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+}
+.lifestyle--highlighted--sky {
+  &:before, &:after {
+    background: #61d2fe;
+  }
+}
+.lifestyle--highlighted--red {
+  &:before, &:after {
+    background: #ff5534;
+  }
+}
+.lifestyle--highlighted--yellow {
+  &:before, &:after {
+    background: #ffd200;
+  }
+}
+.lifestyle--highlighted--green {
+  &:before, &:after {
+    background: #49dc6a;
+  }
+}
+.lifestyle--highlighted--purple {
+  &:before, &:after {
+    background: #6a71e5;
+  }
+}

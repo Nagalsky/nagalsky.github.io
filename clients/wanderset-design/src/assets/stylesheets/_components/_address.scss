@@ -1,0 +1,36 @@
+/* ADDRESS */
+
+address {
+  color: $tundora-soft;
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: 0;
+  font-family: $font-base-book;
+}
+
+.address__item {
+  display: block;
+}
+
+.address__title {
+  text-transform: uppercase;
+  color: $muted;
+  letter-spacing: $body-kerning;
+  font-family: $font-base;
+}
+
+.address__edit {
+  color: $outer-space;
+  font-size: 11px;
+  margin-top: auto;
+  letter-spacing: $body-kerning;
+  &:before, &:after {
+    content: ']'
+  }
+  &:before {
+    content: '['
+  }
+  &:after {
+    content: ']'
+  }
+}

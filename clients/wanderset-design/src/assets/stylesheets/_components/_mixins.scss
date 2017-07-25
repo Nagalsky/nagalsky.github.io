@@ -1,0 +1,90 @@
+/* MIXINS */
+
+// Placeholder text
+@mixin custom-placeholder($font-family: $placeholder-font-family, $color: $placeholder-color, $font-size: $placeholder-font-size, $text-style: $placeholder-text-style, $text-spacing: $placeholder-text-spacing, $text-line-height: $placeholder-line-height) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    text-transform: $text-style;
+    letter-spacing: $text-spacing;
+    font-family: $font-family;
+    line-height: $text-line-height;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    text-transform: $text-style;
+    letter-spacing: $text-spacing;
+    font-family: $font-family;
+    line-height: $text-line-height;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    text-transform: $text-style;
+    letter-spacing: $text-spacing;
+    font-family: $font-family;
+    line-height: $text-line-height;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    text-transform: $text-style;
+    letter-spacing: $text-spacing;
+    font-family: $font-family;
+    line-height: $text-line-height;
+  }
+}
+
+@mixin custom-placeholder-ff($font-family: $placeholder-font-family) {
+  &:-moz-placeholder {
+    font-family: $font-family;
+  }
+  &::-moz-placeholder {
+    font-family: $font-family;
+  }
+  &:-ms-input-placeholder {
+    font-family: $font-family;
+  }
+  &::-webkit-input-placeholder {
+    font-family: $font-family;
+  }
+}
+
+@mixin custom-placeholder-color($color: $placeholder-color) {
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+
+//Placeholder opacity
+@mixin custom-placeholder-opacity($opacity: $placeholder-opacity) {
+  &:-moz-placeholder {
+    opacity: $opacity;
+  }
+  &::-moz-placeholder {
+    opacity: $opacity;
+  }
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+  }
+  &::-webkit-input-placeholder {
+    opacity: $opacity;
+  }
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

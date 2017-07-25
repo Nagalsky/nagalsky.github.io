@@ -1,0 +1,45 @@
+/* DL */
+
+
+
+dl {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+dt, dd {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $muted;
+  font-family: $font-base-medium;
+  font-size: 11px;
+}
+.dt-highlighted, .dd-highlighted {
+  color: $nepal;
+}
+
+.dl-aligned {
+  dt {
+    float: left;
+    width: 190px;
+    overflow: hidden;
+    clear: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include media-breakpoint-down(md) {
+      width: 145px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 210px;
+    }
+  }
+  dd {
+    text-align: right;
+  }
+}
