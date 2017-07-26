@@ -27,24 +27,7 @@ $(document).ready(function(){
     });
   });
 
-  // var $carousel_with_thumbnails = $(".carousel--with-thumbnails");
-  // var $gallery_thumbnails = $(".gallery__thumbnails");
-  // var $gallery_thumbnails_images = $gallery_thumbnails.find("img");
-  // var killit = false;
-  //
-  // $gallery_thumbnails_images.on("click", function(e){
-  //   if( !killit ) {
-  //     e.stopPropagation();
-  //     var idx = $(this).data("thumb");
-  //     $carousel_with_thumbnails.slick("goTo", idx-1);
-  //   }
-  // });
-  // $gallery_thumbnails
-  //   .on("beforeChange", function() {
-  //       killit = true;
-  //   }).on("afterChange", function() {
-  //       killit = false;
-  // });
+
 
   $('.carousel--with-thumbnails').slick({
     slidesToShow: 1,
@@ -66,6 +49,43 @@ $(document).ready(function(){
   });
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('.carousel, .gallery__thumbnails').resize();
+  });
+
+  var $carousel_with_thumbnails = $(".carousel--with-thumbnails-2");
+  var $gallery_thumbnails = $(".gallery__thumbnails-2");
+  var $gallery_item = $gallery_thumbnails.find("div");
+  var killit = false;
+
+  $gallery_item.on("click", function(e){
+    if( !killit ) {
+      e.stopPropagation();
+      var idx = $(this).data("thumb");
+      $carousel_with_thumbnails.slick("goTo", idx-1);
+    }
+  });
+  $gallery_thumbnails
+    .on("beforeChange", function() {
+        killit = true;
+    }).on("afterChange", function() {
+        killit = false;
+  });
+  $('.carousel--with-thumbnails-2').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    asNavFor: '.gallery__thumbnails-2',
+    lazyLoad: 'ondemand'
+  });
+  $('.gallery__thumbnails-2').slick({
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    asNavFor: '.carousel--with-thumbnails-2',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    lazyLoad: 'ondemand'
   });
 
   /* ======== Isotop masonry initial ======== */
