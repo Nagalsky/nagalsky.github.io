@@ -1,0 +1,32 @@
+/* BOX ICON */
+
+$box-icon-size: 70px;
+
+.box-icon {
+  width: $box-icon-size;
+  height: $box-icon-size;
+  border-radius: 50%;
+  flex-shrink: 0;
+  @extend .d-inline-flex, .align-items-center, .justify-content-center;
+  background: $white;
+  color: $primary;
+  box-shadow: 3px 3px 18px 0px rgba($black, .2);
+  @include media-breakpoint-down(sm) {
+    width: $box-icon-size / 1.5;
+    height: $box-icon-size / 1.5;
+  }
+}
+
+.box-icon--primary {
+  color: $white;
+  background: $primary;
+  &.box-icon--wave {
+    box-shadow: 0px 0px 0px 10px rgba($primary, .2);
+  }
+}
+.box-icon__icon {
+  font-size: 30px;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+}

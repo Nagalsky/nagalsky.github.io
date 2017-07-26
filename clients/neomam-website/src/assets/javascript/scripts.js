@@ -5,7 +5,7 @@ $(document).ready(function(){
     e.preventDefault();
     e.stopPropagation();
     var target = $(this).attr('href');
-    var headerHeight = 55;
+    var headerHeight = 56;
     $('html, body').animate({
         scrollTop: $(target).offset().top - headerHeight
     }, 500);
