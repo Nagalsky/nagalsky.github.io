@@ -1,6 +1,7 @@
 /* BOX ICON */
 
 $box-icon-size: 70px;
+$box-icon-md-size: 50px;
 
 .box-icon {
   width: $box-icon-size;
@@ -14,6 +15,17 @@ $box-icon-size: 70px;
   @include media-breakpoint-down(sm) {
     width: $box-icon-size / 1.5;
     height: $box-icon-size / 1.5;
+  }
+}
+
+.box-icon--md {
+  width: $box-icon-md-size;
+  height: $box-icon-md-size;
+  .box-icon__icon {
+    font-size: 22px;
+    @include media-breakpoint-down(sm) {
+      font-size: 18px;
+    }
   }
 }
 
