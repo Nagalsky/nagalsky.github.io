@@ -62,3 +62,38 @@
     font-size: 24px;
   }
 }
+
+.list-bullet__item {
+  position: relative;
+  padding-left: 60px;
+  &+.list-bullet__item {
+    margin-top: 30px;
+  }
+  &:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $primary;
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+}
+
+.list-ok__item {
+  position: relative;
+  padding-left: 50px;
+  &+.list-ok__item {
+    margin-top: 30px;
+  }
+  &:before {
+    font-family: $font-icons;
+    content: '\e822';
+    color: $primary;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+  }
+}
