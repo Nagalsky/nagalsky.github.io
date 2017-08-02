@@ -2,7 +2,8 @@
 
 $form-login-border-color: #cedae0;
 $input-height: 35px;
-$input-field-focus-border-color: #b7d4ea;
+$input-font-family: $font-base-semibold;
+$input-field-focus-border-color: $spindle;
 $placeholder-color: $tapa;
 $placeholder-font-size: 15px;
 $placeholder-font-style: $font-base-light;
@@ -13,11 +14,19 @@ $placeholder-opacity: 0;
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	height: $input-height;
+	font-family: $input-font-family;
 	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
+	background: $white;
 	&:focus {
 		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 		border-color: $input-field-focus-border-color;
 	}
+}
+.form-control--blue {
+	border-color: $input-field-focus-border-color;
+}
+.form-control--square {
+	border-radius: 0;
 }
 
 
@@ -48,4 +57,9 @@ $placeholder-opacity: 0;
 .input-group-addon {
 	background: transparent;
 	color: $cloud;
+}
+
+textarea {
+	resize: none;
+	min-height: 180px;
 }

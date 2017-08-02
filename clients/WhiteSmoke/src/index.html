@@ -13,7 +13,58 @@
 
 <body>
 
-	//= template/navbar.html
+	<nav class="navbar navbar-toggleable-sm">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="white-smoke-icon-menu"></span>
+	  </button>
+	  <a class="navbar-brand" href="#">
+	    <img src="assets/images/elements/logo.png" class="img-fluid" alt="">
+	  </a>
+
+	  <div class="collapse navbar-collapse" id="navbarContent">
+	    <ul class="navbar-nav navbar-nav--bordered mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#tab-writer" role="tab" href="#">Writer</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link active" data-toggle="tab" href="#translator-tab" role="tab">Translator</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#plagiarism-tab" role="tab">Plagiarism</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#templates-tab" role="tab">Templates</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#videos-tab" role="tab">Videos</a>
+	      </li>
+	    </ul>
+
+	    <ul class="navbar-nav navbar-nav--icons ml-auto mr-md-2 pt-1 pt-md-0">
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle dropdown-toggle--without-arrow px-md-4" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <i class="white-smoke-icon-cog"></i>
+	        </a>
+	        <div class="dropdown-menu dropdown-menu-right dropdown-menu--has-arrow">
+	          <a class="dropdown-item" href="#"><i class="white-smoke-icon-user"></i> Profile</a>
+	          <a class="dropdown-item" href="#"><i class="white-smoke-icon-cog"></i> Settings</a>
+	          <a class="dropdown-item" href="#"><i class="white-smoke-icon-logout-1"></i> Exit</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link px-md-4" href="#">
+	          <i class="white-smoke-icon-question-circle-o"></i>
+	        </a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link px-md-4" href="#">
+	          <i class="white-smoke-icon-logout"></i>
+	        </a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
 
 
 	<main class="main d-flex">
@@ -35,7 +86,7 @@
 		</aside><!--sidebar__left-->
 
 		<div class="tab-content tab-content--flex d-flex flex-1">
-			<div class="tab-pane fade show active ov-h" id="tab-writer" role="tabpanel">
+			<div class="tab-pane fade ov-h" id="tab-writer" role="tabpanel">
 				<div class="page-tab-content d-flex flex-column">
 					<div class="mb-4">
 						<div class="d-sm-flex align-items-center">
@@ -190,13 +241,113 @@
 				</aside><!--sidebar__right-->
 			</div><!--tab-pane-->
 
-			<div class="tab-pane fade" id="translator-tab" role="tabpanel">
-				<div class="page-tab-content">
-					<p>gggt</p>
-					<p>gggt</p>
-					<p>gggt</p>
+
+
+
+
+
+
+
+
+
+
+			<div class="tab-pane bg-muted-thin fade show active" id="translator-tab" role="tabpanel">
+				<div class="page-tab-content d-flex flex-column">
+
+					<div class="mb-4">
+						<div class="d-md-flex align-items-center">
+							<h6 class="mb-3 mb-md-0 mr-auto">Translator</h6>
+
+							<div class="d-sm-flex">
+
+								<div class="mb-3 mb-sm-0 mr-0 mr-sm-2 d-inline-sm-flex">
+								  <div class="d-block d-inline-sm-flex">
+										<form class="form-horizontal">
+											<div class="form-group mb-0">
+												<div class="flagstrap"
+								             data-input-name="country1"
+								             data-selected-country="US"
+								             data-button-type="btn-secondary"
+								             data-scrollable-height="250px"
+								             data-scrollable="true">
+								        </div><!--flagstrap-->
+									    </div><!--form-group-->
+										</form>
+								  </div><!--d-block-->
+								</div><!--d-inline-sm-flex-->
+
+								<div class="mb-3 mb-sm-0 mr-0 mr-sm-2 d-inline-sm-flex">
+								  <div class="d-block d-inline-sm-flex">
+										<form class="form-horizontal">
+											<div class="form-group mb-0">
+												<div class="flagstrap"
+								             data-input-name="country2"
+								             data-selected-country="IT"
+								             data-button-type="btn-secondary"
+								             data-scrollable-height="250px"
+								             data-scrollable="true">
+								        </div><!--flagstrap-->
+									    </div><!--form-group-->
+										</form>
+								  </div><!--d-block-->
+								</div><!--d-inline-sm-flex-->
+
+								<a href="#" class="btn btn-sky-gradient d-block d-inline-sm-flex">Check Text</a>
+							</div><!--d-inline-flex-->
+						</div><!--d-sm-flex-->
+					</div><!--mb-4-->
+
+
+					<div class="d-flex flex-column flex-1">
+						<div class="translate-box d-flex flex-column flex-1">
+							<form action="" class="d-flex flex-column flex-1">
+								<div class="form-group d-flex flex-1 mb-0">
+									<textarea name="" id="" cols="" rows="" class="form-control form-control--blue form-control--square flex-1"></textarea>
+									<div class="translate-box__panel">
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+									</div><!--translate-box__panel-->
+								</div><!--form-group-->
+							</form>
+						</div><!--translate-box-->
+
+						<div class="translate-box d-flex flex-column flex-1">
+							<form action="" class="d-flex flex-column flex-1">
+								<div class="form-group d-flex flex-1 mb-0">
+									<textarea name="" id="" cols="" rows="" class="form-control form-control--blue form-control--square flex-1"></textarea>
+									<div class="translate-box__panel">
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+										<a href="#" class="translate-box__btn">
+											<i class="translate-box__btn__icon white-smoke-icon-cog"></i>
+										</a>
+									</div><!--translate-box__panel-->
+								</div><!--form-group-->
+							</form>
+						</div><!--translate-box-->
+					</div><!--flex-1-->
 				</div><!--page-tab-content-->
 			</div><!--tab-pane-->
+
+
+
+
+
+
+
+
+
 
 			<div class="tab-pane fade" id="plagiarism-tab" role="tabpanel">
 				<div class="page-tab-content">
@@ -204,11 +355,25 @@
 				</div><!--page-tab-content-->
 			</div><!--tab-pane-->
 
+
+
+
+
+
+
+
 			<div class="tab-pane fade" id="templates-tab" role="tabpanel">
 				<div class="page-tab-content">
 					Tab 4
 				</div><!--page-tab-content-->
 			</div><!--tab-pane-->
+
+
+
+
+
+
+
 
 			<div class="tab-pane fade" id="videos-tab" role="tabpanel">
 				<div class="page-tab-content">

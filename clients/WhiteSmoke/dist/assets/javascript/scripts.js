@@ -21,4 +21,7 @@ $(document).ready(function(){
 	//Bootstrap switch initial
 	$("[name='switch-checkbox']").bootstrapSwitch();
 
+	//Flagstrap initial https://github.com/blazeworx/flagstrap
+	$('.flagstrap').flagStrap();
+
 });
