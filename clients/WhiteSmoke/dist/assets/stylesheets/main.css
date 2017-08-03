@@ -4331,7 +4331,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, body, .sidebar__right__toggle, .tab-content--flex .tab-pane.active, .stats {
+.d-flex, body, .sidebar__right__toggle, .tab-content--flex .tab-pane.active, .stats, .flagstrap ul > li > a {
   display: -ms-flexbox !important;
   display: flex !important; }
 
@@ -4487,7 +4487,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   -ms-flex-align: end !important;
   align-items: flex-end !important; }
 
-.align-items-center, .sidebar__right__toggle, .stats {
+.align-items-center, .sidebar__right__toggle, .stats, .flagstrap ul > li > a {
   -ms-flex-align: center !important;
   align-items: center !important; }
 
@@ -7556,6 +7556,12 @@ video {
     @media (max-width: 767px) {
       .flagstrap .dropdown-menu {
         width: 100%; } }
+  .flagstrap ul > li > a {
+    cursor: pointer;
+    display: block;
+    padding: 2px 0; }
+    .flagstrap ul > li > a:hover {
+      background: rgba(118, 113, 113, 0.2); }
 
 .flagstrap-icon {
   display: inline-block;
@@ -8346,7 +8352,8 @@ video {
 
 /* SCROLLBAR */
 .scrollbar {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  height: 480px; }
 
 /*
 == malihu jquery custom scrollbar plugin ==
