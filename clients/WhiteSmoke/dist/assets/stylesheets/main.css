@@ -6439,7 +6439,7 @@ ol, ul {
   z-index: 10; }
 
 .o-y-s {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .ov-h {
   overflow: hidden; }
@@ -6770,11 +6770,10 @@ body {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   position: relative; }
-
-@media (min-width: 768px) {
-  .page-tab-content {
-    height: calc(100vh - 80px);
-    overflow: auto; } }
+  @media (min-width: 768px) {
+    .main {
+      height: calc(100vh - 80px);
+      overflow: auto; } }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
@@ -8352,8 +8351,7 @@ video {
 
 /* SCROLLBAR */
 .scrollbar {
-  overflow-y: scroll;
-  height: 480px; }
+  overflow-y: auto; }
 
 /*
 == malihu jquery custom scrollbar plugin ==
