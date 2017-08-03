@@ -21,6 +21,12 @@ body {
 	flex: 1 0 auto;
 	position: relative;
 }
+.page-tab-content {
+	@include media-breakpoint-up(md) {
+		height: calc(100vh - 80px);
+		overflow: auto;
+  }
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;

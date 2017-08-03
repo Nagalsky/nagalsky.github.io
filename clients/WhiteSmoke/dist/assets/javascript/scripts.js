@@ -32,11 +32,8 @@ $(document).ready(function(){
 	//Flagstrap initial https://github.com/blazeworx/flagstrap
 	$('.flagstrap').flagStrap();
 
-
-});
-
-
-$(window).on("load",function(){
 	//Scrollbar initial https://github.com/malihu/malihu-custom-scrollbar-plugin
   $(".scrollbar").mCustomScrollbar();
+
+
 });
