@@ -20,11 +20,16 @@ body {
 .main {
 	flex: 1 0 auto;
 	position: relative;
-}
-.page-tab-content {
 	@include media-breakpoint-up(md) {
 		height: calc(100vh - 80px);
 		overflow: auto;
+  }
+}
+.page-tab-content {
+	@include media-breakpoint-up(md) {
+		//max-height: calc(100vh - 80px);
+		//height: calc(100vh - 80px);
+		//overflow: auto;
   }
 }
 

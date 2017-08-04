@@ -16,6 +16,19 @@
       width: 100%;
     }
   }
+  ul {
+    >li {
+      >a {
+        cursor: pointer;
+        display: block;
+        @extend .d-flex, .align-items-center;
+        padding: 2px 0;
+        &:hover {
+          background: rgba($muted, .2);
+        }
+      }
+    }
+  }
 }
 
 .flagstrap-icon {
