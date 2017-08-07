@@ -45,8 +45,31 @@ ol, ul {
 		left: 0;
 		top: 0;
 		height: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
+		//padding-left: 15px;
+		//padding-right: 15px;
 		overflow-y: scroll;
 	}
+}
+
+.border-bottom {
+	position: relative;
+	&:after {
+		content: '';
+		height: 1px;
+		background: #d5e9f0;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+	}
+	.panel {
+		border: 1px solid #d5e9f0;
+		border-bottom: none;
+	}
+	.mCSB_scrollTools {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+	}
+	//border-bottom: 1px solid #d5e9f0;
 }
