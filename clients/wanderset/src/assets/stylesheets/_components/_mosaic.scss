@@ -25,6 +25,7 @@ $mosaic-info-bg: #394144;
   z-index: 10;
   min-height: 235px;
   &:hover, &:focus {
+    color: $white;
     &:after {
       visibility: visible;
       opacity: 1;
@@ -83,11 +84,21 @@ $mosaic-info-bg: #394144;
     padding-bottom: 20px;
   }
 }
+.mosaic-item__content--lg {
+  @include media-breakpoint-up(lg) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
 .mosaic-item__content--md {
   @include media-breakpoint-up(lg) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
+}
+.mosaic-item__content--top-md {
+  padding-top: 82px;
+  padding-bottom: 82px;
 }
 
 .mosaic-item__content__text {
@@ -102,8 +113,11 @@ $mosaic-info-bg: #394144;
   margin-bottom: 15px;
   letter-spacing: .4rem;
   text-indent: .4rem;
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+  }
   @include media-breakpoint-down(md) {
-    font-size: 20px;
+    font-size: 16px;
   }
   @include media-breakpoint-down(sm) {
     font-size: 24px;
@@ -141,6 +155,9 @@ $mosaic-info-bg: #394144;
   letter-spacing: $body-kerning;
   text-indent: $body-text-indent;
   position: relative;
+}
+.mosaic__btn--dark {
+  color: $mine-shaft-bold;
 }
 .mosaic-item__divider {
   display: block;
@@ -353,11 +370,12 @@ $mosaic-info-bg: #394144;
 
 .mosaic-set {
   position: relative;
-  box-shadow: 2px 3.5px 8px 0 rgba($black, .2);
+  //box-shadow: 2px 3.5px 8px 0 rgba($black, .2);
   margin-bottom: 30px;
   display: block;
   &:hover, &:focus {
-    box-shadow: 2px 3.5px 8px 0 rgba($black, .08);
+    //box-shadow: 2px 3.5px 8px 0 rgba($black, .08);
+    box-shadow: 2px 3.5px 8px 0 rgba($black, .3);
     .mosaic-set__img-holder {
       &:after {
         visibility: visible;
@@ -475,16 +493,16 @@ $mosaic-info-bg: #394144;
     }
   }
   .mosaic-item__content {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   left: 0;
-   top: 0;
-   z-index: 100;
-   @extend .flex-centered;
-   opacity: 1;
-   @include transition(400ms);
-   color: $primary;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     z-index: 100;
+     @extend .flex-centered;
+     opacity: 1;
+     //@include transition(400ms);
+     color: $primary;
   }
 }
 .mosaic-item__img {
@@ -509,6 +527,12 @@ $mosaic-info-bg: #394144;
       @include transition(400ms);
       display: block;
       z-index: 1;
+      @include media-breakpoint-down(md) {
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+      }
     }
   }
   .mosaic-item__content__inner {
@@ -530,4 +554,40 @@ $mosaic-info-bg: #394144;
       transform: translateY(0px);
     }
   }
+}
+
+.mosaic-item--animation--fadeIn {
+  @include transition(250ms);
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    @include transition(250ms);
+    background: rgba($black, .65);
+    //background: rgba($black, .2);
+    opacity: 0;
+  }
+  .mosaic-item__content {
+    opacity: 0;
+    @include transition(250ms);
+  }
+  .mosaic-item__content__name {
+    color: $white;
+    font-family: $font-base-medium;
+    font-size: 16px;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.mosaic-item__content__name--xs {
+  color: $white;
+  font-family: $font-base-medium;
+  font-size: 16px;
 }

@@ -40,7 +40,7 @@
 .gallery__item--has-shadow {
   box-shadow: 0 6px 4px -2px rgba($black, .22);
 }
-.carousel--with-thumbnails {
+.carousel-with-thumbnails {
   .gallery__item {
     text-align: center;
     .gallery__img {
@@ -77,16 +77,9 @@
     @extend .wanderset-icon-right-open;
   }
 }
-.gallery__thumbnails {
-  //@extend .flex, .flex-content-center;
-  //overflow: hidden;
-  .slick-track {
-    //width: 100% !important;
-    //@extend .flex-centered;
-    //transform: translate3d(0px, 0px, 0px) !important;
-  }
-  .gallery__thumbnails__item {
-    //float: none !important;
+.gallery__thumbnails--multi-rows {
+  .slick-track, .slick-slide {
+    width: 100% !important;
   }
 }
 .gallery__thumbnails__item {

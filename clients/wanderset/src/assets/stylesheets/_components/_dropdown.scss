@@ -32,6 +32,9 @@ $dropdown-menu-height: 400px;
       color: $dropdown-base-color;
     }
   }
+  .w-100 {
+    max-width: 100% !important;
+  }
 }
 .dropdown--inline-block {
   display: inline-block;
@@ -140,6 +143,11 @@ $dropdown-menu-height: 400px;
     border-width: 2px;
     padding: 8.5px 60px 8.5px 10px;
     min-width: 185px;
+    @include media-breakpoint-down(xs) {
+      padding: 8.5px 30px 8.5px 10px;
+      min-width: 140px;
+      max-width: 160px;
+    }
   }
   .dropdown-menu {
     margin-top: -2px;
@@ -237,6 +245,7 @@ $dropdown-menu-height: 400px;
 }
 
 .dropdown-toggle {
+  @include text-truncate();
   &:after {
     content: none;
   }
@@ -331,6 +340,10 @@ $dropdown-menu-height: 400px;
   padding: 30px 0;
   box-shadow: 0px 4px 7px -1px rgba($black, 0.30);
   transition: none;
+
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
 
 .list-dropdown-menu {

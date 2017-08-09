@@ -2,7 +2,7 @@
 
 .goods__item {
   margin-bottom: 25px;
-  @extend .flex, .flex-column;
+  //@extend .flex, .flex-column;
   flex: 1;
   @include text-truncate();
 }
@@ -78,7 +78,7 @@
 }
 .goods__item__link {
   position: relative;
-  @extend .flex, .flex-column;
+  //@extend .flex, .flex-column;
   text-transform: none;
   flex: 1;
   &:not(:last-child) {
@@ -133,6 +133,11 @@
 
 .list-goods {
   @extend .list-unstyled;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 .list-goods--has--divider {
   .list-goods__item {

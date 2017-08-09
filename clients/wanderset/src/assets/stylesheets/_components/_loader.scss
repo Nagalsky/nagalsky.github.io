@@ -15,10 +15,10 @@ $loder-dot-size: 6px;
   z-index: 2000;
   background: $loader-bg;
   @extend .flex-centered;
-  padding-top: $header-height;
-  @include media-breakpoint-down(sm) {
-    padding-top: $header-mobile-height;
+  @include media-breakpoint-up(lg) {
+    padding-top: calc(#{$navbar-height} + #{$navbar-bar-height});
   }
+  padding-top: $navbar-height;
 }
 
 .loader__inner {

@@ -9,21 +9,22 @@ html, body {
   //text-indent: $body-text-indent;
 }
 
-html {
-  height: 100%;
-}
 
 body {
-  min-height: 100%;
-  @extend .flex, .flex-column;
-  padding-top: $header-height;
-  @include media-breakpoint-down(sm) {
-    padding-top: $header-mobile-height;
+  @include media-breakpoint-up(lg) {
+    padding-top: calc(#{$navbar-height} + #{$navbar-bar-height});
   }
+  padding-top: $navbar-height;
+  @extend .flex, .flex-column;
+  min-height: 100vh;
+  height: 100vh;
 }
 .has-header-without-navbar {
+  @include media-breakpoint-up(lg) {
+    padding-top: calc(#{$navbar-height} + #{$navbar-bar-height});
+  }
   @include media-breakpoint-up(md) {
-    padding-top: $header-height-regular;
+    padding-top: $navbar-height;
   }
 }
 .has-without-header {
@@ -31,8 +32,8 @@ body {
 }
 
 .main {
-  flex: 1;
   position: relative;
+  flex: 1 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

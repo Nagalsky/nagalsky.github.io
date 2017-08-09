@@ -14,242 +14,40 @@
 <body>
 
 
-  <header class="header">
-    <div class="header__inner">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-sm-4 col-2">
-            <div class="navbar-toggle hidden-md-up" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-              <div class="navbar-toggle-line navbar-toggle-line--half navbar-toggle-line--start"></div>
-              <div class="navbar-toggle-line"></div>
-              <div class="navbar-toggle-line navbar-toggle-line--half navbar-toggle-line--end"></div>
-            </div>
-            <!-- <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-              <img src="assets/images/elements/menu.png" class="header__icon--img" alt="">
-            </button> -->
-          </div><!-- col -->
+  <nav class="navbar navbar-toggleable-md fixed-top">
+    <div class="navbar-bar">
+      <p class="text-white">free shipping on orders over $200 <span class="text-blue">use code:freeship</span></p>
+    </div><!--navbar-bar-->
+    <div class="container">
+      <div class="navbar-toggle hidden-lg-up" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-toggle-line navbar-toggle-line--half navbar-toggle-line--start"></div>
+        <div class="navbar-toggle-line"></div>
+        <div class="navbar-toggle-line navbar-toggle-line--half navbar-toggle-line--end"></div>
+      </div>
+      <ul class="navbar-nav nav--header hidden-lg-up">
+        <li class="nav-item">
+          <a href="#" class="nav-link nav-link--search-form-trigger">
+            <i class="wanderset-icon-search navbar__icon"></i>
+          </a>
+        </li>
   
-          <div class="col-sm-4 col-8 text-center">
-            <a href="#" class="logo"></a>
-          </div><!-- col -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-product-qty">2</span>
+            <i class="wanderset-icon-bag navbar__icon"></i>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="navbar-brand logo">
+        <!-- <span class="logo__beta">beta</span> -->
+      </a>
   
-          <div class="col-sm-4 col-2">
-            <ul class="nav nav--header justify-content-end">
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-link--search-form-trigger">
-                  <i class="wanderset-icon-search header__icon"></i>
-                </a>
-              </li>
-  
-              <li class="nav-item hidden-sm-down">
-                <a href="#" class="nav-link">
-                  <i class="wanderset-icon-user header__icon"></i>
-                </a>
-              </li>
-  
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="dropdownCheckout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="nav-product-qty">2</span>
-                  <i class="wanderset-icon-bag header__icon"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu--checkout dropdown-menu--has-arrow dropdown-menu-right" aria-labelledby="dropdownCheckout">
-                  <h4 class="dropdown-menu--checkout__title">1 ITEM ADDED TO BAG</h4>
-                  <p class="dropdown-menu--checkout__info">(you have 3 items in your shopping bag)</p>
-                  <div class="box-sm">
-                    <div class="row">
-                      <div class="col-sm-6 col-5">
-                        <img src="assets/images/temp/product-img-1.png" class="img-fluid" alt="">
-                      </div><!-- col -->
-  
-                      <div class="col-sm-6 col-7">
-                        <div class="goods__info">
-                          <p class="goods__info-name">Product TT</p>
-                          <p class="goods__info-description">Sm Caption</p>
-                        </div><!-- goods__info -->
-  
-                        <ul class="goods__details">
-                          <li class="goods__details__item">
-                            <span>qty:</span> <span>1</span>
-                          </li>
-                          <li class="goods__details__item">
-                            <span>SIZE:</span> <span>L</span>
-                          </li>
-                          <li class="goods__details__item">
-                            <span>COLOR:</span> <span>GREY</span>
-                          </li>
-                          <li class="goods__details__item">
-                            <span>cost:</span> <span>$200</span>
-                          </li>
-                        </ul><!-- goods__details -->
-                      </div><!-- col -->
-                    </div><!-- row -->
-                  </div><!-- box -->
-                  <form action="">
-                    <button type="" class="btn btn-primary btn-block">checkout</button>
-                  </form>
-                </div><!-- dropdown-menu -->
-              </div><!-- dropdown -->
-              </li>
-            </ul><!-- nav -->
-          </div><!-- col -->
-        </div><!-- row -->
-  
-      </div><!-- container -->
-    </div><!-- header__inner -->
-  
-    <nav class="navbar navbar-toggleable-sm">
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <div class="navbar__mobile-menu hidden-md-up">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">New Arrivals</a>
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link" href="#">The set</a>
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Clothing</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Coats + Jackets</a>
-                <a class="dropdown-item" href="#">Jeans</a>
-                <a class="dropdown-item" href="#">Pants</a>
-                <a class="dropdown-item" href="#">Shirts</a>
-                <a class="dropdown-item" href="#">SWEAters</a>
-                <a class="dropdown-item" href="#">Sweatshirts</a>
-                <a class="dropdown-item" href="#">t-shirts</a>
-              </div><!-- dropdown-menu -->
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Footwear</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Coats + Jackets</a>
-                <a class="dropdown-item" href="#">Jeans</a>
-                <a class="dropdown-item" href="#">Pants</a>
-                <a class="dropdown-item" href="#">Shirts</a>
-                <a class="dropdown-item" href="#">SWEAters</a>
-                <a class="dropdown-item" href="#">Sweatshirts</a>
-                <a class="dropdown-item" href="#">t-shirts</a>
-              </div><!-- dropdown-menu -->
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Accessories</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Coats + Jackets</a>
-                <a class="dropdown-item" href="#">Jeans</a>
-                <a class="dropdown-item" href="#">Pants</a>
-                <a class="dropdown-item" href="#">Shirts</a>
-                <a class="dropdown-item" href="#">SWEAters</a>
-                <a class="dropdown-item" href="#">Sweatshirts</a>
-                <a class="dropdown-item" href="#">t-shirts</a>
-              </div><!-- dropdown-menu -->
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link" href="#">Brands</a>
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lifestyle</a>
-            </li><!-- nav-item -->
-          </ul><!-- navbar-nav -->
-  
-          <div class="navbar-divider"></div>
-  
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign in</a>
-            </li><!-- nav-item -->
-  
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sell on wanderset</a>
-            </li><!-- nav-item -->
-          </ul><!-- navbar-nav -->
-  
-        </div><!-- mobile-menu-holder -->
-  
-  
-        <ul class="navbar-nav justify-content-center w-100 hidden-sm-down">
-          <li class="nav-item dropdown  dropdown--large">
+      <div class="collapse navbar-collapse align-items-center" id="navbar-collapse">
+        <ul class="navbar-nav navbar-nav--divider mr-auto hidden-md-down">
+          <li class="nav-item">
             <a class="nav-link" href="#">new</a>
           </li>
   
-          <li class="nav-item dropdown  dropdown--large">
-            <a class="nav-link" data-toggle="dropdown" href="#">the set</a>
-            <div class="dropdown-menu dropdown-menu--large">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <ul class="list-dropdown-menu">
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">andrew weitz</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">trevor andrew</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">gucci mane</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">cash warren</a>
-                      </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
-  
-                  <div class="col-sm-3">
-                    <ul class="list-dropdown-menu">
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">javier laval</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">nabil zaidi</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">rob garcia</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">mark urban</a>
-                      </li>
-                    </ul><!-- list-dropdown-menu -->
-                  </div><!-- col -->
-  
-                  <div class="col-sm-3">
-                    <ul class="list-dropdown-menu">
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">mr. eazi</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">michael conley</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">dianne garcia</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">rich marshall</a>
-                      </li>
-                    </ul><!-- list-dropdown-menu -->
-                  </div><!-- col -->
-  
-                  <div class="col-sm-3">
-                    <ul class="list-dropdown-menu">
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">eddie horowitz</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link">marcedes lewis</a>
-                      </li>
-                      <li class="list-dropdown-menu__item">
-                        <a href="#" class="list-dropdown-menu__link list-dropdown-menu__link--view-all">view all set members</a>
-                      </li>
-                    </ul><!-- list-dropdown-menu -->
-                  </div><!-- col -->
-                </div><!-- row -->
-              </div><!-- container -->
-            </div><!-- dropdown-menu -->
-          </li>
   
           <li class="nav-item dropdown  dropdown--large">
             <a class="nav-link" data-toggle="dropdown" href="#">brands</a>
@@ -306,8 +104,8 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">days off</a>
                       </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
@@ -359,8 +157,8 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">levi’s</a>
                       </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
@@ -412,8 +210,8 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">puma</a>
                       </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
@@ -462,12 +260,13 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">zanerobe</a>
                       </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
-                </div><!-- row -->
-              </div><!-- container -->
-            </div><!-- dropdown-menu -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
+  
   
           <li class="nav-item dropdown  dropdown--large">
             <a class="nav-link" data-toggle="dropdown" href="#">categories</a>
@@ -477,7 +276,10 @@
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
                       <li class="list-dropdown-menu__item list-dropdown-menu__item--heading">clothing</li>
-                      <li class="list-dropdown-menu__item">                      <a href="#" class="list-dropdown-menu__link">t-shirts  / tanks</a>                     </li>                    <li class="list-dropdown-menu__item">
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">t-shirts  / tanks</a>
+                       </li>
+                      <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">sweaters</a>
                       </li>
                       <li class="list-dropdown-menu__item">
@@ -498,8 +300,8 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">socks / underwear</a>
                       </li>
-                    </ul><!-- list-dropdownenu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
@@ -522,8 +324,8 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">jewelry</a>
                       </li>
-                    </ul><!-- list-dropdown-menu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <ul class="list-dropdown-menu">
@@ -543,28 +345,203 @@
                       <li class="list-dropdown-menu__item">
                         <a href="#" class="list-dropdown-menu__link">slippers / sandals</a>
                       </li>
-                    </ul><!-- list-dropdown-menu -->
-                  </div><!-- col -->
+                    </ul>
+                  </div>
   
                   <div class="col-sm-3">
                     <a href="#" class="font-base-bold list-dropdown-menu__item">
                       <img src="assets/images/temp/dropdown-categories-item.jpg" class="img-fluid mb10 list-dropdown-menu__img" alt="">
                       <p>look of the day</p>
                     </a>
-                  </div><!-- col -->
-                </div><!-- row -->
-              </div><!-- container -->
-            </div><!-- dropdown-menu -->
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
+  
   
           <li class="nav-item dropdown  dropdown--large">
+            <a class="nav-link" data-toggle="dropdown" href="#">the set</a>
+            <div class="dropdown-menu dropdown-menu--large">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <ul class="list-dropdown-menu">
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">andrew weitz</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">trevor andrew</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">gucci mane</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">cash warren</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="col-sm-3">
+                    <ul class="list-dropdown-menu">
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">javier laval</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">nabil zaidi</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">rob garcia</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">mark urban</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="col-sm-3">
+                    <ul class="list-dropdown-menu">
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">mr. eazi</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">michael conley</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">dianne garcia</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">rich marshall</a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="col-sm-3">
+                    <ul class="list-dropdown-menu">
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">eddie horowitz</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link">marcedes lewis</a>
+                      </li>
+                      <li class="list-dropdown-menu__item">
+                        <a href="#" class="list-dropdown-menu__link list-dropdown-menu__link--view-all">view all set members</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+  
+  
+  
+          <li class="nav-item">
             <a class="nav-link" href="#">lifestyle</a>
           </li>
-        </ul>
-      </div><!-- collapse -->
-    </nav><!-- navbar -->
   
-  </header><!-- header -->
+  
+          <li class="nav-item">
+            <a class="nav-link" href="#">wander</a>
+          </li>
+        </ul>
+  
+        <ul class="navbar-nav hidden-md-down">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-link--search-form-trigger">
+              <i class="wanderset-icon-search navbar__icon"></i>
+            </a>
+          </li>
+  
+          <li class="nav-item hidden-sm-down">
+            <a href="#" class="nav-link">
+              <i class="wanderset-icon-user navbar__icon"></i>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-product-qty">2</span>
+              <i class="wanderset-icon-bag navbar__icon"></i>
+            </a>
+          </li>
+        </ul>
+  
+  
+        <div class="navbar__mobile-menu hidden-lg-up">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">New Arrivals</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#">The set</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Clothing</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Coats + Jackets</a>
+                <a class="dropdown-item" href="#">Jeans</a>
+                <a class="dropdown-item" href="#">Pants</a>
+                <a class="dropdown-item" href="#">Shirts</a>
+                <a class="dropdown-item" href="#">SWEAters</a>
+                <a class="dropdown-item" href="#">Sweatshirts</a>
+                <a class="dropdown-item" href="#">t-shirts</a>
+              </div>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Footwear</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Coats + Jackets</a>
+                <a class="dropdown-item" href="#">Jeans</a>
+                <a class="dropdown-item" href="#">Pants</a>
+                <a class="dropdown-item" href="#">Shirts</a>
+                <a class="dropdown-item" href="#">SWEAters</a>
+                <a class="dropdown-item" href="#">Sweatshirts</a>
+                <a class="dropdown-item" href="#">t-shirts</a>
+              </div>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Accessories</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Coats + Jackets</a>
+                <a class="dropdown-item" href="#">Jeans</a>
+                <a class="dropdown-item" href="#">Pants</a>
+                <a class="dropdown-item" href="#">Shirts</a>
+                <a class="dropdown-item" href="#">SWEAters</a>
+                <a class="dropdown-item" href="#">Sweatshirts</a>
+                <a class="dropdown-item" href="#">t-shirts</a>
+              </div>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#">Brands</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lifestyle</a>
+            </li>
+          </ul>
+  
+          <div class="navbar-divider"></div>
+  
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign in</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sell on wanderset</a>
+            </li>
+          </ul>
+  
+        </div><!--navbar__mobile-menu-->
+      </div>
+    </div><!--container-->
+  </nav>
 
   <div class="searh-box">
     <a href="#" class="searh-box__close"></a>
@@ -588,7 +565,7 @@
 
         <div class="box-md">
           <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0">
+            <div class="col-md-6 mb-5 mb-md-0 d-md-flex flex-md-column">
               <a href="#" class="mosaic-item mosaic-item--md mosaic-item--vertical-centered flex-1 has-bg" style="background-image:url('assets/images/temp/Square-Large-Image.jpg');">
                 <div class="mosaic-item__content mosaic-item__content--md text-white">
                   <p class="mosaic-item__content__text">new looks from</p>
@@ -624,16 +601,15 @@
           </div><!--row-->
         </div><!--box-md-->
 
-        <div class="box-md mb35">
+        <div class="box-md mb55">
           <div class="row">
             <div class="col-md-9 mb-5 mb-md-0">
               <div class="box-md">
                 <div class="row">
                   <div class="col-md-4 mb-5 mb-md-0">
-                    <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered flex-1 has-bg" style="background-image:url('assets/images/temp/New-Hats-Image.jpg');">
-                      <div class="mosaic-item__content mosaic-item__content--md text-white">
-                        <h3 class="mosaic-item__content__name">new<br> hats</h3>
-                        <button type="button" class="mosaic__btn">
+                    <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered align-items-end flex-1 has-bg" style="background-image:url('assets/images/temp/New-Hats-Image.jpg');">
+                      <div class="mosaic-item__content mosaic-item__content--md mosaic-item__content--top-md text-white">
+                        <button type="button" class="mosaic__btn mosaic__btn--dark mt-4">
                           shop now
                         </button>
                       </div><!--mosaic-item__content-->
@@ -680,44 +656,44 @@
           </div><!--row-->
         </div><!--box-md-->
 
-        <div class="box-md mb60">
+        <div class="box-md mb55">
           <h5 class="text-center title-medium text-primary">featured set members</h5>
           <div class="row row--sm-5">
             <div class="col-6 col-md-3 mb-5 mb-md-0">
-              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--flip has-bg" style="background-image: url('assets/images/temp/Set-Member-Diane-Garcia.jpg');">
-                <div class="mosaic-item__content mosaic-item__content--md">
+              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--fadeIn has-bg" style="background-image: url('assets/images/temp/Set-Member-Javier-Piece.png');">
+                <div class="mosaic-item__content">
                   <div class="mosaic-item__content__inner">
-                    <h3 class="mosaic-item__content__name">Dianne<br>Garcia</h3>
+                    <h3 class="mosaic-item__content__name">JAVIER<br>LAVAL</h3>
                   </div><!--mosaic-item__content__inner-->
                 </div><!--mosaic-item__content-->
               </a><!--box-md-->
             </div><!--col-->
 
             <div class="col-6 col-md-3 mb-5 mb-md-0">
-              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--flip has-bg" style="background-image: url('assets/images/temp/Set-Member-Marcedes-Lewis.jpg');">
+              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--fadeIn has-bg" style="background-image: url('assets/images/temp/Set-Member-Mark-Urban-Piece.png');">
                 <div class="mosaic-item__content mosaic-item__content--md">
                   <div class="mosaic-item__content__inner">
-                    <h3 class="mosaic-item__content__name">Marcedes<br>Lewis</h3>
+                    <h3 class="mosaic-item__content__name">MARK<br>URBAN</h3>
                   </div><!--mosaic-item__content__inner-->
                 </div><!--mosaic-item__content-->
               </a><!--box-md-->
             </div><!--col-->
 
             <div class="col-6 col-md-3">
-              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--flip has-bg" style="background-image: url('assets/images/temp/Set-Member-Gucci-Mane.jpg');">
+              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--fadeIn has-bg" style="background-image: url('assets/images/temp/Set-Member-Rob-Garcia-Piece.png');">
                 <div class="mosaic-item__content mosaic-item__content--md">
                   <div class="mosaic-item__content__inner">
-                    <h3 class="mosaic-item__content__name">Gucci<br>Mane</h3>
+                    <h3 class="mosaic-item__content__name">ROB<br>GARCIA</h3>
                   </div><!--mosaic-item__content__inner-->
                 </div><!--mosaic-item__content-->
               </a><!--box-md-->
             </div><!--col-->
 
             <div class="col-6 col-md-3">
-              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--flip has-bg" style="background-image: url('assets/images/temp/Set-Member-Michael-Conley.jpg');">
+              <a href="#" class="mosaic-item mosaic-item--xs mosaic-item--vertical-centered mosaic-item--animation mosaic-item--animation--fadeIn has-bg" style="background-image: url('assets/images/temp/Set-Member-DJ-Five-Piece.png');">
                 <div class="mosaic-item__content mosaic-item__content--md">
                   <div class="mosaic-item__content__inner">
-                    <h3 class="mosaic-item__content__name">Michael<br>Conley</h3>
+                    <h3 class="mosaic-item__content__name">DJ<br>FIVE</h3>
                   </div><!--mosaic-item__content__inner-->
                 </div><!--mosaic-item__content-->
               </a><!--box-md-->
@@ -727,6 +703,7 @@
 
 
         <div class="box-md">
+          <h5 class="text-center title-medium text-primary">Stories from Wander</h5>
           <div class="row row--flex-stretch">
             <div class="col-lg-4 col-sm-6">
               <a href="#" class="mosaic-set">
@@ -737,7 +714,7 @@
                 <div class="mosaic-set__description">
                   <p class="mosaic-set__description__title">Set List</p>
                   <span class="mosaic-set__description__divider"></span>
-                  <h3 class="mosaic-set__description__name">Top 20 "need to know" brands on wanderset</h3>
+                  <h3 class="mosaic-set__description__name">20 "Need to know"<br> brands on wanderset</h3>
                 </div><!-- mosaic-set__description -->
               </a><!-- mosaic-set -->
             </div><!-- col -->
@@ -763,7 +740,7 @@
                 <div class="mosaic-set__description">
                   <p class="mosaic-set__description__title">editorial</p>
                   <span class="mosaic-set__description__divider"></span>
-                  <h3 class="mosaic-set__description__name">why andrew weitz is<br class="hidden-sm-down">important to fashion</h3>
+                  <h3 class="mosaic-set__description__name">Why you need to discover Andrew Weitz</h3>
                 </div><!-- mosaic-set__description -->
               </a><!-- mosaic-set -->
             </div><!-- col -->
@@ -784,12 +761,12 @@
             <div class="col-lg-4 col-sm-6">
               <a href="#" class="mosaic-set">
                 <div class="mosaic-set__img-holder">
-                  <img src="assets/images/temp/Fighter-Post.jpg" class="w-100" alt="">
+                  <img src="assets/images/temp/Man-Woman-Post.jpg" class="w-100" alt="">
                 </div><!--mosaic-set__img-holder-->
                 <div class="mosaic-set__description">
-                  <p class="mosaic-set__description__title">set list</p>
+                  <p class="mosaic-set__description__title">Editorial</p>
                   <span class="mosaic-set__description__divider"></span>
-                  <h3 class="mosaic-set__description__name">top 10 best dressed<br class="hidden-sm-down">fighters of all time</h3>
+                  <h3 class="mosaic-set__description__name">The Fashion Show That Doesnt Care About Hype</h3>
                 </div><!-- mosaic-set__description -->
               </a><!-- mosaic-set -->
             </div><!-- col -->

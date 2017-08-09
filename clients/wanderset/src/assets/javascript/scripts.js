@@ -27,26 +27,65 @@ $(document).ready(function(){
     });
   });
 
+
+
   $('.carousel--with-thumbnails').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     fade: false,
-    //asNavFor: '.gallery__thumbnails',
+    asNavFor: '.gallery__thumbnails',
     lazyLoad: 'ondemand'
   });
-  // $('.gallery__thumbnails').slick({
-  //   arrows: false,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 5,
-  //   asNavFor: '.carousel--with-thumbnails',
-  //   dots: false,
-  //   centerMode: false,
-  //   focusOnSelect: true,
-  //   lazyLoad: 'ondemand'
-  // });
+  $('.gallery__thumbnails').slick({
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    asNavFor: '.carousel--with-thumbnails',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    lazyLoad: 'ondemand'
+  });
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('.carousel, .gallery__thumbnails').resize();
+  });
+
+  var $carousel_with_thumbnails = $(".carousel--with-thumbnails-2");
+  var $gallery_thumbnails = $(".gallery__thumbnails-2");
+  var $gallery_item = $gallery_thumbnails.find("div");
+  var killit = false;
+
+  $gallery_item.on("click", function(e){
+    if( !killit ) {
+      e.stopPropagation();
+      var idx = $(this).data("thumb");
+      $carousel_with_thumbnails.slick("goTo", idx-1);
+    }
+  });
+  $gallery_thumbnails
+    .on("beforeChange", function() {
+        killit = true;
+    }).on("afterChange", function() {
+        killit = false;
+  });
+  $('.carousel--with-thumbnails-2').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    asNavFor: '.gallery__thumbnails-2',
+    lazyLoad: 'ondemand'
+  });
+  $('.gallery__thumbnails-2').slick({
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    asNavFor: '.carousel--with-thumbnails-2',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    lazyLoad: 'ondemand'
   });
 
   /* ======== Isotop masonry initial ======== */
@@ -170,15 +209,16 @@ function hasScrolled() {
   // This is necessary so you never see what is "behind" the navbar.
   if (st > lastScrollTop && st > navbarHeight){
       // Scroll Down
-    $('header').removeClass('header--pinned').addClass('header--unpinned');
+    $('.navbar').removeClass('navbar--pinned').addClass('navbar--unpinned');
     //Hide opened dropdow when header will hide
     $('body').find('.dropdown').removeClass('show');
     $('body').find('.dropdown-menu--large').addClass('hide');
     $('.navbar-collapse').removeClass('show');
+    $('.navbar-toggle').removeClass('open');
   } else {
       // Scroll Up
     if(st + $(window).height() < $(document).height()) {
-      $('header').removeClass('header--unpinned').addClass('header--pinned');
+      $('.navbar').removeClass('navbar--unpinned').addClass('navbar--pinned');
       $('body').find('.dropdown-menu--large').removeClass('hide');
     }
   }

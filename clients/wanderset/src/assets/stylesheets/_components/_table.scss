@@ -54,20 +54,33 @@ $table-border-color: $gray;
   }
 }
 .table__goods__info {
+  @include media-breakpoint-down(lg) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
   @include media-breakpoint-down(sm) {
     min-width: 180px;
   }
   .goods__info-name {
     font-size: 14px;
     max-width: 300px;
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+    }
   }
   .goods__info-description {
     font-size: 12px;
+    @include media-breakpoint-down(lg) {
+      font-size: 11px;
+    }
   }
 }
 .table__goods__details {
   &:not(:last-child) {
-    margin-bottom: 30px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 30px;
+    }
   }
 }
 .table__cost {

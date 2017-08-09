@@ -19,61 +19,22 @@
     @include transition(300ms);
   }
   &:hover, &:focus {
-    &:before {
-      opacity: 1;
-    }
-    .lifestyle__overlay {
-      opacity: 1;
-      transform: translate3d(0,0,0);
-    }
     .lifestyle__dot {
-      &:before, &:after {
-        border-color: transparent;
-        filter: blur(.5px);
-        transform: scale(4);
-        transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
-        opacity: 1;
-      }
       &:after {
-        transition-delay: 100ms;
+        transform: scale(1.1);
       }
-    }
-    .lifestyle__dot--sky {
-      // &:before {
-      //   animation: lifestyle__pulse-animate--sky 1s  ease-out;
-      // }
-    }
-    .lifestyle__dot--red {
-      // &:before {
-      //   animation: lifestyle__pulse-animate--red 1s  ease-out;
-      // }
-    }
-    .lifestyle__dot--yellow {
-      // &:before {
-      //   animation: lifestyle__pulse-animate--yellow 1s  ease-out;
-      // }
-    }
-    .lifestyle__dot--green {
-      // &:before {
-      //   animation: lifestyle__pulse-animate--green 1s  ease-out;
-      // }
-    }
-    .lifestyle__dot--purple {
-      // &:before {
-      //   animation: lifestyle__pulse-animate--purple 1s  ease-out;
-      // }
     }
   }
 }
 .lifestyle__item--individual {
   &:hover, &:focus {
-    &:before {
+    &:before, &:after {
       opacity: 1;
     }
     .lifestyle__dot {
       &:hover {
         &:before, &:after {
-          content: none;
+          transform: scale(0);
         }
       }
     }
@@ -103,50 +64,74 @@
   transform: translate3d(0,50%,0);
   opacity: 0;
 }
+
+
+$life-style-dot-size: 16px;
 .lifestyle__dot {
   z-index: 50;
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: $life-style-dot-size;
+  height: $life-style-dot-size;
+
+
   border-radius: 50%;
   padding: 0;
-  background: transparent;
   cursor: pointer;
   display: inline-block;
-  // &:before {
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   content: '';
-  //   border-radius: 50%;
-  // }
-  &:before, &:after {
-    content: '';
-    position: absolute;
+
+
+  background: transparent !important;
+  border: 2px solid $white;
+  border: none;
+
+  &:after {
     top: 0;
     left: 0;
-    width: 16px;
-    height: 16px;
+    padding: 0px;
+
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    border: 2px solid rgba($primary, 0.7);
-    filter: blur(0);
-    transform-origin: 50%;
-    opacity: 0;
+    content:'';
+    opacity: 1;
+    border: none !important;
+    box-shadow: none !important;
+    @include transition(300ms);
+    transform: scale(0);
   }
-  &:hover, &:focus {
-    &:before, &:after {
-      border-color: transparent;
-      filter: blur(.5px);
-      transform: scale(4);
-      transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
-      opacity: 1;
-    }
+  &:hover {
     &:after {
-      transition-delay: 100ms;
+      transform: scale(1.1);
     }
   }
+
+  // &:before, &:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: $life-style-dot-size;
+  //   height: 16px;
+  //   border-radius: 50%;
+  //   border: 2px solid rgba($primary, 0.7);
+  //   filter: blur(0);
+  //   transform-origin: 50%;
+  //   opacity: 0;
+  // }
+  // &:hover, &:focus {
+  //   &:before, &:after {
+  //     border-color: transparent;
+  //     filter: blur(.5px);
+  //     transform: scale(4);
+  //     transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+  //     opacity: 1;
+  //   }
+  //   &:after {
+  //     transition-delay: 100ms;
+  //   }
+  // }
 }
 .lifestyle__dot--sky {
   &:before, &:after {
@@ -176,89 +161,39 @@
 
 
 
-
-
-
-
-@keyframes scale {
-  0% {
-      transform: scale(1.0);
-  }
-  50% {
-      transform: scale(1.2);
-  }
-  100% {
-      transform: scale(1);
-  }
-}
 .lifestyle__dot--sky {
-  background-color: #61d2fe;
-}
-@keyframes lifestyle__pulse-animate--sky {
-  0% {
-    box-shadow: 0 0 0 0 rgba(#61d2fe, 0.65);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(#61d2fe, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(#61d2fe, 0);
+  //background-color: #61d2fe;
+  border: 2px solid #61d2fe;
+  &:after {
+    background-color: #61d2fe;
   }
 }
 .lifestyle__dot--red {
-  background-color: #ff5534;
-}
-@keyframes lifestyle__pulse-animate--red {
-  0% {
-    box-shadow: 0 0 0 0 rgba(#ff5534, 0.65);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(#ff5534, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(#ff5534, 0);
+  //background-color: #ff5534;
+  border: 2px solid #ff5534;
+  &:after {
+    background-color: #ff5534;
   }
 }
 .lifestyle__dot--yellow {
-  background-color: #ffd200;
-}
-@keyframes lifestyle__pulse-animate--yellow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(#ffd200, 0.65);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(#ffd200, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(#ffd200, 0);
+  //background-color: #ffd200;
+  border: 2px solid #ffd200;
+  &:after {
+    background-color: #ffd200;
   }
 }
 .lifestyle__dot--green {
-  background-color: #49dc6a;
-}
-@keyframes lifestyle__pulse-animate--green {
-  0% {
-    box-shadow: 0 0 0 0 rgba(#49dc6a, 0.65);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(#49dc6a, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(#49dc6a, 0);
+  //background-color: #49dc6a;
+  border: 2px solid #49dc6a;
+  &:after {
+    background-color: #49dc6a;
   }
 }
 .lifestyle__dot--purple {
-  background-color: #6a71e5;
-}
-@keyframes lifestyle__pulse-animate--purple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(#6a71e5, 0.65);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(#6a71e5, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(#6a71e5, 0);
+  //background-color: #6a71e5;
+  border: 2px solid #6a71e5;
+  &:after {
+    background-color: #6a71e5;
   }
 }
 

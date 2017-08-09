@@ -1,6 +1,6 @@
 /* LOGO */
 
-$logo-color: $shark;
+$logo-color: $primary;
 $logo-color-secondary: $blue;
 $logo-ff: $font-fourth;
 
@@ -12,6 +12,7 @@ $logo-ff: $font-fourth;
   margin-right: auto;
   height: 34px;
   background: url('../images/elements/logo.svg') no-repeat 50% 50% / 100%;
+  position: relative;
   @include media-breakpoint-down(lg) {
     height: 37px;
   }
@@ -37,6 +38,9 @@ $logo-ff: $font-fourth;
     font-size: 58px;
   } */
 }
+
+
+
 .logo--content {
   margin-bottom: 40px;
   background: none;
@@ -66,4 +70,22 @@ $logo-ff: $font-fourth;
 }
 .logo__img {
   width: 100%;
+}
+.logo__beta {
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  font-family: $font-base-medium;
+  color: $logo-color;
+  letter-spacing: 0;
+  @include media-breakpoint-down(lg) {
+    bottom: -16px;
+  }
+  @include media-breakpoint-down(md) {
+    bottom: -14px;
+  }
+  @include media-breakpoint-down(sm) {
+    bottom: -10px;
+  }
 }

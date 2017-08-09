@@ -48,6 +48,9 @@ $pagination-color-active: $primary;
     height: 32px;
     font-size: 12px;
   }
+  @include media-breakpoint-down(sm) {
+    width: 26px;
+  }
   &:hover, &:focus {
     color: $white;
     background: $pagination-color;
@@ -99,6 +102,40 @@ $pagination-color-active: $primary;
     &:before {
       border-width: 4px 0px 4px 8px;
       border-color: transparent transparent transparent $pagination-color;
+    }
+  }
+}
+
+
+.pagination--secondary {
+  .page-item--control {
+    .page-link {
+       @extend .font-icons;
+       margin-top: -2px;
+    }
+  }
+  .page-item--control-left {
+    .page-link {
+      @extend .wanderset-icon-left-open-big;
+    }
+  }
+  .page-item--control-right {
+    .page-link {
+      @extend .wanderset-icon-right-open-big;
+    }
+  }
+  .page-item {
+    min-width: 12px;
+    @extend .align-items-center;
+  }
+  .page-item--divider {
+    letter-spacing: 0;
+  }
+  .page-link {
+    width: 20px;
+    &:hover, &:focus {
+      background: transparent;
+      color: darken($pagination-color, 20%);
     }
   }
 }

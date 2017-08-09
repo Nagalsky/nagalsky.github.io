@@ -21,12 +21,15 @@
   transition-property: opacity, transform;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     width: 44px;
     height: 44px;
     right: 25px;
     bottom: 26%;
     top: auto;
+  }
+  @include media-breakpoint-down(sm) {
+    right: 25px;
   }
   &:hover {
     color: $blue;
