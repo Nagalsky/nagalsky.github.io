@@ -1,7 +1,8 @@
 /* NAVBAR */
 
-$navbar-bg: #f2f2f2;
+$navbar-bg: $white;
 $navbar-color: #717171;
+$navbar-border-color: #dcdcdc;
 $navbar-color-mobile: $tundora;
 $navbar-mobile-bg: rgba($black, .8);
 $navbar-kerning: .2rem;
@@ -9,6 +10,9 @@ $navbar-height: 58px;
 $navbar-ff: $font-base-medium;
 $navbar-icons-color: #97979d;
 $navbar-bar-height: 31px;
+$navbar-bar-color: #f9f9f9;
+$navbar-box-shadow: 0 1px 10px 0 rgba($black, .1);
+$nav-link-fs: 11px;
 
 .navbar {
   min-height: $navbar-height;
@@ -16,6 +20,8 @@ $navbar-bar-height: 31px;
   letter-spacing: $navbar-kerning;
   padding-top: 0;
   padding-bottom: 0;
+  //box-shadow: 0px 1px 0px 0px $navbar-border-color;
+  //border-bottom: 1px solid $navbar-border-color;
   &:before {
     height: $navbar-height;
     position: absolute;
@@ -33,21 +39,23 @@ $navbar-bar-height: 31px;
     min-height: calc(#{$navbar-height} + #{$navbar-bar-height});
   }
   @include media-breakpoint-down(md) {
-    box-shadow: 0 1px 10px 0 rgba($black, .4);
+    box-shadow: $navbar-box-shadow;
     background: $navbar-mobile-bg;
     &:before {
       content: '';
     }
   }
   .logo {
-    max-width: 178px;
-    height: 28px;
+    max-width: 214px;
+    height: 30px;
     @include media-breakpoint-up(xl) {
       margin-right: 100px;
     }
     @include media-breakpoint-down(md) {
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      max-width: 178px;
+      height: 26px;
     }
   }
   .container {
@@ -60,12 +68,38 @@ $navbar-bar-height: 31px;
       width: 100%;
     }
   }
+  .nav-item {
+    &:hover {
+      .nav-link--animated {
+        &:after {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}
+.navbar--shadow {
+  box-shadow: $navbar-box-shadow;
+  min-height: $navbar-height;
+  .navbar-bar {
+    transform: translateY(-100%);
+    margin-bottom: -$navbar-bar-height;
+  }
+  // .logo {
+  //   @include media-breakpoint-up(lg) {
+  //     padding-top: 44.5px;
+  //     padding-bottom: 44.5px;
+  //   }
+  // }
 }
 .navbar--pinned {
+  //box-shadow: 0 1px 10px 0 rgba($black, .4);
   @include media-breakpoint-up(md) {
     transform: translateY(0%);
   }
 }
+
 .navbar--unpinned {
   @include media-breakpoint-up(md) {
     transform: translateY(-120%);
@@ -83,6 +117,19 @@ $navbar-bar-height: 31px;
         margin-left: 15px;
       }
     }
+    @include media-breakpoint-up(lg) {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+    }
+    >.nav-link {
+      @include media-breakpoint-up(lg) {
+        padding-top: 22px;
+        padding-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -97,13 +144,38 @@ $navbar-bar-height: 31px;
 }
 
 .nav-link {
-  font-size: 11px;
+  font-size: $nav-link-fs;
   font-family: $navbar-ff;
   color: $navbar-color;
   position: relative;
   &:hover, &:focus {
     color: $primary;
   }
+}
+
+.nav-link--animated {
+  position: relative;
+  &:before, &:after {
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+   content: '';
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 1px;
+   background: $navbar-color-mobile;
+   opacity: 0;
+   transform: translateY(5px);
+   z-index: 1500;
+ }
+ &:hover {
+   &:after {
+     opacity: 1;
+     transform: translateY(0px);
+   }
+ }
 }
 
 .navbar-collapse {
@@ -415,15 +487,18 @@ $navbar-toggle-color: $tundora;
 
 .navbar-bar {
   text-align: center;
-  min-height: $navbar-bar-height;
+  height: $navbar-bar-height;
   background: $primary;
+  color: $navbar-bar-color;
   width: 100%;
   padding: 5px 15px;
-  display: none;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 9px;
+  position: relative;
   @extend .flex-centered;
-  @include media-breakpoint-up(lg) {
-    display: block;
+  @include transition(400ms);
+  letter-spacing: .4rem;
+  @include media-breakpoint-down(md) {
+    display: none !important;
   }
 }

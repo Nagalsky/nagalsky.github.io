@@ -3,6 +3,9 @@
 $search-box-bg: rgba($white, .95);
 $search-box-color: $gray;
 
+
+
+
 .searh-box {
   background: $search-box-bg;
   position: fixed;
@@ -45,10 +48,12 @@ $search-box-color: $gray;
     font-size: 80px;
     font-family: $font-base-thin;
     text-transform: none;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       height: 60px;
       font-size: 20px;
-      //border: none;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 40px;
     }
   }
 }

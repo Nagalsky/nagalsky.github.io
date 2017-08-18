@@ -17,7 +17,12 @@ body {
   padding-top: $navbar-height;
   @extend .flex, .flex-column;
   min-height: 100vh;
-  height: 100vh;
+  //height: 100vh;
+}
+.navbar-bar-hidden {
+  @include media-breakpoint-up(lg) {
+    padding-top: $navbar-height;
+  }
 }
 .has-header-without-navbar {
   @include media-breakpoint-up(lg) {
@@ -166,7 +171,7 @@ a {
   &:after {
     content: '';
     width: 100%;
-    height: 2px;
+    height: 1px;
     display: inline-block;
     background: $link-color;
     position: absolute;
@@ -210,16 +215,16 @@ b {
 }
 
 .l-n {
-  letter-spacing: normal;
+  letter-spacing: normal !important;
 }
 .l-n-sm {
-  letter-spacing: .1em;
+  letter-spacing: .1em !important;
 }
 .ln-sm {
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 .ln-xl {
-  line-height: 1.92;
+  line-height: 1.92 !important;
 }
 
 .divider {
@@ -304,6 +309,11 @@ b {
 
 .font-fifth {
   font-family: $font-fifth;
+  letter-spacing: 0;
+}
+
+.font-sixth {
+  font-family: $font-sixth;
   letter-spacing: 0;
 }
 

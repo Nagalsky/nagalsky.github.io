@@ -2,91 +2,113 @@ $(document).ready(function(){
 
 
   /* ======== Slick carousel initial ======== */
-  $('.carousel').each(function() {
-    $(this).slick({
-      prevArrow: $(this).siblings('.gallery__arrow--prev'),
-      nextArrow: $(this).siblings('.gallery__arrow--next'),
-      dotsClass: "gallery__pagination"
-    });
+  $('.gallery').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: true,
+   fade: true,
+   asNavFor: '.gallery__thumbnail',
+  //  prevArrow: $(this).siblings('.gallery__arrow.gallery__arrow--prev'),
+  //  nextArrow: $(this).siblings('.gallery__arrow.gallery__arrow--next')
+
   });
-  $('.carousel--billboard').each(function() {
-    $(this).slick({
-      prevArrow: $(this).siblings('.gallery__arrow--prev'),
-      nextArrow: $(this).siblings('.gallery__arrow--next'),
-      dotsClass: "gallery__pagination",
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      responsive: [
-         {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-           }
-         }
-       ]
-    });
+  $('.gallery__thumbnail').slick({
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   asNavFor: '.gallery',
+   dots: false,
+   centerMode: true,
+   focusOnSelect: true,
+   lazyLoad: 'ondemand'
   });
 
 
+  /* ======== Slick carousel initial ======== */
+  // $('.carousel').each(function() {
+  //   $(this).slick({
+  //     prevArrow: $(this).siblings('.gallery__arrow--prev'),
+  //     nextArrow: $(this).siblings('.gallery__arrow--next'),
+  //     dotsClass: "gallery__pagination"
+  //   });
+  // });
+  // $('.carousel--billboard').each(function() {
+  //   $(this).slick({
+  //     prevArrow: $(this).siblings('.gallery__arrow--prev'),
+  //     nextArrow: $(this).siblings('.gallery__arrow--next'),
+  //     dotsClass: "gallery__pagination",
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     responsive: [
+  //        {
+  //         breakpoint: 767,
+  //         settings: {
+  //           slidesToShow: 1,
+  //          }
+  //        }
+  //      ]
+  //   });
+  // });
 
-  $('.carousel--with-thumbnails').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: false,
-    asNavFor: '.gallery__thumbnails',
-    lazyLoad: 'ondemand'
-  });
-  $('.gallery__thumbnails').slick({
-    arrows: false,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    asNavFor: '.carousel--with-thumbnails',
-    dots: false,
-    centerMode: false,
-    focusOnSelect: true,
-    lazyLoad: 'ondemand'
-  });
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    $('.carousel, .gallery__thumbnails').resize();
-  });
 
-  var $carousel_with_thumbnails = $(".carousel--with-thumbnails-2");
-  var $gallery_thumbnails = $(".gallery__thumbnails-2");
-  var $gallery_item = $gallery_thumbnails.find("div");
-  var killit = false;
 
-  $gallery_item.on("click", function(e){
-    if( !killit ) {
-      e.stopPropagation();
-      var idx = $(this).data("thumb");
-      $carousel_with_thumbnails.slick("goTo", idx-1);
-    }
-  });
-  $gallery_thumbnails
-    .on("beforeChange", function() {
-        killit = true;
-    }).on("afterChange", function() {
-        killit = false;
-  });
-  $('.carousel--with-thumbnails-2').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: false,
-    asNavFor: '.gallery__thumbnails-2',
-    lazyLoad: 'ondemand'
-  });
-  $('.gallery__thumbnails-2').slick({
-    arrows: false,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    asNavFor: '.carousel--with-thumbnails-2',
-    dots: false,
-    centerMode: false,
-    focusOnSelect: true,
-    lazyLoad: 'ondemand'
-  });
+  // $('.carousel--with-thumbnails').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   fade: false,
+  //   asNavFor: '.gallery__thumbnails',
+  //   lazyLoad: 'ondemand'
+  // });
+  // $('.gallery__thumbnails').slick({
+  //   arrows: false,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 5,
+  //   asNavFor: '.carousel--with-thumbnails',
+  //   dots: false,
+  //   centerMode: false,
+  //   focusOnSelect: true,
+  //   lazyLoad: 'ondemand'
+  // });
+  // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  //   $('.carousel, .gallery__thumbnails').resize();
+  // });
+
+  // var $carousel_with_thumbnails = $(".carousel--with-thumbnails-2");
+  // var $gallery_thumbnails = $(".gallery__thumbnails-2");
+  // var $gallery_item = $gallery_thumbnails.find("div");
+  // var killit = false;
+  //
+  // $gallery_item.on("click", function(e){
+  //   if( !killit ) {
+  //     e.stopPropagation();
+  //     var idx = $(this).data("thumb");
+  //     $carousel_with_thumbnails.slick("goTo", idx-1);
+  //   }
+  // });
+  // $gallery_thumbnails
+  //   .on("beforeChange", function() {
+  //       killit = true;
+  //   }).on("afterChange", function() {
+  //       killit = false;
+  // });
+  // $('.carousel--with-thumbnails-2').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   fade: false,
+  //   asNavFor: '.gallery__thumbnails-2',
+  //   lazyLoad: 'ondemand'
+  // });
+  // $('.gallery__thumbnails-2').slick({
+  //   arrows: false,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 5,
+  //   asNavFor: '.carousel--with-thumbnails-2',
+  //   dots: false,
+  //   centerMode: false,
+  //   focusOnSelect: true,
+  //   lazyLoad: 'ondemand'
+  // });
 
   /* ======== Isotop masonry initial ======== */
   $('.masonry-grid').isotope({
@@ -167,9 +189,9 @@ $(document).ready(function(){
   });
 
   /* ======== Scroll animation initial ======== */
-  AOS.init({
-    disable: 'mobile'
-  });
+  // AOS.init({
+  //   disable: 'mobile'
+  // });
 
   /* ======== Mobile menu button trigger action ======== */
   $('.navbar-toggle').click(function() {
@@ -230,10 +252,21 @@ $(window).scroll(function(event) {
 
   var scroll = $(window).scrollTop();
 
+
+  /* ======== Add/hide box-shadow for nav ======== */
+  if (scroll >= 20) {
+    $('.navbar').addClass('navbar--shadow');
+    $('body').addClass('navbar-bar-hidden');
+  } else {
+    $('.navbar').removeClass('navbar--shadow');
+    $('body').removeClass('navbar-bar-hidden');
+  }
+
   /* ======== Show and hide on scroll back top top button ======== */
   if (scroll >= 500) {
     $('.btn-scroll-top').addClass('active');
   } else {
     $('.btn-scroll-top').removeClass('active');
   }
+
 });
