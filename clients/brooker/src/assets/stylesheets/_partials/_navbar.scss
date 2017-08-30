@@ -35,8 +35,6 @@ $navbar-fs: 16px;
 }
 
 .navbar-brand {
-  width: 100%;
-  max-width: 160px;
   @include media-breakpoint-up(lg) {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -50,6 +48,12 @@ $navbar-fs: 16px;
   &+.nav-item {
     @include media-breakpoint-up(lg) {
       margin-left: 20px;
+    }
+  }
+  &.active {
+    .nav-link {
+      color: $white;
+      border-color: $danger;
     }
   }
   @include media-breakpoint-up(lg) {

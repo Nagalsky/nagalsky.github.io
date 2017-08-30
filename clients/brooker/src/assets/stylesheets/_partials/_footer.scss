@@ -1,1 +1,26 @@
 /* FOOTER */
+
+$footer-bg: $white;
+$footer-fs: 21px;
+$footer-fs-xs: 14px;
+
+.footer {
+  padding: 25px 0 55px 0;
+  background: $footer-bg;
+  font-size: $footer-fs;
+  @include media-breakpoint-down(md) {
+    padding: 35px 0;
+    font-size: $footer-fs-xs;
+  }
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-size: 28px;
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+}

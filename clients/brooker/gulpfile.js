@@ -24,7 +24,8 @@ var path = {
     img: 'dist/assets/images/',
     javascript: 'dist/assets/javascript/',
     fonts: 'dist/assets/fonts/',
-    vendors: 'dist/assets/vendors/'
+    vendors: 'dist/assets/vendors/',
+    video: 'dist/assets/video/'
   },
   src: {
     html: 'src/*.html',
@@ -32,7 +33,8 @@ var path = {
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
-    vendors: 'src/assets/vendors/**/*.*'
+    vendors: 'src/assets/vendors/**/*.*',
+    video: 'src/assets/video/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
@@ -40,7 +42,8 @@ var path = {
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
-    vendors: 'src/assets/vendors/**/*.*'
+    vendors: 'src/assets/vendors/**/*.*',
+    video: 'src/assets/video/**/*.*'
   }
 };
 
@@ -90,11 +93,20 @@ gulp.task('fonts:build', task.fonts = function () {
 
 // VENDORS
 gulp.task('vendors:build', task.vendors = function () {
-  	gulp.src(path.src.vendors)
-    .pipe(gulp.dest(path.build.vendors))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+	gulp.src(path.src.vendors)
+  .pipe(gulp.dest(path.build.vendors))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
+
+// VIDEO
+gulp.task('video:build', task.video = function () {
+	gulp.src(path.src.video)
+  .pipe(gulp.dest(path.build.video))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 //Images
@@ -139,6 +151,7 @@ gulp.task('build', [
   'img:build',
   'javascript:build',
   'vendors:build',
+  'video:build',
   'fonts:build'
 ]);
 
@@ -156,7 +169,10 @@ gulp.task('watch', function () {
     gulp.start('javascript:build');
   });
   watch([path.watch.vendors], function (event, cb) {
-      gulp.start('vendors:build');
+    gulp.start('vendors:build');
+  });
+  watch([path.watch.video], function (event, cb) {
+    gulp.start('video:build');
   });
   watch([path.watch.fonts], function (event, cb) {
     gulp.start('fonts:build');

@@ -12,9 +12,6 @@ html, body {
 }
 
 
-body {
-	margin-top: 1000px;
-}
 
 
 
@@ -29,10 +26,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, .h1 {
+	font-size: 54px;
+	@include media-breakpoint-down(md) {
+		font-size: 32px;
+	}
 }
 h2, .h2 {
 }
 h3, .h3 {
+	font-size: 28px;
 }
 h4, .h4 {
 }
@@ -60,13 +62,58 @@ p {
 	}
 }
 
+.neg-lett {
+	letter-spacing: -1px;
+}
 
 
 /*Font classes*/
-
+.font-base-regular {
+	font-family: $font-base;
+}
+.font-base-medium {
+	font-family: $font-medium;
+}
+.font-base-bold {
+	font-family: $font-bold;
+}
 
 /*Color classes*/
-
-
+.text-white {
+	color: $white !important;
+}
+.text-black {
+	color: $black !important;
+}
+.text-danger {
+	color: $danger !important;
+}
+.text-muted {
+	color: $muted !important;
+}
+.text-gray {
+	color: $gray !important;
+}
+.text-gray-soft {
+	color: $gray-soft !important;
+}
 
 /*Background classes*/
+.bg-white {
+	background-color: $white !important;
+}
+.bg-black {
+	background-color: $black !important;
+}
+.bg-danger {
+	background-color: $danger !important;
+}
+.bg-muted {
+	background-color: $muted !important;
+}
+.bg-gray {
+	background-color: $gray !important;
+}
+.bg-gray-soft {
+	background-color: $gray-soft !important;
+}

@@ -1,2 +1,19 @@
 /* LIST */
 
+$list-social-item-bg: $gray-soft;
+$list-social-item-size: 28px;
+
+.list-social-item {
+  border-radius: 50%;
+  width: $list-social-item-size;
+  height: $list-social-item-size;
+  background: $list-social-item-bg;
+  text-align: center;
+  color: $white;
+  font-size: 14px;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+  &:hover, &:focus {
+    color: $white;
+    background: darken($list-social-item-bg, 10%);
+  }
+}
