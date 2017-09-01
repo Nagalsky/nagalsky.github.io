@@ -1,2 +1,22 @@
 /* BUTTONS */
 
+$btn-fs: 23px;
+
+.btn {
+  border-radius: 0;
+  @include media-breakpoint-up(lg) {
+    font-size: $btn-fs;
+    padding: .9rem 2.6rem;
+  }
+  &.btn-danger {
+    background: $danger;
+    border-color: $danger;
+    &:hover, &:focus {
+      background: darken($danger, 10%);
+      border-color: darken($danger, 10%);
+    }
+  }
+  &.btn-link {
+    color: $black;
+  }
+}
