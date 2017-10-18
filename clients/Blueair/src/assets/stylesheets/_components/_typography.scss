@@ -6,7 +6,6 @@ html, body {
 	color: $body-main-color;
 	font-size: $body-font-size;
 	line-height: $body-line-height;
-	height: 2000px;
 }
 
 
@@ -16,6 +15,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-bottom: 20px;
 	color: $title-color;
 	font-family: $title-font-family;
+	font-weight: bold;
+	line-height: $title-line-height;
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -34,6 +35,7 @@ h4, .h4 {
 	font-size: 20px;
 }
 h5, .h5 {
+	font-size: 15px;
 }
 h6, .h6 {
 }
@@ -43,10 +45,12 @@ a {
 	color: $link-color;
 	@include transition(250ms);
 	text-decoration: none;
-	&:hover, &:focus {
-		color: $link-color-hover;
-		text-decoration: none;
-	}
+	&:hover {
+    color: $success-thin;
+  }
+  &:focus {
+    color: $success-soft;
+  }
 }
 button {
 	@include transition(250ms);
@@ -58,16 +62,30 @@ p {
 	}
 }
 
+.title {
+  font-size: 26px;
+  color: $primary;
+}
+.subtitle {
+  font-size: 22px;
+}
+
+
 
 
 /*Font classes*/
 .font-base {
-	font-family: $font-base;
+	font-family: $font-base !important;
 }
 .font-bold {
-	font-family: $font-bold;
+	font-family: $font-bold !important;
 }
-
+.font-secondary-light {
+	font-family: $font-secondary-light !important;
+}
+.font-secondary-bold {
+	font-family: $font-secondary-bold !important;
+}
 
 /*Color classes*/
 .text-white {
@@ -91,11 +109,17 @@ p {
 .text-gray {
 	color: $gray;
 }
+.text-muted-thin {
+	color: $muted-thin;
+}
 .text-muted {
 	color: $muted;
 }
 .text-success {
 	color: $success;
+}
+.text-success-thin {
+	color: $success-thin;
 }
 .text-success-soft {
 	color: $success-soft;

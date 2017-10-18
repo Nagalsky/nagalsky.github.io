@@ -1,2 +1,22 @@
 /* BUTTONS */
 
+$btn-fs: 20px;
+
+.btn {
+  font-size: $btn-fs;
+  border-width: 3px;
+  border-radius: 0;
+  padding: 11px 27px;
+  &.btn-success {
+    border-color: $success;
+    background: $success;
+    &:hover {
+      border-color: $success-thin;
+      background: $success-thin;
+    }
+    &:focus {
+      border-color: $success-soft;
+      background: $success-soft;
+    }
+  }
+}
