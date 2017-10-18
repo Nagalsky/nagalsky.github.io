@@ -3,10 +3,20 @@
 
 .row--flex {
   display: flex;
+  >[class^="col"] {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .row--flex-centered {
   >[class^="col"] {
     align-self: center;
+  }
+}
+.row--flex-bottom {
+  >[class^="col"] {
+    align-self: end;
   }
 }
 
