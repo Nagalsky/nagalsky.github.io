@@ -11,24 +11,26 @@ $navbar-bg: $white;
   margin-bottom: 0;
   .navbar-nav {
     >li {
-      >a {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        color: $primary;
-        font-family: $font-bold;
-        font-weight: bold;
-        &:hover, &:focus {
+      &:hover {
+        >a {
           &:before {
             opacity: 1;
           }
         }
+      }
+      >a {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        color: $primary;
+        font-family: $font-bold;
+        font-weight: bold;
         &:before {
-          width: 100%;
+          width: calc(100% - 30px);
           height: 2px;
           background: $primary;
           position: absolute;
-          left: 0;
-          bottom: 10px;
+          left: 15px;
+          bottom: 0px;
           opacity: 0;
         }
       }
@@ -60,8 +62,8 @@ $navbar-bg: $white;
 
 .navbar-brand {
   height: auto;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .navbar-brand__img {
   max-width: 138px;
