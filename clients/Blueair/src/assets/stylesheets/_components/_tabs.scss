@@ -75,3 +75,25 @@ $tab-full-icon-size: 190px;
     display: inline-block;
   }
 }
+
+.tab {
+  background: $gray-thin;
+  text-align: center;
+}
+.tab__item {
+  &.active {
+    .tab__link {
+      color: $sky;
+    }
+  }
+}
+.tab__item, .tab__link {
+  display: inline-block;
+}
+.tab__link {
+  padding: 28px 20px;
+  color: $primary;
+  &:hover {
+    color: $sky;
+  }
+}
