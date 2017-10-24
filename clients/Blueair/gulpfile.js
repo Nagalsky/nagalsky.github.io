@@ -24,7 +24,8 @@ var path = {
     img: 'dist/assets/images/',
     javascript: 'dist/assets/javascript/',
     fonts: 'dist/assets/fonts/',
-    vendors: 'dist/assets/vendors/'
+    vendors: 'dist/assets/vendors/',
+    video: 'dist/assets/video/'
   },
   src: {
     html: 'src/*.html',
@@ -32,7 +33,8 @@ var path = {
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
-    vendors: 'src/assets/vendors/**/*.*'
+    vendors: 'src/assets/vendors/**/*.*',
+    video: 'src/assets/video/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
@@ -40,7 +42,8 @@ var path = {
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
     fonts: 'src/assets/fonts/**/*.*',
-    vendors: 'src/assets/vendors/**/*.*'
+    vendors: 'src/assets/vendors/**/*.*',
+    video: 'src/assets/video/**/*.*'
   }
 };
 
@@ -83,6 +86,15 @@ gulp.task('javascript:build', task.javascript = function () {
 gulp.task('fonts:build', task.fonts = function () {
   gulp.src(path.src.fonts)
   .pipe(gulp.dest(path.build.fonts))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
+
+// VIDEO
+gulp.task('video:build', task.video = function () {
+  gulp.src(path.src.video)
+  .pipe(gulp.dest(path.build.video))
   .pipe(browserSync.reload({
     stream: true
   }));
@@ -139,7 +151,8 @@ gulp.task('build', [
   'img:build',
   'javascript:build',
   'vendors:build',
-  'fonts:build'
+  'fonts:build',
+  'video:build'
 ]);
 
 gulp.task('watch', function () {
@@ -160,6 +173,9 @@ gulp.task('watch', function () {
   });
   watch([path.watch.fonts], function (event, cb) {
     gulp.start('fonts:build');
+  });
+  watch([path.watch.video], function (event, cb) {
+    gulp.start('video:build');
   });
 });
 
