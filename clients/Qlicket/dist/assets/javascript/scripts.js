@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".read-more").on("click",function(e){e.preventDefault(),$(this).addClass("read-more--opened")})});

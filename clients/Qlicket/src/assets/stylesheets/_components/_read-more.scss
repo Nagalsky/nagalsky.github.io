@@ -1,0 +1,24 @@
+/* READ MORE */
+
+.read-more {
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  &:after {
+    font-family: $font-icons;
+    content: '\f107';
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: $white;
+    padding: 2px 5px;
+  }
+}
+.read-more--opened {
+  height: auto;
+  overflow: visible;
+  &:after {
+    content: none;
+  }
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	//= template/head.html
+	<title>Second page</title>
+</head>
+
+<body>
+
+	//= template/navbar.html
+
+
+	<main>
+
+		//= template/sidebar.html
+
+		<div class="content-wrapper">
+			<div class="container-fluid">
+				<div class="card">
+					<div class="row row--flex no-gutters">
+					  <div class="col-xl-4 col-lg-5 mb-3 mb-lg-0">
+							<div class="card-body card-body--sm bg-brand rounded-left rounded-right-md rounded-bottom-0-md text-center pb-4">
+								<h5 class="text-uppercase text-white mb-0"><b>OVERALL SENTIMENT TRACKER</b></h5>
+								<div class="card-divider card-divider--sm card-divider-light"></div>
+								<h5 class="text-uppercase text-white mb-2"><b>OVERALL SCORE</b></h5>
+								<p class="score text-center text-white d-flex align-items-center justify-content-center">
+									<span class="indicator__item indicator__item--warning indicator__item--md mr-3"></span>
+									3.10
+								</p>
+								<div class="card-divider card-divider--sm card-divider-light"></div>
+								<h5 class="text-uppercase text-white mb-2"><b>AVG. RESPONSE RATE</b></h5>
+								<p class="score text-center text-white d-flex align-items-center justify-content-center">
+									92<sup class="score-small">%</sup>
+								</p>
+							</div><!--card-body-->
+						</div><!--col-->
+
+					  <div class="col-xl-8 col-lg-7">
+							<div class="card-body flex-1 card-body--sm bg-white rounded-right rounded-left-md rounded-top-0-md">
+								<canvas id="bar-chart" class="chart"></canvas>
+							</div><!--card-body-->
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--card-->
+
+
+				<div class="row">
+					<div class="col-lg-6 mb-3 mb-lg-0">
+						<div class="card">
+							<div class="card-header">
+						    <p class="card-header__title">Questions</p>
+						  </div><!--card-header-->
+
+						  <div class="card-body">
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="1">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-success">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="2">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-warning">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="3">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-danger">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="4">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-success">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="5">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-warning">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="6">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-danger">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="7">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-success">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="8">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-warning">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="9">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-danger">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-start justify-content-between">
+									<a href="#" class="mb-0 text-justify question read-more mr-2 text-brand" data-question="10">Direction of Company Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-danger">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+						  </div><!--card-body-->
+						</div><!--card-->
+					</div><!--col-->
+
+
+					<div class="col-lg-6">
+						<div class="card">
+							<div class="card-header">
+						    <p class="card-header__title">Departments</p>
+						  </div><!--card-header-->
+
+							<div class="card-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center flex-1">
+										<span class="mr-3 bar-label">Finance</span>
+										<div class="bar">
+											<div class="bar-inner bar-inner--success" style="width: 25%;"></div>
+										</div><!--bar-->
+									</div><!--d-flex-->
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-success">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center flex-1">
+										<span class="mr-3 bar-label">Sales</span>
+										<div class="bar">
+											<div class="bar-inner bar-inner--warning" style="width: 65%;"></div>
+										</div><!--bar-->
+									</div><!--d-flex-->
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-warning">4.8</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center flex-1">
+										<span class="mr-3 bar-label">Mktg</span>
+										<div class="bar">
+											<div class="bar-inner bar-inner--success" style="width: 40%;"></div>
+										</div><!--bar-->
+									</div><!--d-flex-->
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-success">4.1</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center flex-1">
+										<span class="mr-3 bar-label">IT</span>
+										<div class="bar">
+											<div class="bar-inner bar-inner--danger" style="width: 10%;"></div>
+										</div><!--bar-->
+									</div><!--d-flex-->
+
+									<ul class="stat-list">
+										<li class="stat-list-item">
+											<p class="stat-list-title">SCORE</p>
+											<span class="stat-list-score text-danger">4.1</span>
+										</li><!--stat-list-item-->
+
+										<li class="stat-list-item">
+											<p class="stat-list-title">% RESPONSE</p>
+											<span class="stat-list-score">90</span>
+										</li><!--stat-list-item-->
+									</ul><!--stat-list-->
+								</div><!--d-flex-->
+						  </div><!--card-body-->
+						</div><!--card-->
+
+
+						<div class="card">
+							<div class="card-header d-flex justify-content-between align-items-center">
+						    <p class="card-header__title mb-0">Comments & Reponses</p>
+								<div class="flex-no-shrink">
+									<span class="indicator__item indicator__item--success"></span>
+									<span class="indicator__item indicator__item--warning"></span>
+									<span class="indicator__item indicator__item--danger"></span>
+								</div>
+						  </div><!--card-header-->
+
+							<div class="card-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--success"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--success"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--warning"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--warning"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--danger"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--danger"></span>
+									</div>
+								</div><!--d-flex-->
+
+								<div class="card-divider"></div>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="mb-0 text-limit-rows-2 mr-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+									<div class="flex-no-shrink">
+										<span class="indicator__item indicator__item--lg indicator__item--warning"></span>
+									</div>
+								</div><!--d-flex-->
+						  </div><!--card-body-->
+						</div><!--card-->
+					</div><!--col-->
+				</div><!--row-->
+			</div><!--container-fluid-->
+		</div><!--content-wrapper-->
+
+	</main>
+
+
+
+
+	//= template/scripts-dependencies.html
+
+
+	<script>
+		new Chart(document.getElementById("bar-chart"), {
+			type: 'bar',
+			data: {
+				labels: ["3/3", "3/10", "3/17", "3/24", "5/1", "5/8", "5/15", "5/22", "5/29", "6/5", "6/12", "6/19", "6/26", "7/3", "7/10", "7/17", "7/24", "7/31", "8/7"],
+				datasets: [
+					{
+						label: false,
+						backgroundColor: [
+							"#ff5757","#ff5757","#ff5757","#ff5757","#ff5757",
+							"#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c",
+							"#3ecc71","#3ecc71","#3ecc71","#3ecc71","#3ecc71","#3ecc71"
+						],
+						data: [247,567,734,784,433,288,248,526,734,784,433,288,478,567,734,784,433,288,478]
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					display: false
+				},
+				title: {
+					display: false
+				},
+				scales: {
+					xAxes: [{
+						gridLines: {
+							color: "rgba(0, 0, 0, 0)",
+						}
+					}],
+					yAxes: [{
+						gridLines: {
+							color: "rgba(0, 0, 0, 0)",
+						}
+					}]
+				}
+			}
+		});
+	</script>
+
+
+</body>
+</html>
