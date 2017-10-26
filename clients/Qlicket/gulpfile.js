@@ -55,11 +55,8 @@ gulp.task('html:build', task.html = function () {
 gulp.task('sass:build', function () {
   return gulp.src(path.src.stylesheets)
   .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  //.pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(autoprefixer())
+  .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(path.build.stylesheets))
   .pipe(browserSync.reload({
     stream: true
@@ -69,7 +66,7 @@ gulp.task('sass:build', function () {
 // JAVASCRIPT
 gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
-  //.pipe(uglify())
+  .pipe(uglify())
   .pipe(gulp.dest(path.build.javascript))
   .pipe(browserSync.reload({
     stream: true
