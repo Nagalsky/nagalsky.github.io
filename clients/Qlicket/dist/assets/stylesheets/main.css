@@ -417,7 +417,7 @@ mark,
   padding: 0.2em;
   background-color: #fcf8e3; }
 
-.list-unstyled {
+.list-unstyled, .stat-list {
   padding-left: 0;
   list-style: none; }
 
@@ -6538,6 +6538,9 @@ html, body {
   font-size: 17px;
   line-height: 1.18;
   background: #EEEEEF; }
+  @media (max-width: 1199px) {
+    html, body {
+      font-size: 15px; } }
 
 body {
   padding-top: 66px; }
@@ -6926,3 +6929,47 @@ b {
   .rounded-top-0-md {
     border-top-right-radius: 0rem !important;
     border-top-left-radius: 0rem !important; } }
+
+/* CHART */
+.chart {
+  max-width: 100% !important; }
+  @media (max-width: 575px) {
+    .chart {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto; } }
+
+/* STAT LIST */
+.stat-list {
+  display: -ms-flexbox;
+  display: flex; }
+
+.stat-list-item {
+  text-align: center;
+  padding-left: 7.5px;
+  padding-right: 7.5px; }
+  .stat-list-item + .stat-list-item {
+    border-left: 1px solid #c2c8e1; }
+
+.stat-list-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "SourceSansPro-SemiBold";
+  margin-bottom: 2px;
+  white-space: nowrap; }
+
+.stat-list-score {
+  font-size: 30px;
+  line-height: 1; }
+
+/* TEXT LIMIT */
+.text-limit-rows-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  /* fallback */
+  max-height: 40px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */ }
