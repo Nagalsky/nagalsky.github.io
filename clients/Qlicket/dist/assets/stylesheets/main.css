@@ -4331,11 +4331,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex {
+.d-flex, .sidebar-nav-link {
   display: -ms-flexbox !important;
   display: flex !important; }
 
-.d-inline-flex {
+.d-inline-flex, .sidebar-nav-icon {
   display: -ms-inline-flexbox !important;
   display: inline-flex !important; }
 
@@ -4372,7 +4372,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     display: table !important; }
   .d-md-table-cell {
     display: table-cell !important; }
-  .d-md-flex, .nav-link {
+  .d-md-flex, .navbar .nav-link {
     display: -ms-flexbox !important;
     display: flex !important; }
   .d-md-inline-flex {
@@ -4467,7 +4467,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   -ms-flex-pack: end !important;
   justify-content: flex-end !important; }
 
-.justify-content-center {
+.justify-content-center, .sidebar-nav-icon {
   -ms-flex-pack: center !important;
   justify-content: center !important; }
 
@@ -4688,7 +4688,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .justify-content-md-end {
     -ms-flex-pack: end !important;
     justify-content: flex-end !important; }
-  .justify-content-md-center, .nav-link {
+  .justify-content-md-center, .navbar .nav-link {
     -ms-flex-pack: center !important;
     justify-content: center !important; }
   .justify-content-md-between {
@@ -4703,7 +4703,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .align-items-md-end {
     -ms-flex-align: end !important;
     align-items: flex-end !important; }
-  .align-items-md-center, .nav-link {
+  .align-items-md-center, .navbar .nav-link, .sidebar-nav-link, .sidebar-nav-icon {
     -ms-flex-align: center !important;
     align-items: center !important; }
   .align-items-md-baseline {
@@ -6459,6 +6459,26 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   @media (max-width: 767px) {
     .navbar {
       background: #333750; } }
+  .navbar .nav-link {
+    color: #82879b;
+    background: #333750;
+    min-width: 75px;
+    font-size: 20px; }
+    .navbar .nav-link:hover, .navbar .nav-link:focus {
+      color: #5d6174; }
+      @media (max-width: 767px) {
+        .navbar .nav-link:hover, .navbar .nav-link:focus {
+          color: #747990; } }
+    @media (min-width: 768px) {
+      .navbar .nav-link {
+        min-height: 75px; } }
+    @media (max-width: 767px) {
+      .navbar .nav-link {
+        color: #ffffff;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center; } }
 
 .navbar-brand {
   max-width: 217px;
@@ -6490,17 +6510,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
       font-family: "fontello";
       color: #C2C8E1; }
 
-.nav-link {
-  color: #82879b;
-  background: #333750;
-  min-width: 75px;
-  font-size: 20px; }
-  .nav-link:hover, .nav-link:focus {
-    color: #5d6174; }
-  @media (min-width: 768px) {
-    .nav-link {
-      min-height: 75px; } }
-
 .nav-link--avatar {
   padding: 0; }
 
@@ -6515,6 +6524,16 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   color: #ffffff;
   right: 0;
   top: 17px; }
+
+.nav-link-icon__img {
+  display: inline-block;
+  max-width: 24px;
+  width: 100%;
+  margin-right: 10px; }
+  .nav-link-icon__img path, .nav-link-icon__img mask {
+    fill: #ffffff !important; }
+  .nav-link-icon__img g {
+    fill: #ffffff !important; }
 
 /* FOOTER */
 /* BOOTSTRAP VARIABLES */
@@ -6760,16 +6779,53 @@ p {
 
 /* '' */
 /* SIDEBAR */
-.sidebar-nav {
+.sidebar {
   position: fixed;
   left: 0;
   top: 75px;
   height: 100%;
   width: 217px;
   overflow-y: scroll;
-  background-image: linear-gradient(176deg, #333750, #d83e58); }
+  background-image: linear-gradient(to bottom, #333750 0%, #d83e58 200%);
+  background-repeat: repeat-x; }
+
+.sidebar-nav-link {
+  padding: 0 20px 0 0;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .sidebar-nav-link:hover, .sidebar-nav-link:focus {
+    color: #ffffff; }
+    .sidebar-nav-link:hover .sidebar-nav-icon, .sidebar-nav-link:focus .sidebar-nav-icon {
+      background: #d6405a; }
+    .sidebar-nav-link:hover .sidebar-nav-icon__img path, .sidebar-nav-link:hover .sidebar-nav-icon__img mask, .sidebar-nav-link:focus .sidebar-nav-icon__img path, .sidebar-nav-link:focus .sidebar-nav-icon__img mask {
+      fill: #ffffff !important; }
+    .sidebar-nav-link:hover .sidebar-nav-icon__img g, .sidebar-nav-link:focus .sidebar-nav-icon__img g {
+      fill: #ffffff !important; }
+  .sidebar-nav-link.active .sidebar-nav-icon {
+    background: #d6405a; }
+  .sidebar-nav-link.active .sidebar-nav-icon__img path, .sidebar-nav-link.active .sidebar-nav-icon__img mask {
+    fill: #ffffff !important; }
+  .sidebar-nav-link.active .sidebar-nav-icon__img g {
+    fill: #ffffff !important; }
+
+.sidebar-nav-icon {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  padding: 20px; }
+
+.sidebar-nav-icon__img {
+  width: 100%; }
 
 /* CONTENT WRAPPER */
 .content-wrapper {
-  margin-left: 217px;
-  padding: 25px 36px; }
+  padding: 25px 20px; }
+  @media (min-width: 768px) {
+    .content-wrapper {
+      margin-left: 217px; } }
+  @media (max-width: 767px) {
+    .content-wrapper {
+      padding: 25px 0; } }

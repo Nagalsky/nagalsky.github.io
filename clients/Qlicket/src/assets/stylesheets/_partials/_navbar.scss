@@ -9,7 +9,9 @@ $navbar-brand-width: 217px;
 $navbar-brand-width-mobile: 170px;
 $navbar-link-bg: $blue;
 $navbar-link-color: $gray;
+$navbar-link-color-mobile: $white;
 $navbar-link-color-hover: darken($gray, 15%);
+$navbar-link-color-hover-mobile: darken($gray, 5%);
 $nav-link-avatar-img-size: 75px;
 
 .navbar-toggleable-sm {
@@ -45,6 +47,27 @@ $nav-link-avatar-img-size: 75px;
   min-height: $navbar-height-mobile;
   @include media-breakpoint-down(sm) {
     background: $navbar-bg-mobile;
+  }
+  .nav-link {
+    color: $navbar-link-color;
+    background: $navbar-link-bg;
+    min-width: 75px;
+    @extend .d-md-flex, .justify-content-md-center, .align-items-md-center;
+    font-size: 20px;
+    &:hover, &:focus {
+      color: $navbar-link-color-hover;
+      @include media-breakpoint-down(sm) {
+        color: $navbar-link-color-hover-mobile;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      min-height: $nav-link-avatar-img-size;
+    }
+    @include media-breakpoint-down(sm) {
+      color: $navbar-link-color-mobile;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -89,19 +112,7 @@ $nav-link-avatar-img-size: 75px;
   }
 }
 
-.nav-link {
-  color: $navbar-link-color;
-  background: $navbar-link-bg;
-  min-width: 75px;
-  @extend .d-md-flex, .justify-content-md-center, .align-items-md-center;
-  font-size: 20px;
-  &:hover, &:focus {
-    color: $navbar-link-color-hover;
-  }
-  @include media-breakpoint-up(md) {
-    min-height: $nav-link-avatar-img-size;
-  }
-}
+
 .nav-link--avatar {
   padding: 0;
 }
@@ -117,4 +128,17 @@ $nav-link-avatar-img-size: 75px;
   color: $white;
   right: 0;
   top: 17px;
+}
+
+.nav-link-icon__img {
+  display: inline-block;
+  max-width: 24px;
+  width: 100%;
+  margin-right: 10px;
+  path, mask {
+    fill: $white !important;
+  }
+  g {
+    fill: $white !important;
+  }
 }

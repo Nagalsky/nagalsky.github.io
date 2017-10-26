@@ -1,6 +1,11 @@
 /* CONTENT WRAPPER */
 
 .content-wrapper {
-  margin-left: $sidebar-nav-width;
-  padding: 25px 36px;
+  @include media-breakpoint-up(md) {
+    margin-left: $sidebar-nav-width;
+  }
+  padding: 25px 20px;
+  @include media-breakpoint-down(sm) {
+    padding: 25px 0;
+  }
 }
