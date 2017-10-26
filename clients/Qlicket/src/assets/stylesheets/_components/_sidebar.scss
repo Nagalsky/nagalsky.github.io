@@ -3,6 +3,7 @@
 $sidebar-nav-gradient-start: #333750;
 $sidebar-nav-gradient-end: #d83e58;
 $sidebar-nav-width: 217px;
+$sidebar-nav-width-md: 170px;
 $sidebar-nav-link-fs: 16px;
 $sidebar-nav-link-color: $white;
 $sidebar-nav-link-kerning: .2px;
@@ -15,6 +16,9 @@ $sidebar-nav-link-kerning: .2px;
   width: $sidebar-nav-width;
   overflow-y: scroll;
   @include gradient-y($start-color: $sidebar-nav-gradient-start, $end-color: $sidebar-nav-gradient-end, $start-percent: 0%, $end-percent: 200%);
+  @include media-breakpoint-down(lg) {
+    width: $sidebar-nav-width-md;
+  }
 }
 
 .sidebar-nav {}
@@ -30,6 +34,10 @@ $sidebar-nav-link-kerning: .2px;
   display: block;
   border-bottom: 1px solid rgba($white, .1);
   @extend .d-flex, .align-items-md-center;
+  @include media-breakpoint-down(lg) {
+    padding-right: 10px;
+    font-size: 13px;
+  }
   &:hover, &:focus {
     color: $white;
     .sidebar-nav-icon {
@@ -64,6 +72,11 @@ $sidebar-nav-link-kerning: .2px;
   @extend .d-inline-flex, .align-items-md-center, .justify-content-center;
   margin-right: 10px;
   padding: 20px;
+  flex-shrink: 0;
+  @include media-breakpoint-down(lg) {
+    width: 46px;
+    padding: 20px 10px;
+  }
 }
 .sidebar-nav-icon__img {
   width: 100%;

@@ -80,8 +80,14 @@ $nav-link-avatar-img-size: 75px;
   }
   max-width: $navbar-brand-width;
   width: 100%;
+  @include media-breakpoint-down(lg) {
+    max-width: 170px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
+  }
   @include media-breakpoint-down(sm) {
     max-width: $navbar-brand-width-mobile;
+    padding: 4px 0;
   }
 }
 .navbar-brand__img {

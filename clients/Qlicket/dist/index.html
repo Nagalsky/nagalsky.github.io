@@ -170,12 +170,30 @@
 		<div class="content-wrapper">
 			<div class="container-fluid">
 				<div class="card">
-					<div class="card-header">
-				    <p class="card-header__title">General Category</p>
-				  </div><!--card-header-->
-				  <div class="card-body">
-				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
-				  </div><!--card-body-->
+					<div class="row row--flex no-gutters">
+					  <div class="col-xl-4 col-lg-5 mb-3 mb-lg-0">
+							<div class="card-body card-body--sm bg-brand rounded-left rounded-right-md rounded-bottom-0-md text-center pb-4">
+								<h5 class="text-uppercase text-white mb-0"><b>OVERALL SENTIMENT TRACKER</b></h5>
+								<div class="card-divider card-divider-light"></div>
+								<h5 class="text-uppercase text-white mb-2"><b>OVERALL SCORE</b></h5>
+								<p class="score text-center text-white d-flex align-items-center justify-content-center">
+									<span class="indicator__item indicator__item--success indicator__item--md mr-3"></span>
+									4.10
+								</p>
+								<div class="card-divider card-divider-light"></div>
+								<h5 class="text-uppercase text-white mb-2"><b>AVG. RESPONSE RATE</b></h5>
+								<p class="score text-center text-white d-flex align-items-center justify-content-center">
+									88<sup class="score-small">%</sup>
+								</p>
+							</div><!--card-body-->
+						</div><!--col-->
+
+					  <div class="col-xl-8 col-lg-7">
+							<div class="card-body flex-1 card-body--sm bg-white rounded-right rounded-left-md rounded-top-0-md">
+								<canvas id="bar-chart"></canvas>
+							</div><!--card-body-->
+						</div><!--col-->
+					</div><!--row-->
 				</div><!--card-->
 
 				<div class="card">
@@ -186,6 +204,53 @@
 				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
 				  </div><!--card-body-->
 				</div><!--card-->
+
+
+				<div class="row">
+					<div class="col-lg-4 mb-3 mb-lg-0">
+						<div class="card">
+							<div class="card-header">
+						    <p class="card-header__title">Organization</p>
+						  </div><!--card-header-->
+						  <div class="card-body">
+						    <div class="row">
+									<div class="col-6">
+										1
+									</div><!--col-->
+									<div class="col-6">
+										2
+									</div><!--col-->
+								</div><!--row-->
+								<div class="card-divider"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
+								<div class="card-divider"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
+						  </div><!--card-body-->
+						</div><!--card-->
+					</div><!--col-->
+
+					<div class="col-lg-4 mb-3 mb-lg-0">
+						<div class="card">
+							<div class="card-header">
+						    <p class="card-header__title">General Category</p>
+						  </div><!--card-header-->
+						  <div class="card-body">
+						    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
+						  </div><!--card-body-->
+						</div><!--card-->
+					</div><!--col-->
+
+					<div class="col-lg-4">
+						<div class="card">
+							<div class="card-header">
+						    <p class="card-header__title">General Category</p>
+						  </div><!--card-header-->
+						  <div class="card-body">
+						    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum posuere laoreet maximus ipsum blandit.</p>
+						  </div><!--card-body-->
+						</div><!--card-->
+					</div><!--col-->
+				</div><!--row-->
 			</div><!--container-fluid-->
 		</div><!--content-wrapper-->
 
@@ -195,10 +260,54 @@
 
 
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
 	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="assets/javascript/scripts.js"></script>
 
+
+	<script>
+		new Chart(document.getElementById("bar-chart"), {
+			type: 'bar',
+			data: {
+				labels: ["3/3", "3/10", "3/17", "3/24", "5/1", "5/8", "5/15", "5/22", "5/29", "6/5", "6/12", "6/19", "6/26", "7/3", "7/10", "7/17", "7/24", "7/31", "8/7"],
+				datasets: [
+					{
+						label: false,
+						backgroundColor: [
+							"#ff5757","#ff5757","#ff5757","#ff5757","#ff5757",
+							"#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c","#feb93c",
+							"#3ecc71","#3ecc71","#3ecc71","#3ecc71","#3ecc71","#3ecc71"
+						],
+						data: [247,567,734,784,433,288,248,526,734,784,433,288,478,567,734,784,433,288,478]
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					display: false
+				},
+				title: {
+					display: false
+				},
+				scales: {
+					xAxes: [{
+						gridLines: {
+							color: "rgba(0, 0, 0, 0)",
+						}
+					}],
+					yAxes: [{
+						gridLines: {
+							color: "rgba(0, 0, 0, 0)",
+						}
+					}]
+				}
+			}
+		});
+	</script>
 
 
 </body>
