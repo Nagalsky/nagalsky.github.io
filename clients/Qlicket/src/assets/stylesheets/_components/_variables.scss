@@ -1,38 +1,97 @@
 /* VARIABLES */
 
 
-/* Color variables */
+/*************************
+	Local color variables
+*************************/
 /* For color names was used site - http://chir.ag/projects/name-that-color */
 /* White group */
 $white: #ffffff;
 /* Black group */
 $black: #000000;
-
+/* Blue group */
+$martinique: #333750; //Blue color
+$oxford-blue: #33384f; //Brand color
+$ebony-clay: #252a3f; //Blue bold color
+/* Gray group */
+$periwinkle-gray: #C2C8E1;
+$athens-gray: #EEEEEF; //Muted color
+$waterloo: #82879b; //Gray color
+/* Green group */
+$emerald: #3ecc71; //Success color
+/* Yellow group */
+$yellow-orange: #feb93c; //Warning color
+/* Red group */
+$persimmon: #ff5757; //Danger color
+$cabaret: #d6405a; //Red color
 
 /*************************
-	Fonts variable
+	Global color variables
+*************************/
+$white: $white;
+$black: $black;
+$brand: $oxford-blue;
+$blue: $martinique;
+$blue-bold: $ebony-clay;
+$muted: $athens-gray;
+$gray-light: $periwinkle-gray;
+$gray: $waterloo;
+$success: $emerald;
+$warning: $yellow-orange;
+$danger: $persimmon;
+$red: $cabaret;
+
+$text-color: $brand;
+
+/*************************
+	Path variables
+*************************/
+$font-path: '../fonts/';
+
+/*************************
+	Fonts variables
+*************************/
+$font-base-light: 'SourceSansPro-Light';
+$font-base-regular: 'SourceSansPro-Regular';
+$font-base-semibold: 'SourceSansPro-SemiBold';
+$font-base-bold: 'SourceSansPro-Bold';
+.font-base-light {
+  font-family: $font-base-light;
+}
+.font-base-regular {
+  font-family: $font-base-regular;
+}
+.font-base-semibold {
+  font-family: $font-base-semibold;
+}
+.font-base-bold {
+  font-family: $font-base-bold;
+}
+
+
+$font-base: $font-base-regular;
+/*************************
+	Fonts icons variables
 *************************/
 $font-icons: 'fontello';
 
 /*************************
-	Body variable
+	Body variables
 *************************/
-// $body-font-family: $font-base;
-// $body-font-size: 14px;
-// $body-line-height: 1.5;
-// $body-main-color: $main-color;
+$body-bg: $muted;
+$body-font-family: $font-base;
+$body-font-size: 17px;
+$body-line-height: 1.18;
+$body-main-color: $text-color;
 
 
 /*************************
-	Links color variable
+	Links variables
 *************************/
-//$link-color: $deep-curelean;
+$link-color: $success;
 
 
 /*************************
-	Title color variable
+	Title variables
 *************************/
-
-/*************************
-	Local color variable
-*************************/
+$title-font: $font-base-light;

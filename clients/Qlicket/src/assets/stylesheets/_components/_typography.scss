@@ -2,47 +2,60 @@
 html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	// font-family: $body-font-family;
-	// color: $body-main-color;
-	// font-size: $body-font-size;
-	// line-height: $body-line-height;
+	font-family: $body-font-family;
+	color: $body-main-color;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	background: $body-bg;
 }
 
+body {
+	@include media-breakpoint-up(md) {
+    padding-top: $navbar-height;
+  }
+  padding-top: $navbar-height-mobile;
+}
 
+* {
+    -webkit-overflow-scrolling: touch;
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;
 	margin-bottom: 20px;
+	font-family: $title-font;
 	&:last-child {
 		margin-bottom: 0;
 	}
 }
 
 h1, .h1 {
+	font-size: 28px;
 }
 h2, .h2 {
+	font-size: 24px;
 }
 h3, .h3 {
 }
 h4, .h4 {
 }
 h5, .h5 {
+	font-size: 16px;
 }
 h6, .h6 {
 }
 
 
 a {
-	//color: $link-color;
-	@include transition(250ms);
+	color: $link-color;
 	text-decoration: none;
 	&:hover, &:focus {
-		//color: darken($link-color, 10%);
+		color: darken($link-color, 10%);
 		text-decoration: none;
 	}
 }
-button {
-	@include transition(150ms);
+button, a {
+	@include transition(250ms);
 }
 p {
 	margin-bottom: 20px;
@@ -50,14 +63,3 @@ p {
 		margin-bottom: 0;
 	}
 }
-
-
-
-/*Font classes*/
-
-
-/*Color classes*/
-
-
-
-/*Background classes*/
