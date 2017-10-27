@@ -6,7 +6,7 @@ $navbar-bg: $white;
 $navbar-bg-mobile: $blue;
 $navbar-brand-bg: $blue-bold;
 $navbar-brand-width: 217px;
-$navbar-brand-width-mobile: 170px;
+$navbar-brand-width-mobile: 130px;
 $navbar-link-bg: $blue;
 $navbar-link-color: $gray;
 $navbar-link-color-mobile: $white;
@@ -31,6 +31,9 @@ $nav-link-avatar-img-size: 75px;
     margin-top: 0;
   }
   .navbar-collapse {
+    @include media-breakpoint-up(md) {
+      display: none !important;
+    }
     @include media-breakpoint-down(sm) {
       max-height: 440px;
       overflow-y: scroll;
@@ -69,6 +72,18 @@ $nav-link-avatar-img-size: 75px;
       align-items: center;
     }
   }
+  .nav-link--top {
+    @include media-breakpoint-down(sm) {
+      min-width: 38px;
+      padding: 6.5px 0;
+      justify-content: center;
+    }
+  }
+  .dropdown-menu--top {
+    position: absolute;
+    left: auto;
+    right: 0;
+  }
 }
 
 
@@ -87,7 +102,7 @@ $nav-link-avatar-img-size: 75px;
   }
   @include media-breakpoint-down(sm) {
     max-width: $navbar-brand-width-mobile;
-    padding: 4px 0;
+    padding: 10px 0;
   }
 }
 .navbar-brand__img {
@@ -133,8 +148,9 @@ $nav-link-avatar-img-size: 75px;
 .navbar-toggler {
   color: $white;
   right: 0;
-  top: 17px;
+  top: 18px;
   position: absolute;
+  font-size: 22px;
 }
 
 .nav-link-icon__img {

@@ -11,13 +11,24 @@ $sidebar-nav-link-kerning: .2px;
 .sidebar {
   position: fixed;
   left: 0;
-  top: $navbar-height;
+  top: 0;
   height: 100%;
   width: $sidebar-nav-width;
   overflow-y: scroll;
+  z-index: 1100;
   @include gradient-y($start-color: $sidebar-nav-gradient-start, $end-color: $sidebar-nav-gradient-end, $start-percent: 0%, $end-percent: 200%);
   @include media-breakpoint-down(lg) {
     width: $sidebar-nav-width-md;
+  }
+}
+
+.sidebar-logo {
+  padding: 15px 35px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  @include media-breakpoint-down(lg) {
+    margin: 10px 0 10px 0;
   }
 }
 
