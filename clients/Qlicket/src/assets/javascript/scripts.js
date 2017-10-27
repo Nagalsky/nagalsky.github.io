@@ -6,5 +6,4 @@ $(document).ready(function(){
 		$(this).addClass('read-more--opened');
 	});
 
-
 });
