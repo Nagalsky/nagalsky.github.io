@@ -4,18 +4,15 @@ $tab-full-link-color: $muted;
 $tab-full-icon-size: 190px;
 
 .tab-full {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
   display: flex;
+  flex-direction: column;
 }
 .tab-full__item {
-  display: table-cell;
   flex: 1;
   opacity: .4;
   position: relative;
   &+.tab-full__item {
-    margin-left: 15px;
+    margin-top: 25px;
   }
   &.active {
     opacity: 1;
@@ -91,7 +88,7 @@ $tab-full-icon-size: 190px;
   display: inline-block;
 }
 .tab__link {
-  padding: 28px 20px;
+  padding: 15px 10px;
   color: $primary;
   &:hover {
     color: $sky;
