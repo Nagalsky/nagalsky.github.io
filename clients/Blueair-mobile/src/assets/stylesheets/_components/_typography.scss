@@ -1,0 +1,181 @@
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font-family;
+	color: $body-main-color;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: $title-color;
+	font-family: $title-font-family;
+	font-weight: bold;
+	line-height: $title-line-height;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.current-fs {
+		font-size: initial;
+	}
+}
+
+h1, .h1 {
+	font-size: 40px;
+}
+h2, .h2 {
+	font-size: 40px;
+}
+h3, .h3 {
+	font-size: 23px;
+}
+h4, .h4 {
+	font-size: 20px;
+}
+h5, .h5 {
+	font-size: 16px;
+}
+h6, .h6 {
+}
+
+
+a {
+	color: $link-color;
+	@include transition(250ms);
+	text-decoration: none;
+	&:hover {
+    color: $success-thin;
+  }
+  &:focus {
+    color: $success-soft;
+  }
+}
+button {
+	@include transition(250ms);
+}
+p {
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.title-xl {
+	font-size: 30px;
+}
+.title-md {
+	font-size: 27px;
+}
+.title {
+  font-size: 26px;
+  color: $primary;
+}
+.title-xs {
+	font-size: 18px;
+}
+.subtitle {
+  font-size: 22px;
+}
+
+
+
+
+/*Font classes*/
+.font-base {
+	font-family: $font-base !important;
+}
+.font-bold {
+	font-family: $font-bold !important;
+}
+.font-secondary-light {
+	font-family: $font-secondary-light !important;
+}
+.font-secondary-bold {
+	font-family: $font-secondary-bold !important;
+}
+
+b, .bold {
+	font-family: $font-bold;
+}
+
+/*Color classes*/
+.text-white {
+	color: $white;
+}
+.text-black {
+	color: $black;
+}
+.text-sky {
+	color: $sky;
+}
+.text-primary {
+	color: $primary;
+}
+.text-gray-light {
+	color: $gray-light;
+}
+.text-gray-thin {
+	color: $gray-thin;
+}
+.text-gray {
+	color: $gray;
+}
+.text-muted-thin {
+	color: $muted-thin;
+}
+.text-muted {
+	color: $muted;
+}
+.text-success {
+	color: $success;
+}
+.text-success-thin {
+	color: $success-thin;
+}
+.text-success-soft {
+	color: $success-soft;
+}
+
+
+/*Background classes*/
+.bg-white {
+	background-color: $white;
+}
+.bg-black {
+	background-color: $black;
+}
+.bg-sky {
+	background-color: $sky;
+}
+.bg-primary {
+	background-color: $primary;
+}
+.bg-gray-light {
+	background-color: $gray-light;
+}
+.bg-gray-thin {
+	background-color: $gray-thin;
+}
+.bg-gray {
+	background-color: $gray;
+}
+.bg-muted-thin {
+	background-color: $muted-thin;
+}
+.bg-muted {
+	background-color: $muted;
+}
+.bg-success {
+	background-color: $success;
+}
+.bg-success-thin {
+	background-color: $success-thin;
+}
+.bg-success-soft {
+	background-color: $success-soft;
+}
