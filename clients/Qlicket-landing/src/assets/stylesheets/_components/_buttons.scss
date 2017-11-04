@@ -1,0 +1,38 @@
+/* BUTTONS */
+
+$btn-ff: $font-base-semibold;
+
+.btn {
+  font-family: $btn-ff;
+  padding: .95rem 2.5rem;
+  border-width: 2px;
+  border-radius: .45rem;
+  &.btn-danger {
+    background: $danger;
+    border-color: $danger;
+    color: $white;
+    &:hover, &:focus {
+      background: darken($danger, 10%);
+      border-color: darken($danger, 10%);
+      color: $white;
+    }
+  }
+  &.btn-outline-danger {
+    &.btn-danger {
+      background: $white;
+      border-color: $danger;
+      color: $danger;
+      &:hover, &:focus {
+        background: darken($danger, 10%);
+        border-color: darken($danger, 10%);
+        color: $white;
+      }
+    }
+  }
+  &.btn-long {
+    @include media-breakpoint-up(md) {
+      padding-left: 5.9rem;
+      padding-right: 5.9rem;
+    }
+  }
+}

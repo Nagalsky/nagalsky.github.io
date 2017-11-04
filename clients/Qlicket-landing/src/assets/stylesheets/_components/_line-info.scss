@@ -1,0 +1,92 @@
+/* LINE INFO */
+
+$line-info-dot-size: 24px;
+$line-info-ff: $font-base-regular;
+
+.line-info {
+  margin-bottom: 3rem;
+  position: relative;
+  font-family: $line-info-ff;
+  padding-bottom: 60px;
+  &:before, &:after {
+    content: '';
+    background: $white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include media-breakpoint-down(sm) {
+      left: 15px;
+      transform: translateX(0%);
+    }
+  }
+  &:before {
+    width: 1px;
+    height: calc(100% - 75px);
+    top: 75px;
+    @include media-breakpoint-down(sm) {
+      top: 0;
+      height: 100%;
+    }
+  }
+  &:after {
+    bottom: 0;
+    width: $line-info-dot-size;
+    height: $line-info-dot-size;
+    border-radius: 50%;
+    @include media-breakpoint-down(sm) {
+      left: 4px;
+    }
+  }
+}
+.line-info__item {
+  position: relative;
+  @extend .d-flex, .align-items-center;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  &+.line-info__item {
+    margin-top: 40px;
+  }
+}
+.line-info__inner {
+  flex: 1;
+  @include media-breakpoint-up(sm) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 50px;
+    width: 100%;
+  }
+  &+.line-info__inner {
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.line-info__inner--has-dot {
+  position: relative;
+  &:before {
+    content: '';
+    background: $white;
+    position: absolute;
+    right: -$line-info-dot-size / 2;
+    top: 0;
+    width: $line-info-dot-size;
+    height: $line-info-dot-size;
+    border-radius: 50%;
+    @include media-breakpoint-down(sm) {
+      left: 4px;
+      right: auto;
+    }
+  }
+}
+.line-info__inner--has-dot--right {
+  &:before {
+    left: -$line-info-dot-size / 2;
+    @include media-breakpoint-down(sm) {
+      left: 4px;
+    }
+  }
+}
