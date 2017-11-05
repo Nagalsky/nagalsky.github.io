@@ -2,6 +2,7 @@
 html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
 	font-family: $body-font-family;
 	color: $body-main-color;
 	font-size: $body-font-size;
@@ -43,6 +44,9 @@ h5, .h5 {
 h6, .h6 {
 }
 
+b, .bold {
+	font-family: $font-base-bold;
+}
 
 a {
 	color: $link-color;
@@ -54,6 +58,7 @@ a {
 	}
 }
 button {
+	cursor: pointer;
 	@include transition(150ms);
 }
 p {

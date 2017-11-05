@@ -6,3 +6,22 @@
     padding-right: 60px;
   }
 }
+.col-float {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.row--bordered {
+  >[class^="col"] {
+    &+[class^="col"] {
+      border-left: 6px solid rgba(#df7158, .25);
+      @include media-breakpoint-down(md) {
+        border-top: 6px solid rgba(#df7158, .25);
+        border-left: none;
+      }
+    }
+  }
+}

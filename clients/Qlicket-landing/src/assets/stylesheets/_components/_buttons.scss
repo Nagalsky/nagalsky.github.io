@@ -7,6 +7,9 @@ $btn-ff: $font-base-semibold;
   padding: .95rem 2.5rem;
   border-width: 2px;
   border-radius: .45rem;
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
   &.btn-danger {
     background: $danger;
     border-color: $danger;
@@ -18,15 +21,13 @@ $btn-ff: $font-base-semibold;
     }
   }
   &.btn-outline-danger {
-    &.btn-danger {
-      background: $white;
-      border-color: $danger;
-      color: $danger;
-      &:hover, &:focus {
-        background: darken($danger, 10%);
-        border-color: darken($danger, 10%);
-        color: $white;
-      }
+    background: $white;
+    border-color: $danger;
+    color: $danger;
+    &:hover, &:focus {
+      background: darken($danger, 10%);
+      border-color: darken($danger, 10%);
+      color: $white;
     }
   }
   &.btn-long {
@@ -34,5 +35,9 @@ $btn-ff: $font-base-semibold;
       padding-left: 5.9rem;
       padding-right: 5.9rem;
     }
+  }
+  &.btn-sm {
+    border-radius: 0.25rem;
+    padding: .45rem 1.35rem;
   }
 }

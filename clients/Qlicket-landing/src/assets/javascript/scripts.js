@@ -3,15 +3,16 @@ $(document).ready(function(){
 
 	//Slick carousel initial
 	$('.carousel').slick({
-		arrows: true,
-		//autoplay: true,
+		arrows: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		draggable: false,
 		focusOnSelect: false,
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		pauseOnDotsHover: false,
-		fade: true
+		fade: true,
+		asNavFor: '.carousel-nav'
 	});
 
 	$('.carousel-nav').slick({
@@ -22,5 +23,10 @@ $(document).ready(function(){
     centerMode: false,
     focusOnSelect: true
   });
+
+	$(window).on('resize orientationchange', function() {
+	  $('.carousel-nav, .carousel').slick('resize');
+	});
+
 
 });
