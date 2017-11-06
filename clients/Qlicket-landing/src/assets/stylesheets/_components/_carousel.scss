@@ -5,14 +5,14 @@
   @extend .has-bg;
   background-size: contain;
   position: relative;
-  //bottom: -100px;
-  //margin-top: -100px;
-  right: -40px;
   top: -5px;
   transform: scale(1.2);
   min-width: 650px;
+  @include media-breakpoint-up(xl) {
+    right: 60px;
+  }
   @include media-breakpoint-down(lg) {
-    right: -25px;
+    right: 115px;
     top: 22px;
     transform: scale(1.1);
   }

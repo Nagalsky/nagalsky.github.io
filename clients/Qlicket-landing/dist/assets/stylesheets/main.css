@@ -6553,7 +6553,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: #ebebeb !important; }
 
 .text-gray {
-  color: #656464 !important; }
+  color: #313131 !important; }
 
 .text-primary {
   color: #42475b !important; }
@@ -6577,7 +6577,7 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #ebebeb !important; }
 
 .bg-gray {
-  background-color: #656464 !important; }
+  background-color: #313131 !important; }
 
 .bg-primary {
   background-color: #42475b !important; }
@@ -6684,19 +6684,19 @@ ol, ul {
   border: none;
   background: #e4e4e4; }
   .form-control:-moz-placeholder {
-    color: #656464;
+    color: #313131;
     font-size: 16px;
     font-family: "SourceSansPro-Regular"; }
   .form-control::-moz-placeholder {
-    color: #656464;
+    color: #313131;
     font-size: 16px;
     font-family: "SourceSansPro-Regular"; }
   .form-control:-ms-input-placeholder {
-    color: #656464;
+    color: #313131;
     font-size: 16px;
     font-family: "SourceSansPro-Regular"; }
   .form-control::-webkit-input-placeholder {
-    color: #656464;
+    color: #313131;
     font-size: 16px;
     font-family: "SourceSansPro-Regular"; }
   .form-control:focus {
@@ -6813,7 +6813,7 @@ p {
 
 @media (min-width: 768px) {
   .section--sm {
-    padding: 100px 0; } }
+    padding: 80px 0; } }
 
 @media (min-width: 768px) {
   .section--xs {
@@ -6965,13 +6965,15 @@ p {
 .carousel-laptop {
   background-size: contain;
   position: relative;
-  right: -40px;
   top: -5px;
   transform: scale(1.2);
   min-width: 650px; }
+  @media (min-width: 1200px) {
+    .carousel-laptop {
+      right: 60px; } }
   @media (max-width: 1199px) {
     .carousel-laptop {
-      right: -25px;
+      right: 115px;
       top: 22px;
       transform: scale(1.1); } }
   @media (max-width: 991px) {
@@ -7062,7 +7064,7 @@ p {
 
 .modal-title {
   font-size: 22px;
-  color: #656464;
+  color: #313131;
   font-family: "SourceSansPro-Semibold"; }
 
 .modal-backdrop.show {
@@ -7076,16 +7078,19 @@ p {
   width: 100%;
   z-index: 100; }
 
-.navbar-brand__img {
+.navbar-brand {
   width: 200px; }
   @media (max-width: 991px) {
-    .navbar-brand__img {
+    .navbar-brand {
       width: 160px; } }
+
+.navbar-brand__img {
+  width: 100%; }
 
 /* FOOTER */
 .footer {
   padding: 15px 0;
-  background: #656464;
+  background: #313131;
   text-align: center;
   color: #ffffff;
   font-size: 15px; }
