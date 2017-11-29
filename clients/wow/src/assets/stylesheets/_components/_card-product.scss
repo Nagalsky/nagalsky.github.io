@@ -1,0 +1,27 @@
+/* CARD PRODUCT */
+
+.product-card {
+  position: relative;
+  z-index: 10;
+  display: block;
+  &:hover, &:focus {
+    .product-card__content {
+      background: rgba($black, .75);
+    }
+  }
+}
+
+.product-card__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background: rgba($black, .5);
+  padding: 10px 15px;
+  @include transition(250ms);
+}

@@ -1,0 +1,74 @@
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font-family;
+	color: $body-main-color;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	@include media-breakpoint-down(md) {
+		font-size: $body-font-size-sm;
+	}
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-family: $title-font-family;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1, .h1 {
+	font-size: 3.056em;
+}
+h2, .h2 {
+	font-size: 2.333em;
+}
+h3, .h3 {
+	font-size: 2.111em;
+}
+h4, .h4 {
+	font-size: 1.556em;
+}
+h5, .h5 {
+	font-size: 1.222em;
+}
+h6, .h6 {
+}
+
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover, &:focus {
+		color: darken($link-color, 10%);
+		text-decoration: none;
+	}
+}
+button, a {
+	cursor: pointer;
+	@include transition(250ms);
+}
+p {
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+/*Font classes*/
+.font-base {
+	font-family: $font-base;
+}
+.font-base-medium {
+	font-family: $font-base-medium;
+}
+.font-secondary {
+	font-family: $font-secondary;
+}
