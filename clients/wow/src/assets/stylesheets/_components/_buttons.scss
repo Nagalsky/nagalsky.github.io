@@ -10,19 +10,18 @@ $bnt-font-family: $font-secondary;
   position: relative;
   border-width: 2px;
   border-style: solid;
-  &:hover, &:focus {
-    box-shadow: none;
+  &:hover, &:focus, &:active {
+    box-shadow: none !important;
   }
   &.btn-primary {
     background: $white;
     color: $black;
     border-color: $black;
     padding: 10px 20px;
-    /*border-left: none;*/
-    /*border-radius: none;*/
-    &:hover, &:focus {
-      background: $black;
-      color: $white;
+    &:hover, &:focus, &:active {
+      background: $black !important;
+      border-color: $black !important;
+      color: $white !important;
     }
     /*&:before, &:after {
       content: '';
