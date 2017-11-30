@@ -1,0 +1,39 @@
+/* TABS */
+
+$tabs-link-color: #666666;
+$tabs-link-active-color: $black;
+$tabs-link-font-family: $font-secondary;
+
+.tabs {
+  @extend .d-flex, .justify-content-center, .align-items-center;
+}
+
+.tabs__item {
+  &+.tabs__item {
+    color: $tabs-link-color;
+    .tabs__link {
+      &:before {
+        content: '';
+        width: 3px;
+        height: 100%;
+        background: $tabs-link-color;
+        position: absolute;
+        left: -1.5px;
+        top: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+.tabs__link {
+  text-transform: uppercase;
+  color: $tabs-link-color;
+  font-family: $tabs-link-font-family;
+  font-size: 22px;
+  padding: 0px 20px;
+  position: relative;
+  &.active {
+    color: $tabs-link-active-color;
+  }
+}

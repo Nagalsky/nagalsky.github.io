@@ -1,5 +1,9 @@
 /* GALLERY */
 
+$slick-dots-size: 17px;
+$slick-dots-color: #7f7f7f;
+$slick-dots-active-color: #b6661a;
+
 
 .gallery__item {
   background-repeat: no-repeat;
@@ -95,5 +99,65 @@
   @extend .wow-icon-right-open;
   @include media-breakpoint-down(sm) {
     right: 5px;
+  }
+}
+
+
+.gallery-thumbnails {
+  padding: 0px 40px;
+  @include media-breakpoint-down(sm) {
+    padding: 0px 25px;
+  }
+  .slick-slide {
+    padding: 0px 16px;
+  }
+  .slick-arrow {
+    &:before {
+      font-size: 30px;
+    }
+  }
+  .slick-prev {
+    left: 5px;
+    @extend .wow-icon-left-open;
+    @include media-breakpoint-down(sm) {
+      left: 5px;
+    }
+  }
+  .slick-next {
+    right: 5px;
+    @extend .wow-icon-right-open;
+    @include media-breakpoint-down(sm) {
+      right: 5px;
+    }
+  }
+}
+
+
+.slick-dots {
+  @include media-breakpoint-up(md) {
+    bottom: -50px;
+  }
+  >li {
+    width: $slick-dots-size;
+    height: $slick-dots-size;
+    &.slick-active {
+      >button {
+        background: $slick-dots-active-color;
+      }
+    }
+    &:hover {
+      >button {
+        background: $slick-dots-active-color;
+      }
+    }
+    >button {
+      width: $slick-dots-size;
+      height: $slick-dots-size;
+      padding: 0;
+      background: $slick-dots-color;
+      &:before {
+        content: none;
+      }
+    }
   }
 }

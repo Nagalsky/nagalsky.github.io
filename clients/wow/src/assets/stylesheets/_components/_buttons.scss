@@ -1,6 +1,7 @@
 /* BUTTONS */
 
 $bnt-font-family: $font-secondary;
+$btn-link-color: #7f7f7f;
 
 .btn {
   font-family: $bnt-font-family;
@@ -10,6 +11,8 @@ $bnt-font-family: $font-secondary;
   position: relative;
   border-width: 2px;
   border-style: solid;
+  padding: 10px 20px;
+  cursor: pointer;
   &:hover, &:focus, &:active {
     box-shadow: none !important;
   }
@@ -17,7 +20,6 @@ $bnt-font-family: $font-secondary;
     background: $white;
     color: $black;
     border-color: $black;
-    padding: 10px 20px;
     &:hover, &:focus, &:active {
       background: $black !important;
       border-color: $black !important;
@@ -93,5 +95,14 @@ $bnt-font-family: $font-secondary;
         left: -13px;
       }
     }*/
+  }
+  &.btn-link {
+    border-color: transparent;
+    color: $btn-link-color;
+    font-family: $font-base-medium;
+  }
+  &.btn-file {
+    border: none;
+    padding: 12px 0;
   }
 }

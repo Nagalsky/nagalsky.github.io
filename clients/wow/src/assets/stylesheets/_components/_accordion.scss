@@ -1,0 +1,35 @@
+/* ACCORDION */
+
+// .accordion__item {
+//   &+.accordion__item {
+//     margin-top: 15px;
+//   }
+// }
+.accordion__header {
+  display: block;
+  padding: 10px 0;
+  box-shadow: $box-shadow;
+  color: $black;
+  position: relative;
+  padding-right: 40px;
+  &:after {
+    font-family: $font-icons;
+    content: '\e807';
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    @include transition(250ms);
+    @include rotate(45deg);
+    font-size: 1.4rem;
+  }
+  &.collapsed {
+    &:after {
+      @include rotate(0deg);
+    }
+  }
+}
+
+.accordion__body {
+  padding: 15px 0;
+  box-shadow: $box-shadow-inset;
+}
