@@ -2,16 +2,17 @@
 
 $bnt-font-family: $font-secondary;
 $btn-link-color: #7f7f7f;
+$btn-fs: 16px;
 
 .btn {
   font-family: $bnt-font-family;
   text-transform: uppercase;
   border-radius: 0;
-  border: none;
   position: relative;
-  border-width: 2px;
-  border-style: solid;
+  border: 2px solid $white;
   padding: 10px 20px;
+  @include transition(0ms);
+  font-size: $btn-fs;
   cursor: pointer;
   &:hover, &:focus, &:active {
     box-shadow: none !important;
@@ -20,81 +21,103 @@ $btn-link-color: #7f7f7f;
     background: $white;
     color: $black;
     border-color: $black;
+    border-left: none;
+    border-right: none;
     &:hover, &:focus, &:active {
       background: $black !important;
       border-color: $black !important;
       color: $white !important;
+      &:before {
+        border-color: transparent $black transparent transparent;
+      }
+      &:after {
+        border-color: transparent transparent transparent $black;
+      }
     }
-    /*&:before, &:after {
+    &:before, &:after {
       content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 10;
     }
     &:before {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 22px 0 22px 15px;
-      border-color: transparent transparent transparent $white;
-      position: absolute;
-      right: -15px;
+      border-width: 22px 12px 22px 0px;
+      border-color: transparent $white transparent transparent;
+      left: -12px;
       top: 0px;
-      z-index: 10;
     }
     &:after {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 24px 0 24px 15px;
-      border-color: transparent transparent transparent $black;
-      position: absolute;
-      right: -17px;
-      top: -2px;
-      z-index: 5;
+      border-width: 22px 0px 22px 12px;
+      border-color: transparent transparent transparent $white;
+      right: -12px;
+      top: 0px;
     }
-    .left-top-triangle, .left-bottom-triangle {
-      display: inline-block;
+    .btn-triangle {
+      &:before {
+        border-width: 24px 14px 24px 0px;
+        border-color: transparent $black transparent transparent;
+        left: -14px;
+        top: -2px;
+      }
+      &:after {
+        border-width: 24px 0px 24px 14px;
+        border-color: transparent transparent transparent $black;
+        right: -14px;
+        top: -2px;
+      }
+    }
+  }
+  &.btn-black {
+    background: $black;
+    color: $white;
+    border-color: $black;
+    &:hover, &:focus, &:active {
+      background: $white !important;
+      border-color: $black !important;
+      color: $black !important;
+      &:before {
+        border-color: transparent $white transparent transparent;
+      }
+      &:after {
+        border-color: transparent transparent transparent $white;
+      }
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
       width: 0;
       height: 0;
       border-style: solid;
-      position: absolute;
-      left: -18px;
       z-index: 10;
     }
-    .left-top-triangle {
-      border-width: 0px 18px 24px 0px;
+    &:before {
+      border-width: 22px 12px 22px 0px;
       border-color: transparent $black transparent transparent;
-      top: -2px;
+      left: -12px;
+      top: 0px;
+    }
+    &:after {
+      border-width: 22px 0px 22px 12px;
+      border-color: transparent transparent transparent $black;
+      right: -12px;
+      top: 0px;
+    }
+    .btn-triangle {
+      &:before {
+        border-width: 24px 14px 24px 0px;
+        border-color: transparent $black transparent transparent;
+        left: -16px;
+        top: -2px;
+      }
       &:after {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0px 14px 24px 0px;
-        border-color: transparent $white transparent transparent;
-        content: '';
-        position: absolute;
-        z-index: 5;
-        left: 4px;
-        top: 2px;
+        border-width: 24px 0px 24px 14px;
+        border-color: transparent transparent transparent $black;
+        right: -16px;
+        top: -2px;
       }
     }
-    .left-bottom-triangle {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0px 0px 24px 18px;
-      border-color: transparent transparent $black transparent;
-      bottom: -2px;
-      &:after {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0px 0px 24px 16px;
-        border-color: transparent transparent $white transparent;
-        content: '';
-        position: absolute;
-        top: calc(100% - 2px);
-        left: -13px;
-      }
-    }*/
   }
   &.btn-link {
     border-color: transparent;
@@ -104,5 +127,20 @@ $btn-link-color: #7f7f7f;
   &.btn-file {
     border: none;
     padding: 12px 0;
+  }
+}
+
+.btn-triangle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
   }
 }
