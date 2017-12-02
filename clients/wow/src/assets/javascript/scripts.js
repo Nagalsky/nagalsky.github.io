@@ -32,6 +32,40 @@ $(document).ready(function(){
 	    }
 	  ]
 	});
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		$(".gallery-thumbnails, .gallery").slick("unslick");
+		$('.gallery').slick({
+			autoplay: true,
+			autoplaySpeed: 3000,
+			arrows: true,
+			pauseOnFocus: false,
+			pauseOnHover: false
+		});
+		$('.gallery-thumbnails').slick({
+			autoplay: true,
+			autoplaySpeed: 3000,
+			arrows: true,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			focusOnSelect: true,
+			responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 3,
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
+		});
+  });
 
 
 	//Magnific lighbox initial

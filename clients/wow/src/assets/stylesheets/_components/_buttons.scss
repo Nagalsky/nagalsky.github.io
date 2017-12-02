@@ -23,6 +23,7 @@ $btn-fs: 16px;
     border-color: $black;
     border-left: none;
     border-right: none;
+    margin-left: 14px;
     &:hover, &:focus, &:active {
       background: $black !important;
       border-color: $black !important;
@@ -73,6 +74,7 @@ $btn-fs: 16px;
     background: $black;
     color: $white;
     border-color: $black;
+    margin-left: 14px;
     &:hover, &:focus, &:active {
       background: $white !important;
       border-color: $black !important;
@@ -127,6 +129,67 @@ $btn-fs: 16px;
   &.btn-file {
     border: none;
     padding: 12px 0;
+  }
+  &.btn-warning {
+    background: $warning;
+    color: $white;
+    border-color: $black;
+    border-left: none;
+    border-right: none;
+    margin-left: 14px;
+    &:hover, &:focus, &:active {
+      background: $warning !important;
+      border-color: $warning !important;
+      color: $white !important;
+      &:before {
+        border-color: transparent $warning transparent transparent;
+      }
+      &:after {
+        border-color: transparent transparent transparent $warning;
+      }
+      .btn-triangle {
+        &:before {
+          border-color: transparent $warning transparent transparent;
+        }
+        &:after {
+          border-color: transparent transparent transparent $warning;
+        }
+      }
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 10;
+    }
+    &:before {
+      border-width: 22px 12px 22px 0px;
+      border-color: transparent $warning transparent transparent;
+      left: -12px;
+      top: 0px;
+    }
+    &:after {
+      border-width: 22px 0px 22px 12px;
+      border-color: transparent transparent transparent $warning;
+      right: -12px;
+      top: 0px;
+    }
+    .btn-triangle {
+      &:before {
+        border-width: 24px 14px 24px 0px;
+        border-color: transparent $black transparent transparent;
+        left: -14px;
+        top: -2px;
+      }
+      &:after {
+        border-width: 24px 0px 24px 14px;
+        border-color: transparent transparent transparent $black;
+        right: -14px;
+        top: -2px;
+      }
+    }
   }
 }
 
