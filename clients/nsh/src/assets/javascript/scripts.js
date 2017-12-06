@@ -11,7 +11,10 @@ $(document).ready(function(){
 		autoplay: true,
 		autoplaySpeed: 3000,
 		arrows: false,
-		dots: true
+		dots: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false
 	});
 
 	$('.gallery-logos').slick({
@@ -21,6 +24,9 @@ $(document).ready(function(){
 		dots: false,
 		slidesToShow: 6,
   	slidesToScroll: 6,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false,
 		responsive: [
 	    {
 	      breakpoint: 1024,
