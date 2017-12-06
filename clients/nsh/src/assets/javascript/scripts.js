@@ -45,19 +45,28 @@ $(document).ready(function(){
 	  ]
 	});
 	$('.modal-gallery').slick({
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
-		arrows: false,
+		arrows: true,
 		dots: false,
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		pauseOnDotsHover: false
+		pauseOnDotsHover: false,
+		adaptiveHeight: true,
+		responsive: [
+	    {
+	      breakpoint: 767,
+	      settings: {
+	        arrows: false
+	      }
+	    }
+	  ]
 	});
 
 	$('.modal-gallery-thumbnails').slick({
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
-		arrows: false,
+		arrows: true,
 		dots: false,
 		pauseOnFocus: false,
 		pauseOnHover: false,
@@ -77,7 +86,7 @@ $(document).ready(function(){
 	      breakpoint: 600,
 	      settings: {
 	        slidesToShow: 2,
-	        slidesToScroll: 2
+	        slidesToScroll: 1
 	      }
 	    }
 	  ]
@@ -108,5 +117,11 @@ $(document).ready(function(){
 		$('.modal-gallery, .modal-gallery-thumbnails').slick("setPosition", 0);
   });
 
+	//Card toggle
+	$('.panel__toggle').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('panel__toggle--active');
+		$(this).parent('div').find('.panel__collapse').slideToggle('fast');
+	});
 
 });

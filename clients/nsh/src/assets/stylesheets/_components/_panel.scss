@@ -1,0 +1,45 @@
+/* PANEL */
+
+$panel-bg: #f6f6f6;
+$panel-toggle: 32px;
+$panel-toggle-color: $blue;
+
+.panel {
+  background: $panel-bg;
+  padding: 25px 60px 25px 25px;
+  position: relative;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    max-width: 440px;
+    transform: translateY(50%);
+  }
+}
+.panel__title {
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 10px;
+}
+.card-list__link {
+  @extend .d-inline-flex, .align-items-center;
+  padding: .4rem 0;
+  color: $gray;
+}
+
+.panel__toggle {
+  width: $panel-toggle;
+  height: $panel-toggle;
+  color: $panel-toggle-color;
+  border: 3px solid $panel-toggle-color;
+  @extend .d-flex, .align-items-center, .justify-content-center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: $font-icons;
+  @extend .nsh-icon-down-open-mini;
+  font-size: 30px;
+  line-height: 90%;
+  background: transparent;
+}
+.panel__toggle--active {
+  @extend .nsh-icon-up-open-mini;
+}
