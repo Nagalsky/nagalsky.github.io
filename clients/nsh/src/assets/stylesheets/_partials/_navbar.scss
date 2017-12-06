@@ -31,7 +31,9 @@ $nav-item-border: solid 1px rgba(#8a8688, .13);
   }
   .dropdown-toggle {
     &:after {
-      content: none;
+      @include media-breakpoint-up(md) {
+        content: none;
+      }
     }
   }
   .dropdown-menu {
