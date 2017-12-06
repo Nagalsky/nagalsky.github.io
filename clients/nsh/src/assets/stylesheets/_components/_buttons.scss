@@ -3,6 +3,8 @@
 $btn-color: $white;
 $btn-font-family: $font-base-bold;
 $btn-fs: 20px;
+$btn-fs-lg: 24px;
+$btn-fs-xs: 14px;
 
 .btn {
   border: none;
@@ -10,13 +12,14 @@ $btn-fs: 20px;
   font-family: $btn-font-family;
   border-radius: 1px;
   padding: 13.5px 42px;
+  font-size: $btn-fs-xs;
   @include media-breakpoint-up(md) {
     font-size: $btn-fs;
   }
   @include media-breakpoint-down(sm) {
     padding: 14px 34px;
   }
-  &:focus {
+  &:focus, &:active {
     box-shadow: none !important;
   }
   &.btn-success {
@@ -24,5 +27,15 @@ $btn-fs: 20px;
   }
   &.btn-danger {
     @include button-bg($danger, $white);
+  }
+  &.btn-primary {
+    @include button-bg($blue, $white);
+  }
+  &.btn-lg {
+    font-size: $btn-fs-lg;
+  }
+  &.btn-block {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

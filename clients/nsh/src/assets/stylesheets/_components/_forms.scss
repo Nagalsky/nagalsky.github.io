@@ -1,19 +1,69 @@
 /* FORMS */
 
+$field-border: solid 1px #dedede;
+$field-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+$field-height: 72px;
+$field-height-xs: 46px;
+$custom-control-size: 22px;
+
 
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
+	border-radius: 5px;
+	box-shadow: $field-box-shadow;
+	border: $field-border;
+	color: $black;
+	font-family: $font-base-semibold;
+	height: $field-height-xs;
+	@include media-breakpoint-up(md) {
+		height: $field-height;
+	}
+	&:focus {
+		box-shadow: none;
+		border-color: $success;
+	}
+}
+
+.form-group {
+	&:not(:last-child) {
+		margin-bottom: 40px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 20px;
+		}
+	}
 }
 
 
+label {
+	font-size: 18px;
+	font-family: $font-base-semibold;
+	color: $black;
+}
 
+textarea, textarea.form-control {
+	resize: none;
+	min-height: 120px;
+	@include media-breakpoint-up(md) {
+		min-height: 335px;
+	}
+}
 
-
-
-
-
-
-
-
-
+.custom-control {
+	cursor: pointer;
+	padding-left: 2rem;
+	.custom-control-input {
+		&:checked~.custom-control-indicator {
+			background: $success;
+			box-shadow: none !important;
+		}
+	}
+}
+.custom-control-indicator {
+	background: transparent;
+	box-shadow: $field-box-shadow;
+	border: $field-border;
+	height: $custom-control-size;
+	width: $custom-control-size;
+	top: .15rem;
+}

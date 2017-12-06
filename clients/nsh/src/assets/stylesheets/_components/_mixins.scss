@@ -168,8 +168,8 @@ $sass-burger-add-vendor-prefixes: true !default;
 @mixin button-bg($bg, $color) {
   background: $bg;
   color: $color;
-  &:hover, &:active, &:focus {
-    background:darken($bg,10%);
-    color: $color;
+  &:hover, &:active, &:focus, &.active {
+    background:darken($bg,10%) !important;
+    color: $color !important;
   }
 }
