@@ -1,0 +1,42 @@
+/* FOOTER */
+
+$footer-bg: rgba(72, 183, 194, 0.16);
+
+.footer {
+  background: $footer-bg;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
+}
+
+.footer__item {
+  @include media-breakpoint-down(sm) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.footer__item--has-border {
+  @include media-breakpoint-up(md) {
+    border-left: 1px solid $success;
+  }
+}
+
+.footer__title {
+  opacity: 0.42;
+  @include media-breakpoint-down(lg) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+  }
+}
+
+.list__footer__link {
+  display: block;
+  color: $white;
+  padding: .65rem 0;
+  &:hover, &:focus {
+    color: $success;
+  }
+}

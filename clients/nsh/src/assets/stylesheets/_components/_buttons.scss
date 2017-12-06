@@ -1,0 +1,28 @@
+/* BUTTONS */
+
+$btn-color: $white;
+$btn-font-family: $font-base-bold;
+$btn-fs: 20px;
+
+.btn {
+  border: none;
+  color: $btn-color;
+  font-family: $btn-font-family;
+  border-radius: 1px;
+  padding: 13.5px 42px;
+  @include media-breakpoint-up(md) {
+    font-size: $btn-fs;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 14px 34px;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-success {
+    @include button-bg($success, $white);
+  }
+  &.btn-danger {
+    @include button-bg($danger, $white);
+  }
+}
