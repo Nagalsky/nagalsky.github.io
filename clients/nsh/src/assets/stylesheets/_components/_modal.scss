@@ -21,17 +21,18 @@ $modal-close-size: 36px;
   }
 }
 
-.modal--lightbox {
-  .modal-dialog {
-    @include media-breakpoint-up(md) {
-      width: 100%;
-      max-width: 800px;
-    }
+.modal-dialog {
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    max-width: 800px;
   }
 }
 .modal-content {
   border-radius: 0;
   border: none;
+}
+.modal-dialog {
+  box-shadow: 0 0 114px 0 rgba(0, 0, 0, 0.5);
 }
 .modal-body--no-gutter {
   padding: 0;
@@ -52,5 +53,12 @@ $modal-close-size: 36px;
   }
   @include media-breakpoint-down(sm) {
     padding: 0;
+  }
+}
+
+.modal-backdrop {
+  background: $white;
+  &.show {
+    opacity: .91;
   }
 }
