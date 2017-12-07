@@ -53,6 +53,8 @@ $(document).ready(function(){
 		pauseOnHover: false,
 		pauseOnDotsHover: false,
 		adaptiveHeight: true,
+		swipe: false,
+		draggable: false,
 		responsive: [
 	    {
 	      breakpoint: 767,
