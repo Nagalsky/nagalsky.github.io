@@ -107,12 +107,12 @@ $(document).ready(function(){
   });
 
 	//Bootstrap modal lightbox
-	$('.lightbox-toggle img').on('click', function () {
+	/*$('.lightbox-toggle img').on('click', function () {
     var image = $(this).attr('src');
     $('#modal-lightbox').on('show.bs.modal', function () {
       $(".modal__lightbox-img").attr("src", image);
     });
-  });
+  });*/
 	$('.modal').on('shown.bs.modal', function (e) {
 		$('.modal-gallery, .modal-gallery-thumbnails').slick("setPosition", 0);
 		$('.modal-gallery-thumbnails, .modal-gallery').resize();
