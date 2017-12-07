@@ -45,7 +45,7 @@ $(document).ready(function(){
 	  ]
 	});
 	$('.modal-gallery').slick({
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 3000,
 		arrows: true,
 		dots: false,
@@ -64,8 +64,8 @@ $(document).ready(function(){
 	});
 
 	$('.modal-gallery-thumbnails').slick({
-		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplay: false,
+		autoplaySpeed: 30000000,
 		arrows: true,
 		dots: false,
 		pauseOnFocus: false,
@@ -115,6 +115,7 @@ $(document).ready(function(){
   });
 	$('.modal').on('shown.bs.modal', function (e) {
 		$('.modal-gallery, .modal-gallery-thumbnails').slick("setPosition", 0);
+		$('.modal-gallery-thumbnails, .modal-gallery').resize();
   });
 
 	//Card toggle
