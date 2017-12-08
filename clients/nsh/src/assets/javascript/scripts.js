@@ -138,4 +138,13 @@ $(document).ready(function(){
 	  e.stopPropagation();
 	});
 
+	//Custom scroll bar initial
+	$(window).on("load",function(){
+		$(".scroll-box").mCustomScrollbar({
+			setHeight:560,
+			alwaysShowScrollbar: 0
+		});
+	});
+
+
 });

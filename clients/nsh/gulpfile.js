@@ -86,7 +86,8 @@ gulp.task('javascript:vendors', task.javascript = function () {
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/hiraku/src/hiraku.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/isotope-layout/dist/isotope.pkgd.min.js'])
+    'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
+    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));
 });
