@@ -110,61 +110,105 @@
 				<p>Marketers/advertisers usually focus their efforts on the people responsible for making the purchase. In many cases, this is an effective approach but in other cases it can make for a totally useless marketing campaign.</p>
 			</div><!--container-->
 
+
+
 			<div class="container-fluid">
-				<div class="row justify-content-center mb-4 mb-sm-5 filter-controls">
+				<div class="row justify-content-center mb-4 mb-sm-5 filter-trigger">
 					<div class="col-xs-6 col-sm-4 col-lg-3 mb-3 mb-sm-0">
-						<a href="#" class="btn btn-success btn-block" data-filter=".hotels-state">Hotels by State <i class="btn__icon nsh-icon-down-dir"></i></a>
+						<div class="dropdown">
+						  <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Hotels by State
+						  </button>
+						  <div class="dropdown-menu dropdown-menu--without-arrow w-100">
+						    <div class="dropdown-item">
+									<label class="custom-control custom-control--dark custom-checkbox mb-0">
+									  <input type="checkbox" class="custom-control-input" value=".all-state">
+									  <span class="custom-control-indicator"></span>
+									  <span class="custom-control-description">All</span>
+									</label><!--custom-control-->
+								</div><!--dropdown-item-->
+
+								<div class="dropdown-item">
+									<label class="custom-control custom-control--dark custom-checkbox mb-0">
+									  <input type="checkbox" class="custom-control-input" value=".filter-1">
+									  <span class="custom-control-indicator"></span>
+									  <span class="custom-control-description">Filter 1</span>
+									</label><!--custom-control-->
+								</div><!--dropdown-item-->
+						  </div><!--dropdown-menu-->
+						</div><!--dropdown-->
 					</div><!--col-->
 
 					<div class="col-xs-6 col-sm-4 col-lg-3">
-						<a href="#" class="btn btn-primary btn-block" data-filter=".hotels-brand">Hotels by Brand <i class="btn__icon nsh-icon-down-dir"></i></a>
+						<div class="dropdown">
+						  <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Hotels by Brand
+						  </button>
+						  <div class="dropdown-menu dropdown-menu--primary dropdown-menu--without-arrow w-100">
+								<div class="dropdown-item">
+									<label class="custom-control custom-control--dark custom-checkbox mb-0">
+									  <input type="checkbox" class="custom-control-input" value=".all-brands">
+									  <span class="custom-control-indicator"></span>
+									  <span class="custom-control-description">All</span>
+									</label><!--custom-control-->
+								</div><!--dropdown-item-->
+
+								<div class="dropdown-item">
+									<label class="custom-control custom-control--dark custom-checkbox mb-0">
+									  <input type="checkbox" class="custom-control-input" value=".filter-2">
+									  <span class="custom-control-indicator"></span>
+									  <span class="custom-control-description">Filter 2</span>
+									</label><!--custom-control-->
+								</div><!--dropdown-item-->
+						  </div><!--dropdown-menu-->
+						</div><!--dropdown-->
 					</div><!--col-->
 				</div><!--row-->
 
 				<div class="row filter-grid">
-					<div class="col-6 col-sm-3 filter-item hotels-state">
+					<div class="col-6 col-sm-3 filter-item all-state filter-1">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-brand">
+					<div class="col-6 col-sm-3 filter-item all-brands filter-2">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-2">
 							<img src="assets/images/temp/hotel-22.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-state">
+					<div class="col-6 col-sm-3 filter-item all-state">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-3">
 							<img src="assets/images/temp/hotel-23.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-brand">
+					<div class="col-6 col-sm-3 filter-item all-brands filter-2">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-4">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-state">
+					<div class="col-6 col-sm-3 filter-item all-state filter-1">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-5">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-brand">
+					<div class="col-6 col-sm-3 filter-item all-brands">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-6">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-state">
+					<div class="col-6 col-sm-3 filter-item all-state">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-7">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
 					</div><!--col-->
 
-					<div class="col-6 col-sm-3 filter-item hotels-brand">
+					<div class="col-6 col-sm-3 filter-item all-brands filter-2">
 						<a href="#" class="d-block mb-4 lightbox-toggle" data-toggle="modal" data-target="#modal-lightbox-8">
 							<img src="assets/images/temp/hotel.jpg" class="w-100" alt="">
 						</a>
@@ -977,6 +1021,7 @@
 
 
 	<script src="assets/javascript/vendors.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYN2qAX4jNZofmX7c9cMYXVSderaOsUVk"></script>
 	<script src="assets/javascript/scripts.js"></script>
 
 

@@ -59,8 +59,15 @@ textarea, textarea.form-control {
 		}
 	}
 }
+.custom-control--dark {
+	.custom-control-input {
+		&:checked~.custom-control-indicator {
+			background: $black;
+		}
+	}
+}
 .custom-control-indicator {
-	background: transparent;
+	background: $white;
 	box-shadow: $field-box-shadow;
 	border: $field-border;
 	height: $custom-control-size;

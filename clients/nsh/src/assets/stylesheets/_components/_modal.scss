@@ -65,7 +65,13 @@ $modal-close-size: 36px;
 
 
 .modal-thumbnails-holder {
+  @include transition(250ms);
   @include media-breakpoint-up(md) {
     margin-top: -110px;
+  }
+  &.static {
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+    }
   }
 }

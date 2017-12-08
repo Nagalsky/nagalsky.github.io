@@ -96,25 +96,29 @@ $(document).ready(function(){
 
 
 	//Isotope filtering initial
-	$('.filter-grid').isotope({
-    itemSelector: '.filter-item',
-    layoutMode: 'fitRows'
-  });
-	$('.filter-controls .btn').click(function () {
-    var selector = $(this).attr('data-filter');
-    $('.filter-grid').isotope({
-      filter: selector
-    });
-    return false;
+	var $container = $('.filter-grid'),
+      $checkboxes = $('.filter-trigger input');
+
+  $container.isotope({
+    itemSelector: '.filter-item'
   });
 
-	//Bootstrap modal lightbox
-	/*$('.lightbox-toggle img').on('click', function () {
-    var image = $(this).attr('src');
-    $('#modal-lightbox').on('show.bs.modal', function () {
-      $(".modal__lightbox-img").attr("src", image);
+  $checkboxes.change(function(){
+    var filters = [];
+    // get checked checkboxes values
+    $checkboxes.filter(':checked').each(function(){
+      filters.push( this.value );
     });
-  });*/
+    // ['.red', '.blue'] -> '.red, .blue'
+    filters = filters.join(', ');
+    $container.isotope({ filter: filters }, function( $changedItems, instance ) {
+      instance.$allAtoms.filter('.isotope-hidden').removeClass('is-filtered');
+      instance.$filteredAtoms.addClass('is-filtered');
+    });
+  });
+
+
+
 	$('.modal').on('shown.bs.modal', function (e) {
 		$('.modal-gallery, .modal-gallery-thumbnails').slick("setPosition", 0);
 		$('.modal-gallery-thumbnails, .modal-gallery').resize();
@@ -125,6 +129,13 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(this).toggleClass('panel__toggle--active');
 		$(this).parent('div').find('.panel__collapse').slideToggle('fast');
+		$('.modal-thumbnails-holder').toggleClass('static');
+	});
+
+
+
+	$(document).on('click', '.dropdown-menu', function (e) {
+	  e.stopPropagation();
 	});
 
 });
