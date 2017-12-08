@@ -141,7 +141,7 @@ $(document).ready(function(){
 	//Custom scroll bar initial
 	$(window).on("load",function(){
 		$(".scroll-box").mCustomScrollbar({
-			setHeight:560,
+			setHeight:460,
 			alwaysShowScrollbar: 0
 		});
 	});
