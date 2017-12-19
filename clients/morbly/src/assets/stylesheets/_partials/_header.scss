@@ -1,0 +1,21 @@
+/* HEADER */
+
+$header-bg: $white;
+
+.header {
+  @include transition(500ms);
+  @include media-breakpoint-down(md) {
+    background: $header-bg;
+  }
+}
+.header--animation {
+  @include media-breakpoint-up(lg) {
+    background: rgba($header-bg, .7);
+  }
+  .navbar {
+    @include media-breakpoint-up(lg) {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+  }
+}

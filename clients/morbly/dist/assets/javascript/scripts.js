@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).scroll(function(){$(window).scrollTop()>=5?$(".header").addClass("header--animation"):$(".header").removeClass("header--animation")})});

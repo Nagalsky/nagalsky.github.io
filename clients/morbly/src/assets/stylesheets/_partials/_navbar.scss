@@ -1,0 +1,44 @@
+/* NAVBAR */
+
+$navbar-logo-width: 151px;
+$navbar-nav-link-font-size: 16px;
+$navbar-nav-link-color: $black;
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+  @include transition(500ms);
+  @include media-breakpoint-up(lg) {
+    padding-top: 1.85rem;
+    padding-bottom: 1.85rem;
+  }
+}
+
+.navbar-brand {
+  width: $navbar-logo-width;
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {
+      @include media-breakpoint-up(lg) {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  }
+}
+.nav-item {
+  .active {
+    .nav-link {
+      color: $success;
+    }
+  }
+}
+.nav-link {
+  font-size: $navbar-nav-link-font-size;
+  color: $navbar-nav-link-color;
+  &:hover, &:focus {
+    color: $success;
+  }
+}
