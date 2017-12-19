@@ -1,2 +1,33 @@
 /* BUTTONS */
 
+$btn-font-size: 20px;
+$btn-font-size-md: 16px;
+$btn-kerning: .15rem;
+
+.btn {
+  font-size: $btn-font-size;
+  text-transform: uppercase;
+  letter-spacing: $btn-kerning;
+  padding: 25px 74.5px;
+  border: none;
+  &:hover, &:focus, &:active {
+    box-shadow: none !important;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 14px 36px;
+    font-size: $btn-font-size-md;
+  }
+  &.btn-dark {
+    @include button-variants($mutted, $white);
+  }
+  &.btn-success {
+    @include button-variants($success, $white);
+  }
+}
+
+.btn-load-more {
+  margin-top: 90px;
+  @include media-breakpoint-down(md) {
+    margin-top: 45px;
+  }
+}

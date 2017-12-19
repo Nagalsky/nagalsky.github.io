@@ -41,11 +41,15 @@
 }
 
 //Buttons
-@mixin button-bg($bg, $color) {
+@mixin button-variants($bg, $color) {
   background: $bg;
   color: $color;
-  &:hover, &:active, &:focus, &.active {
+  &:hover {
     background:darken($bg, 10%) !important;
+    color: $color !important;
+  }
+  &:active, &:focus, &.active {
+    background:darken($bg, 20%) !important;
     color: $color !important;
   }
 }

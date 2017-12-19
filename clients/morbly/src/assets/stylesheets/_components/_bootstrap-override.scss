@@ -1,1 +1,47 @@
 /* BOOTSTRAP VARIABLES */
+
+
+.col-has-border {
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    border-bottom: 1px solid $gray-thin;
+    padding-bottom: 25px;
+  }
+  &:before {
+    @include media-breakpoint-up(md) {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 107px;
+      width: 1px;
+      background: $gray-thin;
+      transform: translateY(-40%);
+      top: 50%;
+    }
+  }
+}
+
+.mb-6 {
+  margin-bottom: 3.5rem !important;
+}
+.mt-6 {
+  margin-top: 3.5rem !important;
+}
+.mb-md-6 {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 3.5rem !important;
+  }
+}
+.mt-md-6 {
+  @include media-breakpoint-up(md) {
+    margin-top: 3.5rem !important;
+  }
+}
+.mb-7 {
+  margin-bottom: 6.5rem !important;
+}
+.mb-md-7 {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 6.5rem !important;
+  }
+}

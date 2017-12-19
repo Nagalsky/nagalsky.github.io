@@ -2,4 +2,35 @@
 
 .section {
   position: relative;
+  padding: 35px 0;
+  @include media-breakpoint-up(lg) {
+    padding: 55px 0;
+  }
+}
+
+.section--sm {
+  @include media-breakpoint-up(lg) {
+    padding: 115px 0;
+  }
+}
+.section--md {
+  @include media-breakpoint-up(lg) {
+    padding: 150px 0;
+  }
+}
+.section--lg {
+  @include media-breakpoint-up(lg) {
+    padding: 190px 0;
+  }
+}
+
+.section--pt-0 {
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+}
+.section--pt-xl {
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 80px;
+  }
 }
