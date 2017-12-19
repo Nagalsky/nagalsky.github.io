@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $title-font;
 	font-weight: normal;
 	line-height: $title-line-height-base;
+	color: $title-color;
 	@include media-breakpoint-up(md) {
 		line-height: $title-line-height;
 	}
@@ -70,7 +71,7 @@ a {
 	color: $link-color;
 	text-decoration: none;
 	&:hover, &:focus {
-		color: darken($link-color, 10%);
+		color: $link-color-hover;
 		text-decoration: none;
 	}
 }

@@ -16,9 +16,9 @@ $(document).ready(function(){
 	$(".btn-load-more").on('click', function (e) {
 		e.preventDefault();
 		$("div.logos-item:hidden").slice(0, 1).slideDown();
-		$('html,body').animate({
-				scrollTop: $(this).offset().top
-		}, 1200);
+		$("html, body").animate({
+			scrollTop: $('.btn-load-more').offset().top
+		}, 1000);
 	});
 
 });
