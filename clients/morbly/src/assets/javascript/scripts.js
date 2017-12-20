@@ -44,6 +44,7 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: $(target).offset().top - headerHeight
     }, 500);
+		$('.navbar-collapse').removeClass('show');
   });
 
 
