@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Header background color animation action
+	/* ======== Header background color animation action ======== */
 	$(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
@@ -11,7 +11,7 @@ $(document).ready(function(){
     }
 	});
 
-	//Slick logos initial
+	/* ======== Slick logos initial ======== */
 	$('.logos-holder').slick({
     arrows: false,
 		draggable: false,
@@ -26,7 +26,7 @@ $(document).ready(function(){
 	  $(this).closest('body').find('.logos-holder').slick('slickNext');
 	});
 
-	//Input animation initial
+	/* ======== Input animation initial ======== */
 	var inputElms = document.querySelectorAll(".form-control");
 	inputElms.forEach(function(e) {
 	  e.addEventListener("keyup", function() {
@@ -34,6 +34,17 @@ $(document).ready(function(){
 	    this.setAttribute("value", this.value);
 	  });
 	});
+
+	/* ======== Scroll to section ======== */
+	$('[data-click=scroll-to-target]').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var target = $(this).attr('href');
+    var headerHeight = 70;
+    $('html, body').animate({
+        scrollTop: $(target).offset().top - headerHeight
+    }, 500);
+  });
 
 
 });

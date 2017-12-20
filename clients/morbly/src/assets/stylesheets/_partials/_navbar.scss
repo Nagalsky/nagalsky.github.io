@@ -29,6 +29,16 @@ $navbar-nav-link-color: $black;
   }
 }
 .nav-item {
+  /*&:first-child {
+    .nav-link {
+      &.active {
+        color: $navbar-nav-link-color;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+  }*/
   .active {
     .nav-link {
       color: $success;
@@ -38,7 +48,7 @@ $navbar-nav-link-color: $black;
 .nav-link {
   font-size: $navbar-nav-link-font-size;
   color: $navbar-nav-link-color;
-  &:hover, &:focus {
+  &:hover, &:focus, &.active {
     color: $success;
   }
 }
