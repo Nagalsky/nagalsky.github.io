@@ -11,17 +11,29 @@ $(document).ready(function(){
     }
 	});
 
-	//Load more action
-	$(".logos-item").slice(0, 1).show();
-	$(".btn-load-more").on('click', function (e) {
-		e.preventDefault();
-		$(".logos-item:hidden").slice(0, 1).slideDown();
-		if ($('.logos-item:hidden').length === 0) {
-      $('.btn-load-more').replaceWith("<h3>No more logos</h3>");
-    }
-		$("html, body").animate({
-			scrollTop: $('.btn-load-more').offset().top - 150
-		}, 1000);
+	//Slick logos initial
+	$('.logos-holder').slick({
+    arrows: false,
+		draggable: false,
+		autoplay: false,
+		speed: 500,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		swipe: false,
+		touchMove: false
+  });
+	$('.btn-load-more').click(function(){
+	  $(this).closest('body').find('.logos-holder').slick('slickNext');
 	});
+
+	//Input animation initial
+	var inputElms = document.querySelectorAll(".form-control");
+	inputElms.forEach(function(e) {
+	  e.addEventListener("keyup", function() {
+	    console.log(this.value);
+	    this.setAttribute("value", this.value);
+	  });
+	});
+
 
 });

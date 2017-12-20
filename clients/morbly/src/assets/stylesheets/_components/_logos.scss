@@ -5,10 +5,20 @@
   @include media-breakpoint-down(md) {
     margin-bottom: 45px;
   }
+  .slick-track {
+    @extend .d-flex, .align-items-center;
+  }
 }
 .logos-item {
-  display: none;
-  &+.logos-item {
-    margin-top: 50px;
+  display: inline-block;
+  padding: 0px 40px;
+  @include media-breakpoint-down(lg) {
+    padding: 0px 30px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 0px 15px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0px 10px;
   }
 }

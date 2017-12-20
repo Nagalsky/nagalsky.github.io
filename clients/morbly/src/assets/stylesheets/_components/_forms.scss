@@ -16,6 +16,9 @@ $field-border-color-focus: $success;
 	border-bottom: 1px solid $field-border-color;
 	border-radius: 0;
 	padding: 20px 0;
+	z-index: 1;
+	position: relative;
+	background-color: transparent;
 	@include media-breakpoint-down(md) {
 		padding: 10px 0;
 	}
@@ -23,11 +26,33 @@ $field-border-color-focus: $success;
 		@include custom-placeholder-opacity($opacity: $field-placeholder-opacity);
 		box-shadow: none !important;
 		border-color: $field-border-color-focus;
+		background-color: transparent;
 	}
+	&:not([value=""]) ~ .form-control__placeholder, &:focus ~ .form-control__placeholder {
+    transform: translatey(-3rem);
+    opacity: 1;
+		font-size: 12px;
+  }
 }
 .form-group {
+	position: relative;
 	margin-bottom: 25px;
+	z-index: 10;
 	@include media-breakpoint-up(md) {
 		margin-bottom: 54px;
 	}
+}
+.form-control__placeholder {
+	@include transition(250ms);
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	transform: translateY(-50%);
+	top: 50%;
+	color: $field-placeholder-color;
+	font-family: $field-placeholder-font-family;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
