@@ -40,7 +40,7 @@ $(document).ready(function(){
     e.preventDefault();
     e.stopPropagation();
     var target = $(this).attr('href');
-    var headerHeight = 70;
+    var headerHeight = 62;
     $('html, body').animate({
         scrollTop: $(target).offset().top - headerHeight
     }, 500);
