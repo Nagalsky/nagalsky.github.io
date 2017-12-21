@@ -27,13 +27,22 @@ $(document).ready(function(){
 	});
 
 	/* ======== Input animation initial ======== */
-	var inputElms = document.querySelectorAll(".form-control");
-	inputElms.forEach(function(e) {
-	  e.addEventListener("keyup", function() {
-	    console.log(this.value);
-	    this.setAttribute("value", this.value);
-	  });
-	});
+	(function(){
+			$('form')
+				.find('.form-control')
+				.each(function(){
+
+					$(this).on('change', function(){
+						$this = $(this);
+						if (this.value !== "") {
+							$this.addClass('filled');
+						}
+						else {
+							$this.removeClass('filled');
+						}
+					});
+				});
+		})();
 
 	/* ======== Scroll to section ======== */
 	$('[data-click=scroll-to-target]').on('click', function(e) {

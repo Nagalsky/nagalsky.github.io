@@ -19,9 +19,6 @@ $field-border-color-focus: $success;
 	z-index: 1;
 	position: relative;
 	background-color: transparent;
-	@include media-breakpoint-down(md) {
-		padding: 10px 0;
-	}
 	&:focus {
 		@include custom-placeholder-opacity($opacity: $field-placeholder-opacity);
 		box-shadow: none !important;
@@ -29,10 +26,17 @@ $field-border-color-focus: $success;
 		background-color: transparent;
 	}
 	&:not([value=""]) ~ .form-control__placeholder, &:focus ~ .form-control__placeholder {
-    transform: translatey(-3rem);
+    transform: translatey(-30px);
     opacity: 1;
 		font-size: 12px;
   }
+	&.filled {
+		~ .form-control__placeholder {
+			transform: translatey(-30px);
+	    opacity: 1;
+			font-size: 12px;
+		}
+	}
 }
 .form-group {
 	position: relative;
@@ -47,8 +51,7 @@ $field-border-color-focus: $success;
 	position: absolute;
 	z-index: -1;
 	left: 0;
-	transform: translateY(-50%);
-	top: 50%;
+	top: 18px;
 	color: $field-placeholder-color;
 	font-family: $field-placeholder-font-family;
 	-webkit-user-select: none;
