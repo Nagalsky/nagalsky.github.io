@@ -1,10 +1,16 @@
 /* FOOTER */
 
+$footer-color: $white;
+$footer-fs: 16px;
 
 .footer {
-  padding: 100px 0;
-  height: 260px;
+  padding: 0px 0px 80px 0;
   position: relative;
+  color: $footer-color;
+  font-size: $footer-fs;
+  @include media-breakpoint-down(sm) {
+    padding: 35px 0;
+  }
   &:before {
     content: '';
   	width: 100%;
@@ -14,15 +20,66 @@
   	z-index: -1;
   	bottom: 0;
   	transform-origin: right bottom;
-  	transform: skewY(10deg);
+  	transform: skewY(5deg);
+    @include media-breakpoint-up(xl) {
+      height: 110%;
+    }
   }
 }
 
 .footer__item {
   &+.footer__item {
-    margin-top: 35px;
-    @include media-breakpoint-down(md) {
+    margin-top: 30px;
+    @include media-breakpoint-up(lg) {
       margin-top: 70px;
     }
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: 140px;
+  margin-bottom: 35px;
+}
+
+.footer__list {
+  @extend .list-unstyled, .d-flex;
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+  }
+}
+.footer__list--social {
+  .footer__list__item {
+    &+.footer__list__item {
+      @include media-breakpoint-up(md) {
+        margin-left: 13px;
+      }
+    }
+  }
+}
+.footer__list__item {
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+  }
+  &+.footer__list__item {
+    @include media-breakpoint-up(md) {
+      margin-left: 20px;
+    }
+  }
+}
+.footer__list__link {
+  color: $white;
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.footer__form {
+  .form-control {
+    &:focus {
+      color: $white;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
   }
 }
