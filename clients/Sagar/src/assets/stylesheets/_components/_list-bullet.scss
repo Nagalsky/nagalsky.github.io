@@ -1,0 +1,27 @@
+/* LIST BULLET */
+
+$bullet-size: 6px;
+$bullet-color: $warning;
+
+.list-bullet {
+  @extend .list-unstyled;
+  @include media-breakpoint-down(sm) {
+    padding-left: 20px;
+  }
+}
+.list-bullet__item {
+  position: relative;
+  &:before {
+    content: '';
+    width: $bullet-size;
+    height: $bullet-size;
+    border-radius: 50%;
+    background: $bullet-color;
+    position: absolute;
+    left: -16px;
+    top: 11px;
+  }
+  &+.list-bullet__item {
+    margin-top: 10px;
+  }
+}

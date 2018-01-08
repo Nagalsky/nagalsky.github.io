@@ -1,6 +1,1 @@
-$(document).ready(function(){
-
-	
-
-
-});
+$(document).ready(function(){$(window).scroll(function(){$(window).scrollTop()>=5?$(".navbar").addClass("navbar--animation"):$(".navbar").removeClass("navbar--animation")}),$(".navbar-toggler").on("click",function(){$(".navbar").toggleClass("navbar--menu-is-open")}),$(".gallery").slick({autoplay:!0,autoplaySpeed:3e3,arrows:!0,dots:!0,prevArrow:$(".gallery-control__btn--prev"),nextArrow:$(".gallery-control__btn--next"),responsive:[{breakpoint:767,settings:{dots:!1}}]})});

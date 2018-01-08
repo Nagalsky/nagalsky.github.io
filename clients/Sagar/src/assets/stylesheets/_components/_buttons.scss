@@ -1,2 +1,35 @@
 /* BUTTONS */
 
+.btn {
+  border: none;
+  @include gradient-y($start-color: #e56180, $end-color: #fa6c4f, $start-percent: 0%, $end-percent: 100%);
+  color: $white;
+  padding: 16px 59px;
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &:hover {
+    color: $white;
+    @include gradient-y($start-color: #c94967, $end-color: #e66044, $start-percent: 0%, $end-percent: 100%);
+  }
+  &:focus, &:active {
+    color: $white;
+    @include gradient-y($start-color: #9f263f, $end-color: #cc4934, $start-percent: 0%, $end-percent: 100%);
+  }
+  &:not([disabled]).active, &:not([disabled]):not(.disabled):active {
+    @include gradient-y($start-color: #9f263f, $end-color: #cc4934, $start-percent: 0%, $end-percent: 100%);
+  }
+  &.btn-warning {
+    background: #fcb564;
+    color: #2d0f44;
+    &:hover {
+      background: #eea95a;
+    }
+    &:focus, &:active, &:not([disabled]).active, &:not([disabled]):not(.disabled):active {
+      background: #df9c4f;
+    }
+  }
+  &.btn-sm {
+    padding: 14px 24px;
+  }
+}

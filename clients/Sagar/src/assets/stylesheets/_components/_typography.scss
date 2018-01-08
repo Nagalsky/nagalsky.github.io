@@ -6,14 +6,16 @@ html, body {
 	color: $body-main-color;
 	font-size: $body-font-size;
 	line-height: $body-line-height;
+	-webkit-overflow-scrolling: touch;
 	@include media-breakpoint-down(md) {
 		font-family: $body-font-size-md;
 	}
 }
 
 
-body {
-	padding-top: 400px;
+main {
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 
@@ -22,22 +24,57 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-bottom: 20px;
 	color: $title-color;
 	font-family: $title-font;
+	line-height: $title-kerning;
 	&:last-child {
 		margin-bottom: 0;
 	}
 }
 
 h1, .h1 {
+	font-size: 60px;
+	@include media-breakpoint-down(md) {
+		font-size: 40px;
+	}
 }
 h2, .h2 {
+	font-size: 48px;
+	@include media-breakpoint-down(md) {
+		font-size: 30px;
+	}
 }
 h3, .h3 {
+	font-size: 36px;
+	@include media-breakpoint-down(md) {
+		font-size: 26px;
+	}
 }
 h4, .h4 {
+	font-size: 30px;
+	@include media-breakpoint-down(md) {
+		font-size: 22px;
+	}
 }
 h5, .h5 {
+	font-size: 21px;
 }
 h6, .h6 {
+}
+
+.title {
+	margin-bottom: 45px;
+	@include media-breakpoint-up(md) {
+
+	}
+}
+.title-md {
+	margin-bottom: 80px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 45px;
+	}
+}
+
+b {
+	font-family: $font-base-bold;
 }
 
 button, a {
@@ -49,8 +86,15 @@ a {
 	color: $link-color;
 	text-decoration: none;
 	&:hover, &:focus {
-		color: darken($link-color, 10%);
+		color: $link-color-hover;
 		text-decoration: none;
+	}
+}
+
+.link-content {
+	border-bottom: 1px dotted $link-color;
+	&:hover, &:focus {
+		border-bottom: 1px dotted $link-color-hover;
 	}
 }
 
@@ -59,4 +103,8 @@ p {
 	&:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.text-with-opacity {
+	opacity: .55;
 }

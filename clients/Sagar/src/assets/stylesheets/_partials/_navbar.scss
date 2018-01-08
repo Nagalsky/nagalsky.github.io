@@ -1,1 +1,111 @@
 /* NAVBAR */
+
+$navbar-font-size: 16px;
+$navbar-color: $white;
+$navbar-color-hover: $pink-soft;
+$navbar-mobile-border-color: $muted-thin;
+$navbar-gradient-start-color: #4e1ecd;
+$navbar-gradient-end-color: #b555ed;
+$navbar-height: 75px;
+$navbar-height-sm: 73px;
+
+
+.navbar {
+  @include transition(350ms);
+  min-height: $navbar-height;
+  @include media-breakpoint-down(sm) {
+    min-height: $navbar-height-sm;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include gradient-x($start-color: $navbar-gradient-start-color, $end-color: $navbar-gradient-end-color, $start-percent: 0%, $end-percent: 100%);
+    @include transition(350ms);
+    opacity: 0;
+    z-index: -1;
+    @include media-breakpoint-down(md) {
+      opacity: 1;
+    }
+  }
+}
+.navbar--animation {
+  &:before {
+    opacity: 1;
+  }
+}
+
+.navbar--menu-is-open {
+  background: $white;
+  &:before {
+    opacity: 0;
+  }
+  .navbar-toggler {
+    color: $navbar-color-hover;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $navbar-color-hover;
+      }
+    }
+  }
+}
+
+
+.navbar-nav {
+  .nav-item {
+    &+.nav-item {
+      .nav-link {
+        @include media-breakpoint-down(sm) {
+          border-top: 2px solid $navbar-mobile-border-color;
+        }
+      }
+    }
+    &.active {
+      .nav-link {
+        color: $navbar-color-hover;
+      }
+    }
+    .nav-link {
+      color: $navbar-color;
+      font-size: $navbar-font-size;
+      @include media-breakpoint-up(md) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+      &:hover, &:focus {
+        color: $navbar-color-hover;
+      }
+    }
+  }
+}
+
+
+
+.navbar-brand {
+  width: 140px;
+  @include media-breakpoint-down(sm) {
+    width: 43px;
+    margin: 0 auto;
+  }
+}
+.navbar-brand__logo {
+  display: block;
+  width: 100%;
+}
+
+.navbar-toggler {
+  color: $white;
+  position: absolute;
+  left: 5px;
+  top: 22px;
+  border: none;
+  font-size: 18px;
+}

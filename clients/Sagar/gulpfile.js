@@ -5,6 +5,7 @@ var gulp                   = require('gulp'),
     autoprefixer           = require('gulp-autoprefixer'),
     cleanCSS               = require('gulp-clean-css'),
     uglify                 = require('gulp-uglify'),
+    concat                 = require('gulp-concat'),
     pump                   = require('pump'),
     rigger                 = require('gulp-rigger'),
     imagemin               = require('gulp-imagemin'),
@@ -41,6 +42,8 @@ var path = {
   }
 };
 
+var randomName = Math.random().toString(16).substring(2);
+
 // HTML
 gulp.task('html:build', task.html = function () {
   gulp.src(path.src.html)
@@ -59,7 +62,7 @@ gulp.task('sass:build', function () {
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  //.pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(path.build.stylesheets))
   .pipe(browserSync.reload({
     stream: true
@@ -69,11 +72,21 @@ gulp.task('sass:build', function () {
 // JAVASCRIPT
 gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
-  //.pipe(uglify())
+  .pipe(uglify())
   .pipe(gulp.dest(path.build.javascript))
   .pipe(browserSync.reload({
     stream: true
   }));
+});
+
+gulp.task('javascript:vendors', task.javascript = function () {
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js'])
+    .pipe(concat('vendors.min.js'))
+    .pipe(gulp.dest(path.build.javascript));
 });
 
 // FONTS
@@ -117,7 +130,7 @@ gulp.task('server:build', function() {
         bottom: '0'
       }
     },
-    open: true
+    open: false
   });
 });
 
@@ -128,6 +141,7 @@ gulp.task('build', [
   'server:build',
   'img:build',
   'javascript:build',
+  'javascript:vendors',
   'fonts:build'
 ]);
 

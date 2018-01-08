@@ -1,0 +1,122 @@
+/* GALLERY */
+
+$slick-arrow-size: 58px;
+$slick-arrow-bg-hover: #edf1fc;
+$slick-arrow-color: #5e1ecf;
+$slick-dot-color: #b5bcd6;
+$slick-dot-size: 13px;
+
+.gallery-logo {
+  font-size: 50px;
+  color: $white;
+  padding: 40px 10px;
+  background: url('../images/temp/bg-icon.svg') no-repeat 50% 50% / auto;
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto 170px auto;
+  text-align: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 35px;
+  }
+}
+
+.gallery {
+}
+
+.gallery-control {
+  @extend .list-unstyled, .d-flex, .justify-content-center;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 90px;
+  }
+}
+.gallery-control__item {
+  &+.gallery-control__item {
+    margin-left: 18px;
+  }
+}
+.gallery-control__btn {
+  width: $slick-arrow-size;
+  height: $slick-arrow-size;
+  border-radius: 50%;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+  @include gradient-y($start-color: #edf1fc, $end-color: #edf1fc, $start-percent: 0%, $end-percent: 100%);
+  color: $slick-arrow-color;
+  @include transition(0ms);
+  &:before {
+    @extend .font-icons;
+  }
+  &:hover, &:focus {
+    color: $white;
+    @include gradient-y($start-color: #b851f1, $end-color: #501ece, $start-percent: 0%, $end-percent: 100%);
+  }
+}
+.gallery-control__btn--prev {
+  @extend .sagar-icon-arrow-left;
+}
+.gallery-control__btn--next {
+  @extend .sagar-icon-arrow-right;
+}
+
+.slick-dots {
+  bottom: auto;
+  top: 215px;
+  @extend .d-flex, .justify-content-between;
+  background-repeat: repeat-x;
+  background-size: 16px 4px;
+  background-image: radial-gradient(circle, $slick-dot-color 1px, transparent 2px);
+  >li {
+    padding: 0;
+    width: 30px;
+    height: $slick-dot-size;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -5px;
+    background: $white;
+    text-align: center;
+    z-index: 100;
+    &.slick-active {
+      margin-top: -16px;
+      >button {
+        width: 32px;
+        height: 32px;
+        @include gradient-y($start-color: #b851f1, $end-color: #501ece, $start-percent: 0%, $end-percent: 100%);
+        position: relative;
+        &:after, &:before {
+          content: '';
+          border-radius: 50%;
+          opacity: 1;
+        }
+        &:before {
+          width: 26px;
+          height: 26px;
+          background: $white;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:after {
+          width: 11px;
+          height: 11px;
+          @include gradient-y($start-color: #b851f1, $end-color: #501ece, $start-percent: 0%, $end-percent: 100%);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    >button {
+      @include transition(0ms);
+      padding: 0;
+      width: $slick-dot-size;
+      height: $slick-dot-size;
+      border-radius: 50%;
+      background: $slick-dot-color;
+      margin: 0 auto;
+      &:before {
+        color: transparent;
+      }
+    }
+  }
+}

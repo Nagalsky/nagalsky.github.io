@@ -1,0 +1,31 @@
+/* ICON BOX */
+
+.icon-box-holder {
+  display: block;
+  text-align: center;
+  margin-bottom: 45px;
+  &:hover, &:focus {
+    .icon-box__text {
+      color: $pink;
+      border-bottom: 1px dotted $link-color;
+    }
+  }
+}
+
+.icon-box__text {
+  color: $gray-bold;
+}
+
+.icon-box {
+  font-size: 50px;
+  color: $white;
+  padding: 30px 10px;
+  background: url('../images/temp/bg-icon.svg') no-repeat 50% 50% / auto;
+  max-width: 110px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 25px;
+  }
+}
