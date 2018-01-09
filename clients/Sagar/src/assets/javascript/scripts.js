@@ -33,7 +33,20 @@ $(document).ready(function(){
 	        dots: false
 	      }
 	    }
-  ]
+  	]
+  });
+
+	/* ======== Scroll to section ======== */
+	$('[data-click=scroll-to-target]').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var target = $(this).attr('href');
+    var headerHeight = 75;
+    $('html, body').animate({
+        scrollTop: $(target).offset().top - headerHeight
+    }, 500);
+		$('.navbar').removeClass('navbar--menu-is-open');
+		$('.navbar-collapse').removeClass('show');
   });
 
 
