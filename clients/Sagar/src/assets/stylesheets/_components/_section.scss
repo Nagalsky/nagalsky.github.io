@@ -37,9 +37,21 @@ $skew-mobile-size: 80px;
   margin-top: -$skew-hero-size;
   padding-top: $skew-hero-size * 2;
   @include media-breakpoint-down(md) {
-    padding-top: 360px;
+    padding-top: 100px;
   }
 }
+
+.section--skew-first {
+  margin-top: -$skew-size;
+  padding-top: $skew-size;
+  @include media-breakpoint-up(md) {
+    padding-top: 260px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: -$skew-size / 1.5;
+  }
+}
+
 .section--hero__img {
   position: absolute;
   top: 0;

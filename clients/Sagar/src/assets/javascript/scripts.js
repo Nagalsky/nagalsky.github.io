@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 	/* ======== Click gallery initial ======== */
 	$('.gallery').slick({
-    autoplay: true,
+    autoplay: false,
 		autoplaySpeed: 3000,
 		arrows: true,
 		dots: true,
