@@ -1,7 +1,7 @@
 /* SECTION */
 
 $skew-hero-size: 200px;
-$skew-size: 160px;
+$skew-size: 130px;
 $skew-mobile-size: 80px;
 
 .section {
@@ -37,14 +37,14 @@ $skew-mobile-size: 80px;
   margin-top: -$skew-hero-size;
   padding-top: $skew-hero-size * 2;
   @include media-breakpoint-down(md) {
-    padding-top: 100px;
+    padding-top: 300px;
   }
 }
 
 .section--skew-first {
   margin-top: -$skew-size;
-  padding-top: $skew-size;
-  @include media-breakpoint-up(md) {
+  padding-top: calc(#{$skew-size} + 20px);
+  @include media-breakpoint-up(lg) {
     padding-top: 260px;
   }
   @include media-breakpoint-down(md) {

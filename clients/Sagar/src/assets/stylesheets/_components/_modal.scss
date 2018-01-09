@@ -14,6 +14,16 @@ $modal-close-color: #b5bcd6;
     text-shadow: none;
     font-size: 22px;
     opacity: 1;
+    border-radius: 50%;
+    @extend .d-flex, .justify-content-center, .align-items-center;
+    @include media-breakpoint-down(sm) {
+      background: rgba($white, .7);
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      right: 15px;
+    }
     &:hover, &:focus {
       color: $muted-bold;
     }
