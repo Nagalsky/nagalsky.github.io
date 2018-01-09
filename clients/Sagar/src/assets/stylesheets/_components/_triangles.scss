@@ -1,0 +1,73 @@
+/* TRIANGLES */
+
+.triangle {
+	display: none;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	@include media-breakpoint-up(lg) {
+		display: block;
+	}
+}
+
+.triangle--has-shadow {
+	box-shadow: 0px 0px 2px 2px rgba(#4c43b5, .3);
+}
+
+.triangle--first {
+	left: 8%;
+	top: 24%;
+	max-width: 120px;
+	@include rotate(40deg);
+}
+.triangle--second {
+	left: 3%;
+	bottom: 1%;
+	max-width: 70px;
+	@include rotate(40deg);
+}
+.triangle--third {
+	right: 2%;
+	bottom: -5%;
+	max-width: 160px;
+	@include rotate(15deg);
+	@include media-breakpoint-up(xl) {
+		max-width: 210px;
+	}
+}
+.triangle--fourth {
+	max-width: 110px;
+	@include rotate(40deg);
+	right: 7%;
+	bottom: 3%;
+}
+.triangle--fifth {
+	max-width: 120px;
+	@include rotate(40deg);
+	left: 7%;
+	top: 18%;
+}
+.triangle--sixth {
+	max-width: 150px;
+	@include rotate(2deg);
+	left: -40px;
+	top: 11%;
+}
+.triangle--seventh {
+	max-width: 160px;
+	@include rotate(-8deg);
+	right: -80px;
+	bottom: 18%;
+}
+.triangle--eighth {
+	max-width: 120px;
+	@include rotate(40deg);
+	left: 2%;
+	top: 42%;
+}
+.triangle--ninth {
+	max-width: 130px;
+	@include rotate(40deg);
+	right: 2%;
+	bottom: 40%;
+}

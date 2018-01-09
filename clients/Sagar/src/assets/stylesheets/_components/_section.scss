@@ -1,15 +1,19 @@
 /* SECTION */
 
-$skew-hero-size: 240px;
+$skew-hero-size: 200px;
 $skew-size: 160px;
-$skew-mobile-size: 60px;
+$skew-mobile-size: 80px;
 
 .section {
   position: relative;
-  z-index: 10;
+  //z-index: 10;
   padding: $skew-size 0;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding: $skew-mobile-size 0;
+  }
+  .container, .section--skew__content {
+    z-index: 100;
+    position: relative;
   }
 }
 
