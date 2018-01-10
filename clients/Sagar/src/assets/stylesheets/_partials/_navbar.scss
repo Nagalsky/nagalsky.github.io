@@ -7,13 +7,15 @@ $navbar-mobile-border-color: $muted-thin;
 $navbar-gradient-start-color: #4e1ecd;
 $navbar-gradient-end-color: #b555ed;
 $navbar-height: 75px;
-$navbar-height-sm: 73px;
+$navbar-height-sm: auto;
 
 
 .navbar {
   @include transition(350ms);
   min-height: $navbar-height;
   @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    padding-bottom: 0;
     min-height: $navbar-height-sm;
   }
   &:before {
@@ -31,9 +33,9 @@ $navbar-height-sm: 73px;
       opacity: 1;
     }
   }
-  .collapsing {
+  /*.collapsing {
     transition: none !important;
-  }
+  }*/
 }
 .navbar--animation {
   &:before {
@@ -41,7 +43,7 @@ $navbar-height-sm: 73px;
   }
 }
 
-.navbar--menu-is-open {
+/*.navbar--menu-is-open {
   background: $white;
   &:before {
     opacity: 0;
@@ -56,7 +58,7 @@ $navbar-height-sm: 73px;
       }
     }
   }
-}
+}*/
 
 
 
@@ -97,8 +99,8 @@ $navbar-height-sm: 73px;
 .navbar-brand {
   width: 140px;
   @include media-breakpoint-down(sm) {
-    width: 43px;
-    height: 56px;
+    width: 34px;
+    //height: 56px;
     margin: 0 auto;
   }
 }
@@ -111,7 +113,7 @@ $navbar-height-sm: 73px;
   color: $white;
   position: absolute;
   left: 5px;
-  top: 20px;
+  top: 6px;
   border: none;
   font-size: 24px;
 }

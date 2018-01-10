@@ -87,7 +87,9 @@ gulp.task('javascript:vendors', task.javascript = function () {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/slick-carousel/slick/slick.min.js'])
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/scrolldir/dist/scrolldir.auto.min.js',
+    'node_modules/scrolldir/dist/scrolldir.min.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));
 });
