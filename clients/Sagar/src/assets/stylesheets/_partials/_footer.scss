@@ -45,29 +45,26 @@ $footer-fs: 16px;
 .footer__list {
   @extend .list-unstyled, .d-flex;
   @include media-breakpoint-down(sm) {
-    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .footer__list--social {
+  margin-bottom: 10px;
   @include media-breakpoint-up(md) {
     margin-bottom: 30px !important;
   }
   .footer__list__item {
     &+.footer__list__item {
-      @include media-breakpoint-up(md) {
-        margin-left: 13px;
-      }
+      margin-left: 13px;
     }
   }
 }
 .footer__list__item {
-  @include media-breakpoint-down(sm) {
+  /*@include media-breakpoint-down(sm) {
     width: 50%;
-  }
+  }*/
   &+.footer__list__item {
-    @include media-breakpoint-up(md) {
-      margin-left: 20px;
-    }
+    margin-left: 20px;
   }
 }
 .footer__list__link {

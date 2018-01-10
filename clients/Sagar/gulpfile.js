@@ -24,21 +24,24 @@ var path = {
     stylesheets: 'dist/assets/stylesheets/',
     img: 'dist/assets/images/',
     javascript: 'dist/assets/javascript/',
-    fonts: 'dist/assets/fonts/'
+    fonts: 'dist/assets/fonts/',
+    pdf: 'dist/assets/pdf/'
   },
   src: {
     html: 'src/*.html',
     stylesheets: 'src/assets/stylesheets/*.scss',
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
-    fonts: 'src/assets/fonts/**/*.*'
+    fonts: 'src/assets/fonts/**/*.*',
+    pdf: 'src/assets/pdf/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
     stylesheets: 'src/assets/stylesheets/**/*.scss',
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
-    fonts: 'src/assets/fonts/**/*.*'
+    fonts: 'src/assets/fonts/**/*.*',
+    pdf: 'src/assets/pdf/**/*.*'
   }
 };
 
@@ -98,6 +101,14 @@ gulp.task('fonts:build', task.fonts = function () {
   }));
 });
 
+// PDF
+gulp.task('pdf:build', task.pdf = function () {
+  gulp.src(path.src.pdf)
+  .pipe(gulp.dest(path.build.pdf))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
 
 
 //Images
@@ -142,7 +153,8 @@ gulp.task('build', [
   'img:build',
   'javascript:build',
   'javascript:vendors',
-  'fonts:build'
+  'fonts:build',
+  'pdf:build'
 ]);
 
 gulp.task('watch', function () {
@@ -160,6 +172,9 @@ gulp.task('watch', function () {
   });
   watch([path.watch.fonts], function (event, cb) {
     gulp.start('fonts:build');
+  });
+  watch([path.watch.pdf], function (event, cb) {
+    gulp.start('pdf:build');
   });
 });
 
