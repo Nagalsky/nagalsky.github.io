@@ -49,6 +49,25 @@ $(document).ready(function(){
 		$('.navbar-collapse').removeClass('show');
   });
 
+	/* ======== Tabs call action ======== */
+	$('#ressy-tab-toggle').on('click', function() {
+		$('.nav-link').removeClass('active');
+		$('.ressy-tab-link').addClass('active');
+		$('.tab-pane').removeClass('show active');
+		$('#ressy-tab').addClass('show active');
+	});
+	$('#multa-tab-toggle').on('click', function() {
+		$('.nav-link').removeClass('active');
+		$('.multa-tab-link').addClass('active');
+		$('.tab-pane').removeClass('show active');
+		$('#multa-tab').addClass('show active');
+	});
+	$('#metaworks-tab-toggle').on('click', function() {
+		$('.nav-link').removeClass('active');
+		$('.metaworks-tab-link').addClass('active');
+		$('.tab-pane').removeClass('show active');
+		$('#metaworks-tab').addClass('show active');
+	});
 
 });
 

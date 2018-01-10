@@ -17,6 +17,13 @@ $skew-mobile-size: 80px;
   }
 }
 
+.section--md {
+  @include media-breakpoint-up(md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 
 .section--skew-right {
   @include skew(0deg, 10deg);
@@ -87,5 +94,11 @@ $skew-mobile-size: 80px;
 .section--pre-footer {
   @include media-breakpoint-up(lg) {
     padding-bottom: 240px;
+  }
+}
+.section--pre-footer-mobile {
+  @include media-breakpoint-down(md) {
+    margin-bottom: -80px;
+    padding-bottom: calc(#{$skew-mobile-size} + 80px);
   }
 }
