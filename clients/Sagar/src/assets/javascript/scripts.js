@@ -51,3 +51,13 @@ $(document).ready(function(){
 
 
 });
+
+
+/* ======== Headroom animation initial ======== */
+(function() {
+    var header = new Headroom(document.querySelector(".navbar"), {
+      tolerance: 5,
+      offset : 205
+    });
+    header.init();
+}());
