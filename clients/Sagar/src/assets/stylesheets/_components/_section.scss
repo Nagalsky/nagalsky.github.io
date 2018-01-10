@@ -24,11 +24,25 @@ $skew-mobile-size: 80px;
     @include skew(0deg, -10deg);
   }
 }
+.section--skew-md-right {
+  @include skew(0deg, 10deg);
+  .section--skew__content {
+    @include skew(0deg, -10deg);
+  }
+}
 
 .section--skew-left {
   @include skew(0deg, -10deg);
   .section--skew__content {
     @include skew(0deg, 10deg);
+  }
+}
+.section--skew-md-left {
+  @include media-breakpoint-up(md) {
+    @include skew(0deg, -10deg);
+    .section--skew__content {
+      @include skew(0deg, 10deg);
+    }
   }
 }
 
