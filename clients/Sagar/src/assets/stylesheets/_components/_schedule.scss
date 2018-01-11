@@ -23,7 +23,6 @@ $schedule-icon-color: $gray-light;
   background: $schedule-bg;
   border-radius: $schedule-radius;
   padding: 15px 20px;
-  width: 100%;
   @include media-breakpoint-up(lg) {
     padding: 15px 30px;
   }
@@ -47,10 +46,9 @@ $schedule-icon-color: $gray-light;
 }
 
 .schedule__body__item {
+  flex-shrink: 0;
   @include text-truncate();
   &+.schedule__body__item {
-    @include media-breakpoint-down(sm) {
-      margin-left: 10px;
-    }
+    margin-left: 10px;
   }
 }
