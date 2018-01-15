@@ -15,5 +15,25 @@ $(document).ready(function(){
 		pauseOnHover: false
   });
 
+	$('.carousel-with-thumbnails').slick({
+    autoplay: false,
+		fade: true,
+		speed: 700,
+		arrows: false,
+		dots: false,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		asNavFor: '.carousel-nav'
+  });
+	$('.carousel-nav').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: '.carousel-with-thumbnails',
+	  dots: false,
+		arrows: false,
+	  centerMode: false,
+	  focusOnSelect: true
+	});
+
 
 });
