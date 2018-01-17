@@ -68,7 +68,7 @@ gulp.task('sass:build', function () {
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
+  //.pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(path.build.stylesheets))
   .pipe(browserSync.reload({
     stream: true
