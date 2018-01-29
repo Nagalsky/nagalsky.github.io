@@ -1,0 +1,24 @@
+/* BUTTONS */
+
+$btn-fs: 16px;
+
+.btn {
+  text-transform: uppercase;
+  padding: 11px 40px;
+  @include media-breakpoint-up(md) {
+    font-size: $btn-fs;
+  }
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-warning {
+    @include button-variants($bg: $warning, $color: $white);
+  }
+  &.btn-block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &.btn-lg {
+    padding: 17px 61px;
+  }
+}

@@ -1,0 +1,1 @@
+$(document).ready(function(){AOS.init({disable:"mobile"}),$(".scrollbar").mCustomScrollbar({mouseWheel:{preventDefault:!1}})});
