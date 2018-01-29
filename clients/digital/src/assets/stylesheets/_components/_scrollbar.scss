@@ -15,10 +15,14 @@
 }
 
 .scrollbar__sticky {
-  padding-top: 110px;
+  @include media-breakpoint-up(lg) {
+    padding-top: 110px;
+  }
 }
 
+
 .scrollbar__item {
+  width: 100%;
   &+.scrollbar__item {
     margin-top: 174px;
   }
