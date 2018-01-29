@@ -12,6 +12,7 @@ $(document).ready(function(){
     }
   });
 
+  //Initial Slick slider
   $.fn.randomize = function (selector) {
     var $elems = selector ? $(this).find(selector) : $(this).children(),
         $parents = $elems.parent();
