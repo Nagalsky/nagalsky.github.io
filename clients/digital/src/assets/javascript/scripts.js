@@ -12,8 +12,29 @@ $(document).ready(function(){
     }
   });
 
-  /*$(".sticky").stick_in_parent({
-    offset_top: 150
-  });*/
+  $.fn.randomize = function (selector) {
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
+
+    $parents.each(function () {
+        $(this).children(selector).sort(function (childA, childB) {
+            // * Prevent last slide from being reordered
+            if($(childB).index() !== $(this).children(selector).length - 1) {
+                return Math.round(Math.random()) - 0.5;
+            }
+        }.bind(this)).detach().appendTo(this);
+    });
+
+    return this;
+  };
+
+  $(".quote-carousel").randomize().slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    fade: true,
+    pauseOnFocus: false,
+    pauseOnHover: false
+  });
 
 });
