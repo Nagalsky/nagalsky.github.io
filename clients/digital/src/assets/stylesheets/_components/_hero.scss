@@ -16,3 +16,19 @@
   }
   padding: 60px 0;
 }
+
+.hero-sm {
+  padding: 60px 0;
+  @include media-breakpoint-up(md) {
+    min-height: 396px;
+  }
+}
+.hero-xs {
+  padding: 20px 0;
+  @include media-breakpoint-up(md) {
+    min-height: 200px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 60px 0;
+  }
+}

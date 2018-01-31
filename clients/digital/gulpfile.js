@@ -94,10 +94,10 @@ gulp.task('vendors:build', task.vendors = function () {
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/sticky-kit/dist/sticky-kit.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'node_modules/aos/dist/aos.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));

@@ -5,13 +5,6 @@ $(document).ready(function(){
     disable: 'mobile'
   });
 
-  //Scroll initail
-  $('.scrollbar').mCustomScrollbar({
-  	mouseWheel:{
-      preventDefault: false
-    }
-  });
-
   //Initial Slick slider
   $.fn.randomize = function (selector) {
     var $elems = selector ? $(this).find(selector) : $(this).children(),
@@ -28,7 +21,6 @@ $(document).ready(function(){
 
     return this;
   };
-
   $(".quote-carousel").randomize().slick({
     autoplay: true,
     autoplaySpeed: 4000,
@@ -37,5 +29,10 @@ $(document).ready(function(){
     pauseOnFocus: false,
     pauseOnHover: false
   });
+
+  $(".carousel").slick();
+
+  //Sticky block Initial
+  $(".sticky").stick_in_parent();
 
 });
