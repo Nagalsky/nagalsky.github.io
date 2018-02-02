@@ -75,7 +75,7 @@ gulp.task('sass:build', function () {
 // JAVASCRIPT
 gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(gulp.dest(path.build.javascript))
   .pipe(browserSync.reload({
     stream: true

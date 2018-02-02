@@ -1,1 +1,74 @@
-$(document).ready(function(){AOS.init({disable:"mobile"}),$.fn.randomize=function(t){return(t?$(this).find(t):$(this).children()).parent().each(function(){$(this).children(t).sort(function(a,e){if($(e).index()!==$(this).children(t).length-1)return Math.round(Math.random())-.5}.bind(this)).detach().appendTo(this)}),this},$(".quote-carousel").randomize().slick({autoplay:!0,autoplaySpeed:4e3,arrows:!1,fade:!0,pauseOnFocus:!1,pauseOnHover:!1}),$(".carousel").slick(),$(".sticky").stick_in_parent(),$("[data-click=scroll-to-target]").on("click",function(t){t.preventDefault(),t.stopPropagation();var a=$(this).attr("href");$(".navbar-collapse").removeClass("show"),$(".navbar-toggle").addClass("collapsed"),$("html, body").animate({scrollTop:$(a).offset().top},500)})});
+$(document).ready(function(){
+
+  //Scroll animation initial https://github.com/michalsnik/aos
+  AOS.init({
+    disable: 'mobile'
+  });
+
+  //Initial Slick slider
+  $.fn.randomize = function (selector) {
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
+
+    $parents.each(function () {
+        $(this).children(selector).sort(function (childA, childB) {
+            // * Prevent last slide from being reordered
+            if($(childB).index() !== $(this).children(selector).length - 1) {
+                return Math.round(Math.random()) - 0.5;
+            }
+        }.bind(this)).detach().appendTo(this);
+    });
+
+    return this;
+  };
+  $(".quote-carousel").randomize().slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    fade: true,
+    pauseOnFocus: false,
+    pauseOnHover: false
+  });
+
+  $(".carousel").slick();
+
+  //Sticky block Initial
+  $(".sticky").stick_in_parent();
+
+  //Scroll to element
+  $('[data-click=scroll-to-target]').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var target = $(this).attr('href');
+    $('.navbar-collapse').removeClass('show');
+    $('.navbar-toggle').addClass('collapsed');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+  });
+
+  //Rotate logos
+  function rotateLogosFunction () {
+    var yourImages = ['assets/images/temp/facebook.svg', 'assets/images/temp/yahoo.svg','assets/images/temp/hubspot.svg','assets/images/temp/snapchat.svg', 'assets/images/temp/crimtan.svg', 'assets/images/temp/pinterest.svg', 'assets/images/temp/nielsen.svg', 'assets/images/temp/verve.svg', 'assets/images/temp/modemedia.svg', 'assets/images/temp/flyer.svg', 'assets/images/temp/infectious.svg', 'assets/images/temp/bbc.svg'];
+
+    var imageArr = yourImages.map(function (src) {
+      return {
+        src: src,
+        selected: false
+      }
+    });
+
+    $(".img-rotate").each( function(index, $this){
+      var freeImages = imageArr.filter(function (item) {
+        return item.selected === false;
+      })
+      var randomImage = Math.floor(Math.random()*freeImages.length);
+      var item = freeImages[randomImage];
+      item.selected = true;
+      $($this).attr("src", item.src);
+    });
+
+  }
+  setInterval(rotateLogosFunction, 4000);
+
+});
