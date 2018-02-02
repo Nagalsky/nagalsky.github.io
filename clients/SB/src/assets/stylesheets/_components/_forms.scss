@@ -1,0 +1,41 @@
+/* FORMS */
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+.form-group {
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include media-breakpoint-up(sm) {
+		margin-bottom: 40px;
+	}
+}
+
+.form-check {
+	padding-left: 0;
+}
+
+.form-check-label {
+	display: flex;
+	cursor: pointer;
+	padding: 20px 0;
+	background: $white;
+	border-top: 1px solid $silver;
+	border-bottom: 1px solid $silver;
+	font-weight: $font-bold;
+	@include media-breakpoint-up(sm) {
+		font-size: 18px;
+		padding: 30px 0;
+	}
+	&:hover {
+		background: $muted;
+	}
+}
+
+.form-check-input {
+	position: static;
+	margin: 0;
+}

@@ -1,0 +1,18 @@
+/* BUTTONS */
+
+.btn {
+  border-radius: 0;
+  &:hover, &:focus, &:active {
+    box-shadow: none !important;
+  }
+  &.btn-warning {
+    @include button-variants($bg: $warning, $color: $white);
+  }
+  &.btn-lg {
+    @include media-breakpoint-up(sm) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      font-size: 18px;
+    }
+  }
+}
