@@ -18,6 +18,9 @@ body {
 	background-attachment: fixed;
 }
 
+.wrapper {
+	min-height: calc(100vh - 125px);
+}
 
 .content, .wrapper, .wrapper > .container {
 	@extend .d-flex, .flex-column;
@@ -28,6 +31,10 @@ body {
 	background: $cream;
 	padding-bottom: 20px;
 	@extend .d-flex, .flex-column;
+	@include media-breakpoint-up(md) {
+		height: calc(100vh - 200px);
+		overflow-y: auto;
+	}
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

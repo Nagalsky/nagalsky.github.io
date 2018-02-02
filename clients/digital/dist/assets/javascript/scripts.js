@@ -27,6 +27,18 @@ $(document).ready(function(){
     arrows: false,
     fade: true,
     pauseOnFocus: false,
+    pauseOnHover: false,
+    draggable: false,
+    swipe: false,
+    touchMove: false
+  });
+
+  $(".logos-carousel").randomize().slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    fade: true,
+    pauseOnFocus: false,
     pauseOnHover: false
   });
 
@@ -48,7 +60,7 @@ $(document).ready(function(){
   });
 
   //Rotate logos
-  function rotateLogosFunction () {
+  /*function rotateLogosFunction () {
     var yourImages = ['assets/images/temp/facebook.svg', 'assets/images/temp/yahoo.svg','assets/images/temp/hubspot.svg','assets/images/temp/snapchat.svg', 'assets/images/temp/crimtan.svg', 'assets/images/temp/pinterest.svg', 'assets/images/temp/nielsen.svg', 'assets/images/temp/verve.svg', 'assets/images/temp/modemedia.svg', 'assets/images/temp/flyer.svg', 'assets/images/temp/infectious.svg', 'assets/images/temp/bbc.svg'];
 
     var imageArr = yourImages.map(function (src) {
@@ -69,6 +81,6 @@ $(document).ready(function(){
     });
 
   }
-  setInterval(rotateLogosFunction, 4000);
+  setInterval(rotateLogosFunction, 4000);*/
 
 });
