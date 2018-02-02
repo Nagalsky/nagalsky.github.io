@@ -13,8 +13,8 @@
 <body>
 
 	<header class="header fixed-top">
-	  <nav class="navbar navbar-expand-md navbar--top d-none d-md-flex">
-	    <ul class="navbar-nav ml-auto">
+	  <nav class="navbar navbar-expand-md navbar--top d-none d-lg-flex">
+	    <ul class="navbar-nav ml-auto d-none d-lg-flex">
 	      <li class="nav-item">
 	        <a class="nav-link digital-icon-facebook" href="#"></a>
 	      </li>
@@ -49,17 +49,18 @@
 	    </ul>
 	  </nav>
 	
-	  <nav class="navbar navbar--bottom navbar-expand-lg px-lg-5">
+	  <nav class="navbar navbar--bottom navbar-expand-lg px-xl-5">
 	    <a class="navbar-brand" href="#">
-	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-md-block" alt="">
-	      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-md-none" alt="">
+	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-lg-block" alt="">
+	      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-lg-none" alt="">
 	    </a>
+	    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-md-inline-flex d-lg-none float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
 	    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggle__icon"></span>
 	    </button>
 	
 	    <div class="collapse navbar-collapse" id="navbarContent">
-	      <ul class="navbar-nav d-flex d-md-none">
+	      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-sm-0">
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle dropdown-toggle--flag dropdown-toggle--no-arrow d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
 	            <img src="assets/images/flags/US.svg" class="navbar__flag mr-3" alt=""> English
@@ -75,7 +76,7 @@
 	        </li>
 	      </ul>
 	
-	      <ul class="navbar-nav navbar-nav--main ml-lg-5 mr-auto">
+	      <ul class="navbar-nav navbar-nav--main mr-0 ml-lg-5">
 	        <li class="nav-item">
 	          <a class="nav-link" href="#">Geolocation</a>
 	        </li>
@@ -117,6 +118,7 @@
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	          </div>
 	        </li>
 	        <li class="nav-item">
@@ -124,18 +126,7 @@
 	        </li>
 	      </ul>
 	
-	      <div class="form-group navbar-form-group mb-2 mb-lg-0">
-	        <select class="form-control" id="">
-	          <option value="">Pricing Request</option>
-	          <option>1</option>
-	          <option>2</option>
-	          <option>3</option>
-	          <option>4</option>
-	          <option>5</option>
-	        </select>
-	      </div><!--from-group-->
-	
-	      <ul class="navbar-nav d-flex flex-row d-md-none">
+	      <ul class="navbar-nav d-flex flex-row d-lg-none flex-1">
 	        <li class="nav-item">
 	          <a class="nav-link digital-icon-facebook" href="#"></a>
 	        </li>
@@ -156,13 +147,15 @@
 	        </li>
 	      </ul>
 	    </div><!--collapse-->
+	
+	    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-lg-inline-flex float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
 	  </nav>
 	</header>
 
 
 	<main>
 
-		<section class="section hero-xs has-bg has-bg--fixed d-flex align-items-end has-overlay has-overlay--primary has-overlay--primary-thin" style="background-image: url('assets/images/temp/Bigstock_115477937.jpg');">
+		<section class="section hero-xs has-bg has-bg--fixed has-overlay has-overlay--primary-thin d-flex align-items-end has-overlay has-overlay--primary has-overlay--primary-thin" style="background-image: url('assets/images/temp/Bigstock_115477937.jpg');">
 			<div class="container">
 				<h1 class="text-white">Resource Center</h1>
 			</div><!--container-->
@@ -272,7 +265,46 @@
 		</section><!--section-->
 
 
+		<section class="section has-bg has-overlay has-overlay--primary-bold" id="scroll-anchor" style="background-image: url('assets/images/temp/Bigstock_84213875.jpg');">
+			<div class="container">
+				<h2 class="text-white mb-5">Pricing Request</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+						<p class="lead--md text-white">Digital Element pricing is based on two variables: data requested and estimated monthly volumes. Please contact us so that we can learn more about your specific needs.</p>
+					</div><!--col-->
 
+					<div class="col-lg-4 offset-lg-3 col-md-6">
+						<form action="">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6">
+										<input type="text" class="form-control" placeholder="First Name">
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6">
+										<input type="text" class="form-control" placeholder="Last Name">
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Company Name">
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email Address">
+							</div><!--form-group-->
+
+							<button type="submit" class="btn btn-warning btn-lg">SUBMIT <i class="digital-icon-angle-right"></i></button>
+						</form>
+					</div><!--col-->
+				</div><!--row-->
+			</div><!--container-->
+		</section><!--section-->
 	</main>
 
 

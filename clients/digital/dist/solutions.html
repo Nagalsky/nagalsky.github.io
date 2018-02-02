@@ -13,8 +13,8 @@
 <body>
 
 	<header class="header fixed-top">
-	  <nav class="navbar navbar-expand-md navbar--top d-none d-md-flex">
-	    <ul class="navbar-nav ml-auto">
+	  <nav class="navbar navbar-expand-md navbar--top d-none d-lg-flex">
+	    <ul class="navbar-nav ml-auto d-none d-lg-flex">
 	      <li class="nav-item">
 	        <a class="nav-link digital-icon-facebook" href="#"></a>
 	      </li>
@@ -49,17 +49,18 @@
 	    </ul>
 	  </nav>
 	
-	  <nav class="navbar navbar--bottom navbar-expand-lg px-lg-5">
+	  <nav class="navbar navbar--bottom navbar-expand-lg px-xl-5">
 	    <a class="navbar-brand" href="#">
-	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-md-block" alt="">
-	      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-md-none" alt="">
+	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-lg-block" alt="">
+	      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-lg-none" alt="">
 	    </a>
+	    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-md-inline-flex d-lg-none float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
 	    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggle__icon"></span>
 	    </button>
 	
 	    <div class="collapse navbar-collapse" id="navbarContent">
-	      <ul class="navbar-nav d-flex d-md-none">
+	      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-sm-0">
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle dropdown-toggle--flag dropdown-toggle--no-arrow d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
 	            <img src="assets/images/flags/US.svg" class="navbar__flag mr-3" alt=""> English
@@ -75,7 +76,7 @@
 	        </li>
 	      </ul>
 	
-	      <ul class="navbar-nav navbar-nav--main ml-lg-5 mr-auto">
+	      <ul class="navbar-nav navbar-nav--main mr-0 ml-lg-5">
 	        <li class="nav-item">
 	          <a class="nav-link" href="#">Geolocation</a>
 	        </li>
@@ -117,6 +118,7 @@
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	            <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            <a class="dropdown-item" href="#">Lorem ipsum</a>
 	          </div>
 	        </li>
 	        <li class="nav-item">
@@ -124,18 +126,7 @@
 	        </li>
 	      </ul>
 	
-	      <div class="form-group navbar-form-group mb-2 mb-lg-0">
-	        <select class="form-control" id="">
-	          <option value="">Pricing Request</option>
-	          <option>1</option>
-	          <option>2</option>
-	          <option>3</option>
-	          <option>4</option>
-	          <option>5</option>
-	        </select>
-	      </div><!--from-group-->
-	
-	      <ul class="navbar-nav d-flex flex-row d-md-none">
+	      <ul class="navbar-nav d-flex flex-row d-lg-none flex-1">
 	        <li class="nav-item">
 	          <a class="nav-link digital-icon-facebook" href="#"></a>
 	        </li>
@@ -156,13 +147,15 @@
 	        </li>
 	      </ul>
 	    </div><!--collapse-->
+	
+	    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-lg-inline-flex float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
 	  </nav>
 	</header>
 
 
 	<main>
 
-		<section class="section hero-sm has-bg has-bg--fixed d-flex align-items-center has-overlay has-overlay--primary has-overlay--primary-thin" style="background-image: url('assets/images/temp/510970768.jpg');">
+		<section class="section hero-sm has-bg has-bg--fixed has-overlay has-overlay--primary-thin d-flex align-items-center has-overlay has-overlay--primary has-overlay--primary-thin" style="background-image: url('assets/images/temp/510970768.jpg');">
 			<div class="container">
 				<h1 class="text-white">Solutions</h1>
 			</div><!--container-->
@@ -175,73 +168,73 @@
 				<h2 class="text-center mb-md-5">Digital Element Solutions</h2>
 
 				<div class="panel d-md-flex flex-row">
-					<div class="panel__body flex-1 order-md-2">
-						<h4>NetAcuity Standard</h4>
-						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
-						<a href="#" class="btn btn-warning">MORE</a>
-					</div><!--panel__body-->
-					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-md-1" style="background-image: url('assets/images/temp/pattern.png');">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1" style="background-image: url('assets/images/temp/pattern.png');">
 						<img src="assets/images/temp/panel-logo-1.svg" class="img-fluid d-block mx-auto" alt="">
 					</div><!--panel__body-->
+					<div class="panel__body flex-1">
+						<h4>NetAcuity Standard</h4>
+						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
+						<a href="#" class="btn btn-warning">MORE</a>
+					</div><!--panel__body-->
 				</div><!--panel-->
 
 
 				<div class="panel d-md-flex flex-row">
-					<div class="panel__body flex-1">
-						<h4>NetAcuity Pulse</h4>
-						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
-						<a href="#" class="btn btn-warning">MORE</a>
-					</div><!--panel__body-->
-					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1" style="background-image: url('assets/images/temp/pattern.png');">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-1 order-md-2" style="background-image: url('assets/images/temp/pattern.png');">
 						<img src="assets/images/temp/panel-logo-2.svg" class="img-fluid d-block mx-auto" alt="">
 					</div><!--panel__body-->
-				</div><!--panel-->
-
-				<div class="panel d-md-flex flex-row">
-					<div class="panel__body flex-1 order-md-2">
-						<h4>NetAcuity Standard</h4>
-						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
-						<a href="#" class="btn btn-warning">MORE</a>
-					</div><!--panel__body-->
-					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-md-1" style="background-image: url('assets/images/temp/pattern.png');">
-						<img src="assets/images/temp/panel-logo-3.svg" class="img-fluid d-block mx-auto" alt="">
-					</div><!--panel__body-->
-				</div><!--panel-->
-
-				<div class="panel d-md-flex flex-row">
-					<div class="panel__body flex-1">
+					<div class="panel__body flex-1 order-2 order-md-1">
 						<h4>NetAcuity Pulse</h4>
 						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
 						<a href="#" class="btn btn-warning">MORE</a>
 					</div><!--panel__body-->
-					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1" style="background-image: url('assets/images/temp/pattern.png');">
-						<img src="assets/images/temp/panel-logo-4.svg" class="img-fluid d-block mx-auto" alt="">
-					</div><!--panel__body-->
 				</div><!--panel-->
 
 				<div class="panel d-md-flex flex-row">
-					<div class="panel__body flex-1 order-md-2">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1" style="background-image: url('assets/images/temp/pattern.png');">
+						<img src="assets/images/temp/panel-logo-1.svg" class="img-fluid d-block mx-auto" alt="">
+					</div><!--panel__body-->
+					<div class="panel__body flex-1">
 						<h4>NetAcuity Standard</h4>
 						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
 						<a href="#" class="btn btn-warning">MORE</a>
 					</div><!--panel__body-->
-					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-md-1" style="background-image: url('assets/images/temp/pattern.png');">
-						<img src="assets/images/temp/panel-logo-5.svg" class="img-fluid d-block mx-auto" alt="">
+				</div><!--panel-->
+
+
+				<div class="panel d-md-flex flex-row">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-1 order-md-2" style="background-image: url('assets/images/temp/pattern.png');">
+						<img src="assets/images/temp/panel-logo-2.svg" class="img-fluid d-block mx-auto" alt="">
+					</div><!--panel__body-->
+					<div class="panel__body flex-1 order-2 order-md-1">
+						<h4>NetAcuity Pulse</h4>
+						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
+						<a href="#" class="btn btn-warning">MORE</a>
 					</div><!--panel__body-->
 				</div><!--panel-->
 
-				<div class="card text-white bg-primary text-center text-md-left">
-				  <div class="card-body d-md-flex flex-row align-items-center">
-				    <i class="digital-icon-badge shrink-0 mr-3 display-4 mb-3 mb-md-0 d-inline-block"></i>
-						<div class="d-md-flex align-items-center">
-							<div class="flex-1 mb-4 mb-md-0">
-								<h4 class="text-white card-title">Find out more about our Pricing</h4>
-								<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
-							</div>
-							<a href="#" class="btn btn-warning btn-long shrink-0 ml-md-3">MORE</a>
-						</div>
-				  </div>
-				</div>
+				<div class="panel d-md-flex flex-row">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1" style="background-image: url('assets/images/temp/pattern.png');">
+						<img src="assets/images/temp/panel-logo-1.svg" class="img-fluid d-block mx-auto" alt="">
+					</div><!--panel__body-->
+					<div class="panel__body flex-1">
+						<h4>NetAcuity Standard</h4>
+						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
+						<a href="#" class="btn btn-warning">MORE</a>
+					</div><!--panel__body-->
+				</div><!--panel-->
+
+
+				<div class="panel d-md-flex flex-row">
+					<div class="panel__body has-bg d-flex align-items-center justify-content-center flex-1 order-1 order-md-2" style="background-image: url('assets/images/temp/pattern.png');">
+						<img src="assets/images/temp/panel-logo-2.svg" class="img-fluid d-block mx-auto" alt="">
+					</div><!--panel__body-->
+					<div class="panel__body flex-1 order-2 order-md-1">
+						<h4>NetAcuity Pulse</h4>
+						<p>Quid securi etiam tamquam eu fugiat nulla pariatur. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</p>
+						<a href="#" class="btn btn-warning">MORE</a>
+					</div><!--panel__body-->
+				</div><!--panel-->
 			</div><!--container-->
 		</section><!--section-->
 
@@ -249,18 +242,18 @@
 		<section class="section bg-gray">
 			<div class="container">
 				<h2 class="text-primary-bold mb-2">NetAcuity Developer’s Edition</h2>
-				<h3 class="text-primary-bold mb-5">Find out more about NetAcuity Developers Edition</h3>
+				<p class="text-primary-bold mb-5 lead--md">Find out more about NetAcuity Developers Edition</p>
 				<a href="#" class="btn btn-warning btn-lg">SUBMIT <i class="digital-icon-angle-right"></i></a>
 			</div><!--container-->
 		</section><!--section-->
 
 
-		<section class="section has-bg has-overlay has-overlay--primary-bold" style="background-image: url('assets/images/temp/Bigstock_84213875.jpg');">
+		<section class="section has-bg has-overlay has-overlay--primary-bold" id="scroll-anchor" style="background-image: url('assets/images/temp/Bigstock_84213875.jpg');">
 			<div class="container">
 				<h2 class="text-white mb-5">Pricing Request</h2>
 				<div class="row">
 					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-						<h3 class="text-white">Digital Element pricing is based on two variables: data requested and estimated monthly volumes. Please contact us so that we can learn more about your specific needs.</h3>
+						<p class="lead--md text-white">Digital Element pricing is based on two variables: data requested and estimated monthly volumes. Please contact us so that we can learn more about your specific needs.</p>
 					</div><!--col-->
 
 					<div class="col-lg-4 offset-lg-3 col-md-6">

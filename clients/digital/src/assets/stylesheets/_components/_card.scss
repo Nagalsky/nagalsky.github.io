@@ -29,23 +29,29 @@ $card-locked-bg: $black;
 }
 
 .card--locked {
-  @extend .font-icons, .digital-icon-lock;
-  &:before {
-    position: absolute;
-    top: 30px;
-    right: 24%;
-    border-radius: 4px;
-    width: $card-locked-size;
-    height: $card-locked-size;
-    background: $card-locked-bg;
-    @extend .d-flex, .justify-content-center, .align-items-center;
-    color: $white;
-    font-size: 28px;
-    @include media-breakpoint-down(md) {
-      top: 10px;
-      right: 36%;
+  .card-logo-holder {
+    @extend .font-icons, .digital-icon-lock;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0%;
+      transform: translate(25%, -50%);
+      border-radius: 4px;
+      width: $card-locked-size;
+      height: $card-locked-size;
+      background: $card-locked-bg;
+      @extend .d-flex, .justify-content-center, .align-items-center;
+      color: $white;
+      font-size: 28px;
     }
   }
+}
+
+.card-logo-holder {
+  position: relative;
+  max-width: 126px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card__news-img {

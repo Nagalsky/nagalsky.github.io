@@ -3,18 +3,41 @@
 $navbar-flag-size: 24px;
 $navbar-bg: $primary;
 $nav-link-color: $primary-bold;
-$navbar-toggle-color: $primary;
+$navbar-toggle-color: $white;
 
 
 .navbar {
   position: relative;
-  box-shadow: 0px 0px 2px 1px rgba($black, .2);
+  @include media-breakpoint-up(sm) {
+    box-shadow: 0px 0px 2px 1px rgba($black, .2);
+  }
+  .btn {
+    &.navbar-btn-scroll {
+      border-color: $sky !important;
+      color: $primary !important;
+      padding: 8px 9px !important;
+      border-radius: 8px !important;
+      text-transform: none !important;
+      @include media-breakpoint-down(md) {
+        color: $white !important;
+        border-color: $white !important;
+      }
+      &:hover, &:focus {
+        background: $primary !important;
+        border-color: $primary !important;
+        @include media-breakpoint-down(md) {
+          border-color: $white !important;
+        }
+      }
+    }
+  }
 }
 
 .navbar--top {
   background: $navbar-bg;
   padding-top: 4.5px;
   padding-bottom: 4.5px;
+  min-height: 20px;
   .nav-link {
     color: $white;
     font-size: 16px;
@@ -26,7 +49,7 @@ $navbar-toggle-color: $primary;
 
 .navbar--bottom {
   background: $white;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     background: $navbar-bg;
   }
   @include media-breakpoint-up(lg) {
@@ -41,7 +64,7 @@ $navbar-toggle-color: $primary;
       @include media-breakpoint-up(lg) {
         content: none !important;
       }
-      @extend .font-icons;
+      font-family: 'fontello';
       content: '\e807';
       border: none;
       width: auto;
@@ -50,13 +73,18 @@ $navbar-toggle-color: $primary;
     }
   }
   .dropdown-menu {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       background: transparent;
+    }
+    @include media-breakpoint-down(sm) {
+      max-height: 120px;
+      overflow-y: auto;
     }
   }
   .dropdown-item {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       color: $sky;
+      font-size: 16px;
       &:hover, &:focus {
         color: $white;
         background: transparent;
@@ -67,7 +95,7 @@ $navbar-toggle-color: $primary;
     &.active, &.show {
       .nav-link {
         border-bottom-color: $sky;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           border-bottom-color: $white;
           color: $sky;
         }
@@ -96,13 +124,13 @@ $navbar-toggle-color: $primary;
   }
   .nav-link {
     border-bottom: 3px solid transparent;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       border-bottom-width: 1px;
       color: $white;
     }
     &:hover {
       border-bottom-color: $sky;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         border-bottom-color: $white;
       }
     }
@@ -121,11 +149,15 @@ $navbar-toggle-color: $primary;
 
 .nav-link {
   color: $nav-link-color;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     color: $white;
+    font-size: 18px;
   }
 }
 
+.navbar-brand {
+  transition: none !important;
+}
 .navbar-brand__img {
   max-width: 200px;
   width: 100%;
@@ -135,9 +167,6 @@ $navbar-toggle-color: $primary;
 
 .navbar-toggle__icon {
   @include burger(25px, 2px, 4px, $navbar-toggle-color);
-  @include media-breakpoint-down(sm) {
-    @include burger(25px, 2px, 4px, $white);
-  }
 }
 
 .navbar-toggle {
@@ -146,13 +175,11 @@ $navbar-toggle-color: $primary;
   right: 16px;
   top: 25px;
   background: transparent;
+  z-index: 20;
   @include media-breakpoint-up(lg) {
     display: none;
   }
   @include media-breakpoint-down(md) {
-    top: 22px;
-  }
-  @include media-breakpoint-down(sm) {
     top: 21px;
     right: 10px;
   }
@@ -162,9 +189,6 @@ $navbar-toggle-color: $primary;
   &.collapsed {
     .navbar-toggle__icon {
       background: $navbar-toggle-color;
-      @include media-breakpoint-down(sm) {
-        background: $white;
-      }
       &:before, &:after {
         transform: none !important;
       }
@@ -172,14 +196,15 @@ $navbar-toggle-color: $primary;
   }
 }
 
-.navbar-form-group {
-  min-width: 100px;
-  .form-control {
-    border-color: $sky;
-    color: $primary;
+
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
-  @include media-breakpoint-up(xl) {
-    min-width: 180px;
-    font--size: 16px;
+  @include media-breakpoint-down(sm) {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
   }
 }

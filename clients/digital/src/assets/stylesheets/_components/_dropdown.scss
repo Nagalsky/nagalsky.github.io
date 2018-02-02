@@ -4,11 +4,25 @@
   @include media-breakpoint-up(lg) {
     margin-top: 0;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin-top: 0;
     box-shadow: 0px 1px 1px 1px rgba($black, .2);
+    background: rgba($white, .8);
   }
   border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+  }
+  min-width: 200px;
+  .dropdown-item {
+    &:hover, &:focus {
+      @include media-breakpoint-up(md) {
+        background: $gray-bold;
+      }
+    }
+  }
 }
 
 .dropdown-menu--flag {
@@ -18,21 +32,19 @@
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     border-radius: 0;
   }
+  background: rgba($white, 1);
   .dropdown-item {
     @extend .d-flex, .justify-content-between, .align-items-center;
     color: $sky;
     &:hover, &:focus {
       color: $primary-bold;
       background: transparent;
-      @include media-breakpoint-up(md) {
-        background: $gray-bold;
-      }
     }
     &+.dropdown-item {
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         border-top: 1px solid $muted;
         padding-top: .4rem;
         padding-bottom: .4rem;
@@ -41,7 +53,7 @@
   }
 }
 .dropdown-toggle--flag {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding: 4px .5rem;
   }
   &:hover, &:focus {

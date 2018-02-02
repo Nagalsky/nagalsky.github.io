@@ -35,4 +35,16 @@ $(document).ready(function(){
   //Sticky block Initial
   $(".sticky").stick_in_parent();
 
+  //Scroll to element
+  $('[data-click=scroll-to-target]').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var target = $(this).attr('href');
+    $('.navbar-collapse').removeClass('show');
+    $('.navbar-toggle').addClass('collapsed');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+  });
+
 });

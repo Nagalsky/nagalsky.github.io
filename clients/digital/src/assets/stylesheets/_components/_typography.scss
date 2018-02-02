@@ -12,14 +12,10 @@ html, body {
 
 body {
 	padding-top: $header-height;
-  @include media-breakpoint-up(md) {
-    padding-top: $header-height-md;
-  }
   @include media-breakpoint-up(lg) {
     padding-top: $header-height-lg;
   }
 }
-
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;
@@ -68,6 +64,19 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
 	a {
 		color: currentColor;
+	}
+}
+
+.lead {
+	@include media-breakpoint-down(xs) {
+		font-size: 14px;
+	}
+}
+
+.lead--md {
+	font-size: 24px;
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
 	}
 }
 
