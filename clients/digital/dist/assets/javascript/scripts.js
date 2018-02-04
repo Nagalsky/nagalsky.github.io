@@ -39,7 +39,10 @@ $(document).ready(function(){
     arrows: false,
     fade: true,
     pauseOnFocus: false,
-    pauseOnHover: false
+    pauseOnHover: false,
+    draggable: false,
+    swipe: false,
+    touchMove: false
   });
 
   $(".carousel").slick();
@@ -57,6 +60,25 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: $(target).offset().top
     }, 500);
+  });
+
+  //Mobile menu action
+  $('.navbar__toggle').on('click', function (e) {
+    e.preventDefault();
+    $('.navbar__collapse').addClass('navbar__collapse--is-open');
+    $('body').addClass('ovh')
+  });
+  $('.navbar__close').on('click', function (e) {
+    e.preventDefault();
+    $('.navbar__collapse').removeClass('navbar__collapse--is-open');
+    $('body').removeClass('ovh');
+  });
+
+  $('.dropdown').on('shown.bs.dropdown', function () {
+    $('.navbar__collapse__logo').addClass('hidden')
+  });
+  $('.dropdown').on('hidden.bs.dropdown', function () {
+    $('.navbar__collapse__logo').removeClass('hidden')
   });
 
   //Rotate logos

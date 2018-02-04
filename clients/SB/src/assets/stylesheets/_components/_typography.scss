@@ -18,6 +18,15 @@ body {
 	background-attachment: fixed;
 }
 
+.body-accordion-opened {
+	.navbar, .footer {
+		display: none;
+	}
+	.content {
+		padding-top: 0 !important;
+	}
+}
+
 .wrapper {
 	min-height: calc(100vh - 125px);
 }
@@ -29,11 +38,14 @@ body {
 
 .content {
 	background: $cream;
-	padding-bottom: 20px;
+	padding-bottom: 120px;
 	@extend .d-flex, .flex-column;
 	@include media-breakpoint-up(md) {
 		height: calc(100vh - 200px);
 		overflow-y: auto;
+	}
+	@include media-breakpoint-down(md) {
+		padding-bottom: 60px;
 	}
 }
 

@@ -1,6 +1,6 @@
 <header class="header fixed-top">
-  <nav class="navbar navbar-expand-md navbar--top d-none d-lg-flex">
-    <ul class="navbar-nav ml-auto d-none d-lg-flex">
+  <nav class="navbar navbar-expand-md navbar--top">
+    <ul class="navbar-nav ml-auto d-none d-lg-flex d-none d-lg-flex">
       <li class="nav-item">
         <a class="nav-link digital-icon-facebook" href="#"></a>
       </li>
@@ -37,16 +37,18 @@
 
   <nav class="navbar navbar--bottom navbar-expand-lg px-xl-5">
     <a class="navbar-brand" href="#">
-      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-lg-block" alt="">
-      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-lg-none" alt="">
+      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img" alt="">
     </a>
-    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-md-inline-flex d-lg-none float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
-    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggle__icon"></span>
+    <button class="navbar__toggle">
+      <span class="navbar__toggle__icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-sm-0">
+    <div class="navbar__collapse">
+      <button class="navbar__close">
+        <span class="navbar__close__icon"></span>
+      </button>
+
+      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle dropdown-toggle--flag dropdown-toggle--no-arrow d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
             <img src="assets/images/flags/US.svg" class="navbar__flag mr-3" alt=""> English
@@ -132,8 +134,10 @@
           <a class="nav-link digital-icon-google" href="#"></a>
         </li>
       </ul>
+
+      <img src="assets/images/elements/white-logo.svg" alt="" class="navbar__collapse__logo">
     </div><!--collapse-->
 
-    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-lg-inline-flex float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
+    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mb-2 mb-lg-0 mr-md-6 mr-lg-0 ml-auto d-none d-md-inline-flex float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
   </nav>
 </header>

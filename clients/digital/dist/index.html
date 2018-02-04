@@ -13,8 +13,8 @@
 <body>
 
 	<header class="header fixed-top">
-	  <nav class="navbar navbar-expand-md navbar--top d-none d-lg-flex">
-	    <ul class="navbar-nav ml-auto d-none d-lg-flex">
+	  <nav class="navbar navbar-expand-md navbar--top">
+	    <ul class="navbar-nav ml-auto d-none d-lg-flex d-none d-lg-flex">
 	      <li class="nav-item">
 	        <a class="nav-link digital-icon-facebook" href="#"></a>
 	      </li>
@@ -51,15 +51,18 @@
 	
 	  <nav class="navbar navbar--bottom navbar-expand-lg px-xl-5">
 	    <a class="navbar-brand" href="#">
-	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img d-none d-lg-block" alt="">
-	      <img src="assets/images/elements/white-logo.svg" class="navbar-brand__img d-block d-lg-none" alt="">
+	      <img src="assets/images/elements/navbar-logo.svg" class="navbar-brand__img" alt="">
 	    </a>
-	    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggle__icon"></span>
+	    <button class="navbar__toggle">
+	      <span class="navbar__toggle__icon"></span>
 	    </button>
 	
-	    <div class="collapse navbar-collapse" id="navbarContent">
-	      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-sm-0">
+	    <div class="navbar__collapse">
+	      <button class="navbar__close">
+	        <span class="navbar__close__icon"></span>
+	      </button>
+	
+	      <ul class="navbar-nav d-flex d-lg-none pt-3 pt-lg-0">
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle dropdown-toggle--flag dropdown-toggle--no-arrow d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
 	            <img src="assets/images/flags/US.svg" class="navbar__flag mr-3" alt=""> English
@@ -145,6 +148,8 @@
 	          <a class="nav-link digital-icon-google" href="#"></a>
 	        </li>
 	      </ul>
+	
+	      <img src="assets/images/elements/white-logo.svg" alt="" class="navbar__collapse__logo">
 	    </div><!--collapse-->
 	  </nav>
 	</header>
@@ -167,128 +172,113 @@
 		<section class="section">
 			<div class="container">
 				<h2 class="text-center mb-4">We Are Proud to Work with The Internet's Leading Brands</h2>
-				<div class="row align-items-center">
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+				<div class="logos-carousel">
+					<div>
+						<div class="row align-items-center">
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/facebook.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/snapchat.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/crimtan.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/pinterest.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/crimtan.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/nielsen.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/facebook.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/verve.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/modemedia.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/flyer.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/infectious.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-					<div class="col-lg-2 col-md-3 col-4 py-4">
-						<div class="logos-carousel">
-							<div class="d-flex align-items-center justify-content-center">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
 								<img src="assets/images/temp/bbc.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-							<div class="d-flex align-items-center justify-content-center">
-								<img src="assets/images/temp/hubspot.png" alt="" class="img-rotate img-fluid mx-auto d-block">
-							</div>
-						</div><!--carousel-->
-					</div><!--col-->
-				</div><!--row-->
+							</div><!--col-->
+						</div><!--row-->
+					</div>
+
+
+
+					<div>
+						<div class="row align-items-center">
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/nielsen.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/verve.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/modemedia.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/flyer.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/infectious.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/bbc.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+							
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/facebook.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/yahoo.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/snapchat.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/crimtan.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+
+							<div class="col-lg-2 col-md-3 col-4 py-4">
+								<img src="assets/images/temp/pinterest.png" alt="" class="img-rotate img-fluid mx-auto d-block">
+							</div><!--col-->
+						</div><!--row-->
+					</div>
+				</div><!--logos-carousel-->
 			</div><!--container-->
 		</section><!--section-->
 
@@ -298,7 +288,7 @@
 				<h2 class="text-center">Digital Element Spotlight</h2>
 
 				<div class="row text-center">
-					<div class="col-md-4 col-sm-6 my-3 my-md-4 d-flex flex-column">
+					<div class="col-lg-4 col-md-6 my-3 my-md-4 d-flex flex-column">
 						<div class="card flex-1 rounded-bottom">
 							<img class="card-img-top" src="assets/images/temp/card-img-1.png" alt="">
 							<div class="card-body d-flex flex-column">
@@ -311,7 +301,7 @@
 						</div><!--card-->
 					</div><!--col-->
 
-					<div class="col-md-4 col-sm-6 my-3 my-md-4 d-flex flex-column">
+					<div class="col-lg-4 col-md-6 my-3 my-md-4 d-flex flex-column">
 						<div class="card flex-1 rounded-bottom">
 							<img class="card-img-top" src="assets/images/temp/card-img-1.png" alt="">
 							<div class="card-body d-flex flex-column">
@@ -324,7 +314,7 @@
 						</div><!--card-->
 					</div><!--col-->
 
-					<div class="col-md-4 col-sm-6 my-3 my-md-4 d-flex flex-column">
+					<div class="col-lg-4 col-md-6 my-3 my-md-4 d-flex flex-column">
 						<div class="card flex-1 rounded-bottom">
 							<img class="card-img-top" src="assets/images/temp/card-img-1.png" alt="">
 							<div class="card-body d-flex flex-column">
@@ -403,13 +393,13 @@
 			<div class="container">
 				<h2 class="text-white">Featured Spotlight</h2>
 				<div class="row">
-					<div class="col-md-6 mb-4 mb-md-0">
+					<div class="col-lg-6 mb-4 mb-lg-0">
 						<div class="embed-responsive embed-responsive-16by9">
 						  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
 						</div><!--embed-responsive-->
 					</div><!--col-->
 
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<h3 class="text-white mb-md-5">Sebastian Perez of E-Planning.net Discusses the Value of Geotargeting</h3>
 						<p class="text-white mb-md-6">Praesent suscipit consequat neque, eu maximus nunc cursus sed. Duis sollicitudin massa in diam molestie accumsan. Ut ullamcorper hendrerit euismod. Aenean et varius purus.</p>
 						<a href="#" class="btn btn-warning btn-lg">MORE <i class="digital-icon-angle-right"></i></a>

@@ -3,14 +3,12 @@
 $navbar-flag-size: 24px;
 $navbar-bg: $primary;
 $nav-link-color: $primary-bold;
-$navbar-toggle-color: $white;
+$navbar-toggle-color: $primary;
 
 
 .navbar {
   position: relative;
-  @include media-breakpoint-up(sm) {
-    box-shadow: 0px 0px 2px 1px rgba($black, .2);
-  }
+  box-shadow: 0px 1px 2px 0px rgba($black, .2);
   .btn {
     &.navbar-btn-scroll {
       border-color: $sky !important;
@@ -18,16 +16,9 @@ $navbar-toggle-color: $white;
       padding: 8px 9px !important;
       border-radius: 8px !important;
       text-transform: none !important;
-      @include media-breakpoint-down(md) {
-        color: $white !important;
-        border-color: $white !important;
-      }
       &:hover, &:focus {
         background: $primary !important;
         border-color: $primary !important;
-        @include media-breakpoint-down(md) {
-          border-color: $white !important;
-        }
       }
     }
   }
@@ -49,9 +40,6 @@ $navbar-toggle-color: $white;
 
 .navbar--bottom {
   background: $white;
-  @include media-breakpoint-down(md) {
-    background: $navbar-bg;
-  }
   @include media-breakpoint-up(lg) {
     padding-top: 0;
     padding-bottom: 0;
@@ -77,8 +65,8 @@ $navbar-toggle-color: $white;
       background: transparent;
     }
     @include media-breakpoint-down(sm) {
-      max-height: 120px;
-      overflow-y: auto;
+      /*max-height: 120px;
+      overflow-y: auto;*/
     }
   }
   .dropdown-item {
@@ -137,6 +125,10 @@ $navbar-toggle-color: $white;
     @include media-breakpoint-up(lg) {
       padding: 24px .8rem;
     }
+    @include media-breakpoint-down(md) {
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
   }
 }
 
@@ -165,46 +157,89 @@ $navbar-toggle-color: $white;
 
 
 
-.navbar-toggle__icon {
+.navbar__toggle__icon {
   @include burger(25px, 2px, 4px, $navbar-toggle-color);
 }
 
-.navbar-toggle {
+.navbar__toggle {
   border: none;
   position: absolute;
   right: 16px;
   top: 25px;
   background: transparent;
-  z-index: 20;
+  z-index: 5;
   @include media-breakpoint-up(lg) {
     display: none;
   }
   @include media-breakpoint-down(md) {
-    top: 21px;
     right: 10px;
   }
-  .navbar-toggle__icon {
-    @include burger-to-cross;
+}
+
+.navbar__close__icon {
+  @include burger(25px, 2px, 4px, $white);
+}
+.navbar__close {
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: transparent;
+  z-index: 25;
+  padding: 10px;
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
-  &.collapsed {
-    .navbar-toggle__icon {
-      background: $navbar-toggle-color;
-      &:before, &:after {
-        transform: none !important;
-      }
-    }
+  .navbar__close__icon {
+    @include burger-to-cross;
   }
 }
 
 
 
-.navbar-collapse {
-  @include media-breakpoint-down(md) {
-    max-height: calc(100vh - 60px);
-    overflow-y: auto;
+.navbar__collapse {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-basis: auto;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
   }
-  @include media-breakpoint-down(sm) {
-    max-height: calc(100vh - 140px);
+  @include media-breakpoint-down(md) {
+    display: none;
+
     overflow-y: auto;
+    background: $navbar-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0px 15px 80px 15px;
+    height: 100% !important;
+    width: 100%;
+    z-index: 20;
+    @include media-breakpoint-down(md) {
+      //padding-top: 0;
+    }
+  }
+}
+
+.navbar__collapse--is-open {
+  display: block;
+}
+
+.navbar__collapse__logo {
+  @extend .img-fluid;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 }
