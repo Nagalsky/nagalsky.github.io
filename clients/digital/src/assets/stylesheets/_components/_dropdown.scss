@@ -39,16 +39,30 @@
   .dropdown-item {
     @extend .d-flex, .justify-content-between, .align-items-center;
     color: $sky;
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      padding-left: 35px;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
     &:hover, &:focus {
       color: $primary-bold;
       background: transparent;
     }
     &+.dropdown-item {
       @include media-breakpoint-down(md) {
-        border-top: 1px solid $muted;
-        padding-top: .4rem;
-        padding-bottom: .4rem;
+        border-top: 1px solid #9b9b9b;
       }
+    }
+  }
+  .navbar__flag {
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

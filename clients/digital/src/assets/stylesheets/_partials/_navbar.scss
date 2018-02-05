@@ -47,6 +47,9 @@ $navbar-toggle-color: $primary;
 }
 
 .navbar-nav--main {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 15px;
+  }
   .dropdown-toggle {
     &:after {
       @include media-breakpoint-up(lg) {
@@ -73,9 +76,12 @@ $navbar-toggle-color: $primary;
     @include media-breakpoint-down(md) {
       color: $sky;
       font-size: 16px;
+      padding-left: 54px;
+      color: rgba($white, .5);
       &:hover, &:focus {
         color: $white;
-        background: transparent;
+        background: transparent !important;
+        font-family: $font-base-bold;
       }
     }
   }
@@ -85,7 +91,8 @@ $navbar-toggle-color: $primary;
         border-bottom-color: $sky;
         @include media-breakpoint-down(md) {
           border-bottom-color: $white;
-          color: $sky;
+          color: $white;
+          font-family: $font-base-bold;
         }
       }
       .dropdown-toggle {
@@ -114,7 +121,13 @@ $navbar-toggle-color: $primary;
     border-bottom: 3px solid transparent;
     @include media-breakpoint-down(md) {
       border-bottom-width: 1px;
-      color: $white;
+      border-bottom-color: $white;
+      color: rgba($white, .5);
+      font-size: 24px;
+      padding-left: 38px;
+      &:hover {
+        color: $white;
+      }
     }
     &:hover {
       border-bottom-color: $sky;
@@ -182,8 +195,8 @@ $navbar-toggle-color: $primary;
 .navbar__close {
   border: none;
   position: absolute;
-  right: 10px;
-  top: 15px;
+  right: 5px;
+  top: 35px;
   background: transparent;
   z-index: 25;
   padding: 10px;
@@ -207,14 +220,13 @@ $navbar-toggle-color: $primary;
   }
   @include media-breakpoint-down(md) {
     display: none;
-
     overflow-y: auto;
     background: $navbar-bg;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0px 15px 30px 15px;
+    padding: 20px 15px 30px 15px;
     height: 100% !important;
     width: 100%;
     z-index: 20;

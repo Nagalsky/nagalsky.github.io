@@ -84,6 +84,16 @@ $aside-btn-size: 36px;
 .aside__link--has-collapse {
   position: relative;
   @extend .font-icons, .allready-icon-arrow-down;
+  &:hover {
+    text-decoration: none;
+  }
+  &:not(.collapsed) {
+    color: $primary;
+    &:after {
+      background: $primary;
+      border: 1px solid $primary;
+    }
+  }
   &.collapsed {
     &:before {
       transform: translateY(-50%) rotate(0deg);
@@ -115,6 +125,21 @@ $aside-btn-size: 36px;
   @extend .d-none;
 }
 
+.aside__sublist {
+  .aside__sublist {
+    .aside__sublist__item {
+      border-top: 1px solid #d7dce3;
+    }
+    .aside__sublist__link {
+      padding-left: 48px;
+      background: #e4e7ec;
+      &:after {
+        left: 30px;
+        border: 1px solid #d7dce3;
+      }
+    }
+  }
+}
 .aside__sublist__item {
   border-top: 1px solid #e0e3e9;
 }
@@ -138,6 +163,9 @@ $aside-btn-size: 36px;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  &:hover {
+    text-decoration: underline;
   }
   &:hover, &:focus {
     color: $primary;
