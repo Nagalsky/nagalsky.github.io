@@ -1,0 +1,19 @@
+/* BUTTONS */
+
+$btn-ff: $font-medium;
+$btn-fs: 16px;
+
+.btn {
+  font-family: $btn-ff;
+  font-size: $btn-fs;
+  padding: 7px 16px;
+  &:hover, &:focus, &:active {
+    box-shadow: none !important;
+  }
+  &.btn-success {
+    @include button-variants($bg: $success, $color: $white);
+  }
+  &.btn-outline-muted {
+    @include button-outline-variants($color: $silver);
+  }
+}

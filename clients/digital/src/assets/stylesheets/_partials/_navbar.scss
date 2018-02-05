@@ -214,32 +214,18 @@ $navbar-toggle-color: $primary;
     top: 0;
     left: 0;
     right: 0;
-    top: 0;
-    padding: 0px 15px 80px 15px;
+    padding: 0px 15px 30px 15px;
     height: 100% !important;
     width: 100%;
     z-index: 20;
     @include media-breakpoint-down(md) {
-      //padding-top: 0;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
     }
   }
 }
 
 .navbar__collapse--is-open {
-  display: block;
-}
-
-.navbar__collapse__logo {
-  @extend .img-fluid;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  @include media-breakpoint-up(lg) {
-    display: none;
-  }
-  &.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
+  display: flex;
 }

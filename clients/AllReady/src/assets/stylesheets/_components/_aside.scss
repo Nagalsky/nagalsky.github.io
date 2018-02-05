@@ -1,0 +1,149 @@
+/* ASIDE */
+
+$aside-size: 60px;
+$aside-open-size: 273px;
+$aside-bg: $white;
+$aside-btn-size: 36px;
+
+.aside {
+  width: $aside-size;
+  background: $aside-bg;
+  border-radius: 0 $base-radius $base-radius 0;
+  box-shadow: -2px 0 10px 0 rgba(110, 118, 134, 0.09);
+  @include transition(150ms);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  height: 100%;
+  overflow-y: auto;
+  &:not(.aside--opened) {
+    .collapse, .collapsing {
+      display: none;
+    }
+  }
+}
+
+.aside--opened {
+  width: $aside-open-size;
+  .aside__list__item {
+    @extend .justify-content-start;
+  }
+  .aside__list__text {
+    @extend .d-inline-flex;
+  }
+  .aside__list__link--toggle {
+    .aside__list__icon {
+      @extend .font-icons, .allready-icon-close;
+    }
+  }
+  .aside__link--has-collapse {
+    padding-right: 40px;
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.aside__list, .aside__sublist {
+  @extend .list-unstyled;
+}
+.aside__list__item {
+  border-bottom: 1px solid $muted-soft;
+  position: relative;
+}
+.aside__list__link {
+  @extend .d-flex, .align-items-center, .justify-content-start;
+  font-size: 18px;
+  font-family: $font-bold;
+  color: $base-color;
+  width: 100%;
+  padding: 12px 12px;
+  position: relative;
+  &:hover, &:focus {
+    color: $primary;
+    .aside__list__icon {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+.aside__list__link--toggle {
+  .aside__list__icon {
+    color: $white;
+    background: $silver;
+  }
+  &:hover, &:focus {
+    .aside__list__icon {
+      color: $white;
+      background: darken($silver, 10%);
+    }
+  }
+}
+.aside__link--has-collapse {
+  position: relative;
+  @extend .font-icons, .allready-icon-arrow-down;
+  &.collapsed {
+    &:before {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+  &:before {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.aside__list__icon {
+  width: $aside-btn-size;
+  height: $aside-btn-size;
+  border-radius: 50%;
+  color: $silver;
+  background: $sky;
+  @extend .d-inline-flex, .align-items-center, .justify-content-center;
+  @include transition(250ms);
+  font-size: 16px;
+}
+
+.aside__list__text {
+  margin-left: 12px;
+  @extend .d-none;
+}
+
+.aside__sublist__item {
+  border-top: 1px solid #e0e3e9;
+}
+.aside__sublist__link {
+  background: $gray-thin;
+  @extend .d-flex, .align-items-center;
+  padding: 7px 15px;
+  color: $base-color;
+  position: relative;
+  padding-left: 30px;
+  &:after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #e0e3e9;
+    display: inline-flex;
+    @include transition(250ms);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover, &:focus {
+    color: $primary;
+    &:after {
+      background: $primary;
+      border: 1px solid $primary;
+    }
+  }
+}

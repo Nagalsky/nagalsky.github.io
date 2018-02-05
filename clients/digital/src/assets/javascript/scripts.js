@@ -74,13 +74,6 @@ $(document).ready(function(){
     $('body').removeClass('ovh');
   });
 
-  $('.dropdown').on('shown.bs.dropdown', function () {
-    $('.navbar__collapse__logo').addClass('hidden')
-  });
-  $('.dropdown').on('hidden.bs.dropdown', function () {
-    $('.navbar__collapse__logo').removeClass('hidden')
-  });
-
   //Rotate logos
   /*function rotateLogosFunction () {
     var yourImages = ['assets/images/temp/facebook.svg', 'assets/images/temp/yahoo.svg','assets/images/temp/hubspot.svg','assets/images/temp/snapchat.svg', 'assets/images/temp/crimtan.svg', 'assets/images/temp/pinterest.svg', 'assets/images/temp/nielsen.svg', 'assets/images/temp/verve.svg', 'assets/images/temp/modemedia.svg', 'assets/images/temp/flyer.svg', 'assets/images/temp/infectious.svg', 'assets/images/temp/bbc.svg'];
