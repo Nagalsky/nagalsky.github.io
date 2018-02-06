@@ -1,6 +1,6 @@
 /* ASIDE */
 
-$aside-size: 60px;
+$aside-size: 75px;
 $aside-open-size: 273px;
 $aside-bg: $white;
 $aside-btn-size: 36px;
@@ -32,6 +32,9 @@ $aside-btn-size: 36px;
   .aside__list__text {
     @extend .d-inline-flex;
   }
+  .aside__list__link {
+    @extend .justify-content-start;
+  }
   .aside__list__link--toggle {
     .aside__list__icon {
       @extend .font-icons, .allready-icon-close;
@@ -54,7 +57,7 @@ $aside-btn-size: 36px;
   position: relative;
 }
 .aside__list__link {
-  @extend .d-flex, .align-items-center, .justify-content-start;
+  @extend .d-flex, .align-items-center, .justify-content-center;
   font-size: 18px;
   font-family: $font-bold;
   color: $base-color;
