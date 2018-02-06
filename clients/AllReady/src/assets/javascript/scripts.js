@@ -32,5 +32,8 @@ $(document).ready(function(){
 	  };
 	});
 
+	/* ======== Bootstrap popover initial ======== */
+	$('[rel="popover"]').popover();
+	$.protip();
 
 });

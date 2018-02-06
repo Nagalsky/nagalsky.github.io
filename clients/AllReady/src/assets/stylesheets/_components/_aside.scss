@@ -16,7 +16,7 @@ $aside-btn-size: 36px;
   right: 0;
   z-index: 20;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
   &:not(.aside--opened) {
     .collapse, .collapsing {
       display: none;
@@ -59,10 +59,10 @@ $aside-btn-size: 36px;
   font-family: $font-bold;
   color: $base-color;
   width: 100%;
-  padding: 12px 12px;
+  padding: 12px 10px;
   position: relative;
   &:hover, &:focus {
-    color: $primary;
+    color: $primary !important;
     .aside__list__icon {
       background: $primary;
       color: $white;
@@ -71,13 +71,13 @@ $aside-btn-size: 36px;
 }
 .aside__list__link--toggle {
   .aside__list__icon {
-    color: $white;
-    background: $silver;
+    color: $white !important;
+    background: $silver !important;
   }
   &:hover, &:focus {
     .aside__list__icon {
-      color: $white;
-      background: darken($silver, 10%);
+      color: $white !important;
+      background: darken($silver, 10%) !important;
     }
   }
 }
@@ -88,10 +88,17 @@ $aside-btn-size: 36px;
     text-decoration: none;
   }
   &:not(.collapsed) {
-    color: $primary;
+    color: $primary !important;
     &:after {
       background: $primary;
       border: 1px solid $primary;
+    }
+    &:before {
+      color: $base-color;
+    }
+    .aside__list__icon {
+      background: $primary;
+      color: $white;
     }
   }
   &.collapsed {
@@ -106,6 +113,7 @@ $aside-btn-size: 36px;
     transform: translateY(-50%) rotate(-180deg);
     visibility: hidden;
     opacity: 0;
+    color: $silver;
   }
 }
 
@@ -118,6 +126,7 @@ $aside-btn-size: 36px;
   @extend .d-inline-flex, .align-items-center, .justify-content-center;
   @include transition(250ms);
   font-size: 16px;
+  border: 1px solid transparent;
 }
 
 .aside__list__text {
@@ -156,7 +165,7 @@ $aside-btn-size: 36px;
     height: 9px;
     border-radius: 50%;
     background: transparent;
-    border: 1px solid #e0e3e9;
+    border: 1px solid #c8cdd8;
     display: inline-flex;
     @include transition(250ms);
     position: absolute;
