@@ -1,19 +1,34 @@
 /* FORMS */
 
-$field-border-color: $silver;
+$field-border-color: #cad0da;
 $field-border-color-focus: $base-color;
-$field-color: $silver;
+$field-color: $base-color;
 $field-radius: 4px;
+$field-height: 40px;
 
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	border-color: $field-border-color;
-	box-shadow: inset 0 0 1px rgba($black, .35);
+	box-shadow: inset 0 1px 3px 0 rgba(20, 20, 21, 0.16);;
 	border-radius: $field-radius;
 	color: $field-color;
+	height: $field-height;
+	@include custom-placeholder($color: $muted);
 	&:hover, &:focus, &:active {
-    box-shadow: inset 0 0 1px rgba($black, .35);
+    box-shadow: none;
 		border-color: $field-border-color-focus;
   }
+}
+
+label {
+	font-family: $font-bold;
+}
+
+select, select.form-control {
+	padding-right: 20px;
+	background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTIgNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTIgNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjM0Q0NzYwIiBkPSJNNS40LDUuOEwwLjIsMS4zYy0wLjMtMC4zLTAuMy0wLjgsMC0xYzAuMy0wLjMsMC45LTAuMywxLjIsMGw0LjYsNGw0LjYtNGMwLjMtMC4zLDAuOS0wLjMsMS4yLDANCgljMC4zLDAuMywwLjMsMC44LDAsMUw2LjYsNS44QzYuNCw1LjksNi4yLDYsNiw2QzUuOCw2LDUuNiw1LjksNS40LDUuOHoiLz4NCjwvc3ZnPg0K');
+	background-repeat: no-repeat;
+	background-size: 12px auto;
+	background-position: right 7.5px center;
 }

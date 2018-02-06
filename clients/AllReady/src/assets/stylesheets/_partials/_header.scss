@@ -11,20 +11,27 @@ $header-logo-size: 180px;
   border-radius: $base-radius 0 0 0;
   @extend .d-flex, .align-items-center;
   color: $header-color;
+  @include media-breakpoint-down(md) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 .header__logo {
   margin-right: 20px;
   flex-shrink: 0;
   width: 100%;
   max-width: $header-logo-size;
+  display: inline-block;
 }
 
 .header__inner {
   flex: 1;
   position: relative;
-  @extend .d-flex, .align-items-center;
+  @extend .d-sm-flex, .align-items-center;
 }
 .header__inner--has-expanded-form {
-  min-height: 34px;
-  color: transparent;
+  @include media-breakpoint-up(sm) {
+    min-height: 34px;
+    color: transparent;
+  }
 }

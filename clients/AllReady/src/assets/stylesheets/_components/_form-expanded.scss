@@ -8,26 +8,28 @@ $form-expanded-size: 34px;
 }
 
 .form-expanded--opened {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  .form-expanded__form-group {
-    &:before {
-      content: none;
-    }
-  }
-  .form-expanded__field {
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    border-radius: 20px;
-    background: $white;
-    color: $field-color;
-    padding-right: 36px;
-  }
-  .form-expanded__submit {
-    visibility: visible;
-    opacity: 1;
+    z-index: 10;
+    .form-expanded__form-group {
+      &:before {
+        content: none;
+      }
+    }
+    .form-expanded__field {
+      width: 100%;
+      border-radius: 20px;
+      background: $white;
+      color: $field-color;
+      padding-right: 36px;
+    }
+    .form-expanded__submit {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
@@ -42,15 +44,23 @@ $form-expanded-size: 34px;
     height: 100%;
     @extend .d-flex, .align-items-center;
     z-index: -1;
+    @include media-breakpoint-down(xs) {
+      content: none;
+    }
   }
 }
 
 .form-expanded__field {
-  border-radius: 50%;
-  width: $form-expanded-size;
-  background: transparent;
-  color: transparent;
-  height: 34px;
+  @include media-breakpoint-up(sm) {
+    border-radius: 50%;
+    width: $form-expanded-size;
+    background: transparent;
+    color: transparent;
+    height: 34px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-right: 34px;
+  }
 }
 
 .form-expanded__submit {
@@ -62,6 +72,8 @@ $form-expanded-size: 34px;
   top: 0;
   right: 3px;
   height: 100%;
-  visibility: hidden;
-  opacity: 0;
+  @include media-breakpoint-up(sm) {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

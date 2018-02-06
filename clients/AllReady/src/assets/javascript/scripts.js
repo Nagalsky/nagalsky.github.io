@@ -32,8 +32,18 @@ $(document).ready(function(){
 	  };
 	});
 
-	/* ======== Bootstrap popover initial ======== */
-	$('[rel="popover"]').popover();
+	/* ======== Popover initial - http://protip.rocks/ ======== */
 	$.protip();
+
+	/* ======== wysiwyg initial - https://summernote.org/getting-started ======== */
+	$('.wysiwyg-editor').summernote({
+		height: 140,
+  	minHeight: null,
+  	maxHeight: null,
+  	focus: true
+	});
+
+	/* ======== Datepicker initial - https://www.npmjs.com/package/bootstrap-datepicker ======== */
+	$('.datepicker').datepicker();
 
 });
