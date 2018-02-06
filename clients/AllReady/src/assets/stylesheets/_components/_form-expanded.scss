@@ -24,7 +24,8 @@ $form-expanded-size: 34px;
       border-radius: 20px;
       background: $white;
       color: $field-color;
-      padding-right: 36px;
+      padding-left: 36px;
+      @include custom-placeholder-opacity($opacity: 1);
     }
     .form-expanded__submit {
       visibility: visible;
@@ -57,9 +58,10 @@ $form-expanded-size: 34px;
     background: transparent;
     color: transparent;
     height: 34px;
+    @include custom-placeholder-opacity($opacity: 0);
   }
   @include media-breakpoint-down(xs) {
-    padding-right: 34px;
+    padding-left: 34px;
   }
 }
 
@@ -70,7 +72,7 @@ $form-expanded-size: 34px;
   color: $form-expanded-color;
   position: absolute;
   top: 0;
-  right: 3px;
+  left: 3px;
   height: 100%;
   @include media-breakpoint-up(sm) {
     visibility: hidden;
