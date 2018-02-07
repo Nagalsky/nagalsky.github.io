@@ -46,4 +46,12 @@ $(document).ready(function(){
 	/* ======== Datepicker initial - https://www.npmjs.com/package/bootstrap-datepicker ======== */
 	$('.datepicker').datepicker();
 
+	/* ======== Table sort - https://datatables.net/examples/styling/bootstrap4.html ======== */
+	$('.table--sort').DataTable({
+		"paging":   false,
+	  "info":     false,
+		"searching": false
+	});
+
+
 });
