@@ -24,6 +24,9 @@ $wrapper-bg: $gray;
   @extend .d-flex, .flex-column;
   padding-right: $aside-size;
   position: relative;
+  @include media-breakpoint-down(xs) {
+    padding-right: 0;
+  }
   &:before {
 		content: '';
     position: absolute;

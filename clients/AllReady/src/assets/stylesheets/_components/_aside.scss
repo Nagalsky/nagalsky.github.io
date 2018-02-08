@@ -17,6 +17,12 @@ $aside-btn-size: 36px;
   z-index: 700;
   height: 100%;
   overflow-y: auto;
+  @include media-breakpoint-down(xs) {
+    background: transparent;
+    @include transition(0ms);
+    box-shadow: none;
+    height: auto;
+  }
   &:not(.aside--opened) {
     .collapse, .collapsing {
       display: none;
@@ -26,8 +32,15 @@ $aside-btn-size: 36px;
 
 .aside--opened {
   width: $aside-open-size;
+  @include media-breakpoint-down(xs) {
+    background: $aside-bg;
+    height: 100%;
+  }
   .aside__list__item {
     @extend .justify-content-start;
+    @include media-breakpoint-down(xs) {
+      display: block !important;
+    }
   }
   .aside__list__text {
     @extend .d-inline-flex;
@@ -38,6 +51,11 @@ $aside-btn-size: 36px;
   .aside__list__link--toggle {
     .aside__list__icon {
       @extend .font-icons, .allready-icon-close;
+    }
+  }
+  .aside__list__item--toggle {
+    @include media-breakpoint-down(xs) {
+      border-color: $muted-soft;
     }
   }
   .aside__link--has-collapse {
@@ -55,6 +73,16 @@ $aside-btn-size: 36px;
 .aside__list__item {
   border-bottom: 1px solid $muted-soft;
   position: relative;
+  &:not(.aside__list__item--toggle) {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}
+.aside__list__item--toggle {
+  @include media-breakpoint-down(xs) {
+    border-color: transparent;
+  }
 }
 .aside__list__link {
   @extend .d-flex, .align-items-center, .justify-content-center;
