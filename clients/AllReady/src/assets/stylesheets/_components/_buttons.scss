@@ -13,6 +13,21 @@ $btn-fs: 16px;
   }
   &.btn-success {
     @include button-variants($bg: $success, $color: $white);
+    &.btn-has-shadow {
+      box-shadow: 0.5px 0.9px 0 0 #669850 !important;
+      &:hover, &:focus, &:active {
+        box-shadow: 0.5px 0.9px 0 0 #669850 !important;
+      }
+    }
+  }
+  &.btn-muted {
+    @include button-variants($bg: $silver, $color: $white);
+    &.btn-has-shadow {
+      box-shadow: 0.5px 0.9px 0 0 #6e7686 !important;
+      &:hover, &:focus, &:active {
+        box-shadow: 0.5px 0.9px 0 0 #6e7686 !important;
+      }
+    }
   }
   &.btn-outline-muted {
     @include button-outline-variants($color: $silver);
