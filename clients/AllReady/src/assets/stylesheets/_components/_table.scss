@@ -73,9 +73,27 @@ $table-border-color: #cad0da;
   }
 }
 
-.dataTables_wrapper {
-  @extend .px-0;
-  .row {
-    @extend .no-gutters;
+.table-collapse {
+  position: relative;
+  padding-right: 30px;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+    font-family: 'fontello';
+    content: '\e80f';
+    font-size: 12px;
   }
+  &.collapsed {
+    &:after {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+}
+
+
+.table-editable-box {
+  display: none;
 }

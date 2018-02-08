@@ -46,12 +46,13 @@ $(document).ready(function(){
 	/* ======== Datepicker initial - https://www.npmjs.com/package/bootstrap-datepicker ======== */
 	$('.datepicker').datepicker();
 
-	/* ======== Table sort - https://datatables.net/examples/styling/bootstrap4.html ======== */
-	$('.table--sort').DataTable({
-		"paging":   false,
-	  "info":     false,
-		"searching": false
-	});
+	/* ======== Table drag and drop - http://demo.itsolutionstuff.com/demo/demo-jquery-draggable-sortable-table-rows-example-demo-with-bootstrapexample.html ======== */
+	$('.table--drag tbody').sortable();
+
+	$(".table-sort-btn").click(function(e){
+    var row = $(this).parents("tr:first");
+    row.insertAfter(row.next());
+  });
 
 
 });

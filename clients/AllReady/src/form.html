@@ -17,9 +17,9 @@
 						<div class="d-flex align-items-center justify-content-between mb-3">
 							<h2 class="mb-0">Egendefinierade fält</h2>
 							<span class="content-icon protip"
-							data-pt-position="left"
+							data-pt-position="bottom-left-corner"
 							data-pt-trigger="hover"
-							data-pt-gravity="true"
+							data-pt-gravity="false"
 							data-pt-title="
 								<h4 class='popover-title'>Form</h4>
 								<p>Here you can edit all the settings regarding the booking form; all the fields, what type of field it is, related/parented fields and so on.</p>
@@ -34,7 +34,7 @@
 						<div class="card card--content">
 						  <div class="card-body">
 								<div class="table-responsive">
-									<table class="table table--sort">
+									<table class="table table--drag">
 									  <thead>
 									    <tr>
 									      <th>#</th>
@@ -42,7 +42,7 @@
 									      <th>Information to be filled in by (Type)</th>
 									      <th>Mand.</th>
 												<th>UQ</th>
-												<th>BR</th>
+												<th colspan="2">BR</th>
 									    </tr>
 									  </thead>
 									  <tbody>
@@ -65,13 +65,16 @@
 													</div><!--checkbox-holder-->
 												</td>
 												<td>
-													<a href="#" class="btn btn-primary btn-sm btn-has-shadow">Edit</a>
+													<a href="#" class="btn btn-primary btn-sm btn-has-shadow table-btn-edit">Edit</a>
+												</td>
+												<td>
+													<a href="#" class="table-sort-btn allready-icon-sorting"></a>
 												</td>
 									    </tr>
 
 											<tr>
 									      <td class="text-muted">2</td>
-									      <td>Lorem ipsum</td>
+									      <td>Lorem ipsum Lorem ipsum Lorem ipsum</td>
 									      <td>@User (Lorem)</td>
 												<td>
 													<div class="checkbox-holder checkbox-holder--empty checkbox-holder--inline">
@@ -88,12 +91,16 @@
 													</div><!--checkbox-holder-->
 												</td>
 												<td>
-													<a href="#" class="btn btn-primary btn-sm btn-has-shadow">Btn</a>
+													<a href="#" class="btn btn-primary btn-sm btn-has-shadow">Edit</a>
+												</td>
+												<td>
+													<a href="#" class="table-sort-btn allready-icon-sorting"></a>
 												</td>
 									    </tr>
 									  </tbody>
 									</table><!--table-->
 								</div><!--table-responsive-->
+
 								<div class="text-right">
 									<a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-form">Add</a>
 								</div><!--text-right-->
