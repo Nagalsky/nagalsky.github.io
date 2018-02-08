@@ -49,7 +49,11 @@ $(document).ready(function(){
 	/* ======== Table drag and drop - http://demo.itsolutionstuff.com/demo/demo-jquery-draggable-sortable-table-rows-example-demo-with-bootstrapexample.html ======== */
 	$('.table--drag tbody').sortable();
 
-	$(".table-sort-btn").click(function(e){
+	$(".table-sort-btn-up").click(function(e){
+    var row = $(this).parents("tr:first");
+    row.insertBefore(row.prev());
+  });
+	$(".table-sort-btn-down").click(function(e){
     var row = $(this).parents("tr:first");
     row.insertAfter(row.next());
   });
