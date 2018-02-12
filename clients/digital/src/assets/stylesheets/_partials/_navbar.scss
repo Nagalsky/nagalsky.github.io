@@ -52,15 +52,13 @@ $navbar-toggle-color: $primary;
   }
   .dropdown-toggle {
     &:after {
-      @include media-breakpoint-up(lg) {
-        content: none !important;
-      }
-      font-family: 'fontello';
+      content: none !important;
+      /*font-family: 'fontello';
       content: '\e807';
       border: none;
       width: auto;
       height: auto;
-      vertical-align: top;
+      vertical-align: top;*/
     }
   }
   .dropdown-menu {
@@ -125,6 +123,7 @@ $navbar-toggle-color: $primary;
       color: rgba($white, .5);
       font-size: 24px;
       padding-left: 38px;
+      padding-right: 38px;
       &:hover {
         color: $white;
       }
@@ -142,6 +141,9 @@ $navbar-toggle-color: $primary;
       padding-top: 7.5px;
       padding-bottom: 7.5px;
     }
+  }
+  .nav-link--is-active {
+    color: $white;
   }
 }
 
@@ -162,6 +164,8 @@ $navbar-toggle-color: $primary;
 
 .navbar-brand {
   transition: none !important;
+  max-width: 180px;
+  width: 100%;
 }
 .navbar-brand__img {
   max-width: 200px;
@@ -178,7 +182,7 @@ $navbar-toggle-color: $primary;
   border: none;
   position: absolute;
   right: 16px;
-  top: 25px;
+  top: 20px;
   background: transparent;
   z-index: 5;
   @include media-breakpoint-up(lg) {
@@ -196,7 +200,7 @@ $navbar-toggle-color: $primary;
   border: none;
   position: absolute;
   right: 5px;
-  top: 35px;
+  top: 32px;
   background: transparent;
   z-index: 25;
   padding: 10px;
@@ -226,7 +230,7 @@ $navbar-toggle-color: $primary;
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 15px 30px 15px;
+    padding: 15px 15px 30px 15px;
     height: 100% !important;
     width: 100%;
     z-index: 20;

@@ -74,28 +74,12 @@ $(document).ready(function(){
     $('body').removeClass('ovh');
   });
 
-  //Rotate logos
-  /*function rotateLogosFunction () {
-    var yourImages = ['assets/images/temp/facebook.svg', 'assets/images/temp/yahoo.svg','assets/images/temp/hubspot.svg','assets/images/temp/snapchat.svg', 'assets/images/temp/crimtan.svg', 'assets/images/temp/pinterest.svg', 'assets/images/temp/nielsen.svg', 'assets/images/temp/verve.svg', 'assets/images/temp/modemedia.svg', 'assets/images/temp/flyer.svg', 'assets/images/temp/infectious.svg', 'assets/images/temp/bbc.svg'];
+  $('.dropdown-toggle-mobile').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('dropdown-toggle-mobile--is-active');
+    $(this).parent().toggleClass('nav-link--is-active');
+    $(this).parent().next('.dropdown-menu').toggleClass('dropdown-menu--is-open');
+  });
 
-    var imageArr = yourImages.map(function (src) {
-      return {
-        src: src,
-        selected: false
-      }
-    });
-
-    $(".img-rotate").each( function(index, $this){
-      var freeImages = imageArr.filter(function (item) {
-        return item.selected === false;
-      })
-      var randomImage = Math.floor(Math.random()*freeImages.length);
-      var item = freeImages[randomImage];
-      item.selected = true;
-      $($this).attr("src", item.src);
-    });
-
-  }
-  setInterval(rotateLogosFunction, 4000);*/
 
 });

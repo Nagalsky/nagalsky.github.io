@@ -79,7 +79,7 @@
 	          </li>
 	        </ul>
 	
-	        <ul class="navbar-nav navbar-nav--main mr-0 ml-lg-5">
+	        <ul class="navbar-nav navbar-nav--main mr-0 ml-lg-5 d-none d-lg-flex">
 	          <li class="nav-item">
 	            <a class="nav-link" href="#">Geolocation</a>
 	          </li>
@@ -129,6 +129,64 @@
 	          </li>
 	        </ul>
 	
+	
+	        <ul class="navbar-nav navbar-nav--main mr-0 ml-lg-5 d-flex d-lg-none">
+	          <li class="nav-item">
+	            <a class="nav-link" href="#">Geolocation</a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link d-flex align-items-center justify-content-between" href="#">
+	              Solutions
+	              <span class="dropdown-toggle-mobile"></span>
+	            </a>
+	            <div class="dropdown-menu">
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            </div>
+	          </li>
+	
+	          <li class="nav-item dropdown">
+	            <a class="nav-link d-flex align-items-center justify-content-between" href="#">
+	              Applications
+	              <span class="dropdown-toggle-mobile"></span>
+	            </a>
+	            <div class="dropdown-menu">
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            </div>
+	          </li>
+	
+	          <li class="nav-item dropdown">
+	            <a class="nav-link d-flex align-items-center justify-content-between" href="#">
+	              Resources
+	              <span class="dropdown-toggle-mobile"></span>
+	            </a>
+	            <div class="dropdown-menu">
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            </div>
+	          </li>
+	
+	          <li class="nav-item dropdown">
+	            <a class="nav-link d-flex align-items-center justify-content-between" href="#">
+	              Company
+	              <span class="dropdown-toggle-mobile"></span>
+	            </a>
+	            <div class="dropdown-menu">
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	              <a class="dropdown-item" href="#">Lorem ipsum</a>
+	            </div>
+	          </li>
+	
+	          <li class="nav-item">
+	            <a class="nav-link" href="#">Contact Us</a>
+	          </li>
+	        </ul>
+	
 	        <ul class="navbar-nav d-flex flex-row d-lg-none flex-1">
 	          <li class="nav-item">
 	            <a class="nav-link digital-icon-facebook" href="#"></a>
@@ -154,13 +212,17 @@
 	
 	      <img src="assets/images/elements/white-logo.svg" alt="" class="img-fluid d-block d-lg-none mx-auto">
 	    </div><!--collapse-->
+	    <a href="#scroll-anchor" class="btn btn-outline-primary navbar-btn-scroll mr-md-6 mr-lg-0 ml-auto d-none d-md-inline-flex float-right" data-click="scroll-to-target">Pricing Request <i class="digital-icon-down-open"></i></a>
 	  </nav>
 	</header>
 
 
 	<main>
 
-		<section class="section hero has-bg has-bg--fixed has-overlay has-overlay--primary-thin d-flex align-items-center" style="background-image: url('assets/images/temp/470691529.jpg');">
+		<section class="section hero has-bg has-overlay has-overlay--primary-thin d-flex align-items-center"
+			data-parallax="scroll"
+			data-image-src="assets/images/temp/470691529.jpg"
+		>
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6 col-md-8">
@@ -493,6 +555,47 @@
 			</div><!--container-->
 		</section><!--section-->
 
+		<section class="section has-bg has-overlay has-overlay--primary-bold" id="scroll-anchor" style="background-image: url('assets/images/temp/Bigstock_84213875.jpg');">
+			<div class="container">
+				<h2 class="text-white mb-5">Pricing Request</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+						<p class="lead--md text-white">Digital Element pricing is based on two variables: data requested and estimated monthly volumes. Please contact us so that we can learn more about your specific needs.</p>
+					</div><!--col-->
+
+					<div class="col-lg-4 offset-lg-3 col-md-6">
+						<form action="">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6">
+										<input type="text" class="form-control" placeholder="First Name">
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6">
+										<input type="text" class="form-control" placeholder="Last Name">
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Company Name">
+							</div><!--form-group-->
+
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email Address">
+							</div><!--form-group-->
+
+							<button type="submit" class="btn btn-warning btn-lg">SUBMIT <i class="digital-icon-angle-right"></i></button>
+						</form>
+					</div><!--col-->
+				</div><!--row-->
+			</div><!--container-->
+		</section><!--section-->
+
 	</main>
 
 
@@ -517,8 +620,8 @@
 	    </div>
 	
 	    <div class="text-center">
-	      <a href="#">
-	        <img src="assets/images/elements/footer-logo.svg" alt="" class="imf-fluid">
+	      <a href="#" class="footer-logo">
+	        <img src="assets/images/elements/footer-logo.svg" alt="" class="img-fluid">
 	      </a>
 	    </div>
 	  </div><!--container-->
