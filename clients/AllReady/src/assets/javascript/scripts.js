@@ -22,6 +22,13 @@ $(document).ready(function(){
 		$('.aside__link--has-collapse').addClass('collapsed');
 		$('.aside .collapse').removeClass('show');
 	});
+	$('.aside__list__link--close-menu').on('click', function (e) {
+  	e.preventDefault();
+		$('.aside').removeClass('aside--opened');
+		$('.wrapper__inner').removeClass('wrapper__inner--has-expanded-aside');
+		$('.aside__link--has-collapse').addClass('collapsed');
+		$('.aside .collapse').removeClass('show');
+	});
 	$(document).click(function(event) {
 		if(!$(event.target).closest('.aside').length) {
 	    if($('.aside').hasClass("aside--opened")) {
@@ -31,6 +38,7 @@ $(document).ready(function(){
 	    }
 	  };
 	});
+
 
 	/* ======== Popover initial - http://protip.rocks/ ======== */
 	$.protip();
