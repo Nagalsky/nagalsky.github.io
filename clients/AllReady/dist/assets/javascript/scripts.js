@@ -39,6 +39,13 @@ $(document).ready(function(){
 	  };
 	});
 
+	/* ======== Collapse toggle ======== */
+	$('.collapse-toggle').on('click', function (e) {
+  	e.preventDefault();
+		$('.collapse-item').toggleClass('collapse-item--in');
+	});
+
+
 
 	/* ======== Popover initial - http://protip.rocks/ ======== */
 	$.protip();
