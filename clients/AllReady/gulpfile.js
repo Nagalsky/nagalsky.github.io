@@ -82,6 +82,8 @@ gulp.task('javascript:build', task.javascript = function () {
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/headroom.js/dist/headroom.min.js',
+    'node_modules/headroom.js/dist/jQuery.headroom.min.js',
     'node_modules/summernote/dist/summernote-bs4.min.js',
     'node_modules/protip/protip.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',

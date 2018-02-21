@@ -1,0 +1,40 @@
+/* TAB */
+
+.tab {
+  border: none;
+  @extend .justify-content-center;
+  .tab__item {
+    margin-bottom: 0;
+    &+.tab__item {
+      margin-left: 20px;
+    }
+  }
+  .tab__link {
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    background: $muted-thin;
+    padding: 15px 15px;
+    border-radius: 6px;
+    color: $gray-bold;
+    &.active {
+      border: none;
+      background: $danger;
+      color: $white;
+    }
+  }
+  .tab__link__caption {
+    display: block;
+    font-size: 28px;
+    line-height: 120%;
+  }
+}
+
+
+
+.tab-content {
+  margin-top: 30px;
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+}

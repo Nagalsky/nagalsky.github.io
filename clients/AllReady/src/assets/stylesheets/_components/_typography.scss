@@ -8,20 +8,34 @@ html, body {
 	line-height: $body-line-height;
 }
 
+
+body {
+	padding-top: $navbar-height;
+	@include media-breakpoint-up(md) {
+    padding-top: $navbar-height-md-up;
+  }
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-top: 0;
 	margin-bottom: 20px;
+	line-height: $title-kerning;
 	&:last-child {
 		margin-bottom: 0;
 	}
 }
 
 h1, .h1 {
+	font-size: 42px;
+	@include media-breakpoint-down(md) {
+		font-size: 34px;
+	}
 }
 h2, .h2 {
 	font-size: 28px;
 }
 h3, .h3 {
+	font-size: 21px;
 }
 h4, .h4 {
 	font-size: 18px;
@@ -29,6 +43,28 @@ h4, .h4 {
 h5, .h5 {
 }
 h6, .h6 {
+}
+
+.title {
+	text-transform: uppercase;
+	@include media-breakpoint-up(md) {
+		font-size: 38px;
+	}
+}
+.title-secondary {
+	@include media-breakpoint-up(md) {
+		font-size: 24px;
+	}
+}
+.title-third {
+	@include media-breakpoint-up(md) {
+		font-size: 22px;
+	}
+}
+.title-fourth {
+	@include media-breakpoint-up(md) {
+		font-size: 18px;
+	}
 }
 
 button, a {
@@ -42,6 +78,13 @@ a {
 	&:hover, &:focus {
 		color: darken($link-color, 10%);
 		text-decoration: none;
+	}
+}
+
+.link-danger {
+	color: $danger;
+	&:hover, &:focus {
+		color: darken($danger, 10%);
 	}
 }
 

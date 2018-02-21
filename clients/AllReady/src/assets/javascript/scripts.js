@@ -73,5 +73,38 @@ $(document).ready(function(){
     row.insertAfter(row.next());
   });
 
+	/* ======== Headeroom initial - http://wicky.nillia.ms/headroom.js/ ======== */
+	$(".navbar").headroom({
+		offset : 60,
+		classes : {
+      // when element is initialised
+      initial : "navbar",
+      // when scrolling up
+      pinned : "navbar--pinned",
+      // when scrolling down
+      unpinned : "navbar--unpinned",
+      // when above offset
+      top : "navbar--top",
+      // when below offset
+      notTop : "navbar--not-top",
+      // when at bottom of scoll area
+      bottom : "navbar--bottom",
+      // when not at bottom of scroll area
+      notBottom : "navbar--not-bottom"
+    }
+	});
+
+	/* ======== Menu action ======== */
+	$('.menu-toggle').on('click', function (e) {
+  	e.preventDefault();
+		$('.menu').addClass('menu--is-open');
+		$('body').addClass('ovh');
+	});
+	$('.menu__close').on('click', function (e) {
+  	e.preventDefault();
+		$('.menu').removeClass('menu--is-open');
+		$('body').removeClass('ovh');
+	});
+
 
 });

@@ -29,9 +29,6 @@ $btn-fs: 16px;
       }
     }
   }
-  &.btn-outline-muted {
-    @include button-outline-variants($color: $silver);
-  }
   &.btn-primary {
     @include button-variants($bg: $primary, $color: $white);
     &.btn-has-shadow {
@@ -41,8 +38,23 @@ $btn-fs: 16px;
       }
     }
   }
+  &.btn-danger {
+    @include button-variants($bg: $danger, $color: $white);
+    &.btn-has-shadow {
+      box-shadow: 0.5px 0.9px 0 0 darken($danger, 10%) !important;
+      &:hover, &:focus, &:active {
+        box-shadow: 0.5px 0.9px 0 0 darken($danger, 10%) !important;
+      }
+    }
+  }
+  &.btn-outline-muted {
+    @include button-outline-variants($color: $silver);
+  }
   &.btn-sm {
     padding: 1px 9px;
     font-size: 14px;
+  }
+  &.btn-rounded {
+    border-radius: 6px;
   }
 }
