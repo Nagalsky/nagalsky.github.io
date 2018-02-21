@@ -21,6 +21,10 @@ $field-height: 40px;
   }
 }
 
+.form-group {
+	margin-bottom: 20px;
+}
+
 label {
 	font-family: $font-bold;
 }
@@ -35,4 +39,24 @@ select, select.form-control {
 	background-repeat: no-repeat;
 	background-size: 12px auto;
 	background-position: right 7.5px center;
+}
+
+textarea, textarea.form-control {
+	resize: none;
+	min-height: 130px;
+}
+
+.form-check {
+	input {
+		&:checked {
+			&+.form-check-label {
+				color: #666666;
+			}
+		}
+	}
+}
+
+.form-check-label {
+	color: #999999;
+	font-size: 16px;
 }
