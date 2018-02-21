@@ -3,10 +3,21 @@
 .tab {
   border: none;
   @extend .justify-content-center;
+  @include media-breakpoint-down(md) {
+    display: block !important;
+    overflow: auto;
+    white-space: nowrap;
+  }
   .tab__item {
     margin-bottom: 0;
+    @include media-breakpoint-down(md) {
+      display: inline-block !important;
+    }
     &+.tab__item {
       margin-left: 20px;
+      @include media-breakpoint-down(md) {
+        margin-left: 15px;
+      }
     }
   }
   .tab__link {
@@ -17,6 +28,9 @@
     padding: 15px 15px;
     border-radius: 6px;
     color: $gray-bold;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
     &.active {
       border: none;
       background: $danger;
@@ -27,6 +41,9 @@
     display: block;
     font-size: 28px;
     line-height: 120%;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
   }
 }
 
