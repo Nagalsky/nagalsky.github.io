@@ -45,8 +45,6 @@ $(document).ready(function(){
 		$('.collapse-item').toggleClass('collapse-item--in');
 	});
 
-
-
 	/* ======== Popover initial - http://protip.rocks/ ======== */
 	$.protip();
 
@@ -105,6 +103,9 @@ $(document).ready(function(){
 		$('.menu').removeClass('menu--is-open');
 		$('body').removeClass('ovh');
 	});
+
+
+
 
 
 });

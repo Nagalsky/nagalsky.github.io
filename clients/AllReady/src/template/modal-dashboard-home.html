@@ -1,5 +1,5 @@
 <!-- Modal form -->
-<div class="modal modal--dashboard fade" id="modal-dashboard" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal modal--dashboard fade" id="modal-dashboard-home" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="wrapper">
@@ -24,166 +24,89 @@
 
 
 
-  				<div class="content">
+          <div class="content">
   					<div class="container-fluid">
-  						<div class="d-flex align-items-center justify-content-between mb-3">
-  							<h2 class="mb-0">Allmänt</h2>
-  							<span class="content-icon protip"
-  							data-pt-position="bottom-left-corner"
-  							data-pt-trigger="hover"
-  							data-pt-gravity="false"
-  							data-pt-title="
-  								<h4 class='popover-title'>General</h4>
-  								<p>Here you can edit the General settings for the event, such as the title ,location and date.</p>
-  							"
-  							>
-  								<i class="allready-icon-question"></i>
-  							</span>
-  						</div>
+  						<div class="card card--content card--content--md border-0 bg-transparent">
+  						  <div class="card-body p-0">
+                  <div class="card">
+      						  <div class="card-body">
+                      <p class="fs-16 mb-2">Senior Management Forum 14 Dec 2017</p>
+                      <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                          <p class="mb-1 text-truncate">
+                            <b>Event Date:</b> <span class="ml-1 text-muted">20.02.2018</span>
+                          </p>
 
-  						<div class="card card--content">
-  						  <div class="card-body">
-  						    <form action="">
-  						    	<div class="form-group">
-  										<label for="field-titel">Titel</label>
-  										<input type="text" class="form-control" id="field-titel">
-  									</div><!--form-group-->
+                          <p class="mb-1 text-truncate">
+                            <b>Start:</b> <span class="ml-1 text-muted">09:00</span>
+                          </p>
 
-  									<div class="form-group">
-  										<label for="field-plats">Plats</label>
-  										<input type="text" class="form-control" id="field-plats">
-  									</div><!--form-group-->
+                          <p class="text-truncate">
+                            <b>End:</b> <span class="ml-1 text-muted">18:30</span>
+                          </p>
+                        </div><!--col-->
 
-  									<div class="form-group">
-  										<label for="">Detaljer</label>
-  										<textarea class="wysiwyg wysiwyg-editor" name="editordata"></textarea>
-  									</div><!--form-group-->
+                        <div class="col-md-3 mb-3 mb-md-0">
+                          <p class="mb-1 text-truncate">
+                            <b>Seats:</b> <a href="#" class="ml-1 underline">423 <i class="allready-icon-edit"></i></a>
+                          </p>
 
-  									<div class="form-group">
-  										<div class="row">
-  											<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-md-0">
-  												<label for="field-börjar">Börjar</label>
-  												<div class="datepicker-holder">
-  													<input type="text" class="form-control datepicker" id="field-börjar" placeholder="Select Date">
-  												</div><!--datepicker-holder-->
-  											</div><!--col-->
+                          <p class="text-truncate">
+                            <b>Speakers:</b> <span class="ml-1 text-muted">8</span>
+                          </p>
+                        </div><!--col-->
 
-  											<div class="col-lg-3 col-md-4 col-sm-6">
-  												<label for="field-slutar">Slutar</label>
-  												<div class="datepicker-holder">
-  													<input type="text" class="form-control datepicker" id="field-slutar" placeholder="Select Date">
-  												</div><!--datepicker-holder-->
-  											</div><!--col-->
-  										</div><!--row-->
-  									</div><!--form-group-->
+                        <div class="col-md-6">
+                          <p class="mb-1 text-truncate">
+                            <b>Organizer:</b> <span class="ml-1 text-muted">Mikael Eriksson</span>
+                          </p>
 
-  									<div class="form-group">
-  										<label for="" class="d-block">Hela dagen?</label>
-  										<div class="btn-switch">
-  											<input type="radio" id="btn-switch-1-yes" name="switch-1" class="btn-switch__radio btn-switch__radio_yes" />
-    										<input type="radio" checked id="btn-switch-1-no" name="switch-1" class="btn-switch__radio btn-switch__radio_no" />
-    										<label for="btn-switch-1-yes" class="btn-switch__label btn-switch__label_yes">
-  												<span class="btn-switch__txt">Ya</span>
-  											</label>
-  											<label for="btn-switch-1-no" class="btn-switch__label btn-switch__label_no">
-  												<span class="btn-switch__txt">Nej</span>
-  											</label>
-  										</div><!--btn-switch-->
-  									</div><!--form-group-->
+                          <p class="text-truncate">
+                            <b>Location:</b> <span class="ml-1 text-muted">Stockholm, Nice Street 67, 00923</span>
+                          </p>
+                        </div><!--col-->
+                      </div><!--row-->
+      						  </div><!--card-body-->
+      						</div><!--card-->
 
-  									<div class="form-group">
-  										<div class="row">
-  											<div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-md-0">
-  												<label for="">Fran</label>
-  												<div class="row">
-  													<div class="col-6">
-  														<select name="" id="" class="form-control">
-  															<option selected hidden>00</option>
-  															<option value="">Lorem</option>
-  															<option value="">Ipsum</option>
-  														</select>
-  													</div><!--col-->
+                  <div class="card">
+      						  <div class="card-body">
+                      <h4 class="mb-2"><b>Alerts</b></h4>
+                      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      								    <i class="allready-icon-close-rounded"></i>
+      								  </button>
+      								  <p class="mb-3">You are trying to close “edit mode” but you have unsaved progress on Allmant page. What would you like to do?</p>
+      									<a href="#" class="btn btn-muted btn-sm btn-has-shadow my-1">Dismiss</a>
+      									<a href="#" class="btn btn-success btn-sm btn-has-shadow my-1">Send Now</a>
+      								</div><!--alert-->
 
-  													<div class="col-6">
-  														<select name="" id="" class="form-control">
-  															<option selected hidden>00</option>
-  															<option value="">Lorem</option>
-  															<option value="">Ipsum</option>
-  														</select>
-  													</div><!--col-->
-  												</div><!--row-->
-  											</div><!--col-->
+                      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      								    <i class="allready-icon-close-rounded"></i>
+      								  </button>
+      								  <p class="mb-3">You are trying to close “edit mode” but you have unsaved progress on Allmant page. What would you like to do?</p>
+      									<a href="#" class="btn btn-muted btn-sm btn-has-shadow my-1">Dismiss</a>
+      									<a href="#" class="btn btn-success btn-sm btn-has-shadow my-1">Send Now</a>
+      								</div><!--alert-->
+      						  </div><!--card-body-->
+      						</div><!--card-->
 
-  											<div class="col-lg-3 col-md-4 col-sm-6">
-  												<label for="">Till</label>
-  												<div class="row">
-  													<div class="col-6">
-  														<select name="" id="" class="form-control">
-  															<option selected hidden>00</option>
-  															<option value="">Lorem</option>
-  															<option value="">Ipsum</option>
-  														</select>
-  													</div><!--col-->
+                  <div class="card">
+      						  <div class="card-body">
+                      <h4 class="mb-2"><b>Event Status</b></h4>
 
-  													<div class="col-6">
-  														<select name="" id="" class="form-control">
-  															<option selected hidden>00</option>
-  															<option value="">Lorem</option>
-  															<option value="">Ipsum</option>
-  														</select>
-  													</div><!--col-->
-  												</div><!--row-->
-  											</div><!--col-->
-  										</div><!--row-->
-  									</div><!--form-group-->
-
-  									<div class="form-group">
-  										<div class="checkbox-holder checkbox-holder--inline">
-  											<input type="checkbox" id="checkobox-1">
-  											<label class="checkbox__label" for="checkobox-1">
-  												Visa Datum
-  											</label><!--checkbox__label-->
-  										</div><!--checkbox-holder-->
-
-  										<div class="checkbox-holder checkbox-holder--inline">
-  											<input type="checkbox" id="checkobox-2">
-  											<label class="checkbox__label" for="checkobox-2">
-  												Visa Tid
-  											</label><!--checkbox__label-->
-  										</div><!--checkbox-holder-->
-  									</div><!--form-group-->
-
-  									<div class="form-group">
-  										<div class="row">
-  											<div class="col-lg-3 col-md-4 mb-3 mb-md-0">
-  												<label for="field-upprepas">Upprepas</label>
-  												<select name="" id="field-upprepas" class="form-control">
-  													<option selected hidden>Inte</option>
-  													<option value="">Lorem</option>
-  													<option value="">Ipsum</option>
-  												</select>
-  											</div><!--col-->
-
-  											<div class="col-lg-3 col-md-4 mb-3 mb-md-0">
-  												<label for="field-sprak">Sprak</label>
-  												<select name="" id="field-sprak" class="form-control">
-  													<option selected hidden>English</option>
-  													<option value="">Lorem</option>
-  													<option value="">Ipsum</option>
-  												</select>
-  											</div><!--col-->
-
-  											<div class="col-lg-4 col-md-4">
-  												<label for="field-bokningsbar">Bokningsbar</label>
-  												<select name="" id="field-bokningsbar" class="form-control">
-  													<option selected hidden>Ja (Publik utan registering)</option>
-  													<option value="">Lorem</option>
-  													<option value="">Ipsum</option>
-  												</select>
-  											</div><!--col-->
-  										</div><!--row-->
-  									</div><!--form-group-->
-  						    </form>
+                      <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item">
+                          Cras justo odio
+                        </a>
+                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item">Morbi leo risus</a>
+                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                      </div><!--list-group-->
+      						  </div><!--card-body-->
+      						</div><!--card-->
   						  </div><!--card-body-->
   						</div><!--card-->
   					</div><!--container-fluid-->
@@ -222,7 +145,7 @@
               </a>
             </li><!--aside__list__item-->
             <li class="aside__list__item">
-              <a href="#" class="aside__list__link protip aside__list__link--close-menu"
+              <a href="#" class="aside__list__link aside__list__link--active protip aside__list__link--close-menu"
                 data-pt-position="left"
                 data-pt-trigger="hover"
                 data-pt-title="
@@ -230,12 +153,12 @@
                   <p>Lorem ipsum</p>
                 "
                 >
-                <i class="allready-icon-allmant aside__list__icon"></i>
-                <span class="aside__list__text">Home</span>
+                <i class="allready-icon-house aside__list__icon"></i>
+                <span class="aside__list__text">Dashboard</span>
               </a>
             </li><!--aside__list__item-->
             <li class="aside__list__item">
-              <a href="#" class="aside__list__link aside__list__link--active protip aside__list__link--close-menu"
+              <a href="#" class="aside__list__link protip aside__list__link--close-menu"
                 data-pt-position="left"
                 data-pt-trigger="hover"
                 data-pt-title="
@@ -849,7 +772,6 @@
                 <span class="aside__list__text">Behörighet</span>
               </a>
             </li><!--aside__list__item-->
-
             <li class="aside__list__item protip">
               <a href="#" class="aside__list__link protip"
                 data-pt-position="left"

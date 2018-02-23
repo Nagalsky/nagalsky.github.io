@@ -19,10 +19,19 @@
 }
 
 .modal-dialog {
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
   @include media-breakpoint-up(sm) {
     max-width: 486px;
   }
+  &.modal-lg {
+    @include media-breakpoint-up(md) {
+      max-width: 730px;
+    }
+  }
 }
+
+
 
 .modal-content {
   border: none;
