@@ -33,3 +33,28 @@
     padding-top: 230px;
   }
 }
+
+.section--arrow-img {
+  position: absolute;
+  bottom: -146px;
+  left: -20px;
+  z-index: 10;
+  @include media-breakpoint-down(lg) {
+    bottom: -144px;
+    left: 0;
+  }
+  @include media-breakpoint-down(md) {
+    bottom: -139px;
+  }
+  @include media-breakpoint-down(sm) {
+    bottom: -136px;
+  }
+  @include media-breakpoint-down(xs) {
+    bottom: -86px;
+    max-width: 30px;
+    left: 15px;
+  }
+  @media screen and (max-width: 400px) {
+    bottom: -82px;
+  }
+}
