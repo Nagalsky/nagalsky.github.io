@@ -1,0 +1,18 @@
+/* CARD */
+
+$card-border-color: #dcdcdc;
+
+.card {
+  border-radius: 0;
+  border-color: $card-border-color;
+  border-width: 2px;
+}
+
+.card-body--bordered {
+  @include media-breakpoint-up(md) {
+    border-left: 2px solid $card-border-color;
+  }
+  @include media-breakpoint-down(sm) {
+    border-top: 2px solid $card-border-color;
+  }
+}

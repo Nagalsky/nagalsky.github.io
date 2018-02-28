@@ -1,0 +1,93 @@
+/* HEADER */
+
+$header-top-bg: $asphalt-bold;
+$header-color: #dcdcdc;
+$header-card-color: #c1c1c1;
+$header-top-skew-box-size: 20px;
+$header-flag-size: 27px;
+$header-nav-bg: $gray-bold;
+
+.header {}
+
+.header__top {
+  position: relative;
+  z-index: 10;
+  background: $header-top-bg;
+  padding: 10px 0 0px 0;
+  @include media-breakpoint-up(sm) {
+    padding: 15px 0 10px 0;
+  }
+  &:before {
+    content: '';
+    display: block;
+    height: $header-top-skew-box-size;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -13px;
+    background: $header-top-bg;
+    @include skew(0deg, -0.5deg);
+    z-index: -1;
+  }
+  .nav-link {
+    color: $header-color;
+    @include media-breakpoint-up(sm) {
+      font-size: 15px;
+    }
+    &:hover, &:focus {
+      color: darken($header-color, 10%);
+    }
+  }
+}
+
+.header__flag {
+  width: $header-flag-size;
+}
+
+.header__middle {
+  padding: 40px 0 25px 0;
+  @include media-breakpoint-up(md) {
+    padding: 40px 0;
+  }
+}
+
+.nav__card {
+  .nav-item {
+    color: $header-card-color;
+    font-size: 20px;
+    padding: 0px 5px;
+    @include media-breakpoint-up(sm) {
+      font-size: 28px;
+    }
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 100%;
+  max-width: 275px;
+  @include media-breakpoint-down(xs) {
+    max-width: 170px;
+  }
+}
+
+.header__navbar {
+  background: $header-nav-bg;
+  @include media-breakpoint-down(sm) {
+    padding: 5px 0;
+  }
+  .nav-link {
+    padding: 20px 38px;
+    color: $white;
+    font-size: 17px;
+    background: $header-nav-bg;
+    text-transform: uppercase;
+    @include media-breakpoint-down(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    &:hover, &:focus, &.active {
+      background: lighten($header-nav-bg, 7.5%);
+    }
+  }
+}

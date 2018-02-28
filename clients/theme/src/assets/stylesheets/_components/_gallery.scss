@@ -1,0 +1,58 @@
+/* GALLERY */
+
+
+$gallery-badge-size: 152px;
+
+.slick-list {
+  //overflow: visible;
+}
+
+.gallery__item {
+  position: relative;
+}
+
+.gallery__badge {
+  width: $gallery-badge-size;
+  height: $gallery-badge-size;
+  border-radius: 50%;
+  @extend .d-flex, .align-items-center, .justify-content-center;
+  color: $white;
+  background: $warning;
+  position: absolute;
+  top: -82px;
+  right: -30px;
+}
+
+
+.slick-dots {
+  >li {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    &.slick-active {
+      >button {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    >button {
+      border-radius: 50%;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
+      position: relative;
+      &:before {
+        content: '';
+        opacity: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #3b3b3c;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

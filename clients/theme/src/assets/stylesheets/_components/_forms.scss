@@ -1,0 +1,60 @@
+/* FORMS */
+
+$legend-color: #33383c;
+$field-border-color: #e3e3e3;
+$field-bg: #e8e8e8;
+$field-color: #282c2f;
+$field-font-size: 14px;
+$field-height: 38px;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius: $base-radius;
+	border-color: $field-border-color;
+	background-color: $field-bg;
+	color: $field-color;
+	font-size: $field-font-size;
+	height: $field-height;
+	@include custom-placeholder($color: $field-color, $font-size: $field-font-size, $font-family: $font-regular);
+	&:hover, &:focus {
+		box-shadow: none !important;
+		color: $field-color;
+	}
+	&:focus {
+		box-shadow: none !important;
+		border-color: darken($field-border-color, 15%);
+		background-color: darken($field-bg, 5%);
+	}
+}
+
+legend {
+	font-size: 21px;
+	font-family: $font-thin;
+	color: $legend-color;
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 85%;
+		height: 1px;
+		background: #e0e0e0;
+	}
+}
+
+select, select.form-control {
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyODQuOTI5cHgiIGhlaWdodD0iMTY2LjE2NXB4IiB2aWV3Qm94PSIwIDU5LjM4MiAyODQuOTI5IDE2Ni4xNjUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCA1OS4zODIgMjg0LjkyOSAxNjYuMTY1Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiM5OTk5OTkiIGQ9Ik0yODIuMDgyLDc2LjUxMWwtMTQuMjc0LTE0LjI3M2MtMS45MDItMS45MDYtNC4wOTMtMi44NTYtNi41Ny0yLjg1NmMtMi40NzEsMC00LjY2MSwwLjk1LTYuNTYzLDIuODU2DQoJCUwxNDIuNDY2LDE3NC40NDFMMzAuMjYyLDYyLjI0MWMtMS45MDMtMS45MDYtNC4wOTMtMi44NTYtNi41NjctMi44NTZjLTIuNDc1LDAtNC42NjUsMC45NS02LjU2NywyLjg1NkwyLjg1Niw3Ni41MTUNCgkJQzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0DQoJCXM0LjY2MS0wLjk1MSw2LjU2Mi0yLjg1NEwyODIuMDgyLDg5LjY0N2MxLjkwMi0xLjkwMywyLjg0Ny00LjA5MywyLjg0Ny02LjU2NUMyODQuOTI5LDgwLjYwNywyODMuOTg0LDc4LjQxNywyODIuMDgyLDc2LjUxMXoiLz4NCjwvZz4NCjwvc3ZnPg0K');
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	background-position: right 10px center;
+	padding-right: 30px;
+}
+
+label {
+	font-size: $field-font-size;
+}

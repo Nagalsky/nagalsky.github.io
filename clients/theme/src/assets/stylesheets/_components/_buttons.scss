@@ -1,0 +1,38 @@
+/* BUTTONS */
+
+
+.btn {
+  border-radius: $base-radius;
+  padding: 6px 34px;
+  font-size: 14px;
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-outline-secondary {
+    color: $asphalt;
+    border-color: $asphalt;
+    &:hover, &:focus {
+      background: $asphalt;
+      border-color: $asphalt;
+      color: $white;
+    }
+  }
+  &.btn-warning {
+    background: $warning;
+    border-color: $warning;
+    color: $white;
+    &:hover, &:focus {
+      background: darken($warning, 10%);
+      border-color: darken($warning, 10%);
+      color: $white;
+    }
+  }
+  &.btn-md {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  &.btn-block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
