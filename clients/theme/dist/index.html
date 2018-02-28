@@ -96,31 +96,45 @@
 
 
 	<main class="main">
-		<section class="section">
+		<section class="section section--pt-0">
 			<div class="container">
-				<div class="card">
+				<div class="card card--border-md-0">
 					<div class="row no-gutters">
 						<div class="col-md-6 bg-muted-thin">
-							<div class="card-body">
-						    <div class="gallery py-5" data-slick='{"autoplay": false, "autoplaySpeed": 3000, "arrows": false, "dots": true, "fade": true}'>
+							<div class="card-body relative">
+						    <div class="gallery gallery-caroulse py-5" data-slick='{"autoplay": false, "autoplaySpeed": 3000, "arrows": false, "dots": true, "fade": true, "asNavFor": ".gallery-badge"}'>
 									<div class="gallery__item">
-										<div class="gallery__badge">
-										</div><!--gallery__badge-->
 										<img src="assets/images/temp/slide-1.png" alt="" class="d-block img-fluid mx-auto">
 									</div>
 
 									<div class="gallery__item">
-										<div class="gallery__badge">
-										</div><!--gallery__badge-->
 										<img src="assets/images/temp/slide-1.png" alt="" class="d-block img-fluid mx-auto">
 									</div>
 
 									<div class="gallery__item">
-										<div class="gallery__badge">
-										</div><!--gallery__badge-->
 										<img src="assets/images/temp/slide-1.png" alt="" class="d-block img-fluid mx-auto">
 									</div>
 								</div><!--gallery-->
+
+								<div class="gallery gallery-badge" data-slick='{"autoplay": false, "autoplaySpeed": 3000, "arrows": false, "dots": false, "fade": true, "draggable": false, "pauseOnFocus": false, "pauseOnHover": false, "swipe": false, "touchMove": false, "asNavFor": ".gallery-caroulse"}'>
+									<div>
+										<div class="gallery__badge">
+											29<sub class="gallery__badge__sub">kr</sub>
+										</div><!--gallery__badge-->
+									</div>
+
+									<div>
+										<div class="gallery__badge">
+											11<sub class="gallery__badge__sub">kr</sub>
+										</div><!--gallery__badge-->
+									</div>
+
+									<div>
+										<div class="gallery__badge">
+											17<sub class="gallery__badge__sub">kr</sub>
+										</div><!--gallery__badge-->
+									</div>
+								</div><!--gallery-badge-->
 						  </div><!--card-body-->
 						</div><!--col-->
 
@@ -191,6 +205,18 @@
 
 									<button type="submit" class="btn btn-warning btn-block font-semibold btn-md">Gå til betaling</button>
 								</form>
+
+								<ul class="nav nav__card d-flex d-md-none justify-content-center mt-4">
+					        <li class="nav-item">
+					          <i class="theme-icon-cc-visa"></i>
+					        </li>
+					        <li class="nav-item">
+					          <i class="theme-icon-cc-mastercard"></i>
+					        </li>
+					        <li class="nav-item">
+					          <i class="theme-icon-cc-amex"></i>
+					        </li>
+					      </ul><!--nav-->
 						  </div><!--card-body-->
 						</div><!--col-->
 					</div><!--row-->

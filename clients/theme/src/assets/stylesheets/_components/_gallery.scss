@@ -11,6 +11,23 @@ $gallery-badge-size: 152px;
   position: relative;
 }
 
+.gallery-badge {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  width: $gallery-badge-size;
+  height: $gallery-badge-size;
+  z-index: 100;
+  @include media-breakpoint-down(md) {
+    top: 15px;
+    right: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: calc(#{$gallery-badge-size} - 40px);
+    height: calc(#{$gallery-badge-size} - 40px);
+  }
+}
+
 .gallery__badge {
   width: $gallery-badge-size;
   height: $gallery-badge-size;
@@ -18,10 +35,27 @@ $gallery-badge-size: 152px;
   @extend .d-flex, .align-items-center, .justify-content-center;
   color: $white;
   background: $warning;
-  position: absolute;
-  top: -82px;
-  right: -30px;
+  font-size: 84px;
+  font-family: $font-thin;
+  letter-spacing: -3px;
+  @include media-breakpoint-down(sm) {
+    width: calc(#{$gallery-badge-size} - 40px);
+    height: calc(#{$gallery-badge-size} - 40px);
+    font-size: 60px;
+  }
 }
+
+.gallery__badge__sub {
+  font-size: 30px;
+  font-family: $font-light;
+  letter-spacing: normal;
+  bottom: -.45em;
+  @include media-breakpoint-down(sm) {
+    font-size: 23px;
+  }
+}
+
+
 
 
 .slick-dots {
