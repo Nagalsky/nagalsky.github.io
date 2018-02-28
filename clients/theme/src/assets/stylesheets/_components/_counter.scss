@@ -1,0 +1,30 @@
+/* COUNTER */
+
+$counter-size: 52px;
+
+.counter {
+  @extend .list-unstyled;
+  counter-reset: list;
+}
+
+.counter__item {
+  font-size: 18px;
+  @extend .d-flex, .align-items-center;
+  &+.counter__item {
+    margin-top: 45px;
+  }
+  &:before {
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: $counter-size;
+    height: $counter-size;
+    border-radius: 50%;
+    @extend .d-flex, .align-items-center, .justify-content-center;
+    color: $white;
+    background: #d5dadc;
+    font-family: $font-semibold;
+    font-size: 30px;
+    content: counter(list);
+    counter-increment: list;
+  }
+}

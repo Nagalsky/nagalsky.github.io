@@ -13,3 +13,23 @@
     padding-top: 0;
   }
 }
+
+.section--skew {
+  @include skew(0deg, -2deg);
+  >.container {
+    @include skew(0deg, 2deg);
+  }
+}
+
+.section--fixed-height {
+  @include media-breakpoint-up(md) {
+    z-index: 100;
+    height: 410px;
+  }
+}
+
+.section--pt-xl {
+  @include media-breakpoint-up(md) {
+    padding-top: 230px;
+  }
+}
