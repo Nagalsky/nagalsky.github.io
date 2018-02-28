@@ -85,6 +85,7 @@ gulp.task('javascript:build', task.javascript = function () {
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/jquery-parallax.js/parallax.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/video.js/dist/video.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',

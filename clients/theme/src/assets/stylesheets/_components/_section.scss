@@ -8,9 +8,22 @@
   }
 }
 
+.section--md {
+  @include media-breakpoint-up(sm) {
+    padding: 85px 0;
+  }
+}
+
 .section--pt-0 {
   @include media-breakpoint-down(sm) {
     padding-top: 0;
+  }
+}
+
+.section--pb-xl {
+  padding-bottom: 60px;
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 90px;
   }
 }
 
@@ -18,6 +31,20 @@
   @include skew(0deg, -2deg);
   >.container {
     @include skew(0deg, 2deg);
+  }
+}
+
+.section--skew-top {
+  padding-top: 20px;
+  &:before {
+    content: '';
+    height: 100px;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    @include skew(0deg, -2deg);
+    background: #727b83;
   }
 }
 

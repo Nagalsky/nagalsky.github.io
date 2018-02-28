@@ -3,8 +3,21 @@
 
 $gallery-badge-size: 152px;
 
-.slick-list {
-  //overflow: visible;
+.slick-arrow {
+  @extend .font-icons;
+  &:before {
+    color: #7c868f;
+  }
+}
+
+.slick-prev {
+  left: 10px;
+  @extend .theme-icon-left-open-big;
+}
+
+.slick-next {
+  right: 10px;
+  @extend .theme-icon-right-open-big;
 }
 
 .gallery__item {
