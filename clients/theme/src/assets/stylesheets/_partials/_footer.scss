@@ -1,1 +1,28 @@
 /* FOOTER */
+
+$footer-bg: $mine-shaft;
+$footer-color: #afafaf;
+$footer-fs: 14px;
+
+.footer {
+  padding: 45px 0;
+  background: $footer-bg;
+  color: $footer-color;
+  font-size: $footer-fs;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+  a {
+    color: $footer-color;
+    font-family: $font-semibold;
+  }
+}
+
+.footer__item {
+  &+.footer__item {
+    margin-top: 330px;
+    @include media-breakpoint-down(md) {
+      margin-top: 300px;
+    }
+  }
+}
