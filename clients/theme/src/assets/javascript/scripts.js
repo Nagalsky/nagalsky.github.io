@@ -29,8 +29,8 @@ $(document).ready(function(){
   });
 
 
-	/*$('html, body').animate({
-      scrollTop: $('#anchor-bottom').offset().top
-  }, 1400);*/
+	$('html, body').animate({
+      scrollTop: $('#header-anchor').offset().top + 40
+  }, 400);
 
 });
