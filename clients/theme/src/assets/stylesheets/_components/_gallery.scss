@@ -41,8 +41,8 @@ $gallery-badge-size: 152px;
     right: 15px;
   }
   @include media-breakpoint-down(sm) {
-    width: calc(#{$gallery-badge-size} - 40px);
-    height: calc(#{$gallery-badge-size} - 40px);
+    width: calc(#{$gallery-badge-size} - 20px);
+    height: calc(#{$gallery-badge-size} - 20px);
   }
 }
 
@@ -50,15 +50,18 @@ $gallery-badge-size: 152px;
   width: $gallery-badge-size;
   height: $gallery-badge-size;
   border-radius: 50%;
-  @extend .d-flex, .align-items-center, .justify-content-center;
+  //@extend .d-flex, .align-items-center, .justify-content-center;
+  text-align: center;
+  line-height: $gallery-badge-size;
   color: $white;
   background: $warning;
   font-size: 84px;
   font-family: $font-thin;
   letter-spacing: -3px;
   @include media-breakpoint-down(sm) {
-    width: calc(#{$gallery-badge-size} - 40px);
-    height: calc(#{$gallery-badge-size} - 40px);
+    width: calc(#{$gallery-badge-size} - 20px);
+    height: calc(#{$gallery-badge-size} - 20px);
+    line-height: calc(#{$gallery-badge-size} - 20px);
     font-size: 60px;
   }
 }
@@ -67,7 +70,8 @@ $gallery-badge-size: 152px;
   font-size: 30px;
   font-family: $font-light;
   letter-spacing: normal;
-  bottom: -.45em;
+  bottom: 0;
+  margin-left: 2.5px;
   @include media-breakpoint-down(sm) {
     font-size: 23px;
   }
