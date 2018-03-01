@@ -28,9 +28,18 @@ $(document).ready(function(){
     }, 500);
   });
 
+	function checkPosition() {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+			$('html, body').animate({
+		  	scrollTop: $('#header-anchor').offset().top + 20
+		  }, 400);
+    } else {
+			$('html, body').animate({
+				scrollTop: $('#header-anchor').offset().top + 40
+			}, 400);
+    }
+	}
 
-	$('html, body').animate({
-      scrollTop: $('#header-anchor').offset().top + 40
-  }, 400);
+	checkPosition();
 
 });
