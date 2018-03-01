@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".gallery").slick()});
+$(document).ready(function(){$(".gallery").slick(),$(".review-gallery").slick({slidesToShow:3,slidesToScroll:1,responsive:[{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}}]})});

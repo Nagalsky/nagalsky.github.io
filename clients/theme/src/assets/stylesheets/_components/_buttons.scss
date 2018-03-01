@@ -2,7 +2,7 @@
 
 
 .btn {
-  border-radius: $base-radius;
+  border-radius: $base-radius/2;
   padding: 6px 34px;
   font-size: 14px;
   &:hover, &:focus {
@@ -11,10 +11,15 @@
   &.btn-outline-secondary {
     color: $asphalt;
     border-color: $asphalt;
-    &:hover, &:focus {
+    &:hover {
       background: $asphalt;
       border-color: $asphalt;
       color: $white;
+    }
+    &:focus, &:active {
+      background: inherit !important;
+      color: $asphalt !important;
+      border-color: $asphalt !important;
     }
   }
   &.btn-warning {

@@ -32,6 +32,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-lg {
+  font-size: 45px;
+  @include media-breakpoint-down(md) {
+		font-size: 30px;
+	}
+  &:before {
+    line-height: 100%;
+  }
+}
+
 .theme-icon-envelope:before { content: '\e800'; } /* '' */
 .theme-icon-coin-stack:before { content: '\e801'; } /* '' */
 .theme-icon-delivery-truck:before { content: '\e802'; } /* '' */
