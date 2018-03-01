@@ -3,7 +3,17 @@
 
 $gallery-badge-size: 152px;
 
-.gallery-caroulse {}
+.gallery-carousel {
+  /*img {
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      display: block;
+      width: auto !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }*/
+}
 
 .slick-arrow {
   @extend .font-icons;
@@ -40,10 +50,6 @@ $gallery-badge-size: 152px;
     top: 15px;
     right: 15px;
   }
-  @include media-breakpoint-down(sm) {
-    width: calc(#{$gallery-badge-size} - 20px);
-    height: calc(#{$gallery-badge-size} - 20px);
-  }
 }
 
 .gallery__badge {
@@ -58,12 +64,6 @@ $gallery-badge-size: 152px;
   font-size: 84px;
   font-family: $font-thin;
   letter-spacing: -3px;
-  @include media-breakpoint-down(sm) {
-    width: calc(#{$gallery-badge-size} - 20px);
-    height: calc(#{$gallery-badge-size} - 20px);
-    line-height: calc(#{$gallery-badge-size} - 20px);
-    font-size: 60px;
-  }
 }
 
 .gallery__badge__sub {
@@ -72,9 +72,6 @@ $gallery-badge-size: 152px;
   letter-spacing: normal;
   bottom: 0;
   margin-left: 2.5px;
-  @include media-breakpoint-down(sm) {
-    font-size: 23px;
-  }
 }
 
 

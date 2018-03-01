@@ -29,4 +29,8 @@ $(document).ready(function(){
   });
 
 
+	$('html, body').animate({
+      scrollTop: $('#anchor-bottom').offset().top
+  }, 1400);
+
 });

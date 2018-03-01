@@ -2,7 +2,7 @@
 
 
 .btn {
-  border-radius: $base-radius/2;
+  border-radius: $base-radius;
   padding: 6px 34px;
   font-size: 14px;
   @include media-breakpoint-down(sm) {
@@ -21,9 +21,14 @@
       color: $white;
     }
     &:focus, &:active {
-      background: inherit !important;
-      color: $asphalt !important;
-      border-color: $asphalt !important;
+      color: $asphalt;
+      border-color: $asphalt;
+      background: transparent;
+      &:hover {
+        background: $asphalt;
+        border-color: $asphalt;
+        color: $white;
+      }
     }
   }
   &.btn-warning {
