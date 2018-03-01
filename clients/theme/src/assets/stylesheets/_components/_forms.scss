@@ -28,6 +28,24 @@ $field-height: 45px;
 	}
 }
 
+.form-control--transparent {
+	border: 2px solid #555555;
+	background: transparent;
+	color: $white;
+	@include custom-placeholder($color: #909090, $font-size: 16px, $font-family: $font-light);
+	&:focus {
+		box-shadow: none !important;
+		border-color: $white;
+		background: transparent;
+		color: $white;
+	}
+}
+
+textarea, textarea.form-control {
+	resize: none;
+	min-height: 126px !important;
+}
+
 legend {
 	font-size: 21px;
 	font-family: $font-thin;
