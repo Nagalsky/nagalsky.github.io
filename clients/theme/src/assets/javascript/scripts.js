@@ -18,5 +18,15 @@ $(document).ready(function(){
 	});
 
 
+	//Scroll to element
+  $('[data-click=scroll-to-target]').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+  });
+
 
 });

@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".gallery").slick(),$(".review-gallery").slick({slidesToShow:3,slidesToScroll:1,responsive:[{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}}]})});
+$(document).ready(function(){$(".gallery").slick(),$(".review-gallery").slick({slidesToShow:3,slidesToScroll:1,responsive:[{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}}]}),$("[data-click=scroll-to-target]").on("click",function(o){o.preventDefault(),o.stopPropagation();var l=$(this).attr("href");$("html, body").animate({scrollTop:$(l).offset().top},500)})});
