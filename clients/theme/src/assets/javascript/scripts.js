@@ -29,11 +29,7 @@ $(document).ready(function(){
   });
 
 	function checkPosition() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
-			$('html, body').animate({
-		  	scrollTop: $('#header-anchor').offset().top + 20
-		  }, 400);
-    } else {
+    if (window.matchMedia('(min-width: 767px)').matches) {
 			$('html, body').animate({
 				scrollTop: $('#header-anchor').offset().top + 40
 			}, 400);
