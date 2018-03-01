@@ -29,8 +29,8 @@ $(document).ready(function(){
   });
 
 
-	$('html, body').animate({
+	/*$('html, body').animate({
       scrollTop: $('#anchor-bottom').offset().top
-  }, 1400);
+  }, 1400);*/
 
 });
