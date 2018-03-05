@@ -58,18 +58,21 @@
 }
 
 .section--fixed-height {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     z-index: 100;
     height: 455px;
   }
   @include media-breakpoint-down(md) {
     margin-bottom: -20px;
-    padding-bottom: 25px;
+    padding-bottom: 75px;
   }
 }
 
 .section--pt-xl {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
+    padding-top: 200px;
+  }
+  @include media-breakpoint-up(xl) {
     padding-top: 245px;
   }
 }
