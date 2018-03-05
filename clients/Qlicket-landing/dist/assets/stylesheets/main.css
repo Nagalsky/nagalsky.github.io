@@ -6813,7 +6813,8 @@ p {
 /* SECTION */
 .section {
   position: relative;
-  padding: 50px 0; }
+  padding: 50px 0;
+  z-index: 10; }
   @media (min-width: 768px) {
     .section {
       padding: 130px 0; } }
@@ -6973,6 +6974,14 @@ p {
 
 .img-content {
   max-width: 90px; }
+
+.img-watermark {
+  position: absolute;
+  bottom: 0;
+  max-width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; }
 
 /* CAROUSEL */
 .carousel-laptop {
