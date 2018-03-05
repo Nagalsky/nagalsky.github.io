@@ -17,7 +17,6 @@ $(document).ready(function(){
 	  ]
 	});
 
-
 	//Scroll to element
   $('[data-click=scroll-to-target]').on('click', function(e) {
     e.preventDefault();
