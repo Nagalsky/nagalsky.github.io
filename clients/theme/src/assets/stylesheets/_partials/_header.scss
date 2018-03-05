@@ -32,6 +32,7 @@ $header-nav-bg: $gray-bold;
   .nav-link {
     color: $header-color;
     font-size: 16px;
+    @extend .d-inline-flex, .align-items-center;
     @include media-breakpoint-up(sm) {
       font-size: 15px;
     }
@@ -118,4 +119,10 @@ $header-nav-bg: $gray-bold;
       background: lighten($header-nav-bg, 7.5%);
     }
   }
+}
+
+.nav-icon {
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 5px;
 }
