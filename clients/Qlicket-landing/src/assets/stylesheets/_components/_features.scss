@@ -1,0 +1,115 @@
+/* FEATURES */
+
+$features-line-height: 140px;
+$features-circle-size: 24px;
+
+.features {
+  &:not(:last-child) {
+    margin-bottom: 45px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-bottom: 140px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+  }
+  &:before {
+    height: $features-line-height;
+    width: 1px;
+    bottom: 0;
+  }
+  &:after {
+    height: $features-circle-size;
+    width: $features-circle-size;
+    border-radius: 50%;
+    bottom: 0;
+  }
+  &+.features__item {
+    margin-top: 45px;
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.features__item--double {
+  @include media-breakpoint-up(md) {
+    padding-bottom: 240px;
+  }
+  .features__inner {
+    @include media-breakpoint-up(md) {
+      padding-bottom: 30px;
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $white;
+      @include media-breakpoint-down(sm) {
+        content: none;
+      }
+    }
+    &:before {
+      height: 350px;
+      width: 1px;
+      bottom: -219px;
+      @include media-breakpoint-down(lg) {
+        height: 300px;
+        bottom: -194px;
+      }
+      @include media-breakpoint-down(md) {
+        height: 230px;
+        bottom: -163px;
+      }
+    }
+    &:after {
+      height: $features-circle-size;
+      width: $features-circle-size;
+      border-radius: 50%;
+      bottom: 0;
+    }
+  }
+  .features__inner--left {
+    &:before {
+      transform: rotate(109deg);
+      margin-left: 166px;
+      @include media-breakpoint-down(lg) {
+        transform: rotate(112deg);
+        margin-left: 140px;
+      }
+      @include media-breakpoint-down(md) {
+        transform: rotate(117deg);
+        margin-left: 107px;
+      }
+    }
+  }
+  .features__inner--right {
+    &:before {
+      transform: rotate(-109deg);
+      margin-left: -168px;
+      @include media-breakpoint-down(lg) {
+        transform: rotate(-112deg);
+        margin-left: -142px;
+      }
+      @include media-breakpoint-down(md) {
+        transform: rotate(-117deg);
+        margin-left: -109px;
+      }
+    }
+  }
+}
+
+.features__inner {
+  position: relative;
+  height: 100%;
+}
