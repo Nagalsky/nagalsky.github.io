@@ -2,11 +2,13 @@
 
 $navbar-bg: $white;
 $navbar-border-color: $blue;
-$navbar-desktop-height: 124px;
+$navbar-desktop-height: 139px;
+$navbar-font-size: 14px;
 
 .navbar {
   background: $navbar-bg;
   border: 1px solid $navbar-border-color;
+  font-size: $navbar-font-size;
   @include media-breakpoint-up(md) {
     min-height: $navbar-desktop-height;
     position: fixed;
@@ -19,7 +21,7 @@ $navbar-desktop-height: 124px;
 
 .navbar-brand {
   max-width: 320px;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     max-width: 180px;
   }
 }
