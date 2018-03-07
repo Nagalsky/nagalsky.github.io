@@ -1,0 +1,41 @@
+/* ASIDE */
+
+$aside-width: 220px;
+$aside-bg: $blue;
+$aside-color: $white;
+$aside-font-size: 11px;
+
+.aside {
+  background: $aside-bg;
+  color: $aside-color;
+  font-size: $aside-font-size;
+  @include media-breakpoint-up(md) {
+    position: fixed;
+    left: 0;
+    height: calc(100% - #{$navbar-desktop-height});
+    width: $aside-width;
+    overflow-y: auto;
+    top: $navbar-desktop-height;
+    display: block;
+  }
+}
+
+.aside__inner {
+  position: relative;
+  padding-top: 15px;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 15px;
+    display: block;
+  }
+}
+
+.aside__list__link {
+  font-weight: $font-bold;
+  color: $aside-color;
+  &:hover, &:focus {
+    color: $aside-color;
+    text-decoration: underline;
+  }
+}

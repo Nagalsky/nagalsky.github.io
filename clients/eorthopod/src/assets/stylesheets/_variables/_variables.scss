@@ -6,7 +6,12 @@
 $white: #ffffff;
 // Black group
 $black: #000000;
-
+// Blue group
+$blue: #0066CC;
+$blue-soft: #003366;
+// Gray group
+$silver: #cccccc;
+$muted: #eeeeee;
 
 //Override Bootstrap color variables
 .text-white {
@@ -15,7 +20,18 @@ $black: #000000;
 .text-black {
   color: $black !important;
 }
-
+.text-blue {
+  color: $blue;
+}
+.text-blue-soft {
+  color: $blue-soft;
+}
+.text-silver {
+  color: $silver;
+}
+.text-muted {
+  color: $muted;
+}
 
 
 .bg-white {
@@ -24,16 +40,41 @@ $black: #000000;
 .bg-black {
   background-color: $black !important;
 }
+.bg-blue {
+  background-color: $blue !important;
+}
+.bg-blue-soft {
+  background-color: $blue-soft !important;
+}
+.bg-silver {
+  background-color: $silver !important;
+}
+.bg-muted {
+  background-color: $muted !important;
+}
+
 
 
 
 /*************************
 	Fonts variables
 *************************/
+$font-base: verdana, arial, helvetica;
+$font-secondary: arial, helvetica;
 
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
 
-
-
+.font-light {
+  font-weight: $font-light !important;
+}
+.font-regular {
+  font-weight: $font-regular !important;
+}
+.font-bold {
+  font-weight: $font-bold !important;
+}
 
 $font-icons: 'fontello';
 .font-icons {
@@ -44,28 +85,29 @@ $font-icons: 'fontello';
 /*************************
 	Base variables
 *************************/
-/*$base-color: $gray-bold;
-$font-base: $font-regular;
+$base-color: $black;
+$font-base: $font-base;
 /*************************
 	Font path variable
-*************************/
+************************/
 $font-path: '../fonts/';
 
 /*************************
 	Body variables
 *************************/
-/*$body-font-family: $font-base;
-$body-font-size: 14px;
-$body-line-height: 1.5;
-$body-main-color: $base-color;*/
+$body-font-family: $font-base;
+$body-font-size: 12px;
+$body-main-color: $base-color;
 
 
 /*************************
 	Links variables
 *************************/
-/*$link-color: $primary;*/
+$link-color: $blue-soft;
 
 
 /*************************
 	Title variables
 *************************/
+$title-font-weight: $font-bold;
+$title-font-family: $font-secondary;
