@@ -1,0 +1,111 @@
+/* HEADER */
+
+$header-height: 90px;
+
+.header {
+  >.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+  .list-social {
+    margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 5px;
+    }
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+    }
+  }
+  .list-social__item {
+    @include media-breakpoint-down(xs) {
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
+
+.header__logo {
+  max-width: 192px;
+  padding: 11.5px 15px;
+  @extend .align-items-center, .justify-content-center;
+  flex-shrink: 0;
+  @include media-breakpoint-up(md) {
+    box-shadow: 0 1px 42px 0 rgba(0, 0, 0, 0.1);
+  }
+  @include media-breakpoint-up(md) {
+    min-height: $header-height;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 148px;
+    padding: 5px 15px;
+  }
+}
+
+.header__content {
+  @extend .d-flex, .flex-column;
+  flex: 1;
+}
+
+.header__cta {
+  padding: 10px 10px;
+  font-size: 13px;
+  color: $white;
+  background-image: linear-gradient(218deg, #00798c, #2a416a);
+  @extend .align-items-center, .justify-content-center;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-family: $font-base-medium;
+  @include media-breakpoint-up(sm) {
+    min-width: 135px;
+  }
+  @include media-breakpoint-up(md) {
+    min-height: $header-height;
+  }
+  &:hover, &:focus {
+    background-image: linear-gradient(218deg, #2a416a, #00798c);
+    color: $white;
+  }
+}
+
+.header__content__top {
+  padding: 5px 15px;
+  @extend .d-flex, .align-items-center;
+  font-size: 14px;
+  flex: 1;
+  position: relative;
+  @include media-breakpoint-up(xl) {
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0px 15px 0 0;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+.header__logo-secondary {
+  @extend .img-fluid;
+  max-width: 112px;
+  margin-right: auto;
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+  }
+}
+
+.header__call {
+  color: $black;
+  font-size: 14px;
+  @include media-breakpoint-down(sm) {
+    //display: none !important;
+  }
+}
