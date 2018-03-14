@@ -7,3 +7,58 @@
     padding: 75px 0;
   }
 }
+
+.section--sm {
+  @include media-breakpoint-up(md) {
+    padding: 40px 0;
+  }
+}
+
+.section--map {
+  height: 720px;
+  @include media-breakpoint-down(xl) {
+    height: 580px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 420px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 280px;
+  }
+  @include media-breakpoint-down(xs) {
+    height: 200px;
+  }
+  .embed {
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.section--logos {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 280px;
+    z-index: 5;
+    @include media-breakpoint-down(lg) {
+      width: 140px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 40px;
+    }
+  }
+  &:before {
+    left: 0;
+    @include gradient-x($start-color: $warning, $end-color: rgba($white, 0), $start-percent: 0%, $end-percent: 130%)
+  }
+  &:after {
+    right: 0;
+    @include gradient-x($start-color: rgba($white, 0), $end-color: $warning, $start-percent: 0%, $end-percent: 130%)
+  }
+}

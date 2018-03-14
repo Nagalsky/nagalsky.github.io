@@ -1,0 +1,32 @@
+/* GALLERY */
+
+.gallery-logos {
+  .slick-track {
+    @extend .d-flex, .align-items-center;
+  }
+}
+
+.gallery-logos__item {
+  padding: 0px 15px;
+}
+
+
+.slick-arrow {
+  @extend .font-icons;
+  width: auto;
+  height: auto;
+  &.slick-prev, &.slick-next {
+    z-index: 20;
+    &:before {
+      font-size: 35px;
+    }
+  }
+  &.slick-prev {
+    left: 5px;
+    @extend .amerital-icon-arrow-left;
+  }
+  &.slick-next {
+    right: 5px;
+    @extend .amerital-icon-arrow-right;
+  }
+}

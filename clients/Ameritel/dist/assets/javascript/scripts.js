@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".gallery-logos").slick({slidesToShow:5,autoplay:!0,autoplaySpeed:4e3,pauseOnFocus:!1,pauseOnHover:!1,responsive:[{breakpoint:768,settings:{arrows:!1,slidesToShow:3}}]})});
