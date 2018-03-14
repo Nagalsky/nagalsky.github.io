@@ -100,7 +100,7 @@ $(document).ready(function(){
 
 	if ($(window).width() < 767) {
  	 $('.marquee__line').marquee({
- 		 duration: 10000,
+ 		 duration: 12000,
  		 delayBeforeStart: 0,
  		 direction: 'left'
  	 });
@@ -111,7 +111,7 @@ $(document).ready(function(){
 $(window).resize(function() {
  if ($(window).width() < 767) {
 	 $('.marquee__line').marquee({
-		 duration: 10000,
+		 duration: 12000,
 		 delayBeforeStart: 0,
 		 direction: 'left'
 	 });
