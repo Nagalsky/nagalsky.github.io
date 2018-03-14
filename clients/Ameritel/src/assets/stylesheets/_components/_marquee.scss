@@ -1,0 +1,40 @@
+/* MARQUEE */
+
+.marquee {
+	@extend .d-flex, .align-items-center;
+	@include media-breakpoint-down(md) {
+		display: block !important;
+	}
+}
+
+.marquee-title {
+	color: $warning;
+	font-size: 24px;
+	flex-shrink: 0;
+	margin-bottom: 10px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
+}
+
+.marquee__body {
+	flex: 1;
+	color: $white;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.marquee__line__item {
+	&+.marquee__line__item {
+		margin-left: 50px;
+	}
+}
+
+.marquee__line__date {
+	display: inline-block;
+	margin-right: 15px;
+}
