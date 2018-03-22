@@ -7,23 +7,43 @@
 	}
 }
 
+.marquee__info {
+	flex-shrink: 0;
+	text-align: center;
+	@include media-breakpoint-up(md) {
+		margin-right: 20px;
+		text-align: right;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 300px;
+	}
+}
+
 .marquee-title {
-	color: $warning;
+	color: $white;
 	font-size: 24px;
 	flex-shrink: 0;
-	margin-bottom: 10px;
-	@include media-breakpoint-up(md) {
-		margin-bottom: 0;
-		margin-right: 20px;
-	}
+	font-family: $font-base-bold;
+	padding: 10px 25px;
+	margin-bottom: 0;
 	@include media-breakpoint-down(md) {
 		text-align: center;
+	}
+}
+.marquee-date {
+	background-color: #303030;
+	color: $white;
+	font-size: 14px;
+	font-family: $font-base-light;
+	padding: 1px 15px;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 10px;
 	}
 }
 
 .marquee__body {
 	flex: 1;
-	color: $white;
+	color: $black;
 	overflow: hidden;
 	white-space: nowrap;
 }

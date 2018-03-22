@@ -1,8 +1,10 @@
 /* HEADER */
 
-$header-height: 90px;
+$header-height: 180px;
+$header-font: $font-base-regular;
 
 .header {
+  font-family: $header-font;
   >.container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -26,6 +28,11 @@ $header-height: 90px;
       text-align: center;
     }
   }
+  .list-social__link {
+    @include media-breakpoint-up(lg) {
+      font-size: 22px;
+    }
+  }
 }
 
 .header__logo {
@@ -36,7 +43,7 @@ $header-height: 90px;
   @include media-breakpoint-up(md) {
     box-shadow: 0 1px 42px 0 rgba(0, 0, 0, 0.1);
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     min-height: $header-height;
   }
   @include media-breakpoint-down(sm) {
@@ -48,6 +55,9 @@ $header-height: 90px;
 .header__content {
   @extend .d-flex, .flex-column;
   flex: 1;
+  @include media-breakpoint-up(lg) {
+    min-height: $header-height;
+  }
 }
 
 .header__cta {
@@ -58,12 +68,23 @@ $header-height: 90px;
   @extend .align-items-center, .justify-content-center;
   flex-shrink: 0;
   text-transform: uppercase;
-  font-family: $font-base-medium;
+  font-family: $font-base-bold;
   @include media-breakpoint-up(sm) {
     min-width: 135px;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     min-height: $header-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 26px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   &:hover, &:focus {
     background-image: linear-gradient(218deg, #2a416a, #00798c);
@@ -78,8 +99,8 @@ $header-height: 90px;
   flex: 1;
   position: relative;
   @include media-breakpoint-up(xl) {
-    padding-top: 6.5px;
-    padding-bottom: 6.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   @include media-breakpoint-down(md) {
     padding-top: 10.5px;
@@ -99,13 +120,14 @@ $header-height: 90px;
   margin-right: auto;
   @include media-breakpoint-up(lg) {
     margin-left: auto;
+    max-width: 220px;
   }
 }
 
 .header__call {
   color: $black;
   font-size: 14px;
-  @include media-breakpoint-down(sm) {
-    //display: none !important;
+  @include media-breakpoint-up(lg) {
+    font-size: 22px;
   }
 }

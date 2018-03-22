@@ -20,6 +20,13 @@ $navlink-border-color: #e4e4e4;
           }
         }
       }
+      >.nav-link {
+        &:after {
+          @include media-breakpoint-down(xl) {
+            margin-left: 4px;
+          }
+        }
+      }
     }
     &+.nav-item {
       @include media-breakpoint-up(lg) {
@@ -30,10 +37,11 @@ $navlink-border-color: #e4e4e4;
       color: $navlink-color;
       text-transform: uppercase;
       padding: 6px 15px;
-      @include media-breakpoint-up(xl) {
-        padding: 1.5px 15px;
+      @include media-breakpoint-up(lg) {
+        padding-top: 16.5px;
+        padding-bottom: 16.5px;
       }
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(xl) {
         padding-left: 7.5px;
         padding-right: 7.5px;
       }

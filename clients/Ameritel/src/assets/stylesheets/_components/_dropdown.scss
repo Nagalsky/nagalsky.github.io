@@ -20,6 +20,10 @@
 .dropdown-item {
   background: $orange;
   color: $black;
+  @include media-breakpoint-up(lg) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   &:hover, &:focus {
     color: $black;
     background: darken($orange, 5%);
