@@ -1,6 +1,35 @@
 /* FORMS */
 
+$placeholder-color: #979797;
+$placeholder-font-style: $font-base-medium;
+
+$field-height: 48px;
+
 .form-control {
-	-webkit-appearance:none;
-	-moz-appearance:none;
+	font-family: $placeholder-font-style;
+	color: $placeholder-color;
+	height: $field-height;
+	@include custom-placeholder($color: $placeholder-color, $font-family: $placeholder-font-style);
+	&:focus {
+		box-shadow: none;
+		border-color: $orange;
+	}
+}
+
+select.form-control:not([size]):not([multiple]) {
+	height: $field-height;
+}
+
+
+label {
+	font-family: $font-base-bold;
+	color: #494949;
+}
+
+textarea, textarea.fomr-control {
+	resize: none;
+	min-height: 140px;
+	@include media-breakpoint-down(md) {
+		min-height: 300px;
+	}
 }
