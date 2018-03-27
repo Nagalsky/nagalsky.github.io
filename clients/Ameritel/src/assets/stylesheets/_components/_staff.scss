@@ -30,6 +30,9 @@
 
 .staff--gradient {
   @include gradient-y($start-color: #2c4f5e, $end-color: #1b3157, $start-percent: 0%, $end-percent: 100%);
+  @include media-breakpoint-down(sm) {
+    min-height: 320px;
+  }
   .staff__hidden-image {
     opacity: 0;
     visibility: hidden;
@@ -74,4 +77,11 @@
 
 .staff__role {
   font-family: $font-base-bold;
+}
+
+.staff__content-bar {
+  overflow: auto;
+  line-height: 1.89;
+  max-width: 290px;
+  margin-bottom: 20px;
 }
