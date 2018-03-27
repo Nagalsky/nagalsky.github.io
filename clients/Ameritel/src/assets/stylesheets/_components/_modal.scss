@@ -1,0 +1,42 @@
+/* MODAL */
+
+
+$modal-close-size: 34px;
+
+.modal {
+  .close {
+    position: absolute;
+    right: 0;
+    width: $modal-close-size;
+    height: $modal-close-size;
+    top: -$modal-close-size - 5px;
+    text-shadow: none;
+    opacity: 1;
+    border-radius: 50%;
+    background: $sky;
+    color: $white;
+    z-index: 10;
+    float: none;
+    line-height: 100%;
+    @extend .d-flex, .justify-content-center, .align-items-center;
+    @include media-breakpoint-up(lg) {
+      top: 0;
+      width: $modal-close-size * 2;
+      height: $modal-close-size * 2;
+      margin-top: calc((-#{$modal-close-size} * 2) / 2);
+      margin-right: calc((-#{$modal-close-size} * 2) / 2);
+      font-size: 50px;
+    }
+  }
+}
+
+.modal-content {
+  border: none;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+}
+
+
+.modal-backdrop {
+  background-color: rgba(216, 216, 216, 0.79);
+}

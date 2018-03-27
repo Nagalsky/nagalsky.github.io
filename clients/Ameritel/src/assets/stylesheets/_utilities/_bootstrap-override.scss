@@ -3,3 +3,13 @@
 .container--sm {
   max-width: 720px;
 }
+
+
+.row--flex {
+  @include media-breakpoint-up(md) {
+    >[class^="col"] {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
