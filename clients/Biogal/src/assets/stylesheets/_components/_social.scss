@@ -1,0 +1,37 @@
+/* SOCIAL */
+
+.social {
+  @extend .list-unstyled, .d-inline-flex, .align-items-center;
+}
+
+.social__item {
+  position: relative;
+  &+.social__item {
+    padding-left: 15px;
+    margin-left: 15px;
+    @include media-breakpoint-down(xs) {
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 50%;
+      width: 1px;
+      height: 28px;
+      background: rgba($white, .5);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.social__link {
+  font-size: 22px;
+  @include media-breakpoint-down(xs) {
+    font-size: 18px;
+  }
+  &:hover, &:focus {
+    color: $success;
+  }
+}

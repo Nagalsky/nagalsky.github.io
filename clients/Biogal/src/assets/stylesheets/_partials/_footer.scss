@@ -1,1 +1,27 @@
 /* FOOTER */
+
+$footer-bg: $danger;
+
+.footer {
+  padding: 50px 0;
+  background: $footer-bg;
+  color: rgba($white, .5);
+  font-family: $font-medium;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+    text-align: center;
+  }
+  .social__link {
+    color: rgba($white, .5);
+  }
+}
+
+.footer__logo {
+  @extend .img-fluid, .w-100;
+  max-width: 240px;
+}
+
+.footer__copyright {
+  font-size: 10px;
+  text-transform: uppercase;
+}
