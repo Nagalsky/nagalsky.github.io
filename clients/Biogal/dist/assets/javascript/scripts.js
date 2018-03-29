@@ -1,0 +1,1 @@
+$(document).ready(function(){$("[data-click=scroll-to-target]").on("click",function(t){t.preventDefault(),t.stopPropagation();var o=$(this).attr("href");$("html, body").animate({scrollTop:$(o).offset().top},500)}),$(".testimonils").slick()});
