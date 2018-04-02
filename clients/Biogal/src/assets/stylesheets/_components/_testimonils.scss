@@ -44,14 +44,16 @@
 
 .testimonial__text {
   margin-bottom: 10px;
-  overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   line-height: 18px;     /* fallback */
-   max-height: 108px;      /* fallback */
-   min-height: 108px;      /* fallback */
-   -webkit-line-clamp: 6; /* number of lines to show */
-   -webkit-box-orient: vertical;
+  @include media-breakpoint-up(md) {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     line-height: 18px;     /* fallback */
+     max-height: 108px;      /* fallback */
+     min-height: 108px;      /* fallback */
+     -webkit-line-clamp: 6; /* number of lines to show */
+     -webkit-box-orient: vertical;
+  }
 }
 
 .testimonils__role {
