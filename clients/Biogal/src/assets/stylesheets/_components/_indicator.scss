@@ -11,6 +11,9 @@ $indicator-dot-size: 9px;
   &:before, &:after {
     content: '';
     position: absolute;
+    @include media-breakpoint-up(md) {
+      z-index: 40;
+    }
   }
   &:before {
     width: $indicator-dot-size;
@@ -25,11 +28,32 @@ $indicator-dot-size: 9px;
     right: 80px;
     background: $success;
     box-shadow: 0px 0px 0px 7px rgba($success, .3);
-    @media (max-width: 1350px){
-      right: 40px;
+    @media (min-width: 900px){
+      right: -10px;
     }
-    @include media-breakpoint-down(lg) {
-      right: -15px;
+    @media (min-width: 1000px){
+      right: 5px;
+    }
+    @media (min-width: 1100px){
+      right: 15px;
+    }
+    @media (min-width: 1200px){
+      right: -50px;
+    }
+    @media (min-width: 1300px){
+      right: -30px;
+    }
+    @media (min-width: 1400px){
+      right: -10px;
+    }
+    @media (min-width: 1500px){
+      right: 0px;
+    }
+    @media (min-width: 1600px){
+      right: 20px;
+    }
+    @media (min-width: 1700px){
+      right: 40px;
     }
     @include media-breakpoint-down(md) {
       right: auto;
@@ -46,12 +70,36 @@ $indicator-dot-size: 9px;
     background-size: 5px 1px;
     background-position: bottom;
     background-repeat: repeat-x;
-    @media (max-width: 1350px){
+    @media (min-width: 900px){
+      right: -140px;
+    }
+    @media (min-width: 1000px){
+      right: -120px;
+    }
+    @media (min-width: 1100px){
+      right: -110px;
+    }
+    @media (min-width: 1200px){
+      right: -175px;
+    }
+    @media (min-width: 1300px){
+      right: -155px;
+    }
+    @media (min-width: 1400px){
+      right: -135px;
+    }
+    @media (min-width: 1500px){
+      right: -125px;
+    }
+    @media (min-width: 1600px){
+      right: -105px;
+    }
+    @media (min-width: 1700px){
       right: -85px;
     }
-    @include media-breakpoint-down(lg) {
+    /*@include media-breakpoint-down(lg) {
       right: -138px;
-    }
+    }*/
     @include media-breakpoint-down(md) {
       right: auto;
       left: -46px;
@@ -111,6 +159,7 @@ $indicator-dot-size: 9px;
 .indicator__logo {
   @extend .img-fluid, .w-100;
   max-width: 170px;
+  min-width: 170px;
 }
 
 .indicator__nav {
@@ -130,5 +179,12 @@ $indicator-dot-size: 9px;
 .indicator__nav--danger {
   >.nav-item {
     color: $danger;
+  }
+}
+
+.indicator__pic {
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    z-index: 60;
   }
 }

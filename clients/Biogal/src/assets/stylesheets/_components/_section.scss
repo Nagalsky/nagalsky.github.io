@@ -29,7 +29,10 @@
     background-image: url('../images/bg/hero-bg-mobile.jpg');
   }
   @include media-breakpoint-down(sm) {
-    background-position: 70% 50%;
+    background-position: 120px 50%;
+  }
+  @include media-breakpoint-down(xs) {
+    background-position: 55% 50%;
   }
   &:after {
     @include media-breakpoint-up(md) {
@@ -43,6 +46,12 @@
     background: url('../images/temp/hero-label.png') no-repeat 20px 0px;
     z-index: -1;
   }
+}
+
+.secton--hero__text {
+ @include media-breakpoint-down(sm) {
+   text-shadow: 0px 1px 0px white;
+ }
 }
 
 .section--has-label {
