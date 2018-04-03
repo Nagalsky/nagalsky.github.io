@@ -19,21 +19,26 @@
 }
 
 .section--hero {
-  padding: 65px 0 60px 0;
+  padding: 35px 0 160px 0;
   z-index: 10;
   background-image: url('../images/bg/hero-bg.jpg');
   @include media-breakpoint-up(md) {
     padding: 120px 0 280px 0;
   }
   @include media-breakpoint-down(md) {
-    background-image: url('../images/bg/hero-bg-mobile.jpg');
+    background-image: url('../images/bg/Biogal-LP01-Mobile-Header_v2.jpg');
+    text-align: center;
+    .btn-outline-success {
+      background: $success;
+      color: $white;
+    }
   }
-  @include media-breakpoint-down(sm) {
+  /*@include media-breakpoint-down(sm) {
     background-position: 120px 50%;
   }
   @include media-breakpoint-down(xs) {
     background-position: 55% 50%;
-  }
+  }*/
   &:after {
     @include media-breakpoint-up(md) {
       content: '';
