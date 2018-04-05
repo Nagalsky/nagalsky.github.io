@@ -5,6 +5,9 @@
 
 .testimonils__item {
   @extend .d-flex;
+  @include media-breakpoint-up(md) {
+    min-height: 220px;
+  }
   @include media-breakpoint-down(sm) {
     display: block !important;
   }
@@ -38,6 +41,9 @@
   font-family: $font-black;
   color: #7e6aaf;
   letter-spacing: .2em;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
 }
 
 .testimonial__text {
@@ -47,9 +53,9 @@
      text-overflow: ellipsis;
      display: -webkit-box;
      line-height: 18px;     /* fallback */
-     max-height: 108px;      /* fallback */
-     min-height: 108px;      /* fallback */
-     -webkit-line-clamp: 6; /* number of lines to show */
+     max-height: 72px;      /* fallback */
+     min-height: 72px;      /* fallback */
+     -webkit-line-clamp: 4; /* number of lines to show */
      -webkit-box-orient: vertical;
   }
 }
