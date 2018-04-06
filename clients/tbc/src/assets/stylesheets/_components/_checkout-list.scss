@@ -1,0 +1,28 @@
+/* CHECKOUT LIST */
+
+$checkout-list-color: $gray;
+
+.checkout-list {
+  @extend .list-unstyled;
+}
+
+.checkout-list--divider {
+  .checkout-list__item {
+    &+.checkout-list__item {
+      border-top: 1px solid $checkout-list-color;
+    }
+  }
+}
+
+.checkout-list__item {
+  padding: 10px 0;
+  @extend .d-flex, .align-items-center, .justify-content-between;
+  color: $checkout-list-color;
+}
+
+.checkout-list__inner {
+  flex-shrink: 0;
+  &+.checkout-list__inner {
+    margin-left: 10px;
+  }
+}

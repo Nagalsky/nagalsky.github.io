@@ -1,0 +1,39 @@
+/* FOOTER */
+
+$footer-bg: $white;
+
+.footer {
+  padding: 40px 0;
+  background: $footer-bg;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.footer__logo {
+  display: block;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media-breakpoint-down(sm) {
+    max-width: 200px;
+  }
+}
+
+.footer__title {
+  margin-bottom: 10px;
+}
+
+.footer__nav {
+  @extend .list-unstyled;
+}
+
+.footer__nav__link {
+  font-family: $font-bold;
+  color: $gray;
+  display: inline-block;
+  padding: 2px 0;
+  &:hover, &:focus {
+    color: $black;
+  }
+}
