@@ -8,15 +8,23 @@
   @include media-breakpoint-up(md) {
     min-height: 220px;
   }
+  @include media-breakpoint-down(lg) {
+    min-height: 240px;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 276px;
+  }
   @include media-breakpoint-down(sm) {
     display: block !important;
+    min-height: auto;
   }
 }
 
 .testimonils__item__img {
   width: 100%;
-  max-width: 190px;
+  width: 170px;
   flex-shrink: 0;
+  background-size: contain;
   @include media-breakpoint-down(sm) {
     max-width: 160px;
     margin-left: auto;
