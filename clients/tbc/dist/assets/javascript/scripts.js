@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".fieldset-hidden-toggle").change(function(){$(".fieldset-hidden").slideToggle(300)})});
