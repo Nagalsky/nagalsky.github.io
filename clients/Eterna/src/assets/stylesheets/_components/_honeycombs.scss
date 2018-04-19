@@ -1,0 +1,143 @@
+/* HONEYCOMBS */
+
+$honeycombs-size: 105px;
+
+
+.honeycombs {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 95%;
+  max-width: 760px;
+  min-width: 760px;
+  z-index: -1;
+  @include media-breakpoint-up(xl) {
+    margin-top: -$navbar-height;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-right: -240px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: -360px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-right: -400px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-right: -648px;
+    margin-top: -300px;
+  }
+}
+
+.honeycombs__overlay {
+  width: 100%;
+  object-fit: cover;
+}
+
+.honeycombs__item {
+  width: $honeycombs-size;
+  height: $honeycombs-size;
+  position: absolute;
+  animation: OpacityAnimation 8s ease infinite;
+  opacity: 0;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../images/elements/E-symbol.svg') no-repeat 46% 50%;
+    z-index: 10;
+  }
+}
+
+.honeycombs__item--1 {
+  right: 331px;
+  top: 94px;
+}
+.honeycombs__item--2 {
+  right: 93px;
+  top: 139px;
+  transform: scale(.95);
+  animation-delay: 5s;
+}
+.honeycombs__item--3 {
+  right: 491px;
+  top: 184px;
+  animation-delay: 2s;
+}
+.honeycombs__item--4 {
+  right: 256px;
+  top: 230px;
+  animation-delay: 10s;
+}
+.honeycombs__item--5 {
+  right: 491px;
+  top: 276px;
+  animation-delay: 8s;
+}
+.honeycombs__item--6 {
+  right: 332px;
+  top: 367px;
+  animation-delay: 1s;
+}
+.honeycombs__item--7 {
+  right: 569px;
+  top: 412px;
+  //animation-delay: 1s;
+}
+.honeycombs__item--8 {
+  right: 86px;
+  top: 414px;
+  animation-delay: 6s;
+}
+.honeycombs__item--9 {
+  right: 409px;
+  top: 505px;
+  animation-delay: 4s;
+}
+.honeycombs__item--10 {
+  right: 647px;
+  top: 548px;
+  animation-delay: 4s;
+}
+.honeycombs__item--11 {
+  right: 249px;
+  top: 596px;
+  animation-delay: 0s;
+}
+
+.honeycombs__inner {
+  background: transparent;
+  overflow: hidden;
+  margin: 0 auto;
+  width: $honeycombs-size - 14px;
+  height: $honeycombs-size;
+  transform: rotate(-90deg) skewY(30deg);
+  display: block;
+  &:before {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    background: linear-gradient(-10deg, $success, $sky);
+    background-size: 400% 400%;
+    animation: BackgroundGradientAnimation 8s ease infinite;
+    content: '';
+    transform: skewY(-30deg) rotate(60deg) translate(0);
+  }
+}
+
+
+@keyframes BackgroundGradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes OpacityAnimation {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}

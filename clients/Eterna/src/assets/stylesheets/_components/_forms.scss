@@ -1,0 +1,21 @@
+/* FORMS */
+
+$field-height: 50px;
+$placeholder-color: $primary;
+$placeholder-font-style: $font-medium;
+$placeholder-opacity: 0;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius: 0;
+	height: $field-height;
+	color: $placeholder-color;
+	@include custom-placeholder($color: $placeholder-color, $font-family: $placeholder-font-style);
+	&:focus {
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+	}
+	&:hover, &:focus {
+    box-shadow: none !important;
+  }
+}

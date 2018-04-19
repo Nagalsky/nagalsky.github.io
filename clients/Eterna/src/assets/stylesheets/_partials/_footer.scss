@@ -1,0 +1,33 @@
+/* FOOTER */
+
+$footer-bg: $muted;
+
+.footer {
+  .social__item {
+    &:nth-child(even) {
+      .social__link {
+        transform: translateY(-25%);
+      }
+    }
+    &:nth-child(odd) {
+      .social__link {
+        transform: translateY(25%);
+      }
+    }
+  }
+}
+
+
+.footer__top {
+  background: $footer-bg;
+  padding: 24px 0;
+  @include media-breakpoint-down(xs) {
+    padding-top: 40px;
+  }
+}
+
+
+.footer__bottom {
+  background: $white;
+  padding: 5px 0;
+}

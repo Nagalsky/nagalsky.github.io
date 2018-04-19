@@ -1,0 +1,19 @@
+/* BUTTONS */
+
+
+.btn {
+  border-radius: 0;
+  padding: 10.5px 46px;
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-success {
+    @include button-variants($bg: $success, $color: $primary);
+  }
+  &.btn-sm-down-block {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      display: block;
+    }
+  }
+}
