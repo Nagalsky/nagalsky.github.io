@@ -11,6 +11,9 @@ $honeycombs-size: 105px;
   max-width: 760px;
   min-width: 760px;
   z-index: -1;
+  @include media-breakpoint-up(sm) {
+    overflow: hidden;
+  }
   @include media-breakpoint-up(xl) {
     margin-top: -$navbar-height;
   }
@@ -38,8 +41,8 @@ $honeycombs-size: 105px;
   width: $honeycombs-size;
   height: $honeycombs-size;
   position: absolute;
-  animation: OpacityAnimation 8s ease infinite;
-  opacity: 0;
+  //animation: OpacityAnimation 8s ease infinite;
+  //opacity: 0;
   &:before {
     content: '';
     width: 100%;
@@ -123,7 +126,7 @@ $honeycombs-size: 105px;
     background-size: cover;
     background: linear-gradient(-10deg, $success, $success, $sky, $sky);
     background-size: 400% 400%;
-    animation: BackgroundGradientAnimation 8s ease infinite;
+    //animation: BackgroundGradientAnimation 8s ease infinite;
     content: '';
     transform: skewY(-30deg) rotate(60deg) translate(0);
   }
