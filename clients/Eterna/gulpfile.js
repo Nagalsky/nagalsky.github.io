@@ -82,6 +82,8 @@ gulp.task('javascript:build', task.javascript = function () {
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/chart.js/dist/Chart.min.js',
+    'node_modules/chart.js/dist/Chart.bundle.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js'])
     .pipe(concat('vendors.min.js'))

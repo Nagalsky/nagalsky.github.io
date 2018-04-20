@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".hidden-box-trigger").on("click",function(e){e.preventDefault(),$(".box--mobile-hidden").slideDown("box--mobile-hidden")}),$(".hidden-team-member-trigger").on("click",function(e){e.preventDefault(),$(".team-member--mobile-hidden").slideDown("team-member--mobile-hidden")})});

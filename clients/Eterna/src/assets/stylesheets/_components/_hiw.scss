@@ -1,0 +1,50 @@
+/* HIW */
+
+
+.hiw__item {
+  &:nth-child(odd){
+    .hiw__logo {
+      margin-left: 30px;
+      @include media-breakpoint-down(sm) {
+        margin-left: 100px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-left: 40px;
+      }
+    }
+  }
+  &:nth-child(even){
+    .hiw__logo {
+      margin-left: 150px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 100px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-left: 45px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-left: 180px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-left: 120px;
+      }
+    }
+  }
+  &.hiw__item {
+    margin-top: 15px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 55px;
+    }
+  }
+}
+
+.hiw__logo {
+  @extend .img-fluid, .d-block;
+  max-width: 150px;
+}
+
+.hiw__title {
+  font-size: 48px;
+  margin-bottom: 5px;
+  color: $success;
+}
