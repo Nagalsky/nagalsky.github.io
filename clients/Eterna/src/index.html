@@ -481,30 +481,35 @@
 						data: [86,114,106,106,107,300,230],
 						label: "1 day",
 						borderColor: "#cc579a",
+						backgroundColor: "#cc579a",
 						fill: false,
 						borderWidth: 4
 					}, {
 						data: [282,350,411,502,635,570,390],
 						label: "7 days",
 						borderColor: "#9ece86",
+						backgroundColor: "#9ece86",
 						fill: false,
 						borderWidth: 4
 					}, {
 						data: [168,170,178,190,203,240,310],
 						label: "1 month",
 						borderColor: "#f5a56e",
+						backgroundColor: "#f5a56e",
 						fill: false,
 						borderWidth: 4
 					}, {
 						data: [90,70,60,76,84,120,133],
 						label: "6 months",
 						borderColor: "#8072b4",
+						backgroundColor: "#8072b4",
 						fill: false,
 						borderWidth: 4
 					}, {
-						data: [6,3,2,2,7,1,10],
+						data: [90,3,2,2,7,1,10],
 						label: "1 year",
 						borderColor: "#65a3d7",
+						backgroundColor: "#65a3d7",
 						fill: false,
 						borderWidth: 4
 					}
@@ -513,21 +518,34 @@
 			options: {
 				scales : {
 	        xAxes : [ {
-            gridLines : {
-                display : false
+						display: false,
+            gridLines: {
+							color: "#cecece",
+              display: false
             },
 						ticks: {
               callback: function(value, index, values) {
                   return value + ' Jan';
-              }
+              },
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium"
             }
 	        }],
 					yAxes: [{
+						gridLines: {
+							color: "#cecece",
+              drawBorder: false,
+							zeroLineColor: '#cecece'
+            },
             ticks: {
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium",
               callback: function(value, index, values) {
                   return value + '%';
               },
-							padding: 10
+							padding: 30
             }
           }]
 		    },
@@ -536,7 +554,6 @@
 				},
 				tooltips: {
 			    mode: 'label',
-					intersect: false,
 					backgroundColor: '#FFF',
 		      titleFontSize: 12,
 		      titleFontColor: '#2e4655',
@@ -544,7 +561,7 @@
 		      bodyFontColor: '#394f5e',
 		      bodyFontSize: 14,
 					bodyFontStyle: 'bold',
-		      displayColors: false,
+		      displayColors: true,
 					xPadding: 15,
 					yPadding: 15,
 					cornerRadius: 0,
@@ -575,16 +592,32 @@
 				scales : {
 	        xAxes : [ {
             gridLines : {
-               display : false
+							color: "#cecece",
+              display : false
+            },
+						ticks: {
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium"
             }
 	        }],
 					yAxes: [{
+						gridLines: {
+							color: "#cecece",
+              drawBorder: false,
+							zeroLineColor: '#cecece'
+            },
             ticks: {
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium",
 							padding: 10
             }
           }]
 		    },
-	      legend: { display: false },
+	      legend: {
+					display: false
+				},
 	      title: {
 	        display: false
 	      }
@@ -615,11 +648,25 @@
 				scales : {
 	        xAxes : [ {
             gridLines : {
-               display : false
+							color: "#cecece",
+              display : false
+            },
+						ticks: {
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium"
             }
 	        }],
 					yAxes: [{
+						gridLines: {
+							color: "#cecece",
+              drawBorder: false,
+							zeroLineColor: '#cecece'
+            },
             ticks: {
+							fontColor: "#2e4655",
+							fontSize: 13,
+							fontFamily: "Montserrat-Medium",
 							padding: 10
             }
           }]
