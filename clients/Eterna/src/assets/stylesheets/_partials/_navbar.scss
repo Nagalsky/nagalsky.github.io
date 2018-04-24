@@ -17,7 +17,7 @@ $navbar-height-sm: 86px;
 
 .navbar--secondary {
   .navbar-brand {
-    @include transition(500ms);
+    @include transition(850ms);
     @include media-breakpoint-up(md) {
       transform: scale(0);
     }
@@ -55,9 +55,7 @@ $navbar-height-sm: 86px;
     }
   }
   .dropdown-menu {
-    @include media-breakpoint-up(md) {
-      top: 54px;
-    }
+    margin-top: 0;
   }
   .dropdown-item {
     text-transform: uppercase;
@@ -72,6 +70,13 @@ $navbar-height-sm: 86px;
     }
   }
   .dropdown {
+    @include media-breakpoint-up(md) {
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+    }
     &.show {
       .dropdown-toggle {
         &:after {
