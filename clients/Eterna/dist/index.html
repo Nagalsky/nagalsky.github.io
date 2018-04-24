@@ -111,7 +111,15 @@
 				<p class="mb-5 mb-md-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 				<h3 class="text-center text-uppercase mb-5">Current Central Bank Deposit Rates (per annum)</h3>
-				<canvas id="line-chart" class="mb-5 mb-md-6" width="" height=""></canvas>
+
+				<div id="line-chart" class="mb-5 mb-md-6" style="height:400px;"></div>
+
+
+
+
+
+
+				<!--<canvas id="line-chart" class="mb-5 mb-md-6" width="" height=""></canvas>-->
 
 
 				<div class="row mb-5 mb-md-6 align-items-center">
@@ -563,7 +571,97 @@
 
 
 	<script>
-		new Chart(document.getElementById("line-chart"), {
+
+		// based on prepared DOM, initialize echarts instance
+	  var myChart = echarts.init(document.getElementById('line-chart'));
+
+	  // specify chart configuration item and data
+	  var option = {
+			title: {
+				show: false,
+				text: ''
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {
+				data:['12 hours rate','7 days rate','3 days rate','14 days rate','30 days rate'],
+				bottom: '0'
+			},
+			textStyle: {
+				color: '#2e4655',
+				fontFamily: "Montserrat-Medium",
+				fontSize: '12'
+			},
+			grid: {
+				left: '2%',
+				right: '2%',
+				bottom: '12%',
+				containLabel: true
+			},
+			toolbox: {
+				show: false,
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			xAxis: {
+				type: 'category',
+				boundaryGap: false,
+				data: ['12 Jan','13 Jan','14 Jan','15 Jan','16 Jan','17 Jan','18 Jan']
+			},
+			yAxis: {
+				type: 'value'
+			},
+			series: [
+				{
+						name:'12 hours rate',
+						type:'line',
+						stack: '',
+						data:[120, 132, 101, 134, 90, 230, 210]
+				},
+				{
+						name:'7 days rate',
+						type:'line',
+						stack: '',
+						data:[220, 182, 191, 234, 290, 330, 310]
+				},
+				{
+						name:'3 days rate',
+						type:'line',
+						stack: '',
+						data:[150, 232, 201, 154, 190, 330, 410]
+				},
+				{
+						name:'14 days rate',
+						type:'line',
+						stack: '',
+						data:[320, 332, 301, 334, 390, 330, 320]
+				},
+				{
+						name:'30 days rate',
+						type:'line',
+						stack: '',
+						data:[820, 932, 901, 934, 1290, 1330, 1320]
+				}
+			]
+	  };
+
+	  // use configuration item and data specified to show chart
+	  myChart.setOption(option);
+
+
+
+
+
+
+
+
+
+
+
+
+		/*new Chart(document.getElementById("line-chart"), {
 		type: 'line',
 			data: {
 				labels: [12,13,14,15,16,17,18],
@@ -662,7 +760,7 @@
 					borderWidth: 1
 			  }
 			}
-		});
+		});*/
 
 
 
@@ -690,7 +788,7 @@
             },
 						ticks: {
 							fontColor: "#2e4655",
-							fontSize: 13,
+							fontSize: 12,
 							fontFamily: "Montserrat-Medium"
             }
 	        }],
@@ -702,7 +800,7 @@
             },
             ticks: {
 							fontColor: "#2e4655",
-							fontSize: 13,
+							fontSize: 12,
 							fontFamily: "Montserrat-Medium",
 							padding: 10
             }
@@ -748,7 +846,7 @@
             },
 						ticks: {
 							fontColor: "#2e4655",
-							fontSize: 13,
+							fontSize: 12,
 							fontFamily: "Montserrat-Medium"
             }
 	        }],
@@ -760,7 +858,7 @@
             },
             ticks: {
 							fontColor: "#2e4655",
-							fontSize: 13,
+							fontSize: 12,
 							fontFamily: "Montserrat-Medium",
 							padding: 10
             }
