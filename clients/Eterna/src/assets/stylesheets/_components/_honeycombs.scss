@@ -7,17 +7,25 @@ $honeycombs-size: 105px;
   position: absolute;
   right: 0;
   top: 0;
-  height: 95%;
+  height: 100%;
   max-width: 760px;
   min-width: 760px;
   z-index: -1;
   @include media-breakpoint-up(sm) {
     overflow: hidden;
   }
-  @include media-breakpoint-up(xl) {
+  /*@include media-breakpoint-up(xl) {
     margin-top: -$navbar-height;
+  }*/
+  @include media-breakpoint-up(md) {
+    top: -55px;
+  }
+  @media screen and (max-width:1630px) {
+    transform: scale(.8, .8);
+    right: -80px;
   }
   @include media-breakpoint-down(lg) {
+    right: 0;
     margin-right: -240px;
     margin-top: -60px;
   }
@@ -28,8 +36,8 @@ $honeycombs-size: 105px;
     margin-right: -400px;
   }
   @include media-breakpoint-down(xs) {
-    margin-right: -648px;
-    margin-top: -400px;
+    margin-right: -548px;
+    margin-top: -160px;
   }
 }
 

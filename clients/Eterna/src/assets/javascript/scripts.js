@@ -17,4 +17,22 @@ $(document).ready(function(){
     $('.team-member--mobile-hidden').slideDown('team-member--mobile-hidden');
   });
 
+
+  $(function() {
+      var navbar = $('.navbar--secondary');
+      var hero = $('.hero');
+      var hieghtThreshold = $(".main").offset().top;
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= hieghtThreshold && scroll ) {
+          navbar.addClass('scaleUp');
+          hero.addClass('scaleDown');
+        } else {
+          navbar.removeClass('scaleUp');
+          hero.removeClass('scaleDown');
+        }
+      });
+    })
+
 });

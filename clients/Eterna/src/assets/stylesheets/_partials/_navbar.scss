@@ -2,14 +2,32 @@
 
 $navbar-bg: $muted;
 $navbar-height: 70px;
+$navbar-height-sm: 86px;
 
 .navbar {
   background: $navbar-bg;
   flex-shrink: 0;
+  min-height: $navbar-height-sm;
   @include media-breakpoint-up(md) {
     padding-top: 0;
     padding-bottom: 0;
     min-height: $navbar-height;
+  }
+}
+
+.navbar--secondary {
+  .navbar-brand {
+    @include transition(500ms);
+    @include media-breakpoint-up(md) {
+      transform: scale(0);
+    }
+  }
+  &.scaleUp {
+    .navbar-brand {
+      @include media-breakpoint-up(md) {
+        transform: scale(1);
+      }
+    }
   }
 }
 

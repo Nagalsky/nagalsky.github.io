@@ -12,6 +12,11 @@ html, body {
 
 body {
 	@extend .d-flex, .flex-column;
+	padding-top: $navbar-height-sm;
+	position: relative;
+  @include media-breakpoint-up(md) {
+    padding-top: $navbar-height;
+  }
 }
 
 .main {

@@ -7,13 +7,20 @@
 	}
 	padding: 55px 0;
 	@include gradient-y($start-color: #e1e6ec, $end-color: rgba($white, 0), $start-percent: 89%, $end-percent: 100%);
-	@include media-breakpoint-down(lg) {
-		overflow: hidden;
+	overflow: hidden;
+	&.scaleDown {
+		.hero__logo {
+			@include media-breakpoint-up(md) {
+				transform: scale(0);
+			}
+		}
 	}
 }
 
 .hero__logo {
 	width: 250px;
+	@include transition(500ms);
+	transform: scale(1);
 	@media only screen and (min-width: 1250px) {
 		margin-left: -47px;
 	}
