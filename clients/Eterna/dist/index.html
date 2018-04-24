@@ -115,10 +115,6 @@
 				<div id="line-chart" class="mb-5 mb-md-6" style="height:400px;"></div>
 
 
-
-
-
-
 				<!--<canvas id="line-chart" class="mb-5 mb-md-6" width="" height=""></canvas>-->
 
 
@@ -141,7 +137,8 @@
 
 					<div class="col-md-6">
 						<h3 class="text-center mb-5">Desposit Inflows and Outflows</h3>
-						<canvas id="bar-chart-grouped" width="" height=""></canvas>
+						<div id="bar-chart-grouped" style="height:400px;"></div>
+						<!--<canvas id="bar-chart-grouped" width="" height=""></canvas>-->
 					</div><!--col-->
 				</div><!--row-->
 
@@ -649,6 +646,159 @@
 
 	  // use configuration item and data specified to show chart
 	  myChart.setOption(option);
+
+
+
+
+		var dom = document.getElementById("bar-chart-grouped");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		app.title = '柱状图框选';
+
+		var xAxisData = [];
+		var data1 = [];
+		var data2 = [];
+		var data3 = [];
+		var data4 = [];
+		var data5 = [];
+		var data6 = [];
+		var data7 = [];
+		var data8 = [];
+
+		for (var i = 0; i < 10; i++) {
+		    xAxisData.push('Class' + i);
+		    data1.push((Math.random() * 2).toFixed(2));
+		    data2.push(-Math.random().toFixed(2));
+		    data3.push((Math.random() * 5).toFixed(2));
+		    data4.push((Math.random() + 0.3).toFixed(2));
+		}
+
+		var itemStyle = {
+		    normal: {
+		    },
+		    emphasis: {
+		        barBorderWidth: 1,
+		        shadowBlur: 10,
+		        shadowOffsetX: 0,
+		        shadowOffsetY: 0,
+		        shadowColor: 'rgba(0,0,0,0.5)'
+		    }
+		};
+
+		option = {
+		    legend: {
+					show: false
+		    },
+				toolbox: {
+					show: false
+				},
+		    tooltip: {},
+		    xAxis: {
+		        data: xAxisData,
+		        name: 'X Axis',
+		        silent: false,
+		        axisLine: {onZero: false},
+		        splitLine: {show: false},
+		        splitArea: {show: false}
+		    },
+		    yAxis: {
+		        inverse: false,
+		        splitArea: {show: false}
+		    },
+		    grid: {
+		        left: 20
+		    },
+		    series: [
+		        {
+		            name: '12pm',
+		            type: 'bar',
+		            stack: 'one',
+		            itemStyle: itemStyle,
+		            data: data1
+		        },
+		        {
+		            name: '1pm',
+		            type: 'bar',
+		            stack: 'one',
+		            itemStyle: itemStyle,
+		            data: data2
+		        },
+		        {
+		            name: '2pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data3
+		        },
+		        {
+		            name: '3pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data4
+		        },
+		        {
+		            name: '4pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data5
+		        },
+						{
+		            name: '5pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data6
+		        },
+						{
+		            name: '6pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data7
+		        },
+						{
+		            name: '7pm',
+		            type: 'bar',
+		            stack: 'two',
+		            itemStyle: itemStyle,
+		            data: data8
+		        }
+		    ]
+		};
+
+		myChart.on('brushSelected', renderBrushed);
+
+		function renderBrushed(params) {
+		    var brushed = [];
+		    var brushComponent = params.batch[0];
+
+		    for (var sIdx = 0; sIdx < brushComponent.selected.length; sIdx++) {
+		        var rawIndices = brushComponent.selected[sIdx].dataIndex;
+		        brushed.push('[Series ' + sIdx + '] ' + rawIndices.join(', '));
+		    }
+
+		    myChart.setOption({
+		        title: {
+		            backgroundColor: '#000000',
+		            text: 'SELECTED DATA INDICES: \n' + brushed.join('\n'),
+		            bottom: 0,
+		            right: 0,
+		            width: 100,
+		            textStyle: {
+		                fontSize: 12,
+		                color: '#fff'
+		            }
+		        }
+		    });
+		};
+		if (option && typeof option === "object") {
+		    myChart.setOption(option, true);
+		}
+
+
 
 
 
