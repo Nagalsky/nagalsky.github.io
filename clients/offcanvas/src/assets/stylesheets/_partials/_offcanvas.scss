@@ -1,0 +1,24 @@
+/* OFFCANVAS */
+
+$offcanvas-bg: red;
+$offcanvas-width: 70%;
+$offcanvas-transition: 350ms;
+
+
+
+.offcanvas {
+  width: $offcanvas-width;
+  background: $offcanvas-bg;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow-y: auto;
+  @include transition($offcanvas-transition);
+  transform: translateX(-100%);
+}
+
+.offcanvas--opened {
+  transform: translateX(0%);
+}
