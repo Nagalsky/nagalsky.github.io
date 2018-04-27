@@ -15,11 +15,9 @@ $honeycombs-animation-speed: 60s;
   @include media-breakpoint-up(sm) {
     overflow: hidden;
   }
-  /*@include media-breakpoint-up(xl) {
-    margin-top: -$navbar-height;
-  }*/
   @include media-breakpoint-up(md) {
     top: -55px;
+    height: 122%;
   }
   @media screen and (max-width:1630px) {
     transform: scale(.85, .85);
@@ -28,16 +26,16 @@ $honeycombs-animation-speed: 60s;
   @include media-breakpoint-down(lg) {
     right: 0;
     margin-right: -240px;
-    //margin-top: -60px;
   }
   @include media-breakpoint-down(md) {
     margin-right: -360px;
   }
   @include media-breakpoint-down(sm) {
-    margin-right: -400px;
+    margin-right: -200px;
+    top: 16px;
   }
   @include media-breakpoint-down(xs) {
-    margin-right: -548px;
+    margin-right: -450px;
     margin-top: -160px;
   }
 }
@@ -68,6 +66,7 @@ $honeycombs-animation-speed: 60s;
   right: 331px;
   top: 89px;
   animation: OpacityAnimation_1 $honeycombs-animation-speed ease infinite;
+  transform: scale(1.03);
 }
 .honeycombs__item--2 {
   right: 90px;
@@ -79,6 +78,7 @@ $honeycombs-animation-speed: 60s;
   right: 492px;
   top: 181px;
   animation: OpacityAnimation_3 $honeycombs-animation-speed ease infinite;
+  transform: scale(1.03);
 }
 .honeycombs__item--4 {
   right: 254px;
@@ -87,8 +87,9 @@ $honeycombs-animation-speed: 60s;
 }
 .honeycombs__item--5 {
   right: 493px;
-  top: 274px;
+  top: 275px;
   animation: OpacityAnimation_5 $honeycombs-animation-speed ease infinite;
+  transform: scale(1.03);
 }
 .honeycombs__item--6 {
   right: 332px;
@@ -104,11 +105,13 @@ $honeycombs-animation-speed: 60s;
   right: 82px;
   top: 417px;
   animation: OpacityAnimation_8 $honeycombs-animation-speed ease infinite;
+  transform: scale(1.05);
 }
 .honeycombs__item--9 {
   right: 411px;
   top: 508px;
   animation: OpacityAnimation_9 $honeycombs-animation-speed ease infinite;
+  transform: scale(1.05);
 }
 .honeycombs__item--10 {
   right: 652px;

@@ -12,7 +12,7 @@
 
 
 	<main class="main">
-		<section class="section hero">
+		<section class="section hero bg-muted">
 			<div class="container">
 				<div class="row">
 					<div class="col-10 col-md-8 col-xl-7">
@@ -97,8 +97,7 @@
 
 					<div class="col-md-6">
 						<h3 class="text-center mb-5">Desposit Inflows and Outflows</h3>
-						<div id="bar-chart-grouped" style="height:400px;"></div>
-						<!--<canvas id="bar-chart-grouped" width="" height=""></canvas>-->
+						<canvas id="bar-chart-grouped" width="" height=""></canvas>
 					</div><!--col-->
 				</div><!--row-->
 
@@ -122,7 +121,7 @@
 							</div><!--col-->
 							<div class="col-md-7">
 								<h3 class="hiw__title">1</h3>
-								<p class="text-white"><span class="text-success d-block">Keep coins you need for daily transactions in your crypto wallet.</span></p>
+								<p class="text-white"><span class="text-success d-block">Keep coins you need for daily transactions in your crypto wallet.</span> Use Eterna for transactions as you would most major cryptocurrencies.</p>
 							</div><!--col-->
 						</div><!--row-->
 					</div><!--hiw__item-->
@@ -135,7 +134,7 @@
 							</div><!--col-->
 							<div class="col-md-7">
 								<h3 class="hiw__title">2</h3>
-								<p class="text-white"><span class="text-success d-block">Place excess coins on deposit with the Central Bank.</span>Deposits are offered in five maturities: 12 hours, 3 days, 7 days, 14 days and 30 days. These periods of time signify how long you will have to wait before you get your deposit back after asking for it.</p>
+								<p class="text-white"><span class="text-success d-block">Place excess coins on deposit with the Central Bank.</span>To pace coins on deposit, all you need to do is send them to a smart contract. Deposits are offered in five maturities: 12 hours, 3 days, 7 days, 14 days and 30 days. These periods of time signify how long you will have to wait before you get your deposit back after asking for it.</p>
 							</div><!--col-->
 						</div><!--row-->
 					</div><!--hiw__item-->
@@ -148,7 +147,7 @@
 							</div><!--col-->
 							<div class="col-md-7">
 								<h3 class="hiw__title">3</h3>
-								<p class="text-white"><span class="text-success d-block">Earn riskless interest.</span>Each of the deposits pays a different interest rate, determined in every block. The more popular a particular deposit is, the lower its interest rate.</p>
+								<p class="text-white"><span class="text-success d-block">Earn riskless interest.</span>Each of the deposits pays a different interest rate, determined in every block. The more popular a particular deposit is, the lower the rate that it pays. During periods when a large number of coins are withdrawn from deposits, interest rates will spike and you will earn even more.</p>
 							</div><!--col-->
 						</div><!--row-->
 					</div><!--hiw__item-->
@@ -161,7 +160,7 @@
 							</div><!--col-->
 							<div class="col-md-7">
 								<h3 class="hiw__title">4</h3>
-								<p class="text-white"><span class="text-success d-block">Ask for your deposit back when you need it.</span>The Central Bank will send it to your address with a delay that equals the maturity of your chosen deposit.</p>
+								<p class="text-white"><span class="text-success d-block">Ask for your deposit back when you need it.</span>To get you money back, all you need to do is send a message to the central bank smart contract. The smart contract will send it to your address with a delay that equals the maturity of your chosen deposit.</p>
 							</div><!--col-->
 						</div><!--row-->
 					</div><!--hiw__item-->
@@ -450,7 +449,7 @@
 				</div><!--row-->
 
 
-				<p class="text-center d-block d-md-none mb-6"><a href="#" class="underline hidden-team-member-trigger">Show more team members</a></p>
+				<p class="text-center d-block d-md-none"><a href="#" class="underline hidden-team-member-trigger">Show more team members</a></p>
 			</div><!--container-->
 		</section><!--section-->
 
@@ -507,7 +506,7 @@
 			grid: {
 				left: '2%',
 				right: '2%',
-				bottom: '12%',
+				bottom: '18%',
 				containLabel: true
 			},
 			toolbox: {
@@ -892,18 +891,13 @@
 		new Chart(document.getElementById("bar-chart-grouped"), {
 	    type: 'bar',
 	    data: {
-	      labels: ["1900", "1950", "1999", "2050"],
+	      labels: ["12pm", "1pm", "2pm", "3pm","4pm", "5pm", "6pm", "7pm","8pm", "8pm", "10pm"],
 	      datasets: [
 	        {
-	          label: "Africa",
+	          label: "Some title",
 						borderColor: "#3e95cd",
-						backgroundColor: "#3e95cd",
-	          data: [133,221,783,-2478]
-	        }, {
-	          label: "Europe",
-						borderColor: "#8e5ea2",
-						backgroundColor: "#8e5ea2",
-	          data: [408,-547,-675,2600]
+						backgroundColor: ["#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8","#bce5f8"],
+	          data: [133,-221,783,-2478,400,-100,-700,800,1000,2300,-400]
 	        }
 	      ]
 	    },
@@ -934,6 +928,9 @@
             }
           }]
 		    },
+				legend: {
+					display: false
+				},
 	      title: {
 	        display: false
 	      }
