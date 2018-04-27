@@ -1,0 +1,24 @@
+/* BUTTONS */
+
+$btn-font-family: $font-bold;
+
+.btn {
+  font-family: $btn-font-family;
+  padding: 10px 24px;
+  text-transform: uppercase;
+  @include media-breakpoint-up(xl) {
+    padding: 15px 56px;
+  }
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-primary {
+    @include button-variants($bg: $primary, $color: $white);
+  }
+  &.btn-white {
+    @include button-variants($bg: $white, $color: $primary);
+  }
+  &.btn-circle {
+    border-radius: 30px;
+  }
+}

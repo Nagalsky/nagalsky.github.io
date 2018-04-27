@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).scroll(function(){$(window).scrollTop()>=10?$(".navbar").addClass("navbar--animated"):$(".navbar").removeClass("navbar--animated")})});
