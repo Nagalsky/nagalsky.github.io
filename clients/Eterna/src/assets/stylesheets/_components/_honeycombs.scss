@@ -65,63 +65,100 @@ $honeycombs-animation-speed: 60s;
 .honeycombs__item--1 {
   right: 331px;
   top: 89px;
-  animation: OpacityAnimation_1 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_1 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(1.03);
 }
 .honeycombs__item--2 {
   right: 90px;
   top: 139px;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_2 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(.95);
-  animation: OpacityAnimation_2 $honeycombs-animation-speed ease infinite;
 }
 .honeycombs__item--3 {
   right: 492px;
   top: 181px;
-  animation: OpacityAnimation_3 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_3 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(1.03);
+  @include media-breakpoint-down(xs) {
+    animation: OpacityAnimation_3-mobile $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--4 {
   right: 254px;
   top: 229px;
-  animation: OpacityAnimation_4 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_4 $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--5 {
   right: 493px;
   top: 275px;
-  animation: OpacityAnimation_5 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_5 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(1.03);
+  @include media-breakpoint-down(xs) {
+    animation: OpacityAnimation_5-mobile $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--6 {
   right: 332px;
   top: 368px;
-  animation: OpacityAnimation_6 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_6 $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--7 {
   right: 571px;
   top: 413px;
-  animation: OpacityAnimation_7 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_7 $honeycombs-animation-speed ease infinite;
+  }
+  @include media-breakpoint-down(xs) {
+    animation: OpacityAnimation_7-mobile $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--8 {
   right: 82px;
   top: 417px;
-  animation: OpacityAnimation_8 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_8 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(1.05);
 }
 .honeycombs__item--9 {
   right: 411px;
   top: 508px;
-  animation: OpacityAnimation_9 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_9 $honeycombs-animation-speed ease infinite;
+  }
   transform: scale(1.05);
+  @include media-breakpoint-down(xs) {
+    animation: OpacityAnimation_9-mobile $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--10 {
   right: 652px;
   top: 553px;
-  animation: OpacityAnimation_10 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_10 $honeycombs-animation-speed ease infinite;
+  }
+  @include media-breakpoint-down(xs) {
+    animation: OpacityAnimation_10-mobile $honeycombs-animation-speed ease infinite;
+  }
 }
 .honeycombs__item--11 {
   right: 249px;
   top: 596px;
-  animation: OpacityAnimation_11 $honeycombs-animation-speed ease infinite;
+  @include media-breakpoint-up(sm) {
+    animation: OpacityAnimation_11 $honeycombs-animation-speed ease infinite;
+  }
 }
 
 .honeycombs__inner {
@@ -152,90 +189,134 @@ $honeycombs-animation-speed: 60s;
   100% {background-position: 0% 50%;}
 }
 
-// New
-@keyframes OpacityAnimation_1 {
-  0% {opacity: 0;}
-  4.54% {opacity: 1;}
-  9.09% { opacity: 0;}
-  100% {opacity: 0;}
+@include media-breakpoint-up(sm) {
+
+  // New
+  @keyframes OpacityAnimation_1 {
+    0% {opacity: 0;}
+    4.54% {opacity: 1;}
+    9.09% { opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_2 {
+    0% {opacity: 0;}
+    9.09% {opacity: 0;}
+    13.635% {opacity: 1}
+    18.175% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_3 {
+    0% {opacity: 0;}
+    18.175% {opacity: 0}
+    22.715% {opacity: 1}
+    27.255% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_4 {
+    0% {opacity: 0;}
+    27.255% {opacity: 0}
+    31.795% {opacity: 1}
+    36.335% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_5 {
+    0% {opacity: 0;}
+    36.335% {opacity: 0}
+    40.875% {opacity: 1}
+    45.415% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_6 {
+    0% {opacity: 0;}
+    45.415% {opacity: 0}
+    49.955% {opacity: 1};
+    54.495% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_7 {
+    0% {opacity: 0;}
+    54.495% {opacity: 0}
+    59.035% {opacity: 1};
+    63.575% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_8 {
+    0% {opacity: 0;}
+    63.575% {opacity: 0}
+    68.115% {opacity: 1};
+    72.655% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_9 {
+    0% {opacity: 0;}
+    72.655% {opacity: 0}
+    77.195% {opacity: 1};
+    81.735% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_10 {
+    0% {opacity: 0;}
+    81.735% {opacity: 0}
+    86.275% {opacity: 1};
+    90.815% {opacity: 0}
+    100% {opacity: 0;}
+  }
+
+  @keyframes OpacityAnimation_11 {
+    0% {opacity: 0;}
+    90.815% {opacity: 0}
+    95.355% {opacity: 1};
+    99.895% {opacity: 0}
+    100% {opacity: 0;}
+  }
 }
 
-@keyframes OpacityAnimation_2 {
-  0% {opacity: 0;}
-  9.09% {opacity: 0;}
-  13.635% {opacity: 1}
-  18.175% {opacity: 0}
-  100% {opacity: 0;}
-}
+@include media-breakpoint-down(xs) {
+  @keyframes OpacityAnimation_3-mobile {
+    0% {opacity: 0;}
+    4.54% {opacity: 1;}
+    9.09% { opacity: 0;}
+    100% {opacity: 0;}
+  }
 
-@keyframes OpacityAnimation_3 {
-  0% {opacity: 0;}
-  18.175% {opacity: 0}
-  22.715% {opacity: 1}
-  27.255% {opacity: 0}
-  100% {opacity: 0;}
-}
+  @keyframes OpacityAnimation_5-mobile {
+    0% {opacity: 0;}
+    9.09% {opacity: 0;}
+    13.635% {opacity: 1}
+    18.175% {opacity: 0}
+    100% {opacity: 0;}
+  }
 
-@keyframes OpacityAnimation_4 {
-  0% {opacity: 0;}
-  27.255% {opacity: 0}
-  31.795% {opacity: 1}
-  36.335% {opacity: 0}
-  100% {opacity: 0;}
-}
+  @keyframes OpacityAnimation_7-mobile {
+    0% {opacity: 0;}
+    18.175% {opacity: 0}
+    22.715% {opacity: 1}
+    27.255% {opacity: 0}
+    100% {opacity: 0;}
+  }
 
-@keyframes OpacityAnimation_5 {
-  0% {opacity: 0;}
-  36.335% {opacity: 0}
-  40.875% {opacity: 1}
-  45.415% {opacity: 0}
-  100% {opacity: 0;}
-}
+  @keyframes OpacityAnimation_9-mobile {
+    0% {opacity: 0;}
+    27.255% {opacity: 0}
+    31.795% {opacity: 1}
+    36.335% {opacity: 0}
+    100% {opacity: 0;}
+  }
 
-@keyframes OpacityAnimation_6 {
-  0% {opacity: 0;}
-  45.415% {opacity: 0}
-  49.955% {opacity: 1};
-  54.495% {opacity: 0}
-  100% {opacity: 0;}
-}
-
-@keyframes OpacityAnimation_7 {
-  0% {opacity: 0;}
-  54.495% {opacity: 0}
-  59.035% {opacity: 1};
-  63.575% {opacity: 0}
-  100% {opacity: 0;}
-}
-
-@keyframes OpacityAnimation_8 {
-  0% {opacity: 0;}
-  63.575% {opacity: 0}
-  68.115% {opacity: 1};
-  72.655% {opacity: 0}
-  100% {opacity: 0;}
-}
-
-@keyframes OpacityAnimation_9 {
-  0% {opacity: 0;}
-  72.655% {opacity: 0}
-  77.195% {opacity: 1};
-  81.735% {opacity: 0}
-  100% {opacity: 0;}
-}
-
-@keyframes OpacityAnimation_10 {
-  0% {opacity: 0;}
-  81.735% {opacity: 0}
-  86.275% {opacity: 1};
-  90.815% {opacity: 0}
-  100% {opacity: 0;}
-}
-
-@keyframes OpacityAnimation_11 {
-  0% {opacity: 0;}
-  90.815% {opacity: 0}
-  95.355% {opacity: 1};
-  99.895% {opacity: 0}
-  100% {opacity: 0;}
+  @keyframes OpacityAnimation_10 {
+    0% {opacity: 0;}
+    36.335% {opacity: 0}
+    40.875% {opacity: 1}
+    45.415% {opacity: 0}
+    100% {opacity: 0;}
+  }
 }
