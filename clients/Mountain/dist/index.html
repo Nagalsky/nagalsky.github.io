@@ -9,9 +9,9 @@
 	<title>Home page</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-offset="100" data-target="#navbar">
 
-	<nav class="navbar navbar-expand-lg fixed-top">
+	<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
 	  <div class="container">
 	    <a class="navbar-brand" href="#">
 	      <img src="assets/images/elements/logo.png" alt="" class="w-100">
@@ -23,16 +23,16 @@
 	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	      <ul class="navbar-nav align-items-lg-center ml-auto">
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">HOME</a>
+	          <a class="nav-link" href="#anchor-home" data-click="scroll-to-target">HOME</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">SECAURA</a>
+	          <a class="nav-link" href="#anchor-secaura" data-click="scroll-to-target">SECAURA</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">FEATURES</a>
+	          <a class="nav-link" href="#anchor-features" data-click="scroll-to-target">FEATURES</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">ABOUT US</a>
+	          <a class="nav-link" href="#anchor-about" data-click="scroll-to-target">ABOUT US</a>
 	        </li>
 	        <li class="nav-item mb-3 mb-md-0 ml-lg-5">
 	          <a class="btn btn-primary" href="#">PRE-ORDER</a>
@@ -45,17 +45,16 @@
 
 
 	<main class="main">
-		<section class="hero has-bg text-center" style="background-image: url('assets/images/bg/hero-bg.gif');">
+		<section class="hero has-bg text-center" id="anchor-home" style="background-image: url('assets/images/bg/hero-bg.gif');">
 			<div class="container container--sm">
 				<h4 class="text-blue">Simple. Sleek. Secure.</h4>
 				<h1 class="font-black mb-5">Welcome to a new generation of home internet security.</h1>
 				<form action="" class="hero__form">
 					<div class="form-group mb-0 relative">
-						<input type="email" class="form-control border-0" placeholder="Enter your email…">
+						<input type="email" class="form-control border-0" placeholder="Enter your email and be the first to know.">
 						<button class="btn btn-primary btn-circle btn-submit" type="submit">Submit</button>
 					</div>
 				</form>
-				<p>Be first to know</p>
 			</div><!--container-->
 		</section><!--hero-->
 
@@ -83,7 +82,7 @@
 		</section><!--section-->
 
 
-		<section class="section text-center section--has-border">
+		<section class="section text-center section--has-border" id="anchor-secaura">
 			<div class="container">
 				<h2>Protect everything in seconds</h2>
 				<div class="box mb-5 mb-lg">
@@ -109,7 +108,7 @@
 		</section><!--section-->
 
 
-		<section class="section section--has-border">
+		<section class="section section--has-border" id="anchor-features">
 			<div class="container">
 				<h2 class="text-center">Features</h2>
 				<div class="box box--md mb-5 mb-lg">
@@ -185,7 +184,7 @@
 		</section><!--section-->
 
 
-		<section class="section text-center section--has-border">
+		<section class="section text-center section--has-border" id="anchor-about">
 			<div class="container">
 				<h2>About Us</h2>
 				<div class="box box--md mb-5 mb-lg">
