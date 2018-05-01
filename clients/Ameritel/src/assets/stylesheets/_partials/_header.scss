@@ -1,0 +1,148 @@
+/* HEADER */
+
+$header-height: 180px;
+$header-font: $font-base-regular;
+
+.header {
+  font-family: $header-font;
+  >.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+  .list-social {
+    margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 5px;
+    }
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+    }
+  }
+  .list-social__item {
+    @include media-breakpoint-down(xs) {
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .list-social__link {
+    @include media-breakpoint-up(lg) {
+      font-size: 22px;
+    }
+  }
+}
+
+.header__logo {
+  max-width: 192px;
+  padding: 11.5px 15px;
+  @extend .align-items-center, .justify-content-center;
+  flex-shrink: 0;
+  @include media-breakpoint-up(md) {
+    box-shadow: 0 1px 42px 0 rgba(0, 0, 0, 0.1);
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: $header-height;
+  }
+  @media (min-width: 1500px) {
+    max-width: 384px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 148px;
+    padding: 5px 15px;
+  }
+}
+
+.header__content {
+  @extend .d-flex, .flex-column;
+  flex: 1;
+  @include media-breakpoint-up(lg) {
+    min-height: $header-height;
+  }
+}
+
+.header__cta {
+  padding: 10px 10px;
+  font-size: 13px;
+  color: $white;
+  background-image: linear-gradient(218deg, #00798c, #2a416a);
+  @extend .align-items-center, .justify-content-center;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-family: $font-base-bold;
+  margin-left: 20px;
+  @include media-breakpoint-up(sm) {
+    min-width: 135px;
+  }
+  @include media-breakpoint-up(lg) {
+    //min-height: $header-height;
+    padding: 41px 10px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 54px 10px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 26px;
+  }
+  @media (min-width: 1500px) {
+    min-width: 280px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 54px 10px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &:hover, &:focus {
+    background-image: linear-gradient(218deg, #2a416a, #00798c);
+    color: $white;
+  }
+}
+
+.header__content__top {
+  padding: 5px 15px;
+  @extend .d-flex, .align-items-center;
+  font-size: 14px;
+  flex: 1;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0px 15px 0 0;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+.header__logo-secondary {
+  @extend .img-fluid;
+  max-width: 112px;
+  margin-right: auto;
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    max-width: 220px;
+  }
+}
+
+.header__call {
+  color: $black;
+  font-size: 14px;
+  @include media-breakpoint-up(lg) {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,43 @@
+/* TEXT DIVIDER */
+
+$text-devider-line-size: 43px;
+
+.text-divider {
+	text-align: center;
+}
+.text-divider__inner {
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+	&:before, &:after {
+		@include media-breakpoint-up(sm) {
+			content: '';
+		}
+		width: $text-devider-line-size;
+	  height: 1px;
+	  background: currentColor;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&:before {
+		left: -$text-devider-line-size;
+	}
+	&:after {
+		right: -$text-devider-line-size;
+	}
+}
+
+.text-divider__inner--lg {
+	@include media-breakpoint-up(xl) {
+		&:before, &:after {
+			width: 106px;
+		}
+		&:before {
+			left: -106px;
+		}
+		&:after {
+			right: -106px;
+		}
+	}
+}
