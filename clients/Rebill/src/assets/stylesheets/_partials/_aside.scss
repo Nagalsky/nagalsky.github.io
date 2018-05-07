@@ -1,0 +1,73 @@
+/* ASIDE */
+
+$aside-width: 220px;
+$aside-bg: $sky;
+$aside-active-link-divider: #bce5ec;
+
+.aside {
+  width: $aside-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  background: $aside-bg;
+  z-index: 100;
+  background-image: url('../images/bg/aside-pattern.png');
+  background-repeat: no-repeat;
+  background-position: center 93px;
+  padding-top: 171px;
+}
+
+
+.aside__logo {
+  display: block;
+  background: $sky-secondary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $aside-width;
+  padding: 33px 40px;
+}
+
+
+.aside__nav__link {
+  display: block;
+  color: $white;
+  padding: 21px 15px 21px 32px;
+  position: relative;
+  &:hover, &:focus, &.active {
+    color: $white;
+    background: $sky-secondary;
+    &:before {
+      opacity: 1;
+    }
+  }
+  &.active {
+    &:before {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: $aside-active-link-divider;
+    opacity: 0;
+    @include transition(250ms);
+  }
+}
+
+.aside__subnav__link {
+  display: block;
+  font-size: 16px;
+  color: $white;
+  padding: 10px 15px 10px 40px;
+  &:hover, &:focus {
+    color: $white;
+    background: $sky-secondary;
+  }
+}

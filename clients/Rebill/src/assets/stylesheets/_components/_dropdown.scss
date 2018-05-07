@@ -1,0 +1,33 @@
+/* DROPDOWN */
+
+$dropdown-color: $sky;
+
+.dropdown-menu {
+  border-color: $dropdown-color;
+}
+
+.dropdown-divider {
+  border-top-color: $dropdown-color;
+}
+
+.dropdown-item {
+  color: $dropdown-color;
+  &:hover, &:focus {
+    color: $white;
+    background: $dropdown-color;
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    font-family: $font-icons;
+    content: '\f107';
+    border: none;
+    height: auto;
+    vertical-align: auto;
+    margin-left: 10px;
+    @include media-breakpoint-up(md) {
+      color: $silver;
+    }
+  }
+}
