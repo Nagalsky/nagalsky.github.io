@@ -1,5 +1,33 @@
 /* GALLERY */
 
+
+.gallery__item {
+  position: relative;
+  min-height: 70vh;
+  @include media-breakpoint-down(sm) {
+    min-height: 400px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 240px;
+  }
+}
+
+.gallery__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  @extend .d-flex, .justify-content-end, .align-items-end, .flex-column;
+  padding: 250px 0 100px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 60px 0;
+  }
+}
+
+
+
+
 .gallery-logos {
   .slick-track {
     @extend .d-flex, .align-items-center;

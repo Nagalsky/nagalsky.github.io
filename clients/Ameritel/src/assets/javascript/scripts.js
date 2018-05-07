@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	//Slick gallery initial
+	$('.gallery').slick();
+	
 	$('.gallery-logos').slick({
 	  slidesToShow: 5,
 		autoplay: true,
