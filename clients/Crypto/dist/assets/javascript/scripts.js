@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".btn").on("click",function(t){t.preventDefault(),$("html").toggleClass("theme-dark theme-light")})});

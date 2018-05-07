@@ -1,0 +1,18 @@
+/* BUTTONS */
+
+.btn {
+  font-family: $font-medium;
+  padding: 10.5px 22px;
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-success {
+    @include button-variants($bg: $success, $color: $white)
+  }
+  &.btn-has-shadow {
+    box-shadow: 0 2px 4px 0 rgba($black, .08);
+  }
+  &.btn-sm {
+    padding: 8px 26px;
+  }
+}
