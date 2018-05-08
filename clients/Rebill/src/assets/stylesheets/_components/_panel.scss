@@ -1,1 +1,46 @@
 /* PANEL */
+
+$panel-border: #eff3f3;
+$panel-color: $asphalt;
+$panel-bg: $white;
+
+.panel {
+  padding: 30px 15px;
+  @extend .d-flex, .align-items-center;
+  border: 1px solid $panel-border;
+  color: $panel-color;
+  background: $panel-bg;
+  box-shadow: 0px 2px 1px 0px rgba($black, .05);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 15px;
+  }
+}
+
+.panel__icon {
+  flex-shrink: 0;
+  font-size: 70px;
+  margin-right: 25px;
+  @include media-breakpoint-down(md) {
+    font-size: 15px;
+    font-size: 50px;
+  }
+  &:before {
+    @extend .mx-0;
+  }
+}
+
+.panel__title {
+  font-size: 32px;
+  margin-bottom: 0;
+  line-height: 100%;
+  color: $sky;
+  @include text-truncate();
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+}

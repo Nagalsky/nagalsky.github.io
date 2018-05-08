@@ -13,10 +13,18 @@ $aside-active-link-divider: #bce5ec;
   overflow-y: auto;
   background: $aside-bg;
   z-index: 100;
-  background-image: url('../images/bg/aside-pattern.png');
-  background-repeat: no-repeat;
-  background-position: center 93px;
   padding-top: 171px;
+  &:before {
+    content: '';
+    position: fixed;
+    top: 93px;
+    width: $aside-width;
+    height: 60px;
+    z-index: 20;
+    background-image: url('../images/bg/aside-pattern.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 

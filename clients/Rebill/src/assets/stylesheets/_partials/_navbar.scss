@@ -15,12 +15,19 @@ $navbar-border-color: #f8fcfc;
     min-height: $navbar-height-md;
     background: $navbar-bg-md;
   }
+  .dropdown-toggle {
+    &:after {
+      @include media-breakpoint-up(md) {
+        color: $silver;
+      }
+    }
+  }
 }
 
 
 .navbar-collapse {
   @include media-breakpoint-down(sm) {
-    max-height: 300px;
+    max-height: 440px;
     overflow-y: auto;
   }
 }

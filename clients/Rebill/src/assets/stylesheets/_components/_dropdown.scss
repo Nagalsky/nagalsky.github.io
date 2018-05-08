@@ -3,19 +3,19 @@
 $dropdown-color: $sky;
 
 .dropdown-menu {
-  border-color: $dropdown-color;
+  //border-color: $dropdown-color;
 }
 
 .dropdown-divider {
-  border-top-color: $dropdown-color;
+  //border-top-color: $dropdown-color;
 }
 
 .dropdown-item {
-  color: $dropdown-color;
-  &:hover, &:focus {
-    color: $white;
-    background: $dropdown-color;
-  }
+  //color: $dropdown-color;
+  //&:hover, &:focus {
+    //color: $white;
+    //background: $dropdown-color;
+  //}
 }
 
 .dropdown-toggle {
@@ -24,10 +24,28 @@ $dropdown-color: $sky;
     content: '\f107';
     border: none;
     height: auto;
-    vertical-align: auto;
+    width: auto;
+    vertical-align: 0;
     margin-left: 10px;
-    @include media-breakpoint-up(md) {
-      color: $silver;
-    }
+    transform: scale(1.3);
+    color: currentColor;
+  }
+}
+
+.dropdown-toggle--left {
+  &:before {
+    font-family: $font-icons;
+    content: '\f107';
+    border: none;
+    height: auto;
+    width: auto;
+    vertical-align: 0;
+    margin-right: 10px;
+    transform: scale(1.3);
+    display: inline-block;
+    color: currentColor;
+  }
+  &:after {
+    content: none;
   }
 }
