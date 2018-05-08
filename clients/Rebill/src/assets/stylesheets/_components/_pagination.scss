@@ -1,0 +1,40 @@
+/* PAGINATION */
+
+
+.pagination {
+  [class^="rebill-icon-"]:before, [class*=" rebill-icon-"]:before {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      border-radius: 6px 0 0 6px;
+    }
+  }
+  &:last-child {
+    .page-link {
+      border-radius: 0px 6px 6px 0px;
+    }
+  }
+  &.active {
+    .page-link {
+      background: #f3f7f7;
+      border-color: #e2e6e6;
+      color: #929292;
+    }
+  }
+}
+
+.page-link {
+  border-color: #e2e6e6;
+  color: #929292;
+  &:hover {
+    background: #f3f7f7;
+    border-color: #e2e6e6;
+    color: #929292;
+  }
+}
