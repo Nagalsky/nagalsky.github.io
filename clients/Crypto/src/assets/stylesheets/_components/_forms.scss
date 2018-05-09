@@ -1,6 +1,46 @@
 /* FORMS */
 
+$field-height: 34px;
+$field-color: $muted;
+$placeholder-line-height: 22px;
+$placeholder-color: $muted;
+$placeholder-font-size: 13px;
+$placeholder-font-style: $font-regular;
+
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
+	height: $field-height;
+	color: $field-color;
+	border: none;
+	border-radius: 2px;
+	@include themify($themes) {
+		background-color: themed('fieldBackroundColor');
+	}
+	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style, $line-height: $placeholder-line-height);
+	&:focus {
+		box-shadow: none !important;
+		color: $field-color;
+	}
+}
+
+.form-group--search {
+	position: relative;
+	.form-control {
+		padding-left: 40px;
+	}
+	.btn-cancel, .btn-submit {
+		position: absolute;
+		color: $field-color;
+		top: 0;
+		height: 100%;
+	}
+	.btn-cancel {
+    right: 0px;
+		padding: 5px 7.5px;
+  }
+	.btn-submit {
+		left: 5px;
+		padding: 5px;
+	}
 }

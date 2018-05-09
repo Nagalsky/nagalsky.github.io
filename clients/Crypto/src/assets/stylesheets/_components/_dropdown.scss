@@ -1,1 +1,40 @@
 /* DROPDOWN */
+
+
+.dropdown-menu {
+  border-radius: 2px;
+  @include themify($themes) {
+    background-color: themed('dropdownBackgroundColor');
+  }
+}
+
+.dropdown-item {
+  font-size: 12px;
+  font-family: $font-medium;
+  padding: 7.5px 15px;
+  @include themify($themes) {
+    color: themed('dropdownColor');
+  }
+  &:hover, &:focus {
+    background: transparent;
+    @include themify($themes) {
+      color: themed('dropdownColorHover');
+    }
+  }
+}
+
+.dropdown-item__icon {
+  text-align: center;
+  width: 16px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+
+.dropdown-toggle {
+  font-size: 13px;
+  font-family: $font-medium;
+  @include themify($themes) {
+    color: themed('headerUserNameColor');
+  }
+}

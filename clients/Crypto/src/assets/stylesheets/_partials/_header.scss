@@ -1,0 +1,103 @@
+/* HEADER */
+
+.header {
+  padding: 16px 15px 19px 15px;
+}
+
+.header__logo {
+  max-width: 240px;
+  margin-right: 10px;
+}
+.header__logo--hidden {
+  display: none;
+}
+
+.theme-light {
+  .header__logo__image-light {
+    display: none;
+  }
+}
+.theme-dark {
+  .header__logo__image-dark {
+    display: none;
+  }
+}
+
+.header__top {
+  @extend .d-flex, .align-items-center, .justify-content-between;
+  margin-bottom: 14px;
+  .btn {
+    font-size: 13px;
+  }
+}
+
+.header__bottom {
+  @extend .d-flex, .align-items-center, .justify-content-between;
+}
+
+.header__btn {
+  font-size: 13px;
+}
+
+.header__btn {
+  @extend .d-inline-flex, .align-items-center, .justify-content-center;
+  width: 34px;
+  height: 34px;
+  border-radius: 2px;
+  @include themify($themes) {
+    color: themed('btnHeaderColor');
+    background-color: themed('btnHeaderBackroundColor');
+  }
+  &+.header__btn {
+    margin-left: 10px;
+  }
+}
+
+
+.header__controls {
+  @extend .d-flex, .justify-content-end, .w-100;
+}
+
+.header__expanded-form-holder {
+  position: relative;
+  margin-right: 10px;
+}
+
+.header__expanded-form-holder--active {
+  flex: 1;
+}
+
+.header__expanded-form {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: none;
+  .form-control {
+    padding-right: 30px;
+  }
+  .btn-cancel {
+    position: absolute;
+    right: 0px;
+    top: 6px;
+  }
+}
+
+.header__expanded-form--active {
+  display: block;
+}
+
+.header__user-avatar {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  margin-right: 12px;
+}
+
+.header__user-name {
+  @include text-truncate();
+  @include media-breakpoint-down(md) {
+    max-width: 100px;
+  }
+}

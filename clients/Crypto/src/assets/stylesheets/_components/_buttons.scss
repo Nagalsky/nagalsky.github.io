@@ -3,16 +3,29 @@
 .btn {
   font-family: $font-medium;
   padding: 10.5px 22px;
+  border-radius: 3px;
   &:hover, &:focus {
     box-shadow: none !important;
   }
   &.btn-success {
     @include button-variants($bg: $success, $color: $white)
   }
+  &.btn-link {
+    color: $white;
+    @include themify($themes) {
+      color: themed('btnLinkColor');
+    }
+  }
   &.btn-has-shadow {
     box-shadow: 0 2px 4px 0 rgba($black, .08);
   }
   &.btn-sm {
-    padding: 8px 26px;
+    padding: 7.5px 24px;
   }
+}
+
+
+.btn-reset {
+  border: none;
+  background: none;
 }
