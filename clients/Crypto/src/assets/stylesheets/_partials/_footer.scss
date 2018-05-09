@@ -1,1 +1,29 @@
 /* FOOTER */
+
+
+.footer {
+  padding: 25px 0;
+  @include themify($themes) {
+    background-color: themed('footerBackgroundColor');
+  }
+}
+
+
+.footer__logo {
+  display: block;
+  max-width: 150px;
+}
+.footer__logo--hidden {
+  display: none;
+}
+
+.theme-light {
+  .footer__logo__image-light {
+    display: none;
+  }
+}
+.theme-dark {
+  .footer__logo__image-dark {
+    display: none;
+  }
+}
