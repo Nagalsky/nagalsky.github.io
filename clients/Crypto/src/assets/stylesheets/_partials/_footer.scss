@@ -1,10 +1,17 @@
 /* FOOTER */
 
+$footer-font-size: 12px;
 
 .footer {
+  font-size: $footer-font-size;
   padding: 25px 0;
   @include themify($themes) {
     background-color: themed('footerBackgroundColor');
+  }
+  >.container-fluid {
+    @include media-breakpoint-up(lg) {
+      padding-right: 60px;
+    }
   }
 }
 
@@ -26,4 +33,11 @@
   .footer__logo__image-dark {
     display: none;
   }
+}
+
+.footer__title {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba($white, .63);
+  margin-bottom: 15px;
 }
