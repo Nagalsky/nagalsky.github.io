@@ -1,6 +1,10 @@
 /* THEMES */
 
+$dark-theme: #1b1d23;
+$dark-theme-body-bg: #22252d;
+$dark-theme-elements-bg: #30343d;
 
+$light-theme: $gray;
 
 /*
  * Theme definitions
@@ -12,45 +16,45 @@ $themes: (
     themeColor: $muted-bold,
 
     infoBoxColor: $gray-bold,
-    infoBoxBackroundColor: $gray,
+    infoBoxBackroundColor: $light-theme,
 
     navbarColor: $gray-bold,
-    navbarBackroundColor: $gray,
+    navbarBackroundColor: $light-theme,
 
     btnLinkColor: $success,
 
     navbarLinkColor: $silver-bold,
 
-    fieldBackroundColor: $gray,
+    fieldBackroundColor: $light-theme,
 
-    btnHeaderBackroundColor: $gray,
+    btnHeaderBackroundColor: $light-theme,
     btnHeaderColor: $gray-dark,
 
-    dropdownBackgroundColor: $gray,
+    dropdownBackgroundColor: $light-theme,
     dropdownColor: $silver-bold,
     dropdownColorHover: darken($silver-bold, 25%),
 
     headerUserNameColor: $silver-bold,
 
-    footerBackgroundColor: $gray,
+    footerBackgroundColor: $light-theme,
     footerTitleColor: rgba($silver-bold, .63),
     footerNavColor: $muted-bold,
     footerNavColorHover: darken($muted-bold, 25%),
   ),
   dark: (
-    themeBackroundColor: $blue,
+    themeBackroundColor: $dark-theme-body-bg,
     themeColor: $white,
 
     infoBoxColor: $muted-thin,
-    infoBoxBackroundColor: $blue-bold,
+    infoBoxBackroundColor: $dark-theme,
 
     btnLinkColor: $white,
 
     navbarLinkColor: $white,
 
-    fieldBackroundColor: $blue-dark,
+    fieldBackroundColor: $dark-theme-elements-bg,
 
-    btnHeaderBackroundColor:$blue-dark,
+    btnHeaderBackroundColor:$dark-theme-elements-bg,
     btnHeaderColor: $muted,
 
     dropdownBackgroundColor: $sky-dark,
@@ -59,7 +63,7 @@ $themes: (
 
     headerUserNameColor: $white,
 
-    footerBackgroundColor: $blue-bold,
+    footerBackgroundColor: $dark-theme,
     footerTitleColor: rgba($white, .63),
     footerNavColor: $white,
     footerNavColorHover: darken($white, 25%),
