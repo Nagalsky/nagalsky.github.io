@@ -16,11 +16,20 @@
       color: themed('btnLinkColor');
     }
   }
+  &.btn-brand {
+    @include themify($themes) {
+      color: themed('btnBrandColor');
+      background-color: themed('btnBrandBackgroundColor');
+    }
+  }
   &.btn-has-shadow {
     box-shadow: 0 2px 4px 0 rgba($black, .08);
   }
   &.btn-sm {
     padding: 7.5px 24px;
+  }
+  &.btn-xs {
+    padding: 5.5px 12px;
   }
 }
 

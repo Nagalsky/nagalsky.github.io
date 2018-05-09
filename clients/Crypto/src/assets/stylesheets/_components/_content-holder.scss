@@ -1,16 +1,31 @@
 /* CONTENT HOLDER */
 
 .content-holder {
-  background: red;
+  @include themify($themes) {
+    background-color: themed('contentHolderBackgroundColor');
+    box-shadow: themed('contentHolderBoxShadow');
+  }
   @include media-breakpoint-up(md) {
     border-radius: 0 4px 4px 0;
     margin-left: -15px;
   }
+  @include media-breakpoint-down(sm) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
-.content-holder__body {
-  padding: 25px;
-  @include media-breakpoint-up(md) {
-    padding: 35px;
+.content-holder__header {
+  padding: 15px;
+  .bootstrap-select {
+    max-width: 140px;
+    @include media-breakpoint-down(xs) {
+      max-width: 100px
+    }
   }
+}
+
+
+.content-holder__body {
+  padding: 15px;
 }

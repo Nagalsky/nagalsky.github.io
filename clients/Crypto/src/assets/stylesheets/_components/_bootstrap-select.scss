@@ -1,0 +1,40 @@
+/* BOOTSTRAP SELECT */
+
+
+.bootstrap-select {
+  .dropdown-toggle {
+    @extend .d-flex, .align-items-center;
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .text {
+    display: block !important;
+    @include text-truncate();
+    @include media-breakpoint-down(xs) {
+      max-width: 120px;
+    }
+  }
+}
+
+
+.theme-light {
+  .bootstrap-select {
+    .dropdown-item  {
+      &:hover, &:focus {
+        background: darken($gray, 10%);
+      }
+    }
+  }
+}
+.theme-dark {
+  .bootstrap-select {
+    .dropdown-item  {
+      color: $white;
+      &:hover, &:focus {
+        color: $white;
+        background: #303543;
+      }
+    }
+  }
+}
