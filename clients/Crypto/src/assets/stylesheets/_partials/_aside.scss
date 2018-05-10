@@ -1,0 +1,11 @@
+/* ASIDE */
+
+.aside {
+  padding: 20px;
+  @include themify($themes) {
+    color: themed('asideColor');
+  }
+  @include media-breakpoint-down(lg) {
+		padding: 20px 15px;
+	}
+}
