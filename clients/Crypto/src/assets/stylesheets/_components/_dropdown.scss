@@ -13,12 +13,12 @@
   font-family: $font-medium;
   padding: 7.5px 15px;
   @include themify($themes) {
-    color: themed('dropdownColor');
+    color: themed('dropdownColor') !important;
   }
   &:hover, &:focus {
-    background: transparent;
     @include themify($themes) {
-      color: themed('dropdownColorHover');
+      background-color: themed('dropdownHoverBackgroundColor') !important;
+      color: themed('dropdownColorHover') !important;
     }
   }
 }
