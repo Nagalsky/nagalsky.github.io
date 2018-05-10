@@ -47,6 +47,10 @@
 
 .header__btn {
   font-size: 13px;
+  @include themify($themes) {
+    color: themed('headerBtnColor');
+    background-color: themed('headerBtnBackgrounColor');
+  }
 }
 
 .header__btn {
