@@ -17,6 +17,9 @@
 
 .content-holder__header {
   padding: 15px;
+  @include themify($themes) {
+    border-bottom: 1px solid themed('contentHolderBorderColor');
+  }
   .bootstrap-select {
     max-width: 140px;
     @include media-breakpoint-down(xs) {
