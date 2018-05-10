@@ -13,18 +13,42 @@ html, body {
 
 body {
 	@extend .d-flex, .flex-column;
+	position: relative;
   @include themify($themes) {
     color: themed('themeColor');
     background-color: themed('themeBackroundColor');
   }
 	@include media-breakpoint-down(sm) {
+		&:after {
+			content: '';
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: rgba($black, .5);
+			@include transition(350ms);
+			opacity: 0;
+			visibility: hidden;
+			z-index: 400;
+		}
+  }
+}
+
+html {
+	position: relative;
+	@include media-breakpoint-down(sm) {
     @include transition(350ms);
   }
 }
 
-.body--has-menu {
+.html--has-menu {
 	transform: translateX(-$aside-mobile-width);
 	overflow: hidden;
+	body {
+		&:after {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 }
 
 .main {

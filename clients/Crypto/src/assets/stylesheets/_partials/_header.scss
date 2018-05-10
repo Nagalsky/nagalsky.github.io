@@ -47,22 +47,23 @@
 
 .header__btn {
   font-size: 13px;
+  width: 34px;
+  height: 34px;
+  border-radius: 2px;
+  @extend .d-inline-flex, .align-items-center, .justify-content-center;
   @include themify($themes) {
     color: themed('headerBtnColor');
     background-color: themed('headerBtnBackgrounColor');
   }
-}
-
-.header__btn {
-  @extend .d-inline-flex, .align-items-center, .justify-content-center;
-  width: 34px;
-  height: 34px;
-  border-radius: 2px;
   &+.header__btn {
     margin-left: 10px;
   }
 }
 
+.btn-menu-toggle {
+  position: relative;
+  z-index: 30;
+}
 
 .header__controls {
   @extend .d-flex, .justify-content-end, .w-100;

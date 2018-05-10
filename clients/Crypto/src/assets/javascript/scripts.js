@@ -43,7 +43,7 @@ $(document).ready(function(){
 		//Mobile menu
 		$('.btn-menu-toggle').on('click', function(e) {
 			e.preventDefault();
-			$('body').toggleClass('body--has-menu');
+			$('html').toggleClass('html--has-menu');
 			$('.aside').toggleClass('aside--opened');
 			e.stopPropagation();
 		});
@@ -52,7 +52,7 @@ $(document).ready(function(){
 	  $(document).on("click touchstart", function(event) {
 	    if( $(event.target).closest('.aside--opened').length == 0 ) {
 	      $(".aside--opened").removeClass("aside--opened");
-				$('body').removeClass('body--has-menu');
+				$('html').removeClass('html--has-menu');
 	    }
 	  });
 
