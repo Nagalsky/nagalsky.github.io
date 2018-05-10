@@ -39,4 +39,22 @@ $(document).ready(function(){
 		//Custom select initial
 		$('.selectpicker').selectpicker();
 
+
+		//Mobile menu
+		$('.btn-menu-toggle').on('click', function(e) {
+			e.preventDefault();
+			$('body').toggleClass('body--has-menu');
+			$('.aside').toggleClass('aside--opened');
+			e.stopPropagation();
+		});
+
+		//Close menu by click outside
+	  $(document).on("click touchstart", function(event) {
+	    if( $(event.target).closest('.aside--opened').length == 0 ) {
+	      $(".aside--opened").removeClass("aside--opened");
+				$('body').removeClass('body--has-menu');
+	    }
+	  });
+
+
 });

@@ -2,13 +2,13 @@
 
 .btn {
   font-family: $font-medium;
-  padding: 10.5px 22px;
+  padding: 8.5px 22px;
   border-radius: 3px;
   &:hover, &:focus {
     box-shadow: none !important;
   }
   &.btn-success {
-    @include button-variants($bg: $success, $color: $white)
+    @include button-variants($bg: $success, $color: $white);
   }
   &.btn-link {
     color: $white;
@@ -22,6 +22,15 @@
       background-color: themed('btnBrandBackgroundColor');
     }
   }
+  &.btn-telegram {
+    @include button-variants($bg: $telegram-brand, $color: $white)
+  }
+  &.btn-facebook {
+    @include button-variants($bg: $facebook-brand, $color: $white)
+  }
+  &.btn-twitter {
+    @include button-variants($bg: $twitter-brand, $color: $white)
+  }
   &.btn-has-shadow {
     box-shadow: 0 2px 4px 0 rgba($black, .08);
   }
@@ -30,6 +39,10 @@
   }
   &.btn-xs {
     padding: 5.5px 12px;
+  }
+  &.btn-block {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

@@ -1,7 +1,7 @@
 
 html, body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	//-webkit-font-smoothing: antialiased;
+	//-moz-osx-font-smoothing: grayscale;
 	-webkit-backface-visibility: hidden;
 	-webkit-overflow-scrolling: touch;
 	font-family: $body-font-family;
@@ -17,6 +17,14 @@ body {
     color: themed('themeColor');
     background-color: themed('themeBackroundColor');
   }
+	@include media-breakpoint-down(sm) {
+    @include transition(350ms);
+  }
+}
+
+.body--has-menu {
+	transform: translateX(-$aside-mobile-width);
+	overflow: hidden;
 }
 
 .main {
@@ -56,7 +64,7 @@ h5, .h5 {
 	}
 }
 h6, .h6 {
-	font-size: 14px;
+	font-size: 12px;
 }
 
 button, a {
