@@ -55,11 +55,8 @@ $crypto-body-list-color: #7f8491;
 
 
 .crypto-list__body {
+  @extend .d-flex, .align-items-start;
   flex: 1;
-  @include media-breakpoint-up(md) {
-    display: flex;
-    align-items: center;
-  }
 }
 .crypto-list__body__logo {
   @extend .img-fluid;
@@ -93,7 +90,7 @@ $crypto-body-list-color: #7f8491;
   border-radius: 50%;
   width: $crypto-list-logo-size;
   height: $crypto-list-logo-size;
-  @extend .d-flex, .align-items-center, .justify-content-center;
+  @extend .d-inline-flex, .align-items-center, .justify-content-center, .flex-shrink-0;
   @include themify($themes) {
     border: 1px solid themed('cryptoListLogoBorderColor');
   }
@@ -108,7 +105,7 @@ $crypto-body-list-color: #7f8491;
 
 
 .crypto-list__body__list {
-  @extend .d-flex, .align-items-center;
+  @extend .d-inline-flex, .align-items-center, .list-unstyled, .flex-wrap;
 }
 
 .crypto-list__body__list__item {
@@ -117,8 +114,14 @@ $crypto-body-list-color: #7f8491;
   @include media-breakpoint-down(sm) {
     font-size: 12px;
   }
-  &+.crypto-list__body__list__item {
-    margin-left: 12px;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
+  &:not(:last-child) {
+    margin-right: 12px;
+    @include media-breakpoint-down(xs) {
+      margin-right: 5px;
+    }
   }
 }
 
