@@ -24,10 +24,29 @@
   padding: 54px 15px;
   text-align: center;
   border-radius: 4px;
+  position: relative;
   @include themify($themes) {
     color: themed('priceColor');
     background-color: themed('priceBackgroundColor');
     border-top: 5px solid themed('priceBorderColor');
+  }
+}
+
+.price-plan__label {
+  @extend .img-fluid;
+  position: absolute;
+  top: -25px;
+  right: -85px;
+  @include media-breakpoint-down(xl) {
+    right: -40px;
+  }
+  @include media-breakpoint-down(lg) {
+    max-width: 60px;
+    right: -10px;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 90px;
+    right: -30px;
   }
 }
 
