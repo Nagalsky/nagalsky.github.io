@@ -2,14 +2,29 @@
 
 .list-checked {}
 
+.list-checked--success {
+  .list-checked__item {
+    &:before {
+      color: $success;
+    }
+  }
+}
+
+.list-checked--md {
+  .list-checked__item {
+    &:before {
+      font-size: 16px;
+    }
+  }
+}
+
 .list-checked__item {
-  @extend .d-flex, .align-items-start;
+  @extend .d-flex, .align-items-center;
   font-size: 13px;
   line-height: 2;
   @extend .font-icons, .crypto-icon-check-circle;
   &:before {
     @extend .d-inline-block, .flex-shrink-0;
     margin-right: 10px;
-    transform: translateY(1px);
   }
 }
