@@ -26,6 +26,9 @@
       max-width: 100px
     }
   }
+  .btn {
+    border-radius: 2px;
+  }
 }
 
 
@@ -33,5 +36,17 @@
   padding: 15px;
   @include media-breakpoint-up(md) {
     padding: 40px 30px 40px 30px;
+  }
+}
+
+.content-holder__body__divider {
+  height: 1px;
+  background: red;
+  margin: 30px -15px;
+  @include themify($themes) {
+    background-color: themed('contentHolderBodyDividerBackgroundColor');
+  }
+  @include media-breakpoint-up(md) {
+    margin: 30px -30px;
   }
 }

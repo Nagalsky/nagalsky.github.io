@@ -1,6 +1,7 @@
 /* FORMS */
 
 $field-height: 34px;
+$field-height-lg: 50px;
 $field-color: $muted;
 $placeholder-line-height: 22px;
 $placeholder-color: $muted;
@@ -13,9 +14,11 @@ $placeholder-font-style: $font-regular;
 	height: $field-height;
 	color: $field-color;
 	border: none;
-	border-radius: 2px;
+	border-radius: 4px;
+	font-size: $placeholder-font-size;
 	@include themify($themes) {
 		background-color: themed('fieldBackroundColor');
+		color: themed('fieldColor');
 	}
 	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style, $line-height: $placeholder-line-height);
 	&:focus {
@@ -23,6 +26,18 @@ $placeholder-font-style: $font-regular;
 		color: $field-color;
 	}
 }
+
+.form-control-lg {
+	height: $field-height-lg;
+	font-size: $placeholder-font-size;
+}
+
+.form-control--secondary {
+	@include themify($themes) {
+		background-color: themed('fieldSecondaryBackroundColor');
+	}
+}
+
 
 .form-group--search {
 	position: relative;
@@ -42,5 +57,30 @@ $placeholder-font-style: $font-regular;
 	.btn-submit {
 		left: 5px;
 		padding: 5px;
+	}
+}
+
+
+label {
+	font-size: 12px;
+	font-family: $font-medium;
+	margin-bottom: 3px;
+	@include themify($themes) {
+		color: themed('labelColor');
+	}
+}
+
+textarea {
+	resize: none;
+	min-height: 100px;
+	padding: 15px;
+}
+
+.field-counter {
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	@include themify($themes) {
+		color: themed('labelColor');
 	}
 }

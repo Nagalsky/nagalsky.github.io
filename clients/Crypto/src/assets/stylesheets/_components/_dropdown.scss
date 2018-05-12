@@ -12,6 +12,7 @@
   font-size: 12px;
   font-family: $font-medium;
   padding: 7.5px 15px;
+  @include transition(0ms);
   @include themify($themes) {
     color: themed('dropdownColor') !important;
   }
@@ -36,5 +37,20 @@
   font-family: $font-medium;
   @include themify($themes) {
     color: themed('headerUserNameColor');
+  }
+}
+
+.theme-light {
+}
+.theme-dark {
+  .dropdown-toggle {
+    &.btn-brand-secondary {
+      &+.dropdown-menu {
+        background: #2e2e32;
+        .dropdown-item {
+          background: #2e2e32;
+        }
+      }
+    }
   }
 }
