@@ -3,19 +3,22 @@
 $field-height: 34px;
 $field-height-lg: 50px;
 $field-color: $muted;
+$field-font-family: $font-medium;
+$field-control-btn: #707F88;
 $placeholder-line-height: 22px;
 $placeholder-color: $muted;
 $placeholder-font-size: 13px;
-$placeholder-font-style: $font-regular;
+$placeholder-font-style: $font-medium;
 
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
-	height: $field-height;
+	height: $field-height-lg;
 	color: $field-color;
 	border: none;
 	border-radius: 4px;
 	font-size: $placeholder-font-size;
+	font-family: $field-font-family;
 	@include themify($themes) {
 		background-color: themed('fieldBackroundColor');
 		color: themed('fieldColor');
@@ -38,9 +41,12 @@ $placeholder-font-style: $font-regular;
 	}
 }
 
+.form-group {
+	position: relative;
+}
+
 
 .form-group--search {
-	position: relative;
 	.form-control {
 		padding-left: 40px;
 	}
@@ -60,11 +66,38 @@ $placeholder-font-style: $font-regular;
 	}
 }
 
+.form-group--password {
+	.form-control {
+		padding-right: 50px;
+	}
+	.btn-toggle-password {
+		top: 36px;
+    right: 10px;
+		padding: 5px 7.5px;
+		position: absolute;
+  }
+}
+
+.form-group--has-indicator {
+	.form-control {
+		@include media-breakpoint-down(sm) {
+			padding-left: 40px;
+		}
+	}
+	.indicator-rounded {
+		@extend .d-md-none, .d-flex, .align-items-center, .px-3;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+	}
+}
+
 
 label {
 	font-size: 12px;
 	font-family: $font-medium;
-	margin-bottom: 3px;
+	margin-bottom: 8px;
 	@include themify($themes) {
 		color: themed('labelColor');
 	}
@@ -82,5 +115,13 @@ textarea {
 	margin-bottom: 5px;
 	@include themify($themes) {
 		color: themed('labelColor');
+	}
+}
+
+.field-control-btn {
+	color: $field-control-btn;
+	font-size: 16px;
+	&:hover, &:focus {
+		color: darken($field-control-btn, 10%);
 	}
 }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+	//= template/head.html
+	<title>Profile page</title>
+</head>
+
+<body>
+
+	//= template/info.html
+
+	//= template/header-logged-in.html
+
+
+
+	<main class="main">
+
+		<section class="section pt-0">
+			<div class="container-fluid">
+				<div class="row no-gutters">
+					<div class="col-lg-9">
+						<div class="content-holder">
+							<div class="content-holder__header">
+								<ul class="navbar-nav flex-row">
+						      <li class="nav-item active">
+						        <a class="nav-link" href="#">My Profile</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#">Edit Sources</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#">Alerts</a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#">Billing</a>
+						      </li>
+									<li class="nav-item">
+						        <a class="nav-link" href="#">Logout</a>
+						      </li>
+						    </ul>
+							</div><!--content-holder__header-->
+
+
+							<div class="content-holder__body">
+								<form action="">
+									<p class="text-uppercase mb-4 text-muted font-medium">PERSONAL</p>
+
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="field-username">Username</label>
+												<input type="text" class="form-control" id="field-username">
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="field-email">Email</label>
+												<input type="email" class="form-control" id="field-email">
+											</div><!--form-group-->
+										</div>
+									</div><!--row-->
+
+									<div class="content-holder__body__divider"></div>
+
+									<p class="text-uppercase mb-4 text-muted font-medium">PASSWORD</p>
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group form-group--password">
+												<label for="field-current-password">Current password</label>
+												<input type="password" class="form-control" id="field-current-password">
+												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group form-group--password">
+												<label for="field-new-password">New password</label>
+												<input type="password" class="form-control" id="field-new-password">
+												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group form-group--password">
+												<label for="field-confirm-new-password">Confirm new password</label>
+												<input type="password" class="form-control" id="field-confirm-new-password">
+												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+											</div><!--form-group-->
+										</div>
+									</div><!--row-->
+
+									<div class="content-holder__body__divider"></div>
+
+									<p class="text-uppercase mb-4 text-muted font-medium">CONNECTED SOCIAL LINKS</p>
+
+									<div class="form-group mb-5">
+										<label for="">Google profile</label>
+										<div class="d-flex align-items-center">
+											<span class="indicator indicator--active flex-srink-0 mr-3 d-none d-md-inline-block">Active</span>
+											<div class="form-group form-group--has-indicator mb-0 flex-1">
+												<input type="text" class="form-control" value="https://www.google.plus.com/susie_mendoza" placeholder="Your Google account link">
+												<span class="indicator-rounded indicator-rounded--active"></span>
+											</div>
+											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
+										</div>
+									</div><!--form-group-->
+
+									<div class="form-group">
+										<label for="">Twitter profile</label>
+										<div class="d-flex align-items-center">
+											<span class="indicator indicator--inactive flex-srink-0 mr-3 d-none d-md-inline-block">Inactive</span>
+											<div class="form-group form-group--has-indicator mb-0 flex-1">
+												<input type="text" class="form-control" value="" placeholder="Your Twitter account link">
+												<span class="indicator-rounded"></span>
+											</div>
+											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
+										</div>
+									</div><!--form-group-->
+
+									<div class="content-holder__body__divider content-holder__body__divider--full-width"></div>
+
+									<button type="submit" class="btn btn-xl btn-success btn-sm-block">Save changes</button>
+								</form>
+							</div><!--content-holder__body-->
+						</div><!--content-holder-->
+					</div><!--col-->
+
+					<div class="col-lg-3">
+						//= template/aside.html
+					</div><!--col-->
+				</div><!--row-->
+			</div><!--container-fluid-->
+		</section>
+
+	</main>
+
+
+	//= template/footer.html
+
+
+
+	//= template/scripts-dependencies.html
+
+
+
+</body>
+</html>

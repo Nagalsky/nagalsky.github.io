@@ -1,0 +1,35 @@
+/* INDICATOR */
+
+
+.indicator {
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  @include transition(0ms);
+  display: inline-block;
+  padding: 10.5px 5px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.indicator--active {
+  @include themify($themes) {
+    color: themed('indicatorActiveColor');
+    border-color: themed('indicatorActiveBorderColor');
+  }
+}
+
+.indicator--inactive {
+  @include themify($themes) {
+    color: themed('indicatorInActiveColor');
+    border-color: themed('indicatorInActiveBorderColor');
+  }
+}
+
+.indicator-rounded {
+  @extend .font-icons, .crypto-icon-radio-button-unchecked;
+  &.indicator-rounded--active {
+    @extend .crypto-icon-radio-button-checked;
+    color: $success;
+  }
+}

@@ -6,7 +6,7 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="assets/stylesheets/main.css">
-	<title>Go PRO page</title>
+	<title>Edit sources page</title>
 </head>
 
 <body>
@@ -23,8 +23,19 @@
 	    </a>
 	
 	    <div class="d-none d-lg-block">
-	      <a class="btn btn-link btn-sm font-regular transition-0" href="#">Login</a>
-	      <a class="btn btn-success btn-sm" href="#">Signup</a>
+	      <div class="dropdown header__user">
+	        <a href="#" class="dropdown-toggle d-inline-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <img src="assets/images/elements/man.svg" alt="" class="header__user-avatar">
+	          <span class="header__user-name">Susie Mendoza</span>
+	        </a>
+	        <div class="dropdown-menu dropdown-menu-right">
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-account"></i> My Profile</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-settings"></i> Edit Sources</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-notifications"></i> Alerts</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-balance"></i> Billing</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-logout"></i> Logout</a>
+	        </div>
+	      </div><!--dropdown-->
 	    </div>
 	
 	    <div class="header__controls d-lg-none">
@@ -45,7 +56,7 @@
 	        </a>
 	      </div><!--header__expanded-form-holder-->
 	      <a href="#" class="header__btn btn-switch-themes-toggle transition-0">
-	        <i class="crypto-icon-sun btn-switch-themes-toggle__icon"></i>
+	        <i class="crypto-icon-sun"></i>
 	      </a>
 	      <a href="#" class="header__btn btn-menu-toggle transition-0">
 	        <i class="crypto-icon-menu"></i>
@@ -58,7 +69,7 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">NEWS</a>
 	      </li>
-	      <li class="nav-item active">
+	      <li class="nav-item">
 	        <a class="nav-link" href="#">GO PRO</a>
 	      </li>
 	      <li class="nav-item d-none d-md-inline-block">
@@ -66,12 +77,6 @@
 	      </li>
 	      <li class="nav-item d-none d-md-inline-block">
 	        <a class="nav-link" href="#">CONTACT</a>
-	      </li>
-	      <li class="nav-item d-lg-none">
-	        <a class="nav-link" href="#">LOGIN</a>
-	      </li>
-	      <li class="nav-item d-lg-none">
-	        <a class="nav-link" href="#">SIGNUP</a>
 	      </li>
 	    </ul>
 	
@@ -85,8 +90,24 @@
 	        </div><!--form-group-->
 	      </form>
 	      <a href="#" class="header__btn btn-switch-themes-toggle transition-0">
-	        <i class="crypto-icon-sun btn-switch-themes-toggle__icon"></i>
+	        <i class="crypto-icon-sun"></i>
 	      </a>
+	    </div><!--d-flex-->
+	
+	    <div class="d-lg-none">
+	      <div class="dropdown header__user d-flex">
+	        <a href="#" class="dropdown-toggle d-inline-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <img src="assets/images/elements/man.svg" alt="" class="header__user-avatar">
+	          <span class="header__user-name">Susie Mendoza</span>
+	        </a>
+	        <div class="dropdown-menu dropdown-menu-right">
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-account"></i> My Profile</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-settings"></i> Edit Sources</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-notifications"></i> Alerts</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-balance"></i> Billing</a>
+	          <a class="dropdown-item" href="#"><i class="dropdown-item__icon crypto-icon-logout"></i> Logout</a>
+	        </div>
+	      </div><!--dropdown-->
 	    </div><!--d-flex-->
 	  </div><!--header__bottom-->
 	
@@ -101,96 +122,30 @@
 				<div class="row no-gutters">
 					<div class="col-lg-9">
 						<div class="content-holder">
-							<div class="content-holder__body content-holder__body--lg">
-								<h1 class="h5 mb-2">Go PRO</h1>
-								<p class="lead">For only $9 a month or $99 a year (VAT included) PRO members get more out of Coin Break with extra features and benefits.</p>
-								<ul class="list-checked list-checked--success list-checked--md list-unstyled fs-12 mb-4 mb-md-5">
-					        <li class="list-checked__item">Configure instant alerts for currencies and news immediately in your email or mobile</li>
-					        <li class="list-checked__item">Add any custom RSS/Atom feeds, Reddit and Twitter sources.</li>
-					        <li class="list-checked__item">Disable/enable any existing default news sources.</li>
-					        <li class="list-checked__item">A PRO  badge that appears near username and on your profile showing your support for Coin Break.</li>
-					        <li class="list-checked__item">More PRO features coming soon.</li>
-					      </ul>
+							<div class="content-holder__header">
+								<div class="row justify-content-between">
+									<div class="col-5 col-md-4">
+										<select class="selectpicker" data-style="btn-brand btn-xs transition-0" data-width="100%">
+										  <option>Trending</option>
+										  <option>Popular</option>
+										  <option>All Stories</option>
+										</select>
+									</div>
 
-								<div class="price-plan">
-									<div class="price-plan__item">
-										<div class="price-plan__body">
-											<h3 class="price-plan__title"><sup class="price-plan__title__small price-plan__title__small--before">$</sup>9<sub class="price-plan__title__small price-plan__title__small--after">/ month</sub></h3>
-										</div><!--price-plan__body-->
+									<div class="col-7 col-md-8 text-right">
+										<select class="selectpicker" data-style="btn-brand btn-xs transition-0" data-width="100%">
+										  <option>All Sources</option>
+										  <option>Popular</option>
+										  <option>All Stories</option>
+										</select>
+										<a href="#" class="btn btn-brand btn-xs ml-2 flex-shrink-0 transition-0"><img src="assets/images/elements/bitcoin-small.svg" alt="" class="img-fluid"> <span class="d-none d-sm-inline-block">Coin Filter</span></a>
+									</div>
+								</div><!--row-->
+							</div><!--content-holder__header-->
 
-										<div class="price-plan__footer">
-											<a href="#" class="btn btn-success btn-block btn-md price-plan__footer__btn">Get started</a>
-										</div><!--price-plan__footer-->
-									</div><!--price-plan__item-->
 
-									<div class="price-plan__item">
-										<div class="price-plan__body">
-											<h3 class="price-plan__title"><sup class="price-plan__title__small price-plan__title__small--before">$</sup>99<sub class="price-plan__title__small price-plan__title__small--after">/ month</sub><img src="assets/images/elements/price-label.svg" alt="" class="price-plan__label"></h3>
-										</div><!--price-plan__body-->
+							<div class="content-holder__body">
 
-										<div class="price-plan__footer">
-											<a href="#" class="btn btn-success btn-block btn-md price-plan__footer__btn">Get started</a>
-										</div><!--price-plan__footer-->
-									</div><!--price-plan__item-->
-								</div><!--price-plan-->
-
-								<p class="text-asphalt fs-12 mb-4 mb-md-5">To upgrade to PRO account please <a href="#" class="underline text-asphalt">Login</a> or <a href="#" class="underline text-asphalt">Signup</a> first.</p>
-
-								<p class="fs-15">Our happy clients</p>
-
-								<div class="panel">
-									<div class="panel__body">
-										<div class="gallery gallery--feedback" data-slick='{"autoplay": true, "autoplaySpeed": 3000, "arrows": false, "dots": true, "pauseOnFocus": false, "pauseOnHover": false}'>
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">John Morales</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">User Morales</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">John User</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">User User</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">John</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-
-											<div class="gallery__item">
-												<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coin Break, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary.</p>
-												<div class="feedback">
-													<img src="assets/images/elements/man.svg" alt="" class="feedback__avatar">
-													<p class="feedback__name">Morales</p>
-												</div><!--feedback-->
-											</div><!--gallery__item-->
-										</div><!--gallery-->
-									</div><!--panel__body-->
-								</div><!--panel-->
 							</div><!--content-holder__body-->
 						</div><!--content-holder-->
 					</div><!--col-->
