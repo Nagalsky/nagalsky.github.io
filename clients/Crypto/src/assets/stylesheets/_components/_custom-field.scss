@@ -24,18 +24,25 @@
     padding-left: 28px;
     cursor: pointer;
     display: block;
-    @extend .font-icons, .crypto-icon-check-box-outline;
+    @extend .font-icons, .crypto-icon-check-box-outline, .d-flex, .align-items-center;
     @include themify($themes) {
       color: themed('customFieldLabel');
     }
     &:before {
       position: absolute;
       left: 0;
-      top: 0px;
+      top: 50%;
+      transform: translateY(-50%);
       font-size: 16px;
       @include themify($themes) {
         color: themed('customFieldLabel');
       }
     }
   }
+}
+
+.custom-field__logo {
+  @extend .img-fluid;
+  max-width: 40px;
+  margin-right: 15px;
 }

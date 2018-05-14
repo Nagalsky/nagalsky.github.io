@@ -2,7 +2,7 @@
 <html lang="en" class="theme-dark">
 <head>
 	//= template/head.html
-	<title>Profile page</title>
+	<title>Billing page</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 						<div class="content-holder">
 							<div class="content-holder__header d-flex align-items-center">
 								<ul class="navbar-nav flex-row flex-1">
-						      <li class="nav-item active">
+						      <li class="nav-item">
 						        <a class="nav-link" href="#">My Profile</a>
 						      </li>
 						      <li class="nav-item">
@@ -31,7 +31,7 @@
 						      <li class="nav-item">
 						        <a class="nav-link" href="#">Alerts</a>
 						      </li>
-						      <li class="nav-item">
+						      <li class="nav-item active">
 						        <a class="nav-link" href="#">Billing</a>
 						      </li>
 									<li class="nav-item">
@@ -43,58 +43,35 @@
 
 							<div class="content-holder__body">
 								<form action="">
-									<p class="text-uppercase mb-4 text-muted font-medium">PERSONAL</p>
+									<div class="d-md-flex align-items-center justify-content-between mb-3">
+										<p class="text-uppercase mb-4 text-muted font-medium">SUBSCRIPTION</p>
+										<a href="#" class="btn btn-outline-danger d-none d-md-inline-block">Cancel Subscription</a>
+									</div>
 
-									<div class="row">
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="field-username">Username</label>
-												<input type="text" class="form-control" id="field-username">
-											</div><!--form-group-->
-										</div>
-
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="field-email">Email</label>
-												<input type="email" class="form-control" id="field-email">
-											</div><!--form-group-->
-										</div>
+									<div class="row mb-4">
+										<div class="col-xl-4 col-md-6">
+											<div class="d-flex align-items-center justify-content-between fs-13">
+												<span class="text-truncate">Subscription Date:</span>
+												<b class="flex-srink-0 ml-3">10 Apr 2018</b>
+											</div>
+										</div><!--col-->
 									</div><!--row-->
+
+									<div class="row mb-4">
+										<div class="col-xl-4 col-md-6">
+											<div class="d-flex align-items-center justify-content-between fs-13">
+												<span class="text-truncate">Subscriptions Renews On:</span>
+												<b class="flex-srink-0 ml-3">10 May 2018</b>
+											</div>
+										</div><!--col-->
+									</div><!--row-->
+
+									<a href="#" class="btn btn-outline-danger btn-block d-md-none">Cancel Subscription</a>
+
 
 									<div class="content-holder__body__divider"></div>
 
-									<p class="text-uppercase mb-4 text-muted font-medium">PASSWORD</p>
-
-
-									<div class="row">
-										<div class="col-md-4">
-											<div class="form-group form-group--password">
-												<label for="field-current-password">Current password</label>
-												<input type="password" class="form-control" id="field-current-password">
-												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
-											</div><!--form-group-->
-										</div>
-
-										<div class="col-md-4">
-											<div class="form-group form-group--password">
-												<label for="field-new-password">New password</label>
-												<input type="password" class="form-control" id="field-new-password">
-												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
-											</div><!--form-group-->
-										</div>
-
-										<div class="col-md-4">
-											<div class="form-group form-group--password">
-												<label for="field-confirm-new-password">Confirm new password</label>
-												<input type="password" class="form-control" id="field-confirm-new-password">
-												<a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
-											</div><!--form-group-->
-										</div>
-									</div><!--row-->
-
-									<div class="content-holder__body__divider"></div>
-
-									<p class="text-uppercase mb-4 text-muted font-medium">CONNECTED SOCIAL LINKS</p>
+									<p class="text-uppercase mb-4 text-muted font-medium">PAYMENT METHOD</p>
 
 									<div class="form-group mb-4">
 										<label for="">Google profile</label>
@@ -104,13 +81,15 @@
 											  <label class="indicator__label" for="exampleRadios1"></label>
 											</div><!--indicator-->
 
-											<div class="form-group form-group--has-indicator mb-0 flex-1">
+											<div class="form-group form-group--has-indicator form-group--has-indicator-card mb-0 flex-1">
 												<input type="text" class="form-control" value="https://www.google.plus.com/susie_mendoza" placeholder="Your Google account link">
+												<img src="assets/images/elements/master.svg" alt="" class="form-group__payment-img">
 												<div class="indicator-mobile flex-srink-0 mr-3 d-md-none">
 												  <input type="radio" name="exampleRadiosMobile" id="exampleRadiosMobile1" value="option1" checked>
 												  <label class="indicator-mobile__label" for="exampleRadiosMobile1"></label>
 												</div><!--indicator-mobile-->
 											</div>
+											<a href="#" class="crypto-icon-edit field-control-btn flex-srink-0 ml-3"></a>
 											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
 										</div>
 									</div><!--form-group-->
@@ -123,16 +102,66 @@
 											  <label class="indicator__label" for="exampleRadios2"></label>
 											</div>
 
-											<div class="form-group form-group--has-indicator mb-0 flex-1">
+											<div class="form-group form-group--has-indicator form-group--has-indicator-card mb-0 flex-1">
 												<input type="text" class="form-control" value="" placeholder="Your Twitter account link">
+												<img src="assets/images/elements/paypal.svg" alt="" class="form-group__payment-img">
 												<div class="indicator-mobile flex-srink-0 mr-3 d-md-none">
 												  <input type="radio" name="exampleRadiosMobile" id="exampleRadiosMobile2" value="option2">
 												  <label class="indicator-mobile__label" for="exampleRadiosMobile2"></label>
 												</div><!--indicator-mobile-->
 											</div>
+											<a href="#" class="crypto-icon-edit field-control-btn flex-srink-0 ml-3"></a>
 											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
 										</div>
 									</div><!--form-group-->
+
+									<button type="submit" class="btn btn-xl btn-success btn-sm-block mt-4">Add new method</button>
+
+									<div class="content-holder__body__divider"></div>
+
+									<p class="text-uppercase mb-4 text-muted font-medium">BILLING INFO</p>
+
+									<div class="row">
+										<div class="col-md-8">
+											<div class="form-group">
+												<label for="field-billing-address">Billing Address</label>
+												<input type="text" class="form-control" id="field-billing-address">
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="field-city">City</label>
+												<input type="text" class="form-control" id="field-city">
+											</div><!--form-group-->
+										</div>
+									</div><!--row-->
+
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="field-state">State</label>
+												<input type="text" class="form-control" id="field-state">
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="field-zip">ZIP</label>
+												<input type="text" class="form-control" id="field-zip">
+											</div><!--form-group-->
+										</div>
+
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="">Country</label>
+												<select class="selectpicker" data-style="btn-brand-secondary btn-lg transition-0" data-width="100%" title="Country">
+												  <option>United States</option>
+												  <option>Canada</option>
+												</select>
+											</div><!--form-group-->
+										</div>
+									</div><!--row-->
 
 									<div class="content-holder__body__divider content-holder__body__divider--full-width"></div>
 

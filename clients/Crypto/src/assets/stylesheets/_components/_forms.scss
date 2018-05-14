@@ -93,6 +93,32 @@ $placeholder-font-style: $font-medium;
 	}
 }
 
+.form-group--has-indicator-card {
+	.form-control {
+		padding-left: 60px;
+	}
+	.form-group__payment-img {
+		@extend .img-fluid;
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		max-width: 32px;
+		border-radius: 2px;
+	}
+	&.form-group--has-indicator {
+		.form-control {
+			@include media-breakpoint-down(sm) {
+				padding-left: 85px;
+			}
+		}
+		.form-group__payment-img {
+			@include media-breakpoint-down(sm) {
+				left: 40px;
+			}
+		}
+	}
+}
+
 
 label {
 	font-size: 12px;
