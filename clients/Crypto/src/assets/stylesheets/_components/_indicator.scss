@@ -2,34 +2,90 @@
 
 
 .indicator {
-  border-radius: 4px;
-  border-width: 2px;
-  border-style: solid;
   @include transition(0ms);
-  display: inline-block;
-  padding: 10.5px 5px;
-  text-align: center;
-  min-width: 100px;
-}
 
-.indicator--active {
-  @include themify($themes) {
-    color: themed('indicatorActiveColor');
-    border-color: themed('indicatorActiveBorderColor');
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    display: none;
+    &:checked {
+      &+.indicator__label {
+        @include themify($themes) {
+          border: 2px solid themed('indicatorActiveBorderColor');
+        }
+        &:after {
+          content: 'Active';
+          @include themify($themes) {
+            color: themed('indicatorActiveColor');
+          }
+        }
+      }
+    }
+  }
+  .indicator__label {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    position: relative;
+    font-size: 14px;
+    @include themify($themes) {
+      border: 2px solid themed('indicatorBorderColor');
+    }
+    border-style: solid;
+    border-radius: 4px;
+    margin: 0;
+    padding: 8.5px 5px;
+    &:after {
+      content: 'Inactive';
+      @include themify($themes) {
+        color: themed('indicatorInActiveColor');
+      }
+    }
   }
 }
 
-.indicator--inactive {
-  @include themify($themes) {
-    color: themed('indicatorInActiveColor');
-    border-color: themed('indicatorInActiveBorderColor');
+
+.indicator-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  @extend .d-flex, .align-items-center;
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    display: none;
+    &:checked {
+      &+.indicator-mobile__label {
+        @extend .font-icons, .crypto-icon-radio-button-checked;
+        @include themify($themes) {
+          color: themed('indicatorRoundedActive');
+        }
+      }
+    }
+  }
+  .indicator-mobile__label {
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    @extend .font-icons, .crypto-icon-radio-button-unchecked;
+    @include themify($themes) {
+      color: themed('indicatorRounded');
+    }
   }
 }
+
+
 
 .indicator-rounded {
   @extend .font-icons, .crypto-icon-radio-button-unchecked;
+  @include themify($themes) {
+    color: themed('indicatorRounded');
+  }
   &.indicator-rounded--active {
     @extend .crypto-icon-radio-button-checked;
-    color: $success;
+    @include themify($themes) {
+      color: themed('indicatorRoundedActive');
+    }
   }
 }

@@ -1,0 +1,41 @@
+/* CUSTOM FIELD */
+
+.custom-field {
+  [type="radio"], [type="checkbox"] {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    &:checked {
+      &+.custom-field__label {
+        &:before {
+          @extend .crypto-icon-check-box;
+          color: $success !important;
+        }
+      }
+    }
+  }
+  .custom-field__label {
+    font-family: $font-medium;
+    margin-bottom: 0;
+    font-size: 14px;
+    min-height: 26px;
+    line-height: 26px;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    display: block;
+    @extend .font-icons, .crypto-icon-check-box-outline;
+    @include themify($themes) {
+      color: themed('customFieldLabel');
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      font-size: 16px;
+      @include themify($themes) {
+        color: themed('customFieldLabel');
+      }
+    }
+  }
+}

@@ -20,8 +20,8 @@
 				<div class="row no-gutters">
 					<div class="col-lg-9">
 						<div class="content-holder">
-							<div class="content-holder__header">
-								<ul class="navbar-nav flex-row">
+							<div class="content-holder__header d-flex align-items-center">
+								<ul class="navbar-nav flex-row flex-1">
 						      <li class="nav-item active">
 						        <a class="nav-link" href="#">My Profile</a>
 						      </li>
@@ -99,10 +99,17 @@
 									<div class="form-group mb-5">
 										<label for="">Google profile</label>
 										<div class="d-flex align-items-center">
-											<span class="indicator indicator--active flex-srink-0 mr-3 d-none d-md-inline-block">Active</span>
+											<div class="indicator flex-srink-0 mr-3 d-none d-md-inline-block">
+											  <input type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+											  <label class="indicator__label" for="exampleRadios1"></label>
+											</div><!--indicator-->
+
 											<div class="form-group form-group--has-indicator mb-0 flex-1">
 												<input type="text" class="form-control" value="https://www.google.plus.com/susie_mendoza" placeholder="Your Google account link">
-												<span class="indicator-rounded indicator-rounded--active"></span>
+												<div class="indicator-mobile flex-srink-0 mr-3 d-md-none">
+												  <input type="radio" name="exampleRadiosMobile" id="exampleRadiosMobile1" value="option1" checked>
+												  <label class="indicator-mobile__label" for="exampleRadiosMobile1"></label>
+												</div><!--indicator-mobile-->
 											</div>
 											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
 										</div>
@@ -111,10 +118,17 @@
 									<div class="form-group">
 										<label for="">Twitter profile</label>
 										<div class="d-flex align-items-center">
-											<span class="indicator indicator--inactive flex-srink-0 mr-3 d-none d-md-inline-block">Inactive</span>
+											<div class="indicator flex-srink-0 mr-3 d-none d-md-inline-block">
+											  <input type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+											  <label class="indicator__label" for="exampleRadios2"></label>
+											</div>
+
 											<div class="form-group form-group--has-indicator mb-0 flex-1">
 												<input type="text" class="form-control" value="" placeholder="Your Twitter account link">
-												<span class="indicator-rounded"></span>
+												<div class="indicator-mobile flex-srink-0 mr-3 d-md-none">
+												  <input type="radio" name="exampleRadiosMobile" id="exampleRadiosMobile2" value="option2">
+												  <label class="indicator-mobile__label" for="exampleRadiosMobile2"></label>
+												</div><!--indicator-mobile-->
 											</div>
 											<a href="#" class="crypto-icon-delete field-control-btn flex-srink-0 ml-3"></a>
 										</div>

@@ -1,2 +1,27 @@
 /* CARD */
 
+
+.card {
+  border: none;
+  border-radius: 4px !important;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @include themify($themes) {
+    background-color: themed('cardBackgroundColor');
+  }
+  .card {
+    @include themify($themes) {
+      background-color: darken(themed('cardBackgroundColor'), 4%);
+    }
+  }
+}
+
+.card-header {
+  border: none;
+  border-radius: 4px !important;
+}
+
+.card-body {
+  padding: 15px;
+}
