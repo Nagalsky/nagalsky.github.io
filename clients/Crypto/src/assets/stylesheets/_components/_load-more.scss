@@ -1,0 +1,27 @@
+/* LOAD MORE */
+
+.load-more-panel {
+  padding: 2px 15px;
+  text-align: center;
+  @include themify($themes) {
+    background-color: themed('loadMorePanelBackgroundColor');
+    color: themed('loadMorePanelColor');
+    border-bottom: 1px solid themed('loadMorePanelBorderColor');
+  }
+}
+
+.load-more-btn {
+  display: block;
+  padding: 7px 15px;
+  text-align: center;
+  color: $success;
+  @include themify($themes) {
+    background-color: themed('loadMoreBtnBackgroundColor');
+  }
+  &:hover, &:focus {
+    color: $success;
+    @include themify($themes) {
+      background-color: darken(themed('loadMoreBtnBackgroundColor'), 2%);
+    }
+  }
+}

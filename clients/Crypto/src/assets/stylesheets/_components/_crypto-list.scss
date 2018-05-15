@@ -4,7 +4,8 @@ $cypto-vote-btn-color: #B2B5BC;
 $crypto-list-logo-size: 34px;
 $crypto-body-list-color: #7f8491;
 
-.crypto-list {}
+.crypto-list {
+}
 
 .crypto-list__item {
   @extend .d-flex;
@@ -12,11 +13,6 @@ $crypto-body-list-color: #7f8491;
     .crypto-list__vote, .crypto-list__body, .crypto-list__logo-holder {
       @include themify($themes) {
         border-bottom: 1px solid themed('contentHolderBorderColor');
-      }
-    }
-    .crypto-list__vote {
-      @include media-breakpoint-up(md) {
-        border-bottom: none;
       }
     }
   }
@@ -32,6 +28,10 @@ $crypto-body-list-color: #7f8491;
   padding-right: 20px;
   @extend .d-flex, .flex-column, .flex-shrink-0, .align-items-center;
   text-align: center;
+  @include media-breakpoint-up(md) {
+    border-bottom: none !important;
+    border-top: none !important;
+  }
   @include media-breakpoint-down(sm) {
     padding-left: 10px;
     padding-right: 10px;

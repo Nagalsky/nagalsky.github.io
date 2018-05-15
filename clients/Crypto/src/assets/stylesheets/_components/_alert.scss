@@ -1,0 +1,31 @@
+/* ALERT */
+
+.alert {
+  border-radius: 0;
+  padding: 1px 15px;
+  margin: 0;
+  border: none;
+  text-align: center;
+  color: $white;
+  font-size: 12px;
+  font-family: $font-medium;
+}
+
+.alert-success {
+  background: $success;
+}
+.alert-info {
+  background: $info;
+}
+.alert-danger {
+  background: $danger;
+}
+.alert-warning {
+  background: $warning;
+}
+.alert-news {
+  @include themify($themes) {
+    color: themed('infoBoxColor');
+    background-color: themed('infoBoxBackroundColor');
+  }
+}
