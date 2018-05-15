@@ -21,4 +21,7 @@ $(document).ready(function(){
     }, 500);
   });
 
+	/* ======== Slick gallery initial ======== */
+	$('.testimonial').slick();
+
 });
