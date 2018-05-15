@@ -1,6 +1,8 @@
 /* MODAL */
 
 .modal {
+  font-size: 12px;
+  font-family: $font-medium;
   @include themify($themes) {
     color: themed('modalColor');
   }
@@ -13,6 +15,14 @@
   }
 }
 
+.modal-link {
+  @include themify($themes) {
+    color: themed('modalColor');
+  }
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
 
 .modal-dialog {
   @include media-breakpoint-up(sm) {

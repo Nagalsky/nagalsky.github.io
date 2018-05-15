@@ -59,5 +59,11 @@ $(document).ready(function(){
 		//Slick gallery initial
 		$('.gallery').slick();
 
+		$('.modal').on('hidden.bs.modal', function (e) {
+	    if($('.modal').hasClass('show')) {
+	    	$('body').addClass('modal-open');
+	    };
+		});
+
 
 });
