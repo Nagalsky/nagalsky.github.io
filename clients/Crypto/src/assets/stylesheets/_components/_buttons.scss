@@ -4,6 +4,7 @@
   font-family: $font-medium;
   padding: 8.5px 22px;
   border-radius: 4px;
+  position: relative;
   &:hover, &:focus {
     box-shadow: none !important;
   }
@@ -45,6 +46,22 @@
   }
   &.btn-twitter {
     @include button-variants($bg: $twitter-brand, $color: $white)
+  }
+  &.btn-google {
+    @include themify($themes) {
+      color: themed('btnGoogleColor');
+      background-color: themed('btnGoogleBackgroundColor');
+    }
+  }
+  &.btn-login {
+    .btn-login__icon {
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      max-width: 20px;
+    }
   }
   &.btn-has-shadow {
     box-shadow: 0 2px 4px 0 rgba($black, .08);

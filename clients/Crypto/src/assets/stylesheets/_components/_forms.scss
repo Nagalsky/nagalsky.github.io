@@ -43,6 +43,19 @@ $placeholder-font-style: $font-medium;
 
 .form-group {
 	position: relative;
+	.custom-field {
+	  .custom-field__label {
+	    font-size: 12px;
+	    @include themify($themes) {
+	      color: themed('customFieldLabelSecondary');
+	    }
+			&:before {
+	      @include themify($themes) {
+	        color: themed('customFieldLabelSecondary');
+	      }
+	    }
+	  }
+	}
 }
 
 
