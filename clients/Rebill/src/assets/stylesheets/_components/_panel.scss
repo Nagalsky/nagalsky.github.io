@@ -18,6 +18,25 @@ $panel-bg: $white;
   }
 }
 
+.panel__body {
+  position: relative;
+  flex: 1;
+  padding-right: 20px;
+  @include text-truncate();
+}
+
+.panel__floatet-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  font-size: 22px;
+  color: #cecece;
+  &:hover, &:focus {
+    color: #cecece;
+  }
+}
+
 .panel__icon {
   flex-shrink: 0;
   font-size: 70px;
@@ -40,4 +59,8 @@ $panel-bg: $white;
   @include media-breakpoint-down(md) {
     font-size: 24px;
   }
+}
+
+.panel__title--sm {
+  font-size: 24px;
 }
