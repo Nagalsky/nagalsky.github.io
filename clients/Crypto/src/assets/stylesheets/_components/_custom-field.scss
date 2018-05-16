@@ -38,6 +38,11 @@
         color: themed('customFieldLabel');
       }
     }
+    &.custom-field__label--lg {
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -45,4 +50,19 @@
   @extend .img-fluid;
   max-width: 40px;
   margin-right: 15px;
+}
+
+
+.custom-field--secondary {
+  .custom-field__label {
+    font-size: 12px;
+    @include themify($themes) {
+      color: themed('customFieldLabelSecondary');
+    }
+    &:before {
+      @include themify($themes) {
+        color: themed('customFieldLabelSecondary');
+      }
+    }
+  }
 }

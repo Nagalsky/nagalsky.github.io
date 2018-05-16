@@ -79,3 +79,20 @@ $tab-link-active-line-size: 40px;
     background-color: themed('tabLinkBackgroundColor');
   }
 }
+
+
+.tabs-navbar {
+  @extend .d-flex, .flex-row;
+  margin-bottom: 30px;
+  @include themify($themes) {
+    border-bottom: 1px solid themed('contentHolderBorderColor');
+  }
+  .nav-item {
+    .tabs-navbar__link {
+      padding-bottom: 20px;
+      &:after {
+        bottom: -1px;
+      }
+    }
+  }
+}

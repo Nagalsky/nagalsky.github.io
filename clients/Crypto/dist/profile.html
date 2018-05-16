@@ -361,7 +361,7 @@
 						    </div><!--crypto__item-->
 						  </div><!--crypto-->
 						
-						  <a href="#" class="btn btn-success btn-block mb-4 mb-md-5">Edit list</a>
+						  <a href="#" class="btn btn-success btn-block mb-4 mb-md-5" data-toggle="modal" data-target="#editListModal">Edit list</a>
 						
 						  <div class="panel-banner">
 						    <div class="panel-banner__header">
@@ -470,9 +470,725 @@
 	</footer><!--footer-->
 
 
+	<!-- Modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Join Coin Break for Free!</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	      </div><!--modal-header-->
+	      <div class="modal-body">
+	        <div class="row">
+	          <div class="col-md-6">
+	            <a href="#" class="btn btn-xl btn-google btn-login mb-4 mb-md-0 w-100"><img src="assets/images/elements/google.svg" class="btn-login__icon" alt=""> <span class="fs-12">Signup with Google</span></a>
+	          </div><!--col-->
+	
+	          <div class="col-md-6">
+	            <a href="#" class="btn btn-xl btn-twitter btn-login m-0 w-100"><i class="crypto-icon-twitter btn-login__icon"></i> <span class="fs-12">Signup with Twitter</span></a>
+	          </div><!--col-->
+	        </div><!--row-->
+	
+	        <div class="modal-text-divider mb-2">
+	          <span class="modal-text-divider__inner">or use email</span>
+	        </div><!--modal-divider-->
+	
+	        <form action="">
+	          <div class="form-group">
+	            <label for="field-username">Username</label>
+	            <input type="text" class="form-control" id="field-username" placeholder="Enter your username">
+	          </div><!--form-group-->
+	
+	          <div class="form-group">
+	            <label for="field-email">Email</label>
+	            <input type="text" class="form-control" id="field-email" placeholder="Enter your email">
+	          </div><!--form-group-->
+	
+	          <div class="form-group form-group--password">
+	            <label for="field-password">Password</label>
+	            <input type="password" class="form-control" id="field-password" placeholder="Enter your password">
+	            <a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+	          </div><!--form-group-->
+	
+	          <div class="form-group form-group--password">
+	            <label for="field-password-confirmation">Enter your password</label>
+	            <input type="password" class="form-control" id="field-password-confirmation" placeholder="Enter your password">
+	            <a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+	          </div><!--form-group-->
+	
+	          <div class="form-group">
+	            <div class="custom-field custom-field--secondary">
+	              <input type="checkbox" id="checkbox-custom-1">
+	              <label for="checkbox-custom-1" class="custom-field__label custom-field__label--lg fs-12">I have read and agree to the <a href="#" class="text-success underline d-inline-block ml-1">Terms of Service</a></label>
+	            </div><!--custom-field-->
+	          </div><!--form-group-->
+	
+	          <div class="modal-divider modal-divider--full-width"></div>
+	
+	          <div class="form-group d-md-flex justify-content-between">
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-success">Signup</button>
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	          </div><!--form-group-->
+	          <p class="mt-4 text-center fs-13 font-medium">Already have an account? <a href="#" class="text-success" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></p>
+	        </form>
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Login</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	      </div><!--modal-header-->
+	      <div class="modal-body">
+	        <div class="row">
+	          <div class="col-md-6">
+	            <a href="#" class="btn btn-xl btn-google btn-login mb-4 mb-md-0 w-100"><img src="assets/images/elements/google.svg" class="btn-login__icon" alt=""> <span class="fs-12">Signup with Google</span></a>
+	          </div><!--col-->
+	
+	          <div class="col-md-6">
+	            <a href="#" class="btn btn-xl btn-twitter btn-login m-0 w-100"><i class="crypto-icon-twitter btn-login__icon"></i> <span class="fs-12">Signup with Twitter</span></a>
+	          </div><!--col-->
+	        </div><!--row-->
+	
+	        <div class="modal-text-divider mb-2">
+	          <span class="modal-text-divider__inner">or use email</span>
+	        </div><!--modal-divider-->
+	
+	        <form action="">
+	          <div class="form-group">
+	            <label for="field-email">Email</label>
+	            <input type="text" class="form-control" id="field-email" placeholder="Enter your email">
+	          </div><!--form-group-->
+	
+	          <div class="form-group form-group--password">
+	            <label for="field-password">Password</label>
+	            <input type="password" class="form-control" id="field-password" placeholder="Enter your password">
+	            <a href="#" class="btn-toggle-password crypto-icon-eye field-control-btn"></a>
+	          </div><!--form-group-->
+	
+	          <div class="form-group d-flex justify-content-between align-items-center">
+	            <div class="custom-field custom-field--secondary">
+	              <input type="checkbox" id="checkbox-custom-remember">
+	              <label for="checkbox-custom-remember" class="custom-field__label custom-field__label--lg fs-12">Remember me</label>
+	            </div><!--custom-field-->
+	
+	            <a href="#" class="flex-srink-0 ml-3 d-inline-block modal-link">Forgot password?</a>
+	          </div><!--form-group-->
+	
+	          <div class="modal-divider modal-divider--full-width"></div>
+	
+	          <div class="form-group d-md-flex justify-content-between">
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-success">Login</button>
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	          </div><!--form-group-->
+	          <p class="mt-4 text-center fs-13 font-medium">Don’t have an account yet? <a href="#" class="text-success" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Signup</a></p>
+	        </form>
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="coinFilterModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Coin Filter</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	      </div><!--modal-header-->
+	      <div class="modal-body">
+	        <form action="" class="form-filter-coin">
+	
+	          <div class="form-group">
+	            <div class="card bg-transparent">
+	              <div class="card-body px-0">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-filter-coin-1" class="check-all">
+	                  <label for="checkbox-custom-filter-coin-1" class="custom-field__label custom-field__label--lg font-regular">
+	                    Show All Coins
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="row">
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-2">
+	                      <label for="checkbox-custom-filter-coin-2" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-3">
+	                      <label for="checkbox-custom-filter-coin-3" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	          </div><!--row-->
+	
+	          <div class="row">
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-4">
+	                      <label for="checkbox-custom-filter-coin-4" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-5">
+	                      <label for="checkbox-custom-filter-coin-5" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	          </div><!--row-->
+	
+	          <div class="row">
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-6">
+	                      <label for="checkbox-custom-filter-coin-6" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-7">
+	                      <label for="checkbox-custom-filter-coin-7" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	          </div><!--row-->
+	
+	          <div class="row">
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-8">
+	                      <label for="checkbox-custom-filter-coin-8" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-9">
+	                      <label for="checkbox-custom-filter-coin-9" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	          </div><!--row-->
+	
+	          <div class="row">
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-10">
+	                      <label for="checkbox-custom-filter-coin-10" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	
+	            <div class="col-md-6">
+	              <div class="form-group">
+	                <div class="card">
+	                  <div class="card-body">
+	                    <div class="custom-field">
+	                      <input type="checkbox" id="checkbox-custom-filter-coin-11">
+	                      <label for="checkbox-custom-filter-coin-11" class="custom-field__label custom-field__label--lg">
+	                        <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                        Bitcoin
+	                      </label>
+	                    </div><!--custom-field-->
+	                  </div><!--card-body-->
+	                </div><!--card-->
+	              </div><!--form-group-->
+	            </div><!--col-->
+	          </div><!--row-->
+	
+	          <div class="form-group mt-4">
+	            <label for="">Add Custom Coins:</label>
+	            <select class="selectpicker" data-style="btn-brand btn-xl transition-0" data-width="100%" data-live-search="true">
+	              <option data-content="<span class='bootstrap-select__span'><img src='assets/images/elements/crypto-logo-2.png' alt='' class='bootstrap-select__logo'> Monero</span>"></option>
+	              <option data-content="<span class='bootstrap-select__span'><img src='assets/images/elements/crypto-logo-3.png' alt='' class='bootstrap-select__logo'> Komodo</span>"></option>
+	              <option data-content="<span class='bootstrap-select__span'><img src='assets/images/elements/crypto-logo-4.png' alt='' class='bootstrap-select__logo'> MonaCoin</span>"></option>
+	              <option data-content="<span class='bootstrap-select__span'><img src='assets/images/elements/crypto-logo-5.png' alt='' class='bootstrap-select__logo'> Monaco</span>"></option>
+	            </select>
+	          </div><!--form-group-->
+	
+	          <div class="modal-divider modal-divider--full-width"></div>
+	
+	          <div class="form-group d-md-flex justify-content-between">
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-success mb-3 mb-md-0">Save and close</button>
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	          </div><!--form-group-->
+	        </form>
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade mx-3 my-5" id="articlePreviewModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+	    <div class="modal-content p-0">
+	      <div class="modal-body p-0">
+	        <div class="crypto-article">
+	          <div class="crypto-article__body">
+	            <div class="d-flex align-items-start mb-md-4">
+	              <div class="crypto-list__vote">
+	                <a href="#" class="crypto-list__vote__btn crypto-list__vote__btn--up crypto-icon-up-dir"></a>
+	                <span class="crypto-list__vote__btn crypto-list__vote__counter">189</span>
+	                <a href="#" class="crypto-list__vote__btn crypto-list__vote__btn--down crypto-icon-down-dir"></a>
+	              </div><!--crypto-list__vote-->
+	              <h4 class="crypto-list__title">Ripple & Apple Partnership Has The Potential To Sky Rocket XRP </h4>
+	            </div>
+	            <p>We came into April this year with an image of endless <a href="#">Ripple partnership</a> announcements. Interestingly, we were sort of right.</p>
+	            <p>Numerous partnerships have of course been released and announced thus far this month, with many others that have been assumed over the past few days as well.</p>
+	            <p>The big ones include Santander with the new OnePay FX money transfer app and of course, most notably, a partnership with tech giants, Apple.</p>
+	            <p>Many people are refuting this partnership when it comes down to XRP, with people refusing to believe that any partnerships Ripple are making have the XRP currency in mind. Rather, it does seem more likely that actually, these companies are only interested in Ripple’s other payment solutions and not the native cryptocurrency itself.</p>
+	
+	            <div class="d-lg-flex align-items-center justify-content-between text-center text-lg-left mt-md-5">
+	              <button type="button" class="btn btn-xl btn-md-block btn-success mb-3 mb-lg-0 mr-lg-3 flex-srink-0">View Article</button>
+	              <div class="d-lg-flex align-items-center">
+	                <span class="d-inline-block mb-3 mb-lg-0 mr-lg-3 text-uppercase">SHARE</span>
+	                <div class="btn-toolbar justify-content-center justify-content-lg-between">
+	                  <div class="btn-group mr-3 mr-lg-2 mr-xl-4">
+	                    <a href="#" class="btn btn-telegram display-6 btn-xs px-2">
+	                      <i class="crypto-icon-telegram"></i>
+	                    </a>
+	                  </div>
+	                  <div class="btn-group mr-3 mr-lg-2 mr-xl-4">
+	                    <a href="#" class="btn btn-facebook display-6 btn-xs px-2">
+	                      <i class="crypto-icon-facebook"></i>
+	                    </a>
+	                  </div>
+	                  <div class="btn-group">
+	                    <a href="#" class="btn btn-twitter display-6 btn-xs px-2">
+	                      <i class="crypto-icon-twitter"></i>
+	                    </a>
+	                  </div>
+	                </div><!--btn-toolbar-->
+	              </div>
+	            </div>
+	          </div><!--crypto-article__body-->
+	
+	          <div class="crypto-article__sidebar d-none d-md-block">
+	            <img src="assets/images/elements/crypto-logo-1.png" alt="" class="crypto-article__sidebar__logo">
+	            <p>2h ago</p>
+	            <p><a href="#" class="crypto-article__link">https://www.ft.com/</a></p>
+	            <p><b class="text-warning">Sponsored</b></p>
+	          </div><!--crypto-article__sidebar-->
+	        </div><!--crypto-article-->
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="editListModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Edit list</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	      </div><!--modal-header-->
+	      <div class="modal-body">
+	        <form action="" id="sortable">
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-1">
+	                  <label for="checkbox-custom-edit-coin-1" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Bitcoin
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-2">
+	                  <label for="checkbox-custom-edit-coin-2" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Ethereum
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-3">
+	                  <label for="checkbox-custom-edit-coin-3" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Ripple
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-4">
+	                  <label for="checkbox-custom-edit-coin-4" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Bitcoin Cash
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-5">
+	                  <label for="checkbox-custom-edit-coin-5" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Litecoin
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-6">
+	                  <label for="checkbox-custom-edit-coin-6" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    EOS
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-7">
+	                  <label for="checkbox-custom-edit-coin-7" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Stellar
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-8">
+	                  <label for="checkbox-custom-edit-coin-8" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    Cardano
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-9">
+	                  <label for="checkbox-custom-edit-coin-9" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    NEO
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="form-group sortable__item">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="custom-field">
+	                  <input type="checkbox" id="checkbox-custom-edit-coin-10">
+	                  <label for="checkbox-custom-edit-coin-10" class="custom-field__label custom-field__label--lg">
+	                    <img src="assets/images/elements/crypto-logo-1.png" alt="" class="custom-field__logo">
+	                    IOTA
+	                  </label>
+	                </div><!--custom-field-->
+	              </div><!--card-body-->
+	            </div><!--card-->
+	          </div><!--form-group-->
+	
+	          <div class="modal-divider modal-divider--full-width"></div>
+	
+	          <div class="form-group d-md-flex justify-content-between">
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-success mb-3 mb-md-0">Save and close</button>
+	            <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	          </div><!--form-group-->
+	        </form>
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="becomeProModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
+	    <div class="modal-content p-0">
+	      <div class="modal-body p-0">
+	        <button type="button" class="close p-3" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	        <div class="panel-banner">
+	          <div class="panel-banner__header">
+	            <img src="assets/images/elements/banner-logo-dark.png" alt="" class="banner-logo banner-logo--floated banner-logo--theme-dark">
+	            <img src="assets/images/elements/banner-logo-light.png" alt="" class="banner-logo banner-logo--floated banner-logo--theme-light">
+	          </div><!--panel-banner__header-->
+	
+	          <div class="panel-banner__body">
+	            <h3 class="panel-banner__title text-center">Become Coin Break PRO</h3>
+	            <ul class="list-checked list-unstyled pl-md-5">
+	              <li class="list-checked__item">No Ads</li>
+	              <li class="list-checked__item">Add custom feeds</li>
+	              <li class="list-checked__item">Advanced price tracking bar</li>
+	              <li class="list-checked__item">Badge for commenting</li>
+	              <li class="list-checked__item">Filter out different sources</li>
+	              <li class="list-checked__item">Receive email alerts</li>
+	            </ul>
+	          </div><!--panel-banner__body-->
+	
+	          <div class="panel-banner__footer">
+	            <a href="#" class="btn btn-success btn-block btn-md panel-banner__footer__btn">Coin Break Pro</a>
+	          </div><!--panel-banner__footer-->
+	        </div><!--panel-banner-->
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="addNewPaymentMethodModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Add Payment Method</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <i class="crypto-icon-close"></i>
+	        </button>
+	      </div><!--modal-header-->
+	      <div class="modal-body">
+	
+	        <ul class="nav navbar-nav tabs-navbar">
+	          <li class="nav-item tabs-navbar__item">
+	            <a class="nav-link tabs-navbar__link active" data-toggle="tab" href="#credit-card-tab" role="tab" aria-controls="credit-card-tab" aria-selected="true">Credit Card</a>
+	          </li>
+	          <li class="nav-item tabs-navbar__item">
+	            <a class="nav-link tabs-navbar__link" data-toggle="tab" href="#paypal-card-tab" role="tab" aria-controls="paypal-card-tab" aria-selected="true">PayPal</a>
+	          </li>
+	        </ul>
+	
+	
+	        <div class="tab-content p-0 bg-transparent">
+	          <div class="tab-pane fade show active" id="credit-card-tab" role="tabpanel">
+	            <form action="">
+	              <div class="form-group">
+	                <label for="field-card-holder-name">Card holder name</label>
+	                <input type="text" class="form-control" id="field-card-holder-name" placeholder="">
+	              </div><!--form-group-->
+	
+	              <div class="form-group">
+	                <label for="field-card-number">Card number</label>
+	                <input type="text" class="form-control" id="field-card-number" placeholder="">
+	              </div><!--form-group-->
+	
+	              <div class="row">
+	                <div class="col-8 col-sm-6">
+	                  <div class="form-group">
+	                    <label for="field-expiry-date">Expiry date</label>
+	                    <input type="text" class="form-control" id="field-expiry-date" placeholder="">
+	                  </div><!--form-group-->
+	                </div>
+	
+	                <div class="col-4 col-sm-3">
+	                  <div class="form-group">
+	                    <label for="field-cvv">CVV</label>
+	                    <input type="text" class="form-control" id="field-cvv" placeholder="">
+	                  </div><!--form-group-->
+	                </div>
+	              </div><!--row-->
+	
+	              <div class="modal-divider modal-divider--full-width"></div>
+	
+	              <div class="form-group d-md-flex justify-content-between">
+	                <button type="submit" class="btn btn-xl btn-sm-block btn-success mb-3 mb-md-0">Save</button>
+	                <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	              </div><!--form-group-->
+	            </form>
+	          </div><!--tab-pane-->
+	
+	
+	
+	          <div class="tab-pane fade" id="paypal-card-tab" role="tabpanel">
+	            <form action="">
+	              <div class="form-group">
+	                <label for="field-paypal-email">PayPal email</label>
+	                <input type="email" class="form-control" id="field-paypal-email" placeholder="">
+	              </div><!--form-group-->
+	
+	              <div class="modal-divider modal-divider--full-width"></div>
+	
+	              <div class="form-group d-md-flex justify-content-between">
+	                <button type="submit" class="btn btn-xl btn-sm-block btn-success mb-3 mb-md-0">Save</button>
+	                <button type="submit" class="btn btn-xl btn-sm-block btn-link" data-dismiss="modal">Cancel</button>
+	              </div><!--form-group-->
+	            </form>
+	          </div><!--tab-pane-->
+	        </div>
+	
+	      </div><!--modal-body-->
+	    </div><!--modal-content-->
+	  </div><!--modal-dialog-->
+	</div><!--modal-->
+
 
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+	<script src="../node_modules/sortablejs/Sortable.min.js"></script>
 	<script src="../node_modules/bootstrap-select-v4/dist/js/bootstrap-select.min.js"></script>
 	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

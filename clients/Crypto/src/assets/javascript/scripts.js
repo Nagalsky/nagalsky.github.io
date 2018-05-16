@@ -59,10 +59,26 @@ $(document).ready(function(){
 		//Slick gallery initial
 		$('.gallery').slick();
 
+
+		//Call bootstrap modal from bootstrap modal
 		$('.modal').on('hidden.bs.modal', function (e) {
 	    if($('.modal').hasClass('show')) {
 	    	$('body').addClass('modal-open');
 	    };
+		});
+
+		//Check all checkboxes
+
+		$('.check-all').change(function() {
+	    var checkboxes = $(this).closest('.form-filter-coin').find(':checkbox');
+	    checkboxes.prop('checked', $(this).is(':checked'));
+		});
+
+
+		//Initial sortable(dragable) - https://github.com/RubaXa/Sortable
+		Sortable.create(sortable, {
+		  handle: '.sortable__item',
+		  animation: 150
 		});
 
 

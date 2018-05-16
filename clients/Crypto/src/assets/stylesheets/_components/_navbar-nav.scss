@@ -31,10 +31,23 @@
       @include media-breakpoint-down(sm) {
         font-size: 12px;
       }
+      &.active {
+        &:after {
+          opacity: 1;
+        }
+        &:hover {
+          @include themify($themes) {
+            color: themed('navbarLinkColor');
+          }
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
       &:hover {
         color: $success;
         &:after {
-          opacity: .5;
+          opacity: 1;
         }
       }
       &:after {
@@ -42,7 +55,7 @@
         position: absolute;
         width: 100%;
         left: 0;
-        height: 2px;
+        height: 3px;
         background: $success;
         bottom: -19px;
         opacity: 0;
