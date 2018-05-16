@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".gallery").slick({responsive:[{breakpoint:767,settings:{arrows:!1}}]})});
