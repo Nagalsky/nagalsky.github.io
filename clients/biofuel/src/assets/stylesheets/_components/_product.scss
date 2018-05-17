@@ -1,12 +1,17 @@
 /* PRODUCT */
 
 .product {
-  &:not(:last-child) {
-    margin-bottom: 60px;
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 30px;
-    }
+  margin-bottom: 60px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
   }
+}
+
+.product-detail {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 175px;
+  }
+  margin-bottom: 50px;
 }
 
 .product__holder {

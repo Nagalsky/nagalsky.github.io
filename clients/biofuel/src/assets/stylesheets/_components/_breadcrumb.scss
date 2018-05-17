@@ -1,1 +1,23 @@
 /* BREADCRUMB */
+
+.breadcrumb {
+  padding: 0;
+  background: none;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.breadcrumb-item {
+  text-transform: uppercase;
+  font-size: 19px;
+  &.active {
+    color: $orange;
+  }
+  >a {
+    color: $black;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
