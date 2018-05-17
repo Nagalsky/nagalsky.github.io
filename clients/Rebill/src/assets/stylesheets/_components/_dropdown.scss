@@ -2,20 +2,12 @@
 
 $dropdown-color: $sky;
 
-.dropdown-menu {
-  //border-color: $dropdown-color;
-}
-
-.dropdown-divider {
-  //border-top-color: $dropdown-color;
-}
-
-.dropdown-item {
-  //color: $dropdown-color;
-  //&:hover, &:focus {
-    //color: $white;
-    //background: $dropdown-color;
-  //}
+.show {
+  .btn {
+    &.btn-outline-secondary {
+      @include button-outline-variants($color: #c9cdcd);
+    }
+  }
 }
 
 .dropdown-toggle {
@@ -54,4 +46,10 @@ $dropdown-color: $sky;
 .dropdown-img {
   vertical-align: text-top;
   margin-top: 1px;
+}
+
+.dropdown-item {
+  &:hover, &:focus, &.active {
+    background: $orange;
+  }
 }
