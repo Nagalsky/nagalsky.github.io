@@ -9,6 +9,8 @@ $crypto-body-list-color: #7f8491;
 
 .crypto-list__item {
   @extend .d-flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
   &+.crypto-list__item {
     @include themify($themes) {
       border-top: 1px solid themed('contentHolderBorderColor');
@@ -16,10 +18,6 @@ $crypto-body-list-color: #7f8491;
   }
 }
 
-.crypto-list__vote, .crypto-list__body, .crypto-list__logo-holder {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
 
 .crypto-list__vote {
   padding-left: 20px;

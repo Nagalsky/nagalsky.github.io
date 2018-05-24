@@ -7,12 +7,14 @@ $footer-line-height: 2;
   font-size: $footer-font-size;
   padding: 25px 0;
   line-height: $footer-line-height;
+  color: $white;
   @include themify($themes) {
     background-color: themed('footerBackgroundColor');
   }
   >.container-fluid {
     @include media-breakpoint-up(lg) {
       padding-right: 60px;
+      padding-left: 40px;
     }
   }
 }
@@ -25,10 +27,13 @@ $footer-line-height: 2;
 .footer__logo--hidden {
   display: none;
 }
+.footer__logo__image-dark {
+  display: none;
+}
 
 .theme-light {
   .footer__logo__image-light {
-    display: none;
+    display: block;
   }
   .footer__icon--telegram {
     color: $telegram-brand;
