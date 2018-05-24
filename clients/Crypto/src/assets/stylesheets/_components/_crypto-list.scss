@@ -9,11 +9,9 @@ $crypto-body-list-color: #7f8491;
 
 .crypto-list__item {
   @extend .d-flex;
-  &:not(:last-child) {
-    .crypto-list__vote, .crypto-list__body, .crypto-list__logo-holder {
-      @include themify($themes) {
-        border-bottom: 1px solid themed('contentHolderBorderColor');
-      }
+  &+.crypto-list__item {
+    @include themify($themes) {
+      border-top: 1px solid themed('contentHolderBorderColor');
     }
   }
 }
@@ -28,10 +26,6 @@ $crypto-body-list-color: #7f8491;
   padding-right: 20px;
   @extend .d-flex, .flex-column, .flex-shrink-0, .align-items-center;
   text-align: center;
-  @include media-breakpoint-up(md) {
-    border-bottom: none !important;
-    border-top: none !important;
-  }
   @include media-breakpoint-down(sm) {
     padding-left: 10px;
     padding-right: 10px;
@@ -102,8 +96,18 @@ $crypto-body-list-color: #7f8491;
   @include themify($themes) {
     color: themed('cryptoListLogoIconColor');
   }
+  &:before {
+    @extend .mx-0;
+  }
 }
 
+.crypto-list__logo__icon--negative-left {
+  margin-left: -3px;
+}
+
+.crypto-list__logo__icon--negative-left-sm {
+  margin-left: -1px;
+}
 
 .crypto-list__body__list {
   @extend .d-inline-flex, .align-items-center, .list-unstyled, .flex-wrap;
