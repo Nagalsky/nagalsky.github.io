@@ -7,6 +7,14 @@ $crypto-body-list-color: #7f8491;
 .crypto-list {
 }
 
+.theme-light {
+  .crypto-list__item {
+    &:nth-child(even) {
+      background: #FAFAFB;
+    }
+  }
+}
+
 .crypto-list__item {
   @extend .d-flex;
   padding-top: 15px;
@@ -32,6 +40,7 @@ $crypto-body-list-color: #7f8491;
 .crypto-list__vote__btn {
   font-size: 20px;
   color: $cypto-vote-btn-color;
+  line-height: 20px;
   &:hover {
     color: $success;
   }
