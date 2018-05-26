@@ -1,0 +1,26 @@
+/* BUTTONS */
+
+$btn-font: $font-bold;
+$btn-font-size: 16px;
+
+.btn {
+  font-family: $btn-font;
+  font-size: $btn-font-size;
+  border-radius: 22.3px;
+  border: none;
+  padding: 10.5px 33.5px;
+  text-transform: uppercase;
+  @include media-breakpoint-down(sm) {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+  &:hover, &:focus {
+    box-shadow: none !important;
+  }
+  &.btn-warning {
+    @include button-variants($bg: $warning, $color: $black);
+  }
+  &.btn-has-shadow {
+    box-shadow: 0px 18px 38px 0 rgba(8, 88, 67, 0.2) !important;
+  }
+}
