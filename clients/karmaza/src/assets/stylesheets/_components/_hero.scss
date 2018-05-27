@@ -1,8 +1,10 @@
 /* HERO */
 
 .hero {
-  min-height: 100vh;
-  padding: 80px 0;
+  @include media-breakpoint-up(lg) {
+    //min-height: 100vh;
+  }
+  padding: 0 0 40px 0;
   background-image: linear-gradient(to right top, #16493f, #186251, #1c7c62, #249772, #32b281);
   position: relative;
   z-index: 10;
@@ -18,8 +20,5 @@
     z-index: -1;
     background: url('../images/elements/net.svg') no-repeat 50% 10% / cover;
     opacity: .5;
-  }
-  @include media-breakpoint-down(sm) {
-    padding: 40px 0;
   }
 }
