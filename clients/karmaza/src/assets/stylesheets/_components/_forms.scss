@@ -1,7 +1,7 @@
 /* FORMS */
 
 $field-color: $gray;
-$field-font-size: 20px;
+$field-font-size: 16px;
 $field-font-family: $font-light;
 
 .form-control {
@@ -28,37 +28,26 @@ $field-font-family: $font-light;
 .form-group--subscribe {
 	position: relative;
 	.form-control {
-		padding-left: 40px;
-		padding-right: 90px;
-		height: 75px;
+		padding-left: 20px;
+		padding-right: 65px;
+		height: 45px;
 		border-radius: 37.4px;
-		@include media-breakpoint-down(sm) {
-			padding-left: 20px;
-			padding-right: 65px;
-			height: 60px;
-		}
 	}
 	.btn-subscribe {
-		width: 59px;
-		height: 59px;
-		line-height: 59px;
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+		font-size: 18px;
 		@extend .d-flex, .align-items-center, .justify-content-center;
 		color: $warning-secondary;
 		background-color: $warning;
 		border-radius: 50%;
 		position: absolute;
-		right: 12px;
+		right: 7px;
 		top: 50%;
 		transform: translateY(-50%);
 		border: none;
-		font-size: 22px;
 		line-height: 100%;
-		@include media-breakpoint-down(sm) {
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
-			font-size: 18px;
-		}
 		&:hover, &:focus {
 			background-color: darken($warning, 10%);
 		}
@@ -73,7 +62,7 @@ $field-font-family: $font-light;
 	padding: 5px 5px;
 	border-radius: 10px;
 	text-align: center;
-	font-size: 14px;
+	font-size: 13px;
 	color: $turquoise;
 	&:before {
 		width: 0;
@@ -88,8 +77,8 @@ $field-font-family: $font-light;
 	}
 }
 .form-tooltip__title {
-	font-size: 21px;
+	font-size: 14px;
 	@include media-breakpoint-down(xs) {
-		font-size: 16px;
+		font-size: 14px;
 	}
 }

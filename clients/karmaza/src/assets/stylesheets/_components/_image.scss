@@ -1,0 +1,19 @@
+/* IMAGE SCALED */
+
+.image-scaled {
+  @include scale(1.4);
+  @include media-breakpoint-down(sm) {
+    @include scale(2.2);
+  }
+}
+
+.image-content {
+  @extend .w-100;
+  max-width: 300px;
+  @include media-breakpoint-down(sm) {
+    max-width: 200px;
+  }
+  @include media-breakpoint-down(xs) {
+    max-width: 160px;
+  }
+}

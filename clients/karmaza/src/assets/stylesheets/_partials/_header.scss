@@ -14,8 +14,10 @@
   display: inline-block;
   width: 100%;
   max-width: 242px;
-  margin-right: 20px;
   flex-shrink: 0;
+  @include media-breakpoint-up(sm) {
+    margin-right: 20px;
+  }
   @include media-breakpoint-down(xs) {
     margin-bottom: 20px;
   }
@@ -36,11 +38,6 @@
     transform: translateX(0px);
   }
   .header__form-trigger-btn {
-    //opacity: 0;
-    //visibility: hidden;
-    //width: 0;
-    //margin: 0 !important;
-    //padding: 0;
     display: none;
   }
 }
