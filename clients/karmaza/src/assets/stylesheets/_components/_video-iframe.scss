@@ -49,6 +49,12 @@ $video-play-btn-bg: #195345;
     transform: translate(-50%, -50%);
     background: url('../images/elements/video-overlay-1.svg') no-repeat 50% 50% / contain;
     max-width: 200px;
+    @include media-breakpoint-down(sm) {
+      max-width: 140px;
+    }
+    @include media-breakpoint-down(xs) {
+      max-width: 80px;
+    }
   }
 }
 
