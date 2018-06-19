@@ -1,0 +1,50 @@
+/* HERO */
+
+.hero {
+  padding: 148px 0 60px 0;
+  background: url('../images/bg/hero-bg-desktop.png') no-repeat top center / 100%;
+  border-bottom: 1px solid $silver;
+  color: $white;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    padding: 24px 0 50px 0;
+  }
+}
+
+.hero__logo {
+  display: block;
+  max-width: 182px;
+  margin-bottom: 68px;
+  @include media-breakpoint-down(md) {
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 170px;
+  }
+}
+
+.hero__panel {
+  background: $white;
+  padding: 40px 25px;
+  @include media-breakpoint-down(md) {
+    padding: 25px 20px;
+    background: $pink;
+  }
+}
+
+.hero__panel__title {
+  color: $pink;
+  font-family: $font-bold;
+  @include media-breakpoint-down(md) {
+    color: $success;
+    font-size: 12px;
+    font-family: $font-medium;
+  }
+}
+
+.hero__panel__subtitle {
+  color: $muted;
+  @include media-breakpoint-down(md) {
+    color: $white;
+  }
+}
