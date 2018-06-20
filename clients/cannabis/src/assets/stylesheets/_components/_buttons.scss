@@ -1,1 +1,21 @@
 /* BUTTONS */
+
+.btn {
+  text-transform: uppercase;
+  font-family: $font-medium;
+  border: none;
+  &.btn-link {
+    color: $sky;
+    &:hover, &:focus {
+      color: darken($sky, 10%);
+    }
+  }
+  &.btn-gradient {
+    color: $white;
+    @include gradient-x($start-color: #3092ea, $end-color: #064f8a, $start-percent: 0%, $end-percent: 100%);
+  }
+  &.btn-sm {
+    font-size: inherit;
+    padding: 6px 14px;
+  }
+}
