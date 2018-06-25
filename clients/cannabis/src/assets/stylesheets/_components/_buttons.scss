@@ -14,8 +14,19 @@
     color: $white;
     @include gradient-x($start-color: #3092ea, $end-color: #064f8a, $start-percent: 0%, $end-percent: 100%);
   }
+  &.btn-primary {
+    @include button-variants($bg: $blue, $color: $white);
+  }
   &.btn-sm {
     font-size: inherit;
     padding: 6px 14px;
+  }
+  &.btn-md {
+    font-size: 20px;
+    padding: 5px 18px;
+  }
+  &.btn-lg {
+    font-size: 24.5px;
+    padding: 6.5px 23px;
   }
 }
