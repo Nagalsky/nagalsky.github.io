@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
 	//Slick gallery's initial
+	$('.gallery').slick();
+
 	$('.hero').slick({
     autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
+		speed: 600,
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		adaptiveHeight: true,
@@ -12,7 +15,8 @@ $(document).ready(function(){
 
 	$('.gallery-icon').slick({
     autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
+		speed: 600,
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		slidesToShow: 5,
@@ -47,7 +51,8 @@ $(document).ready(function(){
 
 	$('.gallery-featured').slick({
     autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
+		speed: 600,
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		slidesToShow: 3,
@@ -70,7 +75,8 @@ $(document).ready(function(){
 
 	$('.gallery-news').slick({
     autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
+		speed: 600,
 		dots: true,
 		arrows: false,
 		pauseOnFocus: false,
