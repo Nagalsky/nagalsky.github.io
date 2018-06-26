@@ -22,8 +22,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1, .h1 {
 	font-size: 52px;
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		font-size: 42px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 38px;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 26px;
 	}
 }
 h2, .h2 {
@@ -43,9 +49,21 @@ h4, .h4 {
 	@include media-breakpoint-down(md) {
 		font-size: 18px;
 	}
+	@include media-breakpoint-down(sm) {
+		font-size: 16px;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 14px;
+	}
 }
 h5, .h5 {
 	font-size: 18px;
+	@include media-breakpoint-down(sm) {
+		font-size: 14px;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 12px;
+	}
 }
 h6, .h6 {
 	font-size: 14px;
@@ -74,4 +92,29 @@ p {
 
 b {
 	font-family: $font-bold;
+}
+
+.lead {
+	@include media-breakpoint-up(md) {
+		font-size: 18px;
+	}
+	font-size: 16px;
+}
+
+.line-height-100 {
+	line-height: 100%;
+}
+
+.title {
+	font-size: 24px;
+	@include media-breakpoint-down(sm) {
+		font-size: 20px;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: 16px;
+	}
+}
+
+.logo-content {
+	max-width: 106px;
 }

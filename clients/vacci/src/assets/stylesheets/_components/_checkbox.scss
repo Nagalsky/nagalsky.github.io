@@ -1,0 +1,52 @@
+/* CHECKBOX */
+
+.checkbox {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    &:checked {
+      &+label {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label {
+    position: relative;
+    color: $muted;
+    font-size: 12px;
+    font-family: $font-medium;
+    padding-left: 33px;
+    @extend .font-icons, .vacci-icon-check;
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &:before {
+      z-index: 1;
+      color: $success;
+      left: 1px;
+      opacity: 0;
+    }
+    &:after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background: #eeeeee;
+    }
+  }
+  a {
+    @include media-breakpoint-down(md) {
+      color: $white;
+    }
+  }
+}
