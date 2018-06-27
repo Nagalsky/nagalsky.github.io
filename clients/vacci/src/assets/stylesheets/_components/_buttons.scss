@@ -9,7 +9,10 @@
     @include button-variants($bg: $success, $color: $white);
   }
   &.btn-lg {
-    padding: 18.5px 30px;
+    padding: 18.5px 62px;
+    @include media-breakpoint-down(md) {
+      padding: 18.5px 30px;
+    }
   }
   &.btn-block {
     padding-left: 15px;

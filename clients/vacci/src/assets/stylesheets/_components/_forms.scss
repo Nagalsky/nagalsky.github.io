@@ -1,6 +1,7 @@
 /* FORMS */
 
 $field-height: 48px;
+$field-height-mobile: 32px;
 $field-font-size: 12px;
 $field-font-family: $font-medium;
 $field-border-color: #dddddd;
@@ -13,10 +14,12 @@ $placeholder-opacity: 0;
 	border-radius: 0;
 	color: $field-color;
 	border-color: $field-border-color;
-	height: $field-height;
 	font-size: $field-font-size;
 	font-family: $field-font-family;
 	@include custom-placeholder($color: $field-color, $font-size: $field-font-size, $font-family: $field-font-family);
+	@include media-breakpoint-up(md) {
+		height: $field-height;
+	}
 	&:focus {
 		border-color: darken($field-border-color, 10%);
 		box-shadow: none;

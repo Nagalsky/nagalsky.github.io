@@ -2,6 +2,9 @@
 
 .box {
   position: relative;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
 }
 
 .box--has-indicator {
@@ -20,6 +23,12 @@
   color: $orange;
   font-size: 52px;
   font-family: $font-regular;
+}
+
+.box__subtitle {
+  @include media-breakpoint-down(sm) {
+    font-family: $font-bold !important;
+  }
 }
 
 .box__indicator {
