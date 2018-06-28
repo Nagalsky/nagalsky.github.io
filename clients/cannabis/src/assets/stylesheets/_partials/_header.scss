@@ -21,7 +21,7 @@
   width: 100%;
   position: absolute;
   z-index: 10;
-  max-width: 60px;
+  max-width: 110px;
   @include media-breakpoint-up(lg) {
     max-width: 200px;
     left: 20px;
@@ -49,8 +49,8 @@
 .header__top {
   margin-bottom: 30px;
   @extend .d-flex, .flex-column, .flex-lg-row, .justify-content-lg-end, .align-items-lg-center;
-  @include media-breakpoint-down(lg) {
-    margin-bottom: 20px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0px;
   }
 }
 
@@ -114,7 +114,31 @@
   }
   position: absolute;
   right: 5px;
-  top: 30px;
+  top: 50px;
   border: none;
-  font-size: 24px;
+  font-size: 32px;
+  @include media-breakpoint-down(xs) {
+    top: 75px;
+    padding: 0;
+  }
+}
+
+.header__user-box {
+  @extend .d-lg-none;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media-breakpoint-down(xs) {
+    left: auto;
+    right: 15px;
+    top: 15px;
+    transform: translateX(0%);
+  }
+  .btn {
+    @include media-breakpoint-down(xs) {
+      font-size: 12px !important;
+      padding: 3px 8px 1px 8px !important;
+    }
+  }
 }
