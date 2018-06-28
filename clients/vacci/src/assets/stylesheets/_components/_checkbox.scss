@@ -23,6 +23,10 @@
     font-family: $font-medium;
     padding-left: 33px;
     @extend .font-icons, .vacci-icon-check;
+    @include media-breakpoint-down(md) {
+      text-align: left;
+      color: #bbbbbbl
+    }
     &:before, &:after {
       position: absolute;
       left: 0;
