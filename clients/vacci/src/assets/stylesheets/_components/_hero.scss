@@ -25,6 +25,23 @@
   }
 }
 
+.hero__panel--done {
+  min-height: 120px;
+  color: $black;
+  @include media-breakpoint-up(md) {
+    min-height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 800px;
+  }
+  @include media-breakpoint-up(xl) {
+    min-height: 619px;
+  }
+  @include media-breakpoint-down(md) {
+    color: $white;
+  }
+}
+
 .hero__logo {
   display: block;
   max-width: 182px;
@@ -123,4 +140,8 @@
     font-size: 24px;
     font-family: $font-bold;
   }
+}
+
+.hero__done {
+  font-size: 30px;
 }
