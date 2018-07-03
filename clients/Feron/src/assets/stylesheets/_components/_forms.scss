@@ -1,0 +1,25 @@
+/* FORMS */
+
+$field-height: 60px;
+$field-mobile-height: 30px;
+$placeholder-color: $muted;
+$placeholder-opacity: 0;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-radius: 0;
+	height: $field-height;
+	border-color: $primary;
+	color: $muted;
+	@include custom-placeholder($color: $placeholder-color);
+	@include media-breakpoint-down(sm) {
+		height: $field-mobile-height;
+	}
+	&:focus {
+		box-shadow: none;
+		border-color: darken($primary, 10%);
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+		color: $muted;
+	}
+}
