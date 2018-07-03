@@ -7,14 +7,16 @@ html, body {
 	color: $body-main-color;
 	font-size: $body-font-size;
 	line-height: $body-line-height;
-	height: 100%;
+	@include media-breakpoint-up(lg) {
+		height: 100%;
+	}
 	@include media-breakpoint-down(sm) {
 		font-size: $body-font-size-mobile;
 	}
 }
 
 body {
-	@extend .d-flex, .flex-column;
+	@extend .d-md-flex, .flex-column;
 }
 
 .main {
