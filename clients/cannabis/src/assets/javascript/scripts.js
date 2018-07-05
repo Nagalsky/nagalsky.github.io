@@ -74,7 +74,7 @@ $(document).ready(function(){
   });
 
 	$('.gallery-news').slick({
-    autoplay: true,
+    autoplay: false,
 		autoplaySpeed: 5000,
 		speed: 600,
 		dots: true,
@@ -102,4 +102,30 @@ $(document).ready(function(){
   });
 
 
+	//Marquee initial
+	$('.marquee__line').marquee({
+		duration: 15000,
+		delayBeforeStart: 0,
+		direction: 'left'
+	});
+
+	if ($(window).width() < 767) {
+	 $('.marquee__line').marquee({
+		 duration: 12000,
+		 delayBeforeStart: 0,
+		 direction: 'left'
+	 });
+	};
+
+
+});
+
+$(window).resize(function() {
+	if ($(window).width() < 767) {
+	 $('.marquee__line').marquee({
+		 duration: 12000,
+		 delayBeforeStart: 0,
+		 direction: 'left'
+	 });
+	};
 });

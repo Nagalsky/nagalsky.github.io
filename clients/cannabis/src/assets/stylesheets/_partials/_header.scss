@@ -1,5 +1,8 @@
 /* HEADER */
 
+$header-height: 200px;
+$header-height-md: 145px;
+
 .header {
   @include media-breakpoint-up(lg) {
     padding: 73px 40px 20px 230px;
@@ -11,9 +14,15 @@
     padding-left: 400px;
   }
   padding: 15px 15px;
-  position: relative;
+  //position: relative;
+  background: $white;
   border-bottom: 7px solid $success;
   @extend .d-lg-flex, .justify-content-lg-end;
+
+  min-height: $header-height;
+  @include media-breakpoint-down(md) {
+    min-height: $header-height-md;
+  }
 }
 
 .header__logo {
