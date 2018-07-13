@@ -36,12 +36,18 @@
   .container {
     @include media-breakpoint-up(md) {
       position: absolute;
-      transform: translateX(-50%);
       left: 50%;
+      margin-left: -360px;
       bottom: 0;
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: -495px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: -570px;
     }
   }
 }
