@@ -1,0 +1,100 @@
+/* DROPDOWN */
+
+.dropdown-menu {
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+    box-shadow: 0px 1px 1px 1px rgba($black, .2);
+    background: rgba($white, .8);
+  }
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+  }
+  min-width: 200px;
+  &.dropdown-menu--is-open {
+    display: block;
+  }
+  .dropdown-item {
+    &:hover, &:focus {
+      @include media-breakpoint-up(md) {
+        background: $gray-bold;
+      }
+    }
+  }
+}
+.dropdown-menu--flag {
+  @include media-breakpoint-up(md) {
+    text-align: center;
+    margin-top: 4px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  @include media-breakpoint-down(md) {
+    border-radius: 0;
+  }
+  background: rgba($white, 1);
+  .dropdown-item {
+    @extend .d-flex, .justify-content-between, .align-items-center;
+    color: $sky;
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      padding-left: 35px;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
+    &:hover, &:focus {
+      color: $primary-bold;
+      background: transparent;
+    }
+    &+.dropdown-item {
+      @include media-breakpoint-down(md) {
+        border-top: 1px solid #9b9b9b;
+      }
+    }
+  }
+  .navbar__flag {
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.dropdown-toggle--flag {
+  @include media-breakpoint-up(lg) {
+    padding: 4px .5rem;
+  }
+  &:hover, &:focus {
+    background: none;
+    border: none !important;
+    color: $white;
+  }
+}
+
+.dropdown-toggle--no-arrow {
+  &:after {
+    content: none;
+  }
+}
+
+.dropdown-toggle-mobile {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  @extend .font-icons, .digital-icon-down-open;
+  @extend .d-flex, .align-items-center, .justify-content-center;
+  height: 26px;
+  width: 26px;
+}
+.dropdown-toggle-mobile--is-active {
+  &:before {
+    transform: rotate(-180deg);
+  }
+}

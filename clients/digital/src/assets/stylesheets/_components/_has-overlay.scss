@@ -1,0 +1,35 @@
+/* HAS OVERLAY */
+
+.has-overlay {
+  position: relative;
+  z-index: 10;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.has-overlay--primary {
+  &:before {
+    background: rgba($primary-bold, .4);
+  }
+}
+.has-overlay--primary-thin {
+  &:before {
+    background: rgba($primary-bold, .13);
+  }
+}
+.has-overlay--primary-medium {
+  &:before {
+    background: rgba($primary-bold, .67);
+  }
+}
+.has-overlay--primary-bold {
+  &:before {
+    background: rgba($primary-bold, .75);
+  }
+}
