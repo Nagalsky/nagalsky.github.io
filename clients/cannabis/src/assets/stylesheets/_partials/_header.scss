@@ -30,7 +30,7 @@ $header-height-md: 100px;
   width: 100%;
   position: absolute;
   z-index: 10;
-  max-width: 240px;
+  max-width: 250px;
   @include media-breakpoint-up(lg) {
     max-width: 200px;
     left: 20px;
@@ -48,8 +48,6 @@ $header-height-md: 100px;
   }
   @include media-breakpoint-down(md) {
     position: static;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -125,7 +123,7 @@ $header-height-md: 100px;
   }
   position: absolute;
   right: 5px;
-  top: 7px;
+  top: 17px;
   border: none;
   font-size: 32px;
   padding: 0;
@@ -133,17 +131,8 @@ $header-height-md: 100px;
 
 .header__user-box {
   @extend .d-lg-none;
-  margin-top: 20px;
-  /*position: absolute;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);*/
-  @include media-breakpoint-down(xs) {
-    /*left: auto;
-    right: 15px;
-    top: 15px;
-    transform: translateX(0%);*/
-  }
+  margin-top: -10px;
+  margin-left: 31px;
   .btn {
     @include media-breakpoint-down(xs) {
       font-size: 12px !important;
