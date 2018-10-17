@@ -7445,7 +7445,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-black {
   color: #000000 !important; }
 
-.text-brand, .product-qty__field {
+.text-brand, .form-control, .product-qty__field {
   color: #29292b !important; }
 
 .text-danger {
@@ -7457,7 +7457,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-muted {
   color: #e3e3e8 !important; }
 
-.text-gray, .form-control {
+.text-gray {
   color: #626265 !important; }
 
 .bg-white {
@@ -7611,6 +7611,9 @@ p {
   margin-bottom: 15px; }
   p:last-child {
     margin-bottom: 0; }
+
+b {
+  font-family: "SequelSansSemiBold"; }
 
 /* FLEX */
 /* FONT SIZE */
@@ -7785,10 +7788,34 @@ ol, ul {
   -moz-appearance: none;
   height: 33px;
   border-color: #626265; }
+  .form-control:-moz-placeholder {
+    color: #29292b;
+    font-size: 7px;
+    font-family: "SequelSansSemiBold"; }
+  .form-control::-moz-placeholder {
+    color: #29292b;
+    font-size: 7px;
+    font-family: "SequelSansSemiBold"; }
+  .form-control:-ms-input-placeholder {
+    color: #29292b;
+    font-size: 7px;
+    font-family: "SequelSansSemiBold"; }
+  .form-control::-webkit-input-placeholder {
+    color: #29292b;
+    font-size: 7px;
+    font-family: "SequelSansSemiBold"; }
   .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
     border-color: #49494b; }
+    .form-control:focus:-moz-placeholder {
+      opacity: 0; }
+    .form-control:focus::-moz-placeholder {
+      opacity: 0; }
+    .form-control:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .form-control:focus::-webkit-input-placeholder {
+      opacity: 0; }
 
 select.form-control:not([size]):not([multiple]) {
   height: 33px; }
@@ -7802,8 +7829,7 @@ select.form-control {
 
 /* BUTTONS */
 .btn {
-  padding-top: 10.5px;
-  padding-bottom: 10.5px; }
+  padding: 10.5px 50px; }
   .btn.btn-danger {
     background: #e43d30;
     color: #ffffff;
@@ -7812,11 +7838,14 @@ select.form-control {
       background: #c7261a !important;
       border-color: #c7261a !important;
       color: #ffffff !important; }
+  .btn.btn-block {
+    padding-left: 15px;
+    padding-right: 15px; }
 
 /* SECTION */
 .section {
   position: relative;
-  padding: 20px 0; }
+  padding: 20px 0 50px 0; }
 
 /* CARD */
 /* DROPDOWN */

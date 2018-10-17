@@ -2,16 +2,19 @@
 
 $field-height: 33px;
 $field-border-color: $gray;
+$placeholder-opacity: 0;
 
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
-	@extend .rounded-0, .text-uppercase, .fs-7, .text-base-semibold, .text-gray, .kerning-2;
+	@extend .rounded-0, .text-uppercase, .fs-7, .text-base-semibold, .text-brand, .kerning-2;
 	height: $field-height;
 	border-color: $field-border-color;
+	@include custom-placeholder($color: $brand, $font-size: 7px, $font-family: $font-base-semibold);
 	&:focus {
 		box-shadow: none;
 		border-color: darken($field-border-color, 10%);
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 	}
 }
 

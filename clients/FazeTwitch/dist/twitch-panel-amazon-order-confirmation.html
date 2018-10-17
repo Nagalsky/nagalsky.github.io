@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	//= template/head.html
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
 	<title>Home page</title>
 </head>
 
 <body>
 
-	//= template/header.html
-
-	//= template/alert.html
+	<header class="header">
+	  <div class="header__left text-truncate">
+	    <a href="#" class="header__back">
+	      <i class="faze-icon-arrow-left"></i>
+	    </a>
+	    <p class="header__title w-100">Complete Order</p>
+	  </div><!--header__left-->
+	</header>
 
 
 
@@ -101,19 +110,47 @@
 					</div><!--row-->
 				</div><!--product-cart-item-->
 
-				<hr class="mb-4">
-				<h3 class="text-center mb-0">Subtotal <span>$64</span></h3>
-				<hr class="mt-4">
-				<p class="text-center fs-9 text-uppercase text-gray text-base-semibold kerning-2 mb-3">Checkout with</p>
-				<a href="#" class="d-block" data-toggle="modal" data-target="#modal-order-confirmation">
-					<img src="https://media.wanderset.com/media/by97jjns7.amazon-btn.png" alt="" class="w-100">
-				</a>
+				<hr>
+
+				<form action="">
+					<div class="form-group">
+						<select name="" id="" class="form-control">
+							<option value="" disabled selected>Select Shipping Speed</option>
+							<option value="">1</option>
+							<option value="">2</option>
+						</select>
+					</div><!--form-group-->
+
+					<div class="my-4">
+						<div class="d-flex align-items-center justify-content-between fs-12 py-2">
+							<span>Subtotal</span>
+							<span>$85.45</span>
+						</div>
+
+						<div class="d-flex align-items-center justify-content-between fs-12 py-2">
+							<span>Taxes</span>
+							<span>$6.89</span>
+						</div>
+
+						<div class="d-flex align-items-center justify-content-between fs-12 py-2">
+							<b>Total</b>
+							<b>$91.45</b>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter Promo Code">
+					</div><!--form-group-->
+
+					<button type="submit" class="btn btn-danger btn-block">place order</button>
+				</form>
 			</div><!--container-->
 		</section><!--section-->
 
 	</main>
 
-	//= template/scripts-dependencies.html
+	<script src="assets/javascript/vendors.min.js"></script>
+	<script src="assets/javascript/scripts.js"></script>
 
 
 
