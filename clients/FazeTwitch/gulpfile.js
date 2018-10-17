@@ -62,7 +62,7 @@ gulp.task('sass:build', function () {
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
+  //.pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(path.build.stylesheets))
   .pipe(browserSync.reload({
     stream: true
@@ -72,7 +72,7 @@ gulp.task('sass:build', function () {
 // JAVASCRIPT
 gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(gulp.dest(path.build.javascript))
   .pipe(browserSync.reload({
     stream: true
@@ -81,9 +81,9 @@ gulp.task('javascript:build', task.javascript = function () {
 
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js',
-    'node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/popper.js/dist/umd/popper.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));
 });

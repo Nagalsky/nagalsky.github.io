@@ -1,1 +1,31 @@
-$(document).ready(function(){$(".product-qty__btn--plus").click(function(t){t.preventDefault();var e=$(this).parents(".product-qty");fieldName=$(this).attr("field");var r=parseInt(e.children(".product-qty__field").val())+1;isNaN(r)?e.children(".product-qty__field").val(0):e.children(".product-qty__field").val(r)}),$(".product-qty__btn--minus").click(function(t){t.preventDefault();var e=$(this).parents(".product-qty");fieldName=$(this).attr("field");var r=parseInt(e.children(".product-qty__field").val());!isNaN(r)&&r>1?e.children(".product-qty__field").val(r-1):e.children(".product-qty__field").val(1)})});
+$(document).ready(function(){
+
+
+	//Product QTY initial
+	$('.product-qty__btn--plus').click(function(e){
+    e.preventDefault();
+    var container = $(this).parents('.product-qty');
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt( container.children('.product-qty__field').val() );
+    var val2 = currentVal + 1;
+    if (!isNaN(val2)) {
+        container.children('.product-qty__field').val(val2);
+    } else {
+        container.children('.product-qty__field').val(0);
+    }
+  });
+
+  $('.product-qty__btn--minus').click(function(e) {
+    e.preventDefault();
+    var container = $(this).parents('.product-qty');
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt( container.children('.product-qty__field').val() );
+    if (!isNaN(currentVal) && currentVal > 1) {
+        container.children('.product-qty__field').val(currentVal - 1);
+    } else {
+        container.children('.product-qty__field').val(1);
+    }
+  });
+
+
+});

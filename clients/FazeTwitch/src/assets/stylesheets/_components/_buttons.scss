@@ -1,1 +1,10 @@
 /* BUTTONS */
+
+.btn {
+  @extend .rounded-0, .text-uppercase, .fs-7, .text-base-semibold, .kerning-2;
+  padding-top: 10.5px;
+  padding-bottom: 10.5px;
+  &.btn-danger {
+    @include button-variants($bg: $danger, $color: $white)
+  }
+}
