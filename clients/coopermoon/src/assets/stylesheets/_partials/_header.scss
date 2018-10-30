@@ -1,13 +1,21 @@
 /* HEADER */
 
 $header-border: solid 18px $blue;
+$header-border-mobile: solid 10px $base-color;
+$header-list-color: $muted;
 
-.header {
+.header {}
+
+.header__top {
+  position: relative;
+  padding: 25px 15px;
   @include media-breakpoint-up(lg) {
     border-top: $header-border;
-    padding: 40px 0;
+    padding: 40px 60px;
   }
-  padding: 25px 0;
+  @include media-breakpoint-down(md) {
+    border-bottom: $header-border-mobile;
+  }
 }
 
 .header__logo {
@@ -18,5 +26,159 @@ $header-border: solid 18px $blue;
   }
   @include media-breakpoint-down(xs) {
     max-width: 180px;
+  }
+}
+
+.header__list {
+  @extend .list-unstyled, .d-inline-flex;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include media-breakpoint-up(lg) {
+    right: 40px;
+  }
+}
+
+.header__list__item {
+  &+.header__list__item {
+    @include media-breakpoint-up(lg) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.header__list__link {
+  color: $header-list-color;
+  font-size: 18px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+  &:hover, &:focus {
+    color: darken($header-list-color, 10%);
+  }
+}
+
+.header__menu-toggle {
+  font-size: 20px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__bottom {
+  @include media-breakpoint-up(lg) {
+    border-bottom: 1px solid $white;
+    background: linear-gradient(to right, #dab29c 0%,#b05d2e 10%,#b05d2e 90%,#dab29c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dab29c', endColorstr='#dab29c',GradientType=1 ); /* IE6-9 */
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  >.container {
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+  }
+}
+
+.header__navbar {
+  @extend .list-unstyled, .d-lg-flex, .justify-content-lg-center;
+  @include media-breakpoint-down(md) {
+    background: rgba(#dde5e5, .8);
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .dropdown {
+    @include media-breakpoint-up(lg) {
+      position: static;
+      /*&:hover, &:focus {
+        .dropdown-menu {
+          display: block;
+        }
+      }*/
+    }
+  }
+  /*.dropdown-toggle {
+    @include media-breakpoint-up(lg) {
+      &:after {
+        content: none;
+      }
+    }
+  }*/
+  .dropdown-menu {
+    border: none;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      margin-left: 5px;
+      border-bottom: 1px solid #8c8d8b;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      @include gradient-y($start-color: rgba(#7b7f7f, .8), $end-color: rgba(#dde5e5, .8), $start-percent: 0%, $end-percent: 30%);
+    }
+    @include media-breakpoint-down(md) {
+      max-height: 145px;
+      overflow-y: auto;
+      position: relative !important;
+      transform: translate3d(0px, 0px, 0px) !important;
+      width: 100%;
+    }
+    >.container {
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.header__navbar__item {
+  position: relative;
+  &+.header__navbar__item {
+    @include media-breakpoint-down(md) {
+      border-top: 1px solid $white;
+    }
+    .header__navbar__link {
+      &:before {
+        @include media-breakpoint-up(lg) {
+          content: '';
+          position: absolute;
+          left: -1px;
+          top: 0;
+          height: 100%;
+          @include gradient-y($start-color: #b15e30, $end-color: #d09e82, $start-percent: 0%, $end-percent: 100%);
+          width: 1px;
+        }
+      }
+    }
+  }
+}
+
+.header__navbar__link {
+  color: $gray;
+  font-family: $font-medium;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  display: block;
+  position: relative;
+  &:hover, &:focus {
+    color: $gray;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 15px 10px;
+    color: $white;
+    font-size: 14px;
+    display: inline-block;
+    &:hover, &:focus {
+      color: $white;
+      @include gradient-y($start-color: #b46439, $end-color: #ca8561, $start-percent: 0%, $end-percent: 100%);
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 30px 15px;
+    font-size: 16px;
   }
 }
