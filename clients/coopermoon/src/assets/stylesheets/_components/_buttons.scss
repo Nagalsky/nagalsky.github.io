@@ -2,4 +2,17 @@
 
 .btn {
   border-radius: 0;
+  border: 1px solid #c9cac8;
+  background: $white;
+  color: #af5c2e;
+  text-transform: uppercase;
+  font-family: $font-bold;
+  @include media-breakpoint-up(md) {
+    padding: 14px 49px;
+  }
+  &:hover, &:focus {
+    background: darken($white, 5%);
+    color: #af5c2e;
+    box-shadow: none;
+  }
 }

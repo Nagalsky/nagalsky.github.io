@@ -6,4 +6,7 @@ $(document).ready(function(){
 			$('.header__bottom').slideToggle(300);
 	  });
 
+		//Slick gallery initial
+		$('.gallery').slick();
+
 });

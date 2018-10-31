@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".header__menu-toggle").on("click",function(e){e.preventDefault(),$(".header__bottom").slideToggle(300)})});
+$(document).ready(function(){$(".header__menu-toggle").on("click",function(e){e.preventDefault(),$(".header__bottom").slideToggle(300)}),$(".gallery").slick()});
