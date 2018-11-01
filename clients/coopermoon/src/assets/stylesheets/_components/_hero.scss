@@ -1,0 +1,43 @@
+/* HERO */
+
+$hero-color: $white;
+
+.hero {
+  color: $hero-color;
+}
+
+.hero__item {
+  padding: 20px 15px;
+  min-height: 516px;
+  @extend .d-flex, .align-items-center, .justify-content-center, .flex-column, .text-center;
+  position: relative;
+  z-index: 20;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    @include gradient-y($start-color: transparent, $end-color: rgba($black, .3), $start-percent: 0%, $end-percent: 100%);
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 300px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 240px;
+  }
+}
+
+.hero__title {
+  text-transform: uppercase;
+  font-size: 40px;
+  @extend .font-regular;
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+  }
+}
