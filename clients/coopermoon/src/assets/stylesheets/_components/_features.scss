@@ -1,0 +1,47 @@
+/* FEATURES */
+
+.gallery-features {
+  margin-left: -15px;
+  margin-right: -15px;
+  @include media-breakpoint-down(sm) {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 12px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+  .slick-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.gallery-features__item {
+  padding-left: 15px;
+  padding-right: 15px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.features__img-holder {
+  @extend .d-inline-block;
+  border: 8px solid $white;
+}
+
+.features__img {
+  @include media-breakpoint-up(md) {
+    border: 1px solid $black;
+  }
+}
