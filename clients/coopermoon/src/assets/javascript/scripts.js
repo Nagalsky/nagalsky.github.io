@@ -47,16 +47,21 @@ $(document).ready(function(){
 
 
 		$('.benefits').slick({
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 3000,
-			arrows: true,
-			mobileFirst: true,
+			arrows: false,
+			slidesToShow: 3,
+  		slidesToScroll: 1,
 			responsive: [
-	      {
-	        breakpoint: 768,
-	        settings: 'unslick'
-	      }
-	    ]
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        arrows: true
+		      }
+		    }
+		  ]
 		});
 
 
