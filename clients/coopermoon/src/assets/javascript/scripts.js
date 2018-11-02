@@ -89,5 +89,21 @@ $(document).ready(function(){
     }).trigger('afterChange');
 
 
+		$('.quotes--gallery').slick({
+			autoplay: true,
+			autoplaySpeed: 3000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			pauseOnFocus: false,
+			pauseOnHover: false
+		}).on('afterChange',function(event){
+      var toppos = ($('.quotes--gallery .slick-active').find(".quotes__body-text").height()/2);
+      $('.quotes--gallery .slick-arrow').css('top',toppos+'px');
+    }).trigger('afterChange');
+
+
+
+
 
 });
