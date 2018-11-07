@@ -7,6 +7,8 @@
   color: #af5c2e;
   text-transform: uppercase;
   font-family: $font-bold;
+  padding-left: 20px;
+  padding-right: 20px;
   @include media-breakpoint-up(md) {
     padding: 8px 49px;
   }
@@ -14,6 +16,9 @@
     background: darken($white, 5%);
     color: #af5c2e;
     box-shadow: none;
+  }
+  &.btn-brand {
+    @include button-variants($bg: #af5d2e, $color: $white);
   }
   &.btn-file {
     text-align: left;

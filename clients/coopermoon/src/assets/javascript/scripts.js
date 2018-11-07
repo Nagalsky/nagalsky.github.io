@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 		$('.gallery-features').slick({
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 5000,
 			arrows: true,
 			slidesToShow: 4,
   		slidesToScroll: 1,
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 		$('.benefits').slick({
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 5000,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 		$('.gallery-leadership').slick({
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 5000,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
@@ -91,7 +91,7 @@ $(document).ready(function(){
 
 		$('.quotes--gallery').slick({
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 5000,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
