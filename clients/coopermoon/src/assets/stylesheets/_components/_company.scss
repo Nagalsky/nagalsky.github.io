@@ -1,0 +1,57 @@
+/* COMPANY */
+
+
+.company {
+  text-align: center;
+}
+
+.company__logo-holder {
+  border: 6px solid $black;
+  padding: 50px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  @include media-breakpoint-up(sm) {
+    box-shadow: 0 2px 4px 1px rgba($black, .3);
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.company__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.company__brand-name {
+  color: #4f301c;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: $font-bold;
+}
+
+.company__name,
+.company__role {
+  color: #4f301c;
+  margin-bottom: 0px;
+  font-family: $font-bold;
+  line-height: 1.2;
+}
+
+.company__role {
+  margin-bottom: 5px;
+}
+
+.company__site,
+.company__email,
+.company__number {
+  display: block;
+  font-family: $font-bold;
+}

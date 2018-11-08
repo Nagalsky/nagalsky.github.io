@@ -22,6 +22,10 @@ $field-height: 40px;
 	}
 }
 
+.form-control--placeholder-gray {
+	@include custom-placeholder($color: #c5bebb, $font-size: 12px, $font-family: $font-bold);
+}
+
 .form-control--has-shadow {
 	box-shadow: 0px 0px 6px 1px rgba($black, .15);
 }
@@ -62,4 +66,16 @@ label {
 textarea {
 	resize: none;
 	min-height: 120px;
+}
+
+
+select.form-control:not([size]):not([multiple]) {
+	height: $field-height;
+}
+
+select.form-control {
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzA1MC4wOHB4IiBoZWlnaHQ9IjE1MjAuMDc3cHgiIHZpZXdCb3g9IjM0LjAxNSA3NjUuMDA1IDMwNTAuMDggMTUyMC4wNzciDQoJIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMzQuMDE1IDc2NS4wMDUgMzA1MC4wOCAxNTIwLjA3NyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjNjY2NjY2IiBwb2ludHM9IjM0LjAxNSw3NjUuMDA1IDE1NTkuMDU5LDIyODUuMDgzIDMwODQuMDk1LDc2NS4wMDUgIi8+DQo8L3N2Zz4NCg==');
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	background-position: right 10px center;
 }

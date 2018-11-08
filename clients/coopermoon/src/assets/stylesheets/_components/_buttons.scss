@@ -9,7 +9,7 @@
   font-family: $font-bold;
   padding-left: 20px;
   padding-right: 20px;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding: 8px 49px;
   }
   &:hover, &:focus {
@@ -37,6 +37,16 @@
       right: 12px;
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+  &.btn-link {
+    color: #c5bebb;
+    border-color: transparent;
+    background: transparent;
+    &:hover, &:focus {
+      color: darken(#c5bebb, 10%);
+      border-color: transparent;
+      background: transparent;
     }
   }
   &.btn-has-shadow {
