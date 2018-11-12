@@ -145,3 +145,33 @@ $gallery-color: $white;
     padding-bottom: 10px;
   }
 }
+
+.gallery--thumbnails {
+  @include media-breakpoint-up(md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .slick-arrow {
+    @extend .m-0;
+  }
+  .slick-prev {
+    left: 0px;
+    @include media-breakpoint-down(sm) {
+      left: -5px;
+    }
+  }
+  .slick-next {
+    right: 0px;
+    @include media-breakpoint-down(sm) {
+      right: -5px;
+    }
+  }
+  .slick-slide {
+    padding-left: 15px;
+    padding-right: 15px;
+    opacity: .5;
+    &.slick-current {
+      opacity: 1;
+    }
+  }
+}

@@ -23,6 +23,14 @@ $(document).ready(function(){
 		pauseOnHover: false
 	});
 
+	$('.product-gallery').slick({
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		infinite: false
+	});
+
+
+
 	$(window).on('load resize', function () {
    changepos();
   });

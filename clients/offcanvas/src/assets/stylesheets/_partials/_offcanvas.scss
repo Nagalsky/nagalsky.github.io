@@ -17,8 +17,28 @@ $offcanvas-transition: 350ms;
   overflow-y: auto;
   @include transition($offcanvas-transition);
   transform: translateX(-100%);
+  z-index: 200;
 }
 
 .offcanvas--opened {
   transform: translateX(0%);
+}
+
+.offcanvas-mask {
+  position: fixed;
+  @include transition($offcanvas-transition);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, .5);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.offcanvas-mask--opened {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
 }

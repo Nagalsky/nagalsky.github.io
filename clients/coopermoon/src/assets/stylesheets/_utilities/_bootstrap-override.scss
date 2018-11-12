@@ -4,3 +4,21 @@
 .container--sm {
   max-width: 880px;
 }
+
+
+.row--has-divider {
+  >[class^="col"] {
+    position: relative;
+    &+[class^="col"] {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        @include gradient-y-three-colors($start-color: rgba($black, .1), $mid-color: $black, $color-stop: 50%, $end-color: rgba($black, .1));
+      }
+    }
+  }
+}
