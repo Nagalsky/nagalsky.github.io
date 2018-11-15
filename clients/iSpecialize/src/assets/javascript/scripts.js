@@ -3,13 +3,15 @@ $(document).ready(function(){
 	//Mobile menu
 	$('.header__control-list__link--menu-toggle').on('click', function(event) {
 		event.preventDefault();
-		$('.header__navbar').slideToggle(300);
+		$('.header__navbar').toggleClass('header__navbar--opened');
+		$('.search-box').removeClass('search-box--opened');
 	});
 
 	//Search bar
 	$('.header__control-list__link--search-box-toggle').on('click', function(event) {
 		event.preventDefault();
 		$('.search-box').toggleClass('search-box--opened');
+		$('.header__navbar').removeClass('header__navbar--opened');
 	});
 	$(document).on("click touchstart", function(e){
   	if(
