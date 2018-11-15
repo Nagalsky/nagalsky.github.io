@@ -1,0 +1,17 @@
+/* BUTTONS */
+
+.btn {
+  @extend .rounded-0, .text-uppercase, .font-bold;
+  color: $black;
+  box-shadow: 0px 0px 2px 1px rgba($black, .3);
+  border: 1px solid $gray;
+  background: $white;
+  &:hover, &:focus {
+    box-shadow: 0px 0px 2px 1px rgba($black, .3);
+    color: $black;
+    background: $gray;
+  }
+  &.btn-brand {
+    @include button-variants($bg: $danger-secondary, $color: $white);
+  }
+}
