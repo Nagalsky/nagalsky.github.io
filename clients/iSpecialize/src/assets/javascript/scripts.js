@@ -62,6 +62,30 @@ $(document).ready(function(){
 	  ]
 	});
 
+	$('.gallery-locations').slick({
+		pauseOnHover: false,
+		pauseOnDotsHover: false,
+		pauseOnFocus: false,
+		slidesToShow: 3,
+  	slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		responsive: [
+			{
+	      breakpoint: 991,
+	      settings: {
+	        slidesToShow: 2
+	      }
+	    },
+			{
+	      breakpoint: 575,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+	});
+
 
 
 

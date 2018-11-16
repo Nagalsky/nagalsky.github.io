@@ -2,8 +2,24 @@
 
 .section {
   position: relative;
-  padding: 30px 0;
+  padding: 35px 0;
   @include media-breakpoint-up(md) {
     padding: 80px 0;
   }
+}
+
+.section--xl {
+  @include media-breakpoint-up(xl) {
+    padding: 150px 0;
+  }
+}
+
+
+.section--sm {
+  padding: 35px 0;
+}
+
+
+.section--has-gradient {
+  @include gradient-y($start-color: #dcdcdc, $end-color: #ffffff, $start-percent: 0%, $end-percent: 100%);
 }
