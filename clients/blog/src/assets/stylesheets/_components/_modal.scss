@@ -1,0 +1,32 @@
+/* MODAL */
+
+
+.modal-blog {
+  .modal-dialog {
+    @media (min-width: 991px) {
+      width: 800px;  
+    }
+  }
+  .modal-content {
+    border: 9px solid #bcddf2;
+    box-shadow: none;
+  }
+  .modal-body {
+    background: #ebf6ff;
+    padding: 0;
+  }
+  .modal-blog-row {
+    display: table;
+    margin: 0;
+    &:before,
+    &::after {
+      content: none;
+    }
+    >[class^="col"] {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0;
+    }
+  }
+}

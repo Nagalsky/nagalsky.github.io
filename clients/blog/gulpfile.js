@@ -81,9 +81,8 @@ gulp.task('javascript:build', task.javascript = function () {
 
 gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js',
-    'node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    'node_modules/jquery/jquery.min.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));
 });
