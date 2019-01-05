@@ -766,15 +766,20 @@
 
 		<!--begin::Global App Bundle -->
         <script src="assets/app/scripts/bundle/app.bundle.js" type="text/javascript"></script>
-        
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Sortable.js -->
+        <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+
         <script>
-        $( function() {
-            $( "#sortable" ).sortable();
-            $( "#sortable" ).disableSelection();
-        } );
+            var el = document.getElementById('sortable');
+            var sortable = Sortable.create(el, {
+                sort: true,  // sorting inside list
+                delay: 0, // time in milliseconds to define when the sorting should start
+                touchStartThreshold: 0, // px, how many pixels the point should move before cancelling a delayed drag event
+                disabled: false, // Disables the sortable if set to true.
+                store: null,  // @see Store
+                animation: 250
+            });
         </script>
 
 		<!--end::Global App Bundle -->
