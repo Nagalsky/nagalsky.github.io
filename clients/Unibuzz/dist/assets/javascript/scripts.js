@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$("#sidebar-toggle").on("");var t=$("#sidebar"),s=$("#sidebar-toggle, #sidebar-close"),a=$("#sidebar-mask");$(s).on("click",function(){s.toggleClass("active"),t.toggleClass("active"),a.toggleClass("active")}),$(document).on("click touchstart",function(e){0==$(e.target).closest(t).length&&0==$(e.target).closest(s).length&&(s.removeClass("active"),t.removeClass("active"),a.removeClass("active"))})});

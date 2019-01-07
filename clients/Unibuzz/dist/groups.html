@@ -14,12 +14,8 @@
       <nav class="navbar navbar-expand-lg navar-dashboard">
         <button
           class="navbar-toggler navbar-toggler--dashboard"
+          id="sidebar-toggle"
           type="button"
-          data-toggle="collapse"
-          data-target="#asideSupportedContent"
-          aria-controls="asideSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <i class="unibuzz-icon-menu"></i>
         </button>
@@ -107,15 +103,12 @@
               <a class="dropdown-item d-lg-none" href="#">Tutors</a>
               <a class="dropdown-item d-lg-none" href="#">Bookstore</a>
               <a class="dropdown-item d-lg-none" href="#">Classifieds</a>
-              <div class="dropdown-divider d-lg-none"></div>
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">log out</a>
             </div>
           </li>
         </ul>
       </nav>
-
-      <aside class="sidebar collapse d-lg-block" id="asideSupportedContent">
+      <aside class="sidebar" id="sidebar">
         <img src="assets/images/elements/logo.svg" alt="" class="sidebar__logo" />
         <h3 class="sidebar__title">
           <i class="unibuzz-icon-dashboard sidebar__title__icon"></i> Dashboard
@@ -205,8 +198,17 @@
           </li>
         </ul>
       </aside>
+      
+      <a href="#" id="sidebar-close" class="unibuzz-icon-close"></a>
+      
+      <div id="sidebar-mask"></div>
 
       <main class="main">
+        <div class="panel">
+          <div class="panel__body">
+            <h2>Here is will be a content</h2>
+          </div>
+        </div>
       </main>
     </div>
 

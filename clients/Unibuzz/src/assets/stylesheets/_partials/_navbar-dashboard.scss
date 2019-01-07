@@ -4,11 +4,17 @@ $navar-dashboard-mobile-bg: $blue-soft;
 $navar-dashboard-navlink-color: $blue;
 $navar-dashboard-right-navlink-color: $gray;
 $navar-dashboard-avatar-size: 60px;
+$navar-dashboard-border: 1px solid $violet-light;
 
 .navar-dashboard {
+  @include media-breakpoint-up(lg) {
+    border-bottom: $navar-dashboard-border;
+    margin-bottom: 40px;
+  }
   @include media-breakpoint-down(md) {
     background: $navar-dashboard-mobile-bg;
     color: $white;
+    padding-right: 0;
   }
 }
 
@@ -33,7 +39,7 @@ $navar-dashboard-avatar-size: 60px;
         margin-left: 20px;
       }
       @include media-breakpoint-down(lg) {
-        margin-left: 10px;
+        margin-left: 15px;
       }
     }
     .nav-link {
@@ -62,6 +68,11 @@ $navar-dashboard-avatar-size: 60px;
       margin-left: 10px;
       @include media-breakpoint-down(lg) {
         margin-left: 5px;
+      }
+    }
+    &:last-child {
+      @include media-breakpoint-down(md) {
+        padding-right: 1rem;
       }
     }
     .nav-link {
@@ -93,6 +104,7 @@ $navar-dashboard-avatar-size: 60px;
       @include media-breakpoint-down(md) {
         width: calc(#{$navar-dashboard-avatar-size} - 25px);
         height: calc(#{$navar-dashboard-avatar-size} - 25px);
+        border: 1px solid $white;
       }
       &:after {
         content: none;

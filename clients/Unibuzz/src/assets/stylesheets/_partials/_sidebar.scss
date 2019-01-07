@@ -7,24 +7,25 @@ $sidebar-color: $white;
 
 .sidebar {
   background: $sidebar-bg;
-  padding-left: 15px;
-  padding-right: 15px;
   color: $sidebar-color;
   overflow-y: auto;
-  @include media-breakpoint-up(lg) {
-    position: fixed;
-    width: $sidebar-width-tablet;
-    left: 0;
-    top: 0;
-    height: 100%;
-    padding: 30px 15px;
-  }
+  width: $sidebar-width-tablet;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 20px 15px;
+  z-index: 400;
   @include media-breakpoint-up(xl) {
     width: $sidebar-width;
     padding: 30px;
   }
   @include media-breakpoint-down(md) {
-    max-height: 300px;
+    @include transition($base-transition);
+    transform: translateX(-100%);
+  }
+  &.active {
+    transform: translateX(0%);
   }
 }
 
@@ -38,9 +39,6 @@ $sidebar-color: $white;
   font-size: 21px;
   @include media-breakpoint-up(lg) {
     margin-bottom: 40px;
-  }
-  @include media-breakpoint-down(md) {
-    padding-top: 15px;
   }
 }
 .sidebar__title__icon {
@@ -56,7 +54,7 @@ $sidebar-color: $white;
     padding-left: 35px;
   }
   @include media-breakpoint-down(md) {
-    padding-bottom: 15px;
+    padding-left: 0;
   }
   .badge {
     margin-left: 10px;
@@ -133,5 +131,38 @@ $sidebar-color: $white;
   &:hover,
   &:focus {
     color: $sky;
+  }
+}
+
+
+#sidebar-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba($blue-soft, .75);
+  z-index: 300;
+  @include transition($base-transition);
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#sidebar-close {
+  position: fixed;
+  right: 23px;
+  top: 20px;
+  color: $white;
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 450;
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
