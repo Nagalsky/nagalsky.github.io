@@ -1,14 +1,15 @@
 $(document).ready(function() {
   //Sidebar toggle
-  $("#sidebar-toggle").on("");
-
   var $menu = $("#sidebar");
   var $menuToggle = $("#sidebar-toggle, #sidebar-close");
   var $menuMask = $("#sidebar-mask");
-  $($menuToggle).on("click", function() {
+  var $body = $("body");
+  $($menuToggle).on("click", function(e) {
+    e.preventDefault();
     $menuToggle.toggleClass("active");
     $menu.toggleClass("active");
     $menuMask.toggleClass("active");
+    $body.toggleClass("overflow-hidden");
   });
 
   $(document).on("click touchstart", function(e) {
@@ -19,6 +20,17 @@ $(document).ready(function() {
       $menuToggle.removeClass("active");
       $menu.removeClass("active");
       $menuMask.removeClass("active");
+      $body.removeClass("overflow-hidden");
     }
+  });
+
+  //Card body collapse
+  $(".card-toggle-btn").on("click", function(e) {
+    e.preventDefault();
+    $(this)
+      .toggleClass("active")
+      .parent()
+      .next(".card-body")
+      .slideToggle(300);
   });
 });

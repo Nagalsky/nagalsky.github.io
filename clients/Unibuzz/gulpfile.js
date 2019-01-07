@@ -24,6 +24,7 @@ var path = {
     stylesheets: 'dist/assets/stylesheets/',
     img: 'dist/assets/images/',
     javascript: 'dist/assets/javascript/',
+    vendors: 'dist/assets/vendors/',
     fonts: 'dist/assets/fonts/'
   },
   src: {
@@ -31,6 +32,7 @@ var path = {
     stylesheets: 'src/assets/stylesheets/*.scss',
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
+    vendors: 'src/assets/vendors/**/*.**',
     fonts: 'src/assets/fonts/**/*.*'
   },
   watch: {
@@ -38,6 +40,7 @@ var path = {
     stylesheets: 'src/assets/stylesheets/**/*.scss',
     img: 'src/assets/images/**/*.*',
     javascript: 'src/assets/javascript/**/*.js',
+    vendors: 'src/assets/vendors/**/*.**',
     fonts: 'src/assets/fonts/**/*.*'
   }
 };
@@ -83,9 +86,19 @@ gulp.task('javascript:vendors', task.javascript = function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/simplebar/dist/simplebar.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js'])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(path.build.javascript));
+});
+
+// JAVASCRIPT
+gulp.task('vendors:build', task.vendors = function () {
+  gulp.src(path.src.vendors)
+  .pipe(gulp.dest(path.build.vendors))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 // FONTS
@@ -140,6 +153,7 @@ gulp.task('build', [
   'img:build',
   'javascript:build',
   'javascript:vendors',
+  'vendors:build',
   'fonts:build'
 ]);
 
@@ -155,6 +169,9 @@ gulp.task('watch', function () {
   });
   watch([path.watch.javascript], function (event, cb) {
     gulp.start('javascript:build');
+  });
+  watch([path.watch.vendors], function (event, cb) {
+    gulp.start('vendors:build');
   });
   watch([path.watch.fonts], function (event, cb) {
     gulp.start('fonts:build');

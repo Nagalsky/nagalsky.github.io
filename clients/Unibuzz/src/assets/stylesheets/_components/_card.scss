@@ -1,2 +1,66 @@
 /* CARD */
 
+$card-header-bg: $blue-soft;
+$card-body-bg: $violet-light;
+
+.card {
+  @extend .border-0, .rounded-0;
+}
+
+.card-header {
+  background: $card-header-bg;
+  color: $white;
+  @extend .border-0, .rounded-0;
+  @include media-breakpoint-up(xl) {
+    padding: 14px 25px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.card-header__title {
+  font-size: 27px;
+  @extend .font-poppins-semibold, .text-white;
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 15px;
+  }
+}
+.card-header__subtitle {
+  font-size: 14px;
+  @extend .font-poppins-light, .text-success;
+  @include media-breakpoint-down(sm) {
+    font-size: 10px;
+  }
+}
+
+.card-body {
+  background: $card-body-bg;
+  @include media-breakpoint-up(xl) {
+    padding: 14px 25px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.card-body--fixed {
+  height: 288px;
+  overflow: auto;
+}
+
+.card-toggle-btn {
+  color: $sky;
+  @extend .font-icons, .unibuzz-icon-minus-outline;
+  font-size: 18px;
+  &:hover,
+  &:focus {
+    color: darken($sky, 10%);
+  }
+  &.active {
+    @extend .unibuzz-icon-add-outline;
+  }
+}

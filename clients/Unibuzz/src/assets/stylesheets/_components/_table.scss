@@ -1,0 +1,108 @@
+/* TABLE */
+
+$thead-color: $violet;
+
+$table-avatar-size: 36px;
+
+.table {
+  > thead,
+  > tbody {
+    > th,
+    td {
+       @extend .font-poppins-light;
+    }
+  }
+  >thead {
+    >th, td {
+      color: $thead-color;
+    }
+  }
+  > tbody {
+    > th,
+    td {
+      vertical-align: middle;
+    }
+  }
+  p, ul, ol {
+    line-height: 1;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.table-sticky {
+  height: 288px;
+  overflow: auto;
+  .table {
+    > thead {
+      > th,
+      td {
+         position: sticky;
+         left: 0;
+         top: 0;
+         background: $card-body-bg;
+         z-index: 20;
+      }
+    }
+  }
+}
+
+.table-card {
+  > thead,
+  > tbody {
+    > th,
+    td {
+      &:first-child {
+        width: $table-avatar-size;
+      }
+      @extend .border-0, .text-truncate;
+    }
+  }
+}
+
+
+.table-card__avatar {
+  width: $table-avatar-size;
+  height: $table-avatar-size;
+  @extend .rounded-circle;
+}
+
+.table-card__user {
+  @extend .text-violet-soft, .font-poppins-semibold, .d-flex, .align-items-center;
+}
+.table-card__user__icon {
+  font-size: 16px;
+  @extend .text-orange, .ml-2, .position-relative;
+  &:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    @extend .rounded-circle, .bg-success, .position-absolute;
+    top: 0;
+    right: -2px;
+  }
+}
+
+.table-card__role {
+  @extend .text-pink, .font-poppins-light;
+  font-size: 12px;
+}
+
+.table-card__control {
+  position: relative;
+  display: inline-block;
+  &+.table-card__control {
+    margin-left: 17px;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: -10px;
+      background: $blue-soft;
+    }
+  }
+}

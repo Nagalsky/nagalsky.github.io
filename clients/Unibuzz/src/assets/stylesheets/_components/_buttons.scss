@@ -1,1 +1,12 @@
 /* BUTTONS */
+
+.btn {
+  border-radius: 50px;
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+  &.btn-orange {
+    @include button-variants($bg: $orange, $color: $white);
+  }
+}
