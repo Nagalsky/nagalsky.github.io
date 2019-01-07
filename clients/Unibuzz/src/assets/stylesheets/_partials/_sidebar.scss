@@ -1,0 +1,137 @@
+/* SIDEBAR */
+
+$sidebar-width: 315px;
+$sidebar-width-tablet: 210px;
+$sidebar-bg: $blue-soft;
+$sidebar-color: $white;
+
+.sidebar {
+  background: $sidebar-bg;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: $sidebar-color;
+  overflow-y: auto;
+  @include media-breakpoint-up(lg) {
+    position: fixed;
+    width: $sidebar-width-tablet;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 30px 15px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: $sidebar-width;
+    padding: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    max-height: 300px;
+  }
+}
+
+.sidebar__logo {
+  max-width: 172px;
+  @extend .d-none, .d-lg-block;
+  margin-bottom: 60px;
+}
+
+.sidebar__title {
+  font-size: 21px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 15px;
+  }
+}
+.sidebar__title__icon {
+  margin-right: 15px;
+}
+
+.sidebar__list {
+  @extend .list-unstyled;
+  @include media-breakpoint-down(lg) {
+    padding-left: 15px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 35px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 15px;
+  }
+  .badge {
+    margin-left: 10px;
+  }
+}
+.sidebar__list__item {
+  & + .sidebar__list__item {
+    margin-top: 30px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 24px;
+    }
+  }
+}
+.sidebar__list__link {
+  @extend .d-flex, .align-items-center, .font-poppins-semibold;
+  color: $white;
+  font-size: 18px;
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+  &:hover,
+  &:focus {
+    color: $sky;
+  }
+}
+.sidebar__list__icon {
+  color: $sky;
+  font-size: 30px;
+  @extend .d-inline-block;
+  margin-right: 10px;
+  margin-top: -3px;
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+}
+
+.sidebar__list__span {
+  @extend .text-truncate;
+}
+
+.sidebar__sublist {
+  @extend .list-unstyled;
+  margin-top: 10px;
+  padding-left: 35px;
+  @include media-breakpoint-up(xl) {
+    padding-left: 40px;
+  }
+}
+.sidebar__sublist__item {
+  & + .sidebar__sublist__item {
+    margin-top: 10px;
+  }
+}
+.sidebar__sublist__link {
+  @extend .font-poppins-semibold;
+  position: relative;
+  color: $white;
+  font-size: 18px;
+  padding-left: 15px;
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $danger;
+  }
+  &:hover,
+  &:focus {
+    color: $sky;
+  }
+}

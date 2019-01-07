@@ -1,108 +1,91 @@
 /* Fonts icons */
 
-//Fontello
-
+//Iconmoon
 @font-face {
-  font-family: 'fontello';
-  src: url('#{$font-path}fontello/fontello.eot?14757852');
-  src: url('#{$font-path}fontello/fontello.eot?14757852#iefix') format('embedded-opentype'),
-       url('#{$font-path}fontello/fontello.woff2?14757852') format('woff2'),
-       url('#{$font-path}fontello/fontello.woff?14757852') format('woff'),
-       url('#{$font-path}fontello/fontello.ttf?14757852') format('truetype'),
-       url('#{$font-path}fontello/fontello.svg?14757852#fontello') format('svg');
+  font-family: "icomoon";
+  src: url("#{$font-path}icomoon/fonts/icomoon.eot?xkiukj");
+  src: url("#{$font-path}icomoon/fonts/icomoon.eot?xkiukj#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}icomoon/fonts/icomoon.ttf?xkiukj") format("truetype"),
+    url("#{$font-path}icomoon/fonts/icomoon.woff?xkiukj") format("woff"),
+    url("#{$font-path}icomoon/fonts/icomoon.svg?xkiukj#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
- [class^="learning-icon-"]:before, [class*=" learning-icon-"]:before {
-  font-family: "fontello";
+[class^="unibuzz-icon-"],
+[class*=" unibuzz-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
   font-style: normal;
   font-weight: normal;
-  speak: none;
-
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
   font-variant: normal;
   text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.learning-icon-hands:before { content: '\e800'; } /* '' */
-.learning-icon-chat:before { content: '\e801'; } /* '' */
-.learning-icon-badge:before { content: '\e802'; } /* '' */
-.learning-icon-mobile:before { content: '\e803'; } /* '' */
-.learning-icon-doc:before { content: '\e804'; } /* '' */
-.learning-icon-face:before { content: '\e805'; } /* '' */
-.learning-icon-headphones:before { content: '\e806'; } /* '' */
-.learning-icon-sun:before { content: '\e807'; } /* '' */
-.learning-icon-twitter:before { content: '\e808'; } /* '' */
-.learning-icon-facebook:before { content: '\e809'; } /* '' */
-.learning-icon-gplus:before { content: '\e80a'; } /* '' */
-.learning-icon-pinterest:before { content: '\e80b'; } /* '' */
-.learning-icon-menu:before { content: '\e80c'; } /* '' */
-.learning-icon-cog:before { content: '\e80d'; } /* '' */
-.learning-icon-user-outline:before { content: '\e80e'; } /* '' */
-.learning-icon-lock-open-alt:before { content: '\e80f'; } /* '' */
-.learning-icon-search:before { content: '\e810'; } /* '' */
-.learning-icon-calendar:before { content: '\e811'; } /* '' */
-.learning-icon-doc-text:before { content: '\e812'; } /* '' */
-.learning-icon-attention-alt:before { content: '\e813'; } /* '' */
-.learning-icon-award:before { content: '\e814'; } /* '' */
-.learning-icon-plus-circled:before { content: '\e815'; } /* '' */
-.learning-icon-minus-circled:before { content: '\e816'; } /* '' */
-.learning-icon-cancel-circled2:before { content: '\e817'; } /* '' */
-.learning-icon-book-open:before { content: '\e818'; } /* '' */
-.learning-icon-ok-circled:before { content: '\e819'; } /* '' */
-.learning-icon-ok-circled-1:before { content: '\e81a'; } /* '' */
-.learning-icon-attention-alt-1:before { content: '\e81b'; } /* '' */
-.learning-icon-exclamation:before { content: '\e81c'; } /* '' */
-.learning-icon-error:before { content: '\e81d'; } /* '' */
-.learning-icon-check-1:before { content: '\e81e'; } /* '' */
-.learning-icon-check-empty:before { content: '\e81f'; } /* '' */
-.learning-icon-volume:before { content: '\e820'; } /* '' */
-.learning-icon-down-open:before { content: '\e821'; } /* '' */
-.learning-icon-left-open:before { content: '\e822'; } /* '' */
-.learning-icon-right-open:before { content: '\e823'; } /* '' */
-.learning-icon-up-open:before { content: '\e824'; } /* '' */
-.learning-icon-document-with-pen:before { content: '\e825'; } /* '' */
-.learning-icon-document-with-arrow:before { content: '\e826'; } /* '' */
-.learning-icon-clock:before { content: '\e827'; } /* '' */
-.learning-icon-document:before { content: '\e828'; } /* '' */
-.learning-icon-ok:before { content: '\e829'; } /* '' */
-.learning-icon-eye:before { content: '\e82a'; } /* '' */
-.learning-icon-heart:before { content: '\e82b'; } /* '' */
-.learning-icon-edit:before { content: '\e82c'; } /* '' */
-.learning-icon-eye-1:before { content: '\e82d'; } /* '' */
-.learning-icon-face-1:before { content: '\e82e'; } /* '' */
-.learning-icon-check:before { content: '\e82f'; } /* '' */
-.learning-icon-folder-empty:before { content: '\e830'; } /* '' */
-.learning-icon-trash-empty:before { content: '\e831'; } /* '' */
-.learning-icon-books:before { content: '\e832'; } /* '' */
-.learning-icon-classroom:before { content: '\e833'; } /* '' */
-.learning-icon-courses:before { content: '\e834'; } /* '' */
-.learning-icon-phrases:before { content: '\e835'; } /* '' */
-.learning-icon-reports:before { content: '\e836'; } /* '' */
-.learning-icon-students:before { content: '\e837'; } /* '' */
-.learning-icon-teacher:before { content: '\e838'; } /* '' */
-.learning-icon-wordsanddef:before { content: '\e839'; } /* '' */
-.learning-icon-book:before { content: '\e83a'; } /* '' */
-.learning-icon-comment:before { content: '\e83b'; } /* '' */
-.learning-icon-play:before { content: '\e83c'; } /* '' */
-.learning-icon-cancel:before { content: '\e83d'; } /* '' */
-.learning-icon-microphone:before { content: '\e83e'; } /* '' */
-.learning-icon-translate:before { content: '\e83f'; } /* '' */
-.learning-icon-reding:before { content: '\e840'; } /* '' */
-.learning-icon-hear:before { content: '\e841'; } /* '' */
-.learning-icon-pic:before { content: '\e842'; } /* '' */
-.learning-icon-bite:before { content: '\e843'; } /* '' */
-.learning-icon-reports-1:before { content: '\e844'; } /* '' */
-.learning-icon-spell:before { content: '\e845'; } /* '' */
-.learning-icon-start:before { content: '\e846'; } /* '' */
-.learning-icon-doc-text-1:before { content: '\f0f6'; } /* '' */
-.learning-icon-stop-circle-o:before { content: '\f28e'; } /* '' */
+.unibuzz-icon-envelope:before {
+  content: "\e900";
+}
+.unibuzz-icon-email:before {
+  content: "\e900";
+}
+.unibuzz-icon-mail:before {
+  content: "\e900";
+}
+.unibuzz-icon-letter:before {
+  content: "\e900";
+}
+.unibuzz-icon-contact:before {
+  content: "\e900";
+}
+.unibuzz-icon-menu:before {
+  content: "\e90f";
+}
+.unibuzz-icon-arrow-left:before {
+  content: "\e901";
+}
+.unibuzz-icon-arrow-right:before {
+  content: "\e902";
+}
+.unibuzz-icon-books:before {
+  content: "\e903";
+}
+.unibuzz-icon-calendar:before {
+  content: "\e904";
+}
+.unibuzz-icon-classifieds:before {
+  content: "\e905";
+}
+.unibuzz-icon-dashboard:before {
+  content: "\e906";
+}
+.unibuzz-icon-groups:before {
+  content: "\e907";
+}
+.unibuzz-icon-inbox:before {
+  content: "\e908";
+}
+.unibuzz-icon-invitation:before {
+  content: "\e909";
+}
+.unibuzz-icon-notes:before {
+  content: "\e90a";
+}
+.unibuzz-icon-question:before {
+  content: "\e90b";
+}
+.unibuzz-icon-ring:before {
+  content: "\e90c";
+}
+.unibuzz-icon-tutors:before {
+  content: "\e90d";
+}
+.unibuzz-icon-account:before {
+  content: "\e90e";
+}

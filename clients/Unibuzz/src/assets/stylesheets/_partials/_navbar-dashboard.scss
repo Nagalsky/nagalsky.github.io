@@ -1,0 +1,106 @@
+/* NAVBAR DASHBOARD */
+
+$navar-dashboard-mobile-bg: $blue-soft;
+$navar-dashboard-navlink-color: $blue;
+$navar-dashboard-right-navlink-color: $gray;
+$navar-dashboard-avatar-size: 60px;
+
+.navar-dashboard {
+  @include media-breakpoint-down(md) {
+    background: $navar-dashboard-mobile-bg;
+    color: $white;
+  }
+}
+
+.navar-dashboard__logo {
+  @extend .d-inline-block, .d-lg-none;
+  max-width: 140px;
+  @include media-breakpoint-down(sm) {
+    max-width: 110px;
+  }
+}
+
+.navbar-toggler--dashboard {
+  color: $white;
+  margin-right: 10px;
+}
+
+.navbar-nav--dashboard {
+  .nav-item {
+    & + .nav-item {
+      margin-left: 50px;
+      @media screen and (max-width: 1500px) {
+        margin-left: 20px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-left: 10px;
+      }
+    }
+    .nav-link {
+      font-size: 16px;
+      color: $navar-dashboard-navlink-color;
+      text-transform: uppercase;
+      @extend .px-lg-0;
+      @media screen and (max-width: 1500px) {
+        font-size: 14px;
+      }
+      &:hover,
+      &:focus {
+        color: darken($navar-dashboard-navlink-color, 10%);
+      }
+    }
+  }
+}
+
+.navbar-nav--dashboard-right {
+  @extend .align-items-center;
+  @include media-breakpoint-down(lg) {
+    margin-left: auto;
+  }
+  .nav-item {
+    & + .nav-item {
+      margin-left: 10px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 5px;
+      }
+    }
+    .nav-link {
+      color: $navar-dashboard-right-navlink-color;
+      font-size: 24px;
+      @media screen and (max-width: 1500px) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        color: $white;
+      }
+      &:hover,
+      &:focus {
+        color: darken($navar-dashboard-right-navlink-color, 10%);
+      }
+    }
+    .dropdown-toggle--dashboard-avatar {
+      width: $navar-dashboard-avatar-size;
+      height: $navar-dashboard-avatar-size;
+      border-radius: 50%;
+      padding: 0;
+      @media screen and (max-width: 1500px) {
+        width: calc(#{$navar-dashboard-avatar-size} - 5px);
+        height: calc(#{$navar-dashboard-avatar-size} - 5px);
+      }
+      @include media-breakpoint-down(md) {
+        width: calc(#{$navar-dashboard-avatar-size} - 25px);
+        height: calc(#{$navar-dashboard-avatar-size} - 25px);
+      }
+      &:after {
+        content: none;
+      }
+    }
+  }
+  .dropdown-menu {
+    float: left;
+    position: absolute;
+  }
+}

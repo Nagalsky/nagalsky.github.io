@@ -1,0 +1,16 @@
+/* WRAPPER */
+
+$wrapper-bg: $gray-light;
+
+.wrapper {
+  background: $wrapper-bg;
+  @include media-breakpoint-up(lg) {
+    margin-left: $sidebar-width-tablet;
+    padding: 0px 15px 30px 15px;
+    min-height: 100vh;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: $sidebar-width;
+    padding: 0px 30px 30px 30px;
+  }
+}
