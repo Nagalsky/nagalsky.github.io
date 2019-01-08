@@ -1,0 +1,34 @@
+/* CARD TABLE */
+
+$card-table-bg: #d9def1;
+$card-table-border-color: #babfd2;
+
+.card-table {
+  background: $card-table-bg;
+  max-height: 210px;
+  overflow: auto;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
+}
+
+.card-table__item {
+  padding: 10px 20px 0px 10px;
+  @extend .d-flex, .align-items-start;
+  &:last-child {
+    padding-bottom: 10px;
+  }
+  &+.card-table__item{
+    border-top: 1px solid $card-table-border-color;
+    margin-top: 10px;
+  }
+}
+
+.card-table__avatar {
+  @extend .rounded-circle, .flex-shrink-0, .mr-2;
+  width: 30px;
+}
+
+.card-table__content {
+  flex: 1;
+}

@@ -9,4 +9,15 @@
   &.btn-orange {
     @include button-variants($bg: $orange, $color: $white);
   }
+  &.btn-blue {
+    @include button-variants($bg: #6881c0, $color: $white);
+  }
+  &.btn-sm {
+    font-size: 17px;
+    padding: 1px 20px;
+    @media screen and (max-width:1500px) {
+      font-size: 14px;
+      padding: 1px 8px;
+    }
+  }
 }
