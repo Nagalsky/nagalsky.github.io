@@ -4,8 +4,11 @@ $panel-bg: $violet-light;
 $panel-body-bg: $white;
 
 .panel {
-  background: $panel-bg;
-  padding: 15px;
+  padding-bottom: 15px;
+  @include media-breakpoint-up(md) {
+    background: $panel-bg;
+    padding: 15px;
+  }
   @include media-breakpoint-up(xl) {
     padding: 35px;
   }
@@ -14,7 +17,9 @@ $panel-body-bg: $white;
 .panel__body {
   background: $panel-body-bg;
   padding: 15px;
-  border-radius: 6px;
+  @include media-breakpoint-up(md) {
+    border-radius: 6px;
+  }
   @include media-breakpoint-up(xl) {
     padding: 35px;
   }

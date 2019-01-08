@@ -23,12 +23,6 @@ $table-avatar-size: 36px;
       vertical-align: middle;
     }
   }
-  p, ul, ol {
-    line-height: 1;
-    &:not(:last-child) {
-      margin-bottom: 4px;
-    }
-  }
 }
 
 .table-sticky {
@@ -59,21 +53,34 @@ $table-avatar-size: 36px;
       @extend .border-0, .text-truncate;
     }
   }
+  >tbody {
+    tr {
+      >td, th {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
 }
 
 
-.table-card__avatar {
+.table__avatar {
   width: $table-avatar-size;
   height: $table-avatar-size;
   @extend .rounded-circle;
 }
 
-.table-card__user {
-  @extend .text-violet-soft, .font-poppins-semibold, .d-flex, .align-items-center;
+.table__user {
+  @extend .text-violet-soft, .font-poppins-semibold;
+  line-height: 1;
+  margin-bottom: 4px;
 }
-.table-card__user__icon {
+.table__user__icon {
   font-size: 16px;
   @extend .text-orange, .ml-2, .position-relative;
+  vertical-align: sub;
+  top: -1px;
   &:after {
     content: '';
     width: 7px;
@@ -84,12 +91,13 @@ $table-avatar-size: 36px;
   }
 }
 
-.table-card__role {
+.table__role {
   @extend .text-pink, .font-poppins-light;
   font-size: 12px;
+  line-height: 1;
 }
 
-.table-card__control {
+.table__control {
   position: relative;
   display: inline-block;
   &+.table-card__control {
@@ -105,4 +113,35 @@ $table-avatar-size: 36px;
       background: $blue-soft;
     }
   }
+}
+
+.table-group {
+  >thead {
+    >th, td {
+      @extend .border-0;
+    }
+  }
+  >tbody {
+    >tr {
+      &:first-child {
+        >th, td {
+          @extend .border-0;
+        }
+      }
+      >th, >td {
+        &:first-child {
+          padding-left: 0;
+        }
+        border-color: #e2e8f5;
+      }
+    }
+  }
+}
+
+.table-group__description {
+  max-width: 550px;
+}
+
+.table__logo {
+  width: 82px;
 }

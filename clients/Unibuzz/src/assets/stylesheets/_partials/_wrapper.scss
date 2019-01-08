@@ -3,7 +3,9 @@
 $wrapper-bg: $gray-light;
 
 .wrapper {
-  background: $wrapper-bg;
+  @include media-breakpoint-up(md) {
+    background: $wrapper-bg;
+  }
   @include media-breakpoint-up(lg) {
     margin-left: $sidebar-width-tablet;
     padding: 0px 15px 30px 15px;
