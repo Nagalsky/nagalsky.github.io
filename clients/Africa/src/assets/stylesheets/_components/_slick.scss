@@ -1,0 +1,30 @@
+/* SLICK */
+
+$slick-dot-size: 9px;
+
+.slick-dots {
+  @extend .position-static;
+  > li {
+    width: $slick-dot-size;
+    height: $slick-dot-size;
+    margin: 0 20px;
+    &.slick-active {
+      > button {
+        background: $white;
+        @include scale(1.2);
+      }
+    }
+    > button {
+      width: $slick-dot-size;
+      height: $slick-dot-size;
+      @extend .p-0, .rounded-circle;
+      border: 2px solid $white;
+      &:hover {
+        background: $white;
+      }
+      &:before {
+        content: none;
+      }
+    }
+  }
+}

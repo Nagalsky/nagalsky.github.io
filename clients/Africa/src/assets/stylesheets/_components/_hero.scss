@@ -4,6 +4,10 @@ $hero-color: $white;
 
 .hero {
   color: $hero-color;
+  @extend .position-relative;
+}
+
+.hero__gallery {
 }
 
 .hero__item {
@@ -15,12 +19,42 @@ $hero-color: $white;
 }
 
 .hero__inner {
-  max-width: 700px;
-  text-align: center;
+  max-width: 730px;
+  @extend .text-center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .hero__title {
   @include media-breakpoint-up(xl) {
     font-size: 70px;
+    margin-bottom: 35px;
   }
+}
+
+.hero__navigation {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding: 20px;
+  @extend .w-100,
+    .container,
+    .position-absolute,
+    .d-flex,
+    .justify-content-center,
+    .align-items-center;
+
+  .slick-dots {
+    @extend .d-inline-flex, .align-items-center;
+    width: auto;
+  }
+}
+
+.hero__gallery__controls {
+  @extend .border-0, .p-0;
+  background: none;
+  font-size: 20px;
+  color: $white;
+  margin-right: 10px;
 }
