@@ -14,7 +14,7 @@ $(document).ready(function() {
   //Hero gallery
   $('.hero__gallery').slick({
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     arrows: false,
     dots: true,
     appendDots: $(".hero__navigation"),

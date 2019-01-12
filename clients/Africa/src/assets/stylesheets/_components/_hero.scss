@@ -14,7 +14,7 @@ $hero-color: $white;
   min-height: 100vh;
   @extend .d-flex, .justify-content-center, .align-items-center;
   @include media-breakpoint-down(md) {
-    min-height: calc(100vh - #{$navbar-height});
+    min-height: 70vh;
   }
 }
 
@@ -26,6 +26,8 @@ $hero-color: $white;
 }
 
 .hero__title {
+  line-height: 1.2;
+  font-family: $font-black;
   @include media-breakpoint-up(xl) {
     font-size: 70px;
     margin-bottom: 35px;
