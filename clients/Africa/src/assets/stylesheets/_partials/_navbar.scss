@@ -1,0 +1,214 @@
+/* NAVBAR */
+
+$navbar-color: $white;
+$navbar-bg: $success;
+$navbar-ff: $font-bold;
+$navbar-height: 56px;
+$navbar-toggler-size: 24px;
+
+.navbar {
+  padding: 25px 0;
+  @include transition(500ms);
+  @include media-breakpoint-down(md) {
+    padding: 10px 0px;
+    background: $navbar-bg;
+    min-height: $navbar-height;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 10px 15px;
+  }
+  &.navbar--animated {
+    @include media-breakpoint-up(lg) {
+      background: rgba($navbar-bg, 0.75);
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          &:hover,
+          &:focus {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(xs) {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.navbar-hr {
+  border-color: darken($success, 10%);
+  @include media-breakpoint-down(xs) {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+  }
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-family: $navbar-ff;
+  color: $navbar-color;
+  &:hover,
+  &:focus {
+    color: $navbar-color;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 24px;
+  }
+  .navbar-brand__title {
+    font-size: 18px;
+    font-family: $navbar-ff;
+    color: $navbar-color;
+    &:hover,
+    &:focus {
+      color: $navbar-color;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.navbar-nav {
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+  .nav-item {
+    .nav-link {
+      color: $navbar-color;
+      font-family: $navbar-ff;
+      @extend .d-block;
+      @include media-breakpoint-up(lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &:hover,
+      &:focus {
+        color: $success-thin;
+        @include media-breakpoint-down(md) {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.dropdown--language {
+  @include media-breakpoint-up(xl) {
+    margin-left: 20px;
+  }
+}
+
+.dropdown-toggle--language {
+  &:after {
+    content: none;
+  }
+}
+
+.dropdown-toggle--language__flag {
+  @extend .rounded, .img-fluid;
+  width: 36px;
+  margin-left: 10px;
+  @include media-breakpoint-up(xl) {
+    margin-left: 30px;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 28px;
+  }
+}
+
+.dropdown-menu--language {
+  @extend .rounded-0, .p-0;
+  min-width: 200px;
+  max-width: 200px;
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media-breakpoint-down(md) {
+    position: relative !important;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 18px 18px 18px;
+    border-color: transparent transparent $white transparent;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
+  .dropdown-item {
+    font-size: 15px;
+    color: $black;
+    padding: 14.5px 15px;
+    @extend .d-flex, .align-items-center;
+    @include media-breakpoint-down(sm) {
+      padding: 7.5px 10px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+    & + .dropdown-item {
+      border-top: 1px solid #ececec;
+    }
+    &:hover,
+    &:focus {
+      color: $success;
+      background: none;
+    }
+  }
+  .language-flag {
+    width: 23px;
+    @extend .rounded, .img-fluid;
+    margin-right: 10px;
+  }
+}
+
+.navbar-toggler {
+  width: $navbar-toggler-size;
+  height: 20px;
+  display: inline-block;
+  @extend .border-0, .rounded-0, .p-0, .position-relative;
+  &:before,
+  &:after {
+    content: "";
+    @extend .rounded, .position-absolute;
+    width: 100%;
+    height: 3px;
+    background: $navbar-color;
+    left: 0;
+    @include transition($base-animation);
+  }
+  &:before {
+    top: 3px;
+  }
+  &:after {
+    bottom: 3px;
+  }
+  &:not(.collapsed) {
+    &:before {
+      top: 50%;
+      transform: translateY(-50%);
+      @include rotate(-45deg);
+    }
+    &:after {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+      @include rotate(45deg);
+    }
+  }
+}

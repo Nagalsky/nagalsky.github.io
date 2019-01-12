@@ -1,0 +1,26 @@
+/* HERO */
+
+$hero-color: $white;
+
+.hero {
+  color: $hero-color;
+}
+
+.hero__item {
+  min-height: 100vh;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+  @include media-breakpoint-down(md) {
+    min-height: calc(100vh - #{$navbar-height});
+  }
+}
+
+.hero__inner {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero__title {
+  @include media-breakpoint-up(xl) {
+    font-size: 70px;
+  }
+}
