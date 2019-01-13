@@ -14,7 +14,7 @@ $hero-color: $white;
   min-height: 100vh;
   @extend .d-flex, .justify-content-center, .align-items-center;
   @include media-breakpoint-down(md) {
-    min-height: 70vh;
+    min-height: 80vh;
   }
 }
 
@@ -23,6 +23,9 @@ $hero-color: $white;
   @extend .text-center;
   padding-left: 15px;
   padding-right: 15px;
+  @include media-breakpoint-down(sm) {
+    padding: 15px 15px 80px 15px;
+  }
 }
 
 .hero__title {
@@ -31,6 +34,9 @@ $hero-color: $white;
   @include media-breakpoint-up(xl) {
     font-size: 70px;
     margin-bottom: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 36px;
   }
 }
 

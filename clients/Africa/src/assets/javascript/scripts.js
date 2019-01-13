@@ -19,7 +19,8 @@ $(document).ready(function() {
     appendDots: $(".hero__navigation"),
     pauseOnFocus: false,
     pauseOnHover: false,
-    pauseOnDotsHover: false
+    pauseOnDotsHover: false,
+    adaptiveHeight: true
   });
 
   $(".hero__gallery__pause").on("click", function() {
