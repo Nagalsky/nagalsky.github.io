@@ -1,0 +1,63 @@
+/* TAB LIST */
+
+$tab-list-item-color: #888888;
+$tab-list-item-active-color: $dark;
+$tab-list-item-dot-size: 10px;
+
+.tab-list {
+  @include media-breakpoint-up(md) {
+    margin-right: 35px;
+    padding-right: 35px;
+    border-right: 2px solid $success;
+  }
+}
+
+.tab-list__item {
+  @extend .d-block, .position-relative;
+  color: $tab-list-item-color;
+  font-size: 20px;
+  padding-left: 30px;
+  @include media-breakpoint-up(lg) {
+    font-size: 25px;
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    color: $tab-list-item-active-color;
+  }
+  & + .tab-list__item {
+    margin-top: 20px;
+  }
+  &:before {
+    content: "";
+    width: $tab-list-item-dot-size;
+    height: $tab-list-item-dot-size;
+    @extend .position-absolute;
+    background: $tab-list-item-color;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  &.active {
+    color: $tab-list-item-active-color;
+    &:hover,
+    &:focus {
+      color: $tab-list-item-active-color;
+    }
+    &:before {
+      width: calc(#{$tab-list-item-dot-size} + 15px);
+      height: calc(#{$tab-list-item-dot-size} + 15px);
+      left: -9px;
+      box-shadow: 0 0 0 1px $success, inset 0 0 0 4px $white;
+      background: $success;
+    }
+  }
+}
+
+.tab-list-content {
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    min-height: 290px;
+  }
+}

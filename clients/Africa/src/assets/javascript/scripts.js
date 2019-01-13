@@ -35,4 +35,33 @@ $(document).ready(function() {
     $('.hero__gallery__pause').removeClass('d-none');
   });
 
+  //Products gallery
+  $('.products-gallery').slick({
+    arrows: false,
+    centerMode: true,
+    variableWidth: true,
+    centerPadding: '570px',
+    slidesToShow: 2,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+
 });

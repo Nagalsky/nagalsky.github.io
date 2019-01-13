@@ -7,7 +7,7 @@ $navbar-height: 56px;
 $navbar-toggler-size: 24px;
 
 .navbar {
-  padding: 25px 0;
+  padding: 20px 0;
   @include transition(500ms);
   @include media-breakpoint-down(md) {
     padding: 10px 0px;
@@ -19,7 +19,7 @@ $navbar-toggler-size: 24px;
   }
   &.navbar--animated {
     @include media-breakpoint-up(lg) {
-      background: rgba($navbar-bg, 0.75);
+      background: rgba($success-soft, 0.95);
     }
     .navbar-nav {
       .nav-item {
@@ -57,12 +57,14 @@ $navbar-toggler-size: 24px;
   font-size: 18px;
   font-family: $navbar-ff;
   color: $navbar-color;
+  height: 36px;
   &:hover,
   &:focus {
     color: $navbar-color;
   }
   @include media-breakpoint-up(xl) {
     font-size: 24px;
+    height: auto;
   }
   .navbar-brand__title {
     font-size: 18px;
@@ -119,7 +121,7 @@ $navbar-toggler-size: 24px;
   width: 36px;
   margin-left: 10px;
   @include media-breakpoint-up(xl) {
-    margin-left: 30px;
+    margin-left: 20px;
   }
   @include media-breakpoint-down(lg) {
     width: 28px;
