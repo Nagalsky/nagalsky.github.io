@@ -1,6 +1,7 @@
 /* SLICK */
 
 $slick-dot-size: 9px;
+$slick-arrow-size: 56px;
 
 .slick-dots {
   @extend .position-static;
@@ -27,4 +28,32 @@ $slick-dot-size: 9px;
       }
     }
   }
+}
+
+.slick-arrow {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: $slick-arrow-size;
+  height: $slick-arrow-size;
+  border-radius: 50%;
+  z-index: 200;
+  background: $white;
+  &:before {
+    color: #141414;
+  }
+  @extend .d-flex, .align-items-center, .justify-content-center, .font-icons;
+  &:hover,
+  &:focus {
+    background: $success;
+    &:before {
+      color: $white;
+    }
+  }
+}
+.slick-prev {
+  left: 50px;
+  @extend .africa-icon-left-open;
+}
+.slick-next {
+  right: 50px;
+  @extend .africa-icon-right-open;
 }
