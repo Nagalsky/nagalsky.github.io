@@ -13,14 +13,25 @@ $assets-highlighted-color: $white;
   color: $assets-color;
   @extend .d-flex, .flex-column, .flex-fill;
   height: 100%;
+  @include transition($base-animation);
   @include media-breakpoint-up(xl) {
     padding-bottom: 80px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $assets-highlighted-bg;
+    color: $assets-highlighted-color;
   }
 }
 
 .assets--highlighted {
   background-color: $assets-highlighted-bg;
   color: $assets-highlighted-color;
+  &:hover,
+  &:focus {
+    background-color: $assets-highlighted-bg;
+    color: $assets-highlighted-color;
+  }
 }
 
 .assets__title {

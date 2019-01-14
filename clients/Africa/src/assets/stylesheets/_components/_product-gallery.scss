@@ -1,18 +1,17 @@
 /* PRODUCT GALLERY */
 
-.products-gallery {
+.products-gallery,
+.products-gallery-mobile {
   .slick-list {
-    padding-top: 20px !important;
+    @include media-breakpoint-up(md) {
+      padding-top: 20px !important;
+    }
   }
 }
 
 .products-gallery-mobile {
   padding-left: 25px;
   padding-right: 25px;
-  .product {
-    // padding-left: 15px;
-    // padding-right: 15px;
-  }
   .slick-slide {
     margin-left: 15px;
     margin-right: 15px;
@@ -29,5 +28,7 @@
   }
   &:not(.slick-center) {
     opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
   }
 }
