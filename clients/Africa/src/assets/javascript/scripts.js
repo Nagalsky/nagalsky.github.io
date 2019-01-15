@@ -39,7 +39,7 @@ $(document).ready(function() {
   $(".products-gallery").slick({
     arrows: true,
     centerMode: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -47,13 +47,21 @@ $(document).ready(function() {
     variableWidth: true,
     centerPadding: "570px",
     slidesToShow: 3,
-    responsive: [{
-      breakpoint: 1199,
-      settings: {
-        centerPadding: "400px",
-        slidesToShow: 3
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          centerPadding: "100px",
+          slidesToShow: 3
+        },
+        breakpoint: 991,
+        settings: {
+          centerMode: false,
+          centerPadding: "0px",
+          slidesToShow: 1
+        }
       }
-    }]
+    ]
   });
 
   $(".products-gallery-mobile").slick({
@@ -62,9 +70,8 @@ $(document).ready(function() {
     autoplaySpeed: 5000,
     pauseOnFocus: false,
     pauseOnHover: false,
-    pauseOnDotsHover: false,
+    pauseOnDotsHover: false
   });
-
 
   //Scroll to element
   $("a[data-scroll]").click(function(e) {
@@ -84,7 +91,8 @@ $(document).ready(function() {
     //Animate the scroll to, include easing lib if you want more fancypants easings
     $("html, body")
       .stop()
-      .animate({
+      .animate(
+        {
           scrollTop: $target.offset().top - offset
         },
         800,

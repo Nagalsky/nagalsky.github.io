@@ -10,8 +10,11 @@ $product-color: $white;
   @extend .position-relative, .d-block;
   color: $product-color;
   @include transition($base-animation);
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.33);
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
   }
   &:hover,
   &:focus {

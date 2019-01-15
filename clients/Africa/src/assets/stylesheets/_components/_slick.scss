@@ -37,6 +37,10 @@ $slick-arrow-size: 56px;
   border-radius: 50%;
   z-index: 200;
   background: $white;
+  @include media-breakpoint-down(md) {
+    width: calc(#{$slick-arrow-size} - 20px);
+    height: calc(#{$slick-arrow-size} - 20px);
+  }
   &:before {
     color: #141414;
   }
@@ -52,14 +56,20 @@ $slick-arrow-size: 56px;
 .slick-prev {
   left: 50px;
   @extend .africa-icon-left-open;
+  @include media-breakpoint-down(md) {
+    left: -10px;
+  }
   @include media-breakpoint-down(sm) {
-    left: 10px;
+    left: 15px;
   }
 }
 .slick-next {
   right: 50px;
   @extend .africa-icon-right-open;
+  @include media-breakpoint-down(md) {
+    right: -10px;
+  }
   @include media-breakpoint-down(sm) {
-    right: 10px;
+    right: 15px;
   }
 }
