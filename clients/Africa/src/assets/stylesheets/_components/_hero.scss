@@ -13,6 +13,9 @@ $hero-color: $white;
 .hero__item {
   min-height: 100vh;
   @extend .d-flex, .justify-content-center, .align-items-center;
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
   @include media-breakpoint-down(md) {
     min-height: 75vh;
   }
