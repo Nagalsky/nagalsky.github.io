@@ -1,0 +1,177 @@
+/* NAVBAR */
+
+$navbar-bg: $base-brand-color;
+$navbar-color: $success-thin;
+$navbar-color-hover: $white;
+$navbar-height: 82px;
+$navbar-height-desktop: 119px;
+$navbar-toggler-size: 24px;
+$navbar-divider-bg: $muted;
+
+.navbar {
+  background: $navbar-bg;
+  min-height: $navbar-height;
+  will-change: background-color;
+  @include transition($base-animation);
+  @include media-breakpoint-down(sm) {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  @extend .py-md-0;
+  @include media-breakpoint-up(lg) {
+    min-height: $navbar-height-desktop;
+  }
+  &--transparent {
+    &:not(.navbar--filled) {
+      @include media-breakpoint-up(md) {
+        background-color: transparent;
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              color: $white;
+              &:hover, &:focus {
+                color: $navbar-bg;
+              }
+              &--highlited {
+                @include media-breakpoint-up(md) {
+                  color: $white;
+                  &:hover, &:focus {
+                    color: $navbar-bg;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  width: 99px;
+  min-height: 78px;
+  @extend .py-0, .d-inline-flex, .align-items-center;
+  @include media-breakpoint-up(md) {
+    width: 136px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-right: 220px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: 40px;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: $navbar-color;
+      font-size: 15px;
+      @extend .position-relative;
+      &--highlited {
+        @include media-breakpoint-up(md) {
+          color: $white;
+        }
+      }
+      &:before {
+        @extend .position-absolute, .w-100;
+        top: 0;
+        left: 0;
+        height: 5px;
+        background-color: $navbar-color-hover;
+        opacity: 0;
+        visibility: 0;
+        @include transition($base-animation);
+        transform: translateY(5px);
+      }
+      &:hover, &:focus {
+        color: $navbar-color-hover;
+        &:before {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: 1;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        &:before {
+          content: '';
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 18px;
+        padding: 46px 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        color: $navbar-color-hover;
+        &:hover, &:focus {
+          color: $navbar-color-hover;
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(sm) {
+    margin-left: -15px;
+    margin-right: -15px;
+    .navbar-nav {
+      .nav-item {
+        &:not(:last-child) {
+          border-bottom: 1px solid $navbar-divider-bg;
+        }
+        .nav-link {
+          background-color: $white;
+          color: $navbar-bg;
+          padding: 24px 15px;
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  @extend .border-0, .p-0, .position-absolute, .d-flex, .d-md-none, .align-items-center;
+  width: $navbar-toggler-size;
+  height: calc(#{$navbar-toggler-size} - 6px);
+  top: 30px;
+  left: 15px;
+  &:before, &:after {
+    content: '';
+    @extend .position-absolute, .bg-white, .w-100;
+    left: 0;
+    height: 2px;
+    @include transition($base-animation);
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+  &:not(.collapsed) {
+    &:before {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+    &:after {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      bottom: auto;
+    }
+    .navbar-toggler-icon {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  @extend .w-100, .bg-white;
+  height: 2px;
+  @include transition($base-animation);
+}
