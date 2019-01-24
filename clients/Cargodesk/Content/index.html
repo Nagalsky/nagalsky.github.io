@@ -10,7 +10,7 @@
   <title>Home page</title>
 </head>
 
-<body>
+<body class="body-has-hero">
   <nav class="navbar navbar-expand-md navbar--transparent fixed-top">
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" />
@@ -60,14 +60,92 @@
   </nav>
 
   <main class="main">
-    <section class="section">
-      <div class="container">
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
+    <section class="hero">
+      <div class="hero__image-gallery">
+        <div class="hero__image-gallery__item" style="background-image: url('img/temp/hero-1.png');">
+        </div>
+        <div class="hero__image-gallery__item" style="background-image: url('img/temp/hero-2.png');">
+        </div>
+        <div class="hero__image-gallery__item" style="background-image: url('img/temp/hero-3.png');">
+        </div>
+        <div class="hero__image-gallery__item" style="background-image: url('img/temp/hero-4.png');">
+        </div>
       </div>
+      <!-- hero__image-gallery -->
+
+      <div class="hero__content">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-xl-5 col-lg-5 col-md-6">
+              <form action="" class="form-hero">
+                <h4 class="text-center text-uppercase font-base-regular form-hero__title">GET A QUOTE</h4>
+                <div class="form-group">
+                  <div class="custom-radio custom-radio--inline">
+                    <input type="radio" name="custom-radio-1" value="" id="custom-radio-1" checked>
+                    <label for="custom-radio-1">Local</label>
+                  </div>
+                  <div class="custom-radio custom-radio--inline">
+                    <input type="radio" name="custom-radio-1" value="" id="custom-radio-2">
+                    <label for="custom-radio-2">International</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%" title="Origin" data-style="btn-select">
+                    <option>Selection 1</option>
+                    <option>Selection 2</option>
+                    <option>Selection 3</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%" title="Destination" data-style="btn-select">
+                    <option>Selection 1</option>
+                    <option>Selection 2</option>
+                    <option>Selection 3</option>
+                  </select>
+                </div>
+
+                <div class="form-group mt-5">
+                  <button type="submit" name="button" class="btn btn-primary btn-block">GET NOW</button>
+                </div>
+
+                <p class="lead text-center form-hero__title">Or Call <a href="tel:+234-803-67458">+234-803-67458</a></p>
+              </form>
+            </div>
+
+            <div class="col-xl-7 col-lg-7 col-md-6">
+              <div class="hero__content-gallery d-none d-md-block">
+                <div>
+                  <h1 class="hero__title d-none d-md-block">Global<br /> Container<br /> Shipping</h1>
+                </div>
+                <div>
+                  <h1 class="hero__title d-none d-md-block d-none d-md-block">REEFER<br /> Experience<br /> & Expertiseg</h1>
+                </div>
+                <div>
+                  <h1 class="hero__title d-none d-md-block d-none d-md-block">Local Team<br /> Here To Help</h1>
+                </div>
+                <div>
+                  <h1 class="hero__title d-none d-md-block d-none d-md-block">Local Collection<br /> & Delivery<br /> to Door Step</h1>
+                </div>
+              </div>
+              <!-- hero__content-gallery -->
+              <div class="hero__navigation">
+              </div>
+              <!-- hero__navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hero__slide -->
     </section>
   </main>
 
-  Footer
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright 2018 All rights Reserverd Cargodesk | Africa</p>
+    </div>
+  </footer>
 
   <script src="js/vendors.min.js"></script>
   <script src="js/scripts.js"></script>

@@ -49,7 +49,7 @@ var randomName = Math.random()
 // HTML
 gulp.task(
   'html:build',
-  (task.html = function () {
+  (task.html = function() {
     gulp
       .src(path.src.html)
       .pipe(rigger())
@@ -63,7 +63,7 @@ gulp.task(
 )
 
 //Stylesheets
-gulp.task('sass:build', function () {
+gulp.task('sass:build', function() {
   return gulp
     .src(path.src.stylesheets)
     .pipe(sass().on('error', sass.logError))
@@ -73,9 +73,11 @@ gulp.task('sass:build', function () {
         cascade: false,
       })
     )
-    .pipe(cleanCSS({
-      compatibility: 'ie8'
-    }))
+    .pipe(
+      cleanCSS({
+        compatibility: 'ie8',
+      })
+    )
     .pipe(gulp.dest(path.build.stylesheets))
     .pipe(
       browserSync.reload({
@@ -87,7 +89,7 @@ gulp.task('sass:build', function () {
 // JAVASCRIPT
 gulp.task(
   'javascript:build',
-  (task.javascript = function () {
+  (task.javascript = function() {
     gulp
       .src(path.src.javascript)
       .pipe(uglify())
@@ -102,12 +104,14 @@ gulp.task(
 
 gulp.task(
   'javascript:vendors',
-  (task.javascript = function () {
+  (task.javascript = function() {
     return gulp
       .src([
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
       ])
       .pipe(concat('vendors.min.js'))
       .pipe(gulp.dest(path.build.javascript))
@@ -117,7 +121,7 @@ gulp.task(
 // FONTS
 gulp.task(
   'fonts:build',
-  (task.fonts = function () {
+  (task.fonts = function() {
     gulp
       .src(path.src.fonts)
       .pipe(gulp.dest(path.build.fonts))
@@ -132,18 +136,18 @@ gulp.task(
 //Images
 gulp.task(
   'img:build',
-  (task.img = function () {
+  (task.img = function() {
     gulp
       .src(path.src.img)
       .pipe(
         imagemin([
           imageminJpegRecompress({
-            quality: 'low'
+            quality: 'low',
           }),
           imageminSvgo(),
           imageminPngquant({
             nofs: true,
-            speed: 1
+            speed: 1,
           }),
         ])
       )
@@ -157,7 +161,7 @@ gulp.task(
 )
 
 // Server
-gulp.task('server:build', function () {
+gulp.task('server:build', function() {
   browserSync.init({
     port: 3200,
     server: {
@@ -186,20 +190,20 @@ gulp.task('build', [
   'fonts:build',
 ])
 
-gulp.task('watch', function () {
-  watch([path.watch.stylesheets], function (event, cb) {
+gulp.task('watch', function() {
+  watch([path.watch.stylesheets], function(event, cb) {
     gulp.start('sass:build')
   })
-  watch([path.watch.html], function (event, cb) {
+  watch([path.watch.html], function(event, cb) {
     gulp.start('html:build')
   })
-  watch([path.watch.img], function (event, cb) {
+  watch([path.watch.img], function(event, cb) {
     gulp.start('img:build')
   })
-  watch([path.watch.javascript], function (event, cb) {
+  watch([path.watch.javascript], function(event, cb) {
     gulp.start('javascript:build')
   })
-  watch([path.watch.fonts], function (event, cb) {
+  watch([path.watch.fonts], function(event, cb) {
     gulp.start('fonts:build')
   })
 })

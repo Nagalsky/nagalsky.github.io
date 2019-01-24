@@ -1,1 +1,19 @@
 /* BUTTONS */
+
+
+.btn {
+  border-radius: $base-radius;
+  font-family: $font-base-bold;
+  padding: 17.5px 20px;
+  font-size: 18px;
+  border-width: 2px;
+  &:hover, &:focus {
+    box-shadow: none;
+  }
+  &-primary {
+    @include button-variants($bg: $base-brand-color, $color: $white);
+  }
+  &-outline-primary {
+    @include button-outline-variants($color: $base-brand-color);
+  }
+}

@@ -1,0 +1,65 @@
+/* CUSTOM RADIO */
+
+$radio-label-color: $dark;
+$radio-outer-dot-size: 16px;
+$radio-outer-dot-border-color: $gray;
+
+.custom-radio {
+  display: block;
+  input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    &:checked {
+      &~label {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label {
+    @extend .position-relative;
+    color: $radio-label-color;
+    cursor: pointer;
+    padding-left: 25px;
+    font-size: 16px;
+    &:hover {
+      &:after {
+        opacity: .4;
+      }
+    }
+    &:before, &:after {
+      content: '';
+      @extend .position-absolute, .rounded-circle;
+    }
+    &:before {
+      width: $radio-outer-dot-size;
+      height: $radio-outer-dot-size;
+      border: 1px solid $radio-outer-dot-border-color;
+      background-color: $white;
+      left: 0;
+      top: 4px;
+    }
+    &:after {
+      @include transition($base-animation);
+      background-color: $base-brand-color;
+      width: calc(#{$radio-outer-dot-size} / 2);
+      height: calc(#{$radio-outer-dot-size} / 2);
+      left: calc(#{$radio-outer-dot-size} / 4);
+      top: calc(#{$radio-outer-dot-size} / 2);
+      opacity: 0;
+    }
+  }
+}
+
+.custom-radio--inline {
+  display: inline-block;
+  &+.custom-radio--inline {
+    margin-left: 60px;
+    @include media-breakpoint-down(xs) {
+      margin-left: 25px;
+    }
+  }
+}

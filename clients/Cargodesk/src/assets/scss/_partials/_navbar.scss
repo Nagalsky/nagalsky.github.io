@@ -23,21 +23,23 @@ $navbar-divider-bg: $muted;
   }
   &--transparent {
     &:not(.navbar--filled) {
-      @include media-breakpoint-up(md) {
-        background-color: transparent;
-        .navbar-nav {
-          .nav-item {
-            .nav-link {
+      background-color: transparent;
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $navbar-bg;
+            @include media-breakpoint-up(md) {
               color: $white;
               &:hover, &:focus {
                 color: $navbar-bg;
               }
-              &--highlited {
-                @include media-breakpoint-up(md) {
-                  color: $white;
-                  &:hover, &:focus {
-                    color: $navbar-bg;
-                  }
+            }
+            &--highlited {
+              color: $navbar-bg;
+              @include media-breakpoint-up(md) {
+                color: $white;
+                &:hover, &:focus {
+                  color: $navbar-bg;
                 }
               }
             }
