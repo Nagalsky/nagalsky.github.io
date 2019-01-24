@@ -4,7 +4,7 @@
 .btn {
   border-radius: $base-radius;
   font-family: $font-base-bold;
-  padding: 17.5px 20px;
+  padding: 13.5px 20px;
   font-size: 18px;
   border-width: 2px;
   &:hover, &:focus {
@@ -15,5 +15,17 @@
   }
   &-outline-primary {
     @include button-outline-variants($color: $base-brand-color);
+  }
+  &-warning {
+    @include button-variants($bg: $warning, $color: $white);
+  }
+  &-outline-warning {
+    @include button-outline-variants($color: $warning);
+  }
+  &-xl {
+    padding: 16.5px 62px;
+    @include media-breakpoint-down(sm) {
+      padding: 16.5px 40px;
+    }
   }
 }

@@ -1,2 +1,25 @@
 /* CARD */
 
+$card-border-color: #e6e6e6;
+
+.card {
+  @extend .rounded-0;
+  border-color: $card-border-color;
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+}
+
+.card-body {
+  @extend .d-md-flex, .flex-column;
+}
+
+.card-title {
+  font-family: $font-base-regular;
+  font-size: 24px;
+  color: $black;
+}
+
+.card-btn {
+  @extend .mt-auto;
+}

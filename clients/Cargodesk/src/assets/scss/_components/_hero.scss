@@ -6,7 +6,7 @@ $hero-overlay: rgba($black, .24);
   @extend .position-relative, .d-md-flex, .flex-column, .justify-content-center;
   z-index: 20;
   padding-top: calc(#{$navbar-height} + 57px);
-  min-height: 85vh;
+  padding-bottom: 57px;
   @include media-breakpoint-up(md) {
     min-height: 100vh;
     height: 100vh;
@@ -30,14 +30,19 @@ $hero-overlay: rgba($black, .24);
   @extend .position-absolute, .w-100, .h-100;
   left: 0;
   top: 0;
+  .slick-list, .slick-track, .slick-slide>div {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+    }
+  }
 }
 .hero__image-gallery__item {
-  min-height: 85vh;
+  height: 100%;
+  @extend .has-bg;
   @include media-breakpoint-up(md) {
     min-height: 100vh;
     height: 100vh;
   }
-  @extend .has-bg;
 }
 
 .hero__content {
@@ -61,10 +66,14 @@ $hero-overlay: rgba($black, .24);
 }
 
 .hero__navigation {
+  @extend .position-relative;
   @include media-breakpoint-down(sm) {
     margin-top: 25px;
   }
   .slick-dots {
-    @extend .position-static, .text-md-right;
+    @extend .text-md-right;
+    @include media-breakpoint-up(md) {
+      position: static;
+    }
   }
 }
