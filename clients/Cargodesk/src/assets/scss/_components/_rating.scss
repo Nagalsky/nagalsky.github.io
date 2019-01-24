@@ -1,0 +1,15 @@
+/* LIST */
+
+$rating-color: #d5bd7b;
+
+.rating {
+	@extend .list-unstyled, .d-flex, .mt-auto;
+}
+
+.rating__item {
+	color: $rating-color;
+	font-size: 18px;
+	&+.rating__item {
+		margin-left: 8px;
+	}
+}
