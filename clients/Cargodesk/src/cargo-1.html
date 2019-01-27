@@ -12,12 +12,114 @@
   <main class="main">
     <section class="section">
       <div class="container">
-        <h1 class="title text-uppercase mb-0">1 MY SHIPMENT</h1>
+        <h1 class="title text-uppercase mb-0 l-h-1">1 MY SHIPMENT</h1>
         <hr>
         <h6 class="fs-sm mb-5">Please complete as much of the form as possible</h6>
 
         <form action="index.html" method="post">
           <legend>Shipment Requirements</legend>
+
+          <div class="form-group mb-4 mb-md-5">
+            <label for="field-description">Description</label>
+            <textarea name="" id="field-description" cols="" rows="" class="form-control"></textarea>
+          </div>
+          <!-- form-group -->
+
+          <div class="form-group mb-4 mb-md-5">
+            <div class="row justify-content-between">
+              <div class="col-xl-3 col-lg-4 col-md-5 mb-4 mb-md-0">
+                <label>Import\Export</label>
+                <div class="form-group mb-0">
+                  <div class="custom-radio custom-radio--inline">
+                    <input type="radio" name="custom-import/export" value="" id="custom-import" checked>
+                    <label for="custom-import">Import</label>
+                  </div>
+                  <div class="custom-radio custom-radio--inline">
+                    <input type="radio" name="custom-import/export" value="" id="custom-export">
+                    <label for="custom-export">Export</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-5">
+                <div class="form-group mb-0">
+                  <label for="">Is pickup required?</label>
+                  <select class="selectpicker" data-width="100%" title="Select" data-style="btn-select" id="field-pickup-required">
+                    <option>Selection 1</option>
+                    <option>Selection 2</option>
+                    <option>Selection 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- form-group -->
+
+          <h2 class="title title--has-boder mb-4 mb-md-5 l-h-1"><span class="title--has-boder__inner">Routing Details</span></h2>
+
+          <div class="form-group mb-4 mb-md-5">
+            <div class="row">
+              <div class="col-xl-2 col-md-3 mb-4 mb-md-0">
+                <label for="field-collection-point">Collection Point</label>
+                <div class="form-group mb-0">
+                  <input type="text" class="form-control" id="field-collection-point" placeholder="Enter City">
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-5 mb-md-0">
+                <div class="form-group mb-0">
+                  <label for="">Is pickup required?</label>
+                  <select class="selectpicker" data-width="100%" title="Select" data-style="btn-select" id="field-pickup-required">
+                    <option>Selection 1</option>
+                    <option>Selection 2</option>
+                    <option>Selection 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-xl-2 offset-xl-2 col-md-3 mb-4 mb-md-0">
+                <label for="field-delivery-point">Delivery point</label>
+                <div class="form-group mb-0">
+                  <input type="text" class="form-control" id="field-delivery-point" placeholder="Enter City">
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group mb-0">
+                  <label for="">Destination Country</label>
+                  <select class="selectpicker" data-width="100%" title="Select" data-style="btn-select" id="field-pickup-required">
+                    <option>Selection 1</option>
+                    <option>Selection 2</option>
+                    <option>Selection 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- form-group -->
+
+          <h2 class="title title--has-boder mb-4 mb-md-5 l-h-1"><span class="title--has-boder__inner">My Cargo</span></h2>
+
+          <div class="form-group mb-4 mb-md-5">
+            <div class="row row--bordered">
+              <div class="col-md-3">
+                <img src="img/icons/icon-cargo-1.png" alt="" class="icon icon__cargo">
+              </div>
+
+              <div class="col-md-3">
+                <img src="img/icons/icon-cargo-2.png" alt="" class="icon icon__cargo">
+              </div>
+
+              <div class="col-md-3">
+                <img src="img/icons/icon-cargo-3.png" alt="" class="icon icon__cargo">
+              </div>
+
+              <div class="col-md-3">
+                <img src="img/icons/icon-cargo-4.png" alt="" class="icon icon__cargo">
+              </div>
+            </div>
+          </div>
+          <!-- form-group -->
         </form>
       </div>
       <!-- container -->

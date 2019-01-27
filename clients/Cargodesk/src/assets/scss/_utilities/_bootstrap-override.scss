@@ -9,3 +9,39 @@
     @extend .d-flex;
   }
 }
+
+
+.row--bordered {
+  @include media-breakpoint-up(md) {
+    padding-bottom: 40px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    border: 1px solid #eeeeee;
+  }
+  >[class^="col"] {
+    @extend .d-flex, .align-items-start;
+    padding-top: 25px;
+    @include media-breakpoint-up(md) {
+      padding-top: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 25px 50px;
+    }
+    &:not(:first-of-type) {
+      @include media-breakpoint-up(md) {
+        border-left: 1px solid #eeeeee;
+      }
+      @include media-breakpoint-down(sm) {
+        border-top: 1px solid #eeeeee;
+      }
+    }
+  }
+}
