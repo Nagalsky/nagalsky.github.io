@@ -45,4 +45,7 @@ $(document).ready(function() {
 
   //Initial custom bootstrap select
   $('.selectpicker').selectpicker()
+
+  //Initial bootstrap Popover
+  $('[data-toggle="popover"]').popover()
 })
