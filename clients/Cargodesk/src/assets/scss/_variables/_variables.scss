@@ -86,24 +86,22 @@ $warning: #ffa300;
 	Fonts variables
 *************************/
 $font-base-light: 'dincond-lightregular';
-$font-base: 'din_condensedbold';
+$font-base-bold: 'din_condensedbold';
+
+$font-base: $font-base-light;
 
 .font-base-light {
   font-family: $font-base-light !important;
 }
-.font-base {
-  font-family: $font-base !important;
-}
-
-.font-base {
-  font-family: $font-base !important;
+.font-base-bold {
+  font-family: $font-base-bold !important;
 }
 /*************************
 	Base variables
 *************************/
 $base-brand-color: $success;
 $base-color: $dark-soft;
-$base-font: $font-base;
+$base-font: $font-base-light;
 $base-animation: 250ms;
 $base-radius: 5px;
 /*************************
@@ -128,3 +126,4 @@ $link-color-hover: $success-thin;
 /*************************
 	Title variables
 *************************/
+$title-font: $font-base-bold;
