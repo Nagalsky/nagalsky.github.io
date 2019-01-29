@@ -4,10 +4,15 @@ $btn-icon-size: 44px;
 
 .btn {
   border-radius: $base-radius;
-  padding: 14px 20px 14px 20px;
-  font-size: 18px;
+  padding: 17px 20px;
   border-width: 2px;
   font-family: $font-base-bold;
+  min-width: 0;
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
   &:hover, &:focus {
     box-shadow: none;
   }
@@ -32,9 +37,25 @@ $btn-icon-size: 44px;
       padding: 16.5px 20px 16.5px 20px;
     }
   }
+  &-mini {
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 14px;
+  }
   &-long {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .btn__icon {
+    width: 20px;
+  }
+  .btn__text-icon {
+    display: inline-block;
+    @include media-breakpoint-down(xs) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -47,7 +68,7 @@ $btn-icon-size: 44px;
   background-repeat: no-repeat;
   background-size: 17px;
   background-position: 50% 50%;
-  transition: none; 
+  transition: none;
   &:hover, &:focus {
     border-color: $success;
   }

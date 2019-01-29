@@ -5,13 +5,14 @@ $field-border-color-focus: $success-thin;
 $field-height: 59px;
 $placeholder-color: #909090;
 $placeholder-font-size: 14px;
-$placeholder-font-style: $font-base;
+$placeholder-font-style: $font-base-regular;
 
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	border-radius: $base-radius;
 	height: $field-height;
+	font-family: $placeholder-font-style;
 	font-size: $placeholder-font-size;
 	border-color: $field-border-color;
 	border-radius: $base-radius;
@@ -38,10 +39,25 @@ $placeholder-font-style: $font-base;
 	}
 	.field-icon {
 		@extend .position-absolute;
-		left: 20px;
+		left: 18px;
 		top: 50%;
 		transform: translateY(-50%);
 		width: 20px;
+	}
+	input[type="password"] {
+		padding-right: 160px;
+	}
+}
+
+.field-forgot-pass {
+	@extend .position-absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: $font-base-bold;
+	color: $dark;
+	&:hover, &:focus {
+		color: $success;
 	}
 }
 

@@ -7,13 +7,19 @@ body {
   color: $body-main-color;
   font-size: $body-font-size;
   line-height: $body-line-height;
+  height: 100%;
 }
 
 body {
   padding-top: $navbar-height;
+  @extend .d-flex, .flex-column;
   @include media-breakpoint-up(lg) {
     padding-top: $navbar-height-desktop;
   }
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 .body-has-hero {
@@ -83,6 +89,12 @@ ul,
 ol {
   a {
     color: currentColor;
+  }
+}
+
+.lead-sm {
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
   }
 }
 
