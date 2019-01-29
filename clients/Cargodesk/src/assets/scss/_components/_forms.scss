@@ -31,6 +31,20 @@ $placeholder-font-style: $font-base;
 	}
 }
 
+.field-has-icon {
+	@extend .position-relative;
+	.form-control {
+		padding-left: 50px;
+	}
+	.field-icon {
+		@extend .position-absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 20px;
+	}
+}
+
 textarea.form-control {
 	resize: none;
 	min-height: 187px;

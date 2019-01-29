@@ -1,5 +1,6 @@
 /* BUTTONS */
 
+$btn-icon-size: 44px;
 
 .btn {
   border-radius: $base-radius;
@@ -30,5 +31,45 @@
     @include media-breakpoint-down(sm) {
       padding: 16.5px 20px 16.5px 20px;
     }
+  }
+  &-long {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.btn-icon {
+  padding: 5px;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
+  border-radius: $base-radius;
+  border: 1px solid #e8e8e8;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 50% 50%;
+  transition: none; 
+  &:hover, &:focus {
+    border-color: $success;
+  }
+  &--add {
+    background-image: url('../img/icons/icons-add.png');
+    &:hover, &:focus {
+      background-image: url('../img/icons/icons-add-hover.png');
+    }
+  }
+  &--delete {
+    background-image: url('../img/icons/icons-trash.png');
+    &:hover, &:focus {
+      background-image: url('../img/icons/icons-trash-hover.png');
+    }
+  }
+  &--edit {
+    background-image: url('../img/icons/icons-edit.png');
+    &:hover, &:focus {
+      background-image: url('../img/icons/icons-edit-hover.png');
+    }
+  }
+  &+.btn-icon {
+    margin-left: 10px;
   }
 }
