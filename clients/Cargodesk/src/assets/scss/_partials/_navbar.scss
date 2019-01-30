@@ -7,6 +7,7 @@ $navbar-height: 82px;
 $navbar-height-desktop: 119px;
 $navbar-toggler-size: 24px;
 $navbar-divider-bg: $muted;
+$navbar-brand-ff: $font-secondary-bold;
 
 .navbar {
   background: $navbar-bg;
@@ -65,9 +66,15 @@ $navbar-divider-bg: $muted;
 .navbar-brand {
   width: 99px;
   min-height: 78px;
+  font-family: $navbar-brand-ff;
+  font-size: 36px;
+  line-height: .91;
   @extend .py-0,
   .d-inline-flex,
-  .align-items-center;
+  .align-items-center,
+  .text-white,
+  .text-right;
+  padding-top: 10px !important;
 
   @include media-breakpoint-up(md) {
     width: 136px;
@@ -75,6 +82,11 @@ $navbar-divider-bg: $muted;
 
   @include media-breakpoint-up(xl) {
     margin-right: 190px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 26px;
+    line-height: .87;
   }
 
   @include media-breakpoint-down(sm) {
