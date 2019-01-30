@@ -8,26 +8,34 @@ $pre-footer-list-color: $dark-soft;
   padding: 35px 0;
 }
 
+.pre-footer--divider {
+  border-top: 2px solid $success;
+}
+
 .pre-footer__list {
   @extend .list-unstyled;
 }
 
 .pre-footer__list__item {
   display: inline-block;
+
   &:not(:last-child) {
     @include media-breakpoint-down(sm) {
       margin-right: 5px;
       padding: 2px 0;
     }
+
     @include media-breakpoint-up(md) {
       border-right: 1px solid $pre-footer-list-color;
       margin-right: 25px;
       padding-right: 25px;
     }
+
     @include media-breakpoint-up(lg) {
       margin-right: 40px;
       padding-right: 40px;
     }
+
     @include media-breakpoint-up(xl) {
       margin-right: 75px;
       padding-right: 75px;
@@ -37,6 +45,7 @@ $pre-footer-list-color: $dark-soft;
 
 .pre-footer__list__link {
   color: $pre-footer-list-color;
+
   @include media-breakpoint-up(xl) {
     font-size: 16px;
   }

@@ -48,4 +48,14 @@ $(document).ready(function() {
 
   //Initial bootstrap Popover
   $('[data-toggle="popover"]').popover()
+
+  //Collapse action
+  $('.collapse-box__trigger').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('collapse-box__trigger--opened')
+    $(this)
+      .parent()
+      .next('.collapse-box__body')
+      .slideToggle(300)
+  })
 })

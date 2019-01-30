@@ -8,49 +8,79 @@ $btn-icon-size: 44px;
   border-width: 2px;
   font-family: $font-base-bold;
   min-width: 0;
+
   @include media-breakpoint-up(md) {
     font-size: 18px;
     padding-top: 14px;
     padding-bottom: 14px;
   }
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     box-shadow: none;
   }
+
   &-primary {
     @include button-variants($bg: $base-brand-color, $color: $white);
   }
+
   &-outline-primary {
     @include button-outline-variants($color: $base-brand-color);
   }
+
   &-warning {
     @include button-variants($bg: $warning, $color: $white);
   }
+
   &-outline-warning {
     @include button-outline-variants($color: $warning);
   }
+
   &-xl {
     padding: 16.5px 62px 16.5px 62px;
+
     @include media-breakpoint-down(md) {
       padding: 16.5px 40px 16.5px 40px;
     }
+
     @include media-breakpoint-down(sm) {
       padding: 16.5px 20px 16.5px 20px;
     }
   }
+
   &-mini {
     padding: 3px 10px;
     border-radius: 2px;
     font-size: 14px;
   }
+
   &-long {
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  &-long {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  &-extra-long {
+    @include media-breakpoint-up(xl) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .btn__icon {
     width: 20px;
   }
+
   .btn__text-icon {
     display: inline-block;
+
     @include media-breakpoint-down(xs) {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -69,27 +99,39 @@ $btn-icon-size: 44px;
   background-size: 17px;
   background-position: 50% 50%;
   transition: none;
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     border-color: $success;
   }
+
   &--add {
     background-image: url('../img/icons/icons-add.png');
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       background-image: url('../img/icons/icons-add-hover.png');
     }
   }
+
   &--delete {
     background-image: url('../img/icons/icons-trash.png');
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       background-image: url('../img/icons/icons-trash-hover.png');
     }
   }
+
   &--edit {
     background-image: url('../img/icons/icons-edit.png');
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       background-image: url('../img/icons/icons-edit-hover.png');
     }
   }
+
   &+.btn-icon {
     margin-left: 10px;
   }

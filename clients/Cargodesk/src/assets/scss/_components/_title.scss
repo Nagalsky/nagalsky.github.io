@@ -3,14 +3,28 @@
 
 .title {
   font-size: 36px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+  }
+}
+
+.title-md {
+  font-size: 40px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 36px;
+  }
 }
 
 
 .title--has-boder {
   @extend .position-relative;
+
   &:before {
     content: '';
-    @extend .position-absolute, .w-100;
+    @extend .position-absolute,
+    .w-100;
     height: 1px;
     background-color: #dedede;
     left: 0;
