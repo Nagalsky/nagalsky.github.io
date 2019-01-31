@@ -1,9 +1,12 @@
 import React from 'react'
 import { css, Global } from '@emotion/core'
-import { breakpoints } from '../lib/breakpoints'
-import { colors } from '../lib/variables'
-import { typography } from '../lib/variables'
-import { transition } from '../lib/variables'
+import { breakpoints } from '../../lib/breakpoints'
+import { colors } from '../../lib/variables'
+import { typography } from '../../lib/variables'
+import { transition } from '../../lib/variables'
+
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
 const globalStyles = css`
   * {
@@ -89,18 +92,9 @@ export default props => {
   return (
     <React.Fragment>
       <Global styles={globalStyles} />
+      <Header />
       {props.children}
+      <Footer />
     </React.Fragment>
   )
 }
-
-// export default props => {
-//   return (
-//     <React.Fragment>
-//       <Global styles={globalStyles} />
-//       <Header />
-//       {props.children}
-//       <Footer />
-//     </React.Fragment>
-//   )
-// }
