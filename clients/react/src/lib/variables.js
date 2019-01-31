@@ -1,18 +1,17 @@
 import '../fonts/fonts.css'
 
-
 /* Colors */
 /* http://chir.ag/projects/name-that-color is used to get colors names */
 export const baseColors = {
   white: '#ffffff',
   black: '#000000',
+  brand: '#00d8ff',
 }
 
 export const colors = {
   bodyColor: baseColors.white,
   titleColor: baseColors.black,
 }
-
 
 /* Typography */
 const fonts = {
@@ -22,7 +21,7 @@ const fonts = {
 }
 
 export const typography = {
-  baseFontSize: '20px',
+  baseFontSize: '15px',
   baseLineHeight: 1.55,
   baseFontFamily: fonts.baseFontRegular,
   titleLineHeight: 1.3,
@@ -31,7 +30,6 @@ export const typography = {
   baseFontRegular: fonts.baseFontRegular,
   baseFontBold: fonts.baseFontBold,
 }
-
 
 /* Transition */
 export const transition = {

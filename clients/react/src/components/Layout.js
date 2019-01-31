@@ -5,9 +5,6 @@ import { colors } from '../lib/variables'
 import { typography } from '../lib/variables'
 import { transition } from '../lib/variables'
 
-import Header from './Header'
-import Footer from './Footer'
-
 const globalStyles = css`
   * {
     box-sizing: border-box;
@@ -92,9 +89,18 @@ export default props => {
   return (
     <React.Fragment>
       <Global styles={globalStyles} />
-      <Header />
       {props.children}
-      <Footer />
     </React.Fragment>
   )
 }
+
+// export default props => {
+//   return (
+//     <React.Fragment>
+//       <Global styles={globalStyles} />
+//       <Header />
+//       {props.children}
+//       <Footer />
+//     </React.Fragment>
+//   )
+// }

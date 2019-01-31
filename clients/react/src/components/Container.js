@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-const Container = ({containerFluid, children}) => {
+const Container = ({ containerFluid, children }) => {
   return (
     <div
       css={css`
