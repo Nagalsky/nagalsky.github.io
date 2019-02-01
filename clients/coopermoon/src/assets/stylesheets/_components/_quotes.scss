@@ -1,0 +1,72 @@
+/* QUOTES */
+
+.quotes {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &:before,
+  &:after {
+    font-family: 'fontello';
+    position: absolute;
+    top: 0;
+    font-size: 50px;
+    @include media-breakpoint-down(md) {
+      font-size: 35px;
+    }
+  }
+  &:before {
+    content: '\e805';
+    left: 0;
+  }
+  &:after {
+    content: '\e806';
+    right: 0;
+  }
+}
+
+.quotes__item {
+  @extend .d-flex, .flex-column;
+}
+
+.quotes__body-text {
+  font-size: 25px;
+  color: $gray-thin;
+  font-family: $font-bold;
+  margin-bottom: 50px;
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.quotes__author,
+.quotes__role {
+  text-align: left;
+  font-family: $font-bold-italic;
+}
+
+.quotes__author {
+  font-size: 21px;
+  color: $gray;
+  margin-bottom: 0px;
+  line-height: 1.2;
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+
+.quotes__role {}

@@ -1,0 +1,63 @@
+/* SECTION */
+
+.section {
+  position: relative;
+  padding: 50px 0;
+  @include media-breakpoint-up(md) {
+    padding: 80px 0;
+  }
+}
+
+.section--bottom-lg {
+  padding-bottom: 90px;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 240px;
+  }
+}
+
+.section--lg {
+  @include media-breakpoint-up(md) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.section--has-shadow-top {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    @include gradient-y($start-color: rgba($black, .3), $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
+  }
+}
+
+.section--has-shadow-bottom {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    @include gradient-y($start-color: transparent, $end-color: rgba($black, .3), $start-percent: 0%, $end-percent: 100%);
+  }
+}
+
+.section--has-mask {
+  z-index: 10;
+  &:after {
+    content: '';
+    @extend .container;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    background: url('../images/bg/mask.png') no-repeat 50% 100% / 100%;
+  }
+}

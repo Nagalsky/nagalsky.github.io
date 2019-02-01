@@ -1,0 +1,31 @@
+/* PAGINATION */
+
+$pagination-color: #999999;
+$pagination-color-active: #b05d2e;
+
+.pagination {
+  >.page-item {
+    &.active {
+      >.page-link {
+        background: none;
+        color: $pagination-color-active
+      }
+    }
+    &+.page-item {
+      >.page-link {
+        border-left: 1px solid $pagination-color;
+      }
+    }
+    >.page-link {
+      @extend .py-0;
+      margin-left: 0;
+      border: none;
+      color: $pagination-color;
+      font-family: $font-bold;
+      &:hover, &:focus {
+        background: none;
+        color: $pagination-color-active
+      }
+    }
+  }
+}
