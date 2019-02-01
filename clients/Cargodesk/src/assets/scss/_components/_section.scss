@@ -25,9 +25,28 @@
 
 .section--choose-us {
   background-color: #f6f6f6;
-
   @include media-breakpoint-up(lg) {
+    padding: 40px 0px;
+    background: #f6f6f6 url('../img/bg/choose-us-bg.png') no-repeat center center / 1100px 460px;
+  }
+  @include media-breakpoint-up(xl) {
     padding: 65px 0px 115px 0px;
     background: #f6f6f6 url('../img/bg/choose-us-bg.png') no-repeat center center / cover;
+  }
+
+
+  >.container {
+    @media screen and (min-width:1540px) {
+      max-width: 99%;
+    }
+    @media screen and (min-width:1600px) {
+      max-width: 94%;
+    }
+    @media screen and (min-width:1650px) {
+      max-width: 90%;
+    }
+    @media screen and (min-width:1750px) {
+      max-width: 85%;
+    }
   }
 }

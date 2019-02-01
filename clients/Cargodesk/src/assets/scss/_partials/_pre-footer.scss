@@ -20,20 +20,15 @@ $pre-footer-list-color: $dark-soft;
   display: inline-block;
 
   &:not(:last-child) {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       margin-right: 5px;
       padding: 2px 0;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       border-right: 1px solid $pre-footer-list-color;
       margin-right: 25px;
       padding-right: 25px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      margin-right: 40px;
-      padding-right: 40px;
     }
 
     @include media-breakpoint-up(xl) {

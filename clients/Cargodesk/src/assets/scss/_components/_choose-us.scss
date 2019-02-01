@@ -5,10 +5,15 @@ $choose-us-icon-box-bg: $white;
 
 .choose-us {
   @extend .d-flex, .align-items-lg-center;
+  @media screen and (max-width:1539px) {
+    max-width: 295px;
+  }
+  @include media-breakpoint-down(lg) {
+    max-width: 280px;
+  }
   @include media-breakpoint-down(md) {
     margin-bottom: 45px;
-  }
-  @include media-breakpoint-down(sm) {
+    max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -16,7 +21,10 @@ $choose-us-icon-box-bg: $white;
 
 .choose-us--divider {
   @include media-breakpoint-up(lg) {
-    margin-bottom: 253px;
+    margin-bottom: 160px;
+  }
+  @media screen and (min-width:1539px) {
+    margin-bottom: 140px;
   }
 }
 
@@ -43,11 +51,12 @@ $choose-us-icon-box-bg: $white;
 }
 
 .choose-us__icon-box--left {
-  @media screen and (max-width:1750px) {
-    margin-left: 40px !important;
-  }
-  @media screen and (max-width:1600px) {
+  margin-left: 20px;
+  @media screen and (min-width:1600px) {
     margin-left: 60px !important;
+  }
+  @media screen and (min-width:1750px) {
+    margin-left: 40px !important;
   }
   @include media-breakpoint-down(md) {
     margin-left: 0 !important;
@@ -55,11 +64,12 @@ $choose-us-icon-box-bg: $white;
 }
 
 .choose-us__icon-box--right {
-  @media screen and (max-width:1750px) {
-    margin-right: 40px !important;
-  }
-  @media screen and (max-width:1600px) {
+  margin-right: 20px;
+  @media screen and (min-width:1600px) {
     margin-right: 60px !important;
+  }
+  @media screen and (min-width:1750px) {
+    margin-right: 40px !important;
   }
   @include media-breakpoint-down(md) {
     margin-right: 20px !important;
