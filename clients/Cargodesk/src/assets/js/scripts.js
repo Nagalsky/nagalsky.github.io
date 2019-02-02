@@ -1,6 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
   //Add/remove background for navbar(once you scroll down)
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scroll = $(window).scrollTop()
 
     if (scroll >= 5) {
@@ -50,7 +51,7 @@ $(document).ready(function() {
   $('[data-toggle="popover"]').popover()
 
   //Collapse action
-  $('.collapse-box__trigger').on('click', function(e) {
+  $('.collapse-box__trigger').on('click', function (e) {
     e.preventDefault()
     $(this).toggleClass('collapse-box__trigger--opened')
     $(this)
@@ -60,11 +61,11 @@ $(document).ready(function() {
   })
 
   //Scroll to element
-  $("a[data-scroll]").click(function(e) {
+  $("a[data-scroll]").click(function (e) {
     e.preventDefault();
     //Set Offset Distance from top to account for fixed nav
     var offset = 119;
-    $(window).resize(function() {
+    $(window).resize(function () {
       if ($(window).width() < 992) {
         offset = 82;
       }
@@ -77,8 +78,7 @@ $(document).ready(function() {
     //Animate the scroll to, include easing lib if you want more fancypants easings
     $("html, body")
       .stop()
-      .animate(
-        {
+      .animate({
           scrollTop: $target.offset().top - offset
         },
         800,
@@ -90,19 +90,19 @@ $(document).ready(function() {
   });
 
   //Cargo form action
-  $('#continue-details').on('click', function(event) {
+  $('#continue-details').on('click', function (event) {
     event.preventDefault();
     $(this).addClass('d-none')
     $('#cargo-details .display-none').slideToggle(300);
   })
 
-  $('#add-new-shipment').on('click', function(event) {
+  $('#add-new-shipment').on('click', function (event) {
     event.preventDefault();
     $('.shipment-item:first').clone().removeClass('shipment-item-prev').appendTo('#shipments').prev().addClass('shipment-item-prev');
   })
 
   $(document).on('click', '.btn-icon--delete', function () {
-  	$(this).parents('.shipment-item').remove();
+    $(this).parents('.shipment-item').remove();
   });
 
   // $('.btn-icon--delete').on('click', function(event) {

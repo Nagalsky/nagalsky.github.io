@@ -15,11 +15,14 @@ $navbar-brand-ff: $font-secondary-bold;
   will-change: background-color;
   z-index: 5000;
   @include transition($base-animation);
-  @extend .py-md-0, .px-0;
+  @extend .py-md-0,
+  .px-0;
+
   @include media-breakpoint-down(md) {
     padding-top: 2px;
     padding-bottom: 2px;
   }
+
   @include media-breakpoint-up(lg) {
     min-height: $navbar-height-desktop;
   }
@@ -59,11 +62,16 @@ $navbar-brand-ff: $font-secondary-bold;
       }
     }
   }
+
+  >.container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .navbar-brand {
   width: 99px;
-  min-height:82px;
+  min-height: 82px;
   font-family: $navbar-brand-ff;
   font-size: 36px;
   line-height: .91;

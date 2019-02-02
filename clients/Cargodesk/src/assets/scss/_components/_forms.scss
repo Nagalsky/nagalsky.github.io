@@ -8,8 +8,8 @@ $placeholder-font-size: 14px;
 $placeholder-font-style: $font-base-regular;
 
 .form-control {
-	-webkit-appearance:none;
-	-moz-appearance:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	border-radius: $base-radius;
 	height: $field-height;
 	font-family: $placeholder-font-style;
@@ -17,15 +17,16 @@ $placeholder-font-style: $font-base-regular;
 	border-color: $field-border-color;
 	border-radius: $base-radius;
 	border-width: 2px;
+
 	@include media-breakpoint-up(md) {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	@include custom-placeholder(
-	  $color: $placeholder-color,
-	  $font-size: $placeholder-font-size,
-	  $font-family: $placeholder-font-style
-	);
+
+	@include custom-placeholder($color: $placeholder-color,
+	$font-size: $placeholder-font-size,
+	$font-family: $placeholder-font-style);
+
 	&:focus {
 		box-shadow: none;
 		border-color: $field-border-color-focus;
@@ -34,9 +35,11 @@ $placeholder-font-style: $font-base-regular;
 
 .field-has-icon {
 	@extend .position-relative;
+
 	.form-control {
 		padding-left: 50px;
 	}
+
 	.field-icon {
 		@extend .position-absolute;
 		left: 18px;
@@ -44,8 +47,11 @@ $placeholder-font-style: $font-base-regular;
 		transform: translateY(-50%);
 		width: 20px;
 	}
-	input[type="password"] {
-		padding-right: 160px;
+
+	&.has-link {
+		input[type="password"] {
+			padding-right: 160px;
+		}
 	}
 }
 
@@ -56,7 +62,9 @@ $placeholder-font-style: $font-base-regular;
 	transform: translateY(-50%);
 	font-family: $font-base-bold;
 	color: $dark;
-	&:hover, &:focus {
+
+	&:hover,
+	&:focus {
 		color: $success;
 	}
 }
