@@ -53,13 +53,16 @@ $navbar-icon-color: $gray;
     }
 
     > .nav-link {
-      @extend .text-uppercase, .bariol-bold;
+      @extend .text-uppercase, .bariol-bold, .d-flex, .align-items-center, .justify-content-between, .d-md-inline-block;
       @include media-breakpoint-up(xl) {
         padding-left: 15px;
         padding-right: 15px;
       }
       @include media-breakpoint-down(md) {
         font-size: 14px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
       }
 
       &.dropdown-toggle {
@@ -70,6 +73,11 @@ $navbar-icon-color: $gray;
           content: '\f004';
           line-height: 1;
           vertical-align: unset;
+          @include media-breakpoint-down(sm) {
+            color: $burgundy-dark;
+            content: '\e833';
+            font-size: 14px;
+          }
         }
       }
     }
@@ -106,9 +114,9 @@ $navbar-icon-color: $gray;
 
 .navbar-collapse__close {
   @extend .d-inline-block, .d-md-none, .position-absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 8px;
   color: $dark;
-  font-size: 18px;
+  font-size: 22px;
   z-index: 60;
 }
