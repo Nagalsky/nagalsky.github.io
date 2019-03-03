@@ -1,0 +1,28 @@
+/* DROPDOWN */
+.dropdown-menu {
+  &--navbar {
+    @extend .mt-0;
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    .dropdown-item {
+      @extend .bariol-bold;
+      color: $burgundy;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 10px;
+        font-size: 14px;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $navbar-bg;
+        color: $burgundy-dark;
+      }
+    }
+  }
+}

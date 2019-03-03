@@ -1,0 +1,35 @@
+/* NAVBAR COLLAPSE */
+.navbar-collapse {
+  @include media-breakpoint-down(sm) {
+    &.is-opened {
+      display: inline-block !important;
+    }
+    z-index: 550;
+    position: absolute;
+    top: $navbar-divider-mobile-height;
+    right: 0;
+    background-color: $white;
+    box-shadow: 0 1px 15px 0 rgba($black, .2);
+    padding: 40px 15px 40px 30px;
+    width: 240px;
+    overflow-y: auto;
+  }
+}
+
+.navbar-mask {
+  @extend .d-md-none, .position-fixed, .w-100, .h-100;
+  background-color: rgba($black, .5);
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 500;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+
+  &.is-opened {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
