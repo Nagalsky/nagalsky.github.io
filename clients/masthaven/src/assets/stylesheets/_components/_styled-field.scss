@@ -1,0 +1,50 @@
+/* STYLED CHECKBOXES */
+
+$styled-field-color: $dark;
+$styled-field-radio-rounded-box-size: 14px;
+
+.styled-fields {
+  @extend .d-flex, .flex-wrap, .justify-content-md-center;
+  input {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    &:checked {
+      &+label {
+        font-family: $bariol-bold;
+        &:before {
+          top: 4px;
+          background-color: $styled-field-color;
+        }
+      }
+    }
+  }
+  label {
+    @extend .position-relative;
+    margin-bottom: 0;
+    color: $styled-field-color;
+    padding-left: calc(#{$styled-field-radio-rounded-box-size} + 5px);
+    cursor: pointer;
+    &:before {
+      content: '';
+      @extend .position-absolute, .rounded-circle;
+      left: 0;
+      top: 5px;
+      width: $styled-field-radio-rounded-box-size;
+      height: $styled-field-radio-rounded-box-size;
+      border: 2px solid $styled-field-color;
+    }
+  }
+}
+
+
+.styled-field {
+  margin-bottom: 10px;
+  &--inline {
+    @extend .d-inline-flex;
+    &:not(:last-child) {
+      padding-right: 30px;
+    }
+  }
+}
