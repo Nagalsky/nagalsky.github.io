@@ -1,0 +1,40 @@
+/* PANEL INFO */
+
+.panel-info {
+  @extend .d-sm-flex, .justify-content-center;
+}
+
+.panel-info__item {
+  @extend .flex-shrink-0, .flex-grow-1;
+  flex-basis: 0;
+  box-shadow: 0px 8px 8px 0 rgba($black, .15);
+  background-color: $white;
+  padding: 30px 15px;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+    padding: 50px 25px;
+  }
+  &+.panel-info__item {
+    @include media-breakpoint-down(xs) {
+      margin-top: 20px;
+    }
+  }
+  &--has-border {
+    border-top: 7px solid $burgundy-dark;
+  }
+  &--negative {
+    @include media-breakpoint-up(sm) {
+      margin-top: -35px;
+      margin-bottom: -35px;
+    }
+  }
+}
+
+.panel-info__title {
+  font-size: 30px;
+  color: $brand-color;
+  @include media-breakpoint-up(md) {
+    font-size: 45px;
+  }
+}

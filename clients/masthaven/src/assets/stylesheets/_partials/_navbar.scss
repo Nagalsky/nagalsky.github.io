@@ -5,7 +5,7 @@ $navbar-divider-mobile-height: 6px;
 $navbar-icon-color: $gray;
 
 .navbar {
-  @extend .position-relative;
+  @extend .position-relative, .flex-shrink-0;
   background-color: $navbar-bg;
   padding: calc(#{$navbar-divider-mobile-height} + 12px) 15px 12px 15px;
   @include media-breakpoint-up(md) {
@@ -18,7 +18,7 @@ $navbar-icon-color: $gray;
     height: $navbar-divider-mobile-height;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
     @include media-breakpoint-up(md) {
       height: $navbar-divider-height;
     }

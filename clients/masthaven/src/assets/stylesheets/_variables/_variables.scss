@@ -107,7 +107,7 @@ $red: #ff3600; //Override Bootstrap color variables
 *************************/
 $bariol-light: 'bariollight';
 $bariol-regular: 'bariolregular';
-$bariol-bold: 'bariolbold';
+$bariol-bold: 'bariol_boldbold';
 $playfair-regular: 'playfair_displayregular';
 $playfair-italic: 'playfair_displayitalic';
 $playfair-bold: 'playfair_displaybold';
@@ -168,6 +168,12 @@ $font-icons: "fontello";
 	Base variables
 *************************/
 $brand-color: $burgundy;
+.text-brand {
+  color: $brand-color !important;
+}
+.bg-brand {
+  background-color: $brand-color !important;
+}
 $base-color: $dark;
 $base-font: $bariol-regular;
 $base-animation: 250ms;
@@ -180,7 +186,7 @@ $font-path: "../fonts/";
 	Body variables
 *************************/
 $body-font-family: $base-font;
-$body-font-size: 15px;
+$body-font-size: 16px;
 $body-line-height: 1.5;
 $body-main-color: $base-color;
 /*************************
@@ -190,4 +196,5 @@ $link-color: $brand-color;
 /*************************
 	Title variables
 *************************/
-$title-font-family: $bariol-bold;
+$title-font-family: $playfair-bold;
+$title-line-height: 1.4;
