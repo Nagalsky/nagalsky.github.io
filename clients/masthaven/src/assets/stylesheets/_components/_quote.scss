@@ -24,6 +24,10 @@
 		@extend .text-brand;
 		font-size: 65%;
 		vertical-align: text-top;
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+			vertical-align: super;
+		}
 	}
 	&:before {
 		content: '\e831';
