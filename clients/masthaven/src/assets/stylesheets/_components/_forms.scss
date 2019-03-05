@@ -1,6 +1,27 @@
 /* FORMS */
 
+$field-border-color: #e6e5e5;
+$field-height: 38px;
+
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
+	border-color: $field-border-color;
+	height: $field-height;
+	border-radius: 0;
+	&:focus {
+		border-color: $brand-color;
+		box-shadow: 0 0 0 0.2rem rgba($brand-color,.25);
+	}
+	&--circle {
+		border-radius: $base-redius;
+	}
+}
+
+
+label {
+	color: $brand-color;
+	@include media-breakpoint-up(lg) {
+		font-size: 18px;
+	}
 }
