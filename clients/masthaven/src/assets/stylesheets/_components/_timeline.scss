@@ -1,0 +1,66 @@
+/* TIMELINE */
+
+.timeline__divider {
+  margin: 15px 0 25px 0;
+  height: 10px;
+  background-color: $burgundy;
+}
+
+.timeline__divider__inner {
+  height: 10px;
+  background: linear-gradient(to right, $burgundy 20%,$burgundy 20%,$red 20%,$red 40%, $yellow 40%,$yellow 60%,$burgundy-dark 60%,$burgundy-dark 80%,$burgundy 80%,$burgundy 100%);
+}
+
+.timeline__icon {
+  font-size: 60px;
+}
+
+.timeline__title {
+  @extend .bariol-bold;
+}
+
+.timeline__body__item {
+  @extend .position-relative, .pl-lg-5;
+  @include media-breakpoint-down(lg) {
+    padding: 10px 0 30px 50px;
+  }
+  &:before {
+    content: '';
+    @include media-breakpoint-up(lg) {
+      content: none;
+    }
+    @extend .position-absolute, .h-100;
+    left: 0;
+    top: 0;
+    width: 10px;
+  }
+  &--burgundy {
+    &:before {
+      background-color: $burgundy;
+    }
+  }
+  &--red {
+    &:before {
+      background-color: $red;
+    }
+  }
+  &--yellow {
+    &:before {
+      background-color: $yellow;
+    }
+  }
+  &--burgundy-dark {
+    &:before {
+      background-color: $burgundy-dark;
+    }
+  }
+}
+
+.timeline__list {
+  @extend .mx-0, .px-0, .pl-3;
+  >li {
+    &+li {
+      margin-top: 15px;
+    }
+  }
+}
