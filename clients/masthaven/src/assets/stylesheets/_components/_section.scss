@@ -23,6 +23,12 @@
     @include media-breakpoint-up(xl) {
       height: 90%;
     }
+    @media screen and (max-width:1450px) {
+      height: 80%;
+    }
+    @include media-breakpoint-down(lg) {
+      height: auto;
+    }
   }
   &--has-gap {
     margin-top: 20px;
@@ -36,7 +42,7 @@
       content: '';
       bottom: 0;
       left: 0;
-      height: 7px;
+      height: 14px;
       @include media-breakpoint-down(sm) {
         height: 6px;
       }
