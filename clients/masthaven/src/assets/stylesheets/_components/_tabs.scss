@@ -1,0 +1,58 @@
+/* TABS */
+
+.tabs {
+  display: flex;
+  z-index: 1000;
+  margin-bottom: 30px;
+  &--negative {
+    @include media-breakpoint-up(md) {
+      margin-bottom: -100px;
+      transform: translateY(-100px);
+      padding-bottom: 80px;
+    }
+  }
+}
+
+.tabs__item {
+  flex-basis: 25%;
+}
+
+.tabs__link {
+  @extend .position-relative, .d-block;
+  padding: 32px 15px 20px 15px;
+  background-color: $white;
+  color: $dark;
+  text-align: center;
+  box-shadow: 0 0 14.6px 1.4px rgba($black, .17);
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100;
+    height: 12px;
+    left: 0;
+    top: 0;
+  }
+  &--yellow {
+    &:before {
+      background-color: $yellow;
+    }
+  }
+  &--red {
+    &:before {
+      background-color: $red;
+    }
+  }
+  &--brand {
+    &:before {
+      background-color: $burgundy;
+    }
+  }
+  &--brand-dark {
+    &:before {
+      background-color: $burgundy-dark;
+    }
+  }
+  &.active {
+    @extend .bariol-bold;
+    color: $dark;
+  }
+}

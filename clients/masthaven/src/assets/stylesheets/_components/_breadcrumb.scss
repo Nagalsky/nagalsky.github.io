@@ -1,1 +1,23 @@
 /* BREADCRUMB */
+
+
+.breadcrumb {
+  padding: 0px 15px;
+  background-color: transparent;
+  @extend .bariol-bold;
+}
+
+.breadcrumb-item {
+  &.active {
+    @extend .text-dark;
+  }
+  &+.breadcrumb-item {
+    &:before {
+      @extend .text-dark;
+      content: '>';
+    }
+  }
+  >a {
+    @extend .text-dark;
+  }
+}
