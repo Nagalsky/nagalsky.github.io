@@ -1,10 +1,14 @@
 /* NAVBAR */
+$navbar-height: 118px;
 $navbar-bg: $silver;
 $navbar-divider-height: 10px;
 $navbar-divider-mobile-height: 6px;
 $navbar-icon-color: $gray;
 
 .navbar {
+  @include media-breakpoint-up(xl) {
+    min-height: $navbar-height;
+  }
   @extend .flex-shrink-0, .px-md-0;
   background-color: $navbar-bg;
   padding: calc(#{$navbar-divider-mobile-height} + 12px) 15px 12px 15px;
