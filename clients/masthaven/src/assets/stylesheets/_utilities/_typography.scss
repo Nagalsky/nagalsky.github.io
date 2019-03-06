@@ -44,6 +44,9 @@ h6 {
 .h1,
 h1 {
   font-size: 65px;
+  @include media-breakpoint-down(sm) {
+    font-size: 50px;
+  }
 }
 
 .h2,
@@ -111,5 +114,15 @@ b, .bold {
   @extend .better-saturday-regular;
   &--lg {
     line-height: 2.5;
+  }
+}
+
+.has-arrow {
+  &:after {
+    content: '>';
+    color: $brand-color;
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline-block;
   }
 }
