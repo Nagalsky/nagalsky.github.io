@@ -94,6 +94,15 @@ a {
   }
 }
 
+.link-dark {
+  color: $dark;
+
+  &:focus,
+  &:hover {
+    color: $brand-color;
+  }
+}
+
 p {
   margin-bottom: 20px;
 
@@ -112,6 +121,7 @@ b, .bold {
 
 .subtitle {
   @extend .better-saturday-regular;
+  letter-spacing: 2.1px;
   &--lg {
     line-height: 2.5;
   }
@@ -124,5 +134,11 @@ b, .bold {
     font-weight: bold;
     margin-left: 5px;
     display: inline-block;
+  }
+}
+
+.lead {
+  @include media-breakpoint-up(lg) {
+    font-size: 24px;
   }
 }

@@ -23,14 +23,18 @@
 
   &-content {
     @include button-variants($bg: $brand-color, $color: $white);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include button-variants($bg: $silver, $color: $dark);
     }
   }
 
   &-lt {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       letter-spacing: 2px;
     }
+  }
+  &-block {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
