@@ -125,6 +125,25 @@ $hero-bg: $silver;
       }
     }
   }
+  &--who-we-are {
+    .hero__floated-image {
+      bottom: 0;
+      right: 10%;
+      max-width: 300px;
+      @include media-breakpoint-up(md) {
+        max-width: 270px;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: 400px;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: 720px;
+      }
+      @media screen and (min-width:1450px) {
+        max-width: 840px;
+      }
+    }
+  }
   .breadcrumb {
     @extend .position-absolute, .d-lg-none, .w-100, .px-sm-0;
     top: 10px;
@@ -152,6 +171,7 @@ $hero-bg: $silver;
 .hero__floated-image {
   @include media-breakpoint-up(md) {
     position: absolute;
+    z-index: -1;
   }
   @extend .w-100;
   z-index: 20;
