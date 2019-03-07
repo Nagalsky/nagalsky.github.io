@@ -1,0 +1,60 @@
+/* DATEPICKER */
+
+.datepicker-holder {
+  @extend .mx-auto;
+  max-width: 230px;
+  .input-group {
+    @extend .align-items-center;
+  }
+  .input-group-text {
+    background-color: transparent;
+    @extend .border-0, .p-0, .mr-2;
+    font-size: 60px;
+    color: $brand-color;
+    @include media-breakpoint-down(sm) {
+      font-size: 40px;
+    }
+  }
+  .input-group-text-icon {
+    &:before {
+      @extend .p-0, .m-0;
+      line-height: auto;
+    }
+  }
+  .form-control {
+    @extend .border-0;
+    color: $dark;
+    font-size: 27px;
+    @include custom-placeholder($color: $dark, $font-size: 27px, $font-family: $bariol-regular);
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      @include custom-placeholder($color: $dark, $font-size: 20px, $font-family: $bariol-regular);
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  .bootstrap-datetimepicker-widget {
+    z-index: 700;
+  }
+  .table {
+    thead {
+      >tr {
+        td, th {
+          border: none;
+        }
+      }
+    }
+    .day {
+      &.active, &.today {
+        background-color: $brand-color;
+      }
+      &.today {
+        color: $white;
+        &:before {
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+}

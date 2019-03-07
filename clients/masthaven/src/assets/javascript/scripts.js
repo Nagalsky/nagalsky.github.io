@@ -41,4 +41,47 @@ $(document).ready(function() {
     autoplayTimeout: 5000,
     smartSpeed: 550,
   })
+
+  //Calculator
+  //Calculator buttons
+  ;(function() {
+    var $calculatorButton = $('.calculator__btn')
+    var $calculatorButtonActiveClass = 'active'
+    $calculatorButton.on('click', function(e) {
+      e.preventDefault()
+      $(this)
+        .toggleClass($calculatorButtonActiveClass)
+        .siblings()
+        .removeClass($calculatorButtonActiveClass)
+    })
+  })()
+
+  //Calculator choose year
+  ;(function() {
+    var $calculatorChooseYearItem = $(
+      '.calculator__choose-year__item'
+    )
+    var $calculatorChooseYearItemActiveClass = 'active'
+    $calculatorChooseYearItem.on('click', function(e) {
+      e.preventDefault()
+      $(this)
+        .toggleClass($calculatorChooseYearItemActiveClass)
+        .siblings()
+        .removeClass($calculatorChooseYearItemActiveClass)
+    })
+  })()
+
+  //Initial range slider
+  $('.js-range-slider').ionRangeSlider({
+    grid: true,
+    grid_snap: true,
+    values: ['0m', '12m', '24m', '36m', '48m', '60m'],
+  })
+
+  //Initial datepicker
+  $(function() {
+    $('#datetimepicker4').datetimepicker({
+      format: 'L',
+    })
+  })
 })

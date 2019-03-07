@@ -1,6 +1,7 @@
 /* FORMS */
 
 $field-border-color: #e6e5e5;
+$field-color: #000000;
 $field-height: 38px;
 
 .form-control {
@@ -8,10 +9,12 @@ $field-height: 38px;
 	-moz-appearance:none;
 	border-color: $field-border-color;
 	height: $field-height;
+	color: $field-color;
 	border-radius: 0;
 	&:focus {
 		border-color: $brand-color;
-		box-shadow: 0 0 0 0.2rem rgba($brand-color,.25);
+		box-shadow: 0 0 0 0.15rem rgba($brand-color,.25);
+		color: $field-color;
 	}
 	&--circle {
 		border-radius: $base-redius;

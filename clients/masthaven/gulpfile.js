@@ -105,6 +105,9 @@ gulp.task(
       .src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
+        'node_modules/moment/min/moment.min.js',
+        'node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
         'node_modules/owl.carousel/dist/owl.carousel.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
       ])
