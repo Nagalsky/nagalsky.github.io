@@ -1,11 +1,13 @@
 /* NAVBAR */
 $navbar-height: 118px;
+$navbar-height-mobile: 70px;
 $navbar-bg: $silver;
 $navbar-divider-height: 10px;
 $navbar-divider-mobile-height: 6px;
 $navbar-icon-color: $gray;
 
 .navbar {
+  min-height: $navbar-height-mobile;
   @include media-breakpoint-up(xl) {
     min-height: $navbar-height;
   }
@@ -15,6 +17,13 @@ $navbar-icon-color: $gray;
   z-index: 200;
   @include media-breakpoint-up(md) {
     padding: calc(#{$navbar-divider-height} + 25px) 15px 25px 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
   }
 
   &:before {

@@ -12,7 +12,8 @@ $(document).ready(function() {
       $menuMask.addClass($menuActiveClass)
     })
 
-    $menuClose.on('click', function() {
+    $menuClose.on('click', function(e) {
+      e.preventDefault()
       $menu.removeClass($menuActiveClass)
       $menuMask.removeClass($menuActiveClass)
     })

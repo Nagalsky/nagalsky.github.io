@@ -13,6 +13,9 @@ html {
 
 body {
   @extend .d-flex, .flex-column;
+  @include media-breakpoint-down(sm) {
+    padding-top: $navbar-height-mobile;
+  }
 }
 
 .main {
