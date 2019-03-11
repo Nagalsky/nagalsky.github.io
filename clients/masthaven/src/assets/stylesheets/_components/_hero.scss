@@ -70,6 +70,12 @@ $hero-bg: $silver;
     @include media-breakpoint-up(md) {
       padding: 70px 0;
     }
+    @include media-breakpoint-up(lg) {
+      padding: 100px 0 180px 0;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 140px 0 280px 0;
+    }
     .hero__floated-image {
       right: 0;
       top: 50%;
@@ -100,7 +106,13 @@ $hero-bg: $silver;
     }
   }
   &--interest {
-    padding: 12% 0 280px 0;
+    padding: 16% 0;
+    @media screen and (max-width:1800px) {
+      padding: 12% 0;
+    }
+    @media screen and (max-width:1300px) {
+      padding: 11% 0;
+    }
     @include media-breakpoint-down(lg) {
       padding: 10% 0 200px 0;
     }
