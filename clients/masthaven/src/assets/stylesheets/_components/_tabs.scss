@@ -18,9 +18,25 @@
 }
 
 .weare__tabs {
-  .active {
-    //box-shadow: 0 0 14.6px 1.4px rgba($black, .17);
-    box-shadow: -7px 0 8px -2px rgba($black, .17);
+  .tabs__link {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 20px;
+      background-color: $white;
+      display: block;
+      opacity: 0;
+    }
+    &.active {
+      box-shadow: -7px 0 8px -2px rgba($black, .17);
+      &:after {
+        opacity: 1;
+      }
+    }
   }
 }
 
