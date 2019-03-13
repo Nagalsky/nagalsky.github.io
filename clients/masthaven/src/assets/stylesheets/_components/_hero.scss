@@ -3,16 +3,18 @@
 $hero-bg: $silver;
 
 .hero {
-  @extend .position-relative, .d-lg-flex, .flex-lg-column, .justify-content-lg-center;
+  @extend .position-relative, .d-lg-flex, .flex-lg-column;
   box-shadow: 0px 18px 30px 0 rgba($black, .2);
   background-color: $hero-bg;
   padding: 70px 0 0 0;
   z-index: 100;
   @include media-breakpoint-up(lg) {
-    padding: 140px 0 180px 0;
+    padding: 40px 0;
+    height: calc(100vh - 120px);
+    min-height: 630px;
   }
   @include media-breakpoint-up(xl) {
-    padding: 140px 0 280px 0;
+    min-height: 730px;
   }
   @include media-breakpoint-down(md) {
     box-shadow: 0px 9px 15px 0 rgba($black, .2);
@@ -67,15 +69,6 @@ $hero-bg: $silver;
     }
   }
   &--news {
-    @include media-breakpoint-up(md) {
-      padding: 70px 0;
-    }
-    @include media-breakpoint-up(lg) {
-      padding: 140px 0 180px 0;
-    }
-    @include media-breakpoint-up(xl) {
-      padding: 140px 0 280px 0;
-    }
     .hero__floated-image {
       right: 0;
       top: 50%;
@@ -95,10 +88,10 @@ $hero-bg: $silver;
       right: 5%;
       max-width: 300px;
       @include media-breakpoint-up(lg) {
-        max-width: 510px;
+        max-width: 490px;
       }
       @include media-breakpoint-up(xl) {
-        max-width: 630px;
+        max-width: 610px;
       }
       @media screen and (min-width:1400px) {
         right: 10%;
@@ -106,25 +99,6 @@ $hero-bg: $silver;
     }
   }
   &--interest {
-    padding: 8% 0 16% 0;
-    @media screen and (min-width:1801px) {
-      padding: 5% 0 23% 0;
-    }
-    @media screen and (max-width:1800px) {
-      padding: 8% 0 16% 0;
-    }
-    @media screen and (max-width:1300px) {
-      padding: 10% 0 13% 0;
-    }
-    @include media-breakpoint-down(lg) {
-      padding: 11% 0 200px 0;
-    }
-    @include media-breakpoint-down(md) {
-      padding: 70px 0 80px 0;
-    }
-    @include media-breakpoint-down(sm) {
-      padding: 70px 0;
-    }
     .hero__floated-image {
       right: 0;
       bottom: 15px;
@@ -135,57 +109,11 @@ $hero-bg: $silver;
         max-width: 100%;
       }
       @include media-breakpoint-up(xl) {
-        bottom: 100px;
-      }
-      @media screen and (min-width:1801px) {
-        bottom: 65px !important;
-      }
-    }
-  }
-  &--interest-lg {
-    padding: 8% 0 16% 0;
-    @media screen and (min-width:1801px) {
-      padding: 5% 0 26% 0;
-    }
-    @media screen and (max-width:1800px) {
-      padding: 8% 0 19% 0;
-    }
-    @media screen and (max-width:1300px) {
-      padding: 10% 0 17% 0;
-    }
-    @include media-breakpoint-down(lg) {
-      padding: 11% 0 200px 0;
-    }
-    @include media-breakpoint-down(md) {
-      padding: 70px 0 80px 0;
-    }
-    @include media-breakpoint-down(sm) {
-      padding: 70px 0;
-    }
-    .hero__floated-image {
-      right: 0;
-      bottom: 15px;
-      position: static;
-      @include media-breakpoint-up(lg) {
-        position: absolute;
-        max-width: 100%;
-        bottom: 120px;
-      }
-      @include media-breakpoint-up(xl) {
-        bottom: 125px;
-      }
-      @media screen and (min-width:1801px) {
-        bottom: 130px;
+        bottom: 110px;
       }
     }
   }
   &--who-we-are {
-    @include media-breakpoint-up(lg) {
-      padding: 100px 0 180px 0;
-    }
-    @include media-breakpoint-up(xl) {
-      padding: 140px 0 280px 0;
-    }
     .hero__floated-image {
       bottom: 0;
       right: 0;
@@ -201,27 +129,16 @@ $hero-bg: $silver;
       }
     }
   }
-  .breadcrumb {
-    @extend .position-absolute, .d-lg-none, .w-100, .px-sm-0;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    @include media-breakpoint-up(sm) {
-      max-width: 540px;
-    }
-    @include media-breakpoint-up(md) {
-      max-width: 660px;
-    }
-    @include media-breakpoint-up(lg) {
-      max-width: 930px;
-    }
-    @include media-breakpoint-up(xl) {
-      max-width: 1140px;
-    }
-    @include media-breakpoint-down(xs) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+}
+
+.hero__content {
+  @include media-breakpoint-up(md) {
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 45%;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 35%;
   }
 }
 
