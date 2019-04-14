@@ -1,6 +1,9 @@
 $(document).ready(function() {
   // Initial sticky navbar
-  $('.navbar-nav--sticky').sticky({ topSpacing: 0 })
+  //$('.navbar-nav--sticky').sticky({ topSpacing: 0 })
+  $('.navbar-nav--sticky').stick_in_parent({
+    sticky_class: 'is-sticky',
+  })
 
   //Sticky navbar form toggle
   $('.nav-link--search').on('click', function(e) {
