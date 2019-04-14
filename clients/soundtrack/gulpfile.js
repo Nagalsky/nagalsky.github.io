@@ -104,7 +104,6 @@ gulp.task(
     return gulp
       .src([
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/jquery-sticky/jquery.sticky.js',
         'node_modules/sticky-kit/dist/sticky-kit.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
