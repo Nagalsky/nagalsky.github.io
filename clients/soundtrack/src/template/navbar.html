@@ -5,9 +5,13 @@
   </button>
 
   <div class="collapse navbar-collapse flex-md-column" id="navbarContent">
-    <ul class="navbar-nav mr-auto order-md-3">
+    <ul class="navbar-nav navbar-nav--sticky mr-auto order-md-3 pt-2 pt-md-0">
+      <form class="form-inline form-sticky">
+        <input class="form-control mr-2" type="search" placeholder="Click here to start searching..." aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#"><span class="nav__visible">Home</span><span class="nav__hidden">Soundtrack.Net</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Release Dates</a>
@@ -27,6 +31,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Trailer Music</a>
       </li>
+      <li class="nav-item nav-item--search ml-auto">
+        <a class="nav-link nav-link--search" href="#">
+          <i class="soundtrack-icon-search"></i>
+        </a>
+      </li>
     </ul>
 
     <div class="w-100 d-flex flex-column flex-md-row align-items-md-center">
@@ -44,9 +53,9 @@
         </li>
       </ul>
     </div>
-
-    <div class="banner w-100 my-3">
-      banner area
-    </div>
   </div>
 </nav>
+
+<div class="banner w-100 my-3 mb-2">
+  banner area
+</div>
