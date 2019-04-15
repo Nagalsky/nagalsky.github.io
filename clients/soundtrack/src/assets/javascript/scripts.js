@@ -1,9 +1,13 @@
 $(document).ready(function() {
   // Initial sticky navbar
-  //$('.navbar-nav--sticky').sticky({ topSpacing: 0 })
-  $('.navbar-nav--sticky').stick_in_parent({
-    sticky_class: 'is-sticky',
-  })
+  $('.navbar-nav--sticky')
+    .stick_in_parent({
+      sticky_class: 'is-sticky',
+    })
+    .on('sticky_kit:unstick', function(e) {
+      $('.form-sticky').removeClass('active')
+      $('.nav-item.nav-item--hidden').removeClass('nav-item--hidden')
+    })
 
   //Sticky navbar form toggle
   $('.nav-link--search').on('click', function(e) {

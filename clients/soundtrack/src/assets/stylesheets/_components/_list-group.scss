@@ -1,0 +1,24 @@
+/* LIST GROUP */
+
+.list-group-item {
+  border-color: $muted;
+  &--header {
+    background-color: $muted;
+    @extend .py-1, .text-black, .border-bottom-0;
+    a {
+      @extend .text-black;
+    }
+  }
+}
+
+.list-group-link {
+  color: $tarawera;
+  &:hover, &:focus {
+    color: darken($tarawera, 10%);
+    text-decoration: underline;
+  }
+}
+
+.list-group-date {
+  color: $gray-bold;
+}

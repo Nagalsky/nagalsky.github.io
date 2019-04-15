@@ -1,2 +1,82 @@
 /* CARD */
 
+$card-header-primary-bg: $tarawera;
+$card-body-fs: 12px;
+
+.card {
+  font-size: $card-body-fs;
+  border-color: $black;
+  &+.card {
+    margin-top: 15px;
+  }
+  &--danger {
+    .card-header {
+      background-color: $danger;
+    }
+  }
+  .media__img {
+    border: 1px solid $black;
+    max-width: 90px;
+    @include media-breakpoint-down(md) {
+      max-width: 65px;
+    }
+  }
+  .media-body {
+    font-size: 11px;
+    @include media-breakpoint-down(md) {
+      font-size: 10px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 11px;
+    }
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+}
+
+.card,
+.card-header,
+.card-footer {
+
+  @extend .rounded-0;
+}
+
+.card-header,
+.card-footer {
+  padding: 8px 15px;
+}
+
+.card-header {
+  background-color: $card-header-primary-bg;
+  color: $white;
+  font-weight: bold;
+  @extend .border-bottom-0;
+  a {
+    color: $white;
+    &:hover, &:focus {
+      color: $white;
+    }
+  }
+}
+
+.card-footer {
+  @extend .border-top-0, .text-right;
+  background-color: $muted;
+  font-size: 10px;
+}
+
+.card-footer__btn {
+  &:before {
+    content: '> '
+  }
+  &:after {
+    content: ' ...'
+  }
+}
