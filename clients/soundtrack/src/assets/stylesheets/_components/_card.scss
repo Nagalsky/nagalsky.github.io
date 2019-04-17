@@ -6,8 +6,8 @@ $card-body-fs: 12px;
 .card {
   font-size: $card-body-fs;
   border-color: $black;
-  &+.card {
-    margin-top: 15px;
+  &:not(:last-child) {
+    margin-bottom: 15px;
   }
   &--danger {
     .card-header {
