@@ -3,6 +3,37 @@
 $card-header-primary-bg: $tarawera;
 $card-body-fs: 12px;
 
+
+.cards {
+  //@extend .d-md-flex;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+    .card {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    // .card {
+    //   flex-basis: 33.33%;
+    // }
+    column-count: 3;
+  }
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // //grid-template-rows: repeat(1, auto);
+}
+
+// .card-column {
+//   @include media-breakpoint-up(md) {
+//     column-width: 50em;
+//   }
+//   @include media-breakpoint-up(lg) {
+//     column-width: 33em;
+//   }
+// }
+
 .card {
   font-size: $card-body-fs;
   border-color: $black;
