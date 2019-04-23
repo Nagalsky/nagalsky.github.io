@@ -1,0 +1,18 @@
+/* MENU */
+
+$menu-bg: $blue-muted;
+
+.menu {
+  @extend .position-fixed, .w-100, .h-100;
+  background-color: $menu-bg;
+  z-index: 800;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.9);
+  @include transition($base-animation);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}

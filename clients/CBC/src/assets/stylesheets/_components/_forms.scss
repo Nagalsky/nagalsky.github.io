@@ -1,6 +1,22 @@
 /* FORMS */
 
+$placeholder-color: $white;
+$placeholder-font-size: 14px;
+$placeholder-font-style: $font-montserrat-bold;
+$placeholder-opacity: 0;
+
 .form-control {
 	-webkit-appearance:none;
 	-moz-appearance:none;
+	font-family: $placeholder-font-style;
+	color: $placeholder-color;
+	@include custom-placeholder(
+	  $color: $placeholder-color,
+	  $font-size: $placeholder-font-size,
+	  $font-family: $placeholder-font-style
+	)
+	&:focus {
+		color: $placeholder-color;
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+	}
 }

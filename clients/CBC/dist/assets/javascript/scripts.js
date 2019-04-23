@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=$("#menu"),e=$(".header__menu-toggle"),n=$(".menu__close");$(e).on("click",function(e){e.preventDefault(),t.toggleClass("active")}),$(n).on("click touchstart",function(e){e.preventDefault(),t.removeClass("active")})});
