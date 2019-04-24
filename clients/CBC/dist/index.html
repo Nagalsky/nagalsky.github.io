@@ -14,20 +14,20 @@
   <header class="header">
     <div class="container-fluid">
       <div class="header__inner">
-        <a href="#" class="header__logo">
-          <img src="assets/images/elements/logo.svg" alt="" class="w-100">
-        </a>
-  
         <a href="#" class="header__menu-toggle">
           <i class="cbc-icon-menu"></i>
         </a>
   
-        <form class="header__form d-none d-lg-block">
+        <a href="#" class="header__logo">
+          <img src="assets/images/elements/logo.svg" alt="" class="w-100">
+        </a>
+  
+        <form class="sign__form d-none d-lg-block">
           <label for="field-email">Sign up for our news</label>
           <div class="form-group d-flex mb-0">
-            <input type="email" class="form-control flex-1" placeholder="EMAIL">
+            <input type="email" class="form-control flex-1" placeholder="EMAIL" id="field-email">
             <button type="submit" name="button" class="btn btn-submit">
-              <i class="cbc-icon-play"></i>
+              <i class="cbc-icon-play-right"></i>
             </button>
           </div>
         </form>
@@ -36,7 +36,93 @@
   </header>
 
   <div class="menu" id="menu">
-    <a href="#" class="menu__close cbc-icon-close"></a>
+    <div class="menu__navbar">
+      <a href="#" class="menu__close cbc-icon-close"></a>
+      <ul class="menu__nav">
+        <li class="menu__nav__item">
+          <a href="#" class="menu__nav__link">Home</a>
+        </li>
+        <li class="menu__nav__item dropdown">
+          <a href="#" class="menu__nav__link dropdown-toggle" data-toggle="dropdown">Billiards</a>
+          <div class="dropdown-menu menu__dropdown-menu menu__dropdown-menu--columns">
+            <a class="dropdown-item" href="#">Billiards Bars & More</a>
+            <a class="dropdown-item" href="#">Visit Us</a>
+            <a class="dropdown-item" href="#">Diamonds Room</a>
+            <a class="dropdown-item" href="#">Tournaments</a>
+            <a class="dropdown-item" href="#">Billiards League</a>
+            <a class="dropdown-item" href="#">Master Leagues</a>
+            <a class="dropdown-item" href="#">Table Rates</a>
+            <a class="dropdown-item" href="#">Rules</a>
+            <a class="dropdown-item" href="#">History</a>
+            <a class="dropdown-item" href="#">Downtown Location</a>
+          </div>
+        </li>
+        <li class="menu__nav__item">
+          <a href="#" class="menu__nav__link">Arcade Room</a>
+        </li>
+        <li class="menu__nav__item">
+          <a href="#" class="menu__nav__link">Events Calendar</a>
+        </li>
+        <li class="menu__nav__item">
+          <a href="#" class="menu__nav__link">Galleries</a>
+        </li>
+        <li class="menu__nav__item">
+          <a href="#" class="menu__nav__link">About Us</a>
+        </li>
+        <li class="menu__nav__item dropdown">
+          <a href="#" class="menu__nav__link dropdown-toggle" data-toggle="dropdown">Contact Us</a>
+          <div class="dropdown-menu menu__dropdown-menu">
+            <a class="dropdown-item" href="#">Menu item</a>
+            <a class="dropdown-item" href="#">Menu item</a>
+            <a class="dropdown-item" href="#">Menu item</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- menu__navbar -->
+  
+    <div class="menu__content">
+      <div class="menu__content__item has-bg has-overlay has-overlay--blue" style="background-image: url('assets/images/bg/menu-bg.jpg');">
+        <div class="menu__content__body flex-1">
+          <h5 class="text-yellow mb-4">Drink Specials</h5>
+          <div class="row">
+            <div class="col">
+              <div class="info text-uppercase text-orange text-lg-right">
+                <div class="info__item">AFTER WORK</div>
+                <div class="info__item">MON - FRI</div>
+                <div class="info__item">4:00PM - 7:00PM</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="info text-white text-lg-left">
+                <div class="info__item">1/2 Price Cocktails*</div>
+                <div class="info__item">$2.50 Domestic Pints</div>
+                <div class="info__item">$1 Off 22 oz Drafts</div>
+                <div class="info__item">$1 Off Wine Glasses</div>
+                <div class="info__item">$3 Off Wine Bottles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu__content__footer text-center">
+          <a href="#" class="btn btn--yellow px-5">See all of<br /> our specials</a>
+        </div>
+      </div>
+  
+  
+      <div class="menu__content__item bg-black-thin justify-content-lg-center">
+        <div class="menu__content__body">
+          <h5 class="text-yellow mb-4">Food & Drink<br />Menu</h5>
+          <p class="lead text-white px-lg-5">When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove</p>
+        </div>
+  
+        <div class="menu__content__footer text-center">
+          <a href="#" class="btn btn--yellow">See the FULL MENU</a>
+        </div>
+      </div>
+    </div>
+    <!-- menu__navbar -->
   </div>
 
   <main class="main">
@@ -47,12 +133,225 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <h3 class="text-center text-uppercase font-montserrat-regular mb-4 mb-md-5">EVENTS</h3>
+
+        <div class="events">
+          <div>
+            <div class="event event--yellow">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">27th</span>
+              </p>
+              <p class="event__title text-blue">Wine Down Wednesday</p>
+              <span class="event__time text-black">7:00-8:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--blue">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Amatuer Billiards Tournament</p>
+              <span class="event__time">5:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--red">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Pro Billards Tournament</p>
+              <span class="event__time">7:00-8:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--green">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Amatuer Billiards Tournament</p>
+              <span class="event__time">5:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--yellow">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">27th</span>
+              </p>
+              <p class="event__title text-blue">Wine Down Wednesday</p>
+              <span class="event__time text-black">7:00-8:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--blue">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Amatuer Billiards Tournament</p>
+              <span class="event__time">5:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--red">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Pro Billards Tournament</p>
+              <span class="event__time">7:00-8:00 PM</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="event event--green">
+              <p class="event__date">
+                <span class="event__date__month">MAR</span><span class="event__date__date">29th</span>
+              </p>
+              <p class="event__title">Amatuer Billiards Tournament</p>
+              <span class="event__time">5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section has-bg" style="background-image: url('assets/images/bg/billboard-1.jpg');">
+      <div class="container">
+        <div class="row justify-content-md-end">
+          <div class="col-lg-6 col-md-8 scrollme">
+            <div class="box box--blue animateme" data-when="enter" data-from="0.7" data-to="0" data-opacity="0.5" data-translatey="200">
+              <h4 class="text-yellow mb-4 mb-md-5">Billiard<br />Leagues</h4>
+              <p class="text-white mb-4 mb-md-5">When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove</p>
+              <a href="#" class="btn btn--yellow">See the calendar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <h3 class="text-center text-uppercase font-montserrat-regular mb-4 mb-md-5">Two convenient Locations</h3>
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0 d-flex">
+            <div class="location" style="background-image: url('assets/images/bg/location-1.png');">
+              <h4 class="location__title">CBC East</h4>
+              <div class="location__description-holder">
+                <span class="location__description">Far far away, behind the word mountains, far from the countries Vokalia</span>
+              </div>
+              <a href="#" class="btn btn--primary">take a tour</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex">
+            <div class="location" style="background-image: url('assets/images/bg/location-2.png');">
+              <h4 class="location__title">Downtown</h4>
+              <div class="location__description-holder">
+                <span class="location__description">Far far away, behind the word mountains, far from the countries Vokalia</span>
+              </div>
+              <a href="#" class="btn btn--primary">take a tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  Footer
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container">
+        <div class="row row--bordered">
+          <div class="col-lg">
+            <div class="footer__item">
+              <p class="font-montserrat-medium">Contact us</p>
+              <div class="row">
+                <div class="col">
+                  <address class="mb-0">
+                    <b>CBC East</b><br />
+                    191186 Millionnaya st. 29<br />
+                    <a href="tel:(423) 500-1000">(423) 500-1000</a>
+                  </address>
+                </div>
+                <div class="col">
+                  <address class="mb-0">
+                    <b>Downtown</b><br />
+                    191186 Millionnaya st. 29<br />
+                    <a href="tel:(423) 500-1000">(423) 500-1000</a>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg">
+            <div class="footer__item">
+              <p class="font-montserrat-medium">Follow us</p>
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link cbc-icon-google" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link cbc-icon-facebook" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link cbc-icon-twitter" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link cbc-icon-instagram" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link cbc-icon-behance" href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="col-lg">
+            <div class="footer__item">
+              <form class="sign__form text-left pl-lg-5">
+                <label for="footer-field-email">Sign up for our news</label>
+                <div class="form-group d-flex mb-0">
+                  <input type="email" class="form-control flex-1" placeholder="EMAIL" id="footer-field-email">
+                  <button type="submit" name="button" class="btn btn-submit">
+                    <i class="cbc-icon-play-right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer__bottom">
+      <div class="container">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customer Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="assets/javascript/vendors.min.js"></script>
+  <script src="assets/javascript/jquery.scrollme.js"></script>
   <script src="assets/javascript/scripts.js"></script>
 </body>
 

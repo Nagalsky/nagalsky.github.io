@@ -20,3 +20,28 @@ $placeholder-opacity: 0;
 		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 	}
 }
+
+
+.sign__form {
+  label {
+    color: $white;
+    font-family: $font-montserrat-regular;
+  }
+  .form-control {
+    @extend .rounded-0, .border-0;
+    height: 43px;
+    background-color: rgba($white, .2);
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($white, .25);
+    }
+  }
+  .btn-submit {
+    @extend .rounded-0, .flex-shrink-0, .text-yellow, .py-1, .px-3;
+    background-color: rgba($white, .2);
+    border-left: 1px solid rgba($white, .4);
+    &:hover, &:focus {
+      background-color: rgba($white, .4);
+      border-left: 1px solid rgba($white, .6);
+    }
+  }
+}

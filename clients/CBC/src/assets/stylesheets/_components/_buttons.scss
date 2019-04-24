@@ -1,7 +1,22 @@
 /* BUTTONS */
-
 .btn {
-  &:hover, &:focus {
+  @extend .text-uppercase, .rounded-0;
+  padding: 12px 30px;
+  font-family: $font-montserrat-bold;
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
+
+  &:focus,
+  &:hover {
     box-shadow: none;
+  }
+
+  &--primary {
+    @include button-variants($bg: $white, $color: $blue-muted);
+  }
+
+  &--yellow {
+    @include button-variants($bg: $yellow, $color: $black-thin);
   }
 }

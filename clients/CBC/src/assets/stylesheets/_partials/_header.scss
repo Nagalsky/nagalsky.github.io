@@ -10,6 +10,16 @@
   @include media-breakpoint-down(md) {
     padding: 20px 0;
   }
+  .sign__form {
+    @include media-breakpoint-up(lg) {
+      width: 240px;
+      transform: translateY(-12px);
+    }
+    @include media-breakpoint-up(xl) {
+      width: 330px;
+      transform: translateY(-5px);
+    }
+  }
 }
 
 .header__inner {
@@ -47,37 +57,5 @@
   }
   @include media-breakpoint-down(xs) {
     width: 160px;
-  }
-}
-
-.header__form {
-  @include media-breakpoint-up(lg) {
-    width: 240px;
-    transform: translateY(-12px);
-  }
-  @include media-breakpoint-up(xl) {
-    width: 330px;
-    transform: translateY(-5px);
-  }
-  label {
-    color: $white;
-    font-family: $font-montserrat-regular;
-  }
-  .form-control {
-    @extend .rounded-0, .border-0;
-    height: 43px;
-    background-color: rgba($white, .2);
-    &:focus {
-      box-shadow: 0 0 0 0.2rem rgba($white, .25);
-    }
-  }
-  .btn-submit {
-    @extend .rounded-0, .flex-shrink-0, .text-yellow;
-    background-color: rgba($white, .2);
-    border-left: 1px solid rgba($white, .4);
-    &:hover, &:focus {
-      background-color: rgba($white, .4);
-      border-left: 1px solid rgba($white, .6);
-    }
   }
 }
