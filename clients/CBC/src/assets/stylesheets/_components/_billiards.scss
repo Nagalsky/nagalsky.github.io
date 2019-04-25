@@ -1,0 +1,22 @@
+/* BILLIARDS */
+
+.billiards {
+  @extend .d-md-flex;
+}
+
+.billiard__item {
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+  &+.billiard__item {
+    @include media-breakpoint-up(md) {
+      margin-top: 70px;
+      margin-left: -40px;
+      z-index: 20;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 120px;
+      margin-left: -70px;
+    }
+  }
+}

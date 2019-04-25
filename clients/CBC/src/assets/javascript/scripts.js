@@ -55,4 +55,60 @@ $(document).ready(function() {
     nextArrow: '.arrow__next',
     fade: true,
   })
+
+  $('.main-gallery-nav').slick({
+    autoplay: false,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  })
+
+  //Info dropdowns
+  $('.info__btn').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('active')
+    $(this)
+      .next('.info__body')
+      .slideToggle(150)
+  })
+
+  // ===== Scroll to Top ====
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 150) {
+      $('#scroll-btn').fadeIn(200)
+    } else {
+      $('#scroll-btn').fadeOut(200)
+    }
+  })
+  $('#scroll-btn').click(function(e) {
+    e.preventDefault()
+    $('body,html').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    )
+  })
+
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    $('.main-gallery-nav, .gallery').slick('setPosition')
+  })
 })

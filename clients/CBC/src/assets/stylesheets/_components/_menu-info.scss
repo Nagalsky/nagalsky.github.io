@@ -1,0 +1,17 @@
+/* INFO */
+
+.menu-info {
+  @extend .font-hind-bold;
+  &:not(:last-child) {
+    @extend .mb-3;
+  }
+}
+
+.menu-info__item {
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+  }
+  &+.menu-info__item {
+    margin-top: 10px;
+  }
+}

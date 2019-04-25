@@ -1,17 +1,40 @@
 /* INFO */
 
+$info-arrow-size: 24px;
+
+
 .info {
-  @extend .font-hind-bold;
-  &:not(:last-child) {
-    @extend .mb-3;
-  }
+  @extend .mx-auto;
+  max-width: 435px;
 }
 
 .info__item {
-  @include media-breakpoint-up(xl) {
-    font-size: 20px;
-  }
   &+.info__item {
     margin-top: 10px;
+  }
+}
+
+.info__btn {
+  @extend .text-center, .d-block, .text-yellow, .bg-black, .font-icons, .cbc-icon-right-dir, .position-relative;
+  padding: 10px 50px 7.5px 15px;
+  &.active {
+    @extend .cbc-icon-down-dir;
+  }
+  &:before {
+    @extend .position-absolute, .rounded-circle, .bg-white, .text-orange, .d-inline-flex, .justify-content-center, .align-items-center;
+    right: 10px;
+    transform: translateY(-50%);
+    top: 50%;
+    width: $info-arrow-size;
+    height: $info-arrow-size;
+  }
+}
+
+.info__body {
+  padding: 25px;
+  background-color: $yellow;
+  display: none;
+  &.active {
+    display: block;
   }
 }
