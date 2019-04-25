@@ -1,0 +1,52 @@
+/* GAME ON */
+
+.game-on {
+  @extend .d-md-flex, .align-items-md-center;
+}
+
+.game-on__description {
+  @extend .bg-yellow, .text-center;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    width: 40%;
+    flex-basis: 40%;
+    padding-top: 60px;
+    transform: translateY(-20px);
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 100px;
+    transform: translateY(-90px);
+  }
+}
+
+.game-on__description__title {
+  background-color: $black;
+  color: $white;
+  padding: 10px 15px;
+  @include media-breakpoint-up(md) {
+    transform: rotate(-7deg);
+    width: 150%;
+    margin-left: -25%;
+  }
+}
+
+.game-on__description__inner {
+  padding: 30px 15px;
+  @include media-breakpoint-up(md) {
+    padding: 40px 15px;
+    font-size: 20px;
+  }
+  @include media-breakpoint-up(md) {
+    padding: 60px 30px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 100px 20%;
+  }
+}
+
+.game-on__gallery {
+  @include media-breakpoint-up(md) {
+    width: 60%;
+    flex-basis: 60%;
+  }
+}

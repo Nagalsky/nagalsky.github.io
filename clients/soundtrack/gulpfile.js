@@ -64,22 +64,26 @@ gulp.task(
 
 //Stylesheets
 gulp.task('sass:build', function() {
-  return gulp
-    .src(path.src.stylesheets)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false,
-      })
-    )
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(gulp.dest(path.build.stylesheets))
-    .pipe(
-      browserSync.reload({
-        stream: true,
-      })
-    )
+  return (
+    gulp
+      .src(path.src.stylesheets)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(
+        autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false,
+        })
+      )
+      // .pipe(cleanCSS({
+      //   compatibility: 'ie8'
+      // }))
+      .pipe(gulp.dest(path.build.stylesheets))
+      .pipe(
+        browserSync.reload({
+          stream: true,
+        })
+      )
+  )
 })
 
 // JAVASCRIPT
@@ -88,7 +92,7 @@ gulp.task(
   (task.javascript = function() {
     gulp
       .src(path.src.javascript)
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest(path.build.javascript))
       .pipe(
         browserSync.reload({
@@ -136,9 +140,14 @@ gulp.task(
       .src(path.src.img)
       .pipe(
         imagemin([
-          imageminJpegRecompress({ quality: 'low' }),
+          imageminJpegRecompress({
+            quality: 'low',
+          }),
           imageminSvgo(),
-          imageminPngquant({ nofs: true, speed: 1 }),
+          imageminPngquant({
+            nofs: true,
+            speed: 1,
+          }),
         ])
       )
       .pipe(gulp.dest(path.build.img))
@@ -166,7 +175,7 @@ gulp.task('server:build', function() {
         bottom: '0',
       },
     },
-    open: false,
+    open: true,
   })
 })
 
