@@ -1,21 +1,27 @@
 /* FOOTER */
 
 .footer {
-  @extend .flex-shrink-0, .text-center;
+  flex-shrink: 0;
+  text-align: center;
   color: $gray-bold;
   padding: 15px 0;
 }
 
 .footer__nav {
-  @extend .list-unstyled, .d-flex, .justify-content-center, .flex-wrap, .mb-3;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .footer__nav__item {
-  @extend .position-relative;
+  position: relative;
   &:not(:last-child) {
     margin-right: 20px;
     &:after {
-      @include media-breakpoint-up(sm) {
+      @media (min-width: 768px) {
         content: '';
         color: $white;
         position: absolute;
@@ -32,7 +38,13 @@
 
 .footer__nav__link {
   color: $white;
-  @extend .d-inline-block, .py-2, .py-sm-0;
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  @media (min-width: 576px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   &:hover, &:focus {
     color: $white;
     text-decoration: underline;

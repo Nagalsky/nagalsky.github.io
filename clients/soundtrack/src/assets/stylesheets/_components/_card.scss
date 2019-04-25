@@ -18,23 +18,23 @@ $card-body-fs: 12px;
   .media__img {
     border: 1px solid $black;
     max-width: 90px;
-    @include media-breakpoint-down(md) {
+    @media (max-width: 991.98px) {
       max-width: 65px;
     }
   }
   .media-body {
     font-size: 11px;
-    @include media-breakpoint-down(md) {
+    @media (max-width: 991.98px) {
       font-size: 10px;
     }
-    @include media-breakpoint-down(sm) {
+    @media (max-width: 767.98px) {
       font-size: 11px;
     }
   }
   p {
     &:not(:last-child) {
       margin-bottom: 10px;
-      @include media-breakpoint-down(sm) {
+      @media (max-width: 767.98px) {
         margin-bottom: 5px;
       }
     }
@@ -45,8 +45,7 @@ $card-body-fs: 12px;
 .card,
 .card-header,
 .card-footer {
-
-  @extend .rounded-0;
+  border-radius: 0 !important;
 }
 
 .card-header,
@@ -58,7 +57,7 @@ $card-body-fs: 12px;
   background-color: $card-header-primary-bg;
   color: $white;
   font-weight: bold;
-  @extend .border-bottom-0;
+  border-bottom: none;
   a {
     color: $white;
     &:hover, &:focus {
@@ -68,7 +67,8 @@ $card-body-fs: 12px;
 }
 
 .card-footer {
-  @extend .border-top-0, .text-right;
+  border-top: 0;
+  text-align: right;
   background-color: $muted;
   font-size: 10px;
 }
