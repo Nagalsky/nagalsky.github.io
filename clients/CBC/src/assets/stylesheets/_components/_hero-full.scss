@@ -1,0 +1,22 @@
+/* HERO */
+
+.hero-full {
+  @extend .position-relative, .has-bg, .text-center, .d-md-flex, .align-items-md-end, .justify-content-md-center;
+  @include media-breakpoint-up(xl) {
+    min-height: 100vh;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 200px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 140px;
+  }
+}
+
+.hero-full__content {
+  padding: 80px 0;
+}
+
+.hero-full__title {
+  @extend .text-uppercase, .text-white, .h1;
+}

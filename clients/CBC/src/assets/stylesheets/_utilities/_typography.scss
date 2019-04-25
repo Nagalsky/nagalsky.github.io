@@ -12,6 +12,10 @@ html {
   }
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .h1,
 .h2,
 .h3,
@@ -50,6 +54,10 @@ h1 {
 .h2,
 h2 {
   font-size: 72px;
+  @include media-breakpoint-up(md) {
+    letter-spacing: -2px;
+    line-height: 1;
+  }
   @include media-breakpoint-down(lg) {
     font-size: 60px;
   }
@@ -133,5 +141,14 @@ bold {
 address {
   a {
     color: currentColor;
+  }
+}
+
+.lead {
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
   }
 }

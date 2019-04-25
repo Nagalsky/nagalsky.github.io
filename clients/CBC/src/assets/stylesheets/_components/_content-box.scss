@@ -1,0 +1,18 @@
+/* CONTENTBOX */
+
+.content-box {
+  max-width: 710px;
+  @extend .mx-auto;
+  &--md {
+    max-width: 950px;
+  }
+  &--sm {
+    max-width: 590px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 50px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}

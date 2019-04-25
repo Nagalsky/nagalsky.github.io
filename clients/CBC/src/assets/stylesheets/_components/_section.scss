@@ -6,4 +6,17 @@
   @include media-breakpoint-up(md) {
     padding: 85px 0;
   }
+  &--has-lines {
+    background-image: url('../images/bg/lines.svg');
+    background-repeat: no-repeat;
+    @include media-breakpoint-down(sm) {
+      background-size: contain;
+    }
+  }
+  &--has-lines-bottom-right {
+    background-position: bottom right;
+  }
+  &--has-lines-top-left {
+    background-position: top left;
+  }
 }

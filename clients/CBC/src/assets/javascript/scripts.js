@@ -45,4 +45,14 @@ $(document).ready(function() {
 
   //Initial slick gallery
   $('.gallery').slick()
+
+  $('.gallery-skew').slick({
+    autoplay: true,
+    arrows: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    prevArrow: '.arrow__prev',
+    nextArrow: '.arrow__next',
+    fade: true,
+  })
 })
