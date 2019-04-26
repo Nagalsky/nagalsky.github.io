@@ -324,6 +324,11 @@ ul {
     text-decoration: underline; }
 
 /* BOOTSTRAP VARIABLES */
+@media (min-width: 768px) {
+  .row--small-gap > [class^="col"] {
+    padding-left: 7.5px;
+    padding-right: 7.5px; } }
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -444,9 +449,12 @@ small, .small {
 
 /* CONTENT */
 .content {
-  padding: 30px 15px;
+  padding: 15px 15px;
   background-color: #edeff3;
   border: 1px solid #000000; }
+  @media (min-width: 768px) {
+    .content {
+      padding: 15px 7.5px; } }
   @media (max-width: 767.98px) {
     .content {
       margin-left: 15px;

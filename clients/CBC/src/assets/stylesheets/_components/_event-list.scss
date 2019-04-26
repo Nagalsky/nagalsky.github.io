@@ -2,23 +2,21 @@
 
 .event-list {
   @extend .list-unstyled;
-}
-
-.event-list__item {
-  @extend .position-relative, .d-flex;
-  //padding-left: 35px;
-  &:before {
-    content: '';
-    @extend .flex-shrink-0, .d-inline-block, .mr-3;
-    @include media-breakpoint-up(md) {
-      margin-top: 5px;
+  >li {
+    @extend .position-relative, .d-flex;
+    &:before {
+      content: '';
+      @extend .flex-shrink-0, .d-inline-block, .mr-3;
+      @include media-breakpoint-up(md) {
+        margin-top: 5px;
+      }
+      margin-top: 2px;
+      width: 18px;
+      height: 18px;
+      background: url('../images/elements/event-red.svg') no-repeat 50% 50% / cover;
     }
-    margin-top: 2px;
-    width: 18px;
-    height: 18px;
-    background: url('../images/elements/event-red.svg') no-repeat 50% 50% / cover;
-  }
-  &+.event-list__item {
-    margin-top: 15px;
+    &+li {
+      margin-top: 15px;
+    }
   }
 }

@@ -8,23 +8,20 @@
   @include media-breakpoint-up(xl) {
     padding: 150px 80px;
   }
-}
-
-.location__title {
-  @extend .text-yellow;
-  text-shadow: 0 4px 4px rgba($black, .25);
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 70px;
+  >h4 {
+    @extend .text-yellow;
+    text-shadow: 0 4px 4px rgba($black, .25);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 70px;
+    }
+    margin-bottom: 25px;
   }
-  margin-bottom: 25px;
-}
-
-.location__description-holder {
-  margin-bottom: 25px;
-}
-
-.location__description {
-  @extend .bg-black, .text-white;
-  box-decoration-break: clone;
-  padding: 2px 7px;
+  >div {
+    margin-bottom: 25px;
+    span {
+      @extend .bg-black, .text-white;
+      box-decoration-break: clone;
+      padding: 2px 7px;
+    }
+  }
 }

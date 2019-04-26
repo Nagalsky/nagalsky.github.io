@@ -82,11 +82,11 @@ $(document).ready(function() {
   })
 
   //Info dropdowns
-  $('.info__btn').on('click', function(e) {
+  $('.info > div > a').on('click', function(e) {
     e.preventDefault()
     $(this).toggleClass('active')
     $(this)
-      .next('.info__body')
+      .next('div')
       .slideToggle(150)
   })
 

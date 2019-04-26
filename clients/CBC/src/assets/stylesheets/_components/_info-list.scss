@@ -2,18 +2,17 @@
 
 .info-list {
   @extend .list-unstyled;
-}
-
-.info-list__item {
-  @extend .position-relative, .font-icons, .cbc-icon-play-right;
-  padding-left: 35px;
-  &:before {
-    @extend .position-absolute;
-    left: 0;
-    top: 0;
-    opacity: .6;
-  }
-  &+.info-list__item {
-    margin-top: 15px;
+  >li {
+    @extend .position-relative, .font-icons, .cbc-icon-play-right;
+    padding-left: 35px;
+    &:before {
+      @extend .position-absolute;
+      left: 0;
+      top: 0;
+      opacity: .6;
+    }
+    &+li {
+      margin-top: 15px;
+    }
   }
 }
