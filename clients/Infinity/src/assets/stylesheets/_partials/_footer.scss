@@ -1,0 +1,81 @@
+/* FOOTER */
+.footer {
+  background-color: $base-brand-color;
+  padding: 55px 0;
+  color: $white;
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+}
+
+.footer__logo {
+  @extend .w-100, .d-block;
+  max-width: 230px;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(lg) {
+    margin-top: -12px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: -20px;
+  }
+  @include media-breakpoint-down(lg) {
+    max-width: 160px;
+  }
+  @include media-breakpoint-down(xs) {
+    max-width: 120px;
+  }
+}
+
+.footer__lead {
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+  }
+}
+
+.footer__nav {
+  @extend .d-flex, .flex-column;
+
+  > a {
+    @extend .d-inline-block;
+    padding: 2.5px;
+    color: $white;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:focus,
+    &:hover {
+      color: $muted;
+    }
+  }
+}
+
+.footer__social {
+  @extend .d-flex, .flex-wrap;
+
+  > a {
+    @extend .d-inline-block;
+    color: $white;
+    font-size: 40px;
+    @include media-breakpoint-down(xs) {
+      font-size: 32px;
+    }
+
+    &:focus,
+    &:hover {
+      color: $muted;
+    }
+  }
+}
+
+.footer__form {
+  .form-control {
+    border-width: 1px;
+    border-color: $gray;
+
+    &:focus {
+      border-color: $gray;
+    }
+  }
+}

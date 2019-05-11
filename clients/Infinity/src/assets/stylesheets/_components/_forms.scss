@@ -1,0 +1,31 @@
+/* FORMS */
+.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: $black;
+	@extend .rounded-0;
+	border-color: $base-brand-color;
+	border-width: 2px;
+	@include custom-placeholder($color:$black);
+
+	&:focus {
+		border-color: darken($base-brand-color, 15%);
+		box-shadow: none;
+		color: $black;
+	}
+}
+
+.form-group {
+	@include media-breakpoint-up(md) {
+		margin-bottom: 35px;
+	}
+}
+
+textarea,
+textarea.form-control {
+	resize: none;
+	min-height: 180px;
+	@include media-breakpoint-up(md) {
+		min-height: 250px;
+	}
+}
