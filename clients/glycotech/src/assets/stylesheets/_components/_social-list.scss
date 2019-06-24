@@ -1,0 +1,17 @@
+/* SOCIAL LIST */
+.social-list {
+  @extend .d-flex;
+}
+
+.social-list__item {
+  &+.social-list__item {
+    @extend .ml-3;
+  }
+  @extend .py-2, .lead;
+  color: $gray-soft;
+
+  &:focus,
+  &:hover {
+    color: $primary;
+  }
+}

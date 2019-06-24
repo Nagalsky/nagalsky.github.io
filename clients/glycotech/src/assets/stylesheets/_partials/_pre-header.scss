@@ -1,0 +1,24 @@
+/* PRE HEADER */
+.pre-header {
+  border-bottom: 1px solid $base-border-color;
+  background-color: $muted;
+}
+
+.pre-header-nav {
+  .nav-link {
+    color: $gray-soft;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.pre-header-btn {
+  @extend .font-bold, .text-uppercase, .ml-auto, .flex-shrink-0, .px-4, .py-3;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}

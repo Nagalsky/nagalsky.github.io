@@ -1,0 +1,44 @@
+/* NAVBAR */
+.navbar {
+  @extend .py-4, .flex-shrink-0;
+}
+
+.navbar-brand {
+  max-width: 170px;
+}
+
+.navbar-nav {
+  > .nav-item {
+    &+.nav-item {
+      @extend .ml-lg-5;
+    }
+
+    > .nav-link {
+      @extend .px-lg-0, .text-uppercase;
+
+      &:after {
+        @include media-breakpoint-up(lg) {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.navbar-form {
+  .form-control {
+    padding-right: 40px;
+  }
+
+  .btn-submit {
+    @extend .border-0, .position-absolute, .h-100, .text-gray;
+    background: transparent;
+    right: 0;
+    top: 0;
+  }
+}
+
+.navbar-toggler {
+  @extend .text-primary, .border-0, .pr-0;
+  font-size: 20px;
+}
