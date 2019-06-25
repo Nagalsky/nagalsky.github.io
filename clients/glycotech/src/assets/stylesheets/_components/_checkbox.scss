@@ -1,0 +1,28 @@
+/* CHECKBOX */
+.checkbox-group {
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  @extend .mb-3, .text-uppercase;
+
+  input[type="checkbox"] {
+    @extend .d-none, .position-absolute;
+
+    &:checked {
+      &+label {
+        @extend .glycotech-icon-checkbox-checked;
+      }
+    }
+  }
+
+  label {
+    @extend .position-relative, .text-primary, .font-icons, .glycotech-icon-checkbox-unchecked, .m-0, .d-flex;
+    cursor: pointer;
+
+    &:before {
+      @extend .mr-2, .position-relative, .flex-shrink-0;
+      top: 1px;
+    }
+  }
+}

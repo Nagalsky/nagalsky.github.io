@@ -1,0 +1,32 @@
+/* PAGINATION */
+.pagination {
+  @extend .rounded-0;
+}
+
+.page-item {
+  &.disabled {
+    .page-link {
+      border-color: $base-border-color;
+    }
+  }
+
+  &.active {
+    .page-link {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+
+.page-link {
+  @extend .rounded-0;
+  border-color: $base-border-color;
+  color: $primary;
+
+  &:focus,
+  &:hover {
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+  }
+}

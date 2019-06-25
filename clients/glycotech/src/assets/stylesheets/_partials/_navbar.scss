@@ -1,6 +1,14 @@
 /* NAVBAR */
 .navbar {
   @extend .py-md-4, .py-3, .flex-shrink-0;
+  @include media-breakpoint-up(md) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .navbar-brand {
