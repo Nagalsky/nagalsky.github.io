@@ -5,4 +5,41 @@
   @include media-breakpoint-up(md) {
     padding: 100px 0;
   }
+
+  &--has-divider {
+    border-bottom: 1px solid $base-border-color;
+  }
+
+  &--has-bg {
+    background-repeat: no-repeat;
+    background-size: 500px 100%;
+    @include media-breakpoint-down(lg) {
+      background: none !important;
+    }
+  }
+
+  &--has-bg-left {
+    background-position: left top;
+  }
+
+  &--has-bg-right {
+    background-position: right top;
+  }
+}
+
+.section-image-holder {
+  @extend .position-absolute, .d-none, .d-lg-block, .h-100, .has-bg;
+  width: 500px;
+  top: 0;
+  @include media-breakpoint-down(lg) {
+    width: 400px;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
 }

@@ -8,10 +8,36 @@ $placeholder-opacity: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
+	font-family: $font-bold;
 
 	&:focus {
 		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 		border-color: $primary;
 		box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+	}
+}
+
+.form-subscribe {
+	.form-control {
+		@extend .rounded-0;
+		height: 60px;
+		border-color: $white;
+		background-color: rgba(white, .55);
+		@include custom-placeholder($color: $white, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
+		@include media-breakpoint-down(md) {
+			height: 47px;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba($white, .25);
+		}
+	}
+
+	.btn-submit {
+		@extend .text-white, .font-bold;
+		background-color: rgba($primary, .85);
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
 	}
 }

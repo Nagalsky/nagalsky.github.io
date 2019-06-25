@@ -1,9 +1,14 @@
 /* BUTTONS */
 .btn {
-  @extend .rounded-0;
+  @extend .rounded-0, .shadow-none;
   font-family: $font-light;
+  padding: 12px 35px;
 
   &-primary {
     @include button-variants($bg: $primary, $color: $white);
+  }
+
+  &-outline-primary {
+    @include button-outline-variants($color: $primary);
   }
 }
