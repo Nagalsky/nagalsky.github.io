@@ -9,6 +9,16 @@
 
 .navbar-nav {
   > .nav-item {
+    &.dropdown {
+      @include media-breakpoint-up(lg) {
+        &:hover {
+          > .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+    }
+
     &+.nav-item {
       @extend .ml-lg-5;
     }
@@ -22,6 +32,10 @@
         }
       }
     }
+  }
+
+  .dropdown-menu {
+    @extend .mt-lg-0;
   }
 }
 
