@@ -28,11 +28,11 @@ $dropdown-triangle-size: 12px;
       right: 20px;
     }
   }
-}
 
-.dropdown-menu-body {
-  @include media-breakpoint-up(md) {
-    columns: 2;
+  &--lg {
+    @include media-breakpoint-up(md) {
+      min-width: 600px;
+    }
   }
 }
 
@@ -42,7 +42,7 @@ $dropdown-triangle-size: 12px;
 }
 
 .dropdown-item {
-  @extend .font-bold, .d-flex, .py-3, .px-4;
+  @extend .font-bold, .d-flex, .py-1, .px-4;
   color: $primary;
 
   &:focus,
@@ -53,6 +53,11 @@ $dropdown-triangle-size: 12px;
 }
 
 .dropdown-icon {
-  @extend .text-gray-soft, .mr-3;
+  @extend .text-gray-soft, .flex-shrink-0;
   font-size: 2.5rem;
+}
+
+.dropdown-header {
+  font-size: $body-font-size;
+  color: $body-main-color;
 }

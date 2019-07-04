@@ -1,0 +1,28 @@
+/* ACCORDION */
+.accordion {}
+
+.accordion__item {
+  border-top: 1px solid $base-border-color;
+
+  &+.accordion__item {
+    margin-top: 15px;
+  }
+}
+
+.accordion__toggle {
+  @extend .d-block, .text-primary, .position-relative, .w-100, .text-left, .font-icons, .glycotech-icon-down-arrow;
+  padding: 15px 50px 0 15px;
+  background: none;
+  border: none;
+
+  &:before {
+    @extend .text-black, .position-absolute;
+    right: 20px;
+    top: 13px;
+  }
+}
+
+.accordion__body {
+  @extend .my-3;
+  white-space: normal;
+}
