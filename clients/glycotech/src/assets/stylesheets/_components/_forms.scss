@@ -4,6 +4,8 @@ $placeholder-font-size: 14px;
 $placeholder-font-style: $font-bold;
 $placeholder-opacity: 0;
 $field-height: 43px;
+$field-bg: #f7f7f7;
+$field-border-color: #f7f7f7;
 
 .form-control {
 	-webkit-appearance: none;
@@ -11,11 +13,21 @@ $field-height: 43px;
 	@include custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
 	font-family: $font-bold;
 	height: $field-height;
+	border-color: $field-border-color;
+	background-color: $field-bg;
 
 	&:focus {
 		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 		border-color: $primary;
 		box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+		background-color: $field-bg;
+	}
+}
+
+.navbar-form {
+	.form-control {
+		background-color: $white;
+		border-color: $gray;
 	}
 }
 
@@ -55,5 +67,20 @@ select.form-control {
 }
 
 .select-quantity {
-	width: 130px;
+	@include media-breakpoint-up(md) {
+		width: 130px;
+	}
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+fieldset {
+	&:not(:last-child) {
+		margin-bottom: 40px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+		}
+	}
 }

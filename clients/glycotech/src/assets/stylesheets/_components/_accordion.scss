@@ -10,7 +10,7 @@
 }
 
 .accordion__toggle {
-  @extend .d-block, .text-primary, .position-relative, .w-100, .text-left, .font-icons, .glycotech-icon-down-arrow;
+  @extend .d-block, .text-primary, .position-relative, .w-100, .text-left, .font-icons, .glycotech-icon-up-arrow;
   padding: 15px 50px 0 15px;
   background: none;
   border: none;
@@ -19,6 +19,10 @@
     @extend .text-black, .position-absolute;
     right: 20px;
     top: 13px;
+  }
+
+  &.collapsed {
+    @extend .glycotech-icon-down-arrow;
   }
 }
 

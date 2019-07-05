@@ -1,0 +1,55 @@
+/* PAYMENT METHOD */
+$payment-method-border-color: #979797;
+$payment-method-border-color-active: $primary;
+$payment-method-color: #c3c3c3;
+$payment-method-color-active: $primary;
+
+.payment-method {
+  @extend .mb-3, .d-flex, .flex-wrap;
+}
+
+.payment-method__item {
+  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  @extend .d-inline-block;
+
+  input[type="radio"] {
+    @extend .position-absolute, .d-none;
+
+    &:checked {
+      ~label {
+        color: $payment-method-color-active;
+        border-color: $payment-method-border-color-active;
+
+        &:hover {
+          color: $payment-method-color-active;
+          border-color: $payment-method-border-color-active;
+        }
+      }
+    }
+  }
+
+  label {
+    @extend .font-bold, .text-center, .m-0, .text-truncate;
+    width: 240px;
+    padding: 20px 5px;
+    border: 1px solid $payment-method-border-color;
+    color: $payment-method-color;
+    cursor: pointer;
+    @include media-breakpoint-down(md) {
+      width: 180px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 125px;
+      padding: 12px 5px;
+    }
+
+    &:hover {
+      border-color: darken($payment-method-border-color, 5%);
+      color: darken($payment-method-color, 10%);
+    }
+  }
+}
