@@ -1,0 +1,26 @@
+/* CARD INFO */
+$card-info-bg: #3f3f3f;
+$card-info-header-bg: #006373;
+
+.card-info {
+  @extend .text-white;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.card-info__header {
+  @extend .py-2, .px-4;
+  background-color: $card-info-header-bg;
+  border-top-left-radius: $base-radius;
+  border-top-right-radius: $base-radius;
+  border-bottom: 1px solid $white;
+}
+
+.card-info__body {
+  @extend .py-4, .px-4;
+  background-color: $card-info-bg;
+  border-bottom-left-radius: $base-radius;
+  border-bottom-right-radius: $base-radius;
+}

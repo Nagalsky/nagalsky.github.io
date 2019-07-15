@@ -1,0 +1,28 @@
+/* PRODUCT GALLERY */
+$product-gallery-primary-color: $muted;
+
+.product-gallery-holder {}
+
+.product-gallery {
+  border: 3px solid $product-gallery-primary-color;
+}
+
+.product-gallery-description {
+  padding: 10px 15px 40px;
+  background-color: $product-gallery-primary-color;
+}
+
+.product-gallery-nav {
+  @include media-breakpoint-down(sm) {
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+    background-color: $product-gallery-primary-color;
+  }
+
+  .slick-slide {
+    border: 3px solid $product-gallery-primary-color;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(".product-gallery").slick({slidesToShow:1,slidesToScroll:1,arrows:!1,fade:!0,asNavFor:".product-gallery-nav"}),$(".product-gallery-nav").slick({slidesToShow:6,slidesToScroll:1,asNavFor:".product-gallery",focusOnSelect:!0,vertical:!0,arrows:!1,responsive:[{breakpoint:1200,settings:{slidesToShow:4}},{breakpoint:767,settings:{vertical:!1,slidesToShow:4}}]})});
