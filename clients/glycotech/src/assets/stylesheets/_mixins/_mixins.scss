@@ -76,6 +76,20 @@
     color: $white !important;
   }
 }
+@mixin button-outline-second-variants($color: $btn-color) {
+  background: $color;
+  color: $white;
+  border-color: $white;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    background: $color !important;
+    border-color: $color !important;
+    color: $white !important;
+  }
+}
 // Transformations
 @mixin scale($ratio...) {
   -webkit-transform: scale($ratio);

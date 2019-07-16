@@ -1,0 +1,28 @@
+/* MODAL */
+.modal {
+  &--transparent {
+    .modal-content {
+      @extend .rounded-0, .border-0;
+      background-color: transparent;
+    }
+  }
+
+  .close {
+    text-shadow: none;
+    @extend .text-white, .position-absolute;
+    font-size: 28px;
+    opacity: 1;
+    top: 15px;
+    right: 15px;
+    @extend .font-icons, .glycotech-icon-cross;
+    z-index: 20;
+  }
+}
+
+.modal-backdrop {
+  @extend .bg-primary;
+
+  &.show {
+    opacity: 0.8;
+  }
+}

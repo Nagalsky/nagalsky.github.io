@@ -1,3 +1,11 @@
+body {
+  height: 100%;
+}
+
+html {
+  min-height: 100%;
+}
+
 body,
 html {
   -webkit-font-smoothing: antialiased;
@@ -7,7 +15,6 @@ html {
   color: $body-main-color;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  min-height: 100%;
 }
 
 body {
@@ -102,8 +109,16 @@ b {
   font-family: $font-bold;
 }
 
-.order-complete-title {
-  @extend .text-primary;
+.link-dark {
+  color: $gray-soft;
+
+  &:focus,
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.title-lg {
   font-size: 200px;
   @media (max-width: 1550px) {
     font-size: 160px;

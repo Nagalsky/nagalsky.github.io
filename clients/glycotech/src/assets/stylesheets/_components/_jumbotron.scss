@@ -1,0 +1,21 @@
+/* JUMBOTRON */
+.jumbotron {
+  @include media-breakpoint-up(lg) {
+    padding: 70px 35px 100px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 130px 70px 200px;
+  }
+  @extend .has-bg, .rounded-0, .position-relative;
+  background-color: transparent;
+  z-index: 10;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .h-100, .w-100;
+    left: 0;
+    top: 0;
+    background-color: rgba($primary, .8);
+    z-index: -1;
+  }
+}
