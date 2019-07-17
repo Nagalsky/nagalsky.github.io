@@ -1,0 +1,45 @@
+/* PROTOCOL */
+.protocols {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 30px;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.protocol {
+  @extend .position-relative;
+
+  &:after,
+  &:before {
+    content: '';
+    @extend .position-absolute, .bg-primary;
+  }
+
+  &:before {
+    width: 4px;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    width: 50px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.protocol__header {
+  @extend .px-4, .py-2, .font-bold, .bg-gray-soft, .text-white;
+}
+
+.protocol__body {
+  @extend .py-3, .px-4;
+}
+
+.protocol__footer {
+  @extend .text-right, .px-4, .pb-2;
+}
