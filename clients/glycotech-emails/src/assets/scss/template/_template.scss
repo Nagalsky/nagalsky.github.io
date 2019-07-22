@@ -90,3 +90,61 @@ p {
 .copyright {
   color: #c3c3c3;
 }
+
+.footer {
+  border-top: 2px solid #4e4e4e;
+}
+
+th {
+  .callout-inner {
+    padding: 20px;
+
+    &.primary {
+      background-color: #f1f1f1;
+      border-color: #f1f1f1;
+    }
+  }
+}
+
+.body-border {
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #4e4e4e;
+  }
+
+  &--top {
+    &:before {
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+    }
+
+    &:after {
+      top: 0;
+      right: 0;
+      height: 40px;
+      width: 2px;
+    }
+  }
+
+  &--bottom {
+    &:before {
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 40px;
+    }
+
+    &:after {
+      bottom: 0;
+      left: 0;
+      height: 40px;
+      width: 2px;
+    }
+  }
+}
