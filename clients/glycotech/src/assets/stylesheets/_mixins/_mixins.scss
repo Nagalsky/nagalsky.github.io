@@ -62,6 +62,20 @@
     color: $color !important;
   }
 }
+@mixin button-variants-semitransparent($bg: $btn-bg, $color: $btn-color) {
+  background: rgba($bg, .85);
+  color: $color;
+  border-color: rgba($bg, .85);
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    background: $bg !important;
+    border-color: $bg !important;
+    color: $color !important;
+  }
+}
 @mixin button-outline-variants($color: $btn-color) {
   background: transparent;
   color: $color;

@@ -30,4 +30,11 @@ $(document).ready(function () {
       }
     ]
   });
+
+  //Mobile menu animation action
+  $('.navbar-toggler').on('click', function (e) {
+    e.preventDefault()
+    $('#navbarSupportedContent').toggleClass('opened')
+  })
+
 })

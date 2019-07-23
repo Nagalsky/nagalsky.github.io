@@ -16,6 +16,8 @@
 .pre-header-nav {
   .nav-link {
     color: $gray-soft;
+    font-size: 12px;
+    font-family: $font-bold;
 
     &:active,
     &:focus,
@@ -26,7 +28,11 @@
 }
 
 .pre-header-btn {
-  @extend .font-bold, .text-uppercase, .ml-auto, .flex-shrink-0, .px-4, .py-3;
+  @extend .font-bold, .text-uppercase, .ml-auto, .flex-shrink-0, .py-3;
+  @include media-breakpoint-up(md) {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+  }
   @include media-breakpoint-down(sm) {
     width: 100%;
   }

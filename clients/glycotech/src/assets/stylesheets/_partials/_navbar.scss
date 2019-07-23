@@ -13,6 +13,10 @@
 
 .navbar-brand {
   max-width: 170px;
+  @extend .mr-lg-5;
+  @include media-breakpoint-up(xl) {
+    margin-right: 80px !important;
+  }
 }
 
 .navbar-nav {
@@ -51,6 +55,11 @@
 }
 
 .navbar-form {
+  @extend .ml-lg-5;
+  @include media-breakpoint-up(xl) {
+    margin-left: 80px !important;
+  }
+
   .form-control {
     padding-right: 40px;
   }
@@ -66,4 +75,33 @@
 .navbar-toggler {
   @extend .text-primary, .border-0, .pr-0;
   font-size: 20px;
+}
+
+.navbar-form-toggler {
+  @extend .text-primary, .border-0, .ml-auto, .d-lg-none, .mr-2;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.navbar-collapse {
+  &.navbar-form-mobile {
+    @extend .d-lg-none;
+  }
+
+  &.opened {
+    .navbar-nav {
+      @include media-breakpoint-down(lg) {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-down(lg) {
+      @include transition(550ms);
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+  }
 }
