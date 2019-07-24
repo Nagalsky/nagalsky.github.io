@@ -1,0 +1,16 @@
+/* ACCORDION */
+.tabs {
+  @extend .d-flex, .flex-wrap, .mb-4;
+}
+
+.tab {
+  @extend .btn, .mr-3, .mb-3;
+  color: darken($base-border-color, 10%);
+  border-color: $base-border-color;
+
+  &.active,
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+  }
+}

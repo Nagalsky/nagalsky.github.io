@@ -1,0 +1,14 @@
+/* HAS OVERLAY */
+.has-overlay {
+  @extend .position-relative;
+  z-index: 20;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100, .h-100;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: rgba($black, .45);
+  }
+}

@@ -1,36 +1,78 @@
 /* PRODUCT GALLERY */
 $product-gallery-primary-color: $muted;
 
-.product-gallery-holder {}
+.flickity-enabled {
+  &.is-fullscreen {
+    padding-bottom: 0;
+    background-color: $white;
 
-.product-gallery {
+    .flickity-prev-next-button,
+    .flickity-prev-next-button {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .carousel-cell {
+      @extend .d-flex, .flex-column, .justify-content-center, .align-items-center, .h-100;
+    }
+
+    .product-gallery-img-holder {
+      @extend .flex-fill, .w-100, .d-flex, .align-items-center, .justify-content-center;
+
+      > img {
+        max-width: 600px;
+      }
+    }
+
+    .product-gallery-description {
+      @extend .flex-shrink-0, .w-100;
+    }
+  }
+}
+
+.flickity-prev-next-button,
+.flickity-prev-next-button {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.carousel-container {
+  @extend .d-flex, .flex-column, .flex-md-row, .flex-md-row-reverse;
+}
+
+.carousel {
+  flex-grow: 1;
+}
+
+.carousel-cell {
+  width: 100%;
+}
+
+.carousel-main {
   border: 3px solid $product-gallery-primary-color;
+}
+
+.carousel-nav {
+  @extend .d-none, .d-md-block;
+  width: 120px;
+  margin-left: 10px;
+  overflow-y: scroll;
+  max-height: 650px;
+
+  .carousel-cell {
+    height: 100px;
+    width: 100px;
+    margin: 0 0 10px;
+    cursor: pointer;
+    border: 3px solid $product-gallery-primary-color;
+
+    &.is-nav-selected {
+      border-color: darken($product-gallery-primary-color, 25%);
+    }
+  }
 }
 
 .product-gallery-description {
   padding: 10px 15px 40px;
   background-color: $product-gallery-primary-color;
-}
-
-.product-gallery-nav {
-  @include media-breakpoint-down(sm) {
-    padding-left: 1.5px;
-    padding-right: 1.5px;
-    background-color: $product-gallery-primary-color;
-  }
-
-  .slick-slide {
-    border: 3px solid $product-gallery-primary-color;
-    @include media-breakpoint-up(md) {
-      margin-bottom: 15px;
-    }
-  }
-
-  .slick-current {
-    border-color: darken($product-gallery-primary-color, 10%);
-
-    > img {
-      opacity: 0.6;
-    }
-  }
 }

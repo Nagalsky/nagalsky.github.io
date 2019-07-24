@@ -1,32 +1,38 @@
 /* PAGINATION */
-.pagination {
-  @extend .rounded-0;
-}
+.pagination-holder {
+  @extend .d-flex, .align-items-center, .justify-content-center;
 
-.page-item {
-  &.disabled {
-    .page-link {
-      border-color: $base-border-color;
-    }
+  .bootstrap-select .dropdown-toggle:focus,
+  .bootstrap-select > select.mobile-device:focus+.dropdown-toggle {
+    outline: none !important;
   }
 
-  &.active {
-    .page-link {
+  .dropdown-item {
+    &.active,
+    &.selected {
       background-color: $primary;
-      border-color: $primary;
     }
   }
 }
 
-.page-link {
-  @extend .rounded-0;
-  border-color: $base-border-color;
-  color: $primary;
+.pagination-btn {
+  @extend .lead-md, .font-icons;
 
-  &:focus,
-  &:hover {
-    border-color: $primary;
-    background-color: $primary;
-    color: $white;
+  &--left {
+    @extend .glycotech-icon-arrow-circle-left, .mr-4;
+  }
+
+  &--right {
+    @extend .glycotech-icon-arrow-circle-right, .ml-4;
+  }
+}
+
+.pagination-select {
+  @extend .px-3;
+  border: 1px solid $primary;
+  outline: none !important;
+
+  .filter-option-inner-inner {
+    @extend .text-center;
   }
 }

@@ -1,0 +1,17 @@
+/* CHECKBOX BTN */
+.radio-btn {
+  input[type="radio"] {
+    @extend .d-none, .position-absolute;
+
+    &:checked {
+      &+label {
+        @extend .btn-primary;
+      }
+    }
+  }
+
+  label {
+    @extend .btn, .m-0, .text-truncate;
+    cursor: pointer;
+  }
+}

@@ -145,7 +145,7 @@
 
   <main class="main">
 
-    <section class="section pt-3 pt-md-4">
+    <section class="section pt-0">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-2 mb-4 mb-xl-0">
@@ -153,254 +153,301 @@
           </div>
 
           <div class="col-xl-6 col-md-7 mb-4 mb-md-0">
-            <form action="/file-upload" class="dropzone" id="form-dropzone">
-              <fieldset>
-                <h6 class="d-flex align-items-center"><i class="glycotech-icon-address-card icon-md flex-shrink-0 mr-2"></i> Contact Information</h6>
+            <form>
+              <fieldset class="fieldset-collapse fieldset-is-opened">
+                <div class="fieldset-header">
+                  <h6 class="fieldset-header__title">
+                    <i class="glycotech-icon-address-card icon-md flex-shrink-0 mr-2"></i> Contact Information
+                  </h6>
+                  <button type="button" class="btn btn-primary fieldset-header__edit-btn">Edit</button>
+                </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-first-name">First Name</label>
-                      <input type="text" class="form-control" id="field-first-name">
-                    </div>
+                <div class="fieldset-holder">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-first-name">First Name</label>
+                        <input type="text" class="form-control is-invalid" id="field-first-name">
+                        <div class="invalid-feedback">
+                          Lorem ipsum dolor
+                        </div>
+                      </div>
 
-                    <div class="col-lg">
-                      <label for="field-last-name">Last Name</label>
-                      <input type="text" class="form-control" id="field-last-name">
+                      <div class="col-lg">
+                        <label for="field-last-name">Last Name</label>
+                        <input type="text" class="form-control" id="field-last-name">
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label for="field-company">Company or Institution</label>
-                  <input type="text" class="form-control" id="field-company">
-                </div>
+                  <div class="form-group">
+                    <label for="field-company">Company or Institution</label>
+                    <input type="text" class="form-control" id="field-company">
+                  </div>
 
-                <div class="form-group">
-                  <label for="field-email-address">Email Address</label>
-                  <input type="email" class="form-control" id="field-email-address">
-                </div>
+                  <div class="form-group">
+                    <label for="field-email-address">Email Address</label>
+                    <input type="email" class="form-control" id="field-email-address">
+                  </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-country">Country</label>
-                      <select name="" id="field-country" class="form-control">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
-                    </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-country">Country</label>
+                        <select name="" id="field-country" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                        </select>
+                      </div>
 
-                    <div class="col-lg">
-                      <label for="field-phone-number">Phone Number</label>
-                      <input type="number" class="form-control" id="field-phone-number">
+                      <div class="col-lg">
+                        <label for="field-phone-number">Phone Number</label>
+                        <input type="number" class="form-control" id="field-phone-number">
+                      </div>
                     </div>
                   </div>
+
+                  <button type="button" class="btn btn-primary rounded float-right fieldset-header__next-btn">Next</button>
                 </div>
               </fieldset>
 
 
 
-              <fieldset>
-                <h6 class="d-flex align-items-center"><i class="glycotech-icon-box-open icon-md flex-shrink-0 mr-2"></i> Shipping Information</h6>
-
-                <div class="form-group">
-                  <label for="field-company2">Company or Institution</label>
-                  <input type="text" class="form-control" id="field-company2">
+              <fieldset class="fieldset-collapse fieldset-is-closed">
+                <div class="fieldset-header">
+                  <h6 class="fieldset-header__title">
+                    <i class="glycotech-icon-box-open icon-md flex-shrink-0 mr-2"></i> Shipping Information
+                  </h6>
+                  <button type="button" class="btn btn-primary fieldset-header__edit-btn">Edit</button>
                 </div>
 
-                <div class="form-group">
-                  <label for="field-street-address-line1">Street Address Line 1</label>
-                  <input type="text" class="form-control" id="field-street-address-line1">
-                </div>
+                <div class="fieldset-holder">
+                  <div class="form-group">
+                    <label for="field-company2">Company or Institution</label>
+                    <input type="text" class="form-control" id="field-company2">
+                  </div>
 
-                <div class="form-group">
-                  <label for="field-street-address-line2">Street Address Line 2</label>
-                  <input type="text" class="form-control" id="field-street-address-line2">
-                </div>
+                  <div class="form-group">
+                    <label for="field-street-address-line1">Street Address Line 1</label>
+                    <input type="text" class="form-control" id="field-street-address-line1">
+                  </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-city">City</label>
-                      <input type="text" class="form-control" id="field-city">
-                    </div>
+                  <div class="form-group">
+                    <label for="field-street-address-line2">Street Address Line 2</label>
+                    <input type="text" class="form-control" id="field-street-address-line2">
+                  </div>
 
-                    <div class="col-lg">
-                      <label for="field-zip">Zip / Postal Code</label>
-                      <input type="text" class="form-control" id="field-zip">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-city">City</label>
+                        <input type="text" class="form-control" id="field-city">
+                      </div>
+
+                      <div class="col-lg">
+                        <label for="field-zip">Zip / Postal Code</label>
+                        <input type="text" class="form-control" id="field-zip">
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-state">State / Province</label>
-                      <input type="text" class="form-control" id="field-state">
-                    </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-state">State / Province</label>
+                        <input type="text" class="form-control" id="field-state">
+                      </div>
 
-                    <div class="col-lg">
-                      <label for="field-country2">Country</label>
-                      <select name="" id="field-country2" class="form-control">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-phone-number2">Phone Number</label>
-                      <input type="text" class="form-control" id="field-phone-number2">
-                    </div>
-
-                    <div class="col-lg">
-                      <label for="field-email-address3">Phone Number</label>
-                      <input type="email" class="form-control" id="field-email-address3">
+                      <div class="col-lg">
+                        <label for="field-country2">Country</label>
+                        <select name="" id="field-country2" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-phone-number2">Phone Number</label>
+                        <input type="text" class="form-control" id="field-phone-number2">
+                      </div>
+
+                      <div class="col-lg">
+                        <label for="field-email-address3">Phone Number</label>
+                        <input type="email" class="form-control" id="field-email-address3">
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary rounded float-right fieldset-header__next-btn">Next</button>
                 </div>
               </fieldset>
 
 
 
-              <fieldset>
-                <h6 class="d-flex align-items-center"><i class="glycotech-icon-file-invoice-dollar icon-md flex-shrink-0 mr-2"></i> Billing Information</h6>
-
-                <div class="checkbox">
-                  <input type="checkbox" id="checkbox1" value="option1">
-                  <label for="checkbox1">Billing Information is same as Shipping Information</label>
+              <fieldset class="fieldset-collapse fieldset-is-closed">
+                <div class="fieldset-header">
+                  <h6 class="fieldset-header__title">
+                    <i class="glycotech-icon-file-invoice-dollar icon-md flex-shrink-0 mr-2"></i> Billing Information
+                  </h6>
+                  <button type="button" class="btn btn-primary fieldset-header__edit-btn">Edit</button>
                 </div>
 
-                <div class="form-group">
-                  <label for="field-company3">Company or Institution</label>
-                  <input type="text" class="form-control" id="field-company3">
-                </div>
+                <div class="fieldset-holder">
+                  <div class="checkbox">
+                    <input type="checkbox" id="checkbox1" value="option1">
+                    <label for="checkbox1">Billing Information is same as Shipping Information</label>
+                  </div>
 
-                <div class="form-group">
-                  <label for="field-street-address-line2">Street Address Line 1</label>
-                  <input type="text" class="form-control" id="field-street-address-line2">
-                </div>
+                  <div class="form-group">
+                    <label for="field-company3">Company or Institution</label>
+                    <input type="text" class="form-control" id="field-company3">
+                  </div>
 
-                <div class="form-group">
-                  <label for="field-street-address-line3">Street Address Line 2</label>
-                  <input type="text" class="form-control" id="field-street-address-line3">
-                </div>
+                  <div class="form-group">
+                    <label for="field-street-address-line2">Street Address Line 1</label>
+                    <input type="text" class="form-control" id="field-street-address-line2">
+                  </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-city2">City</label>
-                      <input type="text" class="form-control" id="field-city2">
-                    </div>
+                  <div class="form-group">
+                    <label for="field-street-address-line3">Street Address Line 2</label>
+                    <input type="text" class="form-control" id="field-street-address-line3">
+                  </div>
 
-                    <div class="col-lg">
-                      <label for="field-zip2">Zip / Postal Code</label>
-                      <input type="text" class="form-control" id="field-zip2">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-city2">City</label>
+                        <input type="text" class="form-control" id="field-city2">
+                      </div>
+
+                      <div class="col-lg">
+                        <label for="field-zip2">Zip / Postal Code</label>
+                        <input type="text" class="form-control" id="field-zip2">
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-state2">State / Province</label>
-                      <input type="text" class="form-control" id="field-state2">
-                    </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-state2">State / Province</label>
+                        <input type="text" class="form-control" id="field-state2">
+                      </div>
 
-                    <div class="col-lg">
-                      <label for="field-country3">Country</label>
-                      <select name="" id="field-country3" class="form-control">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-phone-number3">Phone Number</label>
-                      <input type="text" class="form-control" id="field-phone-number3">
-                    </div>
-
-                    <div class="col-lg">
-                      <label for="field-email-address4">Phone Number</label>
-                      <input type="email" class="form-control" id="field-email-address4">
+                      <div class="col-lg">
+                        <label for="field-country3">Country</label>
+                        <select name="" id="field-country3" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg mb-4 mb-lg-0">
+                        <label for="field-phone-number3">Phone Number</label>
+                        <input type="text" class="form-control" id="field-phone-number3">
+                      </div>
+
+                      <div class="col-lg">
+                        <label for="field-email-address4">Phone Number</label>
+                        <input type="email" class="form-control" id="field-email-address4">
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary rounded float-right fieldset-header__next-btn">Next</button>
                 </div>
               </fieldset>
 
 
 
-              <fieldset>
-                <h6 class="d-flex align-items-center"><i class="glycotech-icon-money-check-alt icon-md flex-shrink-0 mr-2"></i> Payment Method</h6>
-
-                <div class="payment-method">
-                  <div class="payment-method__item">
-                    <input type="radio" id="test1" name="radio-group" checked>
-                    <label for="test1">Credit Card</label>
-                  </div>
-
-                  <div class="payment-method__item">
-                    <input type="radio" id="test2" name="radio-group">
-                    <label for="test2">Purchase Order</label>
-                  </div>
-
-                  <div class="payment-method__item">
-                    <input type="radio" id="test3" name="radio-group">
-                    <label for="test3">Wire Transfer</label>
-                  </div>
+              <fieldset class="fieldset-collapse fieldset-is-closed">
+                <div class="fieldset-header">
+                  <h6 class="fieldset-header__title">
+                    <i class="glycotech-icon-money-check-alt icon-md flex-shrink-0 mr-2"></i> Payment Method
+                  </h6>
+                  <button type="button" class="btn btn-primary fieldset-header__edit-btn">Edit</button>
                 </div>
 
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-name-card">Name on Card</label>
-                      <input type="text" class="form-control" id="field-name-card">
+                <div class="fieldset-holder">
+                  <nav>
+                    <div class="nav tabs">
+                      <a class="tab active" data-toggle="tab" href="#credit-card-tab">Credit Card</a>
+                      <a class="tab" data-toggle="tab" href="#purchase-order-tab">Purchase Order</a>
+                      <a class="tab" data-toggle="tab" href="#wire-transfer-tab">Wire Transfer</a>
+                    </div>
+                  </nav>
+
+
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="credit-card-tab">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg mb-4 mb-lg-0">
+                            <label for="field-name-card">Name on Card</label>
+                            <input type="text" class="form-control" id="field-name-card">
+                          </div>
+
+                          <div class="col-lg">
+                            <label for="field-expiration-date">Expiration Date (MM/YY)</label>
+                            <input type="text" class="form-control form-control-expiration-date" id="field-expiration-date">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg mb-4 mb-lg-0">
+                            <label for="field-card-number">Card Number</label>
+                            <input type="text" class="form-control" id="field-card-number">
+                          </div>
+
+                          <div class="col-lg">
+                            <label for="field-cvv">CVV</label>
+                            <input type="text" class="form-control" id="field-cvv">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="cards">
+                        <i class="card_item glycotech-icon-cc-visa"></i>
+                        <i class="card_item glycotech-icon-cc-mastercard"></i>
+                        <i class="card_item glycotech-icon-cc-amex"></i>
+                        <i class="card_item glycotech-icon-cc-discover"></i>
+                      </div>
                     </div>
 
-                    <div class="col-lg">
-                      <label for="field-expiration-date">Expiration Date (MM/YY)</label>
-                      <input type="text" class="form-control" id="field-expiration-date">
+
+
+                    <div class="tab-pane fade" id="purchase-order-tab">
+                      <div class="form-group">
+                        <label for="field-purchase-order-number">Purchase Order Number</label>
+                        <input type="text" class="form-control" id="field-purchase-order-number">
+                      </div>
+
+                      <div id="dropzone" class="dropzone"></div>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="wire-transfer-tab">
+                      <div class="form-group">
+                        <label for="field-wire-transfer-confirmation-number">Wire Transfer Confirmation Number</label>
+                        <input type="text" class="form-control" id="field-wire-transfer-confirmation-number">
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg mb-4 mb-lg-0">
-                      <label for="field-card-number">Card Number</label>
-                      <input type="text" class="form-control" id="field-card-number">
-                    </div>
-
-                    <div class="col-lg">
-                      <label for="field-cvv">CVV</label>
-                      <input type="text" class="form-control" id="field-cvv">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cards">
-                  <i class="card_item glycotech-icon-cc-visa"></i>
-                  <i class="card_item glycotech-icon-cc-mastercard"></i>
-                  <i class="card_item glycotech-icon-cc-amex"></i>
-                  <i class="card_item glycotech-icon-cc-discover"></i>
-                </div>
-
-                <div class="fallback">
-                  <input name="file" type="file" multiple />
-                </div>
-
-                <div class="dz-message" data-dz-message><span>Upload Purchase Order</span></div>
               </fieldset>
             </form>
           </div>
@@ -408,25 +455,25 @@
           <div class="col-xl-3 offset-xl-1 col-md-5">
             <div class="cart-card sticky-top-md">
               <div class="cart-card__header">
-                Lorem ipsum dolor sit amet, consectetur. Adipisicing elit, sed do eiusmod tempor incididunt <a href="#"><b>Adipisicing elit, sed do</b></a>
+                <small>Tax and shipping will be calculated at checkout. By clicking a buttom below, you agree to the <a href="#"><b>Terms and Conditions of Sale</b></a></small>
               </div>
 
               <div class="cart-card__body">
                 <div class="row">
-                  <div class="col-5 py-2">Tax</div>
-                  <div class="col-7 py-2">$0.00</div>
+                  <div class="col-5 py-2 lead">Tax</div>
+                  <div class="col-7 py-2 lead">$0.00</div>
 
-                  <div class="col-5 py-2">Shipping</div>
-                  <div class="col-7 py-2">$50.00</div>
+                  <div class="col-5 py-2 lead">Shipping</div>
+                  <div class="col-7 py-2 lead">$50.00</div>
                 </div>
               </div>
 
               <div class="cart-card__footer">
                 <p class="text-primary mb-1">Subtotal</p>
                 <h5 class="text-primary">$285.00</h5>
-                <p class="small">3 items</p>
+                <p class="small"><b>3 items</b></p>
 
-                <a href="#" class="btn btn-primary btn-block py-4"><b>Check out</b></a>
+                <a href="#" class="btn btn-primary btn-block py-4"><b>Place Order</b></a>
               </div>
             </div>
           </div>
@@ -434,6 +481,45 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal subscribing -->
+  <div class="modal modal--transparent fade text-white" id="modal-subscribing" tabindex="-1" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    </button>
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <h2 class="title-lg">Thank you!</h2>
+          <h2 class="font-regular mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</h2>
+          <a href="#" class="btn btn-lg btn-outline-primary-second font-bold">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal order -->
+  <div class="modal modal--transparent fade text-white" id="modal-order" tabindex="-1" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    </button>
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="row align-items-center">
+            <div class="col-xl-3 col-lg-4 col-md-5 mb-4 mb-md-0 text-md-right">
+              <h2>Order# 948947452</h2>
+              <p>A confirmation has been sent to: <br /> <i>lorem.ipsum@lirem.com</i></p>
+              <small>Please contact us at lorem.ipsum@lirem.com for any further questions or concerns your order.</small>
+            </div>
+  
+            <div class="col-xl-9 col-lg-8 col-md-7">
+              <h1 class="title-xl">Thank you!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer__top">

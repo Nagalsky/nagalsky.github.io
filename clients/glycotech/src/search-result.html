@@ -13,7 +13,7 @@
 
   <main class="main">
 
-    <section class="section pt-3 pt-md-4">
+    <section class="section pt-0">
       <div class="container-fluid">
         <h1 class="title h4">Search result for <b>neu5aca2</b></h1>
         <div class="row">
@@ -377,22 +377,24 @@
               </div>
             </div>
 
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
           </div>
+        </div>
+
+        <div class="pagination-holder mt-5">
+          <a href="#" class="pagination-btn pagination-btn--left"></a>
+          <select class="selectpicker" data-style="pagination-select" data-width="200px">
+            <option>Page 1 of 50</option>
+            <option>Page 50 of 100</option>
+            <option>Page 100 of 150</option>
+          </select>
+
+          <a href="#" class="pagination-btn pagination-btn--right"></a>
         </div>
       </div>
     </section>
   </main>
+
+  //= template/modals.html
 
   //= template/footer.html
 

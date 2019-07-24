@@ -11,7 +11,7 @@ $card-info-header-bg: #006373;
 }
 
 .card-info__header {
-  @extend .py-2, .px-4;
+  @extend .py-3, .px-4;
   background-color: $card-info-header-bg;
   border-top-left-radius: $base-radius;
   border-top-right-radius: $base-radius;
@@ -23,4 +23,10 @@ $card-info-header-bg: #006373;
   background-color: $card-info-bg;
   border-bottom-left-radius: $base-radius;
   border-bottom-right-radius: $base-radius;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
