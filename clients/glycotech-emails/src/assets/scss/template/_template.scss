@@ -92,12 +92,17 @@ p {
 }
 
 .footer {
-  border-top: 2px solid #4e4e4e;
+  border-top: 2px solid #e98800;
+
+  p {
+    font-size: 14px;
+  }
 }
 
 th {
   .callout-inner {
     padding: 20px;
+    border-color: #f1f1f1;
 
     &.primary {
       background-color: #f1f1f1;
@@ -128,4 +133,25 @@ th {
 
 .container {
   position: relative;
+}
+
+.fs-sm {
+  font-size: 12px;
+}
+
+small {
+  color: inherit;
+}
+
+.fs-small {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    font-size: 13px;
+  }
 }
