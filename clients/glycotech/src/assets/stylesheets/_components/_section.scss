@@ -38,10 +38,8 @@
   @extend .position-absolute, .d-none, .d-lg-block, .h-100, .has-bg;
   width: 500px;
   top: 0;
-  background-size: 135% !important;
   @media (max-width: 1450px) {
     width: 400px;
-    background-size: cover !important;
   }
   @include media-breakpoint-down(lg) {
     width: 340px;
@@ -55,5 +53,11 @@
   &--right {
     right: 0;
     background-position: 0 50% !important;
+  }
+
+  &--xl {
+    @include media-breakpoint-up(lg) {
+      background-size: 135% !important;
+    }
   }
 }

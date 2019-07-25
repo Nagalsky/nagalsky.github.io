@@ -96,3 +96,13 @@ $(window).on('resize', function () {
     'height': ($(".carousel-main .flickity-viewport").height() + 'px')
   });
 });
+
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 1) {
+    $(".header").addClass("header__shadow");
+  } else {
+    $(".header").removeClass("header__shadow");
+  }
+});

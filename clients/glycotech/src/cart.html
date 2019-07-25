@@ -7,9 +7,11 @@
 </head>
 
 <body>
-  //= template/pre-header.html
+  <header class="header">
+    //= template/pre-header.html
 
-  //= template/navbar.html
+    //= template/navbar.html
+  </header>
 
   <main class="main">
 
@@ -37,7 +39,6 @@
                       <option value="3">3</option>
                       <option value="4">4</option>
                     </select>
-                    <button type="button" name="" class="btn btn-primary font-bold rounded flex-shrink-0 px-3">Add to Cart</button>
                   </div>
                 </div>
 
@@ -70,7 +71,6 @@
                       <option value="3">3</option>
                       <option value="4">4</option>
                     </select>
-                    <button type="button" name="" class="btn btn-primary font-bold rounded flex-shrink-0 px-3">Add to Cart</button>
                   </div>
                 </div>
 
@@ -86,8 +86,14 @@
           </div>
 
           <div class="col-xl-3 col-md-5">
-            <div class="cart-card sticky-top-md">
-              <div class="cart-card__header">
+            <div class="cart-card">
+              <div class="cart-card__body">
+                <p class="text-primary mb-1">Subtotal</p>
+                <h5 class="text-primary">$285.00</h5>
+                <p class="small"><b>3 items</b></p>
+
+                <a href="#" class="btn btn-primary btn-block py-4 mb-4"><b>Place Order</b></a>
+
                 <small>Tax and shipping will be calculated at checkout. By clicking a buttom below, you agree to the <a href="#"><b>Terms and Conditions of Sale</b></a></small>
               </div>
 
@@ -99,14 +105,6 @@
                   <div class="col-5 py-2 lead">Shipping</div>
                   <div class="col-7 py-2 lead">$50.00</div>
                 </div>
-              </div>
-
-              <div class="cart-card__footer">
-                <p class="text-primary mb-1">Subtotal</p>
-                <h5 class="text-primary">$285.00</h5>
-                <p class="small"><b>3 items</b></p>
-
-                <a href="#" class="btn btn-primary btn-block py-4"><b>Check out</b></a>
               </div>
             </div>
           </div>

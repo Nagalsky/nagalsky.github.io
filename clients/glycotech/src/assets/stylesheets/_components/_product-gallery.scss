@@ -50,13 +50,18 @@ $product-gallery-primary-color: $muted;
 
 .carousel-main {
   border: 3px solid $product-gallery-primary-color;
+  @include media-breakpoint-up(md) {
+    margin-left: 5px;
+  }
 }
 
 .carousel-nav {
   @extend .d-none, .d-md-block;
   width: 120px;
   margin-left: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-right: 30px;
+  margin-right: -15px;
   max-height: 650px;
 
   .carousel-cell {
