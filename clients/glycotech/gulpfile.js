@@ -110,6 +110,8 @@ gulp.task(
         'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
         'node_modules/flickity/dist/flickity.pkgd.min.js',
         'node_modules/flickity-fullscreen/fullscreen.js',
+        'node_modules/flickity-fade/flickity-fade.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
