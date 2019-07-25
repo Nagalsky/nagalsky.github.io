@@ -41,6 +41,11 @@
 
     > .nav-link {
       @extend .px-lg-0, .text-uppercase;
+      @include media-breakpoint-down(md) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-size: 16px;
+      }
 
       &:after {
         @include media-breakpoint-up(lg) {
@@ -94,7 +99,6 @@
   &.opened {
     .navbar-nav {
       @include media-breakpoint-down(lg) {
-        opacity: 1;
         transform: translateX(0px);
       }
     }
@@ -102,9 +106,8 @@
 
   .navbar-nav {
     @include media-breakpoint-down(lg) {
-      @include transition(550ms);
-      opacity: 0;
       transform: translateX(-40px);
+      @include transition(650ms);
     }
   }
 }

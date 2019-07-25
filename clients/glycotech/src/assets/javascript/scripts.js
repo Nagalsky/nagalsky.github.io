@@ -6,6 +6,7 @@ $(document).ready(function () {
   if ($('.product-gallery').length) {
     $('.product-gallery').slick({
       asNavFor: '.product-gallery-nav',
+      fade: true
     });
 
     $('.product-gallery-nav').slick({
@@ -36,52 +37,9 @@ $(document).ready(function () {
   $('.gallery-fullscreen-btn-toggle').on('click', function (e) {
     e.preventDefault()
     $('.product-gallery-holder').toggleClass('fullscreen-mode');
+    $('body').toggleClass('modal-open');
     $('.product-gallery').slick('reinit');
   })
-
-
-
-
-  //Initial product gallery
-  if ($('.carousel').length) {
-    var $carousel = $('.carousel').flickity({
-      pageDots: false,
-      fade: true,
-      contain: true,
-      fullscreen: true,
-      percentPosition: false
-    });
-
-    var $carouselNav = $('.carousel-nav');
-    var $carouselNavCells = $carouselNav.find('.carousel-cell');
-
-    $carouselNav.on('click', '.carousel-cell', function (event) {
-      var index = $(event.currentTarget).index();
-      $carousel.flickity('select', index);
-    });
-
-    $('.carousel-nav').css({
-      'height': ($(".carousel-main .flickity-viewport").height() + 'px')
-    });
-
-    var flkty = $carousel.data('flickity');
-    var navTop = $carouselNav.position().top;
-    var navCellHeight = $carouselNavCells.height();
-    var navHeight = $carouselNav.height();
-
-    $carousel.on('select.flickity', function () {
-      // set selected nav cell
-      $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
-      var $selected = $carouselNavCells.eq(flkty.selectedIndex)
-        .addClass('is-nav-selected');
-      // scroll nav
-      var scrollY = $selected.position().top +
-        $carouselNav.scrollTop() - (navHeight + navCellHeight) / 2;
-      $carouselNav.animate({
-        scrollTop: scrollY
-      });
-    });
-  }
 
 
 
