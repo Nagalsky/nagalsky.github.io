@@ -2,6 +2,28 @@ Dropzone.autoDiscover = false;
 
 $(document).ready(function () {
 
+  // Offcanvas mobile menu
+  var $menuToggle = $('.navbar-toggler');
+  var $menuClose = $('.offcanvas-close');
+  var $menuParent = $('body');
+  var $menu = $('.offcanvas-holder');
+  $($menuToggle).on('click', function () {
+    $menuParent.toggleClass('offcanvas--opened');
+  });
+  $($menuClose).on('click touchstart', function () {
+    $menuParent.removeClass('offcanvas--opened');
+  });
+
+  $(document).on("click touchstart", function (e) {
+    if (
+      $(e.target).closest($menu).length == 0 &&
+      $(e.target).closest($menuToggle).length == 0
+    ) {
+      $menuParent.removeClass('offcanvas--opened');
+    }
+  });
+
+
   //Initial slick slider
   if ($('.product-gallery').length) {
     $('.product-gallery').slick({

@@ -95,19 +95,4 @@
   &.navbar-form-mobile {
     @extend .d-lg-none;
   }
-
-  &.opened {
-    .navbar-nav {
-      @include media-breakpoint-down(lg) {
-        transform: translateX(0px);
-      }
-    }
-  }
-
-  .navbar-nav {
-    @include media-breakpoint-down(lg) {
-      transform: translateX(-40px);
-      @include transition(650ms);
-    }
-  }
 }

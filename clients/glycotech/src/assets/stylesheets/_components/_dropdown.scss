@@ -65,6 +65,10 @@ $dropdown-triangle-size: 12px;
   @include media-breakpoint-down(lg) {
     white-space: normal;
   }
+  @include media-breakpoint-down(xs) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 
   &:focus,
   &:hover {
@@ -81,4 +85,9 @@ $dropdown-triangle-size: 12px;
 .dropdown-header {
   font-size: $body-font-size;
   color: $body-main-color;
+  white-space: normal;
+  @include media-breakpoint-down(xs) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
