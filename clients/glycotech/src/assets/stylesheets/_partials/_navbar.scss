@@ -57,6 +57,18 @@
 
   .dropdown-menu {
     @extend .mt-lg-0;
+    @include media-breakpoint-down(md) {
+      box-shadow: none !important;
+      border: none !important;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  .dropdown-header {
+    @include media-breakpoint-down(md) {
+      padding-top: 0 !important;
+    }
   }
 }
 
