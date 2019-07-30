@@ -1,0 +1,22 @@
+/* DIVIDER */
+.divider {
+  @extend .position-relative, .my-3;
+  height: 4px;
+
+  &:after,
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100;
+    left: 0;
+    height: 1px;
+    background-color: $silver;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
