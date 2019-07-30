@@ -54,6 +54,12 @@ h1 {
 .h2,
 h2 {
   font-size: 36px;
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 26px;
+  }
 }
 
 .h3,
@@ -190,4 +196,10 @@ b {
 
 .lh-md {
   line-height: 2;
+}
+
+.title-padding {
+  @include media-breakpoint-down(sm) {
+    padding: 0 2px;
+  }
 }

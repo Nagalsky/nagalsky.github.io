@@ -2,7 +2,7 @@
 $product-gallery-primary-color: $muted;
 
 .product-gallery-holder {
-  @extend .d-flex;
+  @extend .d-md-flex, .flex-md-row-reverse;
   position: relative;
 
   &.fullscreen-mode {
@@ -50,9 +50,12 @@ $product-gallery-primary-color: $muted;
 }
 
 .product-gallery-nav {
-  @extend .d-none, .d-md-block, .flex-shrink-0, .mr-4;
-  width: 120px;
-  max-height: 640px;
+  @extend .flex-shrink-0, .mr-lg-4, .mt-3, .mt-lg-0;
+  @include media-breakpoint-up(md) {
+    width: 120px;
+    max-height: 640px !important;
+  }
+  max-height: auto !important;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -61,7 +64,14 @@ $product-gallery-primary-color: $muted;
   .slick-slide {
     cursor: pointer;
     border: 3px solid $product-gallery-primary-color;
-    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(sm) {
+      //margin-left: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
     &.slick-current {
       border-color: darken($product-gallery-primary-color, 25%);

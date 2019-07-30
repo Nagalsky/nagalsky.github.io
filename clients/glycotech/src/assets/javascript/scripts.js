@@ -49,6 +49,10 @@ $(document).ready(function () {
           breakpoint: 767,
           settings: {
             slidesToShow: 3,
+            vertical: false,
+            verticalSwiping: false,
+            centerMode: true,
+            centerPadding: '20px',
           }
         }
       ]

@@ -8,7 +8,7 @@ $offcanvas-menu-size: 80%;
     }
   }
 
-  .main {
+  .header {
     &:after {
       opacity: 1;
       visibility: visible;
@@ -89,9 +89,7 @@ $offcanvas-menu-size: 80%;
   }
 }
 
-.main {
-  @extend .position-relative;
-
+.header {
   &:after {
     content: '';
     @extend .d-block, .d-lg-none, .position-fixed, .w-100, .h-100;
@@ -108,7 +106,7 @@ $offcanvas-menu-size: 80%;
 .offcanvas-close {
   @extend .position-absolute, .d-lg-none, .border-0;
   top: 10px;
-  right: 0;
+  right: 5px;
   color: $primary;
   background-color: transparent;
   font-size: 18px;
