@@ -10,7 +10,7 @@ html {
 }
 
 .main {
-  @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:0%, $end-percent:20%);
+  @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:0%, $end-percent:10%);
 }
 
 .h1,
@@ -95,4 +95,12 @@ b {
 
 .underline {
   text-decoration: underline;
+}
+
+.img-floated {
+  @extend .float-right, .ml-2, .mb-2;
+  max-width: 200px;
+  @include media-breakpoint-down(sm) {
+    max-width: 120px;
+  }
 }

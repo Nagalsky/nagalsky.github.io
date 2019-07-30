@@ -38,17 +38,23 @@ $navbar-height: 44px;
 }
 
 .navbar-nav {
-  @extend .d-flex, .flex-row, .p-1, .pb-4, .pb-md-1;
+  @extend .d-flex, .flex-row, .pb-4, .p-md-1;
   @include media-breakpoint-down(sm) {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    padding: 4px;
   }
 
   > .nav-item {
     &.active {
       > .nav-link {
         @extend .bg-danger;
+
+        &:focus,
+        &:hover {
+          @extend .bg-danger;
+        }
       }
     }
 
