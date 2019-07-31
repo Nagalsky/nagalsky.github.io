@@ -1,11 +1,56 @@
 /* HEADER */
+$header-height: 67px;
+
 .header {
   border-top: 1px solid $danger;
-  padding: 6px 0;
+  padding: 6px 0 0;
+  @include media-breakpoint-down(sm) {
+    padding: 6px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    background-color: $black !important;
+    min-height: $header-height;
+  }
+  margin-bottom: 1px;
   @include gradient-y-three-colors($start-color: rgba($black, .82), $mid-color: rgba($black, .9), $color-stop: 50%, $end-color: rgba($black, .82));
 
   > .container {
     @extend .d-md-flex, .align-items-md-center, .position-relative;
+  }
+}
+
+.header__top {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 7px;
+  }
+
+  > .container {
+    @extend .d-md-flex, .justify-content-md-between;
+  }
+}
+
+.is_stuck,
+.sticky-wrapper {
+  @include media-breakpoint-down(sm) {
+    height: auto !important;
+  }
+
+  .header__bottom {
+    z-index: 50 !important;
+    @include media-breakpoint-down(sm) {
+      width: auto !important;
+      position: static !important;
+      top: auto !important;
+    }
+  }
+}
+
+.header__bottom {
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 10px;
   }
 }
 
@@ -16,14 +61,15 @@
   }
   @include media-breakpoint-down(sm) {
     width: 140px;
+    margin-left: 15px;
   }
 }
 
 .header-collapse {
-  @extend .d-md-flex, .flex-md-grow-1;
+  @extend .d-md-flex, .flex-md-grow-1, .flex-md-column;
 
   .navbar-nav {
-    @extend .flex-md-row, .ml-md-auto;
+    @extend .flex-md-row;
   }
 }
 
@@ -61,6 +107,7 @@
       font-size: 20px;
       @include media-breakpoint-down(sm) {
         font-size: 16px;
+        padding: 0.5rem 0;
       }
 
       &:focus,
@@ -74,6 +121,6 @@
 .navbar-toggler {
   @extend .d-md-none, .border-0, .p-0, .position-absolute;
   right: 15px;
-  top: 13px;
+  top: 20px;
   width: 24px;
 }

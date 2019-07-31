@@ -11,6 +11,9 @@ html {
 
 .main {
   @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:0%, $end-percent:10%);
+  @include media-breakpoint-down(sm) {
+    padding-top: $header-height;
+  }
 }
 
 .h1,

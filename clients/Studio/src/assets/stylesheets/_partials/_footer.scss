@@ -1,6 +1,32 @@
 /* FOOTER */
-
-
 .footer {
-  color: darken(#ffd8d9, 20%);
+  @extend .text-gray;
+  @include gradient-y($start-color: rgba($black, .82), $end-color: $black, $start-percent: 0%, $end-percent: 100%);
+  padding: 10px 0;
+  font-size: 12px;
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+
+  .nav-item {
+    &:not(:last-child) {
+      .nav-link {
+        &:after {
+          content: '';
+          @extend .position-absolute;
+          width: 1px;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          background-color: $gray;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    @extend .position-relative;
+    color: $gray;
+  }
 }

@@ -1,15 +1,9 @@
 /* NAVBAR */
-$navbar-height: 44px;
-
 .navbar {
-  @extend .position-sticky, .overflow-hidden, .p-0;
+  @extend .p-0;
   @include gradient-y($start-color:#383838, $end-color:#303030, $start-percent:50%, $end-percent:50%);
-  z-index: 50;
-  top: 0;
-  left: 0;
   @include media-breakpoint-down(sm) {
-    height: $navbar-height;
-    max-width: 100%;
+    background-image: none !important;
   }
 
   &:after,
@@ -19,6 +13,9 @@ $navbar-height: 44px;
     height: 1px;
     background-color: rgba($white, .3);
     left: 0;
+    @include media-breakpoint-down(sm) {
+      content: none !important;
+    }
   }
 
   &:before {
@@ -30,42 +27,94 @@ $navbar-height: 44px;
   }
 
   > .container {
-    @extend .d-block, .d-md-flex;
-    @include media-breakpoint-down(sm) {
-      height: $navbar-height;
+    @extend .justify-content-start;
+  }
+
+  .navbar-brand {
+    width: 100px;
+    display: none;
+  }
+}
+
+.is_stuck {
+  .navbar {
+    .navbar-brand {
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
     }
   }
 }
 
 .navbar-nav {
-  @extend .d-flex, .flex-row, .pb-4, .p-md-1;
-  @include media-breakpoint-down(sm) {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px;
-  }
+  @extend .d-md-flex, .flex-md-row, .p-md-1;
 
   > .nav-item {
     &.active {
       > .nav-link {
-        @extend .bg-danger;
+        &:hover {
+          @include media-breakpoint-up(md) {
+            background-color: transparent;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          &:before {
+            content: "";
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          color: $danger;
+        }
 
         &:focus,
         &:hover {
-          @extend .bg-danger;
+          @include media-breakpoint-up(md) {
+            &:before {
+              content: "";
+            }
+          }
+          @include media-breakpoint-down(sm) {
+            color: $danger;
+          }
         }
       }
     }
 
     > .nav-link {
       text-decoration: none;
-      @extend .d-inline-block, .text-uppercase, .text-white;
+      @extend .d-inline-block, .position-relative;
+      color: $white;
       padding: 7px 12px;
 
-      &:focus,
+      &:before {
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 7px 7px 7px;
+          border-color: transparent transparent $white transparent;
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      @include media-breakpoint-up(md) {
+        text-transform: uppercase;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        padding: 0.5rem 0;
+      }
+
       &:hover {
-        @extend .bg-danger;
+        @include media-breakpoint-up(md) {
+          background-color: $danger;
+        }
+        @include media-breakpoint-down(sm) {
+          color: $danger;
+        }
       }
     }
   }
