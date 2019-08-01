@@ -1,6 +1,6 @@
 /* NAVBAR */
 .navbar {
-  @extend .p-0;
+  @extend .p-0, .overflow-hidden;
   @include gradient-y($start-color:#383838, $end-color:#303030, $start-percent:50%, $end-percent:50%);
   @include media-breakpoint-down(sm) {
     background-image: none !important;
@@ -54,7 +54,11 @@
       > .nav-link {
         &:hover {
           @include media-breakpoint-up(md) {
-            background-color: transparent;
+            background-color: $danger;
+
+            &:before {
+              content: none !important;
+            }
           }
         }
         @include media-breakpoint-up(md) {
@@ -89,15 +93,13 @@
       &:before {
         @include media-breakpoint-up(md) {
           display: inline-block;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 7px 7px 7px;
-          border-color: transparent transparent $white transparent;
+          width: 9px;
+          height: 9px;
           position: absolute;
-          bottom: -3px;
+          bottom: -8px;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translateX(-50%) rotate(45deg);
+          @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:100%, $end-percent:100%);
         }
       }
       @include media-breakpoint-up(md) {

@@ -1,0 +1,21 @@
+/* HEADER FORM */
+.header__form {
+  @extend .flex-fill, .shadow, .ml-4, .mr-5, .rounded;
+
+  .form-control {
+    padding-left: 40px;
+  }
+
+  .btn-submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.header__form-icon {
+  @extend .position-absolute, .text-muted, .h-100, .d-flex, .justify-content-center, .align-items-center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}

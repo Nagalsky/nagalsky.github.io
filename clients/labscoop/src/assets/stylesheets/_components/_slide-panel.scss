@@ -1,0 +1,36 @@
+/* SLIDE PANEL */
+$slide-panel-size: 320px;
+$slide-panel-animation: all 0.5s cubic-bezier(0.7,0,0.3,1);
+
+.slide-panel {
+  @extend .position-fixed, .h-100, .overflow-auto, .bg-white;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 300;
+  transform: translate3d(100%,0,0);
+  transition: $slide-panel-animation;
+  @include media-breakpoint-up(md) {
+    width: $slide-panel-size;
+  }
+
+  &.is-opened {
+    transform: translate3d(0,0,0);
+  }
+}
+
+.slide-panel-mask {
+  @extend .position-fixed, .w-100, .h-100;
+  left: 0;
+  top: 0;
+  background-color: rgba($black, .75);
+  transition: $slide-panel-animation;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+
+  &.is-opened {
+    opacity: 1;
+    visibility: visible;
+  }
+}
