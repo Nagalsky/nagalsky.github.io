@@ -1,6 +1,60 @@
 /* HEADER MENU */
-.header__menu-toggle {
-  @extend .border-0, .p-0, .lead;
+.header-menu {
+  @extend .bg-primary, .position-fixed, .w-100, .d-none;
+  height: 100%;
+  left: 0;
+  top: 0;
+  @include media-breakpoint-up(md) {
+    top: calc(#{$header-height} - 3px);
+    height: calc(100% - #{$header-height} + 3px);
+  }
+
+  &.is-opened {
+    @extend .d-block;
+  }
+
+  .mCSB_dragger,
+  .mCSB_draggerContainer,
+  .mCSB_draggerRail,
+  .mCSB_scrollTools,
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 6px;
+  }
+
+  .mCSB_draggerRail {
+    @extend .bg-white;
+    opacity: 1;
+  }
+
+  .mCSB_dragger_bar {
+    @extend .bg-success-secondary;
+    opacity: 1;
+  }
+
+  .mCSB_draggerRail,
+  .mCSB_dragger_bar {
+    @extend .rounded-0;
+  }
+}
+
+.header-menu__toggle {
+  @extend .border-0, .p-0, .lead, .order-md-2, .mr-3, .mr-md-0;
   background-color: transparent;
   color: $black;
+}
+
+.header-menu__close {
+  @extend .d-inline-block, .btn, .shadow-none, .position-fixed, .text-white;
+  font-size: 22px;
+  top: 5px;
+  right: 5px;
+  @include media-breakpoint-up(md) {
+    top: calc(#{$header-height} + 5px);
+    right: 15px;
+  }
+
+  &:focus,
+  &:hover {
+    @extend .text-success-secondary;
+  }
 }

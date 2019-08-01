@@ -2,6 +2,8 @@
 $dropdown-triangle-size: 8px;
 
 .header__account {
+  @extend .order-md-4, .ml-auto, .ml-md-0;
+
   > .nav-item {
     &.show {
       > .nav-link {
@@ -16,6 +18,10 @@ $dropdown-triangle-size: 8px;
 
     > .nav-link {
       color: $black;
+      @include media-breakpoint-down(xs) {
+        font-size: 12px;
+        padding: 10px;
+      }
 
       &:focus,
       &:hover {
@@ -32,7 +38,12 @@ $dropdown-triangle-size: 8px;
 
   .dropdown-menu {
     min-width: 300px;
-    top: calc(100% + 27px);
+    @include media-breakpoint-up(sm) {
+      top: calc(100% + 27px);
+    }
+    @include media-breakpoint-down(xs) {
+      min-width: 245px;
+    }
 
     &:after {
       @extend .position-absolute, .d-inline-block;

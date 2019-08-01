@@ -1,10 +1,18 @@
 /* HEADER */
+$header-height: 68px;
+
 .header {
-  @extend .p-3, .px-md-4, .d-flex, .align-items-center, .bg-white;
+  @extend .p-3, .px-md-4, .d-flex, .align-items-center, .bg-white, .flex-wrap, .position-sticky;
+  top: 0;
+  left: 0;
   border-bottom: 3px solid $primary;
+  min-height: $header-height;
 }
 
 .header__logo {
-  @extend .d-block, .mr-4;
+  @extend .d-block, .mr-1, .mr-sm-4, .order-md-1;
   width: 125px;
+  @include media-breakpoint-down(xs) {
+    width: 120px;
+  }
 }

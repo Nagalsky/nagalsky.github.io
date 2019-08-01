@@ -1,6 +1,8 @@
 /* SLIDE PANEL */
-$slide-panel-size: 320px;
+$slide-panel-size: 360px;
+$slide-panel-mobile-size: 85%;
 $slide-panel-animation: all 0.5s cubic-bezier(0.7,0,0.3,1);
+$slide-panel-animation-small: all 0.2s cubic-bezier(0.7,0,0.3,1);
 
 .slide-panel {
   @extend .position-fixed, .h-100, .overflow-auto, .bg-white;
@@ -10,6 +12,8 @@ $slide-panel-animation: all 0.5s cubic-bezier(0.7,0,0.3,1);
   z-index: 300;
   transform: translate3d(100%,0,0);
   transition: $slide-panel-animation;
+  width: $slide-panel-mobile-size;
+  border-left: 3px solid $primary;
   @include media-breakpoint-up(md) {
     width: $slide-panel-size;
   }
@@ -23,13 +27,47 @@ $slide-panel-animation: all 0.5s cubic-bezier(0.7,0,0.3,1);
   @extend .position-fixed, .w-100, .h-100;
   left: 0;
   top: 0;
-  background-color: rgba($black, .75);
+  background-color: rgba($black, .85);
   transition: $slide-panel-animation;
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
 
   &.is-opened {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slide-panel__item {
+  padding: 20px;
+  font-size: 12px;
+
+  &--divider {
+    border-bottom: 1px solid $silver;
+  }
+}
+
+.side-menu-close {
+  @extend .btn, .text-white, .position-fixed, .shadow-none;
+  top: 5px;
+  right: calc(#{$slide-panel-mobile-size} + 5px);
+  z-index: 350;
+  font-size: 22px;
+  visibility: hidden;
+  opacity: 0;
+  transition: $slide-panel-animation-small;
+  @include media-breakpoint-up(md) {
+    top: 60px;
+    right: calc(#{$slide-panel-size} + 5px);
+  }
+
+  &:focus,
+  &:hover {
+    @extend .text-primary;
+  }
+
+  &.is-active {
     opacity: 1;
     visibility: visible;
   }
