@@ -1,16 +1,17 @@
 /* HEADER MENU */
 .header-menu {
-  @extend .bg-primary, .position-fixed, .w-100, .d-none;
+  @extend .bg-primary, .position-fixed, .w-100, .d-none, .overflow-auto;
   height: 100%;
   left: 0;
   top: 0;
+  z-index: 50;
   @include media-breakpoint-up(md) {
     top: calc(#{$header-height} - 3px);
     height: calc(100% - #{$header-height} + 3px);
   }
 
   &.is-opened {
-    @extend .d-block;
+    @extend .d-flex;
   }
 
   .mCSB_dragger,
@@ -35,6 +36,20 @@
   .mCSB_dragger_bar {
     @extend .rounded-0;
   }
+
+  .mCSB_container,
+  .mCustomScrollBox {
+    @extend .d-flex, .flex-column, .flex-fill;
+
+    > .container {
+      @extend .d-flex, .flex-column, .flex-fill;
+    }
+  }
+
+  > .container {
+    max-width: 1545px;
+    @extend .d-flex, .flex-column, .flex-fill, .pr-5;
+  }
 }
 
 .header-menu__toggle {
@@ -44,10 +59,11 @@
 }
 
 .header-menu__close {
-  @extend .d-inline-block, .btn, .shadow-none, .position-fixed, .text-white;
+  @extend .d-inline-block, .btn, .shadow-none, .position-fixed, .text-white, .border-0;
   font-size: 22px;
   top: 5px;
   right: 5px;
+  z-index: 40;
   @include media-breakpoint-up(md) {
     top: calc(#{$header-height} + 5px);
     right: 15px;
