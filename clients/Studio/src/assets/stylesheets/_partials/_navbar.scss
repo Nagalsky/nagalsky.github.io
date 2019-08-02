@@ -52,6 +52,8 @@
   > .nav-item {
     &.active {
       > .nav-link {
+        font-weight: bold;
+
         &:hover {
           @include media-breakpoint-up(md) {
             background-color: $danger;
@@ -99,7 +101,8 @@
           bottom: -8px;
           left: 50%;
           transform: translateX(-50%) rotate(45deg);
-          @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:100%, $end-percent:100%);
+          background-color: #dcdcdc;
+          z-index: 20;
         }
       }
       @include media-breakpoint-up(md) {

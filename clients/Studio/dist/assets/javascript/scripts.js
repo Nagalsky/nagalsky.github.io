@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".header__bottom").sticky({topSpacing:0,className:"is_stuck"})});
+$(document).ready(function(){$(".header__bottom").stick_in_parent()});

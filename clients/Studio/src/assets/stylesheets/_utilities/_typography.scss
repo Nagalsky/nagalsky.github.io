@@ -10,9 +10,18 @@ html {
 }
 
 .main {
-  @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:0%, $end-percent:10%);
+  @extend .position-relative;
   @include media-breakpoint-down(sm) {
     padding-top: $header-height;
+  }
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100;
+    top: 0;
+    left: 0;
+    height: 150px;
+    @include gradient-y($start-color:#dcdcdc, $end-color:$white, $start-percent:0%, $end-percent:100%);
   }
 }
 
