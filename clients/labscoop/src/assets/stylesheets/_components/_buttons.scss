@@ -1,8 +1,17 @@
 /* BUTTONS */
 .btn {
-  @extend .shadow, .font-bold, .py-2;
+  @extend .shadow, .font-bold;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 
   &-primary {
     @include button-variants($bg: $primary, $color: $white);
+  }
+
+  &-lg {
+    padding: 14px 65px;
+    @include media-breakpoint-down(md) {
+      padding: 10px 35px;
+    }
   }
 }
