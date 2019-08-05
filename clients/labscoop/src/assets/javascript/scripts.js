@@ -1,32 +1,86 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  //Lock vertical scroll while header menu and cart clide out panel is opened
+  var $docEl = $('html, body'),
+    $wrap = $('.content'),
+    scrollTop;
+
+  var overlayClose = function () {
+    $.unlockBody();
+  }
+  var overlayOpen = function () {
+    $.lockBody();
+  }
+
+  $.lockBody = function () {
+    if (window.pageYOffset) {
+      scrollTop = window.pageYOffset;
+
+      $wrap.css({
+        top: -(scrollTop)
+      });
+    }
+
+    $docEl.css({
+      height: "100%",
+      overflow: "hidden"
+    });
+  }
+
+  $.unlockBody = function () {
+    $docEl.css({
+      height: "",
+      overflow: ""
+    });
+
+    $wrap.css({
+      top: ''
+    });
+
+    window.scrollTo(0, scrollTop);
+    window.setTimeout(function () {
+      scrollTop = null;
+    }, 0);
+
+  }
+
+
+
+
+
+
+
   //Cart slideout panel action
+
   var cartSlidePanelHolder = $('.slide-panel-cart')
   var cartSlidePanelToggle = $('.slide-panel-toggle')
   var cartSlidePanelMask = $('.slide-panel-mask')
-  var cartSlidePanelParent = $('body')
   var cartSlidePanelClose = $('.side-menu-close')
-  $(cartSlidePanelToggle).on('click', function() {
+  $(cartSlidePanelToggle).on('click', function (e) {
+    e.preventDefault()
     cartSlidePanelHolder.toggleClass('is-opened')
     cartSlidePanelClose.toggleClass('is-active')
     cartSlidePanelMask.toggleClass('is-opened')
-    cartSlidePanelParent.toggleClass('modal-open')
+    overlayOpen();
   })
-  $(cartSlidePanelClose).on('click touchstart', function() {
+  $(cartSlidePanelClose).on('click touchstart', function () {
     cartSlidePanelHolder.removeClass('is-opened')
     cartSlidePanelMask.removeClass('is-opened')
-    cartSlidePanelParent.removeClass('modal-open')
     cartSlidePanelClose.removeClass('is-active')
+    overlayClose();
+
   })
 
-  $(document).on('click touchstart', function(e) {
+  $(document).on('click touchstart', function (e) {
+
+
     if (
       $(e.target).closest(cartSlidePanelHolder).length == 0 &&
       $(e.target).closest(cartSlidePanelToggle).length == 0
     ) {
       cartSlidePanelHolder.removeClass('is-opened')
       cartSlidePanelMask.removeClass('is-opened')
-      cartSlidePanelParent.removeClass('modal-open')
       cartSlidePanelClose.removeClass('is-active')
+      overlayClose();
     }
   })
 
@@ -34,46 +88,33 @@ $(document).ready(function() {
   var headerMenu = $('.header-menu')
   var headerMenuToggle = $('.header-menu__toggle')
   var headerMenuClose = $('.header-menu__close')
-  var headerMenuParent = $('body')
-  headerMenuToggle.on('click', function() {
+  headerMenuToggle.on('click', function () {
     headerMenu.toggleClass('is-opened')
-    headerMenuParent.toggleClass('overflow-hidden')
   })
-  headerMenuClose.on('click', function() {
+  headerMenuClose.on('click', function () {
     headerMenu.removeClass('is-opened')
-    headerMenuParent.removeClass('overflow-hidden')
     headerMenuList.find('.is-active').removeClass('is-active')
   })
-  $(document).on('click touchstart', function(e) {
-    if (
-      $(e.target).closest(headerMenu).length == 0 &&
-      $(e.target).closest(headerMenuToggle).length == 0
-    ) {
-      headerMenu.removeClass('is-opened')
-      headerMenuParent.removeClass('overflow-hidden')
-    }
-  })
-  $('.dropdown-toggle').on('click', function() {
+  $('.dropdown-toggle').on('click', function () {
     headerMenu.removeClass('is-opened')
-    headerMenuParent.removeClass('overflow-hidden')
   })
 
   //Custom scrollbar initial
   //$('.header-menu').mCustomScrollbar();
 
-  //Header menu action
+  //Header mobile menu action
   var headerMenuList = $('.header-menu-list')
   var headerMenuListToggle = $('.header-menu-list__link--has-child')
   var headerSubmenuMenuList = $('.header-menu-sublist')
   var headerSubmenuMenuBtnBack = $('.header-menu-sublist__link--back')
-  headerMenuListToggle.on('click', function() {
+  headerMenuListToggle.on('click', function () {
     $(this)
       .parent()
       .toggleClass('is-active')
       .siblings()
       .removeClass('is-active')
   })
-  headerSubmenuMenuBtnBack.on('click', function(e) {
+  headerSubmenuMenuBtnBack.on('click', function (e) {
     e.preventDefault()
     $(this)
       .parent()
@@ -83,8 +124,10 @@ $(document).ready(function() {
   })
 
   //Click event to scroll to top
-  $('.btn-to-top').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 800)
+  $('.btn-to-top').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800)
     return false
   })
 })
