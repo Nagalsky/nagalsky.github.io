@@ -1,78 +1,27 @@
 $(document).ready(function () {
-  //Lock vertical scroll while header menu and cart clide out panel is opened
-  var $docEl = $('html, body'),
-    $wrap = $('.content'),
-    scrollTop;
-
-  var overlayClose = function () {
-    $.unlockBody();
-  }
-  var overlayOpen = function () {
-    $.lockBody();
-  }
-
-  $.lockBody = function () {
-    if (window.pageYOffset) {
-      scrollTop = window.pageYOffset;
-
-      $wrap.css({
-        top: -(scrollTop)
-      });
-    }
-
-    $docEl.css({
-      height: "100%",
-      overflow: "hidden"
-    });
-  }
-
-  $.unlockBody = function () {
-    $docEl.css({
-      height: "",
-      overflow: ""
-    });
-
-    $wrap.css({
-      top: ''
-    });
-
-    window.scrollTo(0, scrollTop);
-    window.setTimeout(function () {
-      scrollTop = null;
-    }, 0);
-
-  }
-
-
-
-
-
-
-
   //Cart slideout panel action
 
   var cartSlidePanelHolder = $('.slide-panel-cart')
   var cartSlidePanelToggle = $('.slide-panel-toggle')
   var cartSlidePanelMask = $('.slide-panel-mask')
   var cartSlidePanelClose = $('.side-menu-close')
+  var body = $('body')
   $(cartSlidePanelToggle).on('click', function (e) {
     e.preventDefault()
     cartSlidePanelHolder.toggleClass('is-opened')
     cartSlidePanelClose.toggleClass('is-active')
     cartSlidePanelMask.toggleClass('is-opened')
-    overlayOpen();
+    body.toggleClass('modal-open')
   })
   $(cartSlidePanelClose).on('click touchstart', function () {
     cartSlidePanelHolder.removeClass('is-opened')
     cartSlidePanelMask.removeClass('is-opened')
     cartSlidePanelClose.removeClass('is-active')
-    overlayClose();
-
+    body.removeClass('modal-open')
   })
 
+
   $(document).on('click touchstart', function (e) {
-
-
     if (
       $(e.target).closest(cartSlidePanelHolder).length == 0 &&
       $(e.target).closest(cartSlidePanelToggle).length == 0
@@ -80,7 +29,7 @@ $(document).ready(function () {
       cartSlidePanelHolder.removeClass('is-opened')
       cartSlidePanelMask.removeClass('is-opened')
       cartSlidePanelClose.removeClass('is-active')
-      overlayClose();
+      body.removeClass('modal-open')
     }
   })
 
@@ -100,7 +49,7 @@ $(document).ready(function () {
   })
 
   //Custom scrollbar initial
-  //$('.header-menu').mCustomScrollbar();
+  $('.filter').mCustomScrollbar();
 
   //Header mobile menu action
   var headerMenuList = $('.header-menu-list')

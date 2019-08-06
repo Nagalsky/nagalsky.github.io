@@ -2,11 +2,19 @@
 $header-height: 68px;
 
 .header {
-  @extend .p-3, .px-md-4, .px-lg-5, .d-flex, .align-items-center, .bg-white, .flex-wrap, .flex-shrink-0;
+  @extend .p-3, .d-flex, .align-items-center, .bg-white, .flex-wrap, .flex-shrink-0;
   top: 0;
   left: 0;
   border-bottom: 3px solid $primary;
   min-height: $header-height;
+  @include media-breakpoint-up(md) {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+  }
 }
 
 .header__logo {

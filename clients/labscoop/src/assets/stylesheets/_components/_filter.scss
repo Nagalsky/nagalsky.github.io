@@ -1,0 +1,59 @@
+/* FILTER */
+.filter {
+	@extend .overflow-auto, .mb-3;
+	max-height: 354px;
+
+	.mCSB_scrollTools {
+		width: 4px;
+		opacity: 1;
+
+		.mCSB_draggerRail {
+			@extend .rounded-0;
+			background-color: rgba($primary, .4);
+			width: 4px;
+		}
+
+		.mCSB_dragger {
+			.mCSB_dragger_bar {
+				@extend .rounded-0, .bg-primary;
+			}
+		}
+	}
+}
+
+.filter__title {
+	@extend .mb-2;
+	font-size: 16px;
+}
+
+.filter__item {
+	input {
+		@extend .d-none, .position-absolute;
+
+		&:checked {
+			&+label {
+				&:before {
+					@extend .fa-check-square;
+				}
+			}
+		}
+	}
+
+	label {
+		@extend .d-flex, .align-items-center, .text-black, .m-0, .font-regular;
+		cursor: pointer;
+
+		&:before {
+			@extend .mr-2, .flex-shrink-0, .far, .fa-square;
+		}
+	}
+
+	&+.filter__item {
+		margin-top: 1px;
+	}
+}
+
+.filter__item__img {
+	@extend .img-fluid;
+	max-width: 135px;
+}

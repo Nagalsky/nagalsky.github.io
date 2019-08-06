@@ -21,7 +21,7 @@
 
   &:focus,
   &:hover {
-    box-shadow: 0 0 5px 0 rgba($black, .3);
+    box-shadow: $base-box-shadow;
 
     .product-description {
       border-left-color: $success;
@@ -39,16 +39,6 @@
   @extend .w-100, .h-100;
   object-fit: cover;
 }
-// .product-description {
-//   @extend .position-absolute, .w-100, .py-2, .px-3, .bg-white;
-//   transition: $base-animation;
-//   z-index: 20;
-//   left: 0;
-//   bottom: 0;
-//   border-left: 4px solid $success;
-//   border-top: 1px solid darken($base-border-color, 10%);
-//   transform: translateY(100%);
-// }
 
 .product-description {
   @extend .py-2, .px-3, .bg-white, .w-100, .mt-auto;

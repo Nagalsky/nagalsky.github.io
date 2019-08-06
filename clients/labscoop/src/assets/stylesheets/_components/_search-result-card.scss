@@ -1,0 +1,53 @@
+/* SEARCH RESULT CARD */
+.search-result-card {
+	@extend .position-relative, .mb-2, .px-3, .py-2, .d-xl-flex, .align-items-xl-center, .justify-content-xl-between;
+	@include transition($base-animation);
+	border-left: 4px solid $gray-secondary;
+	border-bottom: 1px solid $gray-secondary;
+
+	&:before {
+		content: '';
+		@extend .position-absolute, .bg-white;
+		left: 0;
+		bottom: -1px;
+		height: 1px;
+		width: 16px;
+		z-index: 10;
+	}
+
+	&:focus,
+	&:hover {
+		box-shadow: $base-box-shadow;
+		border-left-color: $success;
+	}
+
+	.field-qty {
+		min-width: 115px;
+	}
+}
+
+.search-result-card__description {
+	@extend .mr-xl-4, .mb-4, .mb-xl-0;
+}
+
+.search-result-card__action {
+	@extend .flex-shrink-0, .d-lg-flex;
+}
+
+.search-result-card__img {
+	@extend .w-100;
+	max-width: 148px;
+	border: 1px solid $gray-secondary;
+}
+
+.search-result-card__badges {
+	@extend .d-flex, .align-items-center, .mb-3, .justify-content-xl-end;
+}
+
+.search-result-card__badge {
+	width: 35px;
+
+	&+.search-result-card__badge {
+		@extend .ml-3;
+	}
+}

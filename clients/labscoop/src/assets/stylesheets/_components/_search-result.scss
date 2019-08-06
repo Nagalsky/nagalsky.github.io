@@ -1,0 +1,39 @@
+/* SEARCH RESULT */
+.search-result-holder {
+	@extend .d-md-flex;
+}
+
+.search-result-filter {
+	@extend .flex-shrink-0, .mb-4, .mb-md-0;
+	@include media-breakpoint-up(md) {
+		width: 200px;
+		margin-right: 30px;
+	}
+}
+
+.search-result-body {
+	@extend .flex-fill;
+}
+
+.search-result-list {
+	@extend .d-flex, .flex-column;
+
+	&:not(:last-child) {
+		@extend .mb-2;
+	}
+}
+
+.search-result-list__item {
+	@extend .d-inline-block, .text-black;
+	padding: 2px 0;
+
+	&:focus,
+	&:hover {
+		@extend .text-primary;
+	}
+
+	&--title {
+		@extend .font-bold;
+		font-size: 16px;
+	}
+}
