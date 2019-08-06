@@ -1,0 +1,28 @@
+/* CHECKOUT CARD */
+.checkout-card {
+  @extend .position-relative;
+  padding: 20px 15px;
+  @include media-breakpoint-up(md) {
+    padding: 50px 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    border-left: 15px solid $white;
+    border-right: 15px solid $white;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 70px 60px;
+  }
+  @include media-breakpoint-down(md) {
+    background-color: $white;
+  }
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: $muted;
+  }
+  font-size: 12px;
+}

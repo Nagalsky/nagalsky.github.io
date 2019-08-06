@@ -1,0 +1,19 @@
+/* POPOVER */
+.popover {
+  &.bs-popover-bottom {
+    border-top: 4px solid $primary;
+
+    > .arrow {
+      top: calc((.5rem + 4px) * -1);
+
+      &:after,
+      &:before {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+}
+
+.popover-body {
+  font-size: 12px;
+}

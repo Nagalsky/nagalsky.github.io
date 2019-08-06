@@ -1,0 +1,37 @@
+/* ASIDE LIST */
+.aside-link {
+  @extend .d-flex, .flex-column;
+}
+
+.aside-link__item {
+  @extend .position-relative, .py-2, .pr-3, .d-block, .text-md-right, .font-bold, .text-black;
+
+  &:focus,
+  &:hover {
+    @extend .text-primary;
+  }
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .h-100;
+    right: 0;
+    top: 0;
+    width: 3px;
+    background-color: #c3c3c3;
+  }
+
+  &.active {
+    &:before {
+      background-color: $warning;
+    }
+  }
+
+  &+.aside-link__item {
+    margin-top: 5px;
+  }
+}
+
+.aside-link__subitem {
+  @extend .d-block, .font-regular;
+  line-height: 1;
+}
