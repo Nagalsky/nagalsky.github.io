@@ -1,0 +1,16 @@
+/* CONTENT */
+.content {
+  @extend .d-md-flex;
+}
+
+.content__aside {
+  @extend .flex-shrink-0, .mb-4, .mb-md-0;
+  @include media-breakpoint-up(md) {
+    width: 200px;
+    margin-right: 30px;
+  }
+}
+
+.content__body {
+  @extend .flex-fill;
+}
