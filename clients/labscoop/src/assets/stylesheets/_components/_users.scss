@@ -1,0 +1,24 @@
+/* USERS */
+.users {
+  @extend .d-flex, .flex-column;
+}
+
+.user {
+  @extend .d-flex, .align-items-center, .justify-content-between, .py-2;
+
+  &+.user {
+    border-top: 1px solid $base-border-color;
+  }
+}
+
+.user__info {
+  @extend .flex-fill, .mr-3;
+}
+
+.user__name {
+  @extend .mb-0, .font-bold;
+}
+
+.user__email {
+  font-size: 13px;
+}

@@ -82,4 +82,7 @@ $(document).ready(function () {
 
   //Initial bootstrap popover
   $('[data-toggle="popover"]').popover()
+
+  //Initial custom bootstrap select
+  $('.selectpicker').selectpicker();
 })

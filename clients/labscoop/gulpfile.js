@@ -106,6 +106,7 @@ gulp.task(
     return gulp
       .src([
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
         'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',

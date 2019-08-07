@@ -1,14 +1,17 @@
 /* ASIDE LIST */
 .aside-link {
-  @extend .d-flex, .flex-column;
+  @extend .d-flex, .flex-column, .mb-3;
 }
 
 .aside-link__item {
-  @extend .position-relative, .py-2, .pr-3, .d-block, .text-md-right, .font-bold, .text-black;
+  @extend .position-relative, .py-2, .pr-3, .d-block, .text-lg-right, .font-bold, .text-black;
+  font-size: 12px;
 
   &:focus,
   &:hover {
-    @extend .text-primary;
+    &:before {
+      background-color: $warning;
+    }
   }
 
   &:before {

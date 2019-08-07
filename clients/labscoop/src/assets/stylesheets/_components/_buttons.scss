@@ -1,8 +1,7 @@
 /* BUTTONS */
 .btn {
   @extend .shadow, .font-bold;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 2rem;
 
   &-primary {
     @include button-variants($bg: $primary, $color: $white);
@@ -21,5 +20,17 @@
 
   &-outline-primary {
     @include button-outline-variants($color: $primary)
+  }
+
+  &-action {
+    @extend .shadow-none, .text-black, .px-3;
+    border-color: #bcc1c8;
+    background-color: $white;
+
+    &:focus,
+    &:hover {
+      border-color: #bcc1c8;
+      background-color: #bcc1c8;
+    }
   }
 }

@@ -10,8 +10,8 @@ $field-border-color: #c3c3c3;
 
 	&:focus {
 		border-color: $primary;
-		box-shadow: 0 0 0 0.2rem rgba($primary,.25);
-		border-color: darken($field-border-color, 10%);
+		box-shadow: none;
+		border-color: darken($field-border-color, 15%);
 	}
 }
 
@@ -36,4 +36,27 @@ label {
 .sort-box {
 	@extend .d-flex, .flex-shrink-0, .ml-md-3, .align-items-center;
 	min-width: 240px;
+}
+
+.form-label-group {
+	@extend .position-relative, .mb-4;
+
+	> label {
+		@extend .position-absolute, .mb-0, .d-block, .w-100;
+		top: 0;
+		left: 0;
+		@include transition($base-animation);
+		padding-left: 10px;
+		margin-top: 5px;
+	}
+
+	input {
+		@include custom-placeholder-opacity($opacity: 0);
+
+		&:not(:placeholder-shown) ~ label {
+			@extend .mt-0, .font-bold, .text-gray, .small;
+			color: $field-border-color;
+			top: -10px;
+		}
+	}
 }

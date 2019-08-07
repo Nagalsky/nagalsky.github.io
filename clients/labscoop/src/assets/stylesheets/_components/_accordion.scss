@@ -1,0 +1,53 @@
+/* ACCORDION */
+$accordion-border-color: #c3c3c3;
+
+.accordion-holder {
+  border: 1px solid $accordion-border-color;
+
+  &--mt-negative {
+    margin-top: -1px;
+  }
+}
+
+.accordion {
+  &:not(:last-child) {
+    border-bottom: 1px solid $accordion-border-color;
+  }
+}
+
+.accordion__header {
+  padding: 15px;
+  @include media-breakpoint-up(md) {
+    padding: 25px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 30px 35px;
+  }
+}
+
+.accordion__btn {
+  @extend .p-0, .border-0, .bg-transparent, .text-black, .position-relative, .d-block, .pr-5, .w-100, .text-left;
+
+  &:before {
+    @extend .fas, .fa-chevron-down, .position-absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.collapsed {
+    &:before {
+      @extend .fa-chevron-right;
+    }
+  }
+}
+
+.accordion__body {
+  padding: 0 15px 15px;
+  @include media-breakpoint-up(md) {
+    padding: 0 25px 25px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 0 35px 30px;
+  }
+}
