@@ -1,1 +1,62 @@
 /* PANEL */
+.panel {
+  @extend .mb-3, .text-center;
+
+  &:hover {
+    .panel-header {
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        opacity: 0;
+      }
+    }
+
+    .panel-header__content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.panel-header {
+  @extend .position-relative, .mb-4;
+  z-index: 20;
+
+  &:after,
+  &:before {
+    @include transition($base-animation);
+    @extend .position-absolute, .d-inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 20;
+  }
+
+  &:after {
+    bottom: 0;
+    border-width: 0 10px 12px 10px;
+    border-color: transparent transparent $white transparent;
+  }
+
+  &:before {
+    top: 0;
+    border-width: 12px 8px 0 8px;
+    border-color: $white transparent transparent transparent;
+    opacity: 0;
+  }
+}
+
+.panel-header__content {
+  @extend .position-absolute, .w-100, .h-100;
+  @include transition($base-animation);
+  left: 0;
+  top: 0;
+  background-color: rgba($black, .45);
+  opacity: 0;
+  visibility: hidden;
+}
