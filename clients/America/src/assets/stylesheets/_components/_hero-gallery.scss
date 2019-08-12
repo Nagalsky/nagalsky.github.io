@@ -20,7 +20,13 @@
 .hero-gallery__content {
   @extend .mx-auto, .text-white;
   max-width: 650px;
-  padding: 160px 0;
+  padding: 60px 0;
+  @include media-breakpoint-up(md) {
+    padding: 160px 0;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 13% 0;
+  }
 }
 
 .hero-gallery__title {
