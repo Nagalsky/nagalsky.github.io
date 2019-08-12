@@ -33,3 +33,31 @@
   @extend .america-icon-arrow-right;
   right: 15px;
 }
+
+.slick-dots {
+  @extend .list-unstyled, .mt-3, .d-flex, .justify-content-center, .position-absolute, .w-100;
+  bottom: 10px;
+
+  > li {
+    @extend .mx-1;
+
+    &.slick-active {
+      > button {
+        background-color: #868686;
+      }
+    }
+
+    > button {
+      @extend .border-0, .p-0;
+      background-color: #ccccca;
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.slick-dotted {
+  @extend .pb-5;
+}

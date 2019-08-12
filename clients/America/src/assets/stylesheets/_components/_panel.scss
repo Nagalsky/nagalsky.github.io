@@ -1,4 +1,16 @@
 /* PANEL */
+.panel-gallery {
+  @include media-breakpoint-up(md) {
+    margin: 0 -25px;
+  }
+
+  .slick-slide {
+    @include media-breakpoint-up(md) {
+      padding: 0 25px;
+    }
+  }
+}
+
 .panel {
   @extend .mb-3, .text-center;
 
@@ -52,11 +64,23 @@
 }
 
 .panel-header__content {
-  @extend .position-absolute, .w-100, .h-100;
+  @extend .position-absolute, .w-100, .h-100, .py-3, .px-4, .d-flex, .align-items-center, .justify-content-center;
   @include transition($base-animation);
   left: 0;
   top: 0;
   background-color: rgba($black, .45);
   opacity: 0;
   visibility: hidden;
+}
+
+.panel-header__list {
+  @extend .w-100, .text-white, .text-uppercase, .d-flex, .flex-column, .font-bold;
+
+  > span {
+    @extend .px-3, .py-2, .d-block;
+
+    &+span {
+      border-top: 2px solid #8e7f65;
+    }
+  }
 }

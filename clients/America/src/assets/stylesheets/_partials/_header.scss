@@ -34,7 +34,8 @@
 }
 
 .header__right {
-  @extend .flex-lg-fill, .d-lg-flex, .flex-lg-column, .align-items-lg-end, .px-3, .px-lg-0, .pt-3, .pb-5, .py-lg-0;
+  @extend .flex-lg-fill, .d-lg-flex, .flex-lg-column, .align-items-lg-end, .px-3, .px-lg-0, .pb-5, .py-lg-0;
+  padding-top: 30px;
   @include media-breakpoint-down(md) {
     position: fixed;
     top: 0;
@@ -244,12 +245,26 @@
   }
 }
 
+.header__menu-close,
 .header__menu-toggle {
   @extend .d-lg-none, .border-0, .p-0;
   background-color: transparent;
   color: $primary;
+}
+
+.header__menu-toggle {
   @include media-breakpoint-up(md) {
     font-size: 30px;
   }
   font-size: 26px;
+}
+
+.header__menu-close {
+  @extend .position-absolute;
+  top: 10px;
+  right: 10px;
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+  font-size: 16px;
 }
