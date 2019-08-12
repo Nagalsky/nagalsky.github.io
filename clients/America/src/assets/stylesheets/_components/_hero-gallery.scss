@@ -1,0 +1,33 @@
+/* HERO GALLERY */
+.hero-gallery {
+  @extend .text-center;
+}
+
+.hero-gallery__holder {
+  @extend .position-relative;
+  z-index: 20;
+
+  &:before {
+    @extend .position-absolute, .w-100, .h-100;
+    content: '';
+    left: 0;
+    top: 0;
+    background-color: rgba($black, .35);
+    z-index: -1;
+  }
+}
+
+.hero-gallery__content {
+  @extend .mx-auto, .text-white;
+  max-width: 650px;
+  padding: 160px 0;
+}
+
+.hero-gallery__title {
+  @extend .text-uppercase;
+}
+
+.hero-gallery__subtitle {
+  @extend .mb-4, .mb-md-5;
+  font-size: 18px;
+}

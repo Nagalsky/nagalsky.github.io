@@ -29,7 +29,7 @@ $accordion-border-color: #c3c3c3;
   @extend .p-0, .border-0, .bg-transparent, .text-black, .position-relative, .d-block, .pr-5, .w-100, .text-left;
 
   &:before {
-    @extend .fas, .fa-chevron-down, .position-absolute;
+    @extend .fas, .fa-chevron-right, .position-absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -37,7 +37,7 @@ $accordion-border-color: #c3c3c3;
 
   &.collapsed {
     &:before {
-      @extend .fa-chevron-right;
+      @extend .fa-chevron-down;
     }
   }
 }

@@ -1,6 +1,25 @@
 /* HEADER */
 .header {
   padding: 30px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 15px 0;
+  }
+}
+
+.header__mask {
+  @extend .position-fixed, .w-100, .h-100;
+  left: 0;
+  top: 0;
+  background-color: rgba($black, .7);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .header__inner {
@@ -8,15 +27,30 @@
 }
 
 .header__left {
-  @extend .flex-shrink-0, .position-relative;
-  margin-right: 30px;
-  @include media-breakpoint-down(xl) {
-    margin-right: 20px;
+  @extend .flex-shrink-0, .d-flex, .align-items-center, .justify-content-between, .position-relative;
+  @include media-breakpoint-up(lg) {
+    margin-right: 30px;
   }
 }
 
 .header__right {
-  @extend .flex-lg-fill, .d-lg-flex, .flex-lg-column, .align-items-lg-end, .py-4, .py-lg-0;
+  @extend .flex-lg-fill, .d-lg-flex, .flex-lg-column, .align-items-lg-end, .px-3, .px-lg-0, .pt-3, .pb-5, .py-lg-0;
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #e9e0d1;
+    z-index: 50;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+
+    &.is-menu-opened {
+      transform: translateX(0%);
+    }
+  }
 }
 
 .header__logo {
@@ -90,8 +124,11 @@
   @extend .d-flex, .flex-column, .flex-lg-row, .mb-lg-0, .mr-lg-4;
 
   a {
-    @extend .d-inline-flex, .align-items-center, .text-uppercase, .px-lg-2;
+    @extend .d-inline-flex, .align-items-center, .text-uppercase, .px-lg-2, .py-1, .py-lg-0;
     color: $gray-bold;
+    @include media-breakpoint-up(lg) {
+      font-size: 12px;
+    }
 
     &:focus,
     &:hover {
@@ -111,7 +148,7 @@
 
 .header__tel-number {
   @extend .font-bold, .d-none, .d-lg-inline-block;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .header__navbar {
@@ -184,9 +221,12 @@
     }
 
     > a {
-      @extend .text-truncate, .d-block, .d-lg-inline-block;
+      @extend .text-truncate, .d-block;
       padding-top: 5px;
       padding-bottom: 5px;
+      @include media-breakpoint-up(lg) {
+        font-size: 12px;
+      }
       @include media-breakpoint-up(lg) {
         padding: 10px 5px;
       }
@@ -202,4 +242,14 @@
       }
     }
   }
+}
+
+.header__menu-toggle {
+  @extend .d-lg-none, .border-0, .p-0;
+  background-color: transparent;
+  color: $primary;
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+  }
+  font-size: 26px;
 }

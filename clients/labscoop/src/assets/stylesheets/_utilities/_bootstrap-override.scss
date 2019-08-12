@@ -21,3 +21,15 @@
 .bg-transparent {
   background-color: transparent !important;
 }
+
+.col-divider {
+  background-color: $base-border-color;
+  @extend .mx-auto;
+  @include media-breakpoint-up(md) {
+    height: 100%;
+    width: 1px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 1px;
+  }
+}

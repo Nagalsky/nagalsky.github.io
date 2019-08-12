@@ -1,0 +1,35 @@
+/* GALLERY */
+.slick-arrow {
+  @extend .position-absolute, .border-0, .font-icons, .p-0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  font-size: 0;
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    @extend .text-white;
+    opacity: 0.85;
+    font-size: 30px;
+    @include media-breakpoint-up(md) {
+      font-size: 50px;
+    }
+  }
+}
+
+.slick-prev {
+  @extend .america-icon-arrow-left;
+  left: 15px;
+}
+
+.slick-next {
+  @extend .america-icon-arrow-right;
+  right: 15px;
+}

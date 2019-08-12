@@ -1,1 +1,16 @@
 /* BUTTONS */
+.btn {
+  @extend .text-uppercase;
+  border-width: 2px;
+  background-color: $white;
+  border-radius: 6px;
+  border-color: #939598;
+  padding: 3px 15px;
+
+  &:focus,
+  &:hover {
+    @extend .shadow-none;
+    background-color: #939598;
+    color: $white;
+  }
+}

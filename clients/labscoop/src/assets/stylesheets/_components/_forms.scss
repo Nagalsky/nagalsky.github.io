@@ -60,3 +60,27 @@ label {
 		}
 	}
 }
+
+.form-group {
+	&--has-icon {
+		@extend .position-relative;
+
+		.field-icon {
+			@extend .position-absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 18px;
+		}
+	}
+
+	&--has-icon-right {
+		input,
+		select {
+			padding-right: 35px !important;
+		}
+
+		.field-icon {
+			right: 5px;
+		}
+	}
+}

@@ -39,13 +39,16 @@ $(document).ready(function () {
   var headerMenuClose = $('.header-menu__close')
   headerMenuToggle.on('click', function () {
     headerMenu.toggleClass('is-opened')
+    $('body').toggleClass('overflow-hidden')
   })
   headerMenuClose.on('click', function () {
     headerMenu.removeClass('is-opened')
     headerMenuList.find('.is-active').removeClass('is-active')
+    $('body').removeClass('overflow-hidden')
   })
   $('.dropdown-toggle').on('click', function () {
     headerMenu.removeClass('is-opened')
+    $('body').removeClass('overflow-hidden')
   })
 
   //Custom scrollbar initial

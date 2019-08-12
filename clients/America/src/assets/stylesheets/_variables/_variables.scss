@@ -7,6 +7,7 @@ $silver: #ccccca;
 $muted: #dfdfdf;
 $gray: #868686;
 $gray-bold: #56514f;
+$coffee: #e9e0d1;
 /* Override Bootstrap color variables */
 .text-white {
   color: $white !important;
@@ -36,6 +37,10 @@ $gray-bold: #56514f;
   color: $muted !important;
 }
 
+.text-coffee {
+  color: $coffee !important;
+}
+
 .bg-white {
   background-color: $white !important;
 }
@@ -63,14 +68,28 @@ $gray-bold: #56514f;
 .bg-muted {
   background-color: $muted !important;
 }
+
+.bg-coffee {
+  background-color: $coffee !important;
+}
 /*************************
 	Fonts variables
 *************************/
-$font-regular: 'FuturaRegular';
-$font-bold: 'FuturaBold';
+$font-light: 'NunitoLight';
+$font-regular: 'NunitoRegular';
+$font-semibold: 'NunitoSemiBold';
+$font-bold: 'NunitoBold';
+
+.font-light {
+  font-family: $font-light !important;
+}
 
 .font-regular {
   font-family: $font-regular !important;
+}
+
+.font-semibold {
+  font-family: $font-semibold !important;
 }
 
 .font-bold {
@@ -79,7 +98,9 @@ $font-bold: 'FuturaBold';
 $font-icons: "fontello";
 
 .font-icons {
-  font-family: $font-icons;
+  &:before {
+    font-family: $font-icons;
+  }
 }
 /*************************
 	Base variables
