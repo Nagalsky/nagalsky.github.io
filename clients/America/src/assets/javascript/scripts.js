@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  //Header menu image change on hover
+  $('.img-rotate-trigger').hover(
+    function () {
+      //we get our current filename and use it for the src
+      $(this).addClass('hover');
+      $('.img-rotate').attr('src', $(this).data('img'));
+    },
+    function () {
+      $(this).removeClass('hover');
+    }
+  );
+
   //Mobile menu action
   var $menu = $('.header__right')
   var $menuToggle = $('.header__menu-toggle')
