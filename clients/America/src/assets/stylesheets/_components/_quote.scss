@@ -1,0 +1,29 @@
+/* QUOTE */
+.quote {
+  @extend .text-center, .position-relative;
+  font-style: italic;
+}
+
+.quote__title {
+  &:after,
+  &:before {
+    font-family: $font-icons;
+    color: #dad9d6;
+    font-size: 30px;
+  }
+
+  &:before {
+    @extend .mr-3;
+    content: '\e808';
+  }
+
+  &:after {
+    @extend .ml-3;
+    content: '\e809';
+  }
+}
+
+.quite__name {
+  @extend .mt-4, .mt-md-5;
+  color: #7d7d7d;
+}

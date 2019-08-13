@@ -1,0 +1,46 @@
+/* MODAL */
+.modal {
+  @extend .text-white;
+
+  .close {
+    @extend .position-absolute, .text-white;
+    top: 5px;
+    right: 10px;
+    text-shadow: none;
+    opacity: 1;
+    font-size: 28px;
+  }
+
+  .newsletter-form {
+    .form-control {
+      border-color: #004185 !important;
+    }
+
+    .btn-submit {
+      background-color: #004185;
+
+      &:focus,
+      &:hover {
+        background-color: darken(#004185, 3%);
+      }
+    }
+  }
+}
+
+.modal-content {
+  @extend .rounded-0, .has-overlay, .position-relative;
+  border: 2px solid $white;
+}
+
+.modal-body {
+  padding: 25px;
+  @include media-breakpoint-up(md) {
+    padding: 40px;
+  }
+}
+
+.modal-backdrop {
+  &.show {
+    opacity: 0.85;
+  }
+}

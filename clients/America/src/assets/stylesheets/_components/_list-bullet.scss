@@ -1,0 +1,20 @@
+/* LIST BULLET */
+.list-bullet {
+	@extend .list-unstyled;
+
+	> li {
+		@extend .d-flex;
+
+		&:before {
+			content: '';
+			@extend .d-inline-block, .rounded-circle, .bg-black, .mr-3, .flex-shrink-0;
+			width: 8px;
+			height: 8px;
+			margin-top: 5px;
+		}
+
+		&+li {
+			@extend .mt-1;
+		}
+	}
+}

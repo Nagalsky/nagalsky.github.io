@@ -7,7 +7,7 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="assets/stylesheets/main.css">
-  <title>Home page</title>
+  <title>Product detail page</title>
 </head>
 
 <body class="has-gradient">
@@ -96,71 +96,107 @@
   </header>
 
   <main class="main">
-    <section class="section p-0">
-      <div class="gallery hero-gallery" data-slick='{"arrows": true, "adaptiveHeight": true, "autoplay": true}'>
-        <div class="has-bg hero-gallery__holder" style="background-image: url('assets/images/temp/slide-1.jpg')">
-          <div class="hero-gallery__content">
-            <h2 class="hero-gallery__title">LOREM IPSUM DOLOR SIT AMET.</h2>
-            <h4 class="hero-gallery__subtitle">Lorem ipsum dolor sit amet, consectuer adipiscing
-              elit und labore et dolore magna aliqua.</h4>
-            <a href="#" class="btn">PLAY VIDEO</a>
-          </div>
-        </div>
-
-        <div class="has-bg hero-gallery__holder" style="background-image: url('assets/images/temp/slide-2.jpg')">
-          <div class="hero-gallery__content">
-            <h2 class="hero-gallery__title">LOREM IPSUM DOLOR SIT AMET.</h2>
-            <h4 class="hero-gallery__subtitle">Lorem ipsum dolor sit amet, consectuer adipiscing
-              elit und labore et dolore magna aliqua.</h4>
-            <a href="#" class="btn">PLAY VIDEO</a>
-          </div>
-        </div>
-
-        <div class="has-bg hero-gallery__holder" style="background-image: url('assets/images/temp/slide-3.jpg')">
-          <div class="hero-gallery__content">
-            <h2 class="hero-gallery__title">LOREM IPSUM DOLOR SIT AMET.</h2>
-            <h4 class="hero-gallery__subtitle">Lorem ipsum dolor sit amet, consectuer adipiscing
-              elit und labore et dolore magna aliqua.</h4>
-            <a href="#" class="btn">PLAY VIDEO</a>
-          </div>
-        </div>
-
-        <div class="has-bg hero-gallery__holder" style="background-image: url('assets/images/temp/slide-4.jpg')">
-          <div class="hero-gallery__content">
-            <h2 class="hero-gallery__title">LOREM IPSUM DOLOR SIT AMET.</h2>
-            <h4 class="hero-gallery__subtitle">Lorem ipsum dolor sit amet, consectuer adipiscing
-              elit und labore et dolore magna aliqua.</h4>
-            <a href="#" class="btn">PLAY VIDEO</a>
-          </div>
-        </div>
+    <section class="section hero has-bg has-overlay" style="background-image: url('assets/images/bg/hero-2.jpg');">
+      <div class="container">
+        <h1>LOREM IPSUM<br /> DOLOR SIT AMET</h1>
       </div>
     </section>
 
-    <div class="divider"></div>
-
-    <section class="section p-0">
+    <section class="section section--sm">
       <div class="container">
-        <div class="gallery gallery-gutters" data-slick='{
-          "arrows": false,
-          "autoplay": false,
-          "slidesToShow": 3,
-          "dots": true,
-          "responsive": [
-          {
-            "breakpoint": 768,
-            "settings": {
-              "slidesToShow": 2
-            }
-          },
-          {
-            "breakpoint": 575,
-            "settings": {
-              "slidesToShow": 1
-            }
-          }
-        ]
-      }'>
-          <div>
+        <ol class="breadcrumb mb-4 mb-md-5">
+          <li class="breadcrumb-item"><a href="#">LOREM IPSUM</a></li>
+          <li class="breadcrumb-item"><a href="#">LOREM IPSUM</a></li>
+          <li class="breadcrumb-item active" aria-current="page">LOREM IPSUM</li>
+        </ol>
+
+        <div class="row">
+          <div class="col-xl-4 col-md-5 mb-4 mb-md-0">
+            <div class="gallery gallery-main mb-3" data-slick='{
+              "arrows": false,
+              "adaptiveHeight": true,
+              "autoplay": true,
+              "asNavFor": ".gallery-thumbnails"
+            }'>
+              <div>
+                <img src="assets/images/temp/slide-1.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-2.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-3.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-4.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-5.jpg" alt="" class="w-100">
+              </div>
+            </div>
+
+            <div class="gallery gallery-gutters-sm gallery-thumbnails px-xl-5 px-md-4" data-slick='{
+              "arrows": false,
+              "autoplay": false,
+              "slidesToShow": 3,
+              "asNavFor": ".gallery-main",
+              "centerMode": true,
+              "focusOnSelect": true
+            }'>
+              <div>
+                <img src="assets/images/temp/slide-1.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-2.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-3.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-4.jpg" alt="" class="w-100">
+              </div>
+              <div>
+                <img src="assets/images/temp/slide-5.jpg" alt="" class="w-100">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-8 col-md-7">
+            <h4 class="text-uppercase">Lorem ipsum dolor</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+            <ul class="list-bullet">
+              <li>Commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+              <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+              <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li>
+            </ul>
+
+            <h5 class="text-uppercase mt-md-5">SPECS</h5>
+
+            <ul class="list-bullet mb-md-5">
+              <li>Commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+              <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+              <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li>
+            </ul>
+
+            <a href="#" class="btn btn-long">cta</a>
+          </div>
+        </div>
+
+        <div class="divider divider--lg"></div>
+
+        <h3 class="text-center text-uppercase mb-4 mb-md-5">RELATED PRODUCTS</h3>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4">
             <div class="panel">
               <div class="panel-header">
                 <img src="assets/images/temp/slide-1.jpg" alt="" class="w-100">
@@ -180,7 +216,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="col-md-4">
             <div class="panel">
               <div class="panel-header">
                 <img src="assets/images/temp/slide-2.jpg" alt="" class="w-100">
@@ -200,7 +236,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="col-md-4">
             <div class="panel">
               <div class="panel-header">
                 <img src="assets/images/temp/slide-3.jpg" alt="" class="w-100">
@@ -219,71 +255,13 @@
               <a href="#" class="btn">LOREM IPSUM</a>
             </div>
           </div>
-
-          <div>
-            <div class="panel">
-              <div class="panel-header">
-                <img src="assets/images/temp/slide-4.jpg" alt="" class="w-100">
-                <div class="panel-header__content">
-                  <div class="panel-header__list">
-                    <span>ELECTRIC FIREPLACES</span>
-                    <span>GAS FIREPLACES</span>
-                    <span>WOOD BURNING FIREPLACES</span>
-                  </div>
-                </div>
-              </div>
-              <h4 class="text-uppercase">FIRE PLACES</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-              </p>
-              <a href="#" class="btn">LOREM IPSUM</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="panel">
-              <div class="panel-header">
-                <img src="assets/images/temp/slide-5.jpg" alt="" class="w-100">
-                <div class="panel-header__content">
-                  <div class="panel-header__list">
-                    <span>ELECTRIC FIREPLACES</span>
-                    <span>GAS FIREPLACES</span>
-                    <span>WOOD BURNING FIREPLACES</span>
-                  </div>
-                </div>
-              </div>
-              <h4 class="text-uppercase">FIRE PLACES</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-              </p>
-              <a href="#" class="btn">LOREM IPSUM</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="panel">
-              <div class="panel-header">
-                <img src="assets/images/temp/slide-6.jpg" alt="" class="w-100">
-                <div class="panel-header__content">
-                  <div class="panel-header__list">
-                    <span>ELECTRIC FIREPLACES</span>
-                    <span>GAS FIREPLACES</span>
-                    <span>WOOD BURNING FIREPLACES</span>
-                  </div>
-                </div>
-              </div>
-              <h4 class="text-uppercase">FIRE PLACES</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-              </p>
-              <a href="#" class="btn">LOREM IPSUM</a>
-            </div>
-          </div>
         </div>
+
+        <div class="divider"></div>
       </div>
     </section>
 
-    <div class="divider"></div>
+
 
     <section class="section has-bg mb-5" style="background-image: url('assets/images/bg/flag-bg.jpg')">
       <div class="container">
@@ -297,138 +275,6 @@
             <div class="box">
               <img src="assets/images/temp/slide-7.jpg" alt="" class="w-100">
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--lg has-bg text-white has-overlay" style="background-image: url('assets/images/temp/slide-3.jpg')">
-      <div class="gallery" data-slick='{"arrows": false, "adaptiveHeight": true, "autoplay": false, "dots": true}'>
-        <div>
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-7 mb-4 mb-md-0">
-                <h2 class="h1 text-uppercase">LITE MY FIRE</h2>
-                <h4 class="mb-4"><span class="d-block text-uppercase">LIGHT MY PILOT LIGHT</span> Lorem ipsum dolor sit amet, consectuer adipiscing</h4>
-                <a href="#" class="btn">LOREM IPSUM</a>
-              </div>
-
-              <div class="col-md-5">
-                <div class="embed-responsive embed-responsive-16by9 box">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-7 mb-4 mb-md-0">
-                <h2 class="h1 text-uppercase">Slide 2</h2>
-                <h4 class="mb-4"><span class="d-block text-uppercase">LIGHT MY PILOT LIGHT</span> Lorem ipsum dolor sit amet, consectuer adipiscing</h4>
-                <a href="#" class="btn">LOREM IPSUM</a>
-              </div>
-
-              <div class="col-md-5">
-                <div class="embed-responsive embed-responsive-16by9 box">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-7 mb-4 mb-md-0">
-                <h2 class="h1 text-uppercase">Slide 3</h2>
-                <h4 class="mb-4"><span class="d-block text-uppercase">LIGHT MY PILOT LIGHT</span> Lorem ipsum dolor sit amet, consectuer adipiscing</h4>
-                <a href="#" class="btn">LOREM IPSUM</a>
-              </div>
-
-              <div class="col-md-5">
-                <div class="embed-responsive embed-responsive-16by9 box">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="spacer"></div>
-
-    <section class="section section--lg">
-      <div class="container">
-        <h2 class="text-center mb-5 text-uppercase">THE BRANDS WE PROVIDE</h2>
-
-        <div class="gallery gallery-gutters gallery-arrows-dark px-lg-5" data-slick='{
-          "arrows": true,
-          "autoplay": true,
-          "slidesToShow": 4,
-          "dots": false,
-          "responsive": [
-          {
-            "breakpoint": 768,
-            "settings": {
-              "slidesToShow": 3
-            }
-          },
-          {
-            "breakpoint": 575,
-            "settings": {
-              "slidesToShow": 2
-            }
-          }
-        ]
-      }'>
-          <div>
-            <img src="assets/images/temp/brand-logo-1.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-
-          <div>
-            <img src="assets/images/temp/brand-logo-2.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-
-          <div>
-            <img src="assets/images/temp/brand-logo-3.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-
-          <div>
-            <img src="assets/images/temp/brand-logo-4.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-
-          <div>
-            <img src="assets/images/temp/brand-logo-1.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-
-          <div>
-            <img src="assets/images/temp/brand-logo-2.png" alt="" class="img-fluid mx-auto d-block">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section newsletter text-white py-5">
-      <img src="assets/images/elements/fire.png" alt="" class="newsletter__floated-image">
-      <div class="container position-relative">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-1">KEEP IN TOUCH - SIGN UP FOR OUR ENEWSLETTER</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          </div>
-
-          <div class="col-xl-5 offset-xl-1 col-md-6">
-            <form action="" class="newsletter-form">
-              <div class="form-group mb-0 d-flex">
-                <input type="email" class="form-control flex-fill" placeholder="ENTER EMAIL">
-                <button class="btn btn-submit">SIGN UP</button>
-              </div>
-            </form>
           </div>
         </div>
       </div>

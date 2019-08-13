@@ -1,1 +1,22 @@
 /* BREADCRUMB */
+.breadcrumb {
+  @extend .rounded-0, .p-0;
+  background-color: transparent;
+}
+
+.breadcrumb-item {
+  @extend .text-uppercase;
+
+  &.active {
+    @extend .text-black;
+  }
+
+  > a {
+    color: #7d7d7d;
+
+    &:focus,
+    &:hover {
+      @extend .text-black;
+    }
+  }
+}
