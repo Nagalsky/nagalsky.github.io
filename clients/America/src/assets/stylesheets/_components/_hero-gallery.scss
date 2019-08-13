@@ -4,17 +4,8 @@
 }
 
 .hero-gallery__holder {
-  @extend .position-relative;
+  @extend .has-overlay;
   z-index: 20;
-
-  &:before {
-    @extend .position-absolute, .w-100, .h-100;
-    content: '';
-    left: 0;
-    top: 0;
-    background-color: rgba($black, .35);
-    z-index: -1;
-  }
 }
 
 .hero-gallery__content {
