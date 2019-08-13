@@ -4,7 +4,7 @@ $(document).ready(function () {
     function () {
       //we get our current filename and use it for the src
       $(this).addClass('hover');
-      $('.img-rotate').attr('src', $(this).data('img'));
+      $(this).parent().parent().find('.img-rotate').attr('src', $(this).data('img'));
     },
     function () {
       $(this).removeClass('hover');
