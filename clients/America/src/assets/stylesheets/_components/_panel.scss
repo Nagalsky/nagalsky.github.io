@@ -64,16 +64,29 @@
 .panel-header__list {
   @extend .w-100, .text-white, .text-uppercase, .d-flex, .flex-column, .font-bold;
 
-  > span {
+  > a,
+  span {
     @extend .px-3, .py-2, .d-block;
+    color: $white;
 
     &:only-child {
       border-top: 2px solid #8e7f65;
       border-bottom: 2px solid #8e7f65;
     }
 
+    &+a {
+      border-top: 2px solid #8e7f65;
+    }
+
     &+span {
       border-top: 2px solid #8e7f65;
+    }
+  }
+
+  > a {
+    &:focus,
+    &:hover {
+      color: #8e7f65;
     }
   }
 }
