@@ -7,12 +7,16 @@ import Root from './lib/root'
 import reset from './lib/reset'
 
 import { Homepage, About } from '../src/pages/index'
+import { Header } from '../src/ui/'
+
+const headerLoggedIn = false
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Root>
         <Global styles={reset} />
+        <Header headerLoggedIn={headerLoggedIn} />
         <Router>
           <Homepage path="/" />
           <About path="about" />

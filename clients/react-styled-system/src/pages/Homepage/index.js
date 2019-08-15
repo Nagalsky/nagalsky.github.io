@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import { Box, Container } from '../../helpers/'
-import { Button } from '../../ui/'
+import { Button, Title } from '../../ui/'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
           gege
         </Box>
 
-        <h1>I'm a homepage</h1>
+        <Title>I'm a homepage</Title>
 
         <Button variant="primary">primary</Button>
         <Button variant="success">success</Button>

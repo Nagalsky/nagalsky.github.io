@@ -7,6 +7,7 @@ export default css`
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
   }
   img {
     max-width: 100%;
@@ -100,5 +101,11 @@ export default css`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+  }
+  button,
+  a {
+    &:focus {
+      outline: none;
+    }
   }
 `
