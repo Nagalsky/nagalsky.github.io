@@ -43,6 +43,7 @@ $field-border-color: #f7f7f7;
 		border-color: $white;
 		background-color: rgba(white, .55);
 		@include custom-placeholder($color: $white, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style);
+
 		@include media-breakpoint-down(md) {
 			height: 47px;
 		}
@@ -55,12 +56,17 @@ $field-border-color: #f7f7f7;
 
 select,
 select.form-control {
-	@extend .border-0, .bg-gray-thin;
+	@extend .border-0,
+	.bg-gray-thin;
 	background-position: right 10px center;
 	background-repeat: no-repeat;
 	background-size: 11px;
 	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDQ1MS44IDQ1MS44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEuOCA0NTEuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMzRjNGM0Y7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMjUuOSwzNTQuN2MtOC4xLDAtMTYuMi0zLjEtMjIuNC05LjNMOS4zLDE1MS4yYy0xMi40LTEyLjQtMTIuNC0zMi40LDAtNDQuOGMxMi40LTEyLjQsMzIuNC0xMi40LDQ0LjcsMAoJCWwxNzEuOSwxNzEuOWwxNzEuOS0xNzEuOWMxMi40LTEyLjQsMzIuNC0xMi40LDQ0LjcsMGMxMi40LDEyLjQsMTIuNCwzMi40LDAsNDQuOEwyNDguMywzNDUuNEMyNDIuMSwzNTEuNiwyMzQsMzU0LjcsMjI1LjksMzU0Ljd6IgoJCS8+CjwvZz4KPC9zdmc+Cg==");
 	padding-right: 30px;
+
+	&.form-control-white {
+		@extend .bg-white;
+	}
 }
 
 .select-quantity {
@@ -76,6 +82,7 @@ select.form-control {
 fieldset {
 	&:not(:last-child) {
 		margin-bottom: 40px;
+
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 30px;
 		}

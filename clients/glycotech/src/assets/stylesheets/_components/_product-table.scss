@@ -4,7 +4,8 @@ $product-table-secondary-color: #f3f4f4;
 $product-table-text-color: #c3c3c3;
 
 .product-table {
-  @extend .mb-4, .mb-md-5;
+  @extend .mb-4,
+  .mb-md-5;
   border: 6px solid $product-table-primary-color;
 
   p {
@@ -16,7 +17,9 @@ $product-table-text-color: #c3c3c3;
 
 .product-table__body,
 .product-table__header {
-  @extend .px-3, .py-4, .p-lg-3;
+  @extend .px-3,
+  .py-4,
+  .p-lg-3;
 }
 
 .product-table__header {
@@ -28,7 +31,9 @@ $product-table-text-color: #c3c3c3;
 }
 
 .product-table__body {
-  @extend .d-lg-flex, .flex-lg-wrap, .align-items-lg-end, .justify-content-lg-between;
+  @extend .d-lg-flex,
+  .flex-lg-wrap,
+  .justify-content-lg-between;
 
   &+.product-table__body,
   &+.product-table__header {
@@ -38,18 +43,22 @@ $product-table-text-color: #c3c3c3;
 
 .product-table__body-item {
   min-width: 0;
+
   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     flex-basis: 33%;
   }
 
   &+.product-table__body-item {
-    @extend .pl-lg-4, .mt-3, .mt-lg-0;
+    @extend .pl-lg-4,
+    .mt-3,
+    .mt-lg-0;
   }
 
   &:nth-child(2) {
     @include media-breakpoint-down(lg) {
       max-width: 235px;
     }
+
     @include media-breakpoint-down(md) {
       max-width: 100%;
     }
@@ -58,6 +67,7 @@ $product-table-text-color: #c3c3c3;
 
 .product-table__img {
   width: 80px;
+
   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     width: 140px;
   }
