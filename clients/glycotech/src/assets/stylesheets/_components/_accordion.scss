@@ -10,13 +10,21 @@
 }
 
 .accordion__toggle {
-  @extend .d-block, .text-primary, .position-relative, .w-100, .text-left, .font-icons, .glycotech-icon-up-arrow, .lead;
+  @extend .d-block,
+  .text-primary,
+  .position-relative,
+  .w-100,
+  .text-left,
+  .font-icons,
+  .glycotech-icon-up-arrow,
+  .lead;
   padding: 15px 50px 0 15px;
   background: none;
   border: none;
 
   &:before {
-    @extend .text-black, .position-absolute;
+    @extend .text-black,
+    .position-absolute;
     @include transition($base-animation);
     right: 20px;
     top: 13px;
@@ -30,6 +38,7 @@
 }
 
 .accordion__body {
-  @extend .my-3;
+  @extend .my-3,
+  .position-relative;
   white-space: normal;
 }
