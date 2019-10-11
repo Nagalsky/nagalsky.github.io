@@ -11,10 +11,12 @@ $(document).ready(function () {
   //Navbar search panel active
   var navSearchPanelToggle = $('.nav-search-panel-toggle')
   var navSearchPanel = $('.nav-search-panel')
+  var navSearchPanelField = $('.nav-search-panel .form-control')
   var navSearchPanelClose = $('.nav-search-panel-close')
   navSearchPanelToggle.on('click', function (e) {
     e.preventDefault()
     nav.toggleClass('is-search-panel-opened')
+    navSearchPanelField.focus()
   })
 
   navSearchPanelClose.on('click', function (e) {

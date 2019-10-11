@@ -1,6 +1,6 @@
 /* NAVBAR */
 .navbar {
-  @extend .bg-white, .position-sticky;
+  @extend .bg-white, .position-sticky, .py-md-3;
   z-index: 200;
   top: 0;
   left: 0;
@@ -42,6 +42,9 @@
         padding-left: 40px;
         padding-right: 40px;
       }
+      @include media-breakpoint-up(xl) {
+        font-size: 20px;
+      }
 
       &:hover {
         &:before {
@@ -78,7 +81,7 @@
     content: '';
     @extend .position-absolute, .bg-black;
     left: 0;
-    height: 2px;
+    height: 3px;
     border-radius: 5px;
     @include transition($base-animation);
   }
@@ -184,12 +187,17 @@
   .form-control {
     @extend .border-0;
     padding-left: 50px;
-    @include custom-placeholder($color: $silver, $font-size: 1.1rem, $font-family: $font-regular, $letter-spacing:3px);
+    @include custom-placeholder($color: $silver, $font-size: 1.1rem, $font-family: $font-regular);
+
+    &:focus {
+      @extend .shadow-none;
+    }
   }
 }
 
 .nav-search-panel-close {
   @extend .flex-shrink-0, .text-black, .ml-3;
+  font-size: 1.2rem;
 }
 
 .form-search-icon {
