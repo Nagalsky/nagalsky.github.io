@@ -46,7 +46,7 @@ $(document).ready(function () {
   $(".range-slider").ionRangeSlider({
     postfix: 'K',
     hide_min_max: true,
-    from_min: '40',
+    from: '40',
   });
 
   //Scroll to section action
@@ -56,11 +56,11 @@ $(document).ready(function () {
     var offset = 85;
     $(window).resize(function () {
       if ($(window).width() < 992) {
-        offset = 71;
+        offset = 65;
       }
     });
     if ($(window).width() < 992) {
-      offset = 71;
+      offset = 65;
     }
     var target = "#" + $(this).data("scroll");
     var $target = $(target);

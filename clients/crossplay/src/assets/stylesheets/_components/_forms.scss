@@ -6,11 +6,11 @@ $field-height: 62px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	background-color: $field-bg;
-	@extend .border-0, .px-4;
+	@extend .border-0;
 	border-radius: 30px;
-	@include media-breakpoint-up(md) {
-		height: $field-height;
-	}
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	height: $field-height;
 
 	&:focus {
 		background-color: darken($field-bg, 5%);
