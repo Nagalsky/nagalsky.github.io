@@ -1,9 +1,13 @@
 /* NAVBAR */
+$navbar-height: 87px;
+$navbar-mobile-height: 71px;
+
 .navbar {
-  @extend .bg-white, .position-sticky, .py-md-3;
-  z-index: 200;
-  top: 0;
-  left: 0;
+  @extend .bg-white, .fixed-top, .py-md-3;
+  min-height: $navbar-mobile-height;
+  @include media-breakpoint-up(md) {
+    min-height: $navbar-height;
+  }
 
   > .container {
     @extend .justify-content-start, .justify-content-md-between, .position-relative, .overflow-hidden;
@@ -185,7 +189,8 @@
   @extend .flex-fill;
 
   .form-control {
-    @extend .border-0;
+    @extend .border-0, .bg-white, .rounded-0, .py-1, .pr-2;
+    height: calc(1.5em + .75rem + 2px);
     padding-left: 50px;
     @include custom-placeholder($color: $silver, $font-size: 1.1rem, $font-family: $font-regular);
 

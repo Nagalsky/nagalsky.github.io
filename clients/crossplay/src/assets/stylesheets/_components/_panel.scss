@@ -1,1 +1,32 @@
 /* PANEL */
+.panel {
+  @extend .mx-auto;
+  max-width: 660px;
+  box-shadow: 0 0 15px rgba($black, .1);
+  border-radius: 30px;
+  padding: 48px;
+  @include transition($base-animation);
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+  @include media-breakpoint-down(md) {
+    padding: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 25px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+
+.panel__icon {
+  @extend .flex-shrink-0;
+  font-size: 60px;
+  margin-right: 30px;
+  @include media-breakpoint-down(xs) {
+    font-size: 50px;
+  }
+}

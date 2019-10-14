@@ -1,8 +1,22 @@
 /* BUTTONS */
 .btn {
   @extend .font-bold;
+  border-radius: 16px;
   @include media-breakpoint-up(md) {
     padding: 8px 35px;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $silver;
+    border-color: $silver;
+    cursor: not-allowed;
+
+    &:focus,
+    &:hover {
+      background-color: $silver !important;
+      border-color: $silver !important;
+    }
   }
 
   &-success {
@@ -24,6 +38,14 @@
 
     &:active {
       animation: active 1200ms ease 1 alternate;
+    }
+  }
+
+  &-lg {
+    font-size: 18px;
+    padding: 8px 35px;
+    @include media-breakpoint-up(md) {
+      padding: 17px 70px;
     }
   }
 }
@@ -184,4 +206,9 @@
   100% {
     transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
+}
+
+.apple-btn {
+  @extend .d-block;
+  width: 190px;
 }

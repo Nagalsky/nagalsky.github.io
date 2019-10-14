@@ -1,5 +1,30 @@
 /* FORMS */
+$field-bg: #F6F7F9;
+$field-height: 62px;
+
 .form-control {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	background-color: $field-bg;
+	@extend .border-0, .px-4;
+	border-radius: 30px;
+	@include media-breakpoint-up(md) {
+		height: $field-height;
+	}
+
+	&:focus {
+		background-color: darken($field-bg, 5%);
+	}
+}
+
+label {
+	@extend .font-bold;
+	font-size: 18px;
+	@include media-breakpoint-up(md) {
+		font-size: 22px;
+	}
+}
+
+.invalid-feedback {
+	@extend .font-bold;
 }
