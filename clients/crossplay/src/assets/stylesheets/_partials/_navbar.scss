@@ -1,13 +1,6 @@
 /* NAVBAR */
-$navbar-height: 87px;
-$navbar-mobile-height: 71px;
-
 .navbar {
-  @extend .bg-white, .fixed-top, .py-md-3;
-  min-height: $navbar-mobile-height;
-  @include media-breakpoint-up(md) {
-    min-height: $navbar-height;
-  }
+  @extend .bg-white, .py-md-3;
 
   > .container {
     @extend .justify-content-start, .justify-content-md-between, .position-relative, .overflow-hidden;
@@ -37,17 +30,20 @@ $navbar-mobile-height: 71px;
     }
 
     > .nav-link {
-      @extend .text-black, .position-relative, .font-semibold;
+      @extend .text-black, .position-relative, .font-bold;
+      font-size: 16px;
       @include media-breakpoint-up(md) {
+        font-size: 18px;
         padding-left: 20px;
         padding-right: 20px;
       }
       @include media-breakpoint-up(lg) {
+        font-size: 20px;
         padding-left: 40px;
         padding-right: 40px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 20px;
+        font-size: 24px;
       }
 
       &:hover {

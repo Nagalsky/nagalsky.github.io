@@ -9,13 +9,6 @@ html {
   line-height: $body-line-height;
 }
 
-body {
-  padding-top: $navbar-mobile-height;
-  @include media-breakpoint-up(md) {
-    padding-top: $navbar-height;
-  }
-}
-
 .h1,
 .h2,
 .h3,
@@ -43,6 +36,9 @@ h1 {
   font-size: 40px;
   @include media-breakpoint-down(sm) {
     font-size: 36px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 60px;
   }
 }
 
