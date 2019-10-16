@@ -106,7 +106,9 @@ gulp.task(
     return gulp
       .src([
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/nprogress/nprogress.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+        'node_modules/bootstrap-validator/dist/validator.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
       ])

@@ -44,9 +44,11 @@ $(document).ready(function () {
 
   //Initial range slider
   $(".range-slider").ionRangeSlider({
-    postfix: 'K',
+    values: [
+      "10K", "100K", "200K", "300K", "400K", "500K",
+      "600K", "700K", "800K", "900K", "1M+"
+    ],
     hide_min_max: true,
-    from: '40',
   });
 
   //Scroll to section action
@@ -76,4 +78,21 @@ $(document).ready(function () {
   });
 
 
+  //User form
+  $("#user-form").submit(function (e) {
+    e.preventDefault();
+    $("#form-user-alert").removeClass('alert-hidden').delay(4000).queue(function () {
+      $(this).addClass("alert-hidden").dequeue();
+    });
+  });
+
+
+  //Stop YouTube video once modal is closed
+  $('.modal').on('hidden.bs.modal', function () {
+    $(".modal iframe").attr("src", $(".modal iframe").attr("src"));
+  });
+
+  //Initial progress line
+  NProgress.start();
+  NProgress.done();
 })
