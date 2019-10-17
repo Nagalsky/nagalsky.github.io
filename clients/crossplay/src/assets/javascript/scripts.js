@@ -13,6 +13,11 @@ $(document).ready(function () {
   var navSearchPanel = $('.nav-search-panel')
   var navSearchPanelField = $('.nav-search-panel .form-control')
   var navSearchPanelClose = $('.nav-search-panel-close')
+  if ($("body").hasClass("search")) {
+    nav.toggleClass('is-search-panel-opened')
+    navSearchPanelField.focus()
+  }
+
   navSearchPanelToggle.on('click', function (e) {
     e.preventDefault()
     nav.toggleClass('is-search-panel-opened')
