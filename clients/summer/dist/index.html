@@ -12,28 +12,65 @@
 
 <body>
 
-  <a href="#" class="menu__toggle"></a>
-  
-  <div class="menu">
-    <a href="#" class="menu__close"></a>
-    <nav class="menu__nav">
-      <a href="#" class="menu__nav__item">home</a>
-      <a href="#" class="menu__nav__item">story & cast</a>
-      <a href="#" class="menu__nav__item">bios</a>
-      <a href="#" class="menu__nav__item">screenings</a>
-      <a href="#" class="menu__nav__item">visuals</a>
-      <a href="#" class="menu__nav__item">contact</a>
-    </nav>
+  <div class="wrapper" data-vide-bg="mp4: assets/video/background_vid_720, poster: assets/video/background_vid_720" data-vide-options="loop: true, muted: true, position: 0% 0%">
+    <header class="header">
+      <div class="container-fluid">
+        <a href="#" class="menu__toggle"></a>
+    
+        <div class="menu">
+          <a href="#" class="menu__close"></a>
+          <nav class="menu__nav">
+            <a href="#" class="menu__nav__item">home</a>
+            <a href="#" class="menu__nav__item">story & cast</a>
+            <a href="#" class="menu__nav__item">bios</a>
+            <a href="#" class="menu__nav__item">screenings</a>
+            <a href="#" class="menu__nav__item">visuals</a>
+            <a href="#" class="menu__nav__item">contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <img src="assets/images/elements/main_title.png" alt="" class="img-fluid d-block mx-auto mb-5 mb-md-0">
+        <div class="negative-box">
+          <button type="button" class="btn btn-primary text-uppercase rounded-pill btn-text-wide lead" data-toggle="modal" data-target="#modal-movie">
+            watch the movie
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__links">
+          <a href="#" class="footer__links__item">
+            <img src="assets/images/elements/youtube.svg" alt="" class="w-100">
+          </a>
+          <a href="#" class="footer__links__item">
+            <img src="assets/images/elements/insta.svg" alt="" class="w-100">
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <section class="section section--full-height section--has-overlay section--has-video-bg" data-vide-bg="mp4: assets/video/background_vid_720, poster: assets/video/background_vid_720" data-vide-options="loop: true, muted: true, position: 0% 0%">
-    <div class="container">
-      <img src="assets/images/elements/main_title.png" alt="" class="img-fluid d-block mx-auto">
-      <h2 class="text-white">content</h2>
+
+  <!-- Modal movie -->
+  <div class="modal fade" id="modal-movie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q6omsDyFNlk?rel=0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-
-
+  </div>
 
   <script src="assets/javascript/vendors.min.js"></script>
   <script src="assets/javascript/scripts.js"></script>

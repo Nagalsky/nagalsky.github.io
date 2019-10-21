@@ -1,7 +1,18 @@
 /* FOOTER */
-
-
 .footer {
-  height: 200px;
-  @include gradient-x($start-color: rgba(white, .0), $end-color: rgba(white, .5), $start-percent: 0%, $end-percent: 100%);
+  @extend .position-relative;
+  z-index: 200;
+  padding: 30px 0;
+}
+
+.footer__links {
+  @extend .d-flex, .align-items-center;
+}
+
+.footer__links__item {
+  width: 30px;
+
+  &+.footer__links__item {
+    @extend .ml-4;
+  }
 }

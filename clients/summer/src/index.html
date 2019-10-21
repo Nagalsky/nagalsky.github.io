@@ -8,16 +8,25 @@
 
 <body>
 
-  //= template/menu.html
+  <div class="wrapper" data-vide-bg="mp4: assets/video/background_vid_720, poster: assets/video/background_vid_720" data-vide-options="loop: true, muted: true, position: 0% 0%">
+    //= template/menu.html
 
-  <section class="section section--full-height section--has-overlay section--has-video-bg" data-vide-bg="mp4: assets/video/background_vid_720, poster: assets/video/background_vid_720" data-vide-options="loop: true, muted: true, position: 0% 0%">
-    <div class="container">
-      <img src="assets/images/elements/main_title.png" alt="" class="img-fluid d-block mx-auto">
-      <h2 class="text-white">content</h2>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        <img src="assets/images/elements/main_title.png" alt="" class="img-fluid d-block mx-auto mb-5 mb-md-0">
+        <div class="negative-box">
+          <button type="button" class="btn btn-primary text-uppercase rounded-pill btn-text-wide lead" data-toggle="modal" data-target="#modal-movie">
+            watch the movie
+          </button>
+        </div>
+      </div>
+    </section>
+
+    //= template/footer.html
+  </div>
 
 
+  //= template/modals.html
 
   //= template/scripts-dependencies.html
 </body>

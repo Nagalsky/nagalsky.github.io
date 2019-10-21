@@ -3,10 +3,21 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
-  // font-family: $body-font-family;
-  // color: $body-main-color;
-  // font-size: $body-font-size;
-  // line-height: $body-line-height;
+  font-family: $body-font-family;
+  color: $body-main-color;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+html {
+  @extend .d-flex;
+  @include media-breakpoint-down(sm) {
+    height: 100% !important;
+  }
+}
+
+body {
+  @extend .d-flex, .flex-column, .w-100;
 }
 
 .h1,
