@@ -1,0 +1,39 @@
+/* BIO */
+$bio-nav-dot-size: 76px;
+$bio-nav-dot-tablet-size: 67px;
+$bio-nav-dot-mobile-size: 35px;
+
+.bio-nav {
+  @extend .mx-auto, .text-white, .has-bg, .border-0;
+  background-image: url("../images/elements/selection_btn.png");
+  max-width: 600px;
+  display: grid;
+  grid-gap: 28px;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 40px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 90px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 105px;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 530px;
+    grid-gap: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    max-width: 280px;
+    grid-gap: 10px;
+  }
+}
+
+.bio-nav__item {
+  @extend .rounded-circle, .w-100;
+  height: $bio-nav-dot-size;
+  @include media-breakpoint-down(sm) {
+    height: $bio-nav-dot-tablet-size;
+  }
+  @include media-breakpoint-down(xs) {
+    height: $bio-nav-dot-mobile-size;
+  }
+}
