@@ -1,0 +1,24 @@
+/* EVENT */
+.event-item {
+  &+.event-item {
+    @extend .mt-4, .mt-md-5;
+  }
+}
+
+.event-title {
+  @extend .font-secondary;
+  word-break: break-word;
+}
+
+.event {
+  @extend .d-flex, .align-items-center, .justify-content-between, .rounded-pill, .bg-primary, .text-black, .py-3, .px-4, .mb-3;
+  box-shadow: 0 0 8px 3px rgba($black, .6) inset;
+}
+
+.event-name {
+  @extend .mb-0, .text-uppercase, .lead;
+}
+
+.event-date {
+  @extend .flex-shrink-0, .ml-3, .d-inline-block, .rounded-pill, .bg-black, .text-primary, .py-1, .px-2;
+}
