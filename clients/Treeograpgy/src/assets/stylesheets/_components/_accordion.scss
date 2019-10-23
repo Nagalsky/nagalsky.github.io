@@ -1,0 +1,22 @@
+/* ACCORDION */
+.accordion__toggle {
+  @extend .p-0, .pr-4, .text-black, .position-relative, .w-100, .text-left, .border-0, .font-medium, .font-icons, .icon-arrow-up;
+  background: transparent;
+  font-size: 16px;
+
+  &:before {
+    @extend .text-muted, .position-absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+  }
+
+  &.collapsed {
+    @extend .icon-arrow-down;
+  }
+}
+
+.accordion__body {
+  padding-top: 15px;
+}
