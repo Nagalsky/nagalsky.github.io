@@ -1,0 +1,20 @@
+/* MODAL */
+.modal-content {
+  @extend .border-0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.modal-title {
+  @extend .font-regular, .text-muted;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $muted;
+}
+
+.modal-backdrop {
+  &.show {
+    opacity: 0.4;
+  }
+}

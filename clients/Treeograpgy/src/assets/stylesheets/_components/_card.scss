@@ -1,2 +1,39 @@
 /* CARD */
+.cards-desktop {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+  }
+}
 
+.card {
+  @extend .border-0;
+  border-radius: 7px;
+  box-shadow: 0 5px 13px 0 rgba(187, 187, 187, 0.35);
+  min-height: 100%;
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card-title {
+  @extend .fs-18, .text-black, .mb-3;
+}
+
+.card-text {
+  @extend .text-muted, .overflow-hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;
+  max-height: 72px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

@@ -46,11 +46,23 @@ h6 {
 .h1,
 h1 {
   font-size: 48px;
+  @include media-breakpoint-down(sm) {
+    font-size: 40px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+  }
 }
 
 .h2,
 h2 {
   font-size: 40px;
+  @include media-breakpoint-down(sm) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+  }
 }
 
 .h3,
@@ -61,16 +73,28 @@ h3 {
 .h4,
 h4 {
   font-size: 28px;
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
 }
 
 .h5,
 h5 {
   font-size: 18px;
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
 }
 
 .h6,
 h6 {
   font-size: 16px;
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+  }
 }
 
 a,

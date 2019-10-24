@@ -1,0 +1,1 @@
+$(document).ready(function(){var r=void 0;function e(){var e=$(window).width();e<768&&null==r?r=new Swiper(".swiper-container",{spaceBetween:0}):767<e&&null!=r&&(r.destroy(),r=void 0,jQuery(".swiper-wrapper").removeAttr("style"),jQuery(".swiper-slide").removeAttr("style"))}e(),$(window).on("resize",function(){e()})});

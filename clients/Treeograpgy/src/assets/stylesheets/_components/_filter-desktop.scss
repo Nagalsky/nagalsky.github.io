@@ -1,0 +1,25 @@
+/* FILTER DESKTOP */
+.filter-header {
+  @extend .d-flex, .align-items-center, .justify-content-start, .justify-content-md-center;
+  margin-bottom: 30px;
+}
+
+.filter-desktop {
+  @extend .d-none, .d-lg-flex;
+  margin-bottom: 50px;
+}
+
+.filter-desktop__item {
+  @extend .d-flex, .align-items-xl-center, .flex-column, .flex-xl-row;
+
+  &+.filter-desktop__item {
+    margin-left: 20px;
+    @include media-breakpoint-up(xl) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.filter-desktop__title {
+  @extend .flex-shrink-0, .text-muted, .mr-3, .mb-2, .mb-xl-0;
+}
