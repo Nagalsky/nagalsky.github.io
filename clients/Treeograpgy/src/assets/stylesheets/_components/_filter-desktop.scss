@@ -5,8 +5,33 @@
 }
 
 .filter-desktop {
-  @extend .d-none, .d-lg-flex;
+  display: flex;
   margin-bottom: 50px;
+  @include media-breakpoint-down(md) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  .bootstrap-select {
+    @include media-breakpoint-up(lg) {
+      max-width: 300px;
+      min-width: 300px;
+    }
+  }
+}
+
+.filter-desktop__item-holder {
+  @extend .flex-fill, .d-flex;
+  @include media-breakpoint-up(lg) {
+    margin-left: 20px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: 30px;
+  }
 }
 
 .filter-desktop__item {

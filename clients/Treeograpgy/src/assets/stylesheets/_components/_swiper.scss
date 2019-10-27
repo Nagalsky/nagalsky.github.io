@@ -1,8 +1,47 @@
 /* SWIPER */
-.swiper-container {
-  overflow: visible;
+$swiper-bullet-size: 16px;
+$swiper-bullet-mobile-size: 9px;
 
-  &-initialized {
-    @extend .overflow-hidden;
+.swiper-btn {
+  cursor: pointer;
+}
+
+.swiper-pagination {
+  @extend .position-absolute, .w-100, .d-flex, .align-items-center, .justify-content-center;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+  height: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.swiper-pagination-bullet {
+  @extend .d-inline-block, .rounded-circle, .bg-white;
+  width: $swiper-bullet-size;
+  height: $swiper-bullet-size;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  opacity: 0.3;
+  @include media-breakpoint-down(sm) {
+    width: $swiper-bullet-mobile-size;
+    height: $swiper-bullet-mobile-size;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &-active {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

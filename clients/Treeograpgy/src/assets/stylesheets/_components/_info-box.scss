@@ -1,0 +1,58 @@
+/* TABS */
+.info-boxes {
+  @extend .border-0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 100px;
+}
+
+.info-box {
+  @extend .d-flex, .align-items-center, .justify-content-center;
+  color: $black;
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 24px;
+  }
+
+  &.active,
+  &:hover {
+    color: $primary;
+  }
+
+  &.active {
+    .info-box__icon-box {
+      &:before {
+        animation: sonarWave 900ms linear;
+      }
+    }
+  }
+}
+
+.info-box__icon-box {
+  @extend .d-flex, .align-items-center, .justify-content-center, .flex-shrink-0, .bg-primary, .rounded-circle, .text-white, .mr-3, .position-relative;
+  width: 99px;
+  height: 99px;
+  font-size: 40px;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100, .h-100, .rounded-circle, .bg-primary;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}

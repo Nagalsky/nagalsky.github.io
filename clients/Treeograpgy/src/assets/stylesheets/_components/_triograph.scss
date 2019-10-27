@@ -1,0 +1,61 @@
+/* TRIOGRAPH */
+.triographs-holder {
+  @extend .overflow-hidden;
+}
+
+.triographs {
+  margin-top: 20px;
+  margin-left: -160px;
+  margin-right: -160px;
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 110px;
+  }
+}
+
+.triograph {
+  @extend .text-center, .text-muted, .d-block, .px-4;
+  font-size: 14px;
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}
+
+.triograph__avatar {
+  @extend .d-block, .mx-auto, .rounded-circle, .mb-3, .img-fluid, .w-100;
+  max-width: 193px;
+}
+
+.triograph__name {
+  @extend .text-black, .mb-0;
+  font-size: 18px;
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+}
+
+.triograph__role {
+  @extend .mb-1;
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}
+
+.triograph__trees {
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+}
+
+.triograph-button-next,
+.triograph-button-prev {
+  @extend .text-muted;
+  font-size: 22px;
+
+  &:focus,
+  &:hover {
+    @extend .text-primary;
+  }
+}

@@ -1,9 +1,36 @@
 /* CARD */
+.cards-holder {
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .swiper-slide-prev {
+      .card {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .swiper-container {
+    overflow: visible !important;
+    @include media-breakpoint-down(sm) {
+      overflow: hidden;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 15px;
+    }
+  }
+}
+
 .cards-desktop {
   @include media-breakpoint-up(md) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

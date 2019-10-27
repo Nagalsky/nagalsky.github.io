@@ -2,7 +2,20 @@
 .section {
   position: relative;
   padding: 45px 0;
+  z-index: 20;
   @include media-breakpoint-up(md) {
-    padding: 70px 0;
+    padding: 90px 0;
+  }
+
+  &:before {
+    content: attr(data-placeholder);
+    @extend .position-absolute, .font-bold, .text-uppercase, .text-white, .d-none, .d-md-block;
+    z-index: -1;
+    opacity: 0.72;
+    font-size: 121px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -60px;
   }
 }
