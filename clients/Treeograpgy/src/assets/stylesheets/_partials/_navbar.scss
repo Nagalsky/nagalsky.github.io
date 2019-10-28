@@ -53,6 +53,7 @@ $navbar-mobile-height: 40px;
   .dropdown-menu {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px #efefef;
+    margin: 0.125rem 0 0;
     @include media-breakpoint-up(md) {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -119,4 +120,22 @@ $navbar-mobile-height: 40px;
   &:after {
     bottom: -5px;
   }
+}
+
+.navbar-user {
+  @extend .order-1, .order-md-3, .d-flex, .align-items-center;
+
+  .dropdown-toggle {
+    @extend .pr-0;
+
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.navbar-user-avatar {
+  @extend .mr-3;
+  width: 40px;
+  border-radius: $base-radius;
 }

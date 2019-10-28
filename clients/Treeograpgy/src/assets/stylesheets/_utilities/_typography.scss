@@ -9,17 +9,17 @@ html {
   line-height: $body-line-height;
 }
 
-body {
-  @extend .d-flex;
+html {
+  @extend .d-flex, .flex-column;
+  min-height: 100%;
 }
 
 body {
-  @extend .d-flex, .flex-column, .w-100;
-  min-height: 100vh;
+  @extend .d-flex, .flex-column, .w-100, .flex-fill;
 }
 
 .main {
-  @extend .flex-grow-1;
+  @extend .d-flex, .flex-column, .flex-grow-1;
 }
 
 .h1,

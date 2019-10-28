@@ -1,39 +1,21 @@
 $(document).ready(function () {
+
+
   //Card gallery
-  //initialize swiper when document ready
-  var mySwiper = undefined
-
-  function initSwiper() {
-    var screenWidth = $(window).width()
-    if (screenWidth < 768 && mySwiper == undefined) {
-      mySwiper = new Swiper('.cards', {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        loop: true,
-        slidesPerView: 1.1,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-      })
-    } else if (screenWidth > 767 && mySwiper != undefined) {
-      mySwiper.destroy()
-      mySwiper = undefined
-      jQuery('.swiper-wrapper').removeAttr('style')
-      jQuery('.swiper-slide').removeAttr('style')
-    }
-  }
-
-  //Swiper plugin initialization
-  initSwiper()
-
-  //Swiper plugin initialization on window resize
-  $(window).on('resize', function () {
-    initSwiper()
+  var cardsSwiper = new Swiper('.cards', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    slidesPerView: 1.1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
   })
 
+
   //Triographs gallery
-  var swiper = new Swiper('.triographs', {
+  var triographsSwiper = new Swiper('.triographs', {
     loop: true,
     centeredSlides: true,
     slidesPerView: 3,
@@ -53,7 +35,7 @@ $(document).ready(function () {
   })
 
   //Hero gallery
-  var swiper = new Swiper('.hero-gallery', {
+  var heroSwiper = new Swiper('.hero-gallery', {
     loop: true,
     autoHeight: true,
     pagination: {
@@ -69,4 +51,15 @@ $(document).ready(function () {
 
   //Initial selectpicker
   $('.selectpicker').selectpicker()
+
+  //Initial read more plugin
 })
+
+
+$readMoreJS.init({
+  target: '.read-more', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
+  numOfWords: 40, // Number of words to initially display (any number). Default: 50
+  toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
+  moreLink: 'Read more', // The text of 'Read more' link. Default: 'read more ...'
+  lessLink: 'Read less' // The text of 'Read less' link. Default: 'read less'
+});

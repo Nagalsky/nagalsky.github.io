@@ -1,0 +1,13 @@
+/* CONTENT */
+.content {
+  @extend .flex-fill, .position-relative;
+  @include media-breakpoint-up(md) {
+    height: calc(100vh - (#{$navbar-desktop-height} + 56px));
+  }
+
+  .embed-responsive {
+    @extend .position-absolute, .w-100, .h-100;
+    top: 0;
+    left: 0;
+  }
+}
