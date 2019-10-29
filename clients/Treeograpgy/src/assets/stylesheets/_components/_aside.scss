@@ -43,7 +43,7 @@ $aside-color: $muted;
 }
 
 .aside__header {
-  @extend .d-flex, .align-items-center, .position-sticky, .w-100;
+  @extend .d-flex, .align-items-start, .position-sticky, .w-100;
   background-color: $aside-bg;
   z-index: 30;
   padding-bottom: 8px;
@@ -61,16 +61,20 @@ $aside-color: $muted;
   @extend .flex-shrink-0, .mr-3;
   width: 80px;
   border-radius: $base-radius;
-  @include media-breakpoint-down(sm) {
-    width: 40px;
-  }
 }
 
 .aside__header-content {
-  @extend .flex-fill, .font-icons, .icon-remove;
+  @extend .flex-fill, .font-icons, .icon-remove, .pt-1;
   min-width: 0;
   @include media-breakpoint-down(sm) {
     padding-right: 50px;
+  }
+
+  &:not(.collapsed) {
+    .aside__header-title {
+      white-space: normal;
+      overflow: visible;
+    }
   }
 
   &.collapsed {
@@ -80,7 +84,7 @@ $aside-color: $muted;
   &:before {
     @extend .d-md-none, .position-absolute, .text-muted;
     right: 0;
-    top: 5px;
+    top: 10px;
   }
 }
 
@@ -90,7 +94,7 @@ $aside-color: $muted;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1;
+    line-height: 1.2;
   }
 }
 

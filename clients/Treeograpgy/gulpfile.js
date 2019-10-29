@@ -107,6 +107,7 @@ gulp.task(
       .src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
+        'node_modules/aos/dist/aos.js',
         'node_modules/swiper/js/swiper.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',

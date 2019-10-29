@@ -72,6 +72,8 @@ $(document).ready(function () {
   //Initial selectpicker
   $('.selectpicker').selectpicker()
 
+  //Init scroll animation
+  AOS.init();
 
 })
 
