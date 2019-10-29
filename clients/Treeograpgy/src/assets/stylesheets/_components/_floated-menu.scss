@@ -1,0 +1,138 @@
+/* FLOATED MENU */
+$floated-menu-size: 48px;
+$floated-menu-mobile-size: 40px;
+
+.floated-menu {
+  @extend .position-absolute;
+  z-index: 400;
+  width: $floated-menu-mobile-size;
+  @include media-breakpoint-up(md) {
+    width: $floated-menu-size;
+  }
+
+  &--right {
+    right: 15px;
+    @include media-breakpoint-up(md) {
+      right: 25px;
+    }
+  }
+
+  &--top {
+    top: 15px;
+    @include media-breakpoint-up(md) {
+      top: 25px;
+    }
+  }
+
+  &.is-opened {
+    .floated-menu__item {
+      opacity: 1;
+      visibility: visible;
+
+      &:nth-child(2) {
+        transform: translateY(calc(#{$floated-menu-size} + 8px));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc(#{$floated-menu-mobile-size} + 8px));
+        }
+      }
+
+      &:nth-child(3) {
+        transform: translateY(calc((#{$floated-menu-size} * 2) + (8px * 2)));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc((#{$floated-menu-mobile-size} * 2) + (8px * 2)));
+        }
+      }
+
+      &:nth-child(4) {
+        transform: translateY(calc((#{$floated-menu-size} * 3) + (8px * 3)));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc((#{$floated-menu-mobile-size} * 3) + (8px * 3)));
+        }
+      }
+
+      &:nth-child(5) {
+        transform: translateY(calc((#{$floated-menu-size} * 4) + (8px * 4)));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc((#{$floated-menu-mobile-size} * 4) + (8px * 4)));
+        }
+      }
+
+      &:nth-child(6) {
+        transform: translateY(calc((#{$floated-menu-size} * 5) + (8px * 5)));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc((#{$floated-menu-mobile-size} * 5) + (8px * 5)));
+        }
+      }
+
+      &:nth-child(7) {
+        transform: translateY(calc((#{$floated-menu-size} * 6) + (8px * 6)));
+        @include media-breakpoint-down(sm) {
+          transform: translateY(calc((#{$floated-menu-mobile-size} * 6) + (8px * 6)));
+        }
+      }
+    }
+  }
+}
+
+.floated-menu__item {
+  @extend .rounded-circle, .d-inline-flex, .justify-content-center, .align-items-center, .fs-18, .text-white, .font-icons, .position-absolute;
+  width: $floated-menu-mobile-size;
+  height: $floated-menu-mobile-size;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  @include transition($base-animation);
+  @include media-breakpoint-up(md) {
+    width: $floated-menu-size;
+    height: $floated-menu-size;
+  }
+
+  &--toggle {
+    @extend .icon-share1, .position-static;
+    background-color: $primary;
+    z-index: 30;
+    opacity: 1;
+    visibility: visible;
+
+    &:focus,
+    &:hover {
+      background-color: darken($primary, 5%);
+    }
+
+    &.is-opened {
+      @extend .icon-remove;
+    }
+  }
+
+  &--facebook {
+    @extend .icon-facebook;
+    background-color: #3b5998;
+  }
+
+  &--google {
+    @extend .icon-google-plus;
+    background-color: #dd4046;
+  }
+
+  &--twitter {
+    @extend .icon-twitter;
+    background-color: #54acef;
+  }
+
+  &--vk {
+    @extend .icon-vk;
+    background-color: #4d74a3;
+  }
+
+  &--telegram {
+    @extend .icon-telegram;
+    background-color: #37aee2;
+  }
+
+  &--ok {
+    @extend .icon-odnoklassniki;
+    background-color: #ff9a1e;
+  }
+}

@@ -1,0 +1,24 @@
+/* ACTION BOX */
+$action-btn-color: #3c4858;
+
+.action-box {
+  @extend .my-3, .d-flex, .align-items-center, .justify-content-between, .py-2;
+  border-top: solid 1px rgba(#9fabbd, .3);
+  border-bottom: solid 1px rgba(#9fabbd, .3);
+}
+
+.action-box__item {
+  @extend .d-inline-flex, .align-items-center;
+  color: $action-btn-color;
+  letter-spacing: -0.48px;
+
+  &:focus,
+  &:hover {
+    color: darken($action-btn-color, 5%);
+  }
+}
+
+.action-box__icon {
+  @extend .fs-13, .text-muted;
+  margin-right: 7px;
+}

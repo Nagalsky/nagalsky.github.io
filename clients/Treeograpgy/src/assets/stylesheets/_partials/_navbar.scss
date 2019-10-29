@@ -9,6 +9,12 @@ $navbar-mobile-height: 40px;
   @include media-breakpoint-up(md) {
     min-height: $navbar-desktop-height;
   }
+  @include media-breakpoint-down(md) {
+    font-size: 13px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
 }
 
 .navbar-brand {
@@ -123,13 +129,20 @@ $navbar-mobile-height: 40px;
 }
 
 .navbar-user {
-  @extend .order-1, .order-md-3, .d-flex, .align-items-center;
+  @extend .order-1, .order-md-3, .d-md-flex, .align-items-center, .ml-lg-4, .pt-3, .pt-md-0, .mb-2, .mb-md-0;
 
   .dropdown-toggle {
     @extend .pr-0;
 
     &:before {
-      content: none;
+      content: none !important;
+    }
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-down(sm) {
+      position: static;
+      float: none;
     }
   }
 }
@@ -138,4 +151,15 @@ $navbar-mobile-height: 40px;
   @extend .mr-3;
   width: 40px;
   border-radius: $base-radius;
+}
+
+.navbar-user-name {
+  @extend .text-truncate;
+  max-width: 105px;
+  @include media-breakpoint-up(lg) {
+    max-width: 140px;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 250px;
+  }
 }

@@ -1,5 +1,6 @@
 /* ASIDE */
 $aside-width: 400px;
+$aside-tablet-width: 370px;
 $aside-bg: $silver;
 $aside-color: $muted;
 
@@ -8,13 +9,17 @@ $aside-color: $muted;
   color: $aside-color;
   padding: 0 15px 24px;
   font-size: 14px;
+  z-index: 350;
   @include media-breakpoint-up(md) {
     position: fixed;
     height: calc(100vh - (#{$navbar-desktop-height} + 56px));
     top: $navbar-desktop-height;
     left: 0;
-    width: $aside-width;
+    width: $aside-tablet-width;
     overflow: hidden;
+  }
+  @include media-breakpoint-up(lg) {
+    width: $aside-width;
   }
   @include media-breakpoint-down(sm) {
     padding: 0 15px;
@@ -121,8 +126,8 @@ $aside-color: $muted;
   margin-left: -20px;
 
   &:not(:first-child) {
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid rgba(#9fabbd, .3);
   }
 

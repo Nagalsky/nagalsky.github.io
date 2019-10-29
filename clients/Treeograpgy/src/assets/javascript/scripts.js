@@ -49,13 +49,33 @@ $(document).ready(function () {
     // },
   })
 
+  //Footer mobile action open/close
+  $footer = $('.footer-secondary');
+  $footerMenuToggle = $('.footer-secondary-toggle');
+
+  $footerMenuToggle.on('click', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('is-opened')
+    $footer.toggleClass('is-opened')
+  })
+
+  //Floated social menu action open/close
+  $floatedMenu = $('.floated-menu');
+  $floatedMenuToggle = $('.floated-menu__item--toggle');
+
+  $floatedMenuToggle.on('click', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('is-opened')
+    $floatedMenu.toggleClass('is-opened')
+  })
+
   //Initial selectpicker
   $('.selectpicker').selectpicker()
 
-  //Initial read more plugin
+
 })
 
-
+//Initial read more plugin
 $readMoreJS.init({
   target: '.read-more', // Selector of the element the plugin applies to (any CSS selector, eg: '#', '.'). Default: ''
   numOfWords: 40, // Number of words to initially display (any number). Default: 50
