@@ -9,7 +9,7 @@ $aside-color: $muted;
   color: $aside-color;
   padding: 0 15px 24px;
   font-size: 14px;
-  z-index: 350;
+  z-index: 450;
   @include media-breakpoint-up(md) {
     position: fixed;
     height: calc(100vh - (#{$navbar-desktop-height} + 56px));
@@ -90,6 +90,13 @@ $aside-color: $muted;
 
 .aside__header-title {
   @extend .fs-18, .mb-0;
+  color: $black;
+  @include transition($base-animation);
+
+  &:focus,
+  &:hover {
+    color: $primary;
+  }
   @include media-breakpoint-down(sm) {
     white-space: nowrap;
     overflow: hidden;

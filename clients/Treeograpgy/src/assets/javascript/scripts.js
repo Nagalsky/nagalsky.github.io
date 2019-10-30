@@ -16,11 +16,12 @@ $(document).ready(function () {
 
   //Triographs gallery
   var triographsSwiper = new Swiper('.triographs', {
+    speed: 1250,
     loop: true,
     centeredSlides: true,
     slidesPerView: 3,
     autoplay: {
-      delay: 2500,
+      delay: 3500,
       disableOnInteraction: false,
     },
     navigation: {

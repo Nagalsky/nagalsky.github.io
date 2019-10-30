@@ -3,7 +3,7 @@ $floated-menu-size: 48px;
 $floated-menu-mobile-size: 40px;
 
 .floated-menu {
-  @extend .position-absolute;
+  @extend .position-fixed;
   z-index: 400;
   width: $floated-menu-mobile-size;
   @include media-breakpoint-up(md) {
@@ -18,9 +18,9 @@ $floated-menu-mobile-size: 40px;
   }
 
   &--top {
-    top: 15px;
+    top: calc(#{$navbar-desktop-height} + 80px);
     @include media-breakpoint-up(md) {
-      top: 25px;
+      top: calc(#{$navbar-mobile-height} + 50px);
     }
   }
 

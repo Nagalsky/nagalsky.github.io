@@ -19,8 +19,8 @@ $navbar-mobile-height: 40px;
 
 .navbar-brand {
   @extend .font-secondary;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
   @include media-breakpoint-up(md) {
     font-size: 26px;
   }
@@ -60,10 +60,18 @@ $navbar-mobile-height: 40px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px #efefef;
     margin: 0.125rem 0 0;
+    padding: 0.6rem 0;
     @include media-breakpoint-up(md) {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      top: 44px;
+      top: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
+
+    .dropdown-item {
+      white-space: nowrap;
     }
   }
 }
