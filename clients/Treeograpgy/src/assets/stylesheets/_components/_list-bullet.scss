@@ -1,0 +1,22 @@
+/* LIST BULLET */
+.list-bullet {
+	@extend .list-unstyled;
+
+	> li {
+		@extend .position-relative;
+		padding-left: 22px;
+
+		&:before {
+			content: '';
+			@extend .position-absolute, .rounded-circle, .bg-primary;
+			width: 8px;
+			height: 8px;
+			left: 0;
+			top: 7px;
+		}
+
+		&+li {
+			margin-top: 20px;
+		}
+	}
+}

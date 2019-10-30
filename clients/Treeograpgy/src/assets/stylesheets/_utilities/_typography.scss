@@ -16,6 +16,9 @@ html {
 
 body {
   @extend .d-flex, .flex-column, .w-100, .flex-fill;
+  @include media-breakpoint-down(md) {
+    background-color: $silver;
+  }
 }
 
 .main {
@@ -69,6 +72,12 @@ h2 {
 .h3,
 h3 {
   font-size: 35px;
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 20px;
+  }
 }
 
 .h4,

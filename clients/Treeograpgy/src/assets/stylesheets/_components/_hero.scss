@@ -1,17 +1,100 @@
 /* HERO */
+$gallery-bullet-size: 16px;
+$gallery-bullet-mobile-size: 9px;
+
 .hero {
   @extend .text-white;
+
+  .slick-dots {
+    @extend .d-flex, .align-items-center, .justify-content-center, .position-absolute, .w-100;
+    left: 0;
+    bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    > li {
+      @extend .d-flex, .align-items-center, .justify-content-center, .mx-1;
+
+      &.slick-active {
+        > button {
+          opacity: 0.7;
+        }
+      }
+
+      > button {
+        @extend .p-0, .bg-white, .rounded-circle, .border-0;
+        font-size: 0;
+        color: transparent;
+        width: $gallery-bullet-size;
+        height: $gallery-bullet-size;
+        cursor: pointer;
+        opacity: 0.3;
+        @include media-breakpoint-down(sm) {
+          width: $gallery-bullet-mobile-size;
+          height: $gallery-bullet-mobile-size;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
 }
 
-.hero-gallery-slide {
+.hero-gallery-desktop,
+.hero-gallery-mobile {
+  @extend .mb-0;
+}
+
+.hero-gallery__slide {
   @extend .has-bg, .text-center, .text-md-left;
+  //background-position: center bottom !important;
   z-index: 20;
   padding: 65px 0;
   @include media-breakpoint-up(md) {
     padding: 125px 0;
   }
+  @include media-breakpoint-up(xl) {
+    padding: 175px 0;
+  }
 
-  &-1 {}
+  &--1 {
+    .geographer {
+      &:nth-child(1) {
+        left: 0;
+        top: -60px;
+      }
+
+      &:nth-child(2) {
+        left: 445px;
+        top: -90px;
+      }
+
+      &:nth-child(3) {
+        right: -236px;
+        top: -72px;
+      }
+
+      &:nth-child(4) {
+        left: 230px;
+        bottom: 45px;
+      }
+
+      &:nth-child(5) {
+        left: 560px;
+        bottom: -10px;
+      }
+    }
+  }
 }
 
 .hero-divider {
@@ -23,102 +106,6 @@
 }
 
 .hero-map-holder {
-  @extend .position-relative;
-}
-
-.hero-geographer {
-  @extend .position-absolute;
-  z-index: 30;
-  width: 155px;
-  border-radius: $base-radius;
-  border: solid 3px $white;
-  animation: animation-horizontal 2.2s ease infinite;
-  transform-origin: 50% 50%;
-
-  &:before {
-    @extend .position-absolute, .d-inline-block;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 9px 10px 0 10px;
-    border-color: $white transparent transparent transparent;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(100%);
-  }
-
-  &__avatar {
-    @extend .w-100;
-    border-radius: $base-radius;
-  }
-
-  &__content {
-    @extend .position-absolute, .w-100, .h-100, .text-center, .text-white, .d-flex, .align-items-center, .justify-content-end, .flex-column;
-    top: 0;
-    left: 0;
-    padding: 6px;
-    z-index: 20;
-
-    &:after {
-      content: '';
-      @extend .position-absolute, .w-100, .h-100;
-      top: 0;
-      left: 0;
-      @include gradient-y($start-color: rgba($white, .0), $end-color: rgba($black, .6), $start-percent: 0%, $end-percent: 100%);
-      z-index: -1;
-    }
-  }
-
-  &__title {
-    @extend .mb-0, .font-medium, .fs-14;
-  }
-
-  &__by {
-    @extend .fs-10;
-  }
-
-  &__by-link {
-    color: $white;
-    text-decoration: underline;
-
-    &:focus,
-    &:hover {
-      color: $primary;
-      text-decoration: none;
-    }
-  }
-}
-@keyframes animation-horizontal {
-  0% {
-    transform: translate(0,0);
-  }
-
-  6.97675% {
-    transform: translate(2px,0);
-  }
-
-  13.95349% {
-    transform: translate(0,0);
-  }
-
-  20.93023% {
-    transform: translate(2px,0);
-  }
-
-  27.90698% {
-    transform: translate(0,0);
-  }
-
-  34.88372% {
-    transform: translate(2px,0);
-  }
-
-  41.86047% {
-    transform: translate(0,0);
-  }
-
-  100% {
-    transform: translate(0,0);
-  }
+  @extend .position-relative, .w-100;
+  padding-bottom: 45%;
 }

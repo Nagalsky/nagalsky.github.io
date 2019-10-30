@@ -35,19 +35,24 @@ $(document).ready(function () {
   })
 
   //Hero gallery
-  var heroSwiper = new Swiper('.hero-gallery', {
-    loop: true,
-    autoHeight: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+
+  $('.hero-gallery-desktop').slick({
+    dots: true,
+    adaptiveHeight: true,
+    //autoplay: true,
+    autoplaySpeed: 2500,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false,
+  });
+
+  var homeSwiper = new Swiper('.hero-gallery', {
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-    effect: 'fade',
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-  })
+    slidesPerView: 1
+  });
 
   //Footer mobile action open/close
   $footer = $('.footer-secondary');
@@ -73,7 +78,29 @@ $(document).ready(function () {
   $('.selectpicker').selectpicker()
 
   //Init scroll animation
-  AOS.init();
+  AOS.init({
+    disable: 'mobile'
+  });
+
+
+  $('#data-toggle-amimated-tab-1').on('shown.bs.tab', function (e) {
+    $('.name-the-forest__body .geographer').addClass('aos-animate');
+  })
+  $('#data-toggle-amimated-tab-1').on('hidden.bs.tab', function (e) {
+    $('.name-the-forest__body .geographer').removeClass('aos-animate');
+    $('.chat__row.aos-init').removeClass('aos-animate');
+  })
+
+
+  $('.chat__row.aos-init').removeClass('aos-animate');
+  $('#data-toggle-amimated-tab-3').on('shown.bs.tab', function (e) {
+    $('.aos-init').addClass('aos-animate');
+    $('.name-the-forest__body .geographer').removeClass('aos-animate');
+  })
+  $('#data-toggle-amimated-tab-3').on('hidden.bs.tab', function (e) {
+    $('.chat__row.aos-init').removeClass('aos-animate');
+  })
+
 
 })
 

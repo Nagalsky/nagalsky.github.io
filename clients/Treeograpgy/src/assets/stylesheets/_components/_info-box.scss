@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .info-box {
@@ -24,9 +25,13 @@
   &.active {
     .info-box__icon-box {
       &:before {
-        animation: sonarWave 900ms linear;
+        animation: sonarWave 2200ms linear infinite;
       }
     }
+  }
+
+  &--top-space {
+    margin-top: 100px;
   }
 }
 
@@ -35,6 +40,11 @@
   width: 99px;
   height: 99px;
   font-size: 40px;
+  @include media-breakpoint-down(md) {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+  }
 
   &:before {
     content: '';
