@@ -3,7 +3,7 @@
   position: relative;
   padding: 45px 0;
   z-index: 20;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding: 90px 0;
   }
 
@@ -18,5 +18,17 @@
     top: 50%;
     transform: translate(-50%, -50%);
     margin-top: -60px;
+  }
+
+  &--mobile-pb-0 {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--mobile-pt-small {
+    @include media-breakpoint-down(sm) {
+      padding-top: 25px;
+    }
   }
 }

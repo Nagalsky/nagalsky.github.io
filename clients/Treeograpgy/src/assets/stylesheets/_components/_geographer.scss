@@ -21,8 +21,10 @@
   }
 
   &--animated {
-    animation: animation-horizontal 6s ease infinite both;
-    transform-origin: 50% 50%;
+    @include media-breakpoint-up(xl) {
+      animation: animation-horizontal 6s ease infinite both;
+      transform-origin: 50% 50%;
+    }
   }
 
   &:before {

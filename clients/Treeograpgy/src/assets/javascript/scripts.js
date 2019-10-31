@@ -1,18 +1,16 @@
 $(document).ready(function () {
-
-
   //Card gallery
   var cardsSwiper = new Swiper('.cards', {
+    speed: 1250,
     slidesPerView: 1,
     spaceBetween: 16,
     loop: true,
     slidesPerView: 1.1,
     autoplay: {
-      delay: 2500,
+      delay: 3500,
       disableOnInteraction: false,
     },
   })
-
 
   //Triographs gallery
   var triographsSwiper = new Swiper('.triographs', {
@@ -20,6 +18,15 @@ $(document).ready(function () {
     loop: true,
     centeredSlides: true,
     slidesPerView: 3,
+    effect: 'coverflow',
+    grabCursor: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -32,32 +39,46 @@ $(document).ready(function () {
       992: {
         slidesPerView: 5,
       },
-    }
+    },
   })
 
   //Hero gallery
 
-  $('.hero-gallery-desktop').slick({
+  $('.hero-gallery').slick({
     dots: true,
     adaptiveHeight: true,
-    //autoplay: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1200,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  })
+
+  //Show/hide hero tips
+
+  $('.gallery-pits').slick({
+    autoplay: true,
     autoplaySpeed: 2500,
     fade: true,
     cssEase: 'linear',
     arrows: false,
-  });
+    slidesToShow: 1,
+    draggable: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipe: false,
+    touchMove: false,
+    speed: 900,
+  })
 
-  var homeSwiper = new Swiper('.hero-gallery', {
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 1
-  });
+
 
   //Footer mobile action open/close
-  $footer = $('.footer-secondary');
-  $footerMenuToggle = $('.footer-secondary-toggle');
+  $footer = $('.footer-secondary')
+  $footerMenuToggle = $('.footer-secondary-toggle')
 
   $footerMenuToggle.on('click', function (e) {
     e.preventDefault()
@@ -66,8 +87,8 @@ $(document).ready(function () {
   })
 
   //Floated social menu action open/close
-  $floatedMenu = $('.floated-menu');
-  $floatedMenuToggle = $('.floated-menu__item--toggle');
+  $floatedMenu = $('.floated-menu')
+  $floatedMenuToggle = $('.floated-menu__item--toggle')
 
   $floatedMenuToggle.on('click', function (e) {
     e.preventDefault()
@@ -80,27 +101,26 @@ $(document).ready(function () {
 
   //Init scroll animation
   AOS.init({
-    disable: 'mobile'
-  });
-
+    disable: 'mobile',
+  })
 
   $('#data-toggle-amimated-tab-1').on('shown.bs.tab', function (e) {
-    $('.name-the-forest__body .geographer').addClass('aos-animate');
+    $('.name-the-forest__body .geographer').addClass('aos-animate')
   })
   $('#data-toggle-amimated-tab-1').on('hidden.bs.tab', function (e) {
-    $('.name-the-forest__body .geographer').removeClass('aos-animate');
-    $('.chat__row.aos-init').removeClass('aos-animate');
+    $('.name-the-forest__body .geographer').removeClass('aos-animate')
+    $('.chat__row.aos-init').removeClass('aos-animate')
   })
 
-
-  $('.chat__row.aos-init').removeClass('aos-animate');
+  $('.chat__row.aos-init').removeClass('aos-animate')
   $('#data-toggle-amimated-tab-3').on('shown.bs.tab', function (e) {
-    $('.aos-init').addClass('aos-animate');
-    $('.name-the-forest__body .geographer').removeClass('aos-animate');
+    $('.aos-init').addClass('aos-animate')
+    $('.name-the-forest__body .geographer').removeClass('aos-animate')
   })
   $('#data-toggle-amimated-tab-3').on('hidden.bs.tab', function (e) {
-    $('.chat__row.aos-init').removeClass('aos-animate');
+    $('.chat__row.aos-init').removeClass('aos-animate')
   })
+
 
 
 })
@@ -111,5 +131,5 @@ $readMoreJS.init({
   numOfWords: 40, // Number of words to initially display (any number). Default: 50
   toggle: true, // If true, user can toggle between 'read more' and 'read less'. Default: true
   moreLink: 'Read more', // The text of 'Read more' link. Default: 'read more ...'
-  lessLink: 'Read less' // The text of 'Read less' link. Default: 'read less'
-});
+  lessLink: 'Read less', // The text of 'Read less' link. Default: 'read less'
+})

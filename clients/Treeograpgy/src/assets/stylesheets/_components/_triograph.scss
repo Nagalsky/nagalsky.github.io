@@ -21,6 +21,13 @@
   @include media-breakpoint-up(md) {
     font-size: 18px;
   }
+
+  &:focus,
+  &:hover {
+    .triograph__name {
+      @extend .text-primary;
+    }
+  }
 }
 
 .triograph__avatar {
@@ -31,6 +38,7 @@
 .triograph__name {
   @extend .text-black, .mb-0;
   font-size: 18px;
+  @include transition($base-animation);
   @include media-breakpoint-up(md) {
     font-size: 24px;
   }
