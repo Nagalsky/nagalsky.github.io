@@ -31,6 +31,12 @@
       @extend .text-primary;
     }
   }
+
+  &.show {
+    .dropdown-like-counter-list {
+      display: grid;
+    }
+  }
 }
 
 .like-counter__btn {
@@ -43,4 +49,28 @@
 
 .like-counter__title {
   @extend .fs-12;
+}
+
+.like-counter__btn {
+  font-weight: 400 !important;
+
+  &:before {
+    content: none !important;
+  }
+}
+
+.dropdown-like-counter-list {
+  @extend .p-2;
+  max-width: 200px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  max-height: 134px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+  margin-top: 8px;
+
+  .like-counter-list__item {
+    @extend .ml-0;
+    margin-bottom: 10px;
+  }
 }
