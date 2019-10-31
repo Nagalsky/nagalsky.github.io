@@ -100,19 +100,42 @@ $(document).ready(function () {
   })
   $('#data-toggle-amimated-tab-1').on('hidden.bs.tab', function (e) {
     $('.name-the-forest__body .geographer').removeClass('aos-animate')
-    $('.chat__row.aos-init').removeClass('aos-animate')
+    //$('.chat__row.aos-init').removeClass('aos-animate')
   })
 
-  $('.chat__row.aos-init').removeClass('aos-animate')
-  $('#data-toggle-amimated-tab-3').on('shown.bs.tab', function (e) {
-    $('.aos-init').addClass('aos-animate')
-    $('.name-the-forest__body .geographer').removeClass('aos-animate')
-  })
-  $('#data-toggle-amimated-tab-3').on('hidden.bs.tab', function (e) {
-    $('.chat__row.aos-init').removeClass('aos-animate')
-  })
+  // $('.chat__row.aos-init').removeClass('aos-animate')
+  // $('#data-toggle-amimated-tab-3').on('shown.bs.tab', function (e) {
+  //   $('.aos-init').addClass('aos-animate')
+  //   $('.name-the-forest__body .geographer').removeClass('aos-animate')
+  // })
+  // $('#data-toggle-amimated-tab-3').on('hidden.bs.tab', function (e) {
+  //   $('.chat__row.aos-init').removeClass('aos-animate')
+  // })
 
 
+
+  $('#chat-box').mousemove(function (e) {
+
+    var wx = $(window).width();
+    var wy = $(window).height();
+
+    var x = e.pageX - this.offsetLeft;
+    var y = e.pageY - this.offsetTop;
+
+    var newx = x - wx / 1.5;
+    var newy = y - wy / 1.5;
+
+    $('.chat__row').each(function () {
+      var speed = $(this).attr('data-speed');
+      if ($(this).attr('data-revert')) speed *= -1;
+      TweenMax.to($(this), 1, {
+        x: (1 - newx * speed),
+        y: (1 - newy * speed)
+      });
+
+    });
+
+  });
 
 })
 
