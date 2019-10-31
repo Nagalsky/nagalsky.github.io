@@ -51,7 +51,7 @@ $(document).ready(function () {
   //Show/hide hero tips
 
   $('.gallery-pits').slick({
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2500,
     fade: true,
     cssEase: 'linear',
