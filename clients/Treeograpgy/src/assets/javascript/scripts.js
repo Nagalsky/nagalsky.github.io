@@ -136,9 +136,6 @@ $(document).ready(function () {
       e.preventDefault();
       $(this).parent().find('.comments .comment:hidden').slice(0, 30).slideDown();
       $(this).html('Показать еще');
-      $('html,body').animate({
-        scrollTop: $(this).offset().top
-      }, 1500);
     });
   });
 
