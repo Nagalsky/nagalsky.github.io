@@ -114,7 +114,7 @@ $(document).ready(function () {
 
 
 
-  $('#chat-box').mousemove(function (e) {
+  $('html').mousemove(function (e) {
 
     var wx = $(window).width();
     var wy = $(window).height();
