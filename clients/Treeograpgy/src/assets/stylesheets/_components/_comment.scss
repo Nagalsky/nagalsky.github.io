@@ -1,6 +1,7 @@
 /* COMMENT */
 .comment {
   margin-bottom: 20px;
+  display: none;
 }
 
 .comment__header {
@@ -33,6 +34,17 @@
     &:last-child {
       margin-bottom: 10px;
     }
+  }
+}
+
+.btn-show-more-comments {
+  @extend .font-medium, .p-0, .border-0;
+  background-color: transparent;
+  color: $primary;
+
+  &:focus,
+  &:hover {
+    color: darken($primary, 10%);
   }
 }
 

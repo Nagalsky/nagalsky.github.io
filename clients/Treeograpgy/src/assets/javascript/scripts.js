@@ -113,7 +113,7 @@ $(document).ready(function () {
   // })
 
 
-
+  //Mpouse animation for comments
   $("html").mousemove(function (e) {
     parallaxIt(e, ".chat__row", -40);
   });
@@ -129,6 +129,18 @@ $(document).ready(function () {
     });
   }
 
+  //Show more comments
+  $(function () {
+    $(".comments .comment").slice(0, 3).show();
+    $(".btn-show-more-comments").on('click', function (e) {
+      e.preventDefault();
+      $(this).parent().find('.comments .comment:hidden').slice(0, 30).slideDown();
+      $(this).html('Показать еще');
+      $('html,body').animate({
+        scrollTop: $(this).offset().top
+      }, 1500);
+    });
+  });
 
 })
 
