@@ -23,3 +23,29 @@
 .comment-date {
   @extend .fs-12, .text-muted;
 }
+
+.comment-dropdown-menu {
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 140px;
+
+  .comment {
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.comment-dropdown-toggle {
+  @extend .p-0, .border-0, .shadow-none, .fs-14;
+  color: $primary;
+
+  &:focus,
+  &:hover {
+    color: darken($primary, 10%);
+  }
+
+  &:before {
+    content: none !important;
+  }
+}
