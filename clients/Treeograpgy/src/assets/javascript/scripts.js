@@ -38,7 +38,7 @@ $(document).ready(function () {
   $('.hero-gallery').slick({
     dots: true,
     adaptiveHeight: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 15000,
     speed: 1200,
     fade: true,
@@ -51,7 +51,7 @@ $(document).ready(function () {
   //Show/hide hero tips
 
   $('.gallery-pits').slick({
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2500,
     fade: true,
     cssEase: 'linear',
