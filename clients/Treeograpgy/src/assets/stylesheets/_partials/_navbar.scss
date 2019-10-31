@@ -3,9 +3,11 @@ $navbar-desktop-height: 64px;
 $navbar-mobile-height: 40px;
 
 .navbar {
-  @extend .flex-shrink-0, .bg-white, .py-0, .py-md-1, .fixed-top, .px-0;
+  @extend .flex-shrink-0, .bg-white, .py-0, .py-md-1, .fixed-top;
   box-shadow: 0 1px 1px 0 #e9e9e9;
   min-height: $navbar-mobile-height;
+  padding-left: 0;
+  padding-right: 0;
   @include media-breakpoint-up(md) {
     min-height: $navbar-desktop-height;
   }
@@ -14,11 +16,16 @@ $navbar-mobile-height: 40px;
   }
   @include media-breakpoint-down(sm) {
     font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   > .container {
     @include media-breakpoint-up(xl) {
       max-width: 1320px;
+    }
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
     }
   }
 }
