@@ -129,6 +129,7 @@ $(document).ready(function () {
     });
   }
 
+
 })
 
 //Initial read more plugin

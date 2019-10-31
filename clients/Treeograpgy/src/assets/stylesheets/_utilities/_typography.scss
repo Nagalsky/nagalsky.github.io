@@ -16,8 +16,12 @@ html {
 
 body {
   @extend .d-flex, .flex-column, .w-100, .flex-fill;
+  padding-top: $navbar-mobile-height;
   @include media-breakpoint-down(md) {
     background-color: $silver;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: $navbar-desktop-height;
   }
 }
 
