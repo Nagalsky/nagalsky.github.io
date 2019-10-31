@@ -114,28 +114,20 @@ $(document).ready(function () {
 
 
 
-  $('html').mousemove(function (e) {
-
-    var wx = $(window).width();
-    var wy = $(window).height();
-
-    var x = e.pageX - this.offsetLeft;
-    var y = e.pageY - this.offsetTop;
-
-    var newx = x - wx / 1.5;
-    var newy = y - wy / 1.5;
-
-    $('.chat__row').each(function () {
-      var speed = $(this).attr('data-speed');
-      if ($(this).attr('data-revert')) speed *= -1;
-      TweenMax.to($(this), 1, {
-        x: (1 - newx * speed),
-        y: (1 - newy * speed)
-      });
-
-    });
-
+  $("html").mousemove(function (e) {
+    parallaxIt(e, ".chat__row", -40);
   });
+
+  function parallaxIt(e, target, movement) {
+    var $this = $("html");
+    var relX = e.pageX - $this.offset().left;
+    var relY = e.pageY - $this.offset().top;
+
+    TweenMax.to(target, 1, {
+      x: (relX - $this.width() / 2) / $this.width() * movement,
+      y: (relY - $this.height() / 2) / $this.height() * movement
+    });
+  }
 
 })
 
