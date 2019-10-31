@@ -100,18 +100,7 @@ $(document).ready(function () {
   })
   $('#data-toggle-amimated-tab-1').on('hidden.bs.tab', function (e) {
     $('.name-the-forest__body .geographer').removeClass('aos-animate')
-    //$('.chat__row.aos-init').removeClass('aos-animate')
   })
-
-  // $('.chat__row.aos-init').removeClass('aos-animate')
-  // $('#data-toggle-amimated-tab-3').on('shown.bs.tab', function (e) {
-  //   $('.aos-init').addClass('aos-animate')
-  //   $('.name-the-forest__body .geographer').removeClass('aos-animate')
-  // })
-  // $('#data-toggle-amimated-tab-3').on('hidden.bs.tab', function (e) {
-  //   $('.chat__row.aos-init').removeClass('aos-animate')
-  // })
-
 
   //Mpouse animation for comments
   $("html").mousemove(function (e) {
