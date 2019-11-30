@@ -1,0 +1,50 @@
+/* BOX */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $size-md;
+  @include media-breakpoint-up(md) {
+    grid-gap: $size-xl;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-gap: $size-xxl;
+  }
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(1, auto 1fr);
+  grid-gap: $size-base;
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.box__title {
+  color: $muted;
+
+  a {
+    color: $primary;
+    font-family: $font-regular;
+
+    &:focus,
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+}
+
+.box__icon {
+  font-size: 50px;
+  line-height: 1;
+  color: $gray;
+  @include media-breakpoint-up(md) {
+    font-size: 60px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 80px;
+  }
+}

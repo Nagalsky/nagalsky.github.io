@@ -1,0 +1,21 @@
+/* HERO */
+.hero {
+  @extend .position-relative, .text-white, .text-center;
+  padding: 70px 0;
+  z-index: 40;
+  @include media-breakpoint-up(md) {
+    padding: 140px 0;
+  }
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100, .h-100;
+    left: 0;
+    top: 0;
+    background-color: rgba($primary, .4);
+  }
+}
+
+.hero__title {
+  color: $white;
+}
