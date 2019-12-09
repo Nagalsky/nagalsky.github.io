@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".hero-gallery").slick({autoplay:!0,arrows:!1,dots:!0,speed:500,fade:!0,cssEase:"linear"})});
