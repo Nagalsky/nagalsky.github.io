@@ -83,12 +83,37 @@ th.columns {
   Margin: 0 auto;
   padding-left: 30px;
   padding-bottom: 16px; }
+  th.columns .columns {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 
 th.columns.last {
   padding-right: 30px; }
 
 th.columns table:not(.button) {
   width: 100%; }
+
+th.large-2 {
+  width: 105px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.body .columns th.large-2 {
+  width: 16.66667%; }
+
+th.large-5 {
+  width: 307.5px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+th.large-5.first {
+  padding-left: 30px; }
+
+th.large-5.last {
+  padding-right: 30px; }
+
+.body .columns th.large-5 {
+  width: 41.66667%; }
 
 th.large-12 {
   width: 780px;
@@ -264,8 +289,14 @@ table.button.success:hover table a {
     box-sizing: border-box;
     padding-left: 30px !important;
     padding-right: 30px !important; }
+    table.body .columns .columns {
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
   th.small-12 {
     display: inline-block !important;
+    width: 100% !important; }
+  .columns th.small-12 {
+    display: block !important;
     width: 100% !important; } }
 
 .body,
@@ -302,6 +333,9 @@ table.footer {
 .mb-0 {
   margin-bottom: 0 !important; }
 
+.ml-0 {
+  margin-left: 0 !important; }
+
 .title {
   font-size: 24px; }
   @media only screen and (max-width: 767px) {
@@ -322,3 +356,75 @@ table.footer {
 
 .w-100 {
   width: 100% !important; }
+
+.box {
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  min-height: 68px; }
+  .box--success {
+    box-shadow: none;
+    border: 1px solid #63D751; }
+  .box--equal {
+    padding-top: 30px;
+    padding-bottom: 10px; }
+
+.box-logo {
+  width: 50px;
+  max-width: 50px;
+  border-radius: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px; }
+
+.box__content {
+  display: inline-block;
+  vertical-align: middle; }
+
+.box__title {
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 700; }
+  .box__title--secondary {
+    font-weight: 400; }
+
+.box__subtitle {
+  margin-bottom: 0;
+  line-height: 1.2;
+  color: #818181;
+  font-size: 16px; }
+
+.box__text {
+  margin-bottom: 0;
+  color: #63D751;
+  font-size: 14px; }
+
+.dottes {
+  text-align: center; }
+
+.dot {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #DCDEE2;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px; }
+
+.box__badge {
+  display: inline-block;
+  color: #63D751;
+  background-color: #d3f4cd;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-top: 16px;
+  float: right; }
+
+.apple-btn {
+  display: inline-block;
+  max-width: 240px; }
+
+.rate__img {
+  display: inline-block;
+  max-width: 50px;
+  margin-left: 20px; }
