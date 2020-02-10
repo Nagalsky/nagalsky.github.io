@@ -18,28 +18,10 @@
 .destination {
   @extend .position-relative, .base-radius, .overflow-hidden;
   display: inline-block;
-  z-index: 20;
-
-  &:before {
-    content: '';
-    @extend .position-absolute, .w-100, .h-100;
-    left: 0;
-    top: 0;
-    background-color: rgba($black, .1);
-    z-index: 10;
-  }
-
-  &:focus,
-  &:hover {
-    .destination__img {
-      transform: scale(1.2);
-    }
-  }
 }
 
 .destination__img {
   @extend .w-100;
-  transition: all ease-in-out 500ms;
 }
 
 .destination__inner {}
@@ -49,7 +31,7 @@
   left: 0;
   bottom: 0;
   padding: 15px;
-  background-color: rgba(#1b2831, .51);
+  background-color: rgba($black, .35);
   text-align: right;
   z-index: 20;
 }

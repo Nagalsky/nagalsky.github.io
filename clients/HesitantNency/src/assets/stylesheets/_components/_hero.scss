@@ -35,6 +35,10 @@
     padding-left: 50px;
     padding-right: 75px;
     @include custom-placeholder($color: $gray, $font-size: 15px, $font-family: $font-roboto-regular, $text-transform: uppercase, $letter-spacing: 4px);
+
+    &:focus {
+      @include custom-placeholder-opacity($opacity: 0);
+    }
   }
 
   .btn-submit {
