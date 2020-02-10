@@ -62,11 +62,23 @@ h1 {
 .h2,
 h2 {
   font-size: 32px;
+  @include media-breakpoint-down(md) {
+    font-size: 28px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+  }
 }
 
 .h3,
 h3 {
   font-size: 26px;
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+  }
 }
 
 .h4,
@@ -111,4 +123,20 @@ p {
 
 .word-space {
   letter-spacing: 5px;
+}
+
+.title {
+  color: $title-color;
+}
+
+.subtitle {
+  @extend .fs-14, .text-uppercase, .text-gray, .font-helvetica-regular, .mb-2;
+  letter-spacing: 5.32px;
+}
+
+.divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 1px;
+  background-color: $base-border-color;
 }
