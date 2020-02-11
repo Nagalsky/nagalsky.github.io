@@ -49,13 +49,13 @@
 
   .proposal-box {
     top: 100% !important;
-    @extend .w-100, .bg-white, .base-radius, .overflow-hidden, .mt-1;
+    @extend .w-100, .bg-white, .base-radius, .overflow-hidden, .mt-1, .border-0;
 
     .proposal {
       @extend .text-gray, .border-0;
       padding: 10px 15px;
       height: auto !important;
-      border-bottom: 1px solid $base-border-color !important;
+      border: 1px solid $base-border-color !important;
 
       &:focus,
       &:hover {
@@ -63,8 +63,13 @@
         color: $turquoise !important;
       }
 
+      &:first-of-type {
+        border-bottom: none !important;
+        border-radius: $base-radius $base-radius 0 0;
+      }
+
       &:last-of-type {
-        @extend .border-0;
+        border-radius: 0 0 $base-radius $base-radius;
       }
     }
   }

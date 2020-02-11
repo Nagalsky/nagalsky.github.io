@@ -1,1 +1,18 @@
 /* BREADCRUMB */
+.breadcrumb-holder {
+  border-bottom: 1px solid $base-border-color;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.breadcrumb-item {
+  @extend .fs-15;
+
+  &+.breadcrumb-item {
+    &:before {
+      content: '›';
+    }
+  }
+}
