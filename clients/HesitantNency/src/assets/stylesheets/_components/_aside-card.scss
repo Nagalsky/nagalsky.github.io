@@ -1,0 +1,36 @@
+/* ASIDE CARD */
+.aside-cards {
+  &:not(:last-of-type) {
+    @extend .mb-3;
+  }
+}
+
+.aside-card {
+  @extend .d-flex, .align-items-center;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $silver;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.aside-card__image {
+  @extend .flex-shrink-0;
+  width: 50px;
+  @include media-breakpoint-up(md) {
+    width: 70px;
+  }
+}
+
+.aside-card__body {
+  @extend .flex-fill;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  color: $gray-bold;
+  @include media-breakpoint-up(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

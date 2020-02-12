@@ -1,6 +1,26 @@
 /* FORMS */
-
 .form-control {
-	-webkit-appearance:none;
-	-moz-appearance:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	@include custom-placeholder($color: rgba(65, 64, 64, 0.51), $font-size: 17px, $font-family: $font-roboto-regular, $text-transform: none, $letter-spacing: normal);
+
+	&:focus {
+		@include custom-placeholder-opacity($opacity: 0);
+	}
+}
+
+.form-group--has-icon {
+	@extend .position-relative;
+
+	> .form-control {
+		padding-left: 40px;
+	}
+
+	.icon {
+		@extend .position-absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $silver;
+	}
 }

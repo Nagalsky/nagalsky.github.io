@@ -141,3 +141,27 @@ p {
   height: 1px;
   background-color: $base-border-color;
 }
+
+.title-divider {
+  @extend .text-center, .position-relative, .ls-2, .text-dark, .fs-14, .text-uppercase;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100, .bg-silver;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .inner {
+    @extend .position-relative, .bg-white, .d-inline-block;
+    display: inline-block;
+    padding: 2px 15px;
+    z-index: 10;
+  }
+}
+
+hr {
+  border-color: $silver;
+}
