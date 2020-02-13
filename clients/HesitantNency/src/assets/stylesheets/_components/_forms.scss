@@ -1,7 +1,6 @@
 /* FORMS */
 .form-control {
-	-webkit-appearance: none;
-	-moz-appearance: none;
+	border-color: $silver;
 	@include custom-placeholder($color: rgba(65, 64, 64, 0.51), $font-size: 17px, $font-family: $font-roboto-regular, $text-transform: none, $letter-spacing: normal);
 
 	&:focus {
@@ -23,4 +22,9 @@
 		transform: translateY(-50%);
 		color: $silver;
 	}
+}
+
+textarea.form-control {
+	resize: none;
+	height: 94px;
 }

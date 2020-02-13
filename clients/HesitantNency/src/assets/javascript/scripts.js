@@ -6,4 +6,7 @@ $(document).ready(function () {
     hints: words,
     placeholder: 'Where Would You Like to Go?',
   });
+
+  //Intial bootstrap tooltips
+  $('[data-toggle="tooltip"]').tooltip()
 })

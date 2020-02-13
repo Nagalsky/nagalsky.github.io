@@ -1,0 +1,21 @@
+/* DESCRIPTIONS */
+.descriptions {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.description {
+  padding: 15px;
+  box-shadow: 0 0 4px 0 #c2c2d0;
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
+}

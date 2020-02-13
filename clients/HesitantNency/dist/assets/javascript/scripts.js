@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#autocomplite").autocomplete({hints:["boat","bear","dog","drink","elephant","fruit"],placeholder:"Where Would You Like to Go?"})});
+$(document).ready(function(){$("#autocomplite").autocomplete({hints:["boat","bear","dog","drink","elephant","fruit"],placeholder:"Where Would You Like to Go?"}),$('[data-toggle="tooltip"]').tooltip()});

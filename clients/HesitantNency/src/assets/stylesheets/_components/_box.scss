@@ -1,0 +1,19 @@
+/* BOX */
+.box {
+  @extend .position-relative, .d-block, .d-md-inline-block;
+  padding-right: 15px;
+  margin-right: 15px;
+
+  &:after {
+    @extend .position-absolute;
+    @include media-breakpoint-up(md) {
+      content: '';
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      background-color: $base-border-color;
+      height: 25px;
+    }
+  }
+}
