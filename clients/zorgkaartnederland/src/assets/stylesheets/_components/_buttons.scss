@@ -1,8 +1,18 @@
 /* BUTTONS */
 .btn {
-  &-primary {
+  @extend .border-0, .font-base-bold;
+
+  &-theme {
+    @extend .text-white;
     @include themify($themes) {
-      background-color: themed('linkColor');
+      background-image: linear-gradient(to bottom,themed('btnThemeGradientStart') 0,themed('btnThemeGradientEnd') 100%);
+    }
+
+    &:focus,
+    &:hover {
+      @include themify($themes) {
+        background-image: linear-gradient(to bottom,themed('btnThemeGradientEnd') 0,themed('btnThemeGradientStart') 100%);
+      }
     }
   }
 }
