@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".header__bottom").stick_in_parent()});
