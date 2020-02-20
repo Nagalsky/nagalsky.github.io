@@ -7,6 +7,25 @@ html {
   color: $body-main-color;
   font-size: $body-font-size;
   line-height: $body-line-height;
+  background: url("../images/bg/bubbles.svg") center top no-repeat $body-bg;
+}
+
+html {
+  @extend .d-flex;
+}
+
+body {
+  min-height: 100vh;
+  @extend .w-100, .d-flex, .flex-column;
+}
+
+.footer,
+.header {
+  @extend .flex-shrink-0;
+}
+
+.main {
+  @extend .flex-grow-1;
 }
 
 .h1,
@@ -23,6 +42,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 20px;
+  color: $title-color;
   font-family: $title-font;
 
   &:last-child {
@@ -33,47 +53,50 @@ h6 {
 .h1,
 h1 {
   font-size: 1.375rem;
-  line-height: 1.625rem;
 }
 
 .h2,
 h2 {
-  font-size: 45px;
+  font-size: 1.30rem;
 }
 
 .h3,
 h3 {
-  font-size: 36px;
+  font-size: 1.25rem;
 }
 
 .h4,
 h4 {
-  font-size: 26px;
+  font-size: 1.2rem;
 }
 
 .h5,
 h5 {
-  font-size: 18px;
+  font-size: 1px;
 }
 
 .h6,
 h6 {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 a,
 button {
-  //@include transition($base-animation);
+  @include transition($base-animation);
   cursor: pointer;
 }
 
 a {
-  //color: $link-color;
+  @include themify($themes) {
+    color: themed('linkColor');
+  }
   text-decoration: none;
 
   &:focus,
   &:hover {
-    //color: darken($link-color, 10%);
+    @include themify($themes) {
+      color: darken(themed('linkColor'), 10%);
+    }
     text-decoration: none;
   }
 }
@@ -84,4 +107,9 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.bold,
+b {
+  font-family: $title-font;
 }
