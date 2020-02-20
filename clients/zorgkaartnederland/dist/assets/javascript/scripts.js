@@ -1,0 +1,1 @@
+$(document).ready(function(){$("body").addClass("theme-normal"),$(".switch-toggle").on("click",function(e){e.preventDefault(),$("body").hasClass("theme-normal")?$("body").removeClass("theme-normal").addClass("theme-contrast"):$("body").removeClass("theme-contrast").addClass("theme-normal")})});

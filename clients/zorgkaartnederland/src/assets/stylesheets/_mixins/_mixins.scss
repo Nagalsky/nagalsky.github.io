@@ -1,0 +1,105 @@
+/* MIXINS */
+// Placeholder text
+@mixin custom-placeholder($color: $placeholder-color, $font-size: $placeholder-font-size, $font-family: $placeholder-font-style) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+}
+//Placeholder opacity
+@mixin custom-placeholder-opacity($opacity: $placeholder-opacity) {
+  &:-moz-placeholder {
+    opacity: $opacity;
+  }
+
+  &::-moz-placeholder {
+    opacity: $opacity;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: $opacity;
+  }
+}
+//Buttons
+@mixin button-variants($bg: $btn-bg, $color: $btn-color) {
+  background: $bg;
+  color: $color;
+  border-color: $bg;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    background: darken($bg, 10%) !important;
+    border-color: darken($bg, 10%) !important;
+    color: $color !important;
+  }
+}
+@mixin button-outline-variants($color: $btn-color) {
+  background: transparent;
+  color: $color;
+  border-color: $color;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    background: $color !important;
+    border-color: $color !important;
+    color: $white !important;
+  }
+}
+// Transformations
+@mixin scale($ratio...) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9 only
+  -o-transform: scale($ratio);
+  transform: scale($ratio);
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: ()
+      !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
