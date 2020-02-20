@@ -1,0 +1,48 @@
+/* HEADER */
+.header {
+  @include media-breakpoint-down(sm) {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1400;
+  }
+
+  > .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.header__top {
+  @extend .py-2, .py-md-3, .px-3, .px-md-0, .position-relative, .d-flex, .justify-content-center, .justify-content-md-between;
+  border-bottom: 1px solid $gray-thin;
+  @include media-breakpoint-up(md) {
+    border-color: $sand;
+  }
+
+  .navbar-nav {
+    > .nav-item {
+      &+.nav-item {
+        @include media-breakpoint-up(md) {
+          @include themify($themes) {
+            border-color: themed('headerNavbarItemBorderColor');
+          }
+        }
+      }
+
+      > .nav-link {}
+    }
+  }
+}
+
+.header__logo {
+  @extend .d-inline-block;
+  width: 114px;
+  @include media-breakpoint-up(md) {
+    width: 222px;
+  }
+}
