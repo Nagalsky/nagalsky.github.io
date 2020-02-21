@@ -2,9 +2,40 @@
 $footer-social-item-size: 30px;
 
 .footer {
+  @extend .fs-13;
   padding: 10px 0 30px;
   @include media-breakpoint-up(md) {
     padding: 10px 0 60px;
+  }
+}
+
+.footer__nav {
+  margin-bottom: 25px;
+}
+
+.footer__nav-title {
+  @extend .fs-13, .m-0;
+  color: $blue;
+  @include media-breakpoint-up(md) {
+    color: $muted;
+  }
+}
+
+.footer__nav-collapse {
+  @extend .d-md-block;
+  @include media-breakpoint-up(md) {
+    height: auto !important;
+    transition: none !important;
+  }
+}
+
+.footer__nav-list {
+  @extend .pl-3, .pt-3;
+
+  > li {
+    &+li {
+      @extend .mt-2;
+    }
   }
 }
 
