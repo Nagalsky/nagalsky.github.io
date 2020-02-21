@@ -1,2 +1,50 @@
 /* FOOTER */
-.footer {}
+$footer-social-item-size: 30px;
+
+.footer {
+  padding: 10px 0 30px;
+  @include media-breakpoint-up(md) {
+    padding: 10px 0 60px;
+  }
+}
+
+.footer__social {
+  @extend .position-relative, .d-flex, .align-items-center, .justify-content-center;
+  margin-bottom: 25px;
+  z-index: 20;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $muted-thin;
+    z-index: -1;
+  }
+}
+
+.footer__social__item {
+  @extend .d-inline-flex, .align-items-center, .justify-content-center, .rounded-circle, .text-white;
+  width: $footer-social-item-size;
+  height: $footer-social-item-size;
+
+  &+.footer__social__item {
+    @extend .ml-3;
+  }
+
+  &--twitter {
+    background-color: #1da1f2;
+  }
+
+  &--facebook {
+    background-color: #3b5998;
+  }
+
+  &--mail {
+    @include themify($themes) {
+      background-color: themed('themeColor');
+    }
+  }
+}

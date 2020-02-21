@@ -1,7 +1,15 @@
 /* SEARCH */
 #search-form .twitter-typeahead {
-  display: block !important;
-  padding: 0;
+  @extend .d-block, .p-0;
+
+  input {
+    font-size: 13px;
+    border-color: #e3e3e3;
+    line-height: 16px;
+    height: 32px;
+    padding: 7px 45px 7px 10px;
+    @include custom-placeholder($color: $muted, $font-size: 12px, $font-family: $font-base-regular);
+  }
 
   .tt-dropdown-menu {
     background: none $white;
@@ -98,26 +106,6 @@
       margin: 10px 10px 14px 50px;
       display: block;
     }
-
-    input[type="submit"] {
-      font-weight: bold;
-      display: block;
-      text-align: left;
-      color: $orange;
-      white-space: normal;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      line-height: 16px;
-      padding: 10px 10px 10px 50px;
-      background: none;
-      height: auto;
-
-      &:focus {
-        box-shadow: none;
-        border: none;
-      }
-    }
   }
 
   .tt-cursor {
@@ -129,15 +117,14 @@
   @extend .position-relative;
 
   .btn-submit {
-    position: absolute;
+    @extend .position-absolute, .h-100, .border-0, .px-3, .py-0, .d-flex, .align-items-center;
     top: 0;
     right: 0;
     background: transparent;
-    border: none;
-    color: $orange;
-    padding: 0 14.5px;
     font-size: 13px;
-    height: 32px;
+    @include themify($themes) {
+      color: themed('themeColor');
+    }
   }
 }
 

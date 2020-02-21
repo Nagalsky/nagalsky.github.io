@@ -17,7 +17,9 @@ html {
 body {
   min-height: 100vh;
   @extend .w-100, .d-flex, .flex-column;
-  height: 4000px;
+  @include media-breakpoint-down(sm) {
+    padding-top: $header-mobile-height;
+  }
 }
 
 .footer,
@@ -89,14 +91,14 @@ button {
 
 a {
   @include themify($themes) {
-    color: themed('linkColor');
+    color: themed('themeColor');
   }
   text-decoration: none;
 
   &:focus,
   &:hover {
     @include themify($themes) {
-      color: darken(themed('linkColor'), 10%);
+      color: darken(themed('themeColor'), 10%);
     }
     text-decoration: none;
   }
