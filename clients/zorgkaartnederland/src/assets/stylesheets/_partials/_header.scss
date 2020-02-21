@@ -15,6 +15,55 @@
       padding-right: 0;
     }
   }
+
+  #search_field_holder_desktop {
+    .search-field {
+      background-color: transparent;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 0;
+      width: 363px;
+      padding: 0 0 10px;
+    }
+  }
+
+  #search_field_holder_mobile {
+    .search-field {
+      background-color: $red;
+      width: 100%;
+      padding: 8px 15px;
+
+      #search-form {
+        width: 100%;
+        position: relative;
+
+        input {
+          &::placeholder {
+            color: #495057;
+            opacity: 0.9 !important;
+            /* Firefox */
+          }
+        }
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: transparent;
+          border: none;
+          color: $orange;
+          padding: 0 14.5px;
+          font-size: 13px;
+          height: 32px;
+
+          i {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
 
 .header__top {

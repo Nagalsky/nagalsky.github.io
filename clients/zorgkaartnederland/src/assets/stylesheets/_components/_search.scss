@@ -1,0 +1,150 @@
+/* SEARCH */
+#search-form .twitter-typeahead {
+  display: block !important;
+  padding: 0;
+
+  .tt-dropdown-menu {
+    background: none $white;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid $base-border-color;
+    border-top: none;
+    top: 31px !important;
+  }
+
+  .tt-suggestion {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+
+    &:hover {
+      background: none $orange-thin;
+    }
+
+    a {
+      line-height: 1.18em;
+    }
+
+    .ta-group {
+      color: $white;
+      font-weight: bold;
+      background: $muted;
+      padding: 3px 15px;
+    }
+
+    .ta-title {
+      .ta-row {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &.profile-img {
+        a {
+          .ta-row {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .title {
+      display: block;
+      padding: 7px 10px;
+      color: $muted;
+      cursor: pointer;
+    }
+
+    .ta-image {
+      display: block;
+      float: left;
+      color: $orange;
+      text-align: center;
+      padding: 7px 12px 10px;
+      line-height: 1.42857;
+
+      i {
+        font-size: 25px;
+      }
+
+      &.profile-img {
+        display: block !important;
+        float: left !important;
+        color: $orange !important;
+        text-align: center !important;
+        max-width: 48px !important;
+        max-height: 48px !important;
+        padding: 2px 2px 2px 2px !important;
+        margin-top: 8px!important;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      display: block;
+      padding: 7px 10px 7px 50px;
+      color: $muted;
+    }
+  }
+
+  .tt-footer {
+    border-top: 1px solid $gray-thin;
+    clear: both;
+
+    a {
+      font-weight: bold;
+      margin: 10px 10px 14px 50px;
+      display: block;
+    }
+
+    input[type="submit"] {
+      font-weight: bold;
+      display: block;
+      text-align: left;
+      color: $orange;
+      white-space: normal;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      line-height: 16px;
+      padding: 10px 10px 10px 50px;
+      background: none;
+      height: auto;
+
+      &:focus {
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+
+  .tt-cursor {
+    background: none $orange-thin;
+  }
+}
+
+.search-field {
+  @extend .position-relative;
+
+  .btn-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: $orange;
+    padding: 0 14.5px;
+    font-size: 13px;
+    height: 32px;
+  }
+}
+
+.search-form {
+  @extend .w-100;
+
+  .form-group {
+    @extend .mb-0;
+  }
+}
