@@ -1,0 +1,12 @@
+/* BOX */
+.box {
+  padding: 20px 15px;
+  background-color: $white;
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
+
+  &:not(:last-child) {
+    @extend .mb-4;
+  }
+}
