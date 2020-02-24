@@ -1,13 +1,34 @@
 /* NAVBAR */
+$navbar-desktop-height: 170px;
+$navbar-mobile-height: 91px;
+
 .navbar {
-  @extend .bg-white, .position-relative;
+  @extend .bg-white, .fixed-top;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 31%, rgba(0, 0, 0, 0.34));
   padding-top: 15px;
   padding-bottom: 15px;
   z-index: 20;
+  transition: $base-animation;
+  min-height: $navbar-mobile-height;
   @include media-breakpoint-up(lg) {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  &--animated {
+    @include media-breakpoint-up(lg) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    &:after,
+    .navbar-share {
+      @extend .d-lg-none;
+    }
+
+    .navbar-scroll-top {
+      @extend .d-lg-flex;
+    }
   }
 
   &:after {
@@ -36,6 +57,10 @@
 
 .navbar-nav {
   .nav-item {
+    &+.nav-item {
+      @extend .ml-lg-4;
+    }
+
     .nav-link {
       @extend .text-uppercase, .text-black;
 
@@ -60,7 +85,6 @@
   color: $black !important;
   background-color: transparent !important;
   @include media-breakpoint-up(lg) {
-    color: $white;
     font-size: 50px;
     position: absolute;
     top: 50%;
@@ -80,5 +104,26 @@
   &:focus,
   &:hover {
     @extend .text-black;
+  }
+}
+
+.navbar-scroll-top {
+  @extend .d-none, .border-0;
+  background-color: transparent;
+  @include media-breakpoint-up(lg) {
+    color: $black;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+
+    &:focus,
+    &:hover {
+      color: $primary !important;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    right: 5%;
   }
 }

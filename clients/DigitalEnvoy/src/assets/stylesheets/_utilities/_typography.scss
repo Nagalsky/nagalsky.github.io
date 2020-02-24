@@ -19,6 +19,10 @@ html {
 body {
   min-height: 100vh;
   @extend .w-100, .d-flex, .flex-column;
+  padding-top: $navbar-mobile-height;
+  @include media-breakpoint-up(lg) {
+    padding-top: $navbar-desktop-height;
+  }
 }
 
 .footer,
@@ -124,9 +128,16 @@ p {
 }
 
 .content-logo {
+  @extend .w-100;
   max-width: 200px;
   @include media-breakpoint-up(md) {
     max-width: 300px;
+  }
+
+  &--lg {
+    @include media-breakpoint-up(md) {
+      max-width: 380px;
+    }
   }
 }
 

@@ -17,6 +17,26 @@ $(document).ready(function () {
       .css("background-size", (100 + 100 * $(window).scrollTop() / 3400) + "%");
   });
 
+  //Parallax initial
   $('.my-paroller').paroller();
+
+  //Navbar animation section
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 50) {
+      $(".navbar").addClass("navbar--animated");
+    } else {
+      $(".navbar").removeClass("navbar--animated");
+    }
+  });
+
+  //Scroll top top button
+  $(".navbar-scroll-top").click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
+    return false;
+  });
 
 })
