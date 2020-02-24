@@ -33,18 +33,24 @@ $checkbox-size: 16px;
       content: '';
       @extend .position-absolute;
       left: 0;
-      top: 5px;
+      top: 2px;
       border-radius: 3px;
       width: $checkbox-size;
       height: $checkbox-size;
       border: 1px solid $blue-thin;
+      @include media-breakpoint-up(md) {
+        top: 5px;
+      }
     }
 
     &:before {
       @extend .text-white, .position-absolute, .fs-12, .invisible;
       left: 2px;
-      top: 4px;
+      top: 1px;
       z-index: 2;
+      @include media-breakpoint-up(md) {
+        top: 4px;
+      }
     }
   }
 }

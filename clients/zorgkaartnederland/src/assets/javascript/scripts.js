@@ -22,9 +22,7 @@ $(document).ready(function () {
 
   searchFieldReplacing();
 
-  $(window).resize(function () {
-    searchFieldReplacing();
-  });
+
 
   //Read more initial
   $('.mobile-collpase').readmore({
@@ -34,7 +32,22 @@ $(document).ready(function () {
   });
 
   //Initial bootstrap popover
+  function bootstrapPopovers() {
+    if ($(window).width() < 768) {
+      $('[data-toggle="popover"]').popover('disable');
+    } else {
+      $('[data-toggle="popover"]').popover('enable')
+    }
+  }
+
   $('[data-toggle="popover"]').popover()
 
 
+
+
+
+  $(window).resize(function () {
+    searchFieldReplacing();
+    bootstrapPopovers();
+  });
 });

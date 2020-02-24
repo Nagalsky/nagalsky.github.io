@@ -1,0 +1,36 @@
+/* FILTER COLLAPSE */
+.filter__collapse {
+  border: 1px solid $silver-soft;
+  border-radius: 6px;
+}
+
+.filter__collapse__title {
+  @extend .fs-16, .text-blue, .d-flex, .align-items-center, .justify-content-between, .pl-3, .pr-md-3, .py-2, .mb-0, .position-relative, .icon-chevron-up, .font-icons;
+  padding-right: 40px;
+  @include media-breakpoint-up(md) {
+    padding-right: 0;
+  }
+
+  &:before {
+    @extend .position-absolute, .d-md-none, .text-blue;
+    right: 10px;
+    top: 7px;
+  }
+
+  &.collapsed {
+    @extend .icon-chevron-down;
+  }
+}
+
+.filter__collapse__body-holder {
+  @extend .d-md-block;
+  @include media-breakpoint-up(md) {
+    height: auto !important;
+    transition: none !important;
+  }
+}
+
+.filter__collapse__body {
+  @extend .px-3, .py-2;
+  border-top: 1px solid $silver-soft;
+}
