@@ -15,4 +15,11 @@
       }
     }
   }
+
+  &.btn-link {
+    @extend .font-base-regular, .text-left;
+    @include themify($themes) {
+      color: themed('themeColor');
+    }
+  }
 }

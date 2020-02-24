@@ -26,4 +26,15 @@ $(document).ready(function () {
     searchFieldReplacing();
   });
 
+  //Read more initial
+  $('.mobile-collpase').readmore({
+    split_word: true,
+    substr_len: 140,
+    more_link: '<a class="readm-more">Lees meer</a>'
+  });
+
+  //Initial bootstrap popover
+  $('[data-toggle="popover"]').popover()
+
+
 });

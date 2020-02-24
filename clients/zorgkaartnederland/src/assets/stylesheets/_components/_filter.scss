@@ -1,0 +1,27 @@
+/* FILTER */
+.filter {
+  @extend .position-relative, .d-flex, .flex-column, .flex-md-row;
+}
+
+.filter__aside {
+  @include media-breakpoint-up(md) {
+    width: 268px;
+    margin-right: 50px;
+  }
+}
+
+.filter__body {
+  @extend .flex-fill;
+}
+
+.filter__aside__item {
+  &+.filter__aside__item {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid $silver-soft;
+  }
+}
+
+.filter__aside__title {
+  @extend .mb-2, .fs-16;
+}

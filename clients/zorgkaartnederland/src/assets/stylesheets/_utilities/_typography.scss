@@ -5,9 +5,12 @@ html {
   -webkit-overflow-scrolling: touch;
   font-family: $body-font-family;
   color: $body-main-color;
-  font-size: $body-font-size;
   line-height: $body-line-height;
   background: url("../images/bg/bubbles.svg") center top no-repeat $body-bg;
+  font-size: $body-font-size-mobile;
+  @include media-breakpoint-up(md) {
+    font-size: $body-font-size-desktop;
+  }
 }
 
 html {
@@ -75,7 +78,7 @@ h4 {
 
 .h5,
 h5 {
-  font-size: 1px;
+  font-size: 14px;
 }
 
 .h6,

@@ -14,10 +14,20 @@ $footer-social-item-size: 30px;
 }
 
 .footer__nav-title {
-  @extend .fs-13, .m-0;
+  @extend .fs-13, .m-0, .position-relative, .icon-chevron-up, .font-icons;
   color: $blue;
   @include media-breakpoint-up(md) {
     color: $muted;
+  }
+
+  &:before {
+    @extend .position-absolute, .d-md-none, .text-blue;
+    right: 0;
+    top: 1px;
+  }
+
+  &.collapsed {
+    @extend .icon-chevron-down;
   }
 }
 

@@ -1,12 +1,40 @@
 /* BOX */
 .box {
+  @extend .position-relative, .bg-white;
   padding: 20px 15px;
-  background-color: $white;
+  margin-left: -15px;
+  margin-right: -15px;
   @include media-breakpoint-up(md) {
     padding: 30px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   &:not(:last-child) {
     @extend .mb-4;
+  }
+
+  &--rounded {
+    @include media-breakpoint-up(md) {
+      border-radius: $base-radius;
+    }
+  }
+
+  &--has-fractional-number {
+    @include media-breakpoint-up(md) {
+      padding-right: 250px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 350px;
+    }
+
+    .fractional-number {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
