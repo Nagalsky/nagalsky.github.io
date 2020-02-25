@@ -1,0 +1,51 @@
+/* NAVBAR */
+.navbar {
+  @extend .shadow-none;
+
+  &.top-nav-collapse {
+    background-color: rgba($white, .75);
+  }
+}
+
+.navbar-brand {
+  @extend .d-flex, .align-items-center, .text-black, .text-lowercase, .font-semibold, .fs-16;
+}
+
+.navbar-brand__img {
+  @extend .mr-3;
+  width: 24px;
+  @include media-breakpoint-up(md) {
+    width: 30px;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    &:last-child {
+      .nav-link {
+        @include media-breakpoint-up(lg) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .nav-link {
+      @extend .text-muted;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:focus,
+      &:hover {
+        @extend .text-brand;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  @extend .text-brand, .border-0, .pr-0;
+}
