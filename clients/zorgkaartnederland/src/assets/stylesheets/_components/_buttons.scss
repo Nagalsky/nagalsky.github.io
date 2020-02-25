@@ -1,6 +1,7 @@
 /* BUTTONS */
 .btn {
-  @extend .border-0, .font-base-bold, .shadow-none;
+  @extend .border-0, .font-base-bold, .shadow-none, .align-items-center;
+  display: inline-flex;
 
   &-theme {
     @extend .text-white;
@@ -20,6 +21,16 @@
     @extend .font-base-regular, .text-left;
     @include themify($themes) {
       color: themed('themeColor');
+    }
+  }
+
+  &.btn-secondary {
+    @extend .text-blue;
+    @include gradient-y($start-color: #f3f3f3, $end-color: #e7e5e6, $start-percent: 0%, $end-percent: 100%);
+
+    &:focus,
+    &:hover {
+      @include gradient-y($start-color: #f3f3f3, $end-color: #f3f3f3, $start-percent: 0%, $end-percent: 100%);
     }
   }
 }

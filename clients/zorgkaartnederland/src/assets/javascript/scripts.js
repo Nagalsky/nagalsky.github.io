@@ -43,7 +43,11 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover()
 
 
-
+  //Initial sticky to top element
+  $(".filter-header").stick_in_parent({
+    parent: 'body',
+    offset_top: 51
+  });
 
 
   $(window).resize(function () {

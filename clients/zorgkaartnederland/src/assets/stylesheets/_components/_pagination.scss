@@ -1,0 +1,21 @@
+/* SELECTED FILTER */
+.selected-filter {
+  @extend .d-inline-flex, .align-items-center, .fs-14, .text-black;
+  padding: 5.5px 9px;
+  border-radius: $base-radius;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background-color: $gray-thin;
+
+  &:focus,
+  &:hover {
+    background-color: darken($gray-thin, 5%);
+  }
+
+  &:after {
+    @extend .ml-2;
+    font-family: 'icomoon';
+    content: "\e903";
+    font-size: 12px;
+  }
+}

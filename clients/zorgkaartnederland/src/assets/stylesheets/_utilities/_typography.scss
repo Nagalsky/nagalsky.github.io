@@ -107,6 +107,12 @@ a {
   }
 }
 
+.color-theme {
+  @include themify($themes) {
+    color: themed('themeColor');
+  }
+}
+
 p {
   margin-bottom: 20px;
 
