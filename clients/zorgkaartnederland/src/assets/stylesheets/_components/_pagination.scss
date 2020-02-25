@@ -1,21 +1,33 @@
-/* SELECTED FILTER */
-.selected-filter {
-  @extend .d-inline-flex, .align-items-center, .fs-14, .text-black;
-  padding: 5.5px 9px;
-  border-radius: $base-radius;
-  margin-right: 12px;
-  margin-bottom: 12px;
-  background-color: $gray-thin;
+/* PAGINATION */
+$pagination-width: 38px;
 
-  &:focus,
-  &:hover {
-    background-color: darken($gray-thin, 5%);
+.pagination {}
+
+.page-item {
+  &.active {
+    .page-link {
+      @extend .text-muted;
+      background-color: transparent;
+      border-color: $muted-thin;
+    }
   }
 
-  &:after {
-    @extend .ml-2;
-    font-family: 'icomoon';
-    content: "\e903";
-    font-size: 12px;
+  &-divider {
+    @extend .text-center, .text-muted;
+    min-width: $pagination-width;
+    border: 1px solid $muted-thin;
+    margin-right: 1px;
+  }
+}
+
+.page-link {
+  border-color: $sand;
+  background-color: $orange-thin;
+  padding: 8px 14px;
+  min-width: $pagination-width;
+
+  &:hover {
+    border-color: darken($sand, 5%);
+    background-color: darken($orange-thin, 5%);
   }
 }
