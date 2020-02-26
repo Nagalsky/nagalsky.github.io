@@ -1,0 +1,50 @@
+/* HERO LINK */
+$hero-link-icon-box-size: 60px;
+
+.hero-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.hero-link {
+  @extend .d-flex, .flex-column, .justify-content-center, .align-items-center, .text-muted, .font-semibold;
+  font-size: 16px;
+
+  &:focus,
+  &:hover {
+    @extend .text-brand;
+
+    .hero-link__icon-box {
+      border-color: $brand;
+    }
+
+    .hero-link__icon {
+      @extend .text-brand;
+    }
+  }
+}
+
+.hero-link__icon,
+.hero-link__icon-box {
+  @include transition($base-animation);
+}
+
+.hero-link__icon-box {
+  @extend .d-inline-flex, .justify-content-center, .align-items-center, .rounded-circle, .mb-1;
+  width: $hero-link-icon-box-size;
+  height: $hero-link-icon-box-size;
+  border: 1px solid $base-border-color;
+}
+
+.hero-link__icon {
+  @extend .text-muted;
+  font-size: 28px;
+}

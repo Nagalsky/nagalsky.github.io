@@ -1,0 +1,21 @@
+/* LINK RADIO */
+$radio-size: 16px;
+
+.link-radio {
+  @extend .position-relative, .text-blue, .align-items-center;
+  margin-bottom: 6px;
+  display: flex;
+
+  &:before {
+    content: '';
+    @extend .d-flex, .rounded-circle;
+    width: $radio-size;
+    height: $radio-size;
+    border: 1px solid $blue-thin;
+    margin-right: 12px;
+  }
+}
+
+.link-radio__counter {
+  @extend .ml-1, .d-inline-block, .text-blue-thin;
+}

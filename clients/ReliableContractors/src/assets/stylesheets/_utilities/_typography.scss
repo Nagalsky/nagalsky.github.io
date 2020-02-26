@@ -37,17 +37,44 @@ h6 {
 
 .h1,
 h1 {
-  font-size: 60px;
+  font-size: 40px;
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 56px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 60px;
+  }
 }
 
 .h2,
 h2 {
-  font-size: 52px;
+  font-size: 32px;
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 52px;
+  }
 }
 
 .h3,
 h3 {
-  font-size: 44px;
+  font-size: 26px;
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 40px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 44px;
+  }
 }
 
 .h4,
@@ -88,4 +115,8 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.underline {
+  text-decoration: underline;
 }

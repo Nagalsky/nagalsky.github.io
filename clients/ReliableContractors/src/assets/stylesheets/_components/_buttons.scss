@@ -1,1 +1,12 @@
 /* BUTTONS */
+.btn {
+  @extend .shadow-none, .d-inline-flex, .align-items-center, .justify-content-center, .font-extrabold;
+  min-height: 60px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+
+  &-brand {
+    @include button-variants($bg: $brand, $color: $white);
+  }
+}

@@ -103,19 +103,19 @@ gulp.task(
   })
 )
 
-gulp.task(
-  'javascript:vendors',
-  (task.javascript = function () {
-    return gulp
-      .src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/popper.js/dist/umd/popper.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-      ])
-      .pipe(concat('vendors.min.js'))
-      .pipe(gulp.dest(path.build.javascript))
-  })
-)
+// gulp.task(
+//   'javascript:vendors',
+//   (task.javascript = function () {
+//     return gulp
+//       .src([
+//         //'node_modules/jquery/dist/jquery.min.js',
+//         //'node_modules/popper.js/dist/umd/popper.min.js',
+//         //'node_modules/bootstrap/dist/js/bootstrap.min.js',
+//       ])
+//       .pipe(concat('vendors.min.js'))
+//       .pipe(gulp.dest(path.build.javascript))
+//   })
+// )
 
 // FONTS
 gulp.task(
@@ -200,7 +200,7 @@ gulp.task('build', [
   'server:build',
   'img:build',
   'javascript:build',
-  'javascript:vendors',
+  //'javascript:vendors',
   'fonts:build',
   'vendors:build',
 ])
@@ -221,9 +221,9 @@ gulp.task('watch', function () {
   watch([path.watch.fonts], function (event, cb) {
     gulp.start('fonts:build')
   })
-  watch([path.watch.vendors], function (event, cb) {
-    gulp.start('vendors:build')
-  })
+  // watch([path.watch.vendors], function (event, cb) {
+  //   gulp.start('vendors:build')
+  // })
 })
 
 gulp.task('default', ['build', 'watch'])
