@@ -2,6 +2,11 @@
 .form-control {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	@include custom-placeholder($color: $gray, $font-size: 14px, $font-family: $font-base-regular);
+
+	&:focus {
+		@include custom-placeholder-opacity($opacity: 0);
+	}
 }
 
 select.form-control {

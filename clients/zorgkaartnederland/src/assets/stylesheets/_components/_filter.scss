@@ -21,11 +21,57 @@
 }
 
 .filter__aside__list {
-  @extend .d-none, .d-md-block;
+  @extend .d-none, .d-md-block, .bg-white;
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 980;
+    padding: 0 15px 90px;
+  }
+
+  &.is-opened {
+    @extend .d-block;
+  }
 
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.filter__aside__footer,
+.filter__aside__header {
+  @extend .d-md-none;
+}
+
+.filter__aside__header {
+  @extend .py-3, .pl-3, .position-sticky, .bg-white;
+  border-bottom: 1px solid $base-border-color;
+  margin-bottom: 20px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-right: 40px;
+  z-index: 20;
+  top: 0;
+}
+
+.filter__aside__footer {
+  @extend .fixed-bottom, .bg-white, .px-3, .py-2;
+  border-top: 1px solid $base-border-color;
+}
+
+.filter__aside__list__title {
+  @extend .m-0, .fs-16, .font-base-bold, .text-blue;
+}
+
+.filter__aside__list__close {
+  @extend .position-absolute, .btn, .border-0, .p-0, .text-blue;
+  top: 13px;
+  right: 1rem;
+  font-size: 24px;
 }
 
 .filter__aside__item {
@@ -41,7 +87,7 @@
 }
 
 .filter-header {
-  @extend .bg-white, .p-3, .d-flex, .d-md-none, .mb-3;
+  @extend .bg-white, .p-3, .d-flex, .justify-content-between, .d-md-none, .mb-3;
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
@@ -59,7 +105,7 @@
 }
 
 .filter-header__item {
-  @extend .w-100, .d-flex, .align-items-center;
+  @extend .d-flex, .align-items-center;
 }
 
 .filter-header__btn {

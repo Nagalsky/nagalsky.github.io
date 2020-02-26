@@ -40,6 +40,8 @@ $(document).ready(function () {
     }
   }
 
+  bootstrapPopovers()
+
   $('[data-toggle="popover"]').popover()
 
 
@@ -47,6 +49,29 @@ $(document).ready(function () {
   $(".filter-header").stick_in_parent({
     parent: 'body',
     offset_top: 51
+  });
+
+  //Open/close mobile filters/blocks
+  $('[data-toggle-element]').on('click', function (e) {
+    e.preventDefault()
+    var element = $(this).attr('data-toggle-element');
+    $('[data-element = ' + element + ']').addClass('is-opened');
+    $('body').addClass('scroll-lock')
+  });
+
+  $('[data-close-element]').on('click', function (e) {
+    e.preventDefault()
+    var element = $(this).attr('data-close-element');
+    $('[data-element = ' + element + ']').removeClass('is-opened');
+    $('body').removeClass('scroll-lock')
+  });
+
+  //Modal filter search
+  $("#modal-search-field").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#modal-search-list *").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   });
 
 

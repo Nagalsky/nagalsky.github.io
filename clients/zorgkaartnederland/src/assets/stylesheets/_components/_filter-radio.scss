@@ -2,7 +2,7 @@
 $radio-size: 16px;
 
 .filter-radio {
-  @extend .d-block;
+  display: block;
   margin-bottom: 6px;
 
   input {
@@ -36,19 +36,25 @@ $radio-size: 16px;
 
     &:after {
       left: 0;
-      top: 5px;
+      top: 2px;
       border-radius: 3px;
       width: $radio-size;
       height: $radio-size;
       border: 1px solid $blue-thin;
+      @include media-breakpoint-up(md) {
+        top: 5px;
+      }
     }
 
     &:before {
       @extend .invisible;
       left: 3px;
-      top: 8px;
+      top: 5px;
       width: calc(#{$radio-size} - 6px);
       height: calc(#{$radio-size} - 6px);
+      @include media-breakpoint-up(md) {
+        top: 8px;
+      }
       @include themify($themes) {
         background-color: themed('themeColor');
       }

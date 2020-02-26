@@ -1,6 +1,6 @@
 /* BUTTONS */
 .btn {
-  @extend .border-0, .shadow-none, .align-items-center;
+  @extend .border-0, .shadow-none, .align-items-center, .justify-content-center;
   display: inline-flex;
   font-family: $font-base-bold;
 
@@ -33,5 +33,23 @@
     &:hover {
       @include gradient-y($start-color: #f3f3f3, $end-color: #f3f3f3, $start-percent: 0%, $end-percent: 100%);
     }
+  }
+
+  &.btn-brand {
+    @extend .text-white;
+    @include themify($themes) {
+      background-color: themed('themeColor');
+    }
+
+    &:focus,
+    &:hover {
+      @include themify($themes) {
+        background-color: darken(themed('themeColor'), 10%);
+      }
+    }
+  }
+
+  &.btn-md {
+    padding: 12px 20px;
   }
 }
