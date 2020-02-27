@@ -1,2 +1,18 @@
 /* CARD */
+.card {
+  @extend .shadow-none, .rounded-0, .font-semibold, .text-black;
+  font-size: 22px;
 
+  &:focus,
+  &:hover {
+    @extend .has-shadow, .text-white;
+
+    .card-body {
+      @extend .bg-brand;
+    }
+  }
+}
+
+.card-body {
+  @include transition($base-animation);
+}
