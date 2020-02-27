@@ -1,9 +1,6 @@
 /* CARD */
 .card {
-  @extend .shadow-none, .rounded-0, .font-semibold, .text-black;
-  @include media-breakpoint-up(lg) {
-    font-size: 22px;
-  }
+  @extend .shadow-none, .rounded-0, .font-semibold, .text-black, .h-100;
 
   &:focus,
   &:hover {
@@ -13,9 +10,39 @@
       @extend .bg-brand;
     }
   }
+
+  &.card--bordered {
+    @extend .border-0;
+
+    &:focus,
+    &:hover {
+      @extend .has-shadow;
+      color: inherit !important;
+
+      .card-body {
+        @extend .bg-white;
+      }
+    }
+
+    .card-body {
+      border: 1px solid $base-border-color-active;
+      border-top: none;
+    }
+  }
 }
 
 .card-body {
   @include transition($base-animation);
   border-bottom: 4px solid $base-brand-color;
+}
+
+.card-title {
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+.card-read-more {
+  @extend .text-brand;
+  text-decoration: underline;
 }
