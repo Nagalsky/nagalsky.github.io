@@ -1,7 +1,9 @@
 /* CARD */
 .card {
   @extend .shadow-none, .rounded-0, .font-semibold, .text-black;
-  font-size: 22px;
+  @include media-breakpoint-up(lg) {
+    font-size: 22px;
+  }
 
   &:focus,
   &:hover {
@@ -15,4 +17,5 @@
 
 .card-body {
   @include transition($base-animation);
+  border-bottom: 4px solid $base-brand-color;
 }
