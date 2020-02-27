@@ -3,6 +3,7 @@
   @extend .border-0, .shadow-none, .align-items-center, .justify-content-center;
   display: inline-flex;
   font-family: $font-base-bold;
+  font-size: 1rem;
 
   &-theme {
     @extend .text-white;
@@ -49,7 +50,25 @@
     }
   }
 
+  &.btn-blue {
+    @extend .text-white;
+    background: linear-gradient(180deg, #6A66AF 0%, #110E72 100%);
+
+    &:focus,
+    &:hover {
+      background: linear-gradient(180deg, #110E72 0%, #110E72 100%);
+    }
+  }
+
   &.btn-md {
     padding: 12px 20px;
   }
+}
+
+.btn-popover {
+  @extend .p-0, .border-0, .text-blue;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
 }

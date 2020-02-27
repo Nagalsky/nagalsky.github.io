@@ -1,0 +1,33 @@
+/* FONT SIZE SWITCH */
+.fs-switch-holder {
+  @extend .d-flex, .align-items-center;
+}
+
+.fs-switch__title {
+  @extend .m-0, .text-asphalt, .font-base-bold, .mr-3;
+}
+
+.fs-switch {
+  @extend .d-flex;
+  height: 31px;
+  width: 70px;
+  border: 1px solid $blue;
+  border-radius: $base-radius;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+
+.fs-switch__btn {
+  @extend .text-blue, .text-uppercase, .font-base-bold, .flex-fill, .d-inline-flex, .align-items-center, .justify-content-center;
+
+  &--small {
+    font-size: 12px;
+  }
+
+  &--large {
+    font-size: 16px;
+  }
+
+  &+.fs-switch__btn {
+    border-left: 1px solid $blue;
+  }
+}

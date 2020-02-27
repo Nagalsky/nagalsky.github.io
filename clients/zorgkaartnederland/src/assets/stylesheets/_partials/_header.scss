@@ -1,14 +1,8 @@
 /* HEADER */
-$header-mobile-height: 97px;
+$header-mobile-height: 51px;
 
 .header {
   @include media-breakpoint-down(sm) {
-    background-color: $white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 900;
     min-height: $header-mobile-height;
   }
 
@@ -40,11 +34,24 @@ $header-mobile-height: 97px;
 }
 
 .header__top {
-  @extend .py-2, .py-md-3, .px-3, .px-md-0, .position-relative, .d-flex, .justify-content-center, .justify-content-md-between;
+  @extend .px-3, .px-md-0, .d-flex, .justify-content-center, .justify-content-md-between;
   border-bottom: 1px solid $gray-thin;
   min-height: 51px;
+  position: relative;
   @include media-breakpoint-up(md) {
     border-color: $sand;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @include media-breakpoint-down(sm) {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .navbar-nav {

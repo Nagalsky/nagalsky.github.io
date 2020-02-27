@@ -10,4 +10,19 @@
   }
 }
 
-.popover-body {}
+.popover-body {
+  @extend .p-3;
+}
+
+.popover-content {
+  @extend .position-relative, .font-icons, .icon-times;
+  padding-right: 25px;
+
+  &:before {
+    @extend .position-absolute, .text-blue;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 20;
+  }
+}

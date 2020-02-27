@@ -12,6 +12,16 @@ $(document).ready(function () {
     }
   })
 
+  //Font size switch action
+  $('.fs-switch__btn--small').on('click', function (e) {
+    e.preventDefault();
+    $('body, html').addClass('fs-14');
+  })
+  $('.fs-switch__btn--large').on('click', function (e) {
+    e.preventDefault();
+    $('body, html').removeClass('fs-14');
+  })
+
   function searchFieldReplacing() {
     if ($(window).width() < 768) {
       $('#search_field_holder_desktop .search-field').appendTo($('#search_field_holder_mobile'));
