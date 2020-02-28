@@ -1,6 +1,14 @@
 /* NAVBAR */
 .navbar-collapse {
   @extend .d-md-block;
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: calc(#{$header-mobile-height} + 1px);
+    z-index: 960;
+    background-color: $white;
+  }
 }
 
 .navbar-toggler {
@@ -11,7 +19,7 @@
 
 .navbar {
   padding: 0 15px;
-  border-top: 1px solid $base-border-accented-color;
+  border-top: 1px solid $base-border-color;
   border-bottom: 1px solid $base-border-accented-color;
   @include media-breakpoint-up(md) {
     background-color: $crimson;

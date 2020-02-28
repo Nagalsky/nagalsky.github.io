@@ -1,0 +1,47 @@
+/* QUIZ RANGE */
+.quiz-range {}
+
+.quiz-range__values-header {
+  @extend .mb-3, .d-flex, .align-items-center, .justify-content-between;
+}
+
+.quiz-range__values-header__item {
+  @extend .d-inline-block, .text-asphalt-soft;
+
+  &:last-of-type {
+    @extend .ml-3, .flex-shrink-0;
+  }
+}
+
+.quiz-range__values {
+  @extend .d-flex, .justify-content-between;
+}
+
+.quiz-range__value {
+  @extend .fs-24, .font-icons;
+
+  &--very-sad {
+    color: #da1c47;
+    @extend .icon-very-sad;
+  }
+
+  &--sad {
+    color: #ff7800;
+    @extend .icon-sad;
+  }
+
+  &--neutral {
+    color: #ffaf04;
+    @extend .icon-neutral;
+  }
+
+  &--happy {
+    color: #a5c800;
+    @extend .icon-happy;
+  }
+
+  &--very-happy {
+    color: #09a600;
+    @extend .icon-very-happy;
+  }
+}
