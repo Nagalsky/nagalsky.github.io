@@ -20,6 +20,15 @@ $(document).ready(function () {
   //Parallax initial
   $('.my-paroller').paroller();
 
+  //Scroll top top button
+  $(".scroll-top").click(function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
+    return false;
+  });
+
   //Navbar animation section
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -29,14 +38,14 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("navbar--animated");
     }
+
+    if (scroll >= 100) {
+      $(".scroll-top").addClass("active");
+    } else {
+      $(".scroll-top").removeClass("active");
+    }
   });
 
-  //Scroll top top button
-  $(".navbar-scroll-top").click(function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, "slow");
-    return false;
-  });
+
 
 })

@@ -1,0 +1,21 @@
+/* SCROLL TOP */
+$scroll-top-size: 48px;
+
+.scroll-top {
+  @extend .position-fixed, .rounded-circle, .text-white, .bg-black, .d-inline-flex, .align-items-center, .justify-content-center, .font-icons, .icon-digital-up-small;
+  right: 1rem;
+  bottom: 10%;
+  width: $scroll-top-size;
+  height: $scroll-top-size;
+  font-size: calc(#{$scroll-top-size} - 20px);
+  z-index: 700;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.5);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
