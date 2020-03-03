@@ -1,0 +1,71 @@
+/* RADIO */
+$radio-indicator-size: 20px;
+
+.radio {
+  input[type="radio"] {
+    display: none;
+
+    &:checked {
+      &~.radio__label {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &--sm {
+    .radio__label {
+      min-height: 60px;
+    }
+  }
+}
+
+.radio__label {
+  @extend .position-relative, .d-flex, .flex-column, .justify-content-center, .m-0, .w-100;
+  cursor: pointer;
+  border: 1px solid $blue;
+  padding: 0 15px 0 calc(#{$radio-indicator-size * 2} + 15px);
+  border-radius: 3px;
+  min-height: 93px;
+  @include media-breakpoint-up(md) {
+    padding: 0 24px 0 calc(#{$radio-indicator-size * 2} + 24px);
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    @extend .position-absolute, .rounded-circle;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    width: $radio-indicator-size;
+    height: $radio-indicator-size;
+    border: 2px solid $blue;
+    left: 15px;
+    @include media-breakpoint-up(md) {
+      left: 24px;
+    }
+  }
+
+  &:after {
+    @include transition($base-animation);
+    width: $radio-indicator-size - 8px;
+    height: $radio-indicator-size - 8px;
+    background-color: $blue;
+    left: 19px;
+    opacity: 0;
+    visibility: hidden;
+    @include media-breakpoint-up(md) {
+      left: 28px;
+    }
+  }
+}
+
+.radio__title {
+  @extend .m-0, .fs-20, .font-base-bold, .text-blue;
+  line-height: 1;
+}
