@@ -86,7 +86,6 @@ $(document).ready(function () {
 
   //Init select2
   $('.select2').select2({
-    placeholder: "Olololo",
     theme: "bootstrap"
   });
 
