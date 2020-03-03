@@ -1,15 +1,15 @@
 $(document).ready(function () {
   //Share box action
-  $('.navbar-share').click('click', function (e) {
-    e.preventDefault()
-    $('.share-box').addClass('is-opened');
-    $('body').addClass('modal-open');
-  })
-  $('.share-box-close').on('click', function (e) {
-    e.preventDefault()
-    $('.share-box').removeClass('is-opened');
-    $('body').removeClass('modal-open');
-  })
+  // $('.navbar-share').click('click', function (e) {
+  //   e.preventDefault()
+  //   $('.share-box').addClass('is-opened');
+  //   $('body').addClass('modal-open');
+  // })
+  // $('.share-box-close').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.share-box').removeClass('is-opened');
+  //   $('body').removeClass('modal-open');
+  // })
 
   //Zoom effect while scroll
   $(window).scroll(function () {
@@ -21,7 +21,7 @@ $(document).ready(function () {
   $('.my-paroller').paroller();
 
   //Scroll top top button
-  $(".scroll-top").click(function (e) {
+  $(".scroll-top-btn").click(function (e) {
     e.preventDefault();
     $("html, body").animate({
       scrollTop: 0
@@ -39,11 +39,11 @@ $(document).ready(function () {
       $(".navbar").removeClass("navbar--animated");
     }
 
-    if (scroll >= 100) {
-      $(".scroll-top").addClass("active");
-    } else {
-      $(".scroll-top").removeClass("active");
-    }
+    // if (scroll >= 100) {
+    //   $(".scroll-top").addClass("active");
+    // } else {
+    //   $(".scroll-top").removeClass("active");
+    // }
   });
 
 
