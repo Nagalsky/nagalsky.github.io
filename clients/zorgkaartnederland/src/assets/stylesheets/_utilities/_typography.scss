@@ -13,25 +13,10 @@ html {
   }
 }
 
-html {
-  @extend .d-flex;
-}
-
 body {
-  min-height: 100vh;
-  @extend .w-100, .d-flex, .flex-column;
   @include media-breakpoint-down(sm) {
     padding-top: $header-mobile-height;
   }
-}
-
-.footer,
-.header {
-  @extend .flex-shrink-0;
-}
-
-.main {
-  @extend .flex-grow-1;
 }
 
 .h1,
