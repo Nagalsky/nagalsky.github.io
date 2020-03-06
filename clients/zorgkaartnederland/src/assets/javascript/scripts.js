@@ -42,16 +42,6 @@ $(document).ready(function () {
   });
 
   //Initial bootstrap popover
-  function bootstrapPopovers() {
-    if ($(window).width() < 768) {
-      $('[data-toggle="popover"]').popover('disable');
-    } else {
-      $('[data-toggle="popover"]').popover('enable')
-    }
-  }
-
-  bootstrapPopovers()
-
   $('[data-toggle="popover"]').popover()
 
 
@@ -92,6 +82,5 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     searchFieldReplacing();
-    bootstrapPopovers();
   });
 });
