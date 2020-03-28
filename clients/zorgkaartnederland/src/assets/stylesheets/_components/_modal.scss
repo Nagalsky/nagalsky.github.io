@@ -17,6 +17,22 @@ $modal-close-btn-size: 30px;
       top: -$modal-close-btn-size / 2;
     }
   }
+
+  &--scrollable {
+    .modal-content,
+    .modal-dialog {
+      @include media-breakpoint-up(md) {
+        height: 90%;
+      }
+    }
+
+    .modal-body {
+      @include media-breakpoint-up(md) {
+        max-height: calc(100% - 120px);
+        overflow-y: scroll;
+      }
+    }
+  }
 }
 
 .modal-content {
@@ -33,20 +49,6 @@ $modal-close-btn-size: 30px;
   }
   @include media-breakpoint-up(lg) {
     max-width: 910px;
-  }
-}
-
-.modal-content,
-.modal-dialog {
-  @include media-breakpoint-up(md) {
-    height: 90%;
-  }
-}
-
-.modal-body {
-  @include media-breakpoint-up(md) {
-    max-height: calc(100% - 120px);
-    overflow-y: scroll;
   }
 }
 

@@ -458,129 +458,132 @@
                   </button>
                 </div>
 
-                <div class="d-md-none mb-2">
-                  <a href="#" class='selected-filter'>Verpleeghuis en verzorgingshuis</a>
-                  <a href="#" class='selected-filter'>Rotterdam</a>
-                </div>
+                <div class="filter__aside__items">
 
-                <div class="filter__aside__item">
-                  <h4 class="filter__aside__title"><span class="mr-1">Identiteit:</span>
-                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">Uitleg</button></h4>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-1" type="checkbox">
-                    <label for="styled-checkbox-1">
-                      Algemeen<span class="filter-checkbox__counter">(11)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-2" type="checkbox">
-                    <label for="styled-checkbox-2">
-                      Surinaams<span class="filter-checkbox__counter">(2)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-3" type="checkbox">
-                    <label for="styled-checkbox-3">
-                      Turks<span class="filter-checkbox__counter">(1)</span>
-                    </label>
-                  </a>
-                </div>
+                  <div class="filter__aside__item-single d-md-none">
+                    <a href="#" class='selected-filter'>Verpleeghuis en verzorgingshuis</a>
+                    <a href="#" class='selected-filter'>Rotterdam</a>
+                  </div>
 
-                <div class="filter__aside__item">
-                  <h4 class="filter__aside__title"><span class="mr-1">Soort zorg:</span>
-                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">Uitleg</button></h4>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-4" type="checkbox">
-                    <label for="styled-checkbox-4">
-                      Langdurig verblijf<span class="filter-checkbox__counter">(26)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-5" type="checkbox">
-                    <label for="styled-checkbox-5">
-                      Tijdelijke opname<span class="filter-checkbox__counter">(9)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-6" type="checkbox">
-                    <label for="styled-checkbox-6">
-                      Palliatieve zorg<span class="filter-checkbox__counter">(3)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-7" type="checkbox">
-                    <label for="styled-checkbox-7">
-                      Revalidatie<span class="filter-checkbox__counter">(3)</span>
-                    </label>
-                  </a>
+                  <div class="filter__aside__item">
+                    <h4 class="filter__aside__title"><span class="mr-1">Identiteit:</span>
+                      <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#identiteit-modal">Uitleg</button></h4>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-1" type="checkbox">
+                      <label for="styled-checkbox-1">
+                        Algemeen<span class="filter-checkbox__counter">(11)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-2" type="checkbox">
+                      <label for="styled-checkbox-2">
+                        Surinaams<span class="filter-checkbox__counter">(2)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-3" type="checkbox">
+                      <label for="styled-checkbox-3">
+                        Turks<span class="filter-checkbox__counter">(1)</span>
+                      </label>
+                    </a>
+                  </div>
+
+                  <div class="filter__aside__item">
+                    <h4 class="filter__aside__title"><span class="mr-1">Soort zorg:</span>
+                      <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#soort-zorg-modal">Uitleg</button></h4>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-4" type="checkbox">
+                      <label for="styled-checkbox-4">
+                        Langdurig verblijf<span class="filter-checkbox__counter">(26)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-5" type="checkbox">
+                      <label for="styled-checkbox-5">
+                        Tijdelijke opname<span class="filter-checkbox__counter">(9)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-6" type="checkbox">
+                      <label for="styled-checkbox-6">
+                        Palliatieve zorg<span class="filter-checkbox__counter">(3)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-7" type="checkbox">
+                      <label for="styled-checkbox-7">
+                        Revalidatie<span class="filter-checkbox__counter">(3)</span>
+                      </label>
+                    </a>
 
 
-                  <a class="btn btn-link d-block w-100 pl-2" data-toggle="modal" href="#kies-een-plaats-modal" role="button" aria-expanded="false" aria-controls="kies-een-plaats-modal">
-                    <i class="icon-caret-right"></i> Meer gespecialiseerd in
-                  </a>
+                    <a class="btn btn-link d-block w-100 pl-2" data-toggle="modal" href="#kies-een-plaats-modal" role="button" aria-expanded="false" aria-controls="kies-een-plaats-modal">
+                      <i class="icon-caret-right"></i> Meer gespecialiseerd in
+                    </a>
 
-                </div>
+                  </div>
 
-                <div class="filter__aside__item">
-                  <h4 class="filter__aside__title"><span class="mr-1">Digitale diensten:</span>
-                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">Uitleg</button></h4>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-8" type="checkbox">
-                    <label for="styled-checkbox-8">
-                      Online medisch dossier<span class="filter-checkbox__counter">(13)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-9" type="checkbox">
-                    <label for="styled-checkbox-9">
-                      E-consult<span class="filter-checkbox__counter">(11)</span>
-                    </label>
-                  </a>
-                  <a href="#" class="filter-checkbox">
-                    <input id="styled-checkbox-10" type="checkbox">
-                    <label for="styled-checkbox-10">
-                      Persoonlijke omgeving<span class="filter-checkbox__counter">(15)</span>
-                    </label>
-                  </a>
-                </div>
+                  <div class="filter__aside__item">
+                    <h4 class="filter__aside__title"><span class="mr-1">Digitale diensten:</span>
+                      <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#digitale-diensten-modal">Uitleg</button></h4>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-8" type="checkbox">
+                      <label for="styled-checkbox-8">
+                        Online medisch dossier<span class="filter-checkbox__counter">(13)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-9" type="checkbox">
+                      <label for="styled-checkbox-9">
+                        E-consult<span class="filter-checkbox__counter">(11)</span>
+                      </label>
+                    </a>
+                    <a href="#" class="filter-checkbox">
+                      <input id="styled-checkbox-10" type="checkbox">
+                      <label for="styled-checkbox-10">
+                        Persoonlijke omgeving<span class="filter-checkbox__counter">(15)</span>
+                      </label>
+                    </a>
+                  </div>
 
-                <div class="filter__aside__item">
-                  <h4 class="filter__aside__title"><span class="mr-1">Afstand tot Rotterdam:</span>
-                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">Uitleg</button></h4>
-                  <a href="#" class="filter-radio">
-                    <input id="styled-radio-1" type="radio" name="styled-radios-1" value="option1">
-                    <label for="styled-radio-1">
-                      Tot 5 km<span class="filter-radio__counter">(13)</span>
-                    </label>
-                  </a>
+                  <div class="filter__aside__item">
+                    <h4 class="filter__aside__title"><span class="mr-1">Afstand tot Rotterdam:</span>
+                      <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#afstand-tot-rotterdam-modal">Uitleg</button></h4>
+                    <a href="#" class="filter-radio">
+                      <input id="styled-radio-1" type="radio" name="styled-radios-1" value="option1">
+                      <label for="styled-radio-1">
+                        Tot 5 km<span class="filter-radio__counter">(13)</span>
+                      </label>
+                    </a>
 
-                  <a href="#" class="filter-radio">
-                    <input id="styled-radio-2" type="radio" name="styled-radios-1" value="option2">
-                    <label for="styled-radio-2">
-                      Tot 10 km<span class="filter-radio__counter">(18)</span>
-                    </label>
-                  </a>
+                    <a href="#" class="filter-radio">
+                      <input id="styled-radio-2" type="radio" name="styled-radios-1" value="option2">
+                      <label for="styled-radio-2">
+                        Tot 10 km<span class="filter-radio__counter">(18)</span>
+                      </label>
+                    </a>
 
-                  <a href="#" class="filter-radio">
-                    <input id="styled-radio-3" type="radio" name="styled-radios-1" value="option3">
-                    <label for="styled-radio-3">
-                      Tot 25 km<span class="filter-radio__counter">(27)</span>
-                    </label>
-                  </a>
+                    <a href="#" class="filter-radio">
+                      <input id="styled-radio-3" type="radio" name="styled-radios-1" value="option3">
+                      <label for="styled-radio-3">
+                        Tot 25 km<span class="filter-radio__counter">(27)</span>
+                      </label>
+                    </a>
 
-                  <a href="#" class="filter-radio">
-                    <input id="styled-radio-4" type="radio" name="styled-radios-1" value="option4">
-                    <label for="styled-radio-4">
-                      Tot 50 km<span class="filter-radio__counter">(80)</span>
-                    </label>
-                  </a>
+                    <a href="#" class="filter-radio">
+                      <input id="styled-radio-4" type="radio" name="styled-radios-1" value="option4">
+                      <label for="styled-radio-4">
+                        Tot 50 km<span class="filter-radio__counter">(80)</span>
+                      </label>
+                    </a>
 
-                  <a href="#" class="filter-radio">
-                    <input id="styled-radio-5" type="radio" name="styled-radios-1" value="option5">
-                    <label for="styled-radio-5">
-                      Tot 100 km<span class="filter-radio__counter">(111)</span>
-                    </label>
-                  </a>
+                    <a href="#" class="filter-radio">
+                      <input id="styled-radio-5" type="radio" name="styled-radios-1" value="option5">
+                      <label for="styled-radio-5">
+                        Tot 100 km<span class="filter-radio__counter">(111)</span>
+                      </label>
+                    </a>
+                  </div>
                 </div>
 
                 <div class="filter__aside__footer">
@@ -769,7 +772,7 @@
   </footer>
 
   <!-- Modal -->
-  <div class="modal fade" id="kies-een-plaats-modal">
+  <div class="modal modal--scrollable fade" id="kies-een-plaats-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -869,6 +872,71 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal fade" id="identiteit-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="icon-times"></i>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title">Identiteit</h5>
+        </div>
+        <div class="modal-body">
+          <p>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="soort-zorg-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="icon-times"></i>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title">Soort zorg</h5>
+        </div>
+        <div class="modal-body">
+          <p>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="digitale-diensten-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="icon-times"></i>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title">Digitale diensten</h5>
+        </div>
+        <div class="modal-body">
+          <p>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="afstand-tot-rotterdam-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="icon-times"></i>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title">Afstand tot Rotterdam</h5>
+        </div>
+        <div class="modal-body">
+          <p>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</p>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@
 }
 
 .filter__aside__list {
-  @extend .d-none, .d-md-block, .bg-white;
+  @extend .flex-column, .d-none, .d-md-block, .bg-white;
   @include media-breakpoint-down(sm) {
     position: fixed;
     width: 100%;
@@ -29,11 +29,10 @@
     top: 0;
     overflow-y: auto;
     z-index: 980;
-    padding: 0 15px 90px;
   }
 
   &.is-opened {
-    @extend .d-block;
+    @extend .d-flex;
   }
 
   &:not(:last-child) {
@@ -48,18 +47,22 @@
 
 .filter__aside__header {
   @extend .py-3, .pl-3, .position-sticky, .bg-white;
+  @include media-breakpoint-up(md) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
   border-bottom: 1px solid $base-border-color;
   margin-bottom: 20px;
-  margin-left: -1rem;
-  margin-right: -1rem;
   padding-right: 40px;
   z-index: 20;
   top: 0;
 }
 
 .filter__aside__footer {
-  @extend .fixed-bottom, .bg-white, .px-3, .py-2;
+  @extend .position-sticky, .bg-white, .px-3, .py-2, .mt-auto, .w-100;
   border-top: 1px solid $base-border-color;
+  left: 0;
+  bottom: 0;
 }
 
 .filter__aside__list__title {
@@ -74,11 +77,29 @@
   font-size: 24px;
 }
 
+.filter__aside__items {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+  }
+}
+
 .filter__aside__item {
+  @include media-breakpoint-down(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   &+.filter__aside__item {
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid $silver-soft;
+  }
+}
+
+.filter__aside__item-single {
+  @include media-breakpoint-down(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
