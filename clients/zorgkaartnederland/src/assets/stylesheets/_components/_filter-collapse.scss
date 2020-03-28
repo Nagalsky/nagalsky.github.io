@@ -6,20 +6,10 @@
 }
 
 .filter__collapse__title {
-  @extend .fs-16, .text-blue, .d-flex, .align-items-center, .justify-content-between, .pl-3, .pr-md-3, .py-2, .mb-0, .position-relative, .icon-chevron-up, .font-icons;
+  @extend .fs-16, .text-blue, .d-flex, .align-items-center, .justify-content-between, .pl-3, .pr-md-3, .py-2, .mb-0, .position-relative;
   padding-right: 40px;
   @include media-breakpoint-up(md) {
     padding-right: 0;
-  }
-
-  &:before {
-    @extend .position-absolute, .d-md-none, .text-blue;
-    right: 10px;
-    top: 7px;
-  }
-
-  &.collapsed {
-    @extend .icon-chevron-down;
   }
 }
 
