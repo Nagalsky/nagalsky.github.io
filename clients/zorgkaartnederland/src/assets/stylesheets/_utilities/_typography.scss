@@ -1,13 +1,12 @@
 body,
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
   font-family: $body-font-family;
   color: $body-main-color;
   line-height: $body-line-height;
   background: url("../images/bg/bubbles.svg") center top no-repeat $body-bg;
   font-size: $body-font-size-mobile;
+  font-weight: $font-base-regular;
   @include media-breakpoint-up(md) {
     font-size: $body-font-size-desktop;
   }
@@ -32,9 +31,9 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: $title-color;
-  font-family: $title-font;
+  font-weight: $title-font;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,7 +52,7 @@ h2 {
 
 .h3,
 h3 {
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 
 .h4,
@@ -99,7 +98,7 @@ a {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -117,12 +116,13 @@ b {
 
 .btn-back {
   @extend .fs-13, .font-icons, .icon-chevron-left, .d-flex, .align-items-center;
-  margin-bottom: 24px;
+  margin-bottom: 19px;
   padding-left: 16px;
   height: 20px;
 
   &:before {
-    margin-right: 10px;
+    margin-right: 8px;
+    @extend .fs-12;
   }
 }
 
@@ -132,7 +132,7 @@ b {
 
 .bold,
 b {
-  @extend .font-base-bold;
+  font-weight: $font-base-bold;
 }
 
 hr {
@@ -143,4 +143,8 @@ hr {
   &.hr-blue {
     border-color: $blue;
   }
+}
+
+.lt-neg {
+  letter-spacing: -0.3px;
 }

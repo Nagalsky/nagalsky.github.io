@@ -14,7 +14,8 @@ $count-size: 30px;
   }
 
   &:before {
-    @extend .rounded-circle, .d-inline-flex, .align-items-center, .justify-content-center, .text-white, .font-base-bold, .bg-asphalt-soft, .flex-shrink-0;
+    @extend .rounded-circle, .d-inline-flex, .align-items-center, .justify-content-center, .text-white, .bg-asphalt-soft, .flex-shrink-0;
+    font-weight: $font-base-bold;
     counter-increment: count;
     content: counter(count);
     margin-right: 10px;
@@ -24,7 +25,7 @@ $count-size: 30px;
   }
 
   &--highlight {
-    @extend .font-base-bold;
+    font-weight: $font-base-bold;
 
     &:before {
       @extend .bg-brand-color;

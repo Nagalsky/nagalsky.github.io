@@ -34,13 +34,6 @@ $(document).ready(function () {
 
 
 
-  //Read more initial
-  $('.mobile-collpase').readmore({
-    split_word: true,
-    substr_len: 140,
-    more_link: '<a class="readm-more">Lees meer</a>'
-  });
-
   //Initial bootstrap popover
   $('[data-toggle="popover"]').popover()
 
@@ -76,11 +69,38 @@ $(document).ready(function () {
 
   //Init select2
   $('.select2').select2({
-    theme: "bootstrap"
+    theme: "bootstrap",
+    containerCssClass: "custom custom-select",
+    dropdownCssClass: 'custom input',
   });
+
+  //Open/close mobile collapsed text
+  $('[data-collapse-open]').on('click', function (e) {
+    e.preventDefault()
+    $(this).parent().remove()
+    var element = $(this).attr('data-collapse-open');
+    $('[data-collapse-element = ' + element + ']').addClass('is-opened');
+  });
+
+  function collapseTextBoxHeight() {
+    var collapseTextBox = $('[data-collapse-element]').height();
+
+    if (collapseTextBox > 60) {
+      $('.text-collpase').addClass('is-collapsed');
+      $(".text-collapse-holder-btn").addClass('is-shown');
+    } else {
+      $('.text-collpase').removeClass('is-collapsed');
+      $(".text-collapse-holder-btn").removeClass('is-shown');
+    }
+  }
+
+  collapseTextBoxHeight()
+
+
 
 
   $(window).resize(function () {
     searchFieldReplacing();
+    collapseTextBoxHeight()
   });
 });

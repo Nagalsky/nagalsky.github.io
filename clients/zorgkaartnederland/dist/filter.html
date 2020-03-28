@@ -145,7 +145,7 @@
   <main class="main">
     <section class="section">
       <div class="container">
-        <nav aria-label="breadcrumb" class="d-flex align-items-center mb-4 fs-13 pl-md-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
           <p class="mb-0 mr-2">U bent hier:</p>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -156,14 +156,18 @@
         <div class="box box--has-fractional-number box--rounded">
           <h1 class="d-flex justify-content-between align-items-center">2343 diëtisten in Nederland <div class="fractional-number rounded-circle ml-4">8<sup>.3</sup></div>
           </h1>
-          <div class="mobile-collpase">
-            <p class="text-burst">Op dit moment zijn er binnen ZorgkaartNederland 2343 diëtisten in Nederland bekend. Het gemiddelde cijfer van alle diëtisten in Nederland is een 8.8 op basis van 1341 waarderingen.
-            </p>
+          <p class="mb-0 lt-neg text-collpase" data-collapse-element="collapse-text-1">Op dit moment zijn er binnen ZorgkaartNederland 2343 diëtisten in Nederland bekend. Het gemiddelde cijfer van alle diëtisten in Nederland is een 8.8 op basis van
+            1341 waarderingen.
+          </p>
+          <div class="text-collapse-holder-btn">
+            <a href="#" class="text-collapse-btn" data-collapse-open="collapse-text-1">
+              Lees meer
+            </a>
           </div>
         </div>
 
         <div class="box box--rounded">
-          <h2 class="mb-0 mb-md-3">264 resultaten voor je selectie:</h2>
+          <h3 class="mb-0 mb-md-3">264 resultaten voor je selectie:</h3>
           <div class="d-none d-md-block">
             <a href="#" class='selected-filter'>Verpleeghuis en verzorgingshuis</a>
             <a href="#" class='selected-filter'>Rotterdam</a>
@@ -190,15 +194,15 @@
             </div>
           </div>
 
-          <div class="divider d-none d-md-block"></div>
+          <div class="divider d-none d-md-block mt-3"></div>
 
           <div class="filter">
             <div class="filter__body">
               <div class="d-none d-md-flex align-items-md-center justify-content-md-between mb-4">
-                <div class="d-flex align-items-center"><i class="icon-map mr-2 color-theme"></i> Toon kaart</div>
+                <div class="d-flex align-items-center"><i class="icon-map mr-3 color-theme fs-18" style="margin-left: 6px;"></i> <span class="fs-14">Toon kaart</span></div>
 
                 <div class="d-flex align-items-center">
-                  <div class="text-asphalt text-nowrap mr-1">Sorteren op:</div>
+                  <div class="text-nowrap mr-1 fs-14">Sorteren op:</div>
                   <select name="" id="" class="filter__select">
                     <option value="">Relevantie</option>
                     <option value="">Relevantie 2</option>
@@ -209,47 +213,47 @@
               <div class="filter-results">
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
                     <div class="filter-result__body__left">
                       <a href="#" class="filter-result__name">Delnoij, A.</a>
                       <p class="filter-result__role">Diëtist</p>
-                      <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
-                      <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
+                      <div class="filter-result__places"><span class="badge">2 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
+                      <div class="filter-result__places"><span class="badge">7 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
                     </div>
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
                     <div class="filter-result__body__left">
                       <a href="#" class="filter-result__name">Delnoij, A.</a>
                       <p class="filter-result__role">Diëtist</p>
-                      <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
-                      <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
+                      <div class="filter-result__places"><span class="badge">0 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
+                      <div class="filter-result__places"><span class="badge">300 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
                     </div>
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -262,14 +266,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -282,7 +286,7 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
@@ -304,14 +308,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -324,14 +328,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -344,14 +348,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -364,14 +368,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -384,14 +388,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -404,14 +408,14 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
 
                 <div class="filter-result">
                   <div class="filter-result__avatar">
-                    <a href="#" class="filter-result__avatar-icon"><i class="icon-user-plus"></i></a>
+                    <a href="#" class="filter-result__avatar-icon"><i class="icon-person"></i></a>
                   </div>
 
                   <div class="filter-result__body">
@@ -424,7 +428,7 @@
 
                     <div class="filter-result__body__right">
                       <div class="filter-result__score">8<sup>.3</div>
-                      <p class="text-asphalt">17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
+                      <p>17 <span class="d-none d-md-inline-block">waarderingen</span><i class="icon-edit d-md-none"></i></p>
                     </div>
                   </div>
                 </div>
@@ -458,8 +462,8 @@
                 </div>
 
                 <div class="filter__aside__item">
-                  <h4 class="filter__aside__title">Identiteit:
-                    <button type="button" class="btn btn-popover ml-1" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
+                  <h4 class="filter__aside__title"><span class="mr-1">Identiteit:</span>
+                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
                   <a href="#" class="filter-checkbox">
                     <input id="styled-checkbox-1" type="checkbox">
                     <label for="styled-checkbox-1">
@@ -481,8 +485,8 @@
                 </div>
 
                 <div class="filter__aside__item">
-                  <h4 class="filter__aside__title">Soort zorg:
-                    <button type="button" class="btn btn-popover ml-1" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
+                  <h4 class="filter__aside__title"><span class="mr-1">Soort zorg:</span>
+                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
                   <a href="#" class="filter-checkbox">
                     <input id="styled-checkbox-4" type="checkbox">
                     <label for="styled-checkbox-4">
@@ -508,14 +512,16 @@
                     </label>
                   </a>
 
-                  <button type="button" class="btn btn-link d-block w-100 pl-2" data-toggle="modal" data-target="#kies-een-plaats-modal">
+
+                  <a class="btn btn-link d-block w-100 pl-2" data-toggle="modal" href="#kies-een-plaats-modal" role="button" aria-expanded="false" aria-controls="kies-een-plaats-modal">
                     <i class="icon-caret-right"></i> Meer gespecialiseerd in
-                  </button>
+                  </a>
+
                 </div>
 
                 <div class="filter__aside__item">
-                  <h4 class="filter__aside__title">Digitale diensten:
-                    <button type="button" class="btn btn-popover ml-1" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
+                  <h4 class="filter__aside__title"><span class="mr-1">Digitale diensten:</span>
+                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
                   <a href="#" class="filter-checkbox">
                     <input id="styled-checkbox-8" type="checkbox">
                     <label for="styled-checkbox-8">
@@ -537,8 +543,8 @@
                 </div>
 
                 <div class="filter__aside__item">
-                  <h4 class="filter__aside__title">Afstand tot Rotterdam:
-                    <button type="button" class="btn btn-popover ml-1" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
+                  <h4 class="filter__aside__title"><span class="mr-1">Afstand tot Rotterdam:</span>
+                    <button type="button" class="btn btn-popover" data-container="body" data-html="true" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="<div class='popover-content'>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>">explain</button></h4>
                   <a href="#" class="filter-radio">
                     <input id="styled-radio-1" type="radio" name="styled-radios-1" value="option1">
                     <label for="styled-radio-1">
@@ -687,6 +693,10 @@
     </section>
   </main>
 
+  <div id="cookieBar" class="alert alert-warning alert-dismissible fade show cookieBar is-active" role="alert">
+    <p>Deze website gebruikt cookies om de website te verbeteren. Als u geen cookies wilt accepteren kunt u <a href="#" class="readmore">hier</a> klikken voor meer informatie. <a href="#" class="cookiebar-close" data-dismiss="alert">sluiten</a></p>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__nav" id="accordionExample">
@@ -779,15 +789,78 @@
                 <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
                 <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
                 <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
+                <a href="#" class="link-radio">Almere<span class="link-radio__counter">(12)</span></a>
+                <a href="#" class="link-radio">Lorem<span class="link-radio__counter">(13)</span></a>
+                <a href="#" class="link-radio">Ipsum<span class="link-radio__counter">(14)</span></a>
               </div>
   
               <div class="col-md-4 mb-4 mb-md-0">
                 <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
                 <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
                 <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">Sit<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">Amet<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">Donec<span class="link-radio__counter">(71)</span></a>
               </div>
   
               <div class="col-md-4">
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
+                <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
+                <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
+                <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
                 <a href="#" class="link-radio">nisi<span class="link-radio__counter">(22)</span></a>
                 <a href="#" class="link-radio">dapibus<span class="link-radio__counter">(99)</span></a>
                 <a href="#" class="link-radio">sodales<span class="link-radio__counter">(71)</span></a>
@@ -800,7 +873,8 @@
   </div>
 
   <script src="assets/javascript/vendors.min.js"></script>
-  <script src="assets/javascript/readmore/readmore/jquery.readmore.min.js"></script>
+  <script src="assets/javascript/main.js"></script>
+  <script src="assets/javascript/rating.js"></script>
   <script src="assets/javascript/scripts.js"></script>
 
 </body>

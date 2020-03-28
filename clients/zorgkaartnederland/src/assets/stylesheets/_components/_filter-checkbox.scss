@@ -25,7 +25,7 @@ $checkbox-size: 16px;
   }
 
   label {
-    @extend .m-0, .position-relative, .d-block, .font-icons, .icon-checkmark, .text-blue;
+    @extend .m-0, .position-relative, .d-block, .font-icons, .icon-checkmark, .text-muted;
     cursor: pointer;
     padding-left: calc(#{$checkbox-size} + 12px);
 
@@ -44,17 +44,18 @@ $checkbox-size: 16px;
     }
 
     &:before {
-      @extend .text-white, .position-absolute, .fs-12, .invisible;
-      left: 2px;
-      top: 1px;
+      @extend .text-white, .position-absolute, .fs-10, .invisible;
+      left: 3px;
+      top: 3px;
       z-index: 2;
       @include media-breakpoint-up(md) {
-        top: 4px;
+        top: 6px;
       }
     }
   }
 }
 
 .filter-checkbox__counter {
-  @extend .ml-1, .d-inline-block, .text-blue-thin;
+  @extend .ml-1, .d-inline-block;
+  color: #a4a4a4 !important;
 }

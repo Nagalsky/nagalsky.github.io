@@ -2,7 +2,7 @@
 .btn {
   @extend .align-items-center, .justify-content-center;
   display: inline-flex;
-  font-family: $font-base-bold;
+  font-weight: $font-base-bold;
   font-size: 1rem;
   border: none;
   box-shadow: none;
@@ -21,8 +21,19 @@
     }
   }
 
+  &-gradient-primary {
+    @extend .text-white;
+    background-image: linear-gradient(to bottom, $brand-color 0, $brand-contrast-color 100%);
+
+    &:focus,
+    &:hover {
+      background-image: linear-gradient(to bottom, $brand-color 0, $brand-color 100%);
+    }
+  }
+
   &.btn-link {
-    @extend .font-base-regular, .text-left;
+    @extend .text-left;
+    font-weight: $font-base-regular;
     @include themify($themes) {
       color: themed('themeColor');
     }
@@ -31,6 +42,7 @@
   &.btn-secondary {
     @extend .text-blue;
     @include gradient-y($start-color: #f3f3f3, $end-color: #e7e5e6, $start-percent: 0%, $end-percent: 100%);
+    box-shadow: inset -1px -2px 3px 0 rgba($black,0.25);
 
     &:focus,
     &:hover {

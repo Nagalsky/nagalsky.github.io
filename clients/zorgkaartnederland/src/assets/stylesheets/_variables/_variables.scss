@@ -12,7 +12,7 @@ $silver-thin: #f0f1f4;
 $silver: #e4e4e4;
 $silver-soft: #D5D9E0;
 $orange-thin: #fef8ef;
-$orange: #F68300;
+$orange: #ff7800;
 $tenne: #D74100;
 $burst: #374051;
 $blue-thin: #98ABCA;
@@ -25,6 +25,7 @@ $muted: #5a5a5a;
 $sand: #F8E0BE;
 $brand-color: $orange;
 $brand-contrast-color: $tenne;
+$success: #3bab3a;
 
 .text-black {
   color: $black !important;
@@ -118,6 +119,10 @@ $brand-contrast-color: $tenne;
   color: $brand-contrast-color !important;
 }
 
+.text-success {
+  color: $success !important;
+}
+
 .bg-white {
   background-color: $white !important;
 }
@@ -209,28 +214,32 @@ $brand-contrast-color: $tenne;
 .bg-brand-contrast-color {
   background-color: $brand-contrast-color !important;
 }
+
+.bg-success {
+  background-color: $success !important;
+}
 /*************************
 	Fonts variables
 *************************/
-$font-base-light: 'HelveticaNeue-Light';
-$font-base-regular: 'HelveticaNeue-Regular';
-$font-base-medium: 'HelveticaNeue-Medium';
-$font-base-bold: 'HelveticaNeue-Bold';
+$font-base-light: 300;
+$font-base-regular: 400;
+$font-base-medium: 500;
+$font-base-bold: 600;
 
 .font-base-light {
-  font-family: $font-base-light !important;
+  font-weight: 300;
 }
 
 .font-base-regular {
-  font-family: $font-base-regular !important;
+  font-weight: 400;
 }
 
 .font-base-medium {
-  font-family: $font-base-medium !important;
+  font-weight: 500;
 }
 
 .font-base-bold {
-  font-family: $font-base-bold !important;
+  font-weight: 600;
 }
 $font-icons: "icomoon";
 
@@ -243,7 +252,7 @@ $font-icons: "icomoon";
 	Base variables
 *************************/
 $base-color: $muted;
-$base-font: $font-base-regular;
+$base-font: Helvetica Neue,Helvetica,Arial,sans-serif;
 $base-animation: 250ms;
 $base-border-color: $gray-thin;
 $base-border-accented-color: $muted-thin;
@@ -262,7 +271,7 @@ $font-path: "../fonts/";
 $body-font-family: $base-font;
 $body-font-size-desktop: 16px;
 $body-font-size-mobile: 14px;
-$body-line-height: 1.5;
+$body-line-height: 1.4;
 $body-main-color: $base-color;
 $body-bg: $gray-thin;
 /*************************

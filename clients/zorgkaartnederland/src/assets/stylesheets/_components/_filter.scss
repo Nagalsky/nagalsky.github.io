@@ -7,11 +7,10 @@
   @extend .flex-shrink-0;
   @include media-breakpoint-up(md) {
     width: 220px;
-    margin-right: 15px;
+    margin-right: 50px;
   }
   @include media-breakpoint-up(xl) {
     width: 268px;
-    margin-right: 50px;
   }
 }
 
@@ -64,7 +63,8 @@
 }
 
 .filter__aside__list__title {
-  @extend .m-0, .fs-16, .font-base-bold, .text-blue;
+  @extend .m-0, .fs-16, .text-blue;
+  font-weight: $font-base-bold;
 }
 
 .filter__aside__list__close {
@@ -83,7 +83,7 @@
 }
 
 .filter__aside__title {
-  @extend .mb-2, .fs-16, .d-flex, .align-items-center;
+  @extend .mb-2, .fs-16, .d-flex, .align-items-center, .flex-wrap;
 }
 
 .filter-header {
@@ -109,5 +109,6 @@
 }
 
 .filter-header__btn {
-  @extend .btn, .border-0, .p-0, .fs-14, .font-base-regular;
+  @extend .btn, .border-0, .p-0, .fs-14;
+  font-weight: $font-base-regular;
 }

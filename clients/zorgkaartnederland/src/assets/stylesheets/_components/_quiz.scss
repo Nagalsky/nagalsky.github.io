@@ -10,7 +10,7 @@ $quiz-score-size: 75px;
 
   .form-control {
     height: 45px;
-    @include custom-placeholder($color: #9DA7B4, $font-size: 16px, $font-family: $font-base-regular);
+    @include custom-placeholder($color: #9DA7B4, $font-size: 16px, $font-family: $font-base-regular, $letter-spacing: normal);
   }
 
   .select2-container--bootstrap {
@@ -74,17 +74,20 @@ $quiz-score-size: 75px;
 }
 
 .quiz__audio-payer-text {
-  @extend .d-inline-block, .base-radius, .text-white, .font-base-bold, .text-asphalt-soft, .bg-silver-soft, .fs-14, .text-truncate, .text-uppercase;
+  @extend .d-inline-block, .base-radius, .text-white, .text-asphalt-soft, .bg-silver-soft, .fs-14, .text-truncate, .text-uppercase;
+  font-weight: $font-base-bold;
   padding: 3.5px 10px;
   line-height: 1;
 }
 
 .quiz__title {
   @extend .text-burst, .fs-20;
+  margin-bottom: 25px;
 }
 
 .quiz__subtitle {
-  @extend .fs-16, .font-base-regular;
+  @extend .fs-16, .text-asphalt-soft;
+  font-weight: $font-base-regular;
 }
 
 .quiz__score-box {
@@ -99,7 +102,8 @@ $quiz-score-size: 75px;
 }
 
 .quize__score {
-  @extend .d-flex, .align-items-center, .justify-content-center, .rounded-circle, .bg-blue, .text-white, .font-base-bold, .fs-30, .flex-shrink-0;
+  @extend .d-flex, .align-items-center, .justify-content-center, .rounded-circle, .bg-blue, .text-white, .fs-30, .flex-shrink-0;
+  font-weight: $font-base-bold;
   width: $quiz-score-size;
   height: $quiz-score-size;
   border: 3px solid $white;

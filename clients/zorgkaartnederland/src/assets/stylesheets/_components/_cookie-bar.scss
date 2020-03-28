@@ -1,0 +1,27 @@
+/* COOKIE BAR */
+.cookieBar {
+  @extend .fixed-bottom, .text-white, .fs-13, .text-center, .rounded-0, .m-0,;
+  display: none;
+  background-color: rgba(#777470, .85);
+  border: none;
+  border-bottom: 1px solid #444;
+  box-shadow: $black 0 0 10px;
+  z-index: 250000000;
+  padding: 2px 15px;
+
+  &.is-active {
+    display: block;
+  }
+
+  .readmore {
+    @extend .text-white, .underline;
+  }
+
+  .cookiebar-close {
+    @extend .bg-white, .text-black;
+    font-weight: $font-base-bold;
+    padding: 4px 5px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+}

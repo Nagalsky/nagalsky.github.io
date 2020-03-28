@@ -55,7 +55,8 @@ $header-mobile-height: 51px;
   }
 
   .navbar-nav {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    padding-top: 1px;
 
     > .nav-item {
       &+.nav-item {
@@ -68,6 +69,9 @@ $header-mobile-height: 51px;
 
       > .nav-link {
         transition: none;
+        line-height: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
         @include themify($themes) {
           color: themed('themeColor');
         }
@@ -79,7 +83,7 @@ $header-mobile-height: 51px;
 .header__highlight {
   @extend .d-none, .d-lg-block, .position-absolute;
   left: 350px;
-  top: 19px;
+  top: 18px;
 }
 
 .header__logo {
