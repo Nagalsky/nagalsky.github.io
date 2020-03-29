@@ -4,60 +4,45 @@ $radio-size: 16px;
 .filter-radio {
   display: block;
   margin-bottom: 6px;
+  @extend .position-relative, .d-block, .font-icons, .icon-checkmark, .text-blue, .fs-16;
+  cursor: pointer;
+  padding-left: calc(#{$radio-size} + 12px);
 
-  input {
-    @extend .position-absolute, .invisible;
-
-    &:checked {
-      &~label {
-        &:after {
-          @include themify($themes) {
-            border-color: themed('themeColor');
-          }
-        }
-
-        &:before {
-          @extend .visible;
-        }
+  &.filter-radio__active {
+    &:after {
+      @include themify($themes) {
+        border-color: themed('themeColor');
       }
+    }
+
+    &:before {
+      @extend .visible;
     }
   }
 
-  label {
-    @extend .m-0, .position-relative, .d-block, .font-icons, .icon-checkmark, .text-blue;
-    cursor: pointer;
-    padding-left: calc(#{$radio-size} + 12px);
+  &:after,
+  &:before {
+    content: '';
+    @extend .position-absolute, .rounded-circle;
+  }
 
-    &:after,
-    &:before {
-      content: '';
-      @extend .position-absolute, .rounded-circle;
-    }
+  &:after {
+    left: 0;
+    top: 4px;
+    border-radius: 3px;
+    width: $radio-size;
+    height: $radio-size;
+    border: 1px solid $blue-thin;
+  }
 
-    &:after {
-      left: 0;
-      top: 2px;
-      border-radius: 3px;
-      width: $radio-size;
-      height: $radio-size;
-      border: 1px solid $blue-thin;
-      @include media-breakpoint-up(md) {
-        top: 5px;
-      }
-    }
-
-    &:before {
-      @extend .invisible;
-      left: 3px;
-      top: 5px;
-      width: calc(#{$radio-size} - 6px);
-      height: calc(#{$radio-size} - 6px);
-      @include media-breakpoint-up(md) {
-        top: 8px;
-      }
-      @include themify($themes) {
-        background-color: themed('themeColor');
-      }
+  &:before {
+    @extend .invisible;
+    left: 3px;
+    top: 7px;
+    width: calc(#{$radio-size} - 6px);
+    height: calc(#{$radio-size} - 6px);
+    @include themify($themes) {
+      background-color: themed('themeColor');
     }
   }
 }

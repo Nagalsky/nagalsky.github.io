@@ -4,54 +4,39 @@ $checkbox-size: 16px;
 .filter-checkbox {
   display: block;
   margin-bottom: 4px;
+  @extend .position-relative, .d-block, .font-icons, .icon-checkmark, .text-muted, .fs-16;
+  cursor: pointer;
+  padding-left: calc(#{$checkbox-size} + 12px);
 
-  input {
-    @extend .position-absolute, .invisible;
-
-    &:checked {
-      &~label {
-        &:after {
-          @include themify($themes) {
-            border-color: themed('themeColor');
-            background-color: themed('themeColor');
-          }
-        }
-
-        &:before {
-          @extend .visible;
-        }
-      }
-    }
-  }
-
-  label {
-    @extend .m-0, .position-relative, .d-block, .font-icons, .icon-checkmark, .text-muted;
-    cursor: pointer;
-    padding-left: calc(#{$checkbox-size} + 12px);
-
+  &.filter-checkbox__active {
     &:after {
-      content: '';
-      @extend .position-absolute;
-      left: 0;
-      top: 2px;
-      border-radius: 3px;
-      width: $checkbox-size;
-      height: $checkbox-size;
-      border: 1px solid $blue-thin;
-      @include media-breakpoint-up(md) {
-        top: 5px;
+      @include themify($themes) {
+        border-color: themed('themeColor');
+        background-color: themed('themeColor');
       }
     }
 
     &:before {
-      @extend .text-white, .position-absolute, .fs-10, .invisible;
-      left: 3px;
-      top: 3px;
-      z-index: 2;
-      @include media-breakpoint-up(md) {
-        top: 6px;
-      }
+      @extend .visible;
     }
+  }
+
+  &:after {
+    content: '';
+    @extend .position-absolute;
+    left: 0;
+    top: 4px;
+    border-radius: 3px;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $blue-thin;
+  }
+
+  &:before {
+    @extend .text-white, .position-absolute, .fs-10, .invisible;
+    left: 3px;
+    top: 5px;
+    z-index: 2;
   }
 }
 
