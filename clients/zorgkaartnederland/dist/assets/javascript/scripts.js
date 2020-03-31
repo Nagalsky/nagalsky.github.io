@@ -60,12 +60,16 @@ $(document).ready(function () {
   });
 
   //Modal filter search
-  $("#modal-search-field").on("keyup", function () {
+  $("#search-field").on("keyup", function () {
     var value = $(this).val().toLowerCase();
-    $("#modal-search-list *").filter(function () {
+    $("#search-list *").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
+
+
+
 
   //Init select2
   $('.select2').select2({
@@ -96,7 +100,16 @@ $(document).ready(function () {
 
   collapseTextBoxHeight()
 
-
+  // $('.input-search').blur(function () {
+  //   tmpval = $(this).val();
+  //   if (tmpval == '') {
+  //     $(this).addClass('empty');
+  //     $(this).removeClass('not-empty');
+  //   } else {
+  //     $(this).addClass('not-empty');
+  //     $(this).removeClass('empty');
+  //   }
+  // });
 
 
   $(window).resize(function () {

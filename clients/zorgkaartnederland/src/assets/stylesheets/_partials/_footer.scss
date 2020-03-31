@@ -9,9 +9,11 @@ $footer-social-item-size: 30px;
   }
 
   > .container {
-    @include media-breakpoint-up(md) {
-      padding-left: 30px;
-      padding-right: 30px;
+    &:not(.container--regular) {
+      @include media-breakpoint-up(md) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
     }
   }
 }
