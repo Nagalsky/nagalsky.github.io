@@ -6,10 +6,7 @@ html {
   font-family: $body-font-family;
   color: $body-main-color;
   line-height: $body-line-height;
-  font-size: $body-font-size-mobile;
-  @include media-breakpoint-up(sm) {
-    font-size: $body-font-size-desktop;
-  }
+  font-size: $body-font-size;
 }
 
 .h1,
@@ -35,27 +32,27 @@ h6 {
 
 .h1,
 h1 {
-  font-size: 51px;
+  font-size: 36px;
 }
 
 .h2,
 h2 {
-  font-size: 45px;
+  font-size: 30px;
 }
 
 .h3,
 h3 {
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .h4,
 h4 {
-  font-size: 26px;
+  font-size: 18px;
 }
 
 .h5,
 h5 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .h6,
@@ -65,17 +62,17 @@ h6 {
 
 a,
 button {
-  //@include transition($base-animation);
+  @include transition($base-animation);
   cursor: pointer;
 }
 
 a {
-  //color: $link-color;
+  color: $link-color;
   text-decoration: none;
 
   &:focus,
   &:hover {
-    //color: darken($link-color, 10%);
+    color: darken($link-color, 10%);
     text-decoration: none;
   }
 }
@@ -86,4 +83,9 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.bold,
+b {
+  font-family: $font-bold;
 }

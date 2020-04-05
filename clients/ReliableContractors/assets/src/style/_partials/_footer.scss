@@ -1,7 +1,18 @@
 /* FOOTER */
-
-
 .footer {
-  height: 200px;
-  @include gradient-x($start-color: rgba(white, .0), $end-color: rgba(white, .5), $start-percent: 0%, $end-percent: 100%);
+  @extend .position-relative;
+  z-index: 20;
+  padding: 40px;
+
+  &:before {
+    content: '';
+    @extend .position-absolute, .w-100, .h-100;
+    left: 0;
+    top: 0;
+    opacity: 0.02;
+    background-image: linear-gradient(to top, #203039, rgba(32, 48, 57, 0));
+  }
+  @include media-breakpoint-up(sm) {
+    padding: 80px 0 40px;
+  }
 }

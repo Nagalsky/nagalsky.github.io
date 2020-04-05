@@ -8,6 +8,7 @@ $blue-soft: #6fc5f5;
 $silver: #fafafb;
 $gray: #eeeeee;
 $muted: #849198;
+$muted-soft: #888888;
 
 .text-white {
   color: $white !important;
@@ -41,6 +42,10 @@ $muted: #849198;
   color: $muted !important;
 }
 
+.text-muted-soft {
+  color: $muted-soft !important;
+}
+
 .bg-white {
   background-color: $white !important;
 }
@@ -72,6 +77,10 @@ $muted: #849198;
 .bg-muted {
   background-color: $muted !important;
 }
+
+.bg-muted-soft {
+  background-color: $muted-soft !important;
+}
 /*************************
 	Fonts variables
 *************************/
@@ -80,6 +89,22 @@ $font-regular: 'Lato-Regular';
 $font-bold: 'Lato-Bold';
 $font-black: 'Lato-Black';
 $font-icons: "fontello";
+
+.font-light {
+  font-family: $font-light;
+}
+
+.font-regular {
+  font-family: $font-regular;
+}
+
+.font-bold {
+  font-family: $font-bold;
+}
+
+.font-black {
+  font-family: $font-black;
+}
 
 .font-icons {
   &:before {
@@ -93,6 +118,15 @@ $base-color: $black;
 $base-primary-color: $blue;
 $base-font: $font-regular;
 $base-animation: 250ms;
+$base-radius: 4px;
+
+.base-primary-color {
+  color: $base-primary-color !important;
+}
+
+.base-radius {
+  border-radius: $base-radius !important;
+}
 /*************************
 	Font path variable
 *************************/
@@ -101,8 +135,7 @@ $font-path: "../fonts/";
 	Body variables
 *************************/
 $body-font-family: $base-font;
-$body-font-size-desktop: 16px;
-$body-font-size-mobile: 16px;
+$body-font-size: 16px;
 $body-line-height: 1.5;
 $body-main-color: $base-color;
 /*************************
