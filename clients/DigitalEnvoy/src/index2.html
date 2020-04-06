@@ -2,100 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  //= template/head.html
   <title>Home page</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand mr-lg-5" href="#">
-        <img src="assets/images/elements/logo.svg" alt="" class="w-100">
-      </a>
-      <button class="navbar-share scroll-top-btn" type="button">
-        <i class="icon-digital-up-open"></i>
-      </button>
-      <!-- <button class="navbar-scroll-top" type="button">
-        <i class="icon-digital-angle-circled-up"></i>
-      </button> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="icon-digital-menu"></i>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">BUSINESS UNITS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">MANAGEMENT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT US</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  //= template/navbar.html
 
-  <div class="share-box">
-    <button class="share-box-close"><i class="icon-digital-cancel"></i></button>
-    <div class="container w-100">
-      <div class="row justify-content-center">
-        <div class="col-4">
-          <img src="assets/images/elements/DigitalElementGray.png" alt="" class="share-box__logo">
-          <div class="d-flex flex-column align-items-center">
-            <a href="#" class="share-box__btn facebook">
-              <i class="share-box__icon icon-digital-facebook"></i>
-            </a>
-            <a href="#" class="share-box__btn twitter">
-              <i class="share-box__icon icon-digital-twitter"></i>
-            </a>
-            <a href="#" class="share-box__btn youtube">
-              <i class="share-box__icon icon-digital-youtube-play"></i>
-            </a>
-          </div>
-        </div>
-  
-        <div class="col-4">
-          <img src="assets/images/elements/DigitalResolveGray.png" alt="" class="share-box__logo">
-          <div class="d-flex flex-column align-items-center">
-            <a href="#" class="share-box__btn facebook">
-              <i class="share-box__icon icon-digital-facebook"></i>
-            </a>
-            <a href="#" class="share-box__btn twitter">
-              <i class="share-box__icon icon-digital-twitter"></i>
-            </a>
-            <a href="#" class="share-box__btn youtube">
-              <i class="share-box__icon icon-digital-youtube-play"></i>
-            </a>
-          </div>
-        </div>
-  
-        <div class="col-4">
-          <img src="assets/images/elements/GathrLabGray.png" alt="" class="share-box__logo">
-          <div class="d-flex flex-column align-items-center">
-            <a href="#" class="share-box__btn facebook">
-              <i class="share-box__icon icon-digital-facebook"></i>
-            </a>
-            <a href="#" class="share-box__btn twitter">
-              <i class="share-box__icon icon-digital-twitter"></i>
-            </a>
-            <a href="#" class="share-box__btn youtube">
-              <i class="share-box__icon icon-digital-youtube-play"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  //= template/share.html
 
   <main class="main">
     <section class="hero" style="background-image: url('assets/images/bg/hero-bg.jpg');">
@@ -105,7 +19,7 @@
       </div>
     </section>
 
-    <section class="section section--has-shadow section--has-overlay my-paroller has-bg pb-0" style="background-image:url('assets/images/bg/about-bg.png');" data-paroller-factor="0.5">
+    <section class="section section--has-shadow section--has-overlay has-bg has-bg-fixed pb-0" style="background-image:url('assets/images/bg/about-bg.png');">
       <div class="container">
         <h2 class="text-center mb-4">Business Units</h2>
 
@@ -363,14 +277,9 @@
   </main>
 
 
-  <footer class="footer">
-    <div class="container">
-      <p>©2019, Digital Envoy. All Rights Reserved. Privacy Policy.</p>
-    </div>
-  </footer>
+  //= template/footer.html
 
-  <script src="assets/javascript/vendors.min.js"></script>
-  <script src="assets/javascript/scripts.js"></script>
+  //= template/scripts-dependencies.html
 </body>
 
 </html>
