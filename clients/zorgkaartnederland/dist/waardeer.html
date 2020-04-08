@@ -151,8 +151,8 @@
               <div class="fs-switch-holder">
                 <p class="fs-switch__title">Tekstgrootte</p>
                 <div class="fs-switch">
-                  <a href="#" class="fs-switch__btn fs-switch__btn--small">a</a>
-                  <a href="#" class="fs-switch__btn fs-switch__btn--large">a</a>
+                  <button type="button" class="fs-switch__btn fs-switch__btn--small" title="Lettergrote verkleinen" aria-label="Lettergrote verkleinen">a</button>
+                  <button type="button" class="fs-switch__btn fs-switch__btn--large" title="Lettergrote vergroten" aria-label="Lettergrote vergroten">a</button>
                 </div>
               </div>
             </div>
@@ -547,7 +547,7 @@
                 <p>Help andere mensen met dezelfde aandoening of beperking om goede zorg te kiezen.</p>
 
 
-                <select class="select2 w-100" name="state">
+                <select class="select2 w-100" name="state" aria-label="Voor welke aandoening of beperking krijgt u zorg?">
                   <option value="AL">Alabama</option>
                   <option value="WY">Wyoming</option>
                 </select>
@@ -579,7 +579,7 @@
                   <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                       <div class="radio">
-                        <input type="radio" name="radios1" id="radio1-1" value="option1">
+                        <input type="radio" name="radios1" id="radio1-1" value="option1" aria-label="Zou u tegen andere mensen met dezelfde aandoening of beperking zeggen dat dit een goede zorgaanbieder is?">
                         <label class="radio__label" for="radio1-1">
                           <p class="radio__title">Ja</p>
                           Ik zou deze zorgaanbieder aanbevelen
@@ -589,7 +589,7 @@
 
                     <div class="col-lg-6">
                       <div class="radio">
-                        <input type="radio" name="radios1" id="radio1-2" value="option2">
+                        <input type="radio" name="radios1" id="radio1-2" value="option2" aria-label="Zou u tegen andere mensen met dezelfde aandoening of beperking zeggen dat dit een goede zorgaanbieder is?">
                         <label class="radio__label" for="radio1-2">
                           <p class="radio__title">Nee</p>
                           Ik zou deze zorgaanbieder niet aanbevelen
@@ -798,7 +798,7 @@
                   <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                       <div class="radio">
-                        <input type="radio" name="radios3" id="radio3-1" value="option1">
+                        <input type="radio" name="radios3" id="radio3-1" value="option1" aria-label="Wilt u meewerken aan het zorgpanel van ZorgkaartNederland?">
                         <label class="radio__label" for="radio3-1">
                           <p class="radio__title">Ja</p>
                           Ik wil meewerken
@@ -808,7 +808,7 @@
 
                     <div class="col-lg-6">
                       <div class="radio">
-                        <input type="radio" name="radios3" id="radio3-2" value="option2">
+                        <input type="radio" name="radios3" id="radio3-2" value="option2" aria-label="Wilt u meewerken aan het zorgpanel van ZorgkaartNederland?">
                         <label class="radio__label" for="radio3-2">
                           <p class="radio__title">Nee</p>
                           Ik wil niet meewerken
@@ -868,16 +868,17 @@
         <div class="modal-header">
           <h5 class="modal-title">Kies een plaats</h5>
           <form class="search-filter-form">
-            <div class="form-group mb-0">
+            <div class="form-group">
               <input id="search-field" type="text" class="form-control bg-transparent input-search" placeholder="Zoeken">
               <i class="icon-search form-icon"></i>
+              <button type="button" class="btn-search-field-clear"><i class="icon-times-circle"></i></button>
             </div>
           </form>
         </div>
         <div class="modal-body">
           <div id="search-list">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
                 <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
                 <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
@@ -890,21 +891,16 @@
                 <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
                 <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
                 <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
-                <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
-                <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
-                <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
-                <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
-                <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
-                <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
-                <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
-                <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
-                <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
-                <a href="#" class="filter-radio">Almere<span class="filter-radio__counter">(12)</span></a>
-                <a href="#" class="filter-radio">Lorem<span class="filter-radio__counter">(13)</span></a>
-                <a href="#" class="filter-radio">Ipsum<span class="filter-radio__counter">(14)</span></a>
+                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
+                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
+                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
+                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
+                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
+                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
+                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
               </div>
   
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
                 <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
                 <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
@@ -917,45 +913,11 @@
                 <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
                 <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
                 <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">Sit<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">Amet<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">Donec<span class="filter-radio__counter">(71)</span></a>
-              </div>
-  
-              <div class="col-md-4">
                 <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
                 <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
                 <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
                 <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
                 <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
-                <a href="#" class="filter-radio">nisi<span class="filter-radio__counter">(22)</span></a>
-                <a href="#" class="filter-radio">dapibus<span class="filter-radio__counter">(99)</span></a>
-                <a href="#" class="filter-radio">sodales<span class="filter-radio__counter">(71)</span></a>
               </div>
             </div>
           </div>
