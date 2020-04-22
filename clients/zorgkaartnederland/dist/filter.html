@@ -202,7 +202,7 @@
           <div class="filter">
             <div class="filter__body">
               <div class="d-none d-md-flex align-items-md-center justify-content-md-between mb-4">
-                <div class="d-flex align-items-center"><i class="icon-map mr-3 color-theme fs-18" style="margin-left: 6px;"></i> <span class="fs-14">Toon kaart</span></div>
+                <a href="#" class="d-flex align-items-center text-muted"><i class="icon-map mr-3 color-theme fs-18 text-center" style="margin-left: 6px; min-width: 35px;"></i> <span class="fs-14">Toon kaart</span></a>
 
                 <div class="d-flex align-items-center">
                   <div class="text-nowrap mr-1 fs-14">Sorteren op:</div>
@@ -225,7 +225,7 @@
                       <p class="filter-result__role">Diëtist</p>
                       <div class="filter-result__places"><span class="badge">2 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
                       <div class="filter-result__places"><span class="badge">7 km</span> De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
-                      <a href="#" class="font-base-medium d-inline-block mt-2">Meer</a>
+                      <div class="filter-result__places"><a href="#" class="filter-result__meer-locaties">Meer locaties</a></div>
                     </div>
 
                     <div class="filter-result__body__right">
@@ -266,7 +266,7 @@
                       <p class="filter-result__role">Diëtist</p>
                       <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
                       <div class="filter-result__places">De Dieetpraktijk, locatie Amsterdam, Amsterdam</div>
-                      <a href="#" class="font-base-medium d-inline-block mt-2">Meer</a>
+                      <div class="filter-result__places"><a href="#" class="filter-result__meer-locaties">Meer locaties</a></div>
                     </div>
 
                     <div class="filter-result__body__right">
@@ -469,7 +469,7 @@
                   </div>
 
                   <div class="filter__aside__item">
-                    <h4 class="filter__aside__title"><span class="mr-1">Identiteit:</span>
+                    <h4 class="filter__aside__title"><span class="mr-1">Identiteit</span>
                       <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#identiteit-modal">Uitleg</button></h4>
                     <a href="#" class="filter-checkbox filter-checkbox__active">
                       Algemeen<span class="filter-checkbox__counter">(11)</span>
@@ -483,7 +483,7 @@
                   </div>
 
                   <div class="filter__aside__item">
-                    <h4 class="filter__aside__title"><span class="mr-1">Soort zorg:</span>
+                    <h4 class="filter__aside__title"><span class="mr-1">Soort zorg</span>
                       <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#soort-zorg-modal">Uitleg</button></h4>
                     <a href="#" class="filter-checkbox">
                       Langdurig verblijf<span class="filter-checkbox__counter">(26)</span>
@@ -499,14 +499,14 @@
                     </a>
 
 
-                    <a class="btn btn-link d-block w-100 pl-2" data-toggle="modal" href="#kies-een-plaats-modal" role="button" aria-expanded="false" aria-controls="kies-een-plaats-modal">
-                      <i class="icon-caret-right"></i> Meer gespecialiseerd in
+                    <a class="btn btn-link d-block w-100 pl-2 fs-16" data-toggle="modal" href="#kies-een-plaats-modal" role="button" aria-expanded="false" aria-controls="kies-een-plaats-modal">
+                      <i class="icon-caret-right filter__modal-icon"></i> Meer gespecialiseerd in
                     </a>
 
                   </div>
 
                   <div class="filter__aside__item">
-                    <h4 class="filter__aside__title"><span class="mr-1">Digitale diensten:</span>
+                    <h4 class="filter__aside__title"><span class="mr-1">Digitale diensten</span>
                       <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#digitale-diensten-modal">Uitleg</button></h4>
                     <a href="#" class="filter-checkbox">
                       Online medisch dossier<span class="filter-checkbox__counter">(13)</span>
@@ -520,7 +520,7 @@
                   </div>
 
                   <div class="filter__aside__item">
-                    <h4 class="filter__aside__title"><span class="mr-1">Afstand tot Rotterdam:</span>
+                    <h4 class="filter__aside__title"><span class="mr-1">Afstand tot Rotterdam</span>
                       <button type="button" class="btn btn-popover" data-toggle="modal" data-target="#afstand-tot-rotterdam-modal">Uitleg</button></h4>
                     <a href="#" class="filter-radio filter-radio__active">
                       Tot 5 km<span class="filter-radio__counter">(13)</span>
@@ -730,7 +730,7 @@
   </footer>
 
   <!-- Modal -->
-  <div class="modal modal--scrollable fade" id="kies-een-plaats-modal">
+  <div class="modal modal--scrollable" id="kies-een-plaats-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -798,7 +798,7 @@
   </div>
   
   
-  <div class="modal fade" id="identiteit-modal">
+  <div class="modal" id="identiteit-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -814,7 +814,7 @@
     </div>
   </div>
   
-  <div class="modal fade" id="soort-zorg-modal">
+  <div class="modal" id="soort-zorg-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -830,7 +830,7 @@
     </div>
   </div>
   
-  <div class="modal fade" id="digitale-diensten-modal">
+  <div class="modal" id="digitale-diensten-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -846,7 +846,7 @@
     </div>
   </div>
   
-  <div class="modal fade" id="afstand-tot-rotterdam-modal">
+  <div class="modal" id="afstand-tot-rotterdam-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

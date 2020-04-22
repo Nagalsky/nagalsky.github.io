@@ -27,7 +27,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    overflow-y: auto;
+    //overflow-y: auto;
     z-index: 980;
   }
 
@@ -50,16 +50,16 @@
   @include media-breakpoint-up(md) {
     margin-left: -1rem;
     margin-right: -1rem;
+    margin-bottom: 20px;
   }
   border-bottom: 1px solid $base-border-color;
-  margin-bottom: 20px;
   padding-right: 40px;
   z-index: 20;
   top: 0;
 }
 
 .filter__aside__footer {
-  @extend .position-sticky, .bg-white, .px-3, .py-2, .mt-auto, .w-100;
+  @extend .position-fixed, .bg-white, .px-3, .py-2, .mt-auto, .w-100;
   border-top: 1px solid $base-border-color;
   left: 0;
   bottom: 0;
@@ -79,7 +79,9 @@
 
 .filter__aside__items {
   @include media-breakpoint-down(sm) {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+    overflow-y: auto;
+    padding-top: 20px;
   }
 }
 
@@ -133,8 +135,16 @@
   @extend .btn, .border-0, .p-0, .fs-14;
   font-weight: $font-base-regular;
   align-items: flex-start !important;
+  color: #495057;
 }
 
 .filter-header__btn-icon {
   @extend .fs-18, .mr-2;
+}
+
+.filter__modal-icon {
+  margin-right: 9px;
+  @include media-breakpoint-down(sm) {
+    margin-right: 11px;
+  }
 }

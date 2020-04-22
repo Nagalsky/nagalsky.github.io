@@ -4,7 +4,7 @@ html {
   font-family: $body-font-family;
   color: $body-main-color;
   line-height: $body-line-height;
-  background: url("../images/bg/bubbles.svg") center top no-repeat $body-bg;
+  background: url("../../images/bg/bubbles.svg") center top no-repeat $body-bg;
   font-size: $body-font-size-mobile;
   font-weight: $font-base-regular;
   @include media-breakpoint-up(md) {
@@ -53,6 +53,9 @@ h2 {
 .h3,
 h3 {
   font-size: 18px;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
 }
 
 .h4,
@@ -85,9 +88,9 @@ a {
 
   &:focus,
   &:hover {
-    @include themify($themes) {
-      color: darken(themed('themeColor'), 10%);
-    }
+    // @include themify($themes) {
+    //   color: darken(themed('themeColor'), 10%);
+    // }
     text-decoration: none;
   }
 }
@@ -109,7 +112,7 @@ p {
 
 .bold,
 b {
-  font-family: $title-font;
+  font-weight: $title-font;
 }
 
 .scroll-lock {

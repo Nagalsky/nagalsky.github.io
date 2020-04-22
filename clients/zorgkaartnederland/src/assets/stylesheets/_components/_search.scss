@@ -2,6 +2,28 @@
 #search-form .twitter-typeahead {
   @extend .d-block, .p-0;
 
+  .tt-footer input[type="submit"] {
+    font-weight: bold;
+    padding: 10px 10px 10px 50px;
+    display: block;
+    text-align: left;
+    color: #ff7800;
+    white-space: normal;
+    height: auto;
+  }
+
+  .search_field_holder .tt-suggestion .ta-image {
+    display: block;
+    float: left;
+    color: #ff7800;
+    text-align: center;
+    padding: 7px 12px 10px;
+
+    i {
+      font-size: 25px;
+    }
+  }
+
   input {
     font-size: 13px;
     border-color: #e3e3e3;
@@ -114,7 +136,8 @@
 }
 
 .search-field {
-  @extend .position-relative;
+  @extend .position-relative, .bg-white;
+  border-radius: 4px;
 
   .btn-submit {
     @extend .position-absolute, .h-100, .border-0, , .py-0, .d-flex, .align-items-center;

@@ -62,10 +62,26 @@ $(document).ready(function () {
   //Modal filter search
   $("#search-field").on("keyup", function () {
     var value = $(this).val().toLowerCase();
+    tmpval = $(this).val();
+    if (tmpval == '') {
+      $(this).parent().addClass('empty');
+      $(this).parent().removeClass('not-empty');
+    } else {
+      $(this).parent().addClass('not-empty');
+      $(this).parent().removeClass('empty');
+    }
     $("#search-list *").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
+  $('.btn-search-field-clear').on('click', function (e) {
+    e.preventDefault()
+    $("#search-field").val('');
+    $("#search-field").parent().removeClass('not-empty').addClass('empty');
+    $("#search-list *").removeAttr('style');
+  });
+
 
 
 
@@ -81,9 +97,9 @@ $(document).ready(function () {
   //Open/close mobile collapsed text
   $('[data-collapse-open]').on('click', function (e) {
     e.preventDefault()
-    $(this).parent().remove()
+    $(this).parent().toggleClass('is-open')
     var element = $(this).attr('data-collapse-open');
-    $('[data-collapse-element = ' + element + ']').addClass('is-opened');
+    $('[data-collapse-element = ' + element + ']').toggleClass('is-opened');
   });
 
   function collapseTextBoxHeight() {
@@ -100,16 +116,7 @@ $(document).ready(function () {
 
   collapseTextBoxHeight()
 
-  // $('.input-search').blur(function () {
-  //   tmpval = $(this).val();
-  //   if (tmpval == '') {
-  //     $(this).addClass('empty');
-  //     $(this).removeClass('not-empty');
-  //   } else {
-  //     $(this).addClass('not-empty');
-  //     $(this).removeClass('empty');
-  //   }
-  // });
+
 
 
   $(window).resize(function () {

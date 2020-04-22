@@ -34,6 +34,11 @@
   &.btn-link {
     @extend .text-left;
     font-weight: $font-base-regular;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
     @include themify($themes) {
       color: themed('themeColor');
     }

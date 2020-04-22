@@ -11,6 +11,10 @@ $field-border-color: $blue;
 		@include custom-placeholder-opacity($opacity: 0);
 		border-color: darken($field-border-color, 10%);
 	}
+
+	&::-ms-clear {
+		display: none;
+	}
 }
 
 select.form-control {
@@ -52,18 +56,18 @@ input[type="search"]::-webkit-search-results-decoration {
 	@extend .mt-3, .w-100;
 	max-width: 250px;
 
-	&.is-not-empty {
-		.form-icon {
-			@extend .d-none;
-		}
-
-		.btn-search-field-clear {
-			display: block !important;
-		}
-	}
-
 	.form-group {
 		@extend .position-relative;
+
+		&.not-empty {
+			.form-icon {
+				@extend .d-none;
+			}
+
+			.btn-search-field-clear {
+				display: block !important;
+			}
+		}
 	}
 
 	.input-search {

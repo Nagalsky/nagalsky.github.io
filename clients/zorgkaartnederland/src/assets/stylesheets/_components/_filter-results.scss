@@ -14,7 +14,7 @@
 }
 
 .filter-result__avatar {
-  @extend .flex-shrink-0, .mr-3;
+  @extend .flex-shrink-0, .mr-3, .text-center;
   width: 38px;
   @include media-breakpoint-up(md) {
     width: 44px;
@@ -78,5 +78,13 @@
   sup {
     font-size: 21px;
     top: -12px;
+  }
+}
+
+.filter-result__meer-locaties {
+  @extend .font-base-medium, .d-inline-block, .d-inline-flex, .align-items-center;
+
+  &:before {
+    @extend .mr-2;
   }
 }
