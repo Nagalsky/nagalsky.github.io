@@ -1,0 +1,100 @@
+/* NAVBAR */
+.navbar {
+  @extend .p-lg-0, .fixed-top;
+  background-color: $muted;
+  @include media-breakpoint-up(lg) {
+    @include gradient-y($start-color: #dcdcdc, $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+  }
+}
+
+.navbar-brand {
+  @extend .position-relative, .mr-5, .flex-shrink-0;
+  max-width: 100px;
+  min-height: 67px;
+  @include media-breakpoint-up(lg) {
+    max-width: 220px;
+    min-height: 157px;
+    padding: 35px;
+    background-color: $muted;
+  }
+
+  &:before {
+    @extend .position-absolute, .d-inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent $muted;
+    top: 0;
+    right: -20px;
+    @include media-breakpoint-up(lg) {
+      content: "";
+      border-width: 157px 0 0 20px;
+    }
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    &+.nav-item {
+      @include media-breakpoint-up(xl) {
+        margin-left: 15px;
+      }
+    }
+
+    &.active {
+      .nav-link {
+        @extend .text-orange;
+      }
+    }
+
+    .nav-link {
+      @extend .text-uppercase;
+      letter-spacing: -0.48px;
+      color: $white;
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        color: $black;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 18px;
+      }
+
+      &:focus,
+      &:hover {
+        @extend .text-orange;
+      }
+    }
+  }
+}
+
+.navbar-social-toggle {
+  @extend .position-relative, .text-white, .d-flex, .align-items-center, .justify-content-center, .ml-auto;
+  cursor: pointer;
+  font-size: 24px;
+  @include media-breakpoint-up(lg) {
+    width: 140px;
+    height: 157px;
+    font-size: 40px;
+    order: 10;
+    background-color: $orange;
+  }
+
+  &:before {
+    @extend .position-absolute, .d-inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent $orange transparent transparent;
+    top: 0;
+    left: -20px;
+    @include media-breakpoint-up(lg) {
+      content: "";
+      border-width: 0 20px 157px 0;
+    }
+  }
+}
+
+.navbar-toggler {
+  @extend .px-0, .border-0, .text-white;
+  font-size: 30px;
+}

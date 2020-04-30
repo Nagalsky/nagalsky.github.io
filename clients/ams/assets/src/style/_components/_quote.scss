@@ -1,0 +1,34 @@
+/* QUOTE */
+.quote {
+  @extend .text-center, .text-white;
+}
+
+.quote__body {
+  @extend .position-relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+
+  &:after,
+  &:before {
+    @extend .position-absolute;
+    font-family: $font-icons;
+    font-size: 40px;
+  }
+
+  &:before {
+    content: '\e803';
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: '\e804';
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.quote__author {
+  @extend .text-uppercase, .font-medium-italic;
+}

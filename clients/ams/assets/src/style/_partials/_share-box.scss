@@ -1,0 +1,86 @@
+/* SHARE BOX */
+.share {
+  @extend .position-fixed, .w-100, .h-100, .overflow-auto, .invisible, .d-flex, .align-items-center, .justify-content-center, .text-white, .py-5;
+  left: 0;
+  top: 0;
+  background-color: rgba($muted, .95);
+  transition: $base-animation;
+  transform: scale(.95);
+  opacity: 0;
+  z-index: 1400;
+
+  &.is-opened {
+    @extend .visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.share-box__close {
+  @extend .btn, .p-0, .border-0, .position-absolute, .text-white;
+  right: 1rem;
+  top: 1rem;
+  font-size: 20px;
+
+  &:focus,
+  &:hover {
+    @extend .text-orange;
+  }
+}
+
+.share-box__logo {
+  @extend .w-100, .d-block, .mx-auto;
+  max-width: 200px;
+  margin-bottom: 30px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px;
+  }
+}
+
+.share-box__btn {
+  @extend .d-flex, .bg-white, .align-items-center, .justify-content-center;
+  width: 60px;
+  height: 60px;
+  color: $black;
+  @include rotate(45deg);
+  @include media-breakpoint-down(sm) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.facebook {
+    &:focus,
+    &:hover {
+      color: #3b5998;
+    }
+  }
+
+  &.twitter {
+    &:focus,
+    &:hover {
+      color: #1da1f2;
+    }
+  }
+
+  &.youtube {
+    &:focus,
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  &+.share-box__btn {
+    margin-top: 50px;
+  }
+}
+
+.share-box__icon {
+  font-size: 20px;
+  @include rotate(-45deg);
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}

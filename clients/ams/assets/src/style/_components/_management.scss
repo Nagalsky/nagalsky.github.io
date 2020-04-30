@@ -1,0 +1,108 @@
+/* MANAGEMENT */
+.managements {
+  .slick-arrow {
+    @extend .border-0, .p-0, .bg-transparent, .position-absolute;
+    font-size: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &.slick-prev {
+      left: 0;
+      @include media-breakpoint-up(xl) {
+        left: -40px;
+      }
+
+      &:before {
+        border-width: 15px 26.0px 15px 0;
+        border-color: transparent rgba($black, .2) transparent transparent;
+      }
+    }
+
+    &.slick-next {
+      right: 0;
+      @include media-breakpoint-up(xl) {
+        right: -40px;
+      }
+
+      &:before {
+        border-width: 15px 0 15px 26.0px;
+        border-color: transparent transparent transparent rgba($black, .2);
+      }
+    }
+  }
+}
+
+.management {
+  @extend .d-flex, .flex-column, .flex-md-row, .align-items-center;
+}
+
+.management__box {
+  @extend .flex-shrink-0;
+}
+
+.management__box__inner {
+  @extend .has-bg;
+  background-image: url("../img/bg/management-gallery-bg.png");
+  margin-bottom: 20px;
+  width: 280px;
+  padding: 40px;
+  @include media-breakpoint-up(md) {
+    width: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 380px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 460px;
+    padding: 60px;
+  }
+}
+
+.management__avatar {
+  @extend .rounded-circle, .overflow-hidden;
+}
+
+.management__content {
+  @extend .flex-fill, .text-gray, .position-relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60px;
+  }
+
+  &:after,
+  &:before {
+    @extend .position-absolute, .text-orange;
+    font-family: $font-icons;
+    font-size: 30px;
+  }
+
+  &:before {
+    content: '\e803';
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: '\e804';
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.management__name {
+  @extend .mb-2, .text-orange, .text-uppercase, .text-center;
+}
+
+.management__role {
+  @extend .text-gray, .text-uppercase, .mb-4, .text-center;
+}
