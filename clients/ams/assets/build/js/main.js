@@ -18482,7 +18482,7 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     adaptiveHeight: true,
-    pauseOnFocus: false
+    pauseOnFocus: false,
   });
 
   //Parallax initial
