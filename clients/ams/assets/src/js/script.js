@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 
   $(".partners").slick({
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     dots: true,
     pauseOnFocus: false,
