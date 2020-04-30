@@ -5495,7 +5495,7 @@ button.bg-dark:focus {
   -webkit-box-flex: 1 !important;
           flex-grow: 1 !important; }
 
-.flex-shrink-0, .navbar-brand, .management__box, .floated-box__img {
+.flex-shrink-0, .navbar-brand, .management__box, .floated-box__img-holder {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -5980,7 +5980,7 @@ button.bg-dark:focus {
 .overflow-auto, .share {
   overflow: auto !important; }
 
-.overflow-hidden, .management__avatar {
+.overflow-hidden, .management__avatar, .floated-box__img-holder {
   overflow: hidden !important; }
 
 .position-static {
@@ -6060,7 +6060,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .share, .share-box__logo, .footer__logo, .hero__item:before, .slick-dots {
+.w-100, .share, .share-box__logo, .footer__logo, .hero__item:before, .slick-dots, .floated-box__img {
   width: 100% !important; }
 
 .w-auto {
@@ -8530,11 +8530,18 @@ textarea.form-control {
     .floated-box + .floated-box {
       margin-top: 100px; } }
 
-.floated-box__img {
+.floated-box__img-holder {
   width: 100%; }
   @media (min-width: 768px) {
-    .floated-box__img {
-      width: 40%; } }
+    .floated-box__img-holder {
+      width: 40%; }
+      .floated-box__img-holder:hover > img {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3); } }
+
+.floated-box__img {
+  -webkit-transition: 250ms;
+  transition: 250ms; }
 
 .floated-box__content {
   padding: 25px 15px; }
