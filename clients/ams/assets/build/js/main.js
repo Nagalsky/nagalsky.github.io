@@ -18495,7 +18495,10 @@ $(document).ready(function () {
     adaptiveHeight: true,
     fade: true,
     cssEase: "linear",
-    pauseOnFocus: false
+    pauseOnFocus: false,
+    speed: 1200,
+    pauseOnHover: false,
+    autoplaySpeed: 5000
   });
 
   //Managements slider
