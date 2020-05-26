@@ -3,16 +3,21 @@
   @extend .p-lg-0, .fixed-top;
   background-color: $muted;
   @include media-breakpoint-up(lg) {
-    @include gradient-y($start-color: #dcdcdc, $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+    @include gradient-y(
+      $start-color: #dcdcdc,
+      $end-color: $white,
+      $start-percent: 0%,
+      $end-percent: 100%
+    );
   }
 }
 
 .navbar-brand {
   @extend .position-relative, .mr-5, .flex-shrink-0;
-  max-width: 100px;
+  width: 100px;
   min-height: 67px;
   @include media-breakpoint-up(lg) {
-    max-width: 220px;
+    width: 220px;
     min-height: 157px;
     padding: 35px;
     background-color: $muted;
@@ -35,7 +40,7 @@
 
 .navbar-nav {
   .nav-item {
-    &+.nav-item {
+    & + .nav-item {
       @include media-breakpoint-up(xl) {
         margin-left: 15px;
       }
@@ -68,7 +73,12 @@
 }
 
 .navbar-social-toggle {
-  @extend .position-relative, .text-white, .d-flex, .align-items-center, .justify-content-center, .ml-auto;
+  @extend .position-relative,
+    .text-white,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .ml-auto;
   cursor: pointer;
   font-size: 24px;
   @include media-breakpoint-up(lg) {
