@@ -1,0 +1,23 @@
+/* BUTTONS */
+.btn {
+  font-size: 14px;
+  display: inline-flex;
+  @extend .font-base-bold, .align-items-center;
+  padding: 8px 25px;
+  @include media-breakpoint-up(md) {
+    padding: 10px 45px;
+  }
+
+  &-primary {
+    @include button-variants($bg: $primary, $color: $white);
+  }
+
+  &-link {
+    color: $black;
+
+    &:focus,
+    &:hover {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/* RANGE SLIDER */
+$handle-size: 24px;
+
+.irs-max,
+.irs-min {
+  @extend .d-none;
+}
+
+.irs--flat .irs-bar {
+  @extend .bg-primary;
+}
+
+.irs-handle {
+  &.single {
+    width: $handle-size;
+    height: $handle-size;
+    @extend .bg-primary, .rounded-circle;
+    top: 19px;
+
+    > * {
+      @extend .d-none;
+    }
+  }
+}
+
+.irs--flat .irs-single {
+  @extend .bg-primary, .font-base-semibold;
+  top: -25px;
+  padding: 4px 12px;
+  font-size: 20px;
+
+  &:before {
+    border-top-color: $primary;
+  }
+}

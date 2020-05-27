@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  //= template/head.html
+  <title>Signup page</title>
+</head>
+
+<body>
+
+  //= template/header.html
+
+  <main class="main">
+    <div class="wizard">
+      <div class="wizard__body">
+
+        <ol id="progressbar" class="wizard-nav">
+          <li class="wizard-nav__item active">
+            <h4 class="wizard-nav__heading"><img src="img/elements/step-logo-1.svg" alt="" class="wizard-nav__logo">Sign Up</h4>
+            <p class="wizard-nav__text">Please enter your best valid email address
+              and password. After Sign Up you will be
+              asked to validate your email address.</p>
+          </li>
+          <li class="wizard-nav__item">
+            <h4 class="wizard-nav__heading"><img src="img/elements/step-logo-2.svg" alt="" class="wizard-nav__logo">Setup Account Type</h4>
+            <p class="wizard-nav__text">Are you a solo individual or an agency
+              with team members? Heropost will allow
+              you to allocate sub-users into your account.</p>
+          </li>
+          <li class="wizard-nav__item">
+            <h4 class="wizard-nav__heading"><img src="img/elements/step-logo-3.svg" alt="" class="wizard-nav__logo">Allocate Social Platforms</h4>
+            <p class="wizard-nav__text">Select specific social platforms you would
+              like to work with and the amount of accounts
+              needed for each.</p>
+          </li>
+          <li class="wizard-nav__item">
+            <h4 class="wizard-nav__heading"><img src="img/elements/step-logo-4.svg" alt="" class="wizard-nav__logo">Review and Get Started</h4>
+            <p class="wizard-nav__text">Review the changes you made to your custom
+              Heropost account. </p>
+          </li>
+        </ol>
+
+        <div class="wizard__steps">
+          <div class="wizard__step">
+            <div class="wizard__step-body">
+              <img src="img/elements/step-logo-1.svg" alt="" class="wizard__step-logo">
+              <h2 class="wizard__heading">sign up</h2>
+
+              <form class="wizard__form">
+                <div class="form-row">
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="heropost-icon-user"></i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Fullname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="heropost-icon-user"></i>
+                          </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email address">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="heropost-icon-lock"></i>
+                          </div>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="heropost-icon-lock"></i>
+                          </div>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="heropost-icon-clock"></i>
+                        </div>
+                      </div>
+                      <select name="" id="" class="form-control">
+                        <option value="">(UTC - 04:00) America/New_York</option>
+                        <option value="">(UTC - 04:00) Ukraine</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-5 text-center">
+                  <div class="custom-control custom-switch mb-2">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label font-base-semibold" for="customSwitch1">I agree to all <a href="#">Terms of Services</a></label>
+                  </div>
+
+                  <p class="text-sky">*after signing up you will be asked<br class="d-none d-md-inline-block" />
+                    to validate your email address.</p>
+                </div>
+              </form>
+            </div>
+
+            <div class="wizard__step-footer">
+              <button type="button" name="button" class="btn btn-link px-0">Cancel</button>
+              <button type="button" name="button" class="btn btn-primary wizard__next-step">Next Step <i class="heropost-icon-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <div class="wizard__step">
+            <div class="wizard__step-body">
+              <img src="img/elements/step-logo-2.svg" alt="" class="wizard__step-logo">
+              <h2 class="wizard__heading">SETUP ACCOUNT TYPE</h2>
+
+              <div class="nav tabs tabs--centered">
+                <a class="tab active" data-toggle="tab" href="#tab-1">Individual</a>
+                <a class="tab" data-toggle="tab" href="#tab-2">Agency</a>
+              </div>
+
+              <div class="tab-content text-center">
+                <div class="tab-pane fade show active" id="tab-1">
+                  <div class="wizard__rangle-slider-holder">
+                    <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="30" data-from="15" />
+                  </div>
+
+                  <h4 class="text-muted-thin">Tab 1</h4>
+                </div>
+
+                <div class="tab-pane fade" id="tab-2">
+                  <div class="wizard__rangle-slider-holder">
+                    <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="30" data-from="5" />
+                  </div>
+
+                  <h4 class="text-muted-thin">Team Members</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard__step-footer">
+              <button type="button" name="button" class="btn btn-link px-0 wizard__previous-step">Cancel</button>
+              <button type="button" name="button" class="btn btn-primary wizard__next-step">Next Step <i class="heropost-icon-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <div class="wizard__step">
+            <div class="wizard__step-body">
+              <img src="img/elements/step-logo-3.svg" alt="" class="wizard__step-logo">
+              <h2 class="wizard__heading">ALLOCATE SOCIAL PLATFORMS</h2>
+
+              <div class="px-md-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="39" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">41</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="39" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">41</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="18" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">2</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="3" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">3</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="0" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">4</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="24" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">5</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="45" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">6</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="22" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">7</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="12" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">8</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="8" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">9</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="box">
+                      <div class="box__body">
+                        <img src="img/elements/social-box-logo.svg" alt="" class="box__logo">
+                        <div class="flex-fill">
+                          <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="50" data-from="2" />
+                        </div>
+                      </div>
+
+                      <div class="box__footer">
+                        <a href="#">10</a> Facebook Accounts
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard__step-footer">
+              <button type="button" name="button" class="btn btn-link px-0 wizard__previous-step">Cancel</button>
+              <button type="button" name="button" class="btn btn-primary wizard__next-step">Next Step <i class="heropost-icon-chevron-right"></i></button>
+            </div>
+
+          </div>
+
+          <div class="wizard__step">
+            <div class="wizard__step-body">
+              <img src="img/elements/step-logo-4.svg" alt="" class="wizard__step-logo">
+              <h2 class="wizard__heading">REVIEW AND GET STARTED</h2>
+            </div>
+
+            <div class="wizard__step-footer">
+              <button type="button" name="button" class="btn btn-link px-0 wizard__previous-step">Cancel</button>
+              <button type="button" name="button" class="btn btn-primary">Get Started 👌</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  //= template/scripts-dependencies.html
+</body>
+
+</html>
