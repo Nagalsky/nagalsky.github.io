@@ -2995,7 +2995,7 @@ var KTWidgets = (function() {
         radialBar: {
           hollow: {
             margin: 0,
-            size: "65%"
+            size: "60%"
           },
           dataLabels: {
             showOn: "always",
