@@ -18451,4 +18451,13 @@ y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scrol
 $(document).ready(function() {
   //Initial sticky header
   $(".header").stick_in_parent();
+
+  //Select all checkboxes in cart
+  $("#select-all-checkboxes").change(function() {
+    var checkboxes = $(this)
+      .closest("body")
+      .find(".cart-list")
+      .find(":checkbox");
+    checkboxes.prop("checked", $(this).is(":checked"));
+  });
 });

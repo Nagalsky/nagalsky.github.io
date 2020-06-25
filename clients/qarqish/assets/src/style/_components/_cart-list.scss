@@ -1,0 +1,18 @@
+/* CART LIST */
+
+.cart-list {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.cart-list__item {
+    @extend .checkbox;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid $silver;
+
+    .checkbox__label {
+        padding-left: calc(#{$checkbox-size} + 20px);
+    }
+}

@@ -22,6 +22,20 @@
         }
     }
 
+    &-icon {
+        @extend .p-0,
+        .bg-transparent,
+        .border-0;
+        color: $orange;
+
+        &:hover,
+        &:active,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+            color: darken($orange, 10%);
+        }
+    }
+
     &-long {
         @include media-breakpoint-up(md) {
             padding-left: 30px;

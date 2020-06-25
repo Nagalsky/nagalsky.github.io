@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  //= template/head.html
+  <title>Cart page</title>
+</head>
+
+<body>
+
+  //= template/header.html
+
+  <main class="main">
+    <section class="section pt-0 pt-md-3">
+      <nav aria-label="breadcrumb" class="d-md-none">
+        <ol class="breadcrumb breadcrumb--mobile">
+          <li class="breadcrumb-item"><a href="#">Cart</a></li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-4">
+          <nav aria-label="breadcrumb" class="d-none d-md-block">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+          </nav>
+
+          <div class="delivery-to ml-md-5">
+            <span class="font-medium d-inline-block mr-2">Delivery to:</span>
+            <a href="#" class="d-inline-block mr-2">(My house)</a> <span class="delivery-to__address">Old
+              airpart, Old airpart,Old airpart,Old
+              airpart</span>
+            <button type="button" class="btn btn-icon ml-3">
+              <i class="qarqish-icon-pen"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="checkbox">
+            <input type="checkbox" id="select-all-checkboxes" value="">
+            <label class="checkbox__label" for="select-all-checkboxes">Vip Gift (Open)</label>
+          </div>
+
+          <b class="text-brand flex-shrink-0 ml-4">Delivery 50 QAR (2 days) </b>
+        </div>
+
+        <div class="cart-list">
+          <div class="cart-list__item">
+            <input type="checkbox" id="checkbox-cart-1" value="">
+            <label class="checkbox__label" for="checkbox-cart-1">cart checkbox 1</label>
+          </div>
+
+          <div class="cart-list__item">
+            <input type="checkbox" id="checkbox-cart-2" value="">
+            <label class="checkbox__label" for="checkbox-cart-2">cart checkbox 2</label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  //= template/footer.html
+
+  //= template/scripts-dependencies.html
+</body>
+
+</html>
