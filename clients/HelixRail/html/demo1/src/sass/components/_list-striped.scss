@@ -1,0 +1,26 @@
+//
+// List striped
+//
+
+// Variables
+$list-striped-bg: $light;
+$list-striped-radius: 8px;
+
+.list-striped {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+.list-striped__item {
+	@extend .d-flex,
+	.align-items-center,
+	.justify-content-between;
+	border-radius: $list-striped-radius;
+	padding: 9px 16px;
+	color: $dark;
+
+	&:nth-child(odd) {
+		background-color: $list-striped-bg;
+	}
+}

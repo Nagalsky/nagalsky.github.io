@@ -1,0 +1,189 @@
+/* Header */
+
+
+.header {
+  @extend .bg-white,
+  .flex-shrink-0;
+  z-index: 1200;
+  border-bottom: 1px solid $silver;
+  padding: 5px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 10px 0;
+  }
+
+  &.is_stuck {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  >.container {
+    @extend .d-md-flex,
+    .flex-md-wrap,
+    .align-items-md-center;
+  }
+
+  .btn-header {
+    @extend .d-inline-flex,
+    .align-items-center,
+    .text-nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 40px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 35px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.header__left {
+  @extend .d-flex,
+  .align-items-center,
+  .flex-fill;
+}
+
+.header__logo {
+  @extend .d-block;
+  width: 80px;
+  margin-right: 10px;
+
+  @include media-breakpoint-up(md) {
+    margin-right: 30px;
+    width: 120px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 60px;
+  }
+}
+
+
+
+.header__form {
+  @extend .flex-fill;
+  margin-left: 10px;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-left: 60px;
+  }
+
+  .form-group {
+    @extend .mb-0,
+    .position-relative;
+  }
+
+  .form-control {
+    padding-right: 50px;
+
+    @include media-breakpoint-down(sm) {
+      height: 35px;
+    }
+  }
+
+  .btn-submit {
+    @extend .position-absolute,
+    .h-100,
+    .border-0,
+    .text-brand;
+    padding: 0 14px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.header__actions {
+  @extend .d-flex,
+  .align-items-center,
+  .justify-content-between,
+  .flex-shrink-0;
+
+  @include media-breakpoint-down(sm) {
+    border-top: 1px solid $brand;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-left: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 60px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-left: 90px;
+  }
+
+  >* {
+    &:not(:last-child) {
+      @include media-breakpoint-up(md) {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.header__link {
+  @extend .text-brand,
+  .position-relative,
+  .d-inline-block;
+  font-size: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    @extend .text-orange;
+  }
+}
+
+.header__cart-counter {
+  @extend .d-flex,
+  .align-items-center,
+  .justify-content-center,
+  .rounded-circle,
+  .text-white,
+  .font-medium,
+  .position-absolute;
+  background-color: darken($orange, 10%);
+  left: 12px;
+  top: -6px;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+
+  @include media-breakpoint-up(md) {
+    left: 12px;
+    top: -12px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.header__lang-form {
+  .form-control {
+    @extend .border-0;
+    height: auto;
+    padding: 0 20px 0 0;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: right 0px center;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDQ1MS44IDQ1MS44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEuOCA0NTEuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNFRjVBMjg7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMjUuOSwzNTQuN2MtOC4xLDAtMTYuMi0zLjEtMjIuNC05LjNMOS4zLDE1MS4yYy0xMi40LTEyLjQtMTIuNC0zMi40LDAtNDQuOGMxMi40LTEyLjQsMzIuNC0xMi40LDQ0LjcsMAoJCWwxNzEuOSwxNzEuOWwxNzEuOS0xNzEuOWMxMi40LTEyLjQsMzIuNC0xMi40LDQ0LjcsMGMxMi40LDEyLjQsMTIuNCwzMi40LDAsNDQuOEwyNDguMywzNDUuNEMyNDIuMSwzNTEuNiwyMzQsMzU0LjcsMjI1LjksMzU0Ljd6IgoJCS8+CjwvZz4KPC9zdmc+Cg==");
+  }
+}
