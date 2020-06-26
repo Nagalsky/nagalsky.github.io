@@ -3,6 +3,7 @@
 .btn {
     @extend .font-medium;
     padding: 7px 20px;
+    border-radius: 4px;
 
     @include media-breakpoint-up(md) {
         font-size: 16px;
@@ -22,11 +23,27 @@
         }
     }
 
+    &-orange {
+        @include button-variants($bg: $orange, $color: $white)
+    }
+
     &-icon {
         @extend .p-0,
         .bg-transparent,
         .border-0;
         color: $orange;
+
+        &:hover,
+        &:active,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+            color: darken($orange, 10%);
+        }
+    }
+
+    &-link {
+        color: $orange;
+        padding: 0;
 
         &:hover,
         &:active,

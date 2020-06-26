@@ -3,10 +3,9 @@ $(document).ready(function() {
   $(".header").stick_in_parent();
 
   //Select all checkboxes in cart
-  $("#select-all-checkboxes").change(function() {
+  $('[data-select="all"]').change(function() {
     var checkboxes = $(this)
-      .closest("body")
-      .find(".cart-list")
+      .closest(".cart-box")
       .find(":checkbox");
     checkboxes.prop("checked", $(this).is(":checked"));
   });
