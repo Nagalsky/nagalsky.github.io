@@ -18,8 +18,5 @@
 //= ../../../node_modules/bootstrap/js/dist/tab.js
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 
-// Import Sticky top jQuery plugin
-//= ../../../node_modules/sticky-kit/dist/sticky-kit.min.js
-
 // Import custom js-files
 //= script.js

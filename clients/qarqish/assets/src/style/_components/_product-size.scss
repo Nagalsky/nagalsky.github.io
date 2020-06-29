@@ -1,0 +1,48 @@
+/* PRODUCT COLOR */
+
+$product-size-size: 24px;
+
+.product-sizes {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.product-size {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    input[type="radio"] {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        position: absolute;
+
+        &:focus {
+            &~.product-size__label {
+                box-shadow: 0 0 0 0.2rem rgba($success, .25) !important;
+            }
+        }
+
+        &:checked {
+            &~.product-size__label {
+                background-color: $success;
+                border-color: $success;
+                color: $white;
+            }
+        }
+    }
+}
+
+.product-size__label {
+    @extend .position-relative,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .m-0;
+    cursor: pointer;
+    height: $product-size-size;
+    width: $product-size-size;
+    border-radius: 2px;
+    border: 1px solid $gray-light;
+    font-size: 13px;
+}

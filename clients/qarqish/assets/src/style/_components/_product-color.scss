@@ -1,0 +1,83 @@
+/* PRODUCT COLOR */
+
+$product-colors-size: 24px;
+
+.product-colors {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.product-color {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    input[type="radio"] {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        position: absolute;
+
+        &:focus {
+            &~.product-color__label {
+                box-shadow: 0 0 0 0.2rem rgba($brand, .25) !important;
+            }
+        }
+
+        &:checked {
+            &~.product-color__label {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.product-color__label {
+    @extend .position-relative,
+    .m-0;
+    cursor: pointer;
+    height: $product-colors-size;
+    width: $product-colors-size;
+    border-radius: 2px;
+
+    &--red {
+        background-color: $danger;
+    }
+
+    &--gray {
+        background-color: $dark;
+    }
+
+    &--blue {
+        background-color: $blue;
+    }
+
+    &--yellow {
+        background-color: $yellow;
+    }
+
+    &--green {
+        background-color: $green;
+    }
+
+    &--white {
+        background-color: $white;
+
+        &:before {
+            content: '';
+            @extend .text-black;
+        }
+    }
+
+    &:before {
+        @extend .position-absolute,
+        .font-icons,
+        .qarqish-icon-checkmark,
+        .text-white,
+        .fs-18;
+        opacity: 0;
+        top: 0px;
+        left: 2px;
+    }
+}
