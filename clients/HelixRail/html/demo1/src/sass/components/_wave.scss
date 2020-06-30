@@ -8,7 +8,7 @@
 	overflow: hidden;
 	position: relative;
 
-	> div {
+	>div {
 		z-index: 1;
 	}
 
@@ -16,7 +16,7 @@
 		content: ' ';
 		position: absolute;
 		top: 0;
-		left:0;
+		left: 0;
 		right: 0;
 		bottom: 0;
 		background-color: $white;
@@ -67,15 +67,16 @@
 				animation: animate-wave 5s infinite linear;
 			}
 		}
-    }
+	}
 
-    @each $name, $color in $theme-colors{
-		&.wave-#{$name}{
+	@each $name,
+	$color in $theme-colors {
+		&.wave-#{$name} {
 			background-color: rgba($color, $component-light-style-opacity) !important;
 
-			.svg-icon{
-				svg{
-					g [fill]{
+			.svg-icon {
+				svg {
+					g [fill] {
 						fill: $color;
 					}
 				}

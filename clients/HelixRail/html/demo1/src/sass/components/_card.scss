@@ -12,20 +12,25 @@
     >.card-header {
         display: flex;
         justify-content: space-between;
-        align-items: stretch;
-        flex-wrap: wrap;
+        align-items: center;
         //height: $card-header-height;
+        position: relative;
         min-height: $card-header-height;
-        padding-top: 0;
-        padding-bottom: 0;
         background-color: transparent;
+        padding: 1.5rem 1rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 1rem 2rem;
+        }
+
+        &--lg {
+            height: $card-header-height + 26px;
+        }
 
         // Title
         .card-title {
-            display: flex;
-            align-items: center;
-            margin: $card-header-spacer-y;
-            margin-left: 0;
+            @extend .text-truncate;
+            margin: 0 $card-header-spacer-y 0 0;
             font-size: 18px;
             letter-spacing: -0.23px;
             color: $dark;
@@ -105,7 +110,12 @@
 
     // Body
     >.card-body {
-        padding: $card-spacer-y $card-spacer-x;
+        position: relative;
+        padding: 1.5rem 1rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 1rem 2rem 2rem 2rem;
+        }
     }
 
     // Footer
@@ -287,18 +297,6 @@
     border-bottom-right-radius: $card-border-radius;
 }
 
-// Mobile mode
-@include media-breakpoint-down(sm) {
-    .card.card-custom {
-
-        // Header
-        >.card-header:not(.flex-nowrap) {
-            min-height: 0;
-            padding-top: $card-header-spacer-y;
-            padding-bottom: $card-header-spacer-y;
-        }
-    }
-}
 
 // Card related helper classes
 .rounded-card {

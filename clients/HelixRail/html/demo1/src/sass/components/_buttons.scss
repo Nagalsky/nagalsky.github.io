@@ -2,6 +2,8 @@
 // Buttons
 //
 
+$btn-icon-size: 40px;
+
 
 // Base
 .btn {
@@ -103,8 +105,29 @@
 		align-items: center;
 		justify-content: center;
 		padding: 0;
-		height: $input-height;
-		width: $input-height;
+		height: $btn-icon-size;
+		width: $btn-icon-size;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $gray-200;
+
+			svg {
+				path {
+					fill: $dark;
+				}
+			}
+		}
+
+		svg {
+			width: calc(#{$btn-icon-size} - 16px);
+
+			path {
+				transition: $transition-link;
+				fill: $gray-600;
+			}
+		}
 
 		// Sizes
 		&.btn-xs {
