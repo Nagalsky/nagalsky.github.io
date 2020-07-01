@@ -81,6 +81,7 @@ var KTApexChartsDemo = (function() {
 
   var _demo2 = function() {
     const apexChart = "#chart_2";
+
     var options = {
       series: [
         {
@@ -105,7 +106,6 @@ var KTApexChartsDemo = (function() {
         curve: "straight"
       },
       xaxis: {
-        type: "datetime",
         categories: ["26 Aug", "27 Aug", "28 Aug", "29 Aug", "30 Aug", "02 Sep", "03 Sep"],
         axisBorder: {
           show: false
@@ -114,7 +114,20 @@ var KTApexChartsDemo = (function() {
           show: false
         }
       },
-      colors: ["#0174ff"]
+      colors: ["#0174ff"],
+      tooltip: {
+        custom: function({ series, seriesIndex, dataPointIndex, w }) {
+          return (
+            '<div class="chart-tooltip-holder chart-tooltip-holder--has-indicator">' +
+            "<span>" +
+            "Completed" +
+            ": " +
+            series[seriesIndex][dataPointIndex] +
+            "</span>" +
+            "</div>"
+          );
+        }
+      }
     };
 
     var chart = new ApexCharts(document.querySelector(apexChart), options);
@@ -1235,7 +1248,25 @@ var KTApexChartsDemo = (function() {
       fill: {
         opacity: 1
       },
-      colors: ["#0174ff"]
+      colors: ["#0174ff"],
+      tooltip: {
+        custom: function({ series, seriesIndex, dataPointIndex, w }) {
+          return (
+            '<div class="chart-tooltip-holder flex-column align-items-start">' +
+            "<span class='d-flex align-itesm-center justify-content-between'>" +
+            "Date" +
+            ": " +
+            series[seriesIndex][dataPointIndex] +
+            "</span>" +
+            "<span class='d-flex align-itesm-center justify-content-between'>" +
+            "Cantielever Installed" +
+            ": " +
+            series[seriesIndex][dataPointIndex] +
+            "</span>" +
+            "</div>"
+          );
+        }
+      }
     };
 
     var chart = new ApexCharts(document.querySelector(apexChart), options);

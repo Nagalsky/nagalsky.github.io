@@ -46,13 +46,14 @@
     &:before {
         content: '';
         @extend .position-absolute;
-        right: 10px;
-        bottom: 52px;
-        width: calc(100% - 58px);
+        left: 49px;
+        bottom: 60px;
+        width: calc(100% - 83px);
         height: calc(100% - 70px);
         background-image: linear-gradient(90deg, $gray-100 25%, $white 25%, $white 50%, $gray-100 50%, $gray-100 75%, $white 75%, $white 100%);
         background-size: 368.00px 368.00px;
         border-radius: 6px;
+
     }
 }
 
@@ -82,4 +83,87 @@
 .chart-stats__title {
     @extend .mb-0;
     color: $dark;
+}
+
+.apexcharts-tooltip {
+    overflow: visible !important;
+}
+
+.chart-tooltip-holder {
+    @extend .position-relative,
+    .text-white,
+    .d-flex;
+    align-items: center;
+    background-color: $dark;
+    border-radius: 6px;
+    padding: 8px;
+
+    &--has-indicator {
+        &:before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: $primary;
+            border: 3px solid $white;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    }
+
+
+
+    span {
+        @extend .text-white;
+    }
+}
+
+.apexcharts-tooltip-title,
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+    @extend .d-none;
+}
+
+
+.chart-donat {
+    .apexcharts-tooltip-series-group {
+        @extend .position-relative,
+        .text-white;
+        display: flex;
+        align-items: center;
+        background-color: $dark !important;
+        border-radius: 6px;
+        padding: 8px 8px 8px 34px !important;
+
+
+
+
+        span {
+            @extend .text-white;
+        }
+
+        .apexcharts-tooltip-marker {
+            @extend .d-block,
+            .position-absolute;
+            width: 16px;
+            height: 16px;
+            border: 3px solid $white;
+            margin-right: 10px;
+            border-radius: 50%;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .apexcharts-tooltip-text {
+            font-family: $font-medium !important;
+            font-size: 15px !important;
+            letter-spacing: -0.21px;
+            color: $white;
+        }
+
+        .apexcharts-tooltip-y-group {
+            @extend .m-0,
+            .p-0;
+        }
+    }
 }

@@ -5,19 +5,25 @@
 
 // Base
 .tooltip {
+    @include tooltip-theme($white, $dark);
+
     .tooltip-inner {
         box-shadow: $tooltip-box-shadow;
+        letter-spacing: -0.21px;
+        border-radius: 8px;
+        padding: 8px 15px;
+        font-size: 15px;
     }
 
     &.bs-tooltip-left .arrow,
     &.bs-tooltip-auto[x-placement^="left"] .arrow {
-    	/*rtl:raw:
+        /*rtl:raw:
         left: auto;
         right: 0;
         */
 
         &:before {
-        /*rtl:raw:
+            /*rtl:raw:
         border-width: 0.4rem 0 0.4rem 0.4rem;
         border-left-color: #fff;
         */
@@ -31,23 +37,18 @@
         left: 0;
         */
 
-    	&:before {
-        /*rtl:raw:
+        &:before {
+            /*rtl:raw:
         border-width: 0.4rem 0.4rem 0.4rem 0;
         border-right-color: #fff;
         */
-    	}
-    }
-
-    &.tooltop-auto-width {
-       	.tooltip-inner {
-       		white-space:nowrap;
-  			max-width:none;
         }
     }
 
-    // Dark Theme
-    &.tooltip-dark {
-        @include tooltip-theme($white, $dark);
+    &.tooltop-auto-width {
+        .tooltip-inner {
+            white-space: nowrap;
+            max-width: none;
+        }
     }
 }

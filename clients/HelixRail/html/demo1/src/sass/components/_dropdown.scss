@@ -5,18 +5,22 @@
 
 // Base
 .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 18px 28px 0 rgba(60, 63, 95, 0.12),
+        0 0 2px 0 rgba(60, 63, 95, 0.16);
+
     &:before,
     &:after {
         display: none !important;
     }
 
-    > li > a,
-    > .dropdown-item {
+    >li>a,
+    >.dropdown-item {
         outline: none !important;
         display: flex;
         flex-grow: 1;
 
-        > i {
+        >i {
             &:before {
                 line-height: 0;
                 vertical-align: middle;
@@ -52,12 +56,14 @@
 
 // Widths
 .dropdown-menu {
+
     // Global max-width For Mobile Mode
     @media (max-width: get($dropdown-menu-widths, xxl)) {
         width: 75vw;
     }
 
-    @each $name, $width in $dropdown-menu-widths {
+    @each $name,
+    $width in $dropdown-menu-widths {
         &.dropdown-menu-#{$name} {
             @media (min-width: $width + 30px) {
                 width: $width;
@@ -73,16 +79,31 @@
 
 // Animations
 @keyframes animation-dropdown-menu-fade-in {
-    from   { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes animation-dropdown-menu-move-down {
-    from   { margin-top: 10px }
-    to { margin-top: 0px }
+    from {
+        margin-top: 10px
+    }
+
+    to {
+        margin-top: 0px
+    }
 }
 
 @keyframes animation-dropdown-menu-move-up {
-    from   { margin-top: 10px }
-    to { margin-top: 0px }
+    from {
+        margin-top: 10px
+    }
+
+    to {
+        margin-top: 0px
+    }
 }

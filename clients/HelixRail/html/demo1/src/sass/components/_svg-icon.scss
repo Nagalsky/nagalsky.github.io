@@ -6,6 +6,10 @@
     @include svg-icon-size(get($svg-icon-sizes, md));
     @include svg-icon-color($text-muted);
 
+    path {
+        fill: inherit;
+    }
+
     // Theme colors
     @each $name,
     $color in $theme-text-colors {

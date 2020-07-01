@@ -4,19 +4,28 @@
 
 
 .table {
+	letter-spacing: -0.21px;
+
 	thead {
-		th, td {
-			font-weight: $table-head-font-weight;
+
+		th,
+		td {
+			font-weight: 500;
 			font-size: $table-head-font-size;
-			border-bottom-width: 1px;
+			border: none;
 			padding-top: 1rem;
 			padding-bottom: 1rem;
+			font-family: $font-medium;
+			color: $table-compact-head-color !important;
+			letter-spacing: normal;
 		}
 	}
 
 	&.table-head-borderless {
 		thead {
-			th, td {
+
+			th,
+			td {
 				border-top: 0;
 			}
 		}
@@ -24,16 +33,20 @@
 
 	&.table-head-solid {
 		thead {
-			th, td {
+
+			th,
+			td {
 				background-color: $table-head-bg;
 			}
 		}
 	}
 
 	&.table-light {
-		@each $name, $color in $theme-colors{
-			&-#{$name}{
-				thead{
+
+		@each $name,
+		$color in $theme-colors {
+			&-#{$name} {
+				thead {
 					tr {
 						color: $color;
 						background-color: rgba($color, 0.1);
@@ -43,21 +56,11 @@
 		}
 	}
 
-	&.table-head-custom {
-		thead {
-			tr,th {
-				font-weight: $table-compact-head-font-weight;
-				color: $table-compact-head-color !important;
-				font-size: $table-compact-head-font-size;
-				text-transform: $table-compact-head-text-transform;
-				letter-spacing: $table-compact-head-letter-spacing;
-			}
-		}
-	}
-
 	&.table-foot-custom {
 		tfoot {
-			th,td {
+
+			th,
+			td {
 				font-weight: $table-compact-head-font-weight;
 				color: $table-compact-head-color !important;
 				font-size: $table-compact-head-font-size;
@@ -69,7 +72,9 @@
 
 	&.table-head-bg {
 		thead {
-			tr,th {
+
+			tr,
+			th {
 				background-color: $table-head-bg;
 				border-bottom: 0;
 				letter-spacing: 1px;
@@ -89,7 +94,9 @@
 
 	&.table-foot-bg {
 		tfoot {
-			th,td {
+
+			th,
+			td {
 				border-bottom: 0;
 				background-color: $gray-100;
 
@@ -107,7 +114,9 @@
 	}
 
 	&.table-separate {
-		th, td {
+
+		th,
+		td {
 			border-top: 0;
 			border-bottom: 1px solid $table-border-color;
 
@@ -121,7 +130,9 @@
 		}
 
 		tfoot {
-			th, td {
+
+			th,
+			td {
 				border-bottom: 0;
 				border-top: 1px solid $table-border-color;
 			}
@@ -135,25 +146,54 @@
 			}
 		}
 	}
+
 	&.table-bordered {
 		tfoot {
-			th,td {
+
+			th,
+			td {
 				border-bottom: 0;
 			}
 		}
 	}
 
 	&.table-vertical-center {
-		th,td {
+
+		th,
+		td {
 			vertical-align: middle;
+		}
+	}
+
+	&.table-striped {
+		tbody {
+			tr {
+				&:nth-of-type(odd) {
+					background-color: $gray-100;
+				}
+
+				td {
+					@extend .border-0;
+				}
+			}
 		}
 	}
 }
 
 .table:not(.table-bordered) {
 	thead {
-		th, td {
+
+		th,
+		td {
 			border-top: 0;
 		}
 	}
+}
+
+.table-progress-stats {
+	@extend .ml-5,
+	.flex-shrink-0,
+	.text-dark,
+	.text-right;
+	min-width: 54px;
 }
