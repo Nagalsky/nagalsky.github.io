@@ -4,14 +4,314 @@
 var KTDatatableJsonRemoteDemo = (function() {
   // Private functions
 
+  var fakeJson = [
+    {
+      RecordID: 1,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 2,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 3,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 4,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 5,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 6,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 7,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 8,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 9,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 10,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 11,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 12,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 13,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 14,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 15,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 16,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 17,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 18,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 19,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 20,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 21,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 22,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 23,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 24,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 25,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 26,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 27,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 28,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 29,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 30,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 31,
+      FormType: "Trial Hole QCS1",
+      StructureNumber: "CU1/1.216/DN1",
+      QCSComplete: 1,
+      Uploaded: "07/08/2019 — 12:57 PM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 32,
+      FormType: "Trial Hole QCS2",
+      StructureNumber: "CU1/1.216/DN2",
+      QCSComplete: 1,
+      Uploaded: "05/02/2017 — 13:22 AM",
+      SignedOff: 1,
+      Actions: null
+    },
+    {
+      RecordID: 33,
+      FormType: "Trial Hole QCS3",
+      StructureNumber: "CU1/1.216/DN3",
+      QCSComplete: 1,
+      Uploaded: "01/11/2014 — 07:22 PM",
+      SignedOff: 1,
+      Actions: null
+    }
+  ];
+
   // basic demo
   var demo = function() {
     var datatable = $("#kt_datatable").KTDatatable({
       // datasource definition
       data: {
-        type: "remote",
-        source: HOST_URL + "/api/?file=datatables/datasource/default.json",
-        pageSize: 10
+        type: "local",
+        source: fakeJson,
+        pageSize: 30
       },
 
       // layout definition
@@ -44,160 +344,151 @@ var KTDatatableJsonRemoteDemo = (function() {
           textAlign: "center"
         },
         {
-          field: "OrderID",
-          title: "Order ID"
+          field: "FormType",
+          title: "Form type"
         },
         {
-          field: "Country",
-          title: "Country",
-          template: function(row) {
-            return row.Country + " " + row.ShipCountry;
-          }
+          field: "StructureNumber",
+          title: "Structure number"
         },
         {
-          field: "ShipAddress",
-          title: "Ship Address"
-        },
-        {
-          field: "ShipDate",
-          title: "Ship Date",
-          type: "date",
-          format: "MM/DD/YYYY"
-        },
-        {
-          field: "Status",
-          title: "Status",
-          // callback function support for column rendering
+          field: "QCSComplete",
+          title: "QCS Complete",
           template: function(row) {
             var status = {
               1: {
-                title: "Pending",
-                class: " label-light-success"
-              },
-              2: {
-                title: "Delivered",
-                class: " label-light-primary"
-              },
-              3: {
-                title: "Canceled",
-                class: " label-light-primary"
-              },
-              4: {
-                title: "Success",
-                class: " label-light-success"
-              },
-              5: {
-                title: "Info",
-                class: " label-light-info"
-              },
-              6: {
-                title: "Danger",
-                class: " label-light-danger"
-              },
-              7: {
-                title: "Warning",
-                class: " label-light-warning"
+                title: "PARTIAL",
+                class: " label-warning"
               }
             };
             return (
-              '<span class="label font-weight-bold label-lg' +
-              status[row.Status].class +
+              '<span class="label font-medium label-lg' +
+              status[row.QCSComplete].class +
               ' label-inline">' +
-              status[row.Status].title +
+              status[row.QCSComplete].title +
               "</span>"
             );
           }
         },
         {
-          field: "Type",
-          title: "Type",
-          autoHide: false,
+          field: "Uploaded",
+          title: "Uploaded"
+        },
+        {
+          field: "SignedOff",
+          title: "Signed Off",
           // callback function support for column rendering
           template: function(row) {
             var status = {
               1: {
-                title: "Online",
-                state: "danger"
-              },
-              2: {
-                title: "Retail",
-                state: "primary"
-              },
-              3: {
-                title: "Direct",
-                state: "success"
+                title: "ACCEPTED",
+                class: " label-success bg-success-secondary"
               }
             };
             return (
-              '<span class="label label-' +
-              status[row.Type].state +
-              ' label-dot mr-2"></span><span class="font-weight-bold text-' +
-              status[row.Type].state +
-              '">' +
-              status[row.Type].title +
+              '<span class="label font-medium label-lg' +
+              status[row.SignedOff].class +
+              ' label-inline">' +
+              status[row.SignedOff].title +
               "</span>"
             );
           }
         },
         {
           field: "Actions",
-          title: "Actions",
+          title: "",
           sortable: false,
           width: 125,
           autoHide: false,
           overflow: "visible",
           template: function() {
-            return '\
-                        <div class="dropdown dropdown-inline">\
-                            <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">\
-                                <span class="svg-icon svg-icon-md">\
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
-                                            <rect x="0" y="0" width="24" height="24"/>\
-                                            <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506 L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814 L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19 L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z" fill="#000000"/>\
-                                        </g>\
-                                    </svg>\
-                                </span>\
-                            </a>\
-                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">\
-                                <ul class="navi flex-column navi-hover py-2">\
-                                    <li class="navi-header font-weight-bolder text-uppercase font-size-xs text-primary pb-2">\
-                                        Choose an action:\
-                                    </li>\
-                                    <li class="navi-item">\
-                                        <a href="#" class="navi-link">\
-                                            <span class="navi-icon"><i class="la la-print"></i></span>\
-                                            <span class="navi-text">Print</span>\
-                                        </a>\
-                                    </li>\
-                                    <li class="navi-item">\
-                                        <a href="#" class="navi-link">\
-                                            <span class="navi-icon"><i class="la la-copy"></i></span>\
-                                            <span class="navi-text">Copy</span>\
-                                        </a>\
-                                    </li>\
-                                    <li class="navi-item">\
-                                        <a href="#" class="navi-link">\
-                                            <span class="navi-icon"><i class="la la-file-excel-o"></i></span>\
-                                            <span class="navi-text">Excel</span>\
-                                        </a>\
-                                    </li>\
-                                    <li class="navi-item">\
-                                        <a href="#" class="navi-link">\
-                                            <span class="navi-icon"><i class="la la-file-text-o"></i></span>\
-                                            <span class="navi-text">CSV</span>\
-                                        </a>\
-                                    </li>\
-                                    <li class="navi-item">\
-                                        <a href="#" class="navi-link">\
-                                            <span class="navi-icon"><i class="la la-file-pdf-o"></i></span>\
-                                            <span class="navi-text">PDF</span>\
-                                        </a>\
-                                    </li>\
-                                </ul>\
-                            </div>\
-                        </div>\
-                    ';
+            return `
+                <div class="text-right">
+                    <div class="dropdown dropdown-inline">
+                        <button class="btn btn-icon btn-icon-table" data-toggle="dropdown"
+                        aria-expanded="false" type="button">
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-md">
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                            <a href="#" class="navi-link">
+                                <span class="svg-icon svg-icon-dark-50 navi-icon">
+                                <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2">
+                                    <g data-name="edit">
+                                        <rect width="24" height="24" opacity="0" />
+                                        <path
+                                        d="M19.4 7.34L16.66 4.6A2 2 0 0 0 14 4.53l-9 9a2 2 0 0 0-.57 1.21L4 18.91a1 1 0 0 0 .29.8A1 1 0 0 0 5 20h.09l4.17-.38a2 2 0 0 0 1.21-.57l9-9a1.92 1.92 0 0 0-.07-2.71zM9.08 17.62l-3 .28.27-3L12 9.32l2.7 2.7zM16 10.68L13.32 8l1.95-2L18 8.73z" />
+                                    </g>
+                                    </g>
+                                </svg>
+                                <!--end::Svg Icon-->
+                                </span>
+                                <span class="navi-text">Edit</span>
+                            </a>
+                            </li>
+                            <li class="navi-item">
+                            <a href="#" class="navi-link">
+                                <span class="svg-icon svg-icon-dark-50 navi-icon">
+                                <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2">
+                                    <g data-name="edit-2">
+                                        <rect width="24" height="24" opacity="0" />
+                                        <path d="M19 20H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2z" />
+                                        <path
+                                        d="M5 18h.09l4.17-.38a2 2 0 0 0 1.21-.57l9-9a1.92 1.92 0 0 0-.07-2.71L16.66 2.6A2 2 0 0 0 14 2.53l-9 9a2 2 0 0 0-.57 1.21L4 16.91a1 1 0 0 0 .29.8A1 1 0 0 0 5 18zM15.27 4L18 6.73l-2 1.95L13.32 6zm-8.9 8.91L12 7.32l2.7 2.7-5.6 5.6-3 .28z" />
+                                    </g>
+                                    </g>
+                                </svg>
+                                <!--end::Svg Icon-->
+                                </span>
+                                <span class="navi-text">Edit Design</span>
+                            </a>
+                            </li>
+                            <li class="navi-item">
+                            <a href="#" class="navi-link">
+                                <span class="svg-icon svg-icon-dark-50 navi-icon">
+                                <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2">
+                                    <g data-name="clipboard">
+                                        <rect width="24" height="24" opacity="0" />
+                                        <path
+                                        d="M18 5V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v1a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zM8 4h8v4H8V4zm11 15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7a1 1 0 0 1 1 1z" />
+                                    </g>
+                                    </g>
+                                </svg>
+                                <!--end::Svg Icon-->
+                                </span>
+                                <span class="navi-text">Schedule a Job</span>
+                            </a>
+                            </li>
+                            <li class="navi-item">
+                            <a href="#" class="navi-link">
+                                <span class="svg-icon svg-icon-dark-50 navi-icon">
+                                <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2">
+                                    <g data-name="layout">
+                                        <rect width="24" height="24" opacity="0" />
+                                        <path
+                                        d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM6 5h12a1 1 0 0 1 1 1v2H5V6a1 1 0 0 1 1-1zM5 18v-8h6v9H6a1 1 0 0 1-1-1zm13 1h-5v-9h6v8a1 1 0 0 1-1 1z" />
+                                    </g>
+                                    </g>
+                                </svg>
+                                <!--end::Svg Icon-->
+                                </span>
+                                <span class="navi-text">View forms</span>
+                            </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
           }
         }
       ]

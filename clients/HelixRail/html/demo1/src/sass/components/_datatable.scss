@@ -11,6 +11,17 @@
 .datatable.datatable-default {
 	display: block;
 
+	.checkbox {
+		>span {
+			border-width: 2px !important;
+		}
+	}
+
+	.dropdown.bootstrap-select {
+		width: auto !important;
+		margin-top: -2px !important;
+	}
+
 	// Base
 	>.datatable-table {
 		background-color: get($datatable-config, bg);
@@ -35,11 +46,19 @@
 					font-size: 1rem;
 
 					&:first-child {
-						padding-left: 0
+						padding-left: 1rem;
+
+						@include media-breakpoint-up(md) {
+							padding-left: 2rem;
+						}
 					}
 
 					&:last-child {
-						padding-right: 0;
+						padding-right: 1rem;
+
+						@include media-breakpoint-up(md) {
+							padding-right: 2rem;
+						}
 					}
 
 					&.datatable-cell-left {
@@ -178,7 +197,7 @@
 
 					&.datatable-cell-sorted {
 						>span {
-							color: get($datatable-config, head-sorted-color);
+							color: $black;
 						}
 					}
 				}
@@ -187,10 +206,13 @@
 
 		>.datatable-head {
 			.datatable-row {
+				background-color: $gray-300;
+
 				>.datatable-cell {
-					padding: get($datatable-config, head-cell-padding-y) get($datatable-config, head-cell-padding-x);
+					padding: 14px get($datatable-config, head-cell-padding-x);
 
 					>span {
+
 						>i {
 							display: inline-block;
 							position: relative;
@@ -198,7 +220,7 @@
 							line-height: 0;
 							vertical-align: middle;
 							font-size: 1.1rem;
-							color: get($datatable-config, head-icon-color);
+							color: $black;
 						}
 					}
 				}
@@ -214,6 +236,7 @@
 				>.datatable-cell {
 					font-weight: regular;
 					transition: background 0.3s ease;
+					padding: 4px 1rem;
 
 					>span {
 						color: get($datatable-config, body-color);
@@ -235,7 +258,7 @@
 
 				&.datatable-row-even {
 					>.datatable-cell {
-						background-color: get($datatable-config, row-bg-even);
+						background-color: $gray-100;
 					}
 				}
 
@@ -364,15 +387,13 @@
 					>.datatable-cell {
 						>span {
 							color: get($datatable-config, head-compact-color);
-							font-size: get($datatable-config, head-compact-font-size);
-							text-transform: get($datatable-config, head-compact-text-transform);
-							font-weight: get($datatable-config, head-compact-font-weight);
-							letter-spacing: get($datatable-config, head-compact-letter-spacing);
+							font-size: 13px;
+							font-family: $font-medium;
 						}
 
 						&.datatable-cell-sorted {
 							>span {
-								color: get($datatable-config, head-sorted-color);
+								color: $black;
 							}
 						}
 					}
@@ -521,7 +542,6 @@
 					>i {
 						line-height: 0;
 						font-size: 1.4rem;
-						color: get($datatable-config, subtable-toggle-icon);
 					}
 
 					&:hover {
@@ -581,7 +601,9 @@
 	// Pager
 	>.datatable-pager {
 		margin: 0px;
-		padding: get($datatable-config, page-spacer) 0;
+		padding-top: get($datatable-config, page-spacer);
+		padding-left: 1rem;
+		padding-right: 1rem;
 		padding-bottom: 0;
 		display: flex;
 		justify-content: space-between;
@@ -589,7 +611,10 @@
 		flex-direction: column-reverse;
 
 		@include media-breakpoint-up(md) {
+			padding-left: 2rem;
+			padding-right: 2rem;
 			flex-direction: row-reverse;
+			align-items: center;
 		}
 
 		&.datatable-pager-top {
@@ -601,87 +626,101 @@
 			padding: 0;
 			display: flex;
 			margin: 0 !important;
+			justify-content: center;
 
 			>li {
 				padding: 0;
-				margin-right: 5px;
 				display: inline-block;
 
-				&:last-child {
+				&:not(:last-of-type) {
+					margin-right: 10px;
+				}
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-last-child(1),
+				&:nth-last-child(2) {
+					>.datatable-pager-link {
+						color: $gray-600;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background-image: linear-gradient(to bottom, #ffffff, #fafafb) !important;
+							border-color: #d3d6dd !important;
+							color: $gray-600 !important;
+						}
+					}
+				}
+
+				&:nth-child(3),
+				&:nth-last-child(3) {
 					margin-right: 0;
 				}
+
+
 
 				>.datatable-pager-link {
 					cursor: pointer;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					height: get($datatable-config, page-size);
-					min-width: get($datatable-config, page-size);
+					height: 40px;
+					min-width: 42px;
 					padding: 0.5rem;
 					transition: $transition-link;
 					position: relative;
-					font-size: 0.9rem;
 					line-height: 1rem;
-					font-weight: 500;
-					@include border-radius($border-radius);
+					background-image: linear-gradient(to bottom, #ffffff, #fafafb);
+					color: $dark;
+					font-size: 15px;
+					letter-spacing: -0.21px;
+					border: solid 1px #d3d6dd;
+					box-shadow: 0 2px 4px 0 #f3f3f6;
+					border-radius: 8px;
 
 					>i {
 						font-size: 0.6rem;
 						text-align: center;
 						display: inline-block;
 						line-height: 0;
-						color: get($datatable-config, page-icon-color);
-						transition: $transition-link;
 					}
 
-					color: get($datatable-config, page-color);
 
-					&.datatable-pager-link-first,
-					&.datatable-pager-link-prev,
-					&.datatable-pager-link-next,
-					&.datatable-pager-link-last {
-						background-color: get($datatable-config, page-bg);
-					}
 
 					&.datatable-pager-link-disabled {
 						opacity: 0.6;
-						cursor: default;
+						cursor: not-allowed;
 					}
 
 					&:hover:not(.datatable-pager-link-disabled) {
 						opacity: 1;
 						transition: $transition-link;
-						background-color: get($datatable-config, page-bg-hover);
-						color: get($datatable-config, page-color-hover);
-
-						i {
-							transition: $transition-link;
-							color: get($datatable-config, page-icon-color-hover);
-						}
+						color: $white;
+						background-image: linear-gradient(to bottom, $primary, $primary);
+						border-color: $primary;
 					}
 
 					&.datatable-pager-link-active {
 						transition: $transition-link;
-						background-color: get($datatable-config, page-bg-active);
-						color: get($datatable-config, page-color-active);
-
-						i {
-							transition: $transition-link;
-							color: get($datatable-config, page-icon-color-active);
-						}
+						color: $white;
+						background-image: linear-gradient(to bottom, $primary, $primary);
+						border-color: $primary;
 					}
 				}
 
 				>.datatable-pager-input {
-					height: get($datatable-config, page-size);
+					height: 40px;
 					width: 3.5rem;
 					text-align: center;
 					transition: $transition-link;
-					@include border-radius($border-radius !important);
-					background-color: get($datatable-config, page-bg);
-					border-color: get($datatable-config, page-bg);
-					color: get($datatable-config, page-color);
+					border-radius: 8px;
+					background-image: linear-gradient(to bottom, #ffffff, #fafafb);
+					color: $dark;
+					font-size: 15px;
+					letter-spacing: -0.21px;
+					border: solid 1px #d3d6dd;
+
 
 					&:focus {
 						transition: $transition-link;
@@ -698,6 +737,17 @@
 			.mb-md-0;
 			display: flex;
 			align-items: center;
+			justify-content: center;
+			border: 1px solid $gray-50;
+			border-radius: 6px;
+			box-shadow: 0 2px 4px 0 #f3f3f6;
+			background-image: linear-gradient(to bottom, #ffffff, #fafafb);
+			padding: 8px 1rem;
+
+			.dropdown-toggle {
+				@extend .p-0;
+			}
+
 
 			.datatable-pager-size {
 				margin-right: 10px;
@@ -761,6 +811,36 @@
 			background-color: get($datatable-config, scrollbar-bg);
 		}
 	}
+}
+
+
+.datatable.datatable-default.datatable-loaded>.datatable-pager>.datatable-pager-info .datatable-pager-size .btn.dropdown-toggle {
+	@extend .bg-transparent,
+	.font-medium,
+	.text-dark;
+	height: auto;
+
+	&:after {
+		color: $dark !important;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@extend .bg-transparent,
+		.text-dark;
+	}
+
+	.filter-option-inner-inner {
+		@extend .bg-transparent,
+		.text-dark;
+	}
+}
+
+.datatable.datatable-default.datatable-loaded>.datatable-pager>.datatable-pager-info .datatable-pager-size .btn.dropdown-toggle:focus,
+.datatable.datatable-default.datatable-loaded>.datatable-pager>.datatable-pager-info .datatable-pager-size .btn.dropdown-toggle:hover,
+.datatable.datatable-default.datatable-loaded>.datatable-pager>.datatable-pager-info .datatable-pager-size.show>.btn.dropdown-toggle {
+	background-color: transparent !important;
 }
 
 // Mobile mode
