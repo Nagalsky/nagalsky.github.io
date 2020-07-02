@@ -9,6 +9,8 @@ $btn-icon-size: 40px;
 .btn {
 	outline: none !important;
 	vertical-align: middle;
+	border-radius: 8px;
+	padding: 8px 1rem;
 
 	// Transition
 	@include button-custom-transition($transition-link);
@@ -433,19 +435,20 @@ $value in $theme-colors {
 	// Outline Style
 	.btn.btn-outline-#{$name} {
 		$btn-background: transparent;
-		$btn-border: $value;
+		$btn-border: $gray-50;
+		background-image: linear-gradient(to bottom, #ffffff, #fafafb);
 		$btn-color: theme-outline-inverse-color($name);
 		$btn-icon: theme-outline-inverse-color($name);
-		$btn-box-shadow: null;
+		$btn-box-shadow: 0 2px 4px 0 #f3f3f6;
 
 		$btn-hover-background: $value;
-		$btn-hover-border: $value;
+		$btn-hover-border: $gray-50;
 		$btn-hover-color: theme-inverse-color($name);
 		$btn-hover-icon: theme-inverse-color($name);
-		$btn-hover-box-shadow: null;
+		$btn-hover-box-shadow: 0 2px 4px 0 #f3f3f6;
 
 		$btn-active-background: $btn-hover-background;
-		$btn-active-border: $btn-hover-border;
+		$btn-active-border: $gray-50;
 		$btn-active-color: $btn-hover-color;
 		$btn-active-icon: $btn-hover-icon;
 		$btn-active-box-shadow: $btn-hover-box-shadow;
@@ -453,6 +456,12 @@ $value in $theme-colors {
 		@include button-custom-variant($btn-background, $btn-border, $btn-color, $btn-icon, $btn-box-shadow,
 			$btn-hover-background, $btn-hover-border, $btn-hover-color, $btn-hover-icon, $btn-hover-box-shadow,
 			$btn-active-background, $btn-active-border, $btn-active-color, $btn-active-icon, $btn-active-box-shadow);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-image: linear-gradient(to bottom, #fafafb, #fafafb);
+		}
 	}
 
 	// Light Style

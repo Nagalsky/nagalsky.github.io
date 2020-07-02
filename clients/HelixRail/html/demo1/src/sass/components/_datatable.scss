@@ -12,23 +12,23 @@
 	display: block;
 
 	// Base
-	> .datatable-table {
+	>.datatable-table {
 		background-color: get($datatable-config, bg);
 		border-collapse: collapse;
 		overflow: hidden;
 		display: none;
 		width: 100%;
 
-		> .datatable-head,
-		> .datatable-body,
-		> .datatable-foot {
+		>.datatable-head,
+		>.datatable-body,
+		>.datatable-foot {
 			visibility: hidden;
 			display: block;
 
 			.datatable-row {
 				width: 100%;
 
-				> .datatable-cell {
+				>.datatable-cell {
 					// Row cell base
 					vertical-align: middle;
 					padding: get($datatable-config, cell-padding-y) get($datatable-config, cell-padding-x);
@@ -45,7 +45,7 @@
 					&.datatable-cell-left {
 						text-align: left;
 
-						> span {
+						>span {
 							text-align: left;
 						}
 					}
@@ -53,11 +53,11 @@
 					&.datatable-cell-right {
 						text-align: right;
 
-						> span {
+						>span {
 							text-align: right;
 
-							> i {
-							right: 0;
+							>i {
+								right: 0;
 							}
 						}
 					}
@@ -65,7 +65,7 @@
 					&.datatable-cell-center {
 						text-align: center;
 
-						> span {
+						>span {
 							text-align: center;
 						}
 					}
@@ -82,7 +82,7 @@
 						cursor: col-resize;
 					}
 
-					> span {
+					>span {
 						display: block;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -92,10 +92,10 @@
 					&.datatable-cell-check {
 						text-align: left;
 
-						> span {
+						>span {
 							overflow: visible;
 
-							> .checkbox {
+							>.checkbox {
 								top: 2px;
 								padding: 0;
 								margin: 0 0 0 0;
@@ -105,15 +105,15 @@
 
 					// Row details
 					&.datatable-toggle-detail {
-						> span {
+						>span {
 							width: 12px;
 						}
 
-						> .datatable-toggle-detail {
+						>.datatable-toggle-detail {
 							display: inline-block;
 							text-align: right;
 
-							> i {
+							>i {
 								font-size: 1.4rem;
 								width: 12px;
 							}
@@ -148,7 +148,7 @@
 				}
 			}
 
-			> .datatable-lock {
+			>.datatable-lock {
 				border: 0;
 
 				&.datatable-lock-left {
@@ -166,18 +166,18 @@
 			}
 		}
 
-		> .datatable-head,
-		> .datatable-foot {
+		>.datatable-head,
+		>.datatable-foot {
 			.datatable-row {
-				> .datatable-cell {
-					> span {
+				>.datatable-cell {
+					>span {
 						font-weight: 500;
 						vertical-align: middle;
 						color: get($datatable-config, head-color);
 					}
 
 					&.datatable-cell-sorted {
-						> span {
+						>span {
 							color: get($datatable-config, head-sorted-color);
 						}
 					}
@@ -185,13 +185,13 @@
 			}
 		}
 
-		> .datatable-head {
+		>.datatable-head {
 			.datatable-row {
-				> .datatable-cell {
+				>.datatable-cell {
 					padding: get($datatable-config, head-cell-padding-y) get($datatable-config, head-cell-padding-x);
 
-					> span {
-						> i {
+					>span {
+						>i {
 							display: inline-block;
 							position: relative;
 							right: -10px;
@@ -205,23 +205,23 @@
 			}
 		}
 
-		> .datatable-body {
+		>.datatable-body {
 			&.ps {
 				padding-bottom: 0;
 			}
 
 			.datatable-row {
-				> .datatable-cell {
+				>.datatable-cell {
 					font-weight: regular;
 					transition: background 0.3s ease;
 
-					> span {
+					>span {
 						color: get($datatable-config, body-color);
 					}
 
 					&.datatable-cell-check {
-						> span {
-							> .checkbox {
+						>span {
+							>.checkbox {
 								top: 1px;
 							}
 						}
@@ -234,13 +234,13 @@
 				}
 
 				&.datatable-row-even {
-					> .datatable-cell {
+					>.datatable-cell {
 						background-color: get($datatable-config, row-bg-even);
 					}
 				}
 
 				&.datatable-row-active {
-					> .datatable-cell {
+					>.datatable-cell {
 						background-color: get($datatable-config, row-bg-active);
 					}
 				}
@@ -248,7 +248,7 @@
 				&.datatable-row-hover:not(.datatable-row-active) {
 					transition: background 0.3s ease;
 
-					> .datatable-cell {
+					>.datatable-cell {
 						transition: background 0.3s ease;
 						background-color: get($datatable-config, row-bg-hover);
 					}
@@ -269,12 +269,12 @@
 					.datatable-row {
 						display: table-row;
 
-						> .datatable-cell {
+						>.datatable-cell {
 							padding: 1rem 1.5rem;
 							text-align: left;
 							vertical-align: top;
 
-							> span {
+							>span {
 								width: auto !important;
 							}
 
@@ -317,10 +317,11 @@
 
 	// Bordered
 	&.datatable-bordered {
-		> .datatable-table {
-			> .datatable-head,
-			> .datatable-body,
-			> .datatable-foot {
+		>.datatable-table {
+
+			>.datatable-head,
+			>.datatable-body,
+			>.datatable-foot {
 				.datatable-row {
 					border-bottom: 1px solid get($datatable-config, row-border);
 
@@ -330,7 +331,7 @@
 				}
 			}
 
-			> .datatable-body {
+			>.datatable-body {
 				.datatable-row {
 					&:last-child {
 						border-bottom: 0;
@@ -355,12 +356,13 @@
 
 	// Bordered
 	&.datatable-head-custom {
-		> .datatable-table {
-			> .datatable-head,
-			> .datatable-foot {
+		>.datatable-table {
+
+			>.datatable-head,
+			>.datatable-foot {
 				.datatable-row {
-					> .datatable-cell {
-						> span {
+					>.datatable-cell {
+						>span {
 							color: get($datatable-config, head-compact-color);
 							font-size: get($datatable-config, head-compact-font-size);
 							text-transform: get($datatable-config, head-compact-text-transform);
@@ -369,7 +371,7 @@
 						}
 
 						&.datatable-cell-sorted {
-							> span {
+							>span {
 								color: get($datatable-config, head-sorted-color);
 							}
 						}
@@ -381,12 +383,12 @@
 
 	// Header bg
 	&.datatable-head-bg {
-		> .datatable-table {
-			> .datatable-head {
+		>.datatable-table {
+			>.datatable-head {
 				.datatable-row {
 					border-bottom: 0;
 
-					> .datatable-cell {
+					>.datatable-cell {
 						background-color: get($datatable-config, head-bg);
 
 						&:first-child {
@@ -405,12 +407,12 @@
 	}
 
 	&.datatable-foot-bg {
-		> .datatable-table {
-			> .datatable-foot {
+		>.datatable-table {
+			>.datatable-foot {
 				.datatable-row {
 					border-bottom: 0;
 
-					> .datatable-cell {
+					>.datatable-cell {
 						background-color: get($datatable-config, head-bg);
 
 						&:first-child {
@@ -438,11 +440,12 @@
 
 	// Lock state
 	&.datatable-lock {
-		> .datatable-table {
-			> .datatable-head,
-			> .datatable-body,
-			> .datatable-foot {
-				> .datatable-lock {
+		>.datatable-table {
+
+			>.datatable-head,
+			>.datatable-body,
+			>.datatable-foot {
+				>.datatable-lock {
 					display: inline-block;
 					position: relative;
 					vertical-align: top;
@@ -456,12 +459,12 @@
 	&.datatable-loaded {
 		display: block;
 
-		> .datatable-table {
+		>.datatable-table {
 			display: block;
 
-			> .datatable-head,
-			> .datatable-body,
-			> .datatable-foot {
+			>.datatable-head,
+			>.datatable-body,
+			>.datatable-foot {
 				visibility: visible;
 				display: block;
 				position: relative;
@@ -470,7 +473,7 @@
 					display: table;
 					table-layout: initial;
 
-					> .datatable-cell {
+					>.datatable-cell {
 						//display: table-cell;
 					}
 				}
@@ -480,16 +483,15 @@
 
 	// Scrollable state
 	&.datatable-scroll {
-		> .datatable-table {
+		>.datatable-table {
 			display: block;
 
-			> .datatable-head,
-			> .datatable-body,
-			> .datatable-foot {
-			}
+			>.datatable-head,
+			>.datatable-body,
+			>.datatable-foot {}
 
-			> .datatable-head,
-			> .datatable-foot {
+			>.datatable-head,
+			>.datatable-foot {
 				overflow: hidden;
 
 				.datatable-row {
@@ -497,7 +499,7 @@
 				}
 			}
 
-			> .datatable-body {
+			>.datatable-body {
 				overflow: hidden;
 			}
 		}
@@ -505,18 +507,18 @@
 
 	// Subtable
 	&.datatable-subtable {
-		> .datatable-table {
+		>.datatable-table {
 			margin-bottom: 0;
 
-			> .datatable-head,
-			> .datatable-body,
-			> .datatable-foot {
+			>.datatable-head,
+			>.datatable-body,
+			>.datatable-foot {
 				.datatable-toggle-subtable {
 					display: flex;
 					justify-content: center;
 					align-items: center;
 
-					> i {
+					>i {
 						line-height: 0;
 						font-size: 1.4rem;
 						color: get($datatable-config, subtable-toggle-icon);
@@ -532,11 +534,11 @@
 					width: 100%;
 					border-top: 0;
 
-					> .datatable-subtable {
-						> .datatable {
+					>.datatable-subtable {
+						>.datatable {
 							padding: 0 get($datatable-config, spacer);
 
-							> .datatable-pager {
+							>.datatable-pager {
 								padding: get($datatable-config, spacer) 0px;
 							}
 						}
@@ -544,10 +546,10 @@
 				}
 			}
 
-			> .datatable-body {
+			>.datatable-body {
 				.datatable-row {
 					&.datatable-row-subtable-expanded {
-						> .datatable-cell {
+						>.datatable-cell {
 							background-color: get($datatable-config, subtable-expanded-bg) !important;
 						}
 					}
@@ -556,16 +558,16 @@
 				.datatable-row-subtable {
 					background-color: get($datatable-config, row-bg-even);
 
-					> .datatable-subtable {
-						> .datatable {
+					>.datatable-subtable {
+						>.datatable {
 							box-shadow: get($datatable-config, subtable-shadow);
 						}
 					}
 
 					&.datatable-row-loading {
-						> .datatable-subtable {
-							> .datatable {
-								> .datatable-table {
+						>.datatable-subtable {
+							>.datatable {
+								>.datatable-table {
 									background-color: get($datatable-config, row-bg-even);
 								}
 							}
@@ -577,24 +579,30 @@
 	}
 
 	// Pager
-	> .datatable-pager {
+	>.datatable-pager {
 		margin: 0px;
 		padding: get($datatable-config, page-spacer) 0;
 		padding-bottom: 0;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		flex-direction: column-reverse;
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row-reverse;
+		}
 
 		&.datatable-pager-top {
 			margin-bottom: 10px;
 		}
 
-		> .datatable-pager-nav {
+		>.datatable-pager-nav {
 			margin: 0;
 			padding: 0;
 			display: flex;
+			margin: 0 !important;
 
-			> li {
+			>li {
 				padding: 0;
 				margin-right: 5px;
 				display: inline-block;
@@ -603,7 +611,7 @@
 					margin-right: 0;
 				}
 
-				> .datatable-pager-link {
+				>.datatable-pager-link {
 					cursor: pointer;
 					display: flex;
 					justify-content: center;
@@ -618,7 +626,7 @@
 					font-weight: 500;
 					@include border-radius($border-radius);
 
-					> i {
+					>i {
 						font-size: 0.6rem;
 						text-align: center;
 						display: inline-block;
@@ -665,7 +673,7 @@
 					}
 				}
 
-				> .datatable-pager-input {
+				>.datatable-pager-input {
 					height: get($datatable-config, page-size);
 					width: 3.5rem;
 					text-align: center;
@@ -685,7 +693,9 @@
 			}
 		}
 
-		> .datatable-pager-info {
+		>.datatable-pager-info {
+			@extend .mb-5,
+			.mb-md-0;
 			display: flex;
 			align-items: center;
 
@@ -713,7 +723,7 @@
 
 				.btn.dropdown-toggle:focus,
 				.btn.dropdown-toggle:hover,
-				 &.show > .btn.dropdown-toggle {
+				&.show>.btn.dropdown-toggle {
 					border: 0 !important;
 					color: get($datatable-config, page-info-color-hover) !important;
 					background-color: get($datatable-config, page-info-bg-hover) !important;
@@ -726,7 +736,7 @@
 					}
 				}
 
-				.dropdown-menu.inner > li.selected > a span.check-mark {
+				.dropdown-menu.inner>li.selected>a span.check-mark {
 					margin-top: -0.6rem;
 				}
 
@@ -742,8 +752,8 @@
 	}
 
 	// Scrollbar
-	.ps > .ps__rail-y > .ps__thumb-y,
-	.ps > .ps__rail-x > .ps__thumb-x {
+	.ps>.ps__rail-y>.ps__thumb-y,
+	.ps>.ps__rail-x>.ps__thumb-x {
 		background-color: get($datatable-config, scrollbar-bg);
 
 		&:hover,
@@ -754,6 +764,4 @@
 }
 
 // Mobile mode
-@include media-breakpoint-down(sm) {
-
-}
+@include media-breakpoint-down(sm) {}

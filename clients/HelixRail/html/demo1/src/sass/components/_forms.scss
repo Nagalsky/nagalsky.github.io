@@ -25,10 +25,14 @@
 
 // Form control
 .form-control {
+
 	// Readonly state
 	&[readonly] {
 		background-color: $input-readonly-bg;
 	}
+
+	height: 40px;
+	border-color: $gray-50;
 
 	// Pill style
 	&.form-control-pill {
@@ -43,7 +47,8 @@
 		}
 	}
 
-	@if $form-validation-input-shadow == false {
+	@if $form-validation-input-shadow==false {
+
 		&:active,
 		&.active,
 		&:focus,
@@ -97,15 +102,15 @@
 // Custom inputs
 .custom-select {
 	-webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .custom-file {
 	width: 100%;
 }
 
-.custom-file-input:focus ~ .custom-file-label {
+.custom-file-input:focus~.custom-file-label {
 	box-shadow: none !important;
 }
 
@@ -113,19 +118,20 @@
 	text-align: left;
 
 	&:after {
-	    float: left;
+		float: left;
 	}
 }
 
 // Input Group
 .input-group {
-	.form-control.is-valid + .input-group-append,
-	.form-control.is-invalid + .input-group-append {
+
+	.form-control.is-valid+.input-group-append,
+	.form-control.is-invalid+.input-group-append {
 		margin-left: 0;
 	}
 
-	.input-group-prepend + .form-control.is-valid,
-	.input-group-prepend + .form-control.is-invalid {
+	.input-group-prepend+.form-control.is-valid,
+	.input-group-prepend+.form-control.is-invalid {
 		margin-left: 1px;
 	}
 
@@ -176,6 +182,7 @@
 			@include input-reset();
 
 			&.form-control-solid {
+
 				&:active,
 				&.active,
 				&:focus,
@@ -202,14 +209,14 @@
 			background-color: transparent;
 			border: 0;
 			padding-top: 0;
-    		padding-bottom: 0;
+			padding-bottom: 0;
 
 			.btn-secondary {
 				border: 0 !important;
 			}
 		}
 
-		.input-group-prepend ~ .form-control {
+		.input-group-prepend~.form-control {
 			padding-left: 0 !important;
 		}
 	}
@@ -217,6 +224,7 @@
 
 // Validation
 .validated {
+
 	.valid-feedback,
 	.invalid-feedback {
 		display: block;
