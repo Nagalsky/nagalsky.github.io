@@ -10,7 +10,7 @@ var KTDatatableJsonRemoteDemo = (function() {
       // datasource definition
       data: {
         type: "remote",
-        source: "/html/demo1/dist/json/datatable-1.json",
+        source: HOST_URL + "/api/?file=datatables/datasource/default.json",
         pageSize: 10
       },
 
