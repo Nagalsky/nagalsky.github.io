@@ -16,30 +16,37 @@
 	color: $dark-75;
 	font-weight: 400;
 
+	&.label-empty {
+		@extend .bg-transparent,
+		.p-0;
+	}
+
 	// Theme colors
-	@each $name, $color in $theme-colors {
+	@each $name,
+	$color in $theme-colors {
+
 		// Solid style
-	  	&.label-#{$name} {
-	    	color: theme-inverse-color($name);
+		&.label-#{$name} {
+			color: theme-inverse-color($name);
 			background-color: $color;
-	  	}
+		}
 
 		// Outline style
-	  	&.label-outline-#{$name} {
-	    	background-color: transparent;
+		&.label-outline-#{$name} {
+			background-color: transparent;
 			color: theme-outline-inverse-color($name);
 			border: 1px solid $color;
 
 			&.label-outline-2x {
 				border: 2px solid $color;
 			}
-	  	}
+		}
 
 		// Light style
-	    &.label-light-#{$name} {
-	    	color: $color;
+		&.label-light-#{$name} {
+			color: $color;
 			background-color: theme-light-color($name);
-	    }
+		}
 	}
 
 	// Inline mode
@@ -79,10 +86,10 @@
 
 	// Dot style
 	&.label-dot {
-	    display: inline-block;
-    	font-size: 0 !important;
-    	vertical-align: middle;
-    	text-align: center;
+		display: inline-block;
+		font-size: 0 !important;
+		vertical-align: middle;
+		text-align: center;
 	}
 
 	// Sizes

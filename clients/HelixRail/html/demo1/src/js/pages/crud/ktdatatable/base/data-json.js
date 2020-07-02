@@ -362,7 +362,7 @@ var KTDatatableJsonRemoteDemo = (function() {
               }
             };
             return (
-              '<span class="label font-medium label-lg' +
+              '<span class="label font-black label-lg' +
               status[row.QCSComplete].class +
               ' label-inline">' +
               status[row.QCSComplete].title +
@@ -386,7 +386,7 @@ var KTDatatableJsonRemoteDemo = (function() {
               }
             };
             return (
-              '<span class="label font-medium label-lg' +
+              '<span class="label font-black label-lg' +
               status[row.SignedOff].class +
               ' label-inline">' +
               status[row.SignedOff].title +

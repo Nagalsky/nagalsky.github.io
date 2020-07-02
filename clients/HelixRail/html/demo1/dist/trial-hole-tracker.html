@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
   <base href="" />
   <meta charset="utf-8" />
-  <title>All QCS</title>
+  <title>Trial hole tracker</title>
   <meta name="description" content="Updates and statistics" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!--begin::Page Vendors Styles(used by this page)-->
@@ -158,8 +158,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       </a>
                     </li>
 
-                    <li class="menu-item menu-item-active">
-                      <a href="javascript:;" class="menu-link">
+                    <li class="menu-item">
+                      <a href="all-qcs.html" class="menu-link">
                         <span class="menu-icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
@@ -177,8 +177,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       </a>
                     </li>
 
-                    <li class="menu-item">
-                      <a href="trial-hole-tracker.html" class="menu-link">
+                    <li class="menu-item menu-item-active">
+                      <a href="javascript:;" class="menu-link">
                         <span class="menu-icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
@@ -559,7 +559,7 @@ License: You must have a valid license purchased only from themeforest(the above
               </div>
 
               <div class="pager__item"><a href="#" class="pager__link">Trial Holes</a></div>
-              <div class="pager__item" aria-current="page">All Civils Forms</div>
+              <div class="pager__item" aria-current="page">Trial Hole Tracker</div>
             </div>
             <!--end::Header Menu Wrapper-->
             <!--begin::Topbar-->
@@ -604,8 +604,8 @@ License: You must have a valid license purchased only from themeforest(the above
               <div class="card card-custom card-stretch px-0">
                 <div class="card-header border-0 align-items-center pb-0 mb-2">
                   <!--begin::Search Form-->
-                  <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center w-100">
-                    <div class="flex mb-5 mb-sm-0">
+                  <div class="d-flex flex-column flex-md-row justify-content-sm-between align-items-md-center w-100">
+                    <div class="flex mb-5 mb-md-0">
                       <div class="form-datatable-search">
                         <input type="text" class="form-control" placeholder="Search" id="kt_datatable_search_query" />
                         <button type="submit" class="btn btn-outline-secondary font-medium flex-shrink-0 btn-submit">
@@ -627,31 +627,52 @@ License: You must have a valid license purchased only from themeforest(the above
                       </div>
                     </div>
 
-                    <a href="#" class="btn btn-outline-secondary font-medium">
-                      <span class="svg-icon">
-                        <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                          <g data-name="Layer 2">
-                            <g data-name="cloud-upload">
-                              <rect width="24" height="24" opacity="0" />
-                              <path
-                                d="M12.71 11.29a1 1 0 0 0-1.4 0l-3 2.9a1 1 0 1 0 1.38 1.44L11 14.36V20a1 1 0 0 0 2 0v-5.59l1.29 1.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" />
-                              <path
-                                d="M17.67 7A6 6 0 0 0 6.33 7a5 5 0 0 0-3.08 8.27A1 1 0 1 0 4.75 14 3 3 0 0 1 7 9h.1a1 1 0 0 0 1-.8 4 4 0 0 1 7.84 0 1 1 0 0 0 1 .8H17a3 3 0 0 1 2.25 5 1 1 0 0 0 .09 1.42 1 1 0 0 0 .66.25 1 1 0 0 0 .75-.34A5 5 0 0 0 17.67 7z" />
+                    <div class="d-flex flex-shrink-0">
+                      <button class="btn btn-outline-secondary font-medium mr-3" data-toggle="modal"
+                        data-target="#modal-location">
+                        <span class="svg-icon">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                              <g data-name="plus-circle">
+                                <rect width="24" height="24" opacity="0" />
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                                <path
+                                  d="M15 11h-2V9a1 1 0 0 0-2 0v2H9a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 0 0 0-2z" />
+                              </g>
                             </g>
-                          </g>
-                        </svg>
-                        <!--end::Svg Icon-->
-                      </span>
-                      Import GPS data
-                    </a>
+                          </svg>
+                          <!--end::Svg Icon-->
+                        </span>
+                        Add location
+                      </button>
+
+                      <a href="#" class="btn btn-outline-secondary font-medium">
+                        <span class="svg-icon">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                              <g data-name="cloud-upload">
+                                <rect width="24" height="24" opacity="0" />
+                                <path
+                                  d="M12.71 11.29a1 1 0 0 0-1.4 0l-3 2.9a1 1 0 1 0 1.38 1.44L11 14.36V20a1 1 0 0 0 2 0v-5.59l1.29 1.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" />
+                                <path
+                                  d="M17.67 7A6 6 0 0 0 6.33 7a5 5 0 0 0-3.08 8.27A1 1 0 1 0 4.75 14 3 3 0 0 1 7 9h.1a1 1 0 0 0 1-.8 4 4 0 0 1 7.84 0 1 1 0 0 0 1 .8H17a3 3 0 0 1 2.25 5 1 1 0 0 0 .09 1.42 1 1 0 0 0 .66.25 1 1 0 0 0 .75-.34A5 5 0 0 0 17.67 7z" />
+                              </g>
+                            </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                        </span>
+                        Import GPS data
+                      </a>
+                    </div>
                   </div>
                   <!--end::Search Form-->
                 </div>
 
                 <div class="card-body px-0">
                   <!--begin: Datatable-->
-                  <div class="datatable datatable-head-custom" id="kt_datatable"></div>
+                  <div class="datatable datatable-head-custom datatable-scroll-x" id="kt_datatable"></div>
                   <!--end: Datatable-->
                 </div>
               </div>
@@ -667,6 +688,189 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--end::Page-->
   </div>
   <!--end::Main-->
+
+
+  <!-- Modal location-->
+  <div class="modal fade" id="modal-location" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form action="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Location</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i aria-hidden="true" class="ki ki-close"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="field-foundation-number">Foundation number</label>
+              <input type="text" class="form-control" id="field-foundation-number"
+                placeholder="Enter foundation number">
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6">
+                  <label for="field-foundation-number">Foundation number</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-foundation-number" placeholder="Enter Km">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Foundation number</label>
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-track" />Up
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-track" />Down
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <label for="field-ELR">ELR</label>
+                  <input type="text" class="form-control" id="field-ELR" placeholder="Enter ELR">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="field-approximate-quarter-mile">Approximate quarter mile</label>
+                  <input type="text" class="form-control" id="field-approximate-quarter-mile" placeholder="Enter range">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Foundation type</label>
+              <select name="" id="" class="form-control">
+                <option value="">Select from list</option>
+                <option value="">Select from list2</option>
+                <option value="">Select from list3</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Leg</label>
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-legs" />Leg A
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-legs" />Leg B
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6">
+                  <label for="field-existing-track-recos">Existing track recos</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-existing-track-recos"
+                      placeholder="Enter existing track recos">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <label for="field-easting">Easting</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-easting" placeholder="Enter easting">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="field-northing">Northing</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-northing" placeholder="Enter northing">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <label for="field-latitude">Latitude (Converted from SnakeGrid)</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-latitude" placeholder="Enter easting">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="field-longitude">Longitude (Converted from SnakeGrid)</label>
+                  <div class="form-quantity">
+                    <input type="number" class="form-control" id="field-longitude" placeholder="Enter northing">
+                    <div class="form-quantity-box">
+                      <button type="button" class="form-quantity-btn" disabled><i class="ki ki-minus"></i></button>
+                      <button type="button" class="form-quantity-btn"><i class="ki ki-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary font-medium" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-outline-secondary font-medium">Add location</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end::Modal location-->
 
 
   <script>
@@ -743,7 +947,7 @@ License: You must have a valid license purchased only from themeforest(the above
   <!--end::Page Scripts-->
   <!--begin::Page Scripts(used by this page)-->
   <script src="assets/js/pages/widgets.js?v=7.0.4"></script>
-  <script src="assets/js/pages/crud/ktdatatable/base/data-json.js?v=7.0.4"></script>
+  <script src="assets/js/pages/crud/ktdatatable/child/data-local.js?v=7.0.4"></script>
   <!--end::Page Scripts-->
 </body>
 <!--end::Body-->
