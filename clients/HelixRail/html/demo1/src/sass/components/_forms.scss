@@ -29,6 +29,10 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 
+	&:hover {
+		border-color: $primary;
+	}
+
 	// Readonly state
 	&[readonly] {
 		background-color: $input-readonly-bg;
@@ -323,7 +327,10 @@ select.form-control {
 .form-quantity-btn {
 	@extend .btn,
 	.p-0,
-	.border-0;
+	.border-0,
+	.text-center,
+	.justify-content-center;
+	border-radius: 4px;
 	width: 24px;
 	height: 24px;
 	color: $gray-600;
@@ -334,9 +341,14 @@ select.form-control {
 	}
 
 	&:hover,
-	&:focus,
+	&:focus {
+		background-color: $gray-50;
+		color: $gray-600;
+	}
+
 	&:active {
-		color: darken($gray-600, 15%);
+		background-color: $primary-light;
+		color: $primary;
 	}
 
 	&:disabled {
@@ -351,6 +363,7 @@ select.form-control {
 	}
 
 	i {
+		@extend .p-0;
 		color: inherit;
 		font-size: inherit;
 	}
@@ -377,4 +390,10 @@ select.form-control {
 			transform: translateY(-50%);
 		}
 	}
+}
+
+
+textarea.form-control {
+	resize: none;
+	height: 88px;
 }

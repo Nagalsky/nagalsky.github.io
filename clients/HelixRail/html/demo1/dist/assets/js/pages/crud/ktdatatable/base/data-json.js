@@ -345,7 +345,8 @@ var KTDatatableJsonRemoteDemo = (function() {
         },
         {
           field: "FormType",
-          title: "Form type"
+          title: "Form type",
+          autoHide: false
         },
         {
           field: "StructureNumber",
@@ -354,6 +355,7 @@ var KTDatatableJsonRemoteDemo = (function() {
         {
           field: "QCSComplete",
           title: "QCS Complete",
+          autoHide: false,
           template: function(row) {
             var status = {
               1: {
@@ -377,6 +379,7 @@ var KTDatatableJsonRemoteDemo = (function() {
         {
           field: "SignedOff",
           title: "Signed Off",
+          autoHide: false,
           // callback function support for column rendering
           template: function(row) {
             var status = {

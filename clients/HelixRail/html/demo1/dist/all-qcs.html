@@ -195,7 +195,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
 
                     <li class="menu-item">
-                      <a href="#" class="menu-link">
+                      <a href="trial-hole-map.html" class="menu-link">
                         <span class="menu-icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
@@ -608,22 +608,103 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="flex mb-5 mb-sm-0">
                       <div class="form-datatable-search">
                         <input type="text" class="form-control" placeholder="Search" id="kt_datatable_search_query" />
-                        <button type="submit" class="btn btn-outline-secondary font-medium flex-shrink-0 btn-submit">
-                          <span class="svg-icon">
-                            <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <g data-name="Layer 2">
-                                <g data-name="funnel">
-                                  <rect width="24" height="24" opacity="0" />
-                                  <path
-                                    d="M13.9 22a1 1 0 0 1-.6-.2l-4-3.05a1 1 0 0 1-.39-.8v-3.27l-4.8-9.22A1 1 0 0 1 5 4h14a1 1 0 0 1 .86.49 1 1 0 0 1 0 1l-5 9.21V21a1 1 0 0 1-.55.9 1 1 0 0 1-.41.1zm-3-4.54l2 1.53v-4.55A1 1 0 0 1 13 14l4.3-8H6.64l4.13 8a1 1 0 0 1 .11.46z" />
+                        <div class="dropdown d-flex flex-shrink-0">
+                          <button type="submit"
+                            class="btn btn-outline-secondary font-medium flex-shrink-0 btn-submit btn-filter-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="svg-icon">
+                              <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g data-name="Layer 2">
+                                  <g data-name="funnel">
+                                    <rect width="24" height="24" opacity="0" />
+                                    <path
+                                      d="M13.9 22a1 1 0 0 1-.6-.2l-4-3.05a1 1 0 0 1-.39-.8v-3.27l-4.8-9.22A1 1 0 0 1 5 4h14a1 1 0 0 1 .86.49 1 1 0 0 1 0 1l-5 9.21V21a1 1 0 0 1-.55.9 1 1 0 0 1-.41.1zm-3-4.54l2 1.53v-4.55A1 1 0 0 1 13 14l4.3-8H6.64l4.13 8a1 1 0 0 1 .11.46z" />
+                                  </g>
                                 </g>
-                              </g>
-                            </svg>
-                            <!--end::Svg Icon-->
-                          </span>
-                          Filters
-                        </button>
+                              </svg>
+                              <!--end::Svg Icon-->
+                            </span>
+                            Filters
+                            <span class="badge badge-primary badge-simple">1</span>
+                          </button>
+
+                          <div class="dropdown-menu dropdown-menu-right filter-dropdown-menu">
+                            <div class='d-flex align-items-center justify-content-between mb-5'>
+                              <h4 class='m-0 d-flex align-items-center'>Filters <span
+                                  class='badge badge-primary badge-simple ml-2'>1</span></h4>
+                              <a href='#' class='btn filter-dropdown-btn-clear'>Clear all filters</a>
+                            </div>
+
+                            <form>
+                              <div class='form-group'>
+                                <p class="fs-13 text-dark font-medium text-uppercase">DATE UPLOADED</p>
+
+                                <div class="input-daterange input-group" id="kt_datepicker_5">
+                                  <div class="input-daterange__item mb-5 mb-sm-0">
+                                    <label for='field-datepicker-state'>From (inclusive)</label>
+                                    <div class="input-daterange__field-holder">
+                                      <input type="text" class="form-control" name="start"
+                                        placeholder="Enter or select date" id="field-datepicker-state" />
+                                    </div>
+                                  </div>
+
+                                  <div class="input-group-append d-none d-sm-block">
+                                    <span class="input-group-text">
+                                      <i class="la la-ellipsis-h"></i>
+                                    </span>
+                                  </div>
+
+                                  <div class="input-daterange__item">
+                                    <label for='field-datepicker-end'>From (inclusive)</label>
+                                    <div class="input-daterange__field-holder">
+                                      <input type="text" class="form-control" name="end"
+                                        placeholder="Enter or select date" id="field-datepicker-end" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <div class="form-group mb-0">
+                                <p class="fs-13 text-dark font-medium text-uppercase">status</p>
+                                <div class="form-row">
+                                  <div class="col-12 col-sm-6 mb-7 mb-sm-0">
+                                    <div class="checkbox-single mb-4">
+                                      <label class="checkbox text-dark">
+                                        <input type="checkbox" />QCS Complete
+                                        <span></span>
+                                      </label>
+                                    </div>
+
+                                    <div class="checkbox-single">
+                                      <label class="checkbox text-dark">
+                                        <input type="checkbox" />Signed Off
+                                        <span></span>
+                                      </label>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-12 col-sm-6">
+                                    <div class="checkbox-single mb-4">
+                                      <label class="checkbox text-dark">
+                                        <input type="checkbox" />QCS Partial
+                                        <span></span>
+                                      </label>
+                                    </div>
+
+                                    <div class="checkbox-single">
+                                      <label class="checkbox text-dark">
+                                        <input type="checkbox" />Not Signed Off
+                                        <span></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -744,6 +825,9 @@ License: You must have a valid license purchased only from themeforest(the above
   <!--begin::Page Scripts(used by this page)-->
   <script src="assets/js/pages/widgets.js?v=7.0.4"></script>
   <script src="assets/js/pages/crud/ktdatatable/base/data-json.js?v=7.0.4"></script>
+  <script src="assets/js/pages/crud/forms/widgets/bootstrap-datepicker.js?v=7.0.4"></script>
+  <script src="assets/js/pages/crud/forms/widgets/bootstrap-select.js?v=7.0.4"></script>
+
   <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

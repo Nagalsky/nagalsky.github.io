@@ -1,0 +1,57 @@
+//
+// Switch box
+//
+
+.switch-box {
+	@extend .d-flex;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px 0 #f3f3f6;
+	border: solid 1px #d3d6dd;
+	overflow: hidden;
+	height: 40px;
+
+	&.disabled,
+	&:disabled {
+		opacity: .75;
+		cursor: not-allowed;
+	}
+}
+
+.switch-box__item {
+	@extend .position-relative,
+	.flex-fill,
+	.m-0;
+	display: inline-flex;
+	width: 40px;
+	cursor: pointer;
+
+	>input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+
+	>span {
+		@extend .d-flex,
+		.align-items-center,
+		.justify-content-center,
+		.w-100;
+		transition: get($radio-config, transition);
+	}
+
+	>input:not(:checked)~span {
+		&:hover {
+			background-color: lighten(#d3d6dd, 10%);
+		}
+	}
+
+	>input:checked~span {
+		background-color: #d3d6dd;
+
+		path,
+		rect,
+		circle {
+			fill: $gray-600;
+		}
+	}
+}

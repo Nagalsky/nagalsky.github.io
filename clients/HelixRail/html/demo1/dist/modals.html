@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
   <base href="" />
   <meta charset="utf-8" />
-  <title>Trial hole tracker</title>
+  <title>Modals</title>
   <meta name="description" content="Updates and statistics" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!--begin::Page Vendors Styles(used by this page)-->
@@ -177,8 +177,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       </a>
                     </li>
 
-                    <li class="menu-item menu-item-active">
-                      <a href="javascript:;" class="menu-link">
+                    <li class="menu-item">
+                      <a href="trial-hole-tracker.html" class="menu-link">
                         <span class="menu-icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
@@ -194,8 +194,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       </a>
                     </li>
 
-                    <li class="menu-item">
-                      <a href="trial-hole-map.html" class="menu-link">
+                    <li class="menu-item menu-item-active">
+                      <a href="javascript:;" class="menu-link">
                         <span class="menu-icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
@@ -559,7 +559,7 @@ License: You must have a valid license purchased only from themeforest(the above
               </div>
 
               <div class="pager__item"><a href="#" class="pager__link">Trial Holes</a></div>
-              <div class="pager__item" aria-current="page">Trial Hole Tracker</div>
+              <div class="pager__item" aria-current="page">Trial Hole Map</div>
             </div>
             <!--end::Header Menu Wrapper-->
             <!--begin::Topbar-->
@@ -604,8 +604,8 @@ License: You must have a valid license purchased only from themeforest(the above
               <div class="card card-custom card-stretch px-0">
                 <div class="card-header border-0 align-items-center pb-0 mb-2">
                   <!--begin::Search Form-->
-                  <div class="d-flex flex-column flex-md-row justify-content-sm-between align-items-md-center w-100">
-                    <div class="flex mb-5 mb-md-0">
+                  <div class="d-flex flex-column flex-xxl-row justify-content-xl-between align-items-xxl-center w-100">
+                    <div class="flex mb-5 mb-xxl-0">
                       <div class="form-datatable-search">
                         <input type="text" class="form-control" placeholder="Search" id="kt_datatable_search_query" />
                         <div class="dropdown d-flex flex-shrink-0">
@@ -708,8 +708,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       </div>
                     </div>
 
-                    <div class="d-flex flex-shrink-0">
-                      <button class="btn btn-outline-secondary font-medium mr-3" data-toggle="modal"
+                    <div class="d-flex flex-column flex-md-row flex-shrink-0">
+                      <button class="btn btn-outline-secondary font-medium mb-3 mb-md-0 mr-md-3" data-toggle="modal"
                         data-target="#modal-location">
                         <span class="svg-icon">
                           <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
@@ -728,15 +728,15 @@ License: You must have a valid license purchased only from themeforest(the above
                         Add location
                       </button>
 
-                      <a href="#" class="btn btn-outline-secondary font-medium">
+                      <a href="#" class="btn btn-outline-secondary font-medium mb-3 mb-md-0 mr-md-3">
                         <span class="svg-icon">
                           <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g data-name="Layer 2">
-                              <g data-name="cloud-upload">
+                              <g data-name="cloud-download">
                                 <rect width="24" height="24" opacity="0" />
                                 <path
-                                  d="M12.71 11.29a1 1 0 0 0-1.4 0l-3 2.9a1 1 0 1 0 1.38 1.44L11 14.36V20a1 1 0 0 0 2 0v-5.59l1.29 1.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" />
+                                  d="M14.31 16.38L13 17.64V12a1 1 0 0 0-2 0v5.59l-1.29-1.3a1 1 0 0 0-1.42 1.42l3 3A1 1 0 0 0 12 21a1 1 0 0 0 .69-.28l3-2.9a1 1 0 1 0-1.38-1.44z" />
                                 <path
                                   d="M17.67 7A6 6 0 0 0 6.33 7a5 5 0 0 0-3.08 8.27A1 1 0 1 0 4.75 14 3 3 0 0 1 7 9h.1a1 1 0 0 0 1-.8 4 4 0 0 1 7.84 0 1 1 0 0 0 1 .8H17a3 3 0 0 1 2.25 5 1 1 0 0 0 .09 1.42 1 1 0 0 0 .66.25 1 1 0 0 0 .75-.34A5 5 0 0 0 17.67 7z" />
                               </g>
@@ -744,17 +744,72 @@ License: You must have a valid license purchased only from themeforest(the above
                           </svg>
                           <!--end::Svg Icon-->
                         </span>
-                        Import GPS data
+                        Download tracker data
                       </a>
+
+                      <div class="switch-box">
+                        <label class="switch-box__item">
+                          <input type="radio" name="radios-switch-box-1" checked />
+                          <span>
+                            <span class="svg-icon">
+                              <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g data-name="Layer 2">
+                                  <g data-name="list">
+                                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
+                                    <circle cx="4" cy="7" r="1" />
+                                    <circle cx="4" cy="12" r="1" />
+                                    <circle cx="4" cy="17" r="1" />
+                                    <rect x="7" y="11" width="14" height="2" rx=".94" ry=".94" />
+                                    <rect x="7" y="16" width="14" height="2" rx=".94" ry=".94" />
+                                    <rect x="7" y="6" width="14" height="2" rx=".94" ry=".94" />
+                                  </g>
+                                </g>
+                              </svg>
+                              <!--end::Svg Icon-->
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="switch-box__item">
+                          <input type="radio" name="radios-switch-box-1" />
+                          <span>
+                            <span class="svg-icon">
+                              <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g data-name="Layer 2">
+                                  <g data-name="map">
+                                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
+                                    <path
+                                      d="M20.41 5.89l-4-1.8H15.59L12 5.7 8.41 4.09h-.05L8.24 4h-.6l-4 1.8a1 1 0 0 0-.64 1V19a1 1 0 0 0 .46.84A1 1 0 0 0 4 20a1 1 0 0 0 .41-.09L8 18.3l3.59 1.61h.05a.85.85 0 0 0 .72 0h.05L16 18.3l3.59 1.61A1 1 0 0 0 20 20a1 1 0 0 0 .54-.16A1 1 0 0 0 21 19V6.8a1 1 0 0 0-.59-.91zM5 7.44l2-.89v10l-2 .89zm4-.89l2 .89v10l-2-.89zm4 .89l2-.89v10l-2 .89zm6 10l-2-.89v-10l2 .89z" />
+                                  </g>
+                                </g>
+                              </svg>
+                              <!--end::Svg Icon-->
+                            </span>
+                          </span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <!--end::Search Form-->
                 </div>
 
-                <div class="card-body px-0">
-                  <!--begin: Datatable-->
-                  <div class="datatable datatable-head-custom datatable-scroll-x" id="kt_datatable"></div>
-                  <!--end: Datatable-->
+                <div class="card-body">
+                  <button class="btn btn-outline-secondary font-medium mb-3 btn-block" data-toggle="modal"
+                    data-target="#modal-update-tracker">
+                    Update tracker modal
+                  </button>
+
+                  <button class="btn btn-outline-secondary font-medium mb-3 btn-block" data-toggle="modal"
+                    data-target="#modal-new-appointment">
+                    New Appointment modal
+                  </button>
+
+                  <button class="btn btn-outline-secondary font-medium mb-3 btn-block" data-toggle="modal"
+                    data-target="#modal-update-tracker-notes">
+                    Update Tracker Notes modal
+                  </button>
                 </div>
               </div>
             </div>
@@ -844,10 +899,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
             <div class="form-group">
               <label>Foundation type</label>
-              <select name="" id="" class="form-control">
-                <option value="">Select from list</option>
-                <option value="">Select from list2</option>
-                <option value="">Select from list3</option>
+              <select class="form-control selectpicker" data-size="4">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+                <option>Tent</option>
+                <option>Flashlight</option>
+                <option>Toilet Paper</option>
               </select>
             </div>
 
@@ -945,13 +1003,270 @@ License: You must have a valid license purchased only from themeforest(the above
 
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary font-medium" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-outline-secondary font-medium">Add location</button>
+            <button type="submit" class="btn btn-primary font-medium">Add location</button>
           </div>
         </div>
       </form>
     </div>
   </div>
   <!--end::Modal location-->
+
+
+  <!-- Modal update tracker-->
+  <div class="modal fade" id="modal-update-tracker" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form action="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update tracker</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i aria-hidden="true" class="ki ki-close"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <p class="fs-13 text-dark font-medium text-uppercase mb-5">UPDATE TRACKER</p>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <label for="field-modal-planned-date">Planned date</label>
+                  <div class="input-group date">
+                    <input type="text" class="form-control datepicker-box" placeholder="Enter or select date"
+                      id="field-modal-planned-date" />
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="field-modal-completed-date">Completed date</label>
+                  <div class="input-group date">
+                    <input type="text" class="form-control datepicker-box" placeholder="Enter or select date"
+                      id="field-modal-completed-date" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>UXO clear?</label>
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-UXO" />Yes
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-UXO" />No
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Track monitoring is required?</label>
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-track-monitoring" />Yes
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-track-monitoring" />No
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="field-internal-notes">Internal notes</label>
+              <textarea name="" id="field-internal-notes" cols="30" rows="10" class="form-control"
+                placeholder="Enter notes"></textarea>
+            </div>
+
+            <p class="fs-13 text-dark font-medium text-uppercase mb-5">UPDATE LATEST FROM REVISION</p>
+
+            <div class="form-group">
+              <label for="field-project-wise-link">ProjectWise Link</label>
+              <input type="text" class="form-control" id="field-project-wise-link" placeholder="Enter link">
+            </div>
+
+            <div class="form-group">
+              <label>Has a technical query been raised? (Shown on QCS)</label>
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-has-a-technical-query-been-raised" />Yes
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-radio radio">
+                    <label class="radio">
+                      <input type="radio" name="radios-has-a-technical-query-been-raised" />No
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="field-design-query-comments">Design Query / Comments (Shown on QCS)</label>
+              <textarea name="" id="field-design-query-comments" cols="30" rows="10" class="form-control"
+                placeholder="Enter comments"></textarea>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary font-medium" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary font-medium">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end::Modal update tracker-->
+
+
+  <!-- Modal update tracker-->
+  <div class="modal fade" id="modal-new-appointment" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form action="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">New Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i aria-hidden="true" class="ki ki-close"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="d-flex align-items-md-center justify-content-md-between flex-column flex-md-row mb-5">
+              <p class="fs-13 text-dark font-medium text-uppercase mb-md-0">UPDATE TRACKER</p>
+              <p class="text-dark-50">Appointment for: CU10/10.087/DN</p>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row align-items-end">
+                <div class="col-12 col-md-6 mb-7 mb-md-0">
+                  <label for="field-modal-date">Date</label>
+                  <div class="input-group date">
+                    <input type="text" class="form-control datepicker-box" placeholder="Enter or select date"
+                      id="field-modal-date" />
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="d-flex align-items-center justify-content-between">Assignee <span
+                      class="fs-13 text-dark-25 font-book">Optional</span></label>
+
+                  <select class="form-control selectpicker">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                    <option>Tent</option>
+                    <option>Flashlight</option>
+                    <option>Toilet Paper</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="d-flex align-items-center justify-content-between" id="field-modal-comments">Comments <span
+                  class="fs-13 text-dark-25 font-book">Optional</span></label>
+              <textarea name="" id="field-modal-comments" cols="30" rows="10" class="form-control"
+                placeholder="Enter notes"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="">Attachments</label>
+              <div class="dropzone-box dropzone dropzone-default">
+                <div class="dropzone-msg dz-message needsclick">
+                  <div class="dropzone-icon-box">
+                    <span class="svg-icon">
+                      <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g data-name="Layer 2">
+                          <g data-name="cloud-upload">
+                            <rect width="24" height="24" opacity="0" />
+                            <path
+                              d="M12.71 11.29a1 1 0 0 0-1.4 0l-3 2.9a1 1 0 1 0 1.38 1.44L11 14.36V20a1 1 0 0 0 2 0v-5.59l1.29 1.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" />
+                            <path
+                              d="M17.67 7A6 6 0 0 0 6.33 7a5 5 0 0 0-3.08 8.27A1 1 0 1 0 4.75 14 3 3 0 0 1 7 9h.1a1 1 0 0 0 1-.8 4 4 0 0 1 7.84 0 1 1 0 0 0 1 .8H17a3 3 0 0 1 2.25 5 1 1 0 0 0 .09 1.42 1 1 0 0 0 .66.25 1 1 0 0 0 .75-.34A5 5 0 0 0 17.67 7z" />
+                          </g>
+                        </g>
+                      </svg>
+                      <!--end::Svg Icon-->
+                    </span>
+                  </div>
+                  <h3 class="dropzone-msg-title">Drop files here or click to upload</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary font-medium" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary font-medium">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end::Modal update tracker-->
+
+
+  <!-- Modal update tracker notes-->
+  <div class="modal fade" id="modal-update-tracker-notes" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form action="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update Tracker Notes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i aria-hidden="true" class="ki ki-close"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label class="d-flex align-items-center justify-content-between" id="field-modal-tracker-notes">Tracker
+                notes</label>
+              <textarea name="" id="field-modal-tracker-notes" cols="30" rows="10" class="form-control"
+                placeholder="Enter notes"></textarea>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary font-medium" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary font-medium">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end::Modal update tracker notes-->
 
 
   <script>
@@ -1031,6 +1346,7 @@ License: You must have a valid license purchased only from themeforest(the above
   <script src="assets/js/pages/crud/ktdatatable/child/data-local.js?v=7.0.4"></script>
   <script src="assets/js/pages/crud/forms/widgets/bootstrap-datepicker.js?v=7.0.4"></script>
   <script src="assets/js/pages/crud/forms/widgets/bootstrap-select.js?v=7.0.4"></script>
+  <script src="assets/js/pages/crud/file-upload/dropzonejs.js?v=7.0.4"></script>
   <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

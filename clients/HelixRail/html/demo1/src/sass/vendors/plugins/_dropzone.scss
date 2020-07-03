@@ -10,29 +10,35 @@
 
 .dropzone.dropzone-default {
     padding: 20px;
-	text-align: center;
-	cursor: pointer;
-    border: 2px dashed $gray-200;
-    @include border-radius($border-radius);
+    text-align: center;
+    cursor: pointer;
+    border: 2px dashed $gray-50;
+    @include border-radius(8px);
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+        border-style: solid;
+        border-color: #bdc1cc;
+    }
 
     .dropzone-msg-title {
-		color:  $dark-75;
-		margin: 0 0 5px 0;
-		padding: 0;
-		font-weight: 500;
-		font-size: 1.2rem;
-	}
+        color: $gray-600;
+        margin: 0 0 5px 0;
+        padding: 0;
+        font-size: 15px;
+        font-family: $font-base;
+    }
 
     .dropzone-msg-desc {
-        color:  $text-muted;
+        color: $text-muted;
         font-weight: 400;
-		font-size: 1rem;
-	}
+        font-size: 1rem;
+    }
 
     .dz-preview {
-		.dz-image {
-			@include border-radius($border-radius);
-		}
+        .dz-image {
+            @include border-radius($border-radius);
+        }
     }
 
     .dz-remove {
@@ -47,12 +53,38 @@
         }
     }
 
-	// State colors
-	@each $name, $color in $theme-colors {
-		&.dropzone-#{$name} {
-			border-color: $color;
-		}
-	}
+    &.dz-drag-hover {
+        border-color: $primary;
+        border-style: solid;
+        background: $primary-light;
+
+        .dropzone-icon-box {
+            background-color: darken($primary-light, 20%);
+        }
+    }
+
+    // State colors
+    @each $name,
+    $color in $theme-colors {
+        &.dropzone-#{$name} {
+            border-color: $color;
+        }
+    }
+
+    .dropzone-icon-box {
+        @extend .d-flex,
+        .align-items-center,
+        .justify-content-center;
+        @include border-radius(50%);
+        width: 56px;
+        height: 56px;
+        background-color: $primary-light;
+        margin: 0 auto 5px auto;
+
+        path {
+            fill: $primary;
+        }
+    }
 }
 
 // Multipe upload
@@ -60,13 +92,14 @@
     border: 0;
     padding: 0;
 
-    .dz-message{
+    .dz-message {
         display: none;
     }
 
     .dropzone-panel {
+
         .dropzone-upload,
-        .dropzone-remove-all{
+        .dropzone-remove-all {
             display: none;
         }
     }
@@ -138,13 +171,14 @@
 
                 &:hover {
                     transition: $transition-link;
+
                     i {
                         color: $primary;
                     }
                 }
             }
 
-            .dropzone-start{
+            .dropzone-start {
                 transition: $transition-link;
             }
         }

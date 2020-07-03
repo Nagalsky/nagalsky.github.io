@@ -154,7 +154,8 @@ var KTDatatableChildDataLocalDemo = (function() {
         },
         {
           field: "Foundation",
-          title: "Foundation #"
+          title: "Foundation #",
+          autoHide: false
         },
         {
           field: "PlannedDate",
@@ -175,6 +176,7 @@ var KTDatatableChildDataLocalDemo = (function() {
         {
           field: "QCSStatus",
           title: "QCS status",
+          autoHide: false,
           // callback function support for column rendering
           template: function(row) {
             var template = {
@@ -348,6 +350,7 @@ var KTDatatableChildDataLocalDemo = (function() {
         {
           field: "ReadyForFoundation",
           title: "Ready for foundation",
+          autoHide: false,
           // callback function support for column rendering
           template: function(row) {
             var template = {

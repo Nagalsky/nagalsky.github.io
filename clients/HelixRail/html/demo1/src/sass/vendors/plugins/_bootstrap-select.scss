@@ -7,11 +7,11 @@
 $bootstrap-select-general-padding: 10px 15px;
 $bootstrap-select-title-padding: 10px 15px;
 
- .bootstrap-select {
-    > .dropdown-toggle {
+.bootstrap-select {
+    >.dropdown-toggle {
         position: relative;
         outline: none !important;
-        padding: $input-btn-padding-y $input-btn-padding-x;
+        padding: 8px $input-btn-padding-x;
         @include border-radius($input-border-radius);
 
         &:focus {
@@ -34,13 +34,14 @@ $bootstrap-select-title-padding: 10px 15px;
         &.btn-secondary {
             background: $white !important;
             color: $input-plaintext-color;
-            border-color: $input-border-color;
+            border-color: $gray-50;
             box-shadow: none;
 
             &:active,
+            &:hover,
             &:focus,
             &.active {
-                border-color: $input-focus-border-color !important;
+                border-color: $primary !important;
             }
 
             &.disabled,
@@ -50,7 +51,7 @@ $bootstrap-select-title-padding: 10px 15px;
             }
 
             .filter-option {
-                color: $dark-50;
+                color: $gray-50;
 
                 .bs-icon {
                     color: $dark-50;
@@ -60,7 +61,7 @@ $bootstrap-select-title-padding: 10px 15px;
         }
 
         &.bs-placeholder {
-            color:  $input-placeholder-color;
+            color: $input-placeholder-color;
 
             &.btn {
                 color: $white;
@@ -71,8 +72,8 @@ $bootstrap-select-title-padding: 10px 15px;
     .dropdown-menu.inner {
         display: block;
 
-        > li {
-            > a {
+        >li {
+            >a {
                 display: block;
                 position: relative;
                 outline: none !important;
@@ -103,11 +104,11 @@ $bootstrap-select-title-padding: 10px 15px;
             }
 
             &.selected {
-                > a {
+                >a {
                     .check-mark {
                         top: 50%;
                         position: absolute;
-                        margin-top: - (0.8rem / 2) ;
+                        margin-top: - (0.8rem / 2);
                         font-size: 0.7rem;
                         right: $input-btn-padding-x;
 
@@ -124,7 +125,7 @@ $bootstrap-select-title-padding: 10px 15px;
 
             &.selected,
             &:hover {
-                > a {
+                >a {
                     background: $gray-100;
 
                     .text {
@@ -155,23 +156,23 @@ $bootstrap-select-title-padding: 10px 15px;
             }
 
             &.dropdown-header {
-                 color: $dark-50;
+                color: $dark-50;
             }
 
             &.selected {
-                > a {
+                >a {
                     background: $gray-100;
                 }
             }
 
             &.disabled {
-                > a {
+                >a {
                     opacity: 0.8;
                 }
             }
 
             &.active:not(.selected) {
-                > a {
+                >a {
                     background: $primary;
 
                     .bs-icon,
@@ -208,11 +209,17 @@ $bootstrap-select-title-padding: 10px 15px;
 
     // menu shown state
     &.show {
-        > .dropdown-toggle {
+        >.dropdown-toggle {
+
             &.btn-light,
             &.btn-secondary {
-                border-color: $input-focus-border-color;
+                border-color: $primary !important;
                 box-shadow: none;
+
+                &:after {
+                    color: $primary !important;
+                    transform: rotate(180deg);
+                }
             }
         }
     }
@@ -239,5 +246,16 @@ $bootstrap-select-title-padding: 10px 15px;
 
     .dropdown-menu {
         margin-top: 1px;
+    }
+}
+
+.bootstrap-select .dropdown-menu.inner>li>a {
+    &:active {
+        color: $primary !important;
+        background-color: $primary-light !important;
+
+        .text {
+            color: $primary !important;
+        }
     }
 }

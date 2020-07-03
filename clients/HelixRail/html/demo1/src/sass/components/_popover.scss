@@ -5,6 +5,9 @@
 
 // Base
 .popover {
+    border-radius: 8px;
+    font-size: inherit;
+
     .popover-header {
         font-size: $popover-header-font-size;
         font-weight: $popover-header-font-weight;
@@ -20,7 +23,7 @@
         margin-right: auto#{'/*rtl:ignore*/'};
         margin-left: $popover-arrow-height#{'/*rtl:ignore*/'};
 
-        > .arrow {
+        >.arrow {
             right: auto#{'/*rtl:ignore*/'};
             left: subtract(-$popover-arrow-height, $popover-border-width)#{'/*rtl:ignore*/'};
 
@@ -44,7 +47,7 @@
         margin-left: auto#{'/*rtl:ignore*/'};
         margin-right: $popover-arrow-height#{'/*rtl:ignore*/'};
 
-        > .arrow {
+        >.arrow {
             left: auto#{'/*rtl:ignore*/'};
             right: subtract(-$popover-arrow-height, $popover-border-width)#{'/*rtl:ignore*/'};
 
@@ -61,6 +64,12 @@
                 border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height#{'/*rtl:ignore*/'};
                 border-left-color: $popover-arrow-color#{'/*rtl:ignore*/'};
             }
+        }
+    }
+
+    .popover-body {
+        @include media-breakpoint-up(md) {
+            padding: 24px;
         }
     }
 }
