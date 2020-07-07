@@ -6093,7 +6093,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, body, .breadcrumb--mobile .breadcrumb-item, .checkbox__label {
+.w-100, body, .breadcrumb--mobile .breadcrumb-item, .checkbox__label, .custom-switch-reverse .custom-control-label {
   width: 100% !important; }
 
 .w-auto {
@@ -6277,7 +6277,7 @@ button.bg-dark:focus {
 .cart-bar__dropdown-menu {
   padding-bottom: 0 !important; }
 
-.pl-0,
+.pl-0, .custom-switch-reverse,
 .px-0,
 .form-control {
   padding-left: 0 !important; }
@@ -6369,7 +6369,7 @@ button.bg-dark:focus {
 .py-5 {
   padding-top: 3rem !important; }
 
-.pr-5,
+.pr-5, .custom-switch-reverse .custom-control-label,
 .px-5 {
   padding-right: 3rem !important; }
 
@@ -8709,3 +8709,30 @@ textarea.form-control {
   border-radius: 2px;
   border: 1px solid #e0e0e0;
   font-size: 13px; }
+
+/*SWITCH */
+.custom-switch-reverse .custom-control-input:checked ~ .custom-control-label:before {
+  background-color: #ef5a28;
+  border-color: #ef5a28; }
+
+.custom-switch-reverse .custom-control-input:checked ~ .custom-control-label:after {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px); }
+
+.custom-switch-reverse .custom-control-input:focus ~ .custom-control-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(239, 90, 40, 0.25);
+  border-color: #ef5a28; }
+
+.custom-switch-reverse .custom-control-label:before {
+  left: auto;
+  right: 0;
+  width: 36px;
+  height: calc(36px - 16px);
+  border-radius: 15px; }
+
+.custom-switch-reverse .custom-control-label:after {
+  left: auto;
+  right: calc(36px + -18px);
+  height: calc(36px - 20px);
+  width: calc(36px - 20px);
+  border-radius: 50%; }

@@ -33,4 +33,11 @@ $(document).ready(function() {
       .parent()
       .removeClass("show");
   });
+
+  //Add unscroll class for body once you call bootstrap modal from another modal
+  $(document).on("hidden.bs.modal", function(event) {
+    if ($(".modal:visible").length) {
+      $("body").addClass("modal-open");
+    }
+  });
 });

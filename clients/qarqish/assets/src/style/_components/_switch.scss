@@ -1,0 +1,54 @@
+/*SWITCH */
+
+$switch-size: 36px;
+
+.custom-switch-reverse {
+    @extend .pl-0;
+
+    .custom-control-input {
+        &:checked {
+            &~.custom-control-label {
+                &:before {
+                    background-color: $orange;
+                    border-color: $orange;
+                }
+
+                &:after {
+                    transform: translateX(16px);
+                }
+            }
+        }
+
+        &:focus {
+            &~.custom-control-label {
+                &:before {
+                    box-shadow: 0 0 0 0.2rem rgba($orange, .25);
+                    border-color: $orange;
+                }
+            }
+        }
+    }
+
+
+
+    .custom-control-label {
+        @extend .w-100,
+        .pr-5;
+
+        &:before {
+            left: auto;
+            right: 0;
+            width: $switch-size;
+            height: calc(#{$switch-size} - 16px);
+            border-radius: 15px;
+        }
+
+        &:after {
+            left: auto;
+            right: calc(#{$switch-size} + -18px);
+            height: calc(#{$switch-size} - 20px);
+            width: calc(#{$switch-size} - 20px);
+            border-radius: 50%;
+        }
+    }
+}
