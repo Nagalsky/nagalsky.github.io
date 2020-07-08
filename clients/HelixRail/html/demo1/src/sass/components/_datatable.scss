@@ -923,5 +923,122 @@
 	}
 }
 
+
+.dataTables_wrapper {
+
+	.top,
+	.dataTables_filter {
+		@extend .d-none;
+	}
+
+	.bottom {
+		@extend .d-flex,
+		.flex-column,
+		.flex-md-row,
+		.align-items-center,
+		.justify-content-center,
+		.justify-content-md-between,
+		.px-4;
+
+		.dataTables_length {
+			@extend .mb-4,
+			.mb-md-0;
+
+			label {
+				@extend .m-0;
+			}
+
+			font-size: 0;
+		}
+	}
+
+	.table {
+		>thead {
+			>tr {
+
+				>th,
+				>td {
+					white-space: nowrap;
+					background-color: $gray-300;
+					padding: 12px 25px 15px 15px;
+					cursor: pointer;
+					position: relative;
+					background-repeat: no-repeat;
+					background-size: 20px;
+					background-position: right 10px center;
+					color: $gray-600 !important;
+
+					&:first-child {
+						background-image: none !important;
+						color: $gray-600 !important;
+					}
+
+					&.sorting_asc {
+						color: $gray-600 !important;
+						background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEYxRTQ3O2ZpbGwtb3BhY2l0eTowO30KCS5zdDF7ZmlsbDojMEYxRTQ3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTguOCwxMy40Yy0wLjQtMC40LTEtMC41LTEuNC0wLjFjMCwwLDAsMCwwLDBMMTMsMTYuOVY1YzAtMC42LTAuNC0xLTEtMXMtMSwwLjQtMSwxdjExLjlsLTQuNC0zLjYKCQkJYy0wLjQtMC40LTEuMS0wLjMtMS40LDAuMWMtMC40LDAuNC0wLjMsMS4xLDAuMSwxLjRsNiw1bDAuMSwwLjFsMC4xLDAuMWMwLjIsMC4xLDAuNSwwLjEsMC43LDBsMC4xLTAuMWwwLjEtMC4xbDYtNQoJCQlDMTkuMSwxNC40LDE5LjEsMTMuOCwxOC44LDEzLjRDMTguOCwxMy40LDE4LjgsMTMuNCwxOC44LDEzLjR6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==");
+					}
+
+					&.sorting_desc {
+						color: $gray-600 !important;
+						background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEYxRTQ3O2ZpbGwtb3BhY2l0eTowO30KCS5zdDF7ZmlsbDojMEYxRTQ3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNS4yLDEwLjZjMC40LDAuNCwxLDAuNSwxLjQsMC4xYzAsMCwwLDAsMCwwTDExLDcuMVYxOWMwLDAuNiwwLjQsMSwxLDFzMS0wLjQsMS0xVjcuMWw0LjQsMy42CgkJCWMwLjQsMC40LDEuMSwwLjMsMS40LTAuMWMwLjQtMC40LDAuMy0xLjEtMC4xLTEuNGwtNi01bC0wLjEtMC4xbC0wLjEtMC4xYy0wLjItMC4xLTAuNS0wLjEtMC43LDBsLTAuMSwwLjFsLTAuMSwwLjFsLTYsNQoJCQlDNC45LDkuNiw0LjksMTAuMiw1LjIsMTAuNkM1LjIsMTAuNiw1LjIsMTAuNiw1LjIsMTAuNnoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K");
+					}
+				}
+			}
+		}
+
+		>tbody {
+			>tr {
+				&.even {
+
+					>th,
+					>td {
+						background-color: $gray-300;
+					}
+				}
+
+				>th,
+				>td {
+					@extend .border-0;
+					padding: 4px 15px;
+				}
+			}
+		}
+	}
+
+	.custom-select {
+		border-color: $gray-50;
+		border-radius: 6px;
+		box-shadow: 0 2px 4px 0 #f3f3f6;
+	}
+
+	.pagination {
+		@include media-breakpoint-down(sm) {
+			overflow-x: auto;
+			max-width: 260px;
+		}
+
+		.page-item {
+			&.active {
+				.page-link {
+					border-color: $primary !important;
+				}
+			}
+
+			.page-link {
+				box-shadow: 0 2px 4px 0 #f3f3f6;
+				border: 1px solid $gray-50 !important;
+				height: 40px !important;
+				min-width: 40px !important;
+
+				&:hover,
+				&:active {
+					border-color: $primary !important;
+				}
+			}
+		}
+	}
+}
+
+
 // Mobile mode
 @include media-breakpoint-down(sm) {}

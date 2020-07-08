@@ -6117,7 +6117,8 @@ button.bg-white:focus {
 .border-left {
   border-left: 1px solid #e9eaee !important; }
 
-.border-0, .btn.btn-header-user, .btn-header-user.form-quantity-btn, .form-quantity-btn, .modal .modal-footer, .table.table-striped tbody tr td {
+.border-0, .btn.btn-header-user, .btn-header-user.form-quantity-btn, .form-quantity-btn, .modal .modal-footer, .table.table-striped tbody tr td, .dataTables_wrapper .table > tbody > tr > th,
+.dataTables_wrapper .table > tbody > tr > td {
   border: 0 !important; }
 
 .border-top-0 {
@@ -6193,7 +6194,7 @@ button.bg-white:focus {
 .rounded-pill {
   border-radius: 50rem !important; }
 
-.rounded-0 {
+.rounded-0, .burger-icon {
   border-radius: 0 !important; }
 
 .clearfix::after {
@@ -6201,7 +6202,8 @@ button.bg-white:focus {
   clear: both;
   content: ""; }
 
-.d-none, .datatable.datatable-default .datatable .datatable-pager, .apexcharts-tooltip-title,
+.d-none, .datatable.datatable-default .datatable .datatable-pager, .dataTables_wrapper .top,
+.dataTables_wrapper .dataTables_filter, .apexcharts-tooltip-title,
 .apexcharts-xaxistooltip,
 .apexcharts-yaxistooltip, .input-daterange .input-group-append .input-group-text {
   display: none !important; }
@@ -6224,7 +6226,7 @@ button.bg-white:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .form-quantity-box, .progress-title, .list-striped__item, .pager, .pager__item, .apexcharts-legend-series, .chart-stats, .chart-tooltip-holder, .form-datatable-search, .switch-box, .switch-box__item > span, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
+.d-flex, .form-quantity-box, .progress-title, .list-striped__item, .dataTables_wrapper .bottom, .pager, .pager__item, .apexcharts-legend-series, .chart-stats, .chart-tooltip-holder, .form-datatable-search, .switch-box, .switch-box__item > span, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .header-menu-mobile .menu-nav .menu-item > .menu-link .menu-arrow-icon, .aside-menu .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .aside-menu .menu-nav .menu-item > .menu-link .menu-arrow-icon {
   display: -webkit-box !important;
@@ -6420,7 +6422,7 @@ button.bg-white:focus {
   -ms-flex-direction: row !important;
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .dataTables_wrapper .bottom {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -6483,7 +6485,7 @@ button.bg-white:focus {
   -ms-flex-pack: end !important;
   justify-content: flex-end !important; }
 
-.justify-content-center, .form-quantity-btn, .switch-box__item > span, .badge.badge-simple, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
+.justify-content-center, .form-quantity-btn, .dataTables_wrapper .bottom, .switch-box__item > span, .badge.badge-simple, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .header-menu-mobile .menu-nav .menu-item > .menu-link .menu-arrow-icon, .aside-menu .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .aside-menu .menu-nav .menu-item > .menu-link .menu-arrow-icon {
   -webkit-box-pack: center !important;
@@ -6509,7 +6511,7 @@ button.bg-white:focus {
   -ms-flex-align: end !important;
   align-items: flex-end !important; }
 
-.align-items-center, .progress-title, .list-striped__item, .pager, .pager__item, .apexcharts-legend-series, .chart-stats, .switch-box__item > span, .badge.badge-simple, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
+.align-items-center, .progress-title, .list-striped__item, .dataTables_wrapper .bottom, .pager, .pager__item, .apexcharts-legend-series, .chart-stats, .switch-box__item > span, .badge.badge-simple, .dropzone.dropzone-default .dropzone-icon-box, .header-menu-mobile .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .header-menu-mobile .menu-nav .menu-item > .menu-link .menu-arrow-icon, .aside-menu .menu-nav .menu-item > .menu-heading .menu-arrow-icon,
 .aside-menu .menu-nav .menu-item > .menu-link .menu-arrow-icon {
   -webkit-box-align: center !important;
@@ -6699,7 +6701,7 @@ button.bg-white:focus {
     align-self: stretch !important; } }
 
 @media (min-width: 768px) {
-  .flex-md-row {
+  .flex-md-row, .dataTables_wrapper .bottom {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
     -ms-flex-direction: row !important;
@@ -6758,7 +6760,7 @@ button.bg-white:focus {
     -webkit-box-pack: center !important;
     -ms-flex-pack: center !important;
     justify-content: center !important; }
-  .justify-content-md-between {
+  .justify-content-md-between, .dataTables_wrapper .bottom {
     -webkit-box-pack: justify !important;
     -ms-flex-pack: justify !important;
     justify-content: space-between !important; }
@@ -7386,7 +7388,7 @@ button.bg-white:focus {
 .vh-100 {
   height: 100vh !important; }
 
-.m-0, .chart-donat .apexcharts-tooltip-series-group .apexcharts-tooltip-y-group, .switch-box__item, .input-daterange .input-group-append {
+.m-0, .dataTables_wrapper .bottom .dataTables_length label, .chart-donat .apexcharts-tooltip-series-group .apexcharts-tooltip-y-group, .switch-box__item, .input-daterange .input-group-append {
   margin: 0 !important; }
 
 .mt-0,
@@ -7475,7 +7477,7 @@ button.bg-white:focus {
 .mx-4 {
   margin-right: 1rem !important; }
 
-.mb-4,
+.mb-4, .dataTables_wrapper .bottom .dataTables_length,
 .my-4 {
   margin-bottom: 1rem !important; }
 
@@ -8257,7 +8259,8 @@ button.bg-white:focus {
   padding-top: 1rem !important; }
 
 .pr-4,
-.px-4 {
+.px-4,
+.dataTables_wrapper .bottom {
   padding-right: 1rem !important; }
 
 .pb-4,
@@ -8265,7 +8268,8 @@ button.bg-white:focus {
   padding-bottom: 1rem !important; }
 
 .pl-4,
-.px-4 {
+.px-4,
+.dataTables_wrapper .bottom {
   padding-left: 1rem !important; }
 
 .p-5 {
@@ -11464,7 +11468,7 @@ button.bg-white:focus {
   .mr-md-0,
   .mx-md-0 {
     margin-right: 0 !important; }
-  .mb-md-0, .datatable.datatable-default > .datatable-pager > .datatable-pager-info,
+  .mb-md-0, .datatable.datatable-default > .datatable-pager > .datatable-pager-info, .dataTables_wrapper .bottom .dataTables_length,
   .my-md-0 {
     margin-bottom: 0 !important; }
   .ml-md-0,
@@ -46755,6 +46759,64 @@ textarea.form-control {
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDBCNDc2O2ZpbGwtb3BhY2l0eTowO30KCS5zdDF7ZmlsbDojMDBCNDc2O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTIsMkM2LjUsMiwyLDYuNSwyLDEyczQuNSwxMCwxMCwxMHMxMC00LjUsMTAtMTBTMTcuNSwyLDEyLDJ6IE0xMiwyMGMtNC40LDAtOC0zLjYtOC04czMuNi04LDgtOHM4LDMuNiw4LDgKCQkJUzE2LjQsMjAsMTIsMjB6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE0LjcsOC40bC0zLjgsNWwtMS42LTIuMWMtMC4zLTAuNC0xLTAuNS0xLjQtMC4ycy0wLjUsMS0wLjIsMS40bDIuNCwzLjFjMC4yLDAuMiwwLjUsMC40LDAuOCwwLjQKCQkJYzAuMywwLDAuNi0wLjEsMC44LTAuNGw0LjYtNmMwLjMtMC40LDAuMy0xLjEtMC4yLTEuNEMxNS43LDcuOSwxNSw3LjksMTQuNyw4LjRMMTQuNyw4LjR6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="); }
   .table-badge-empty:before {
     content: '—'; }
+
+.dataTables_wrapper .bottom .dataTables_length {
+  font-size: 0; }
+
+.dataTables_wrapper .table > thead > tr > th,
+.dataTables_wrapper .table > thead > tr > td {
+  white-space: nowrap;
+  background-color: #f3f4f6;
+  padding: 12px 25px 15px 15px;
+  cursor: pointer;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 10px center;
+  color: #7c849a !important; }
+  .dataTables_wrapper .table > thead > tr > th:first-child,
+  .dataTables_wrapper .table > thead > tr > td:first-child {
+    background-image: none !important;
+    color: #7c849a !important; }
+  .dataTables_wrapper .table > thead > tr > th.sorting_asc,
+  .dataTables_wrapper .table > thead > tr > td.sorting_asc {
+    color: #7c849a !important;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEYxRTQ3O2ZpbGwtb3BhY2l0eTowO30KCS5zdDF7ZmlsbDojMEYxRTQ3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTguOCwxMy40Yy0wLjQtMC40LTEtMC41LTEuNC0wLjFjMCwwLDAsMCwwLDBMMTMsMTYuOVY1YzAtMC42LTAuNC0xLTEtMXMtMSwwLjQtMSwxdjExLjlsLTQuNC0zLjYKCQkJYy0wLjQtMC40LTEuMS0wLjMtMS40LDAuMWMtMC40LDAuNC0wLjMsMS4xLDAuMSwxLjRsNiw1bDAuMSwwLjFsMC4xLDAuMWMwLjIsMC4xLDAuNSwwLjEsMC43LDBsMC4xLTAuMWwwLjEtMC4xbDYtNQoJCQlDMTkuMSwxNC40LDE5LjEsMTMuOCwxOC44LDEzLjRDMTguOCwxMy40LDE4LjgsMTMuNCwxOC44LDEzLjR6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="); }
+  .dataTables_wrapper .table > thead > tr > th.sorting_desc,
+  .dataTables_wrapper .table > thead > tr > td.sorting_desc {
+    color: #7c849a !important;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEYxRTQ3O2ZpbGwtb3BhY2l0eTowO30KCS5zdDF7ZmlsbDojMEYxRTQ3O30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNS4yLDEwLjZjMC40LDAuNCwxLDAuNSwxLjQsMC4xYzAsMCwwLDAsMCwwTDExLDcuMVYxOWMwLDAuNiwwLjQsMSwxLDFzMS0wLjQsMS0xVjcuMWw0LjQsMy42CgkJCWMwLjQsMC40LDEuMSwwLjMsMS40LTAuMWMwLjQtMC40LDAuMy0xLjEtMC4xLTEuNGwtNi01bC0wLjEtMC4xbC0wLjEtMC4xYy0wLjItMC4xLTAuNS0wLjEtMC43LDBsLTAuMSwwLjFsLTAuMSwwLjFsLTYsNQoJCQlDNC45LDkuNiw0LjksMTAuMiw1LjIsMTAuNkM1LjIsMTAuNiw1LjIsMTAuNiw1LjIsMTAuNnoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"); }
+
+.dataTables_wrapper .table > tbody > tr.even > th,
+.dataTables_wrapper .table > tbody > tr.even > td {
+  background-color: #f3f4f6; }
+
+.dataTables_wrapper .table > tbody > tr > th,
+.dataTables_wrapper .table > tbody > tr > td {
+  padding: 4px 15px; }
+
+.dataTables_wrapper .custom-select {
+  border-color: #d3d6dd;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 2px 4px 0 #f3f3f6;
+  box-shadow: 0 2px 4px 0 #f3f3f6; }
+
+@media (max-width: 767.98px) {
+  .dataTables_wrapper .pagination {
+    overflow-x: auto;
+    max-width: 260px; } }
+
+.dataTables_wrapper .pagination .page-item.active .page-link {
+  border-color: #0174ff !important; }
+
+.dataTables_wrapper .pagination .page-item .page-link {
+  -webkit-box-shadow: 0 2px 4px 0 #f3f3f6;
+  box-shadow: 0 2px 4px 0 #f3f3f6;
+  border: 1px solid #d3d6dd !important;
+  height: 40px !important;
+  min-width: 40px !important; }
+  .dataTables_wrapper .pagination .page-item .page-link:hover, .dataTables_wrapper .pagination .page-item .page-link:active {
+    border-color: #0174ff !important; }
 
 .bar-chart {
   display: -webkit-box;
