@@ -40,4 +40,27 @@ $(document).ready(function() {
       $("body").addClass("modal-open");
     }
   });
+
+  //Initial swiper product gallery
+  function initSwiperProductGallery() {
+    var galleryThumbs = new Swiper(".product-gallery-thumbs", {
+      spaceBetween: 10,
+      slidesPerView: 7,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      observer: true,
+      observeParents: true
+    });
+    var galleryTop = new Swiper(".product-gallery", {
+      spaceBetween: 10,
+      observer: true,
+      observeParents: true,
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+  }
+
+  initSwiperProductGallery();
 });
