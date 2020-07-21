@@ -18499,12 +18499,18 @@ $(document).ready(function() {
   function initSwiperProductGallery() {
     var galleryThumbs = new Swiper(".product-gallery-thumbs", {
       spaceBetween: 10,
-      slidesPerView: 7,
+      slidesPerView: 4.5,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       observer: true,
-      observeParents: true
+      observeParents: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 7,
+          spaceBetween: 10
+        }
+      }
     });
     var galleryTop = new Swiper(".product-gallery", {
       spaceBetween: 10,
@@ -18517,4 +18523,7 @@ $(document).ready(function() {
   }
 
   initSwiperProductGallery();
+
+  //Init bootstrap popover
+  $('[data-toggle="popover"]').popover();
 });

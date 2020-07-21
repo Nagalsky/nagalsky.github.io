@@ -1,7 +1,7 @@
 /* FORMS */
 
 $field-height: 28px;
-$field-border-color: $gray-soft;
+$field-border-color: $silver-light;
 
 .form-control {
 	@extend .rounded-0,
@@ -14,6 +14,7 @@ $field-border-color: $gray-soft;
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	line-height: initial;
 	@include custom-placeholder($color: #e0e0e0,
 		$font-size: 14px,
 		$font-family: $font-book);
@@ -33,4 +34,8 @@ select.form-control {
 textarea.form-control {
 	resize: none;
 	height: $field-height;
+
+	&.textarea-lg {
+		height: 100px;
+	}
 }

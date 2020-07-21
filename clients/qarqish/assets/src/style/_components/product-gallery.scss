@@ -2,6 +2,7 @@
 
 
 $product-gallery-primary-color: $silver;
+$product-gallery-primary-color-active: $orange;
 
 .product-gallery {
     @extend .overflow-hidden,
@@ -15,10 +16,38 @@ $product-gallery-primary-color: $silver;
     min-width: 0;
 }
 
-.product-gallery-thumbs {}
+.product-gallery-thumbs {
+    .swiper-slide {
+        @extend .overflow-hidden;
+        border-radius: $base-radius;
+        border: 1px solid $product-gallery-primary-color;
+
+        &.swiper-slide-thumb-active {
+            border-color: $product-gallery-primary-color-active;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
 
 .product-gallery__img {
     @extend .img-fluid,
     .d-block,
     .mx-auto;
+}
+
+.product-gallery-add-product-btn {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .btn,
+    .border-0,
+    .py-0;
+    width: 60px;
+    border-radius: $base-radius;
+    color: $product-gallery-primary-color-active;
+    background-color: $product-gallery-primary-color;
+    margin-left: 10px;
 }

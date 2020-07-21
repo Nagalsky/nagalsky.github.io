@@ -1,0 +1,34 @@
+/* PRODUCT GALLERY SKELETON */
+
+$product-gallery-skeleton-primary-color: $silver;
+
+.product-gallery-skeleton {
+    @extend .d-none,
+    .d-md-flex,
+    .align-items-center,
+    .justify-content-center;
+    background-color: $product-gallery-skeleton-primary-color;
+    border-radius: $base-radius;
+    height: 460px;
+    margin-bottom: 10px;
+}
+
+.product-gallery-skeleton-thumbs {
+    @extend .d-flex;
+}
+
+.product-gallery-skeleton-thumbs__item {
+    background-color: $product-gallery-skeleton-primary-color;
+    border-radius: $base-radius;
+    height: 60px;
+    width: 20%;
+
+    @include media-breakpoint-up(lg) {
+        height: 60px;
+        width: 60px;
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 10px;
+    }
+}

@@ -113,3 +113,14 @@ b {
 .lh-1 {
   line-height: 1;
 }
+
+.required {
+  @extend .position-relative,
+  .d-inline;
+
+  &:before {
+    content: '*';
+    color: $orange;
+    font-size: 1.1;
+  }
+}
