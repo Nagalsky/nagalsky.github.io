@@ -2,6 +2,7 @@
 
 $field-height: 28px;
 $field-border-color: $silver-light;
+$field-color: $muted;
 
 .form-control {
 	@extend .rounded-0,
@@ -15,6 +16,7 @@ $field-border-color: $silver-light;
 	border-left: none;
 	border-right: none;
 	line-height: initial;
+	color: $field-color;
 	@include custom-placeholder($color: #e0e0e0,
 		$font-size: 14px,
 		$font-family: $font-book);
@@ -38,4 +40,9 @@ textarea.form-control {
 	&.textarea-lg {
 		height: 100px;
 	}
+}
+
+label {
+	font-size: 12px;
+	color: $field-color;
 }
