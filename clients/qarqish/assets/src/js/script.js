@@ -72,4 +72,91 @@ $(document).ready(function() {
 
   //Init bootstrap popover
   $('[data-toggle="popover"]').popover();
+
+  //Toevoegene form add fields
+  function emailadressenFormAddFields() {
+    var collapseBtn = $('[data-add="fields"]');
+    var collapseHolder = $(".fields-holder");
+    var i = 1;
+
+    collapseBtn.click(function() {
+      $("<div />", {
+        id: "email_adressen_form_add_fields" + i
+      })
+        .append(
+          $(
+            `
+            <div class="mb-4">
+              <div class="form-row">
+                <div class="form-group col-lg-6">
+                  <div class="form-row">
+                    <div class="form-group col-sm-6">
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <span class="flex-fill text-orange">1 Option name (En)</span>
+                        <button class="btn btn-icon flex-shrink-0 ml-3">
+                          <i class="qarqish-icon-close"></i>
+                        </button>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Write option">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                      <div class="rtl">
+                        <div class="form-group">
+                          <div class="d-flex align-items-center justify-content-between mb-1">
+                            <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
+                            <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                              <i class="qarqish-icon-close"></i>
+                            </button>
+                          </div>
+                          <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-lg-6">
+                  <div class="form-row">
+                    <div class="form-group col-sm-6">
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <span class="flex-fill text-orange">Price for option (QAR)</span>
+                        <button class="btn btn-icon flex-shrink-0 ml-3">
+                          <i class="qarqish-icon-close"></i>
+                        </button>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Write sub-option">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                      <div class="rtl">
+                        <div class="form-group">
+                          <div class="d-flex align-items-center justify-content-between mb-1">
+                            <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
+                            <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                              <i class="qarqish-icon-close"></i>
+                            </button>
+                          </div>
+                          <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-3">
+                <i class="qarqish-icon-plus-square mr-2"></i>
+                Add sub-option for 1option
+              </button>
+            </div>
+          `
+          )
+        )
+        .appendTo(collapseHolder);
+      i++;
+    });
+  }
+
+  emailadressenFormAddFields();
 });
