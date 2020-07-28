@@ -1,0 +1,20 @@
+/* BOX */
+
+.box {
+    @extend .p-3,
+    .bg-silver,
+    .clearfix,
+    .mb-4;
+}
+
+.box__img {
+    @extend .img-fluid,
+    .float-left,
+    .mr-2,
+    .mb-2;
+    max-width: 140px;
+
+    @include media-breakpoint-up(md) {
+        max-width: 200px;
+    }
+}

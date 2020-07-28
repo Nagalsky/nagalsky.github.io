@@ -1,0 +1,15 @@
+/* SECTION */
+
+.section {
+  @extend .py-4,
+  .position-relative;
+
+  &--negative {
+    @extend .pt-md-5;
+
+    @include media-breakpoint-up(md) {
+      margin-top: -40px;
+      z-index: -1;
+    }
+  }
+}
