@@ -1,0 +1,28 @@
+/* TICK */
+
+.ticks {
+    @extend .d-flex,
+    .align-items-center,
+    .flex-wrap;
+}
+
+.tick {
+    @extend .d-flex,
+    .align-items-center;
+    cursor: pointer;
+
+    &[aria-expanded="false"] {
+        .tick__icon {
+            @extend .invisible;
+        }
+    }
+
+    &+.tick {
+        @extend .ml-5;
+    }
+}
+
+.tick__icon {
+    @extend .ml-3,
+    .fs-20;
+}

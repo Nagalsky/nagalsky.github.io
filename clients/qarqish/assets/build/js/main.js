@@ -18713,9 +18713,9 @@ $(document).ready(function() {
         .append(
           $(
             `
-            <div class="mb-4">
+            <div class="mb-3">
               <div class="form-row">
-                <div class="form-group col-lg-6">
+                <div class="form-group mb-0 col-lg-6">
                   <div class="form-row">
                     <div class="form-group col-sm-6">
                       <div class="d-flex align-items-center justify-content-between mb-1">
@@ -18743,12 +18743,12 @@ $(document).ready(function() {
                   </div>
                 </div>
 
-                <div class="form-group col-lg-6">
+                <div class="form-group mb-0 col-lg-6">
                   <div class="form-row">
                     <div class="form-group col-sm-6">
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <span class="flex-fill text-orange">Price for option (QAR)</span>
-                        <button class="btn btn-icon flex-shrink-0 ml-3">
+                        <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
                           <i class="qarqish-icon-close"></i>
                         </button>
                       </div>
@@ -18772,7 +18772,7 @@ $(document).ready(function() {
                 </div>
               </div>
 
-              <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-3">
+              <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-4">
                 <i class="qarqish-icon-plus-square mr-2"></i>
                 Add sub-option for 1option
               </button>
