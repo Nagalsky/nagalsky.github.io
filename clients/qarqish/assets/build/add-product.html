@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <header class="header">
       <div class="container">
           <div class="header__left">
@@ -76,7 +75,28 @@
           <div class="tab-pane fade show active" id="details-tab">
             <div class="row">
               <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="d-none d-md-block">
+                <div class="product-gallery-skeleton">
+                  <button type="button" class="btn btn-outline-orange btn-huge py-3">+ add images</button>
+                </div>
+
+                <div class="product-gallery-skeleton-thumbs">
+                  <div class="d-none d-md-flex flex-shrink-0 flex-fill">
+                    <button type="button" class="product-gallery-add-product-btn">+</button>
+                  </div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                  <div class="product-gallery-skeleton-thumbs__item"></div>
+                </div>
+
+                <div class="d-flex d-md-none mt-4">
+                  <button type="button" class="btn btn-outline-orange btn-block">+ add images</button>
+                </div>
+
+                <!-- <div class="d-none d-md-block">
                   <div class="swiper-container product-gallery">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -128,9 +148,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="d-flex">
+                <!-- <div class="d-flex">
                   <div class="product-gallery-thumbs-holder">
                     <div class="swiper-container product-gallery-thumbs">
                       <div class="swiper-wrapper">
@@ -200,21 +220,17 @@
                   <div class="d-none d-md-flex flex-shrink-0">
                     <button type="button" class="product-gallery-add-product-btn">+</button>
                   </div>
-                </div>
+                </div> -->
               </div>
 
               <div class="col-lg-6">
                 <div class="form-group">
                   <p class="text-silver-light mb-2">Publish in languages</p>
                   <div class="ticks">
-                    <div class="tick" data-toggle="collapse" data-target="#english-tick" aria-expanded="false">
-                      English
-                      <i class="qarqish-icon-checkmark tick__icon"></i>
+                    <div class="tick" data-toggle="collapse" data-target="#english-tick" aria-expanded="false">English
                     </div>
 
-                    <div class="tick" data-toggle="collapse" data-target="#arabic-tick" aria-expanded="false">
-                      Arabic
-                      <i class="qarqish-icon-checkmark tick__icon"></i>
+                    <div class="tick" data-toggle="collapse" data-target="#arabic-tick" aria-expanded="false">Arabic
                     </div>
                   </div>
                 </div>
@@ -250,7 +266,8 @@ This computer uses a wireless digitally coded transitmission , reduces environme
                     <div class="form-group">
                       <label for="field-product-description-arab">الوصف عرب</label>
                       <textarea name="" id="field-product-description-arab" cols="30" rows="10"
-                        class="form-control textarea-lg">يستخدم هذا الكمبيوتر عملية نقل لاسلكية مشفرة رقميًا ، ويقلل من
+                        class="form-control textarea-lg">
+يستخدم هذا الكمبيوتر عملية نقل لاسلكية مشفرة رقميًا ، ويقلل من
                               التأثيرات البيئية (الموجات الكهرومغناطيسية ، جهاز آخر قريب وما إلى ذلك) ويضمن التشغيل السلس والدقة
                               العالية لبيانات التسجيل. معالجة الكمبيوتر بسيطة للغاية وبديهية بفضل زرين يسهل الوصول إليهما ويعملان
                               بشكل جيد. لا توجد أداة مطلوبة للتثبيت.
@@ -429,7 +446,10 @@ This computer uses a wireless digitally coded transitmission , reduces environme
               </div>
             </div>
 
-            <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-4">
+            <div class="row-holder"></div>
+
+            <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-4"
+              data-add="row">
               <i class="qarqish-icon-plus-square mr-2"></i> Add sub-option for 1option
             </button>
 

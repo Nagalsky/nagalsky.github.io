@@ -1,5 +1,8 @@
 /* TICK */
 
+$tick-size: 16px;
+$tick-color: $brand;
+
 .ticks {
     @extend .d-flex,
     .align-items-center,
@@ -8,11 +11,36 @@
 
 .tick {
     @extend .d-flex,
-    .align-items-center;
+    .align-items-center,
+    .position-relative;
     cursor: pointer;
+    padding-left: $tick-size + 8px;
+
+    &:before,
+    &:after {
+        content: '';
+        @extend .position-absolute,
+        .rounded-circle;
+    }
+
+    &:before {
+        left: 0;
+        top: 1px;
+        width: $tick-size;
+        height: $tick-size;
+        border: 1px solid $tick-color;
+    }
+
+    &:after {
+        left: 2px;
+        top: 3px;
+        width: $tick-size - 4px;
+        height: $tick-size - 4px;
+        background-color: $tick-color;
+    }
 
     &[aria-expanded="false"] {
-        .tick__icon {
+        &:after {
             @extend .invisible;
         }
     }
@@ -20,9 +48,4 @@
     &+.tick {
         @extend .ml-5;
     }
-}
-
-.tick__icon {
-    @extend .ml-3,
-    .fs-20;
 }
