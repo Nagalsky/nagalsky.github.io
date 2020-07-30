@@ -85,6 +85,8 @@ $(document).ready(function() {
           $(
             `
             <div class="mb-3">
+              <hr class="mb-5" />
+
               <div class="form-row">
                 <div class="form-group mb-0 col-lg-6">
                   <div class="form-row">
@@ -176,7 +178,12 @@ $(document).ready(function() {
                 <div class="form-row">
                   <div class="form-group col-sm-6">
                     <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="flex-fill text-orange">${counter} Option name (En)</span>
+                      <span class="flex-fill">${counter} Option name (En) <button type="button" class="btn-popover ml-2" data-html="true" data-toggle="popover" title="<div class='d-flex align-itesm-center justify-content-between'><div class='flex-fill'><i
+                                    class='popover-title__icon qarqish-icon-question-circle-o mr-2'></i>Info</div>
+                                    <i class='qarqish-icon-close popover__close-btn'></i></div>" data-trigger="focus"
+                        data-content="Pop-up shows to explain what it is used for">
+                        <i class="popover-title__icon qarqish-icon-question-circle-o"></i>
+                      </button></span>
                       <button class="btn btn-icon flex-shrink-0 ml-3"><i class="qarqish-icon-close"></i></button>
                     </div>
                     <input type="text" class="form-control" placeholder="Write option" />
@@ -186,7 +193,7 @@ $(document).ready(function() {
                     <div class="rtl">
                       <div class="form-group">
                         <div class="d-flex align-items-center justify-content-between mb-1">
-                          <span class="flex-fill text-orange">${counter} اسم الخيار (عربي)</span>
+                          <span class="flex-fill">${counter} اسم الخيار (عربي)</span>
                           <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
                             <i class="qarqish-icon-close"></i>
                           </button>
@@ -202,7 +209,7 @@ $(document).ready(function() {
                 <div class="form-row">
                   <div class="form-group col-sm-6">
                     <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="flex-fill text-orange">Price for option (QAR)</span>
+                      <span class="flex-fill">Price for option (QAR)</span>
                       <button class="btn btn-icon flex-shrink-0 ml-3 invisible"><i
                           class="qarqish-icon-close"></i></button>
                     </div>
@@ -213,7 +220,7 @@ $(document).ready(function() {
                     <div class="rtl">
                       <div class="form-group">
                         <div class="d-flex align-items-center justify-content-between mb-1">
-                          <span class="flex-fill text-orange">${counter} اسم الخيار (عربي)</span>
+                          <span class="flex-fill">${counter} اسم الخيار (عربي)</span>
                           <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
                             <i class="qarqish-icon-close"></i>
                           </button>
