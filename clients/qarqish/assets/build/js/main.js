@@ -18707,78 +18707,76 @@ $(document).ready(function() {
     var i = 1;
 
     collapseBtn.click(function() {
-      $("<div />")
+      $("<div class='mb-3'>")
         .append(
           $(
             `
-            <div class="mb-3">
-              <hr class="mb-5" />
+            <hr class="mb-5" />
 
-              <div class="form-row">
-                <div class="form-group mb-0 col-lg-6">
-                  <div class="form-row">
-                    <div class="form-group col-sm-6">
-                      <div class="d-flex align-items-center justify-content-between mb-1">
-                        <span class="flex-fill text-orange">1 Option name (En)</span>
-                        <button class="btn btn-icon flex-shrink-0 ml-3">
-                          <i class="qarqish-icon-close"></i>
-                        </button>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Write option">
+            <div class="form-row">
+              <div class="form-group mb-0 col-lg-6">
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="flex-fill text-orange">1 Option name (En)</span>
+                      <button class="btn btn-icon flex-shrink-0 ml-3">
+                        <i class="qarqish-icon-close"></i>
+                      </button>
                     </div>
-
-                    <div class="form-group col-sm-6">
-                      <div class="rtl">
-                        <div class="form-group">
-                          <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
-                            <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
-                              <i class="qarqish-icon-close"></i>
-                            </button>
-                          </div>
-                          <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
-                        </div>
-                      </div>
-                    </div>
+                    <input type="text" class="form-control" placeholder="Write option">
                   </div>
-                </div>
 
-                <div class="form-group mb-0 col-lg-6">
-                  <div class="form-row">
-                    <div class="form-group col-sm-6">
-                      <div class="d-flex align-items-center justify-content-between mb-1">
-                        <span class="flex-fill text-orange">Price for option (QAR)</span>
-                        <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
-                          <i class="qarqish-icon-close"></i>
-                        </button>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Write sub-option">
-                    </div>
-
-                    <div class="form-group col-sm-6">
-                      <div class="rtl">
-                        <div class="form-group">
-                          <div class="d-flex align-items-center justify-content-between mb-1">
-                            <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
-                            <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
-                              <i class="qarqish-icon-close"></i>
-                            </button>
-                          </div>
-                          <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
+                  <div class="form-group col-sm-6">
+                    <div class="rtl">
+                      <div class="form-group">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
+                          <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                            <i class="qarqish-icon-close"></i>
+                          </button>
                         </div>
+                        <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="row-holder"></div>
+              <div class="form-group mb-0 col-lg-6">
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="flex-fill text-orange">Price for option (QAR)</span>
+                      <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                        <i class="qarqish-icon-close"></i>
+                      </button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Write sub-option">
+                  </div>
 
-              <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-4">
-                <i class="qarqish-icon-plus-square mr-2"></i>
-                Add sub-option for 1option
-              </button>
+                  <div class="form-group col-sm-6">
+                    <div class="rtl">
+                      <div class="form-group">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <span class="flex-fill text-orange">1 اسم الخيار (عربي)</span>
+                          <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                            <i class="qarqish-icon-close"></i>
+                          </button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="row-holder"></div>
+
+            <button type="button" class="btn btn-link-brand p-0 border-0 d-inline-flex align-items-center mb-4" data-add="dynamycal-created-row">
+              <i class="qarqish-icon-plus-square mr-2"></i>
+              Add sub-option for 1option
+            </button>
           `
           )
         )
@@ -18805,12 +18803,7 @@ $(document).ready(function() {
                 <div class="form-row">
                   <div class="form-group col-sm-6">
                     <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="flex-fill">${counter} Option name (En) <button type="button" class="btn-popover ml-2" data-html="true" data-toggle="popover" title="<div class='d-flex align-itesm-center justify-content-between'><div class='flex-fill'><i
-                                    class='popover-title__icon qarqish-icon-question-circle-o mr-2'></i>Info</div>
-                                    <i class='qarqish-icon-close popover__close-btn'></i></div>" data-trigger="focus"
-                        data-content="Pop-up shows to explain what it is used for">
-                        <i class="popover-title__icon qarqish-icon-question-circle-o"></i>
-                      </button></span>
+                      <span class="flex-fill text-muted-soft font-demi">${counter} Sub option name (En)</span>
                       <button class="btn btn-icon flex-shrink-0 ml-3"><i class="qarqish-icon-close"></i></button>
                     </div>
                     <input type="text" class="form-control" placeholder="Write option" />
@@ -18820,7 +18813,7 @@ $(document).ready(function() {
                     <div class="rtl">
                       <div class="form-group">
                         <div class="d-flex align-items-center justify-content-between mb-1">
-                          <span class="flex-fill">${counter} اسم الخيار (عربي)</span>
+                          <span class="flex-fill text-muted-soft font-demi">${counter} اسم الخيار (عربي)</span>
                           <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
                             <i class="qarqish-icon-close"></i>
                           </button>
@@ -18836,18 +18829,18 @@ $(document).ready(function() {
                 <div class="form-row">
                   <div class="form-group col-sm-6">
                     <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="flex-fill">Price for option (QAR)</span>
+                      <span class="flex-fill text-muted-soft font-demi">Additional price</span>
                       <button class="btn btn-icon flex-shrink-0 ml-3 invisible"><i
                           class="qarqish-icon-close"></i></button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Write sub-option" />
+                    <input type="text" class="form-control" placeholder="Additional price" />
                   </div>
 
                   <div class="form-group col-sm-6">
                     <div class="rtl">
                       <div class="form-group">
                         <div class="d-flex align-items-center justify-content-between mb-1">
-                          <span class="flex-fill">${counter} اسم الخيار (عربي)</span>
+                          <span class="flex-fill text-muted-soft font-demi">${counter} اسم الخيار (عربي)</span>
                           <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
                             <i class="qarqish-icon-close"></i>
                           </button>
@@ -18868,4 +18861,81 @@ $(document).ready(function() {
   }
 
   productOptionFormAddRow();
+
+  var dynamicalCounter = 2;
+
+  $("body").on("click", "[data-add='dynamycal-created-row']", function() {
+    var parent = $(this)
+      .parent()
+      .find(".row-holder");
+
+    productOptionDynamicalFormAddRow(parent);
+
+    dynamicalCounter++;
+  });
+
+  function productOptionDynamicalFormAddRow(parent) {
+    $("<div />")
+      .append(
+        $(
+          `
+            <div class="form-row">
+              <div class="form-group mb-0 col-lg-6">
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="flex-fill text-muted-soft font-demi">${dynamicalCounter} Sub option name (En)</span>
+                      <button class="btn btn-icon flex-shrink-0 ml-3"><i class="qarqish-icon-close"></i></button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Write option" />
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <div class="rtl">
+                      <div class="form-group">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <span class="flex-fill text-muted-soft font-demi">${dynamicalCounter} اسم الخيار (عربي)</span>
+                          <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                            <i class="qarqish-icon-close"></i>
+                          </button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-0 col-lg-6">
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="flex-fill text-muted-soft font-demi">Additional price</span>
+                      <button class="btn btn-icon flex-shrink-0 ml-3 invisible"><i
+                          class="qarqish-icon-close"></i></button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Additional price" />
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <div class="rtl">
+                      <div class="form-group">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <span class="flex-fill text-muted-soft font-demi">${dynamicalCounter} اسم الخيار (عربي)</span>
+                          <button class="btn btn-icon flex-shrink-0 ml-3 invisible">
+                            <i class="qarqish-icon-close"></i>
+                          </button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="اكتب الخيار الفرعي" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+        )
+      )
+      .appendTo(parent);
+  }
 });
