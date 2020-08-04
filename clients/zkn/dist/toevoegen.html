@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <title>Toevoegen page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    <header class="header">
+      <div class="container container--regular">
+        <div class="header__top">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Open menu">
+            <i class="icon-menu"></i>
+          </button>
+    
+          <a href="#" class="header__logo mx-auto">
+            <img src="assets/images/elements/logo.svg" class="w-100" alt="Homepage ZorgkaartNederland">
+          </a>
+    
+          <div class="header__content">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="dropdown ml-auto flex-shrink-0">
+                <button class="header__dropdown-toggle dropdown-toggle" type="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" aria-label="Mijn account" data-display="static">
+                  <i class="icon-user-circle text-primary"></i>
+                  <span class="header__dropdown-toggle-text text-primary">Mijn account</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Mijn wachtwoord</a>
+                  <a class="dropdown-item" href="#">Mijn contactgegevens</a>
+                  <a class="dropdown-item" href="#">Uw gegevens</a>
+                  <div class="dropdown-divider"></div>
+                  <span class="dropdown-item-text">Zorgverlener</span>
+                  <a class="dropdown-item" href="#">Beheer je persoonlijke profiel</a>
+                  <span class="dropdown-item-text">Zorginstelling</span>
+                  <a class="dropdown-item" href="#">Beheer het profiel van je instelling(en)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Uitloggen</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="navbar navbar-secondary navbar-expand-lg">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Rapportages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">E-mail alerts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download waarderingen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Widgets</a>
+              </li>
+              <li class="nav-item ml-md-auto border-0">
+                <a class="nav-link" href="#">Helpcentrum</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-3">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">E-mail alerts</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Toevoegen</li>
+                    </ol>
+                </nav>
+
+                <div class="box box--rounded">
+                    <h1>E-mail alerts</h1>
+                    <p>E-mail alerts sturen wij nadat iemand een waardering over uw dienstverband heeft geplaatst op
+                        ZorgkaartNederland. Geef aan of en hoe vaak u een e-mail wilt ontvangen.</p>
+
+                    <form action="">
+                        <div class="form-group row">
+                            <label for="form-field-onderwerp" class="col-sm-3 col-form-label">Onderwerp<span
+                                    class="required"></span></label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-regular" id="form-field-onderwerp">
+                                <p class="form-text">Geef een onderwerp voor de e-mail alerts op. Tip: gebruik
+                                    bijvoorbeeld de naam van uw locatie.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Frequentie<span class="required"></span></label>
+                            <div class="col-sm-9">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-checkbox-direct">
+                                    <label class="custom-control-label" for="custom-checkbox-direct">Direct. U ontvangt
+                                        een e-mail
+                                        zodra een waardering geplaatst is.</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-checkbox-dagelijks">
+                                    <label class="custom-control-label" for="custom-checkbox-dagelijks">Dagelijks. U
+                                        ontvangt eenmaal
+                                        per dag een e-mail met alle waarderingen die op deze dag geplaatst zijn.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">E-mailadressen<span class="required"></span></label>
+                            <div class="col-sm-9">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label font-base-regular"
+                                        for="form-field-emailadres">E-mailadres</label>
+                                    <div class="col-sm-9">
+                                        <div class="d-flex">
+                                            <input type="email" class="form-control form-control-regular flex-fill"
+                                                id="form-field-emailadres">
+
+                                            <button type="button" class="btn btn-theme flex-shrink-0 ml-3">Verwijderen
+                                                <i class="icon-chevron-right ml-3"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bc-collection"></div>
+
+                                <button type="button" class="btn btn-primary font-base-regular"
+                                    data-addfield="e-mailadressen">Toevoegen</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="form-field-organisaties" class="col-sm-3 col-form-label">Organisaties</label>
+                            <div class="col-sm-9">
+
+                                <a href="javascript:;" class="select-all__toggle d-inline-block mb-3"
+                                    data-checked="0">Selecteer
+                                    alles /
+                                    selecteer
+                                    niets</a>
+
+                                <div class="select-all">
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="form-field-custom-checkbox-1" data-select="childs">
+                                        <label class="custom-control-label" for="form-field-custom-checkbox-1">Custom
+                                            checkbox 1</label>
+                                    </div>
+                                    <div class="pl-4">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-2">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-2">Custom
+                                                checkbox 2</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-3">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-3">Custom
+                                                checkbox 3</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-4">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-4">Custom
+                                                checkbox 4</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-5">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-5">Custom
+                                                checkbox 5</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-6">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-6">Custom
+                                                checkbox 6</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-7">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-7">Custom
+                                                checkbox 7</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-8">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-8">Custom
+                                                checkbox 8</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="form-field-custom-checkbox-9" data-select="childs">
+                                        <label class="custom-control-label" for="form-field-custom-checkbox-9">Custom
+                                            checkbox 9</label>
+                                    </div>
+                                    <div class="pl-4">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-10">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-10">Custom
+                                                checkbox 10</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-11">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-11">Custom
+                                                checkbox 11</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-12">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-12">Custom
+                                                checkbox 12</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-13">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-13">Custom
+                                                checkbox 13</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-14">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-14">Custom
+                                                checkbox 14</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-15">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-15">Custom
+                                                checkbox 15</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-16">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-16">Custom
+                                                checkbox 16</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="form-field-organisaties" class="col-sm-3 col-form-label"><small>Velden met een *
+                                    zijn verplicht</small></label>
+                            <div class="col-sm-9">
+                                <button type="button" class="btn btn-theme">Distributielijst opslaan
+                                    <i class="icon-chevron-right ml-3"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box box--rounded">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 d-none d-md-block">
+                      <p class="text-muted fs-14"><b>Initiatief van</b></p>
+                      <a href="#"><img src="assets/images/temp/logo_npcf_slider.svg" alt="Website Patiëntenfederatie Nederland"
+                          class="w-100"></a>
+                    </div>
+                
+                    <div class="col-lg-10 col-md-9 has-divider has-divider--md pl-md-4">
+                      <p class="text-muted fs-14"><b>Partners van ZorgkaartNederland</b></p>
+                
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-1.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-2.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-3.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-4.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-5.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/temp/logo_npcf_slider.svg" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-6.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/temp/logo_npcf_slider.svg" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-7.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-8.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-9.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-10.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-11.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-12.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-13.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-14.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-15.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-16.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-17.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-18.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-19.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-20.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-21.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-22.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-23.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-24.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-25.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-26.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-27.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-28.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-29.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-30.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-31.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-32.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-33.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-34.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cookieBar" class="alert alert-warning alert-dismissible fade show cookieBar is-active" role="alert">
+      <p>Deze website gebruikt cookies om de website te verbeteren. Als u geen cookies wilt accepteren kunt u <a href="#" class="readmore">hier</a> klikken voor meer informatie. <a href="#" class="cookiebar-close" data-dismiss="alert">sluiten</a></p>
+    </div>
+
+    <footer class="footer">
+      <div class="container container--regular">
+        <div class="footer__nav" id="accordionExample">
+          <div class="row">
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse1">Over ons</p>
+    
+              <div class="footer__nav-collapse collapse" id="collapse1" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Wat is ZorgkaartNederland?</a></li>
+                  <li><a href="#">Hoe werkt ZorgkaartNederland?</a></li>
+                  <li><a href="#">Over de initiatiefnemer</a></li>
+                  <li><a href="#">Veelgestelde vragen</a></li>
+                  <li><a href="#">Aanmelden nieuwsbrief</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse2">Voor zorgaanbieders
+              </p>
+    
+              <div id="collapse2" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Wat kunt u met ZorgkaartNederland?</a></li>
+                  <li><a href="#">Pakket voor zorginstellingen</a></li>
+                  <li><a href="#">Pakket voor praktijken</a></li>
+                  <li><a href="#">Promotiematerialen</a></li>
+                  <li><a href="#">Veelgestelde vragen</a></li>
+                  <li><a href="#">Toolkit voor professionals</a></li>
+                  <li><a href="#">Aanmelden zorgaanbieder</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse3">Partners</p>
+    
+              <div id="collapse3" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Partnerships en samenwerkingsverbanden</a></li>
+                  <li><a href="#">Partner worden?</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse4">Een veilige omgeving
+              </p>
+    
+              <div id="collapse4" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Disclaimer</a></li>
+                  <li><a href="#">Privacyverklaring</a></li>
+                  <li><a href="#">Gedragscode</a></li>
+                  <li><a href="#">Toegankelijkheidsverklaring</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer__social">
+          <a href="#" class="footer__social__item footer__social__item--twitter"><i class="icon-twitter"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--facebook"><i class="icon-facebook"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--linkedin"><i class="icon-linkedin"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--mail"><i class="icon-mail"></i></a>
+        </div>
+        <p class="text-center">© 2020 Copyright <a href="#">Patiëntenfederatie Nederland</a></p>
+      </div>
+    </footer>
+
+    <script src="assets/javascript/vendors.min.js"></script>
+    <script src="assets/javascript/scripts.js"></script>
+
+</body>
+
+</html>

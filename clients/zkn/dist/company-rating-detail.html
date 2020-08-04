@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <title>Company rating detail page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    <header class="header">
+      <div class="container container--regular">
+        <div class="header__top">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Open menu">
+            <i class="icon-menu"></i>
+          </button>
+    
+          <a href="#" class="header__logo mx-auto">
+            <img src="assets/images/elements/logo.svg" class="w-100" alt="Homepage ZorgkaartNederland">
+          </a>
+    
+          <div class="header__content">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="dropdown ml-auto flex-shrink-0">
+                <button class="header__dropdown-toggle dropdown-toggle" type="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" aria-label="Mijn account" data-display="static">
+                  <i class="icon-user-circle text-primary"></i>
+                  <span class="header__dropdown-toggle-text text-primary">Mijn account</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Mijn wachtwoord</a>
+                  <a class="dropdown-item" href="#">Mijn contactgegevens</a>
+                  <a class="dropdown-item" href="#">Uw gegevens</a>
+                  <div class="dropdown-divider"></div>
+                  <span class="dropdown-item-text">Zorgverlener</span>
+                  <a class="dropdown-item" href="#">Beheer je persoonlijke profiel</a>
+                  <span class="dropdown-item-text">Zorginstelling</span>
+                  <a class="dropdown-item" href="#">Beheer het profiel van je instelling(en)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Uitloggen</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="navbar navbar-secondary navbar-expand-lg">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Rapportages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">E-mail alerts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download waarderingen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Widgets</a>
+              </li>
+              <li class="nav-item ml-md-auto border-0">
+                <a class="nav-link" href="#">Helpcentrum</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-0">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Waarderingen</li>
+                    </ol>
+                </nav>
+
+                <hr class="my-4 d-none d-md-block">
+
+                <div class="form-group pl-md-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="field-selecteer-uw-locatie" class=" font-base-bold pl-3 text-blue">Selecteer uw
+                                locatie</label>
+                            <select name="" id="field-selecteer-uw-locatie" class="form-control form-control-regular">
+                                <option value="">Alle locaties</option>
+                                <option value="">Alle locaties 2</option>
+                                <option value="">Alle locaties 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box--rounded">
+                    <h1 class="mb-md-0">Deventer Ziekenhuis, locatie Deventer</h1>
+                    <div class="d-flex align-items-center justify-content-between flex-row mb-4">
+                        <p class="mb-0 mr-4">Ziekenhuis</p>
+                        <div class="ratinge__score flex-shrink-0">
+                            8
+                            <div class="ratinge__score-decimal">.8</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-column flex-md-row mb-4">
+                        <div class="address mb-4 mb-md-0 mr-md-5">
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Adres
+                                </div>
+
+                                <div class="address__text">
+                                    Nico Bolkesteinlaan 75<br />7416 SE Deventer
+                                </div>
+                            </div>
+
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Telefoon
+                                </div>
+
+                                <div class="address__text">
+                                    0570-535353
+                                </div>
+                            </div>
+
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Website
+                                </div>
+
+                                <div class="address__text">
+                                    <a href="https://www.dz.nl/" target="_blank">https://www.dz.nl/</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-md-right flex-shrink-0">
+                            <span class="d-block">Er zijn <a href="#">1246 waarderingen</a></span>
+                            <span class="d-block"><big><b>97%</b></big> beveelt deze zorginstelling aan</span>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <a href="https://www.dz.nl/"
+                            target="_blank">link goes here/</a> Neque id, a officiis atque nihil vitae voluptas ipsum
+                        dignissimos, quod iusto nemo fuga <a href="https://www.dz.nl/" target="_blank">I'm a link</a>
+                        necessitatibus velit dolores error harum! Voluptas,
+                        reprehenderit? Distinctio.</p>
+                </div>
+
+                <div class="tab-links">
+                    <a href="#" class="tab-link">Dashboard</a>
+                    <a href="#" class="tab-link active">Waarderingen</a>
+                    <a href="#" class="tab-link">Locaties</a>
+                    <a href="#" class="tab-link">Specialisten</a>
+                </div>
+
+                <div class="tab-content mb-4">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2 class="h1 px-3">Waardering van Deventer Ziekenhuis, locatie Deventer - Deventer op 29
+                                april
+                                2020</h2>
+
+                            <div class="company-ratings">
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Luisteren</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Luisteren"
+                                            data-content="Luisterde de zorgverlener(s) goed naar u?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 83%"
+                                                aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">8</span>
+                                    </div>
+                                </div>
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Uitleg</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Uitleg"
+                                            data-content="Was de uitleg van de zorgverlener(s) begrijpelijk?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 90%"
+                                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">9</span>
+                                    </div>
+                                </div>
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Deskundigheid</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Deskundigheid"
+                                            data-content="Had u vertrouwen in de deskundigheid van de zorgverlener(s)?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 67%"
+                                                aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">6</span>
+                                    </div>
+                                </div>
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Voor- en nadelen</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Voor- en nadelen"
+                                            data-content="Zijn de voor- en nadelen van de behandeling of operatie aan u
+                                            verteld?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%"
+                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">7</span>
+                                    </div>
+                                </div>
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Samen beslissen</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Samen beslissen"
+                                            data-content="Bepaalde u samen met de zorgverlener(s) welke zorg of
+                                            behandeling u krijgt?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 83%"
+                                                aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">8</span>
+                                    </div>
+                                </div>
+                                <div class="company-rating">
+                                    <div class="company-rating__title-box">
+                                        <p class="company-rating__title">Samenwerking</p>
+                                        <button class="company-rating__info" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-trigger="focus" title="Samenwerking"
+                                            data-content="Was er een goede samenwerking tussen de zorgverleners in het
+                                            ziekenhuis of kliniek?">
+                                            <i class="icon-question"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="company-rating__rating-box">
+                                        <div class="evaluation__progress progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 83%"
+                                                aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <span class="filter-result__score">8</span>
+                                    </div>
+                                </div>
+
+                                <div class="company-rating__footer">
+                                    <span>Gemiddeld cijfer</span>
+                                    <span class="filter-result__score">8.0</span>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-single table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Aandoening / behandeling</th>
+                                            <td>Delier</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Specialisme / afdeling</td>
+                                            <td>Cardiologie</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="px-3">
+                                <h2>Toelichting</h2>
+                                <p>Test CONCEPTCRA-5236</p>
+                                <h2>Reageren en contact opnemen</h2>
+                                <h4 class="mb-0">Reageren</h4>
+                                <p>U heeft nog geen reactie gegeven. <a href="#">Reageer</a> op deze waardering.</p>
+                                <h4 class="mb-0">Contactverzoek indienen</h4>
+                                <p>Dien een <a href="#">contactverzoek</a> in bij de inzender van deze waardering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="box box--rounded">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 d-none d-md-block">
+                      <p class="text-muted fs-14"><b>Initiatief van</b></p>
+                      <a href="#"><img src="assets/images/temp/logo_npcf_slider.svg" alt="Website Patiëntenfederatie Nederland"
+                          class="w-100"></a>
+                    </div>
+                
+                    <div class="col-lg-10 col-md-9 has-divider has-divider--md pl-md-4">
+                      <p class="text-muted fs-14"><b>Partners van ZorgkaartNederland</b></p>
+                
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-1.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-2.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-3.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-4.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-5.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/temp/logo_npcf_slider.svg" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-6.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/temp/logo_npcf_slider.svg" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-7.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-8.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-9.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-10.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-11.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-12.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-13.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-14.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-15.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-16.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-17.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-18.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-19.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-20.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-21.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-22.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-23.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-24.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-25.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-26.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-27.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-28.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-29.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-30.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item">
+                            <div class="row align-items-center">
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-31.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-32.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-33.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                              <div class="col-6 col-sm-3 d-none d-sm-block">
+                                <a href="#">
+                                  <img src="assets/images/carousel/carousel-img-34.png" alt="" class="img-fluid mx-auto">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cookieBar" class="alert alert-warning alert-dismissible fade show cookieBar is-active" role="alert">
+      <p>Deze website gebruikt cookies om de website te verbeteren. Als u geen cookies wilt accepteren kunt u <a href="#" class="readmore">hier</a> klikken voor meer informatie. <a href="#" class="cookiebar-close" data-dismiss="alert">sluiten</a></p>
+    </div>
+
+    <footer class="footer">
+      <div class="container container--regular">
+        <div class="footer__nav" id="accordionExample">
+          <div class="row">
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse1">Over ons</p>
+    
+              <div class="footer__nav-collapse collapse" id="collapse1" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Wat is ZorgkaartNederland?</a></li>
+                  <li><a href="#">Hoe werkt ZorgkaartNederland?</a></li>
+                  <li><a href="#">Over de initiatiefnemer</a></li>
+                  <li><a href="#">Veelgestelde vragen</a></li>
+                  <li><a href="#">Aanmelden nieuwsbrief</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse2">Voor zorgaanbieders
+              </p>
+    
+              <div id="collapse2" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Wat kunt u met ZorgkaartNederland?</a></li>
+                  <li><a href="#">Pakket voor zorginstellingen</a></li>
+                  <li><a href="#">Pakket voor praktijken</a></li>
+                  <li><a href="#">Promotiematerialen</a></li>
+                  <li><a href="#">Veelgestelde vragen</a></li>
+                  <li><a href="#">Toolkit voor professionals</a></li>
+                  <li><a href="#">Aanmelden zorgaanbieder</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3 mb-4 md-lg-0">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse3">Partners</p>
+    
+              <div id="collapse3" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Partnerships en samenwerkingsverbanden</a></li>
+                  <li><a href="#">Partner worden?</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-lg-3">
+              <p class="footer__nav-title collapsed" data-toggle="collapse" data-target="#collapse4">Een veilige omgeving
+              </p>
+    
+              <div id="collapse4" class="footer__nav-collapse collapse" data-parent="#accordionExample">
+                <ul class="footer__nav-list">
+                  <li><a href="#">Disclaimer</a></li>
+                  <li><a href="#">Privacyverklaring</a></li>
+                  <li><a href="#">Gedragscode</a></li>
+                  <li><a href="#">Toegankelijkheidsverklaring</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer__social">
+          <a href="#" class="footer__social__item footer__social__item--twitter"><i class="icon-twitter"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--facebook"><i class="icon-facebook"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--linkedin"><i class="icon-linkedin"></i></a>
+          <a href="#" class="footer__social__item footer__social__item--mail"><i class="icon-mail"></i></a>
+        </div>
+        <p class="text-center">© 2020 Copyright <a href="#">Patiëntenfederatie Nederland</a></p>
+      </div>
+    </footer>
+
+    <script src="assets/javascript/vendors.min.js"></script>
+    <script src="assets/javascript/scripts.js"></script>
+
+</body>
+
+</html>
