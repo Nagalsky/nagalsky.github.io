@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    //= template/head.html
+    <title>Rapportage page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-after-login.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-0">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Rapportage</li>
+                    </ol>
+                </nav>
+
+                <hr class="my-4 d-none d-md-block">
+
+                <form action="" class="px-lg-3">
+                    <div class="row">
+                        <div class="form-group col-xl-3 col-md-6">
+                            <label for="field-selecteer-uw-locatie" class="fs-14 font-base-bold text-blue">Selecteer uw
+                                locatie</label>
+                            <select name="" id="field-selecteer-uw-locatie" class="form-control form-control-regular">
+                                <option value="">Alle locaties</option>
+                                <option value="">Alle locaties 2</option>
+                                <option value="">Alle locaties 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-xl-3 col-md-6">
+                            <label class="fs-14 font-base-bold text-blue">Periode</label>
+                            <span class="d-block">23 jun. 2020 - 22 jul. 2020</span>
+                            <a href="#">Wijzigen</a>
+                        </div>
+                        <div class="form-group col-xl-3 col-md-6">
+                            <label class="fs-14 font-base-bold text-blue">Vergelijken met</label>
+                            <span class="d-block">Geen vergelijking</span>
+                            <a href="#">Wijzigen</a>
+                        </div>
+                        <div class="form-group col-xl-3 col-md-6">
+                            <label class="fs-14 font-base-bold text-blue d-block">Toon grafieken per</label>
+                            <div class="btn-group mb-2 mb-md-1" role="group">
+                                <button type="button" class="btn btn-white btn-sm font-base-regular active">Dag</button>
+                                <button type="button" class="btn btn-white btn-sm font-base-regular">Maand</button>
+                                <button type="button" class="btn btn-white btn-sm font-base-regular">Kwartaal</button>
+                                <button type="button" class="btn btn-white btn-sm font-base-regular">Jaar</button>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input"
+                                    id="field-waarden-in-grafieken-tonen">
+                                <label class="custom-control-label" for="field-waarden-in-grafieken-tonen">Waarden in
+                                    grafieken tonen</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="box box--rounded">
+                    <h1>Rapportage</h1>
+
+                    <div class="row row-cols-1 row-cols-md-3 mb-30">
+                        <div class="col mb-4 mb-md-0 d-md-flex">
+                            <div class="stat stat--primary">
+                                <h2 class="stat__title">Gemiddeld cijfer</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">8.8</span>
+                                    <i class="stat__icon icon-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4 mb-md-0 d-md-flex">
+                            <div class="stat stat--danger">
+                                <h2 class="stat__title">Aanbevolen door</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">97%</span>
+                                    <i class="stat__icon icon-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col d-md-flex">
+                            <div class="stat stat--warning">
+                                <h2 class="stat__title">Aantal waarderingen</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">1246</span>
+                                    <i class="stat__icon icon-chart-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap mb-4 pl-md-3">
+                    <h2 class="mb-0">Onbekende periode</h2>
+                    <button type="button" class="btn btn-theme" data-toggle="modal"
+                        data-target="#modal-opslaan-als-pdf">Opslaan als PDF <i
+                            class="icon-chevron-right ml-3"></i></button>
+                </div>
+
+                <div class="box box--rounded">
+                    <h2>Aantal waarderingen</h2>
+
+                    <div>Chart goes here</div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center flex-wrap mb-4">
+                    <h3 class="mb-0 mr-4">Wilt u meer waarderingen?</h3>
+                    <button type="button" class="btn btn-theme">Bekijk tips <i
+                            class="icon-chevron-right ml-3"></i></button>
+                </div>
+
+                <div class="box box--rounded">
+                    <h2>Kerncijfers van de locaties</h2>
+
+                    <div>Chart goes here</div>
+                </div>
+
+                <div class="box box--rounded">
+                    <h2>Specialismen</h2>
+
+                    <div>Chart goes here</div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-2 mb-4">
+                    <div class="col mb-4 mb-lg-0">
+                        <div class="box box--rounded">
+                            <h2>Ontwikkeling</h2>
+
+                            <div>Chart goes here</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box box--rounded">
+                            <h2>% Aanbevelingen</h2>
+
+                            <div>Chart goes here</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box--rounded">
+                    <h2>Waarderingscijfer per onderdeel</h2>
+                    <h2>Sector ziekenhuizen</h2>
+
+                    <div>Chart goes here</div>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/footer-wide.html
+
+    //= template/modal-opslaan-als-pdf.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

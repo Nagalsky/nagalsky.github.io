@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  //= template/head.html
+  <title>Login page</title>
+</head>
+
+<body class="theme-normal">
+  //= template/header-wide.html
+
+  <main class="main">
+    <section class="section pt-0 pt-md-3">
+      <div class="container container--regular">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-lg-flex">
+          <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Inloggen</li>
+          </ol>
+        </nav>
+
+
+        <div class="box box--rounded fs-13">
+          <div class="row justify-content-between">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <p class="text-danger m-0" role="alert">De combinatie van gebruikersnaam en wachtwoord is niet geldig.</p>
+              <div class="bg-silver-light p-3">
+                <h1 class="fs-16">Inloggen</h1>
+                <p class="mb-2">Voor organisaties en zorgverleners met een pakket</p>
+                <form action="" class="mb-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-regular form-control-placeholder-sm"
+                      name="_username" id="_username" required="required" placeholder="Gebruikersnaam">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-regular form-control-placeholder-sm"
+                      name="_password" id="_password" required="required" placeholder="Wachtwoord">
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="login-form-custom-checkbox-1">
+                      <label class="custom-control-label lh-25" for="login-form-custom-checkbox-1">Onthoud mijn
+                        gegevens</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-theme">Inloggen <i
+                        class="icon-chevron-right ml-3"></i></button>
+                  </div>
+                </form>
+                <a href="#">Wachtwoord vergeten?</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+              <h2 class="fs-16">Voordelen van een beheerpakket</h2>
+              <p>Met een beheerpakket van ZorgkaartNederland kunt u als organisatie of zorgverlener:</p>
+              <ul class="list-bullet">
+                <li>direct een reactie plaatsen onder een waardering en contact opnemen met de afzender</li>
+                <li>extra informatie over uzelf of uw organisatie aan ZorgkaartNederland toevoegen</li>
+                <li>per e-mail worden geïnformeerd zodra er een nieuwe waardering is geplaatst</li>
+                <li>buttons en widgets van ZorgkaartNederland op uw eigen website plaatsen.</li>
+              </ul>
+              <h2 class="fs-16">Meer informatie over de beheerpakketten voor:</h2>
+              <ul class="list-bullet">
+                <li><a href="#">Zorginstellingen en ziekenhuizen</a></li>
+                <li><a href="#">Praktijken</a></li>
+                <li><a href="#">Zorgverleners</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        //= template/partner-gallery.html
+      </div>
+    </section>
+  </main>
+
+  //= template/cookie-bar.html
+
+  //= template/footer-wide.html
+
+  //= template/modals.html
+
+  //= template/scripts-dependencies.html
+
+</body>
+
+</html>

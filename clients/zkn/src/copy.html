@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <title>Copy profile page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-after-login.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-0">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Profiel</li>
+                    </ol>
+                </nav>
+
+                <hr class="my-4 d-none d-md-block">
+
+                <div class="form-group pl-md-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="field-selecteer-uw-locatie" class=" font-base-bold pl-3 text-blue">Selecteer uw
+                                locatie</label>
+                            <select name="" id="field-selecteer-uw-locatie" class="form-control form-control-regular">
+                                <option value="">Alle locaties</option>
+                                <option value="">Alle locaties 2</option>
+                                <option value="">Alle locaties 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box--rounded">
+                    <h1 class="mb-md-0">Deventer Ziekenhuis, locatie Deventer</h1>
+                    <div class="d-flex align-items-center justify-content-between flex-row mb-4">
+                        <p class="mb-0 mr-4">Ziekenhuis</p>
+                        <div class="ratinge__score flex-shrink-0">
+                            8
+                            <div class="ratinge__score-decimal">.8</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-column flex-md-row mb-4">
+                        <div class="address mb-4 mb-md-0 mr-md-5">
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Adres
+                                </div>
+
+                                <div class="address__text">
+                                    Nico Bolkesteinlaan 75<br />7416 SE Deventer
+                                </div>
+                            </div>
+
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Telefoon
+                                </div>
+
+                                <div class="address__text">
+                                    0570-535353
+                                </div>
+                            </div>
+
+                            <div class="address__item">
+                                <div class="address__title">
+                                    Website
+                                </div>
+
+                                <div class="address__text">
+                                    <a href="https://www.dz.nl/" target="_blank">https://www.dz.nl/</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-md-right flex-shrink-0">
+                            <span class="d-block">Er zijn <a href="#">1246 waarderingen</a></span>
+                            <span class="d-block"><big><b>97%</b></big> beveelt deze zorginstelling aan</span>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <a href="https://www.dz.nl/"
+                            target="_blank">link goes here/</a> Neque id, a officiis atque nihil vitae voluptas ipsum
+                        dignissimos, quod iusto nemo fuga <a href="https://www.dz.nl/" target="_blank">I'm a link</a>
+                        necessitatibus velit dolores error harum! Voluptas,
+                        reprehenderit? Distinctio.</p>
+                </div>
+
+                <div class="tab-links">
+                    <a href="#" class="tab-link">Dashboard</a>
+                    <a href="#" class="tab-link active">Profiel</a>
+                    <a href="#" class="tab-link">Faciliteiten</a>
+                    <a href="#" class="tab-link">Nieuws</a>
+                    <a href="#" class="tab-link">Waarderingen</a>
+                    <a href="#" class="tab-link">Locaties</a>
+                </div>
+
+                <div class="tab-content mb-4">
+                    <form action="">
+                        <h2 class="mb-2">Profielgegevens kopiëren</h2>
+                        <p>U kunt de gegevens die zijn ingevuld voor dit profiel kopiëren naar uw andere locaties.</p>
+
+                        <hr class="hr-sm">
+
+                        <fieldset>
+                            <h2>Stap 1: Welke profielgegevens wilt u kopiëren?</h2>
+
+                            <div id="company_copy_groups">
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input class="custom-control-input" type="checkbox" id="company_copy_groups_0"
+                                        name="company_copy[groups][]" value="description">
+                                    <label class="custom-control-label" for="company_copy_groups_0">
+                                        Omschrijving</label></div>
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input class="custom-control-input" type="checkbox" id="company_copy_groups_1"
+                                        name="company_copy[groups][]" value="logos">
+                                    <label class="custom-control-label" for="company_copy_groups_1">
+                                        Logo's</label></div>
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input class="custom-control-input" type="checkbox" id="company_copy_groups_2"
+                                        name="company_copy[groups][]" value="media">
+                                    <label class="custom-control-label" for="company_copy_groups_2">
+                                        Foto's en video</label></div>
+                                <div class="custom-control custom-checkbox mb-2"><input class="custom-control-input"
+                                        type="checkbox" id="company_copy_groups_3" name="company_copy[groups][]"
+                                        value="area"><label class="custom-control-label" for="company_copy_groups_3">
+                                        Verzorgingsgebied</label></div>
+                                <div class="custom-control custom-checkbox mb-2"><input class="custom-control-input"
+                                        type="checkbox" id="company_copy_groups_4" name="company_copy[groups][]"
+                                        value="contact"><label class="custom-control-label" for="company_copy_groups_4">
+                                        Contact links</label></div>
+                                <div class="custom-control custom-checkbox mb-2"><input class="custom-control-input"
+                                        type="checkbox" id="company_copy_groups_5" name="company_copy[groups][]"
+                                        value="links"><label class="custom-control-label" for="company_copy_groups_5">
+                                        Handige links</label></div>
+                                <div class="custom-control custom-checkbox mb-2"><input class="custom-control-input"
+                                        type="checkbox" id="company_copy_groups_6" name="company_copy[groups][]"
+                                        value="social"><label class="custom-control-label" for="company_copy_groups_6">
+                                        Social media</label></div>
+                                <div class="custom-control custom-checkbox mb-2"><input class="custom-control-input"
+                                        type="checkbox" id="company_copy_groups_7" name="company_copy[groups][]"
+                                        value="hours"><label class="custom-control-label" for="company_copy_groups_7">
+                                        Openingstijden</label></div>
+                            </div>
+                        </fieldset>
+
+                        <hr class="hr-sm">
+
+                        <fieldset>
+                            <h2>Stap 2: Naar welke locaties wilt u deze gegevens kopiëren?</h2>
+
+                            <a href="javascript:;" class="select-all__toggle d-inline-block mb-3"
+                                data-checked="0">Selecteer alles
+                                / selecteer
+                                niets</a>
+
+                            <div class="select-all">
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="company_copy_companies_070198ffb6d238019900a778ca04e220"
+                                        name="company_copy[companies][070198ffb6d238019900a778ca04e220]" value="1"
+                                        disabled>
+                                    <label class="custom-control-label"
+                                        for="company_copy_companies_070198ffb6d238019900a778ca04e220">Deventer
+                                        Ziekenhuis</label>
+                                </div>
+                                <div class="pl-4">
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d"
+                                            name="company_copy[companies][e19ec33456eb388fb6fdaf2266bf933d]" value="1">
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d">Deventer
+                                            Ziekenhuis, Polikliniek Raalte</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5"
+                                            name="company_copy[companies][448ca9f1a3d43eb68a3a0316920232d5]" value="1">
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5">Deventer
+                                            Deventer Ziekenhuis, Polikliniek Rijssen</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="company_copy_companies_83ae650bc31c32f4b907990189361448"
+                                            name="company_copy[companies][83ae650bc31c32f4b907990189361448]" value="1">
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_83ae650bc31c32f4b907990189361448">Deventer
+                                            Ziekenhuis, locatie Deventer</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a"
+                                            name="company_copy[companies][44c4d64fb80b355e8340327b79c6fc6a]" value="1">
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a">Dialyseafdeling
+                                            Deventer Ziekenhuis</label>
+                                    </div>
+                                </div>
+
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa"
+                                        name="company_copy[companies][2c9859cc3ba3313a9f0c1bc53c0ab9aa]" value="1">
+                                    <label class="custom-control-label"
+                                        for="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa">Patiëntenfederatie
+                                        Nederland</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <hr class="hr-sm">
+
+                        <div class="row">
+                            <div class="col-sm-10 offset-sm-2">
+                                <button type="button" class="btn btn-theme">Profielgegevens koplëren <i
+                                        class="icon-chevron-right ml-3"></i></button>
+                                <button type="button" class="btn btn-secondary">Annuleren <i
+                                        class="icon-chevron-right ml-3"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/modal-crop.html
+
+    //= template/footer-wide.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

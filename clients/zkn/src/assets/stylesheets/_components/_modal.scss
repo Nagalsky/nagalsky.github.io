@@ -1,0 +1,90 @@
+/* MODAL */
+$modal-close-btn-size: 30px;
+
+.modal {
+  .close {
+    @extend .position-absolute,
+    .fs-16,
+    .rounded-circle,
+    .bg-black,
+    .text-white;
+    opacity: 1 !important;
+    text-shadow: none;
+    line-height: 1;
+    width: $modal-close-btn-size;
+    height: $modal-close-btn-size;
+    border: 2px solid $white;
+    right: -5px;
+    top: -5px;
+    z-index: 60;
+
+    @include media-breakpoint-up(sm) {
+      right: -$modal-close-btn-size / 2;
+      top: -$modal-close-btn-size / 2;
+    }
+  }
+
+  &--scrollable {
+
+    .modal-content,
+    .modal-dialog {
+      @include media-breakpoint-up(md) {
+        height: 90%;
+      }
+    }
+
+    .modal-body {
+      @include media-breakpoint-up(md) {
+        max-height: calc(100% - 120px);
+        overflow-y: scroll;
+      }
+    }
+  }
+}
+
+.modal-content {
+  @extend .border-0;
+  box-shadow: 0 2px 54px 0 rgba($black, .5);
+}
+
+.modal-dialog {
+  @include media-breakpoint-up(sm) {
+    max-width: 500px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 700px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 910px;
+  }
+
+  &.modal-sm {
+    @include media-breakpoint-up(sm) {
+      max-width: 500px;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 630px;
+    }
+  }
+}
+
+.modal-body,
+.modal-footer,
+.modal-header {
+  padding: 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 30px 40px;
+  }
+}
+
+.modal-header {
+  @extend .flex-column;
+}
+
+.modal-title {
+  font-size: 22px;
+}

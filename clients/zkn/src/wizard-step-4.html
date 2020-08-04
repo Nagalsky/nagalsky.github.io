@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    //= template/head.html
+    <title>Wizard step 4 page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-wizard.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <div class="wizard-steps">
+                    <div class="wizard-step is-done">
+                        <div class="wizard-step__inner">Welkom</div>
+                    </div>
+                    <div class="wizard-step is-done">
+                        <div class="wizard-step__inner">Basisgegevens</div>
+                    </div>
+                    <div class="wizard-step is-done">
+                        <div class="wizard-step__inner">Aanvullende gegevens</div>
+                    </div>
+                    <div class="wizard-step active">
+                        <div class="wizard-step__inner">E-mail alerts</div>
+                    </div>
+                    <div class="wizard-step">
+                        <div class="wizard-step__inner"><span class="d-none d-xl-block">Controleer uw
+                                gegevens</span><span class="d-xl-none">Controleren</span></div>
+                    </div>
+                </div>
+
+                <div class="box box--rounded">
+                    <h1>E-mail alerts</h1>
+                    <p>E-mail alerts sturen wij nadat iemand een waardering over uw organisatie heeft geplaatst op
+                        ZorgkaartNederland. Geef aan of en hoe vaak u een e-mail wilt ontvangen.</p>
+
+                    <form action="">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-8 col-md-10">
+                                    <div class="form-group row">
+                                        <div class="col-sm-9 offset-sm-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="wizard_alert_alertDisabled">
+                                                <label class="custom-control-label" for="wizard_alert_alertDisabled">
+                                                    Ik wil middels e-alerts op de hoogte blijven van waarderingen op
+                                                    deze locatie.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="wizard_alert_alert_title"
+                                            class="col-sm-3 col-form-label">Onderwerp<span
+                                                class="required"></span></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-control-regular"
+                                                id="wizard_alert_alert_title">
+                                            <p class="form-text">Geef een onderwerp voor de e-mail alerts op. Tip:
+                                                gebruik bijvoorbeeld de naam van uw locatie.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Frequentie<span
+                                                class="required"></span></label>
+                                        <div class="col-sm-9">
+                                            <div class="custom-control custom-checkbox mt-2">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="wizard_alert_alert_types_0">
+                                                <label class="custom-control-label" for="wizard_alert_alert_types_0">
+                                                    Direct. U ontvangt een e-mail zodra een waardering geplaatst
+                                                    is.</label>
+                                            </div>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="wizard_alert_alert_types_1">
+                                                <label class="custom-control-label" for="wizard_alert_alert_types_1">
+                                                    Dagelijks. U ontvangt eenmaal per dag een e-mail met alle
+                                                    waarderingen die op deze dag geplaatst zijn.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="wizard_alert_alert_emails"
+                                            class="col-sm-3 col-form-label">E-mailadressen<span
+                                                class="required"></span></label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control form-control-regular"
+                                                id="wizard_alert_alert_emails">
+                                            <p class="form-text">U kunt meerdere e-mailadressen opgeven door ze met een
+                                                komma te scheiden. Na het laatste e-mailadres mag geen scheidingsteken
+                                                voorkomen.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Organisaties<span
+                                                class="required"></span></label>
+                                        <div class="col-sm-9">
+                                            <div class="d-flex flex-wrap align-items-center mb-3">
+                                                <a href="javascript:;" class="select-all__toggle d-inline-block"
+                                                    data-checked="0">Selecteer alles</a>
+                                                <div class="color-theme mx-1">/</div>
+                                                <a href="javascript:;" class="d-inline-block" data-uncheck>selecteer
+                                                    niets</a>
+                                            </div>
+
+                                            <div class="select-all">
+                                                <div class="custom-control custom-checkbox mb-2">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="company_copy_companies_070198ffb6d238019900a778ca04e220"
+                                                        name="company_copy[companies][070198ffb6d238019900a778ca04e220]"
+                                                        value="1" disabled>
+                                                    <label class="custom-control-label"
+                                                        for="company_copy_companies_070198ffb6d238019900a778ca04e220">Deventer
+                                                        Ziekenhuis</label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <div class="custom-control custom-checkbox mb-2">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d"
+                                                            name="company_copy[companies][e19ec33456eb388fb6fdaf2266bf933d]"
+                                                            value="1">
+                                                        <label class="custom-control-label"
+                                                            for="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d">Deventer
+                                                            Ziekenhuis, Polikliniek Raalte</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox mb-2">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5"
+                                                            name="company_copy[companies][448ca9f1a3d43eb68a3a0316920232d5]"
+                                                            value="1">
+                                                        <label class="custom-control-label"
+                                                            for="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5">Deventer
+                                                            Deventer Ziekenhuis, Polikliniek Rijssen</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox mb-2">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="company_copy_companies_83ae650bc31c32f4b907990189361448"
+                                                            name="company_copy[companies][83ae650bc31c32f4b907990189361448]"
+                                                            value="1">
+                                                        <label class="custom-control-label"
+                                                            for="company_copy_companies_83ae650bc31c32f4b907990189361448">Deventer
+                                                            Ziekenhuis, locatie Deventer</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox mb-2">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a"
+                                                            name="company_copy[companies][44c4d64fb80b355e8340327b79c6fc6a]"
+                                                            value="1">
+                                                        <label class="custom-control-label"
+                                                            for="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a">Dialyseafdeling
+                                                            Deventer Ziekenhuis</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="custom-control custom-checkbox mb-2">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa"
+                                                        name="company_copy[companies][2c9859cc3ba3313a9f0c1bc53c0ab9aa]"
+                                                        value="1">
+                                                    <label class="custom-control-label"
+                                                        for="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa">Patiëntenfederatie
+                                                        Nederland</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <hr class="hr-sm">
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-silver mr-2">Terug</button>
+                            <button type="submit" class="btn btn-theme">Naar gegevens Controleer uw gegevens <i
+                                    class="icon-chevron-right ml-3"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/footer-wide.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

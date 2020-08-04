@@ -1,0 +1,23 @@
+/* FRACTIONAL NUMBER */
+$fractional-number-mobile-size: 60px;
+$fractional-number-desktop-size: 90px;
+
+.fractional-number {
+  @extend .bg-blue, .text-white, .d-flex, .align-items-center, .justify-content-center, .flex-shrink-0, .font-base-medium;
+  width: $fractional-number-mobile-size;
+  height: $fractional-number-mobile-size;
+  box-shadow: 0 0 5px 3px rgba($black, .1);
+  border: 5px solid $white;
+  font-size: $fractional-number-mobile-size / 2.2;
+  @include media-breakpoint-up(md) {
+    width: $fractional-number-desktop-size;
+    height: $fractional-number-desktop-size;
+    font-size: $fractional-number-desktop-size / 2;
+  }
+
+  sup {
+    @extend .font-base-bold;
+    font-size: 60%;
+    top: -6px;
+  }
+}

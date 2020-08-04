@@ -1,0 +1,18 @@
+/* TEXT LINES */
+
+.text-lines {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  &--2 {
+    line-height: 24px;
+    /* fallback */
+    max-height: 48px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+  }
+}

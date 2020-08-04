@@ -1,0 +1,54 @@
+/* FILTER radio */
+$radio-size: 16px;
+
+.filter-radio {
+  display: block;
+  margin-bottom: 6px;
+  @extend .position-relative, .font-icons, .icon-checkmark, .text-muted, .fs-16;
+  display: block;
+  cursor: pointer;
+  padding-left: calc(#{$radio-size} + 12px);
+
+  &.filter-radio__active {
+    &:after {
+      @include themify($themes) {
+        border-color: themed('themeColor');
+      }
+    }
+
+    &:before {
+      @extend .visible;
+    }
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    @extend .position-absolute, .rounded-circle;
+  }
+
+  &:after {
+    left: 0;
+    top: 4px;
+    border-radius: 3px;
+    width: $radio-size;
+    height: $radio-size;
+    border: 1px solid $blue-thin;
+  }
+
+  &:before {
+    @extend .invisible;
+    left: 3px;
+    top: 7px;
+    width: calc(#{$radio-size} - 6px);
+    height: calc(#{$radio-size} - 6px);
+    @include themify($themes) {
+      background-color: themed('themeColor');
+    }
+  }
+}
+
+.filter-radio__counter {
+  @extend .ml-1, .d-inline-block;
+  color: #a4a4a4 !important;
+}

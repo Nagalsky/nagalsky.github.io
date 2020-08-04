@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    //= template/head.html
+    <title>Person page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-after-login.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-0">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Overzicht</li>
+                    </ol>
+                </nav>
+
+                <hr class="my-4 d-none d-md-block">
+
+                <div class="box box--rounded">
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="flex-fill mr-md-4 mb-4 mb-md-0">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 mr-4 mr-md-5">
+                                    <i class="icon-person color-theme fs-40"></i>
+                                </div>
+
+                                <div class="flex-fill">
+                                    <h1>Uijl, M. den</h1>
+                                    <p class="mb-md-5">Huisarts</p>
+
+                                    <div class="d-none d-md-block">
+                                        <div class="row">
+                                            <div class="col-3 font-base-bold">Geslacht</div>
+                                            <div class="col-9">Vrouw</div>
+                                        </div>
+
+                                        <div class="row mt-1">
+                                            <div class="col-3 font-base-bold">Werkzaam bij</div>
+                                            <div class="col-9"><a href="#">Huisartsenpraktijk Tolgaarde, Leusden</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex flex-column align-items-center align-items-md-end text-center text-md-right  flex-shrink-0">
+                            <div class="ratinge__score ratinge__score--empty ratinge__score--lg ml-md-auto mb-3">
+                                8
+                                <div class="ratinge__score-decimal">.2</div>
+                            </div>
+                            <p class="d-none d-md-block">Er zijn nog geen waarderingen.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-md-none">
+                        <div class="row">
+                            <div class="col-4 font-base-bold">Geslacht</div>
+                            <div class="col-8">Vrouw</div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-4 font-base-bold">Werkzaam bij</div>
+                            <div class="col-8"><a href="#">Huisartsenpraktijk Tolgaarde, Leusden</a>
+                            </div>
+                        </div>
+                        <p class="mt-4">Er zijn nog geen waarderingen.</p>
+                    </div>
+                </div>
+
+                <div class="tab-links">
+                    <a href="#" class="tab-link active">Waarderingen</a>
+                    <a href="#" class="tab-link">Profiel</a>
+                </div>
+
+                <div class="tab-content mb-4 mx-negative-sm">
+                    <p class="pl-md-3 mb-3 font-base-bold">Stand per 17-06-2020</p>
+
+                    <div class="row row-cols-1 row-cols-md-3 mb-30">
+                        <div class="col mb-4 mb-md-0 d-md-flex">
+                            <div class="stat stat--primary">
+                                <h2 class="stat__title">Gemiddeld cijfer</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">0.0</span>
+                                    <i class="stat__icon icon-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4 mb-md-0 d-md-flex">
+                            <div class="stat stat--danger">
+                                <h2 class="stat__title">Aanbevolen door</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">0</span>
+                                    <i class="stat__icon icon-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col d-md-flex">
+                            <div class="stat stat--warning">
+                                <h2 class="stat__title">Aantal waarderingen</h2>
+                                <div class="stat__inner">
+                                    <span class="stat__stat">0</span>
+                                    <i class="stat__icon icon-chart-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 mb-4 mb-lg-0">
+                            <div class="py-2 px-3 text-white mb-4 rounded bg-orange font-base-bold">
+                                Verfijn zoekopdracht
+                            </div>
+
+                            <div class="px-3">
+                                <div class="filter__aside__item">
+                                    <h4 class="filter__aside__title"><span class="mr-1">Reactie</span>
+                                        <button type="button" class="btn btn-popover" data-trigger="hover focus"
+                                            data-container="body" data-placement="top" data-toggle="popover"
+                                            title="Reactie" data-content="
+                        <div>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>
+                        " data-html="true">Uitleg</button></h4>
+                                    <a href="#" class="filter-radio filter-radio__active">
+                                        Waarderingen zonder reactie<span class="filter-radio__counter">(6)</span>
+                                    </a>
+
+                                    <a href="#" class="filter-radio">
+                                        Waarderingen met reactie<span class="filter-radio__counter">(358)</span>
+                                    </a>
+
+                                    <a class="btn btn-link" href="#"">
+                                        <i class=" icon-caret-right filter__modal-icon"></i> Meer gespecialiseerd in
+                                    </a>
+                                </div>
+
+                                <div class="filter__aside__item">
+                                    <h4 class="filter__aside__title"><span class="mr-1">Cijfer</span>
+                                        <button type="button" class="btn btn-popover" data-trigger="hover focus"
+                                            data-container="body" data-placement="top" data-toggle="popover"
+                                            title="Cijfer" data-content="
+                        <div>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>
+                        " data-html="true">Uitleg</button></h4>
+                                    <a href="#" class="filter-radio">
+                                        Hoger dan 5.5<span class="filter-radio__counter">(6)</span>
+                                    </a>
+
+                                    <a href="#" class="filter-radio">
+                                        Lager dan 5.5<span class="filter-radio__counter">(218)</span>
+                                    </a>
+
+                                    <a class="btn btn-link" href="#"">
+                                        <i class=" icon-caret-right filter__modal-icon"></i> Meer gespecialiseerd in
+                                    </a>
+                                </div>
+
+                                <div class="filter__aside__item">
+                                    <h4 class="filter__aside__title"><span class="mr-1">Aandoening</span>
+                                        <button type="button" class="btn btn-popover" data-trigger="hover focus"
+                                            data-container="body" data-placement="top" data-toggle="popover"
+                                            title="Aandoening" data-content="
+                        <div>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>
+                        " data-html="true">Uitleg</button></h4>
+                                    <a href="#" class="filter-radio">
+                                        Vroeggeboorte<span class="filter-radio__counter">(1)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Overige aandoeningen<span class="filter-radio__counter">(451)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Borstkanker<span class="filter-radio__counter">(145)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Knievervanging<span class="filter-radio__counter">(139)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Staar<span class="filter-radio__counter">(109)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Botaandoeningen<span class="filter-radio__counter">(106)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Heupvervanging<span class="filter-radio__counter">(106)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Hart- en vaatziekten<span class="filter-radio__counter">(98)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Prostaatkanker<span class="filter-radio__counter">(89)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Botbreuken<span class="filter-radio__counter">(76)</span>
+                                    </a>
+
+                                    <a class="btn btn-link" href="#"">
+                                        <i class=" icon-caret-right filter__modal-icon"></i> Meer gespecialiseerd in
+                                    </a>
+                                </div>
+
+                                <div class="filter__aside__item">
+                                    <h4 class="filter__aside__title"><span class="mr-1">Beroep</span>
+                                        <button type="button" class="btn btn-popover" data-trigger="hover focus"
+                                            data-container="body" data-placement="top" data-toggle="popover"
+                                            title="Beroep" data-content="
+                        <div>Kies een identiteit om makkelijker een passend verpleeghuis of verzorgingshuis in Rotterdam te vinden.</div>
+                        " data-html="true">Uitleg</button></h4>
+                                    <a href="#" class="filter-radio">
+                                        Orthopeed<span class="filter-radio__counter">(129)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Neuroloog<span class="filter-radio__counter">(212)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Internist<span class="filter-radio__counter">(207)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Gynaecoloog<span class="filter-radio__counter">(187)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Chirurg<span class="filter-radio__counter">(184)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Cardioloog<span class="filter-radio__counter">(172)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        KNO-arts<span class="filter-radio__counter">(167)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Plastisch chirurg<span class="filter-radio__counter">(160)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Oogarts<span class="filter-radio__counter">(146)</span>
+                                    </a>
+                                    <a href="#" class="filter-radio">
+                                        Maag-Darm-Leverarts<span class="filter-radio__counter">(141)</span>
+                                    </a>
+
+                                    <a class="btn btn-link" href="#"">
+                                        <i class=" icon-caret-right filter__modal-icon"></i> Meer gespecialiseerd in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-7">
+                            <p class="pl-md-3 mb-4">den Uijl, M. is 0 keer gewaardeerd:</p>
+
+                            <div class="last-ratings last-ratings--striped">
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">8<sup>.0</sup>
+                                        </div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">9<sup>.4</sup>
+                                        </div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">10</div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">10</div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">10</div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">10</div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+
+                                <div class="last-rating">
+                                    <div class="last-rating__body">
+                                        <i class="last-rating__icon icon-person"></i>
+                                        <div class="flex-fill">
+                                            <a href="#" class="last-rating__title">Kinderarts Daalen, S.Y.H. van -
+                                                Winterswijk</a>
+                                            <p class="mb-0 font-base-bold">Geplaatst op 17 december 2019</p>
+                                            <p class="text-lines text-lines--2">Een zeer fijne en kundige kinderarts. Er
+                                                wordt eindelijk echt naar ons
+                                                als ouders geluisterd en mee gedacht aan een. Een zeer fijne en kundige
+                                                kinderarts. Er wordt eindelijk echt naar ons als ouders geluisterd en
+                                                mee gedacht aan een.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="last-rating__score-box">
+                                        <div class="filter-result__score">10</div>
+                                        <a href="#" class="font-base-bold">Lees
+                                            meer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/footer-wide.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

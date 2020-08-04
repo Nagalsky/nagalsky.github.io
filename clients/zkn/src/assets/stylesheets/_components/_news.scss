@@ -1,0 +1,36 @@
+/* NEWS */
+
+$news-info-color: #a4a4a4;
+
+.news {
+    &:not(:last-child) {
+        @extend .mb-4;
+    }
+}
+
+.news__item {
+    &+.news__item {
+        margin-top: 30px;
+    }
+}
+
+.news__title,
+.news__info {
+    @extend .mb-1;
+    color: $news-info-color;
+}
+
+.news__list {
+    @extend .d-flex,
+    .align-items-center,
+    .flex-wrap;
+}
+
+.news__list-divider {
+    @extend .d-inline-block,
+    .mx-2,
+    .bg-muted;
+    height: 15px;
+    width: 1px;
+
+}

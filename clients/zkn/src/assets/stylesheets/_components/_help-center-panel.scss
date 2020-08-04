@@ -1,0 +1,52 @@
+/* HELP CENTER PANEL */
+
+$help-center-panel-primary-color: #fbfbfb;
+$help-center-panel-header-height: 220px;
+
+.help-center-panel {
+    @extend .mb-4,
+    .mb-lg-5,
+    .d-flex,
+    .flex-column;
+}
+
+.help-center-panel__header {
+    @extend .mb-2,
+    .flex-shrink-0,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center;
+    background-color: $help-center-panel-primary-color;
+    height: $help-center-panel-header-height;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($help-center-panel-primary-color, 5%);
+    }
+}
+
+.help-center-panel__body {
+    @extend .flex-fill;
+}
+
+.help-center-panel__header-icon {
+    font-size: 60px;
+
+    @include themify($themes) {
+        color: themed('themeColor') !important;
+    }
+}
+
+.help-center-panel__header-img {
+    @extend .w-100,
+    .h-100;
+    object-fit: cover;
+}
+
+.help-center-panel__title {
+    @extend .d-inline-block,
+    .mb-1,
+    .text-blue,
+    .h4;
+}

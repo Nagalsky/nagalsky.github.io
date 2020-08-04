@@ -1,0 +1,98 @@
+/* COMPANY RATING */
+
+$company-rating-primary-color: $silver-light;
+
+.company-ratings {
+  &:not(:last-child) {
+    @extend .mb-3;
+  }
+}
+
+.company-rating {
+  @extend .px-3,
+  .py-2,
+  .d-flex,
+  .align-items-md-center,
+  .flex-column,
+  .flex-md-row;
+
+  &:nth-child(odd) {
+    background-color: $company-rating-primary-color;
+  }
+}
+
+.company-rating__title-box,
+.company-rating__rating-box {
+  @extend .d-flex,
+  .align-items-center;
+}
+
+.company-rating__title-box {
+  @extend .mr-md-3,
+  .mb-2,
+  .mb-md-0,
+  .justify-content-md-between;
+
+  @include media-breakpoint-up(md) {
+    width: 235px;
+  }
+}
+
+.company-rating__rating-box {
+  @extend .flex-fill;
+}
+
+.company-rating__title {
+  @extend .mb-0,
+  .mr-3,
+  .text-truncate,
+  .font-base-bold;
+}
+
+.company-rating__info {
+  @extend .d-inline-flex,
+  .align-items-center,
+  .justify-content-center,
+  .rounded-circle,
+  .fs-12;
+  width: 16px;
+  height: 16px;
+  color: $blue;
+  cursor: pointer;
+  border: 1px solid #d7d6d7;
+  @include gradient-y($start-color: #ebeaea, $end-color: #ebe3e5, $start-percent: 0%, $end-percent: 100%);
+}
+
+.company-rating__rating-box {
+  .evaluation__progress {
+    @extend .ml-0;
+    margin-right: 45px;
+  }
+
+  .filter-result__score {
+    @extend .mb-0;
+    font-size: 22px;
+
+    sup {
+      font-size: 14px;
+      top: -6px;
+    }
+  }
+}
+
+.company-rating__footer {
+  @extend .d-flex,
+  .align-items-center,
+  .justify-content-between,
+  .font-base-bold,
+  .text-blue,
+  .px-3,
+  .py-2,
+  .fs-18;
+  border-top: 1px solid $company-rating-primary-color;
+
+  .filter-result__score {
+    @extend .fs-26,
+    .mb-0;
+  }
+}

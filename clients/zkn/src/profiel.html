@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    //= template/head.html
+    <title>Profiel page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-after-login.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-0">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Overzicht</li>
+                    </ol>
+                </nav>
+
+                <hr class="my-4 d-none d-md-block">
+
+                <div class="box box--rounded">
+                    <div class="d-flex flex-column flex-md-row justify-content-md-between">
+                        <div class="flex-fill mr-md-4 mb-4 mb-md-0">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 mr-4 mr-md-5">
+                                    <i class="icon-person color-theme fs-40"></i>
+                                </div>
+
+                                <div class="flex-fill">
+                                    <h1>Uijl, M. den</h1>
+                                    <p class="mb-md-5">Huisarts</p>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 font-base-medium">Geslacht</div>
+                                        <div class="col-lg-9">Vrouw</div>
+                                    </div>
+
+                                    <div class="row mt-1">
+                                        <div class="col-lg-3 font-base-medium">Werkzaam bij</div>
+                                        <div class="col-lg-9"><a href="#">Huisartsenpraktijk Tolgaarde, Leusden</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex flex-column align-items-center align-items-md-end text-center text-md-right  flex-shrink-0">
+                            <div class="ratinge__score ratinge__score--empty ml-md-auto mb-3">
+                                -
+                                <div class="ratinge__score-decimal"></div>
+                            </div>
+                            <p>Er zijn nog geen waarderingen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-links">
+                    <a href="#" class="tab-link">Waarderingen</a>
+                    <a href="#" class="tab-link active">Profiel</a>
+                </div>
+
+                <div class="tab-content mb-4">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10">
+                            <form action="">
+                                <fieldset>
+                                    <h2 class="mb-2">Profiel</h2>
+                                    <p>Vertel iets over uzelf aan de bezoekers van ZorgkaartNederland.nl. Wat vindt
+                                        u
+                                        als zorgverlener belangrijk bijvoorbeeld? Welke behandelingen voert u uit?
+                                    </p>
+
+                                    <div>TinyMCE goes here</div>
+                                </fieldset>
+
+                                <hr class="hr-sm">
+
+                                <fieldset>
+                                    <h2 class="mb-2">Foto en video</h2>
+                                    <p>Upload uw profielfoto hieronder, vervolgens kunt u de foto uitsnijden. Minimale
+                                        afmeting 300x300 pixels.</p>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label">Profielfoto</label>
+                                        <div class="col-sm-9">
+                                            <div class="crop">
+                                                <div class="crop__preview">
+                                                    <a href="#" class="crop__preview-img" data-toggle="modal"
+                                                        data-target="#modal-crop">
+                                                        <img src="https://testzkn.e-activesites.nl/cache/0/7/1/d/f/071df1d0ed452797c68c93393f587bc2d5cdbadd.png?v392"
+                                                            alt="" class="w-100">
+                                                    </a>
+                                                </div>
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="user_person_profile_fotoEnVideo_img_remove">
+                                                    <label class="custom-control-label"
+                                                        for="user_person_profile_fotoEnVideo_img_remove">Verwijderen</label>
+                                                </div>
+
+                                                <button type="button" class="btn btn-default font-base-regular"
+                                                    data-toggle="modal" data-target="#modal-crop">Afbeelding
+                                                    wijzigen</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Plaats hier een video over uzelf, een behandeling die u uitvoert of een andere
+                                        video die iets zegt over u als zorgverlener.</p>
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_fotoEnVideo_youtubeVideo"
+                                            class="col-sm-3 col-form-label">YouTube-video</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_fotoEnVideo_youtubeVideo"
+                                                name="user_person_profile[fotoEnVideo][youtubeVideo]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">De code van de YouTube video (laatste gedeelte na
+                                                de / van de URL). Bijvoorbeeld: HUf_BSSsXk8
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_fotoEnVideo_textYoutubeVideo"
+                                            class="col-sm-3 col-form-label">YouTube-video ALT-tekst</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_fotoEnVideo_textYoutubeVideo"
+                                                name="user_person_profile[fotoEnVideo][textYoutubeVideo]"
+                                                class="form-control form-control-regular">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_fotoEnVideo_vimeoVideo"
+                                            class="col-sm-3 col-form-label">Vimeo video</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_fotoEnVideo_vimeoVideo"
+                                                name="user_person_profile[fotoEnVideo][vimeoVideo]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">De code van de Vimeo video (laatste gedeelte na de
+                                                / van de URL). Bijvoorbeeld: 68513802
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_fotoEnVideo_textVimeoVideo"
+                                            class="col-sm-3 col-form-label">Vimeo video ALT-tekst</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_fotoEnVideo_textVimeoVideo"
+                                                name="user_person_profile[fotoEnVideo][textVimeoVideo]"
+                                                class="form-control form-control-regular">
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <hr class="hr-sm">
+
+                                <fieldset>
+                                    <h2 class="mb-2">Website</h2>
+                                    <p>
+                                        Heeft u een website of webpagina over uzelf, uw afdeling en/of uw team? Voeg
+                                        deze hieronder toe om bij uw basisgegevens (NAW) te tonen.</p>
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_website_website"
+                                            class="col-sm-3 col-form-label">URL</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_website_website"
+                                                name="user_person_profile[website][website]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Bijv. http://www.mijnwebsite.nl
+                                            </p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <hr class="hr-sm">
+
+                                <fieldset>
+                                    <h2 class="mb-2">Handige links</h2>
+                                    <p>
+                                        Heeft u handige links naar specifieke onderdelen op uw eigen website, uw netwerk
+                                        of elders online? Deel ze hier.</p>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label">Links</label>
+                                        <div class="col-sm-9">
+                                            <div class="bc-collection"></div>
+
+                                            <button type="button" class="btn btn-primary font-base-regular"
+                                                data-addfield="collection">Toevoegen</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <hr class="hr-sm">
+
+                                <fieldset>
+                                    <h2 class="mb-2">Social media</h2>
+                                    <p>
+                                        Bent u actief op Social Media? Vul de velden in zoals omschreven of laat ze leeg
+                                        indien niet van toepassing.</p>
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_socialMedia_youtubeChannel"
+                                            class="col-sm-3 col-form-label">YouTube</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_socialMedia_youtubeChannel"
+                                                name="user_person_profile[socialMedia][youtubeChannel]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Volledige URL van het kanaal, bijv.
+                                                https://www.youtube.com/user/
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_socialMedia_twitterAccount"
+                                            class="col-sm-3 col-form-label">Twitter</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_socialMedia_twitterAccount"
+                                                name="user_person_profile[socialMedia][twitterAccount]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Gebruikersnaam zonder @, bijv. zorgkaartned
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_socialMedia_facebookAccount"
+                                            class="col-sm-3 col-form-label">Facebook</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_socialMedia_facebookAccount"
+                                                name="user_person_profile[socialMedia][facebookAccount]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Gebruikersnaam, bijv. DeventerZiekenhuis
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_socialMedia_linkedInAccount"
+                                            class="col-sm-3 col-form-label">LinkedIn</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_socialMedia_linkedInAccount"
+                                                name="user_person_profile[socialMedia][linkedInAccount]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Gebruikersnaam, bijv. amphiaziekenhuis
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="user_person_profile_socialMedia_flickerRssUrl"
+                                            class="col-sm-3 col-form-label">Flickr</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="user_person_profile_socialMedia_flickerRssUrl"
+                                                name="user_person_profile[socialMedia][flickerRssUrl]"
+                                                class="form-control form-control-regular">
+                                            <p class="form-text">Volledige URL, bijv.
+                                                https://www.flickr.com/photos/jeroenboschziekenhuis
+                                            </p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <hr class="hr-sm">
+
+                                <div class="row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <button type="button" class="btn btn-theme">Opslaan <i
+                                                class="icon-chevron-right ml-3"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/modal-crop.html
+
+    //= template/footer-wide.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

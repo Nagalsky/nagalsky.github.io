@@ -1,0 +1,46 @@
+/* SALES CAROUSEL */
+
+$sales-carousel-arrows-color: $muted-soft;
+$sales-carousel-dot-size: 12px;
+$sales-carousel-dot-color: #b8b8b8;
+
+.sales-carousel {
+  padding-bottom: 37px;
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    @extend .font-icons;
+    color: $sales-carousel-arrows-color;
+    opacity: 1;
+    width: 3%;
+  }
+
+  .carousel-control-prev {
+    @extend .icon-chevron-left;
+  }
+
+  .carousel-control-next {
+    @extend .icon-chevron-right;
+  }
+
+  .carousel-indicators {
+    @extend .mb-0;
+    bottom: 0px;
+
+    >li {
+      @extend .rounded-circle;
+      box-sizing: border-box;
+      background-clip: unset;
+      width: $sales-carousel-dot-size;
+      height: $sales-carousel-dot-size;
+      opacity: 1;
+      background-color: $white;
+      border: 2px solid $sales-carousel-dot-color;
+
+      &.active {
+        background-color: $sales-carousel-dot-color;
+      }
+    }
+  }
+
+}

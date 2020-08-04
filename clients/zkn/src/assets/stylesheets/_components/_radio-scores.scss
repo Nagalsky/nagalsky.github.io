@@ -1,0 +1,40 @@
+/* RADIO SCORES */
+$radio-indicator-size: 20px;
+
+.radio-scores {
+  @extend .d-flex, .justify-content-between;
+}
+
+.radio-score {
+  input[type="radio"] {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+
+    &:focus {
+      &~.radio-score__label {
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25) !important;
+      }
+    }
+
+    &:checked {
+      &~.radio-score__label {
+        @extend .bg-blue, .text-white;
+      }
+    }
+  }
+}
+
+.radio-score__label {
+  @extend .d-flex, .align-items-center, .justify-content-center, .m-0, .text-blue;
+  cursor: pointer;
+  border: 1px solid $blue;
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+  @include media-breakpoint-up(sm) {
+    width: 40px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    //= template/head.html
+    <title>Toevoegen page</title>
+</head>
+
+<body class="theme-normal pt-0">
+
+    //= template/header-after-login.html
+
+    <main class="main">
+        <section class="section">
+            <div class="container container--regular">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav d-none d-md-flex mb-3">
+                    <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">E-mail alerts</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Toevoegen</li>
+                    </ol>
+                </nav>
+
+                <div class="box box--rounded">
+                    <h1>E-mail alerts</h1>
+                    <p>E-mail alerts sturen wij nadat iemand een waardering over uw dienstverband heeft geplaatst op
+                        ZorgkaartNederland. Geef aan of en hoe vaak u een e-mail wilt ontvangen.</p>
+
+                    <form action="">
+                        <div class="form-group row">
+                            <label for="form-field-onderwerp" class="col-sm-3 col-form-label">Onderwerp<span
+                                    class="required"></span></label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-regular" id="form-field-onderwerp">
+                                <p class="form-text">Geef een onderwerp voor de e-mail alerts op. Tip: gebruik
+                                    bijvoorbeeld de naam van uw locatie.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Frequentie<span class="required"></span></label>
+                            <div class="col-sm-9">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-checkbox-direct">
+                                    <label class="custom-control-label" for="custom-checkbox-direct">Direct. U ontvangt
+                                        een e-mail
+                                        zodra een waardering geplaatst is.</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-checkbox-dagelijks">
+                                    <label class="custom-control-label" for="custom-checkbox-dagelijks">Dagelijks. U
+                                        ontvangt eenmaal
+                                        per dag een e-mail met alle waarderingen die op deze dag geplaatst zijn.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">E-mailadressen<span class="required"></span></label>
+                            <div class="col-sm-9">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label font-base-regular"
+                                        for="form-field-emailadres">E-mailadres</label>
+                                    <div class="col-sm-9">
+                                        <div class="d-flex">
+                                            <input type="email" class="form-control form-control-regular flex-fill"
+                                                id="form-field-emailadres">
+
+                                            <button type="button" class="btn btn-theme flex-shrink-0 ml-3">Verwijderen
+                                                <i class="icon-chevron-right ml-3"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bc-collection"></div>
+
+                                <button type="button" class="btn btn-primary font-base-regular"
+                                    data-addfield="e-mailadressen">Toevoegen</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="form-field-organisaties" class="col-sm-3 col-form-label">Organisaties</label>
+                            <div class="col-sm-9">
+
+                                <a href="javascript:;" class="select-all__toggle d-inline-block mb-3"
+                                    data-checked="0">Selecteer
+                                    alles /
+                                    selecteer
+                                    niets</a>
+
+                                <div class="select-all">
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="form-field-custom-checkbox-1" data-select="childs">
+                                        <label class="custom-control-label" for="form-field-custom-checkbox-1">Custom
+                                            checkbox 1</label>
+                                    </div>
+                                    <div class="pl-4">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-2">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-2">Custom
+                                                checkbox 2</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-3">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-3">Custom
+                                                checkbox 3</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-4">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-4">Custom
+                                                checkbox 4</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-5">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-5">Custom
+                                                checkbox 5</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-6">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-6">Custom
+                                                checkbox 6</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-7">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-7">Custom
+                                                checkbox 7</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-8">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-8">Custom
+                                                checkbox 8</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="form-field-custom-checkbox-9" data-select="childs">
+                                        <label class="custom-control-label" for="form-field-custom-checkbox-9">Custom
+                                            checkbox 9</label>
+                                    </div>
+                                    <div class="pl-4">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-10">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-10">Custom
+                                                checkbox 10</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-11">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-11">Custom
+                                                checkbox 11</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-12">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-12">Custom
+                                                checkbox 12</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-13">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-13">Custom
+                                                checkbox 13</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-14">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-14">Custom
+                                                checkbox 14</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-15">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-15">Custom
+                                                checkbox 15</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input"
+                                                id="form-field-custom-checkbox-16">
+                                            <label class="custom-control-label"
+                                                for="form-field-custom-checkbox-16">Custom
+                                                checkbox 16</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="form-field-organisaties" class="col-sm-3 col-form-label"><small>Velden met een *
+                                    zijn verplicht</small></label>
+                            <div class="col-sm-9">
+                                <button type="button" class="btn btn-theme">Distributielijst opslaan
+                                    <i class="icon-chevron-right ml-3"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                //= template/partner-gallery.html
+            </div>
+        </section>
+    </main>
+
+    //= template/cookie-bar.html
+
+    //= template/footer-wide.html
+
+    //= template/scripts-dependencies.html
+
+</body>
+
+</html>

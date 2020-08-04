@@ -1,0 +1,171 @@
+/* WIZARD STEP */
+
+$wizard-active-bg: #db1c47;
+$wizard-counter-size: 18px;
+
+
+.wizard-steps {
+  @extend .d-none,
+  .d-md-flex,
+  .flex-wrap,
+  .mb-20,
+  .overflow-hidden;
+}
+
+.wizard-step {
+  @include transition($base-animation);
+  @extend .position-relative,
+  .d-flex,
+  .align-items-center,
+  .font-base-bold,
+  .bg-white;
+  counter-increment: step-counter;
+
+
+  &:before {
+    content: counter(step-counter);
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .rounded-circle,
+    .fs-12,
+    .font-base-medium,
+    .position-absolute;
+    width: $wizard-counter-size;
+    height: $wizard-counter-size;
+    border: 1px solid currentColor;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    @include media-breakpoint-up(lg) {
+      left: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 35px;
+    }
+  }
+
+  &:first-of-type {
+    border-radius: $base-radius 0 0 $base-radius;
+
+    .wizard-step__inner {
+      padding: 9px 15px 9px calc(5px + #{$wizard-counter-size} + 5px);
+      margin-right: 0;
+
+      @include media-breakpoint-up(xl) {
+        padding: 9px 15px 9px calc(15px + #{$wizard-counter-size} + 5px);
+      }
+
+      &:before {
+        content: none;
+      }
+
+      &:after {
+        right: -17px;
+      }
+    }
+
+    &:before {
+      left: 5px;
+
+      @include media-breakpoint-up(xl) {
+        left: 15px;
+      }
+    }
+  }
+
+  &:last-of-type {
+    border-radius: 0 $base-radius $base-radius 0;
+
+    .wizard-step__inner {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &.active {
+    @extend .text-white;
+    background-color: $wizard-active-bg !important;
+
+    .wizard-step__inner {
+      @extend .text-white;
+
+      &:after {
+        border-left-color: $wizard-active-bg;
+      }
+    }
+  }
+
+  &.is-done {
+
+    &:before,
+    .wizard-step__inner {
+      color: $wizard-active-bg !important;
+    }
+
+    &:hover {
+      background-color: $wizard-active-bg !important;
+
+      .wizard-step__inner {
+        color: $white !important;
+
+        &:after {
+          border-left-color: $wizard-active-bg;
+        }
+      }
+
+      &:before {
+        color: $white !important;
+      }
+    }
+  }
+}
+
+.wizard-step__inner {
+  @extend .position-relative,
+  .text-muted;
+  padding: 9px 15px 9px calc(5px + #{$wizard-counter-size} + 5px);
+
+  @include media-breakpoint-up(lg) {
+    padding: 9px 15px 9px calc(5px + #{$wizard-counter-size} + 25px);
+    margin-right: 3px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 9px 15px 9px calc(15px + #{$wizard-counter-size} + 25px);
+  }
+
+  &:before,
+  &:after {
+    @include media-breakpoint-up(lg) {
+      content: '';
+    }
+
+    @include transition($base-animation);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-top: 24px inset transparent;
+    border-bottom: 24px inset transparent;
+    border-left-style: solid;
+    border-left-width: 20px;
+  }
+
+  &:before {
+    border-left-color: #f2eeef;
+    top: -4px;
+    left: 0;
+    z-index: 3;
+  }
+
+  &:after {
+    border-left-color: #fff;
+    top: -4px;
+    right: -20px;
+    z-index: 4;
+  }
+}

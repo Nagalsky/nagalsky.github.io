@@ -1,0 +1,44 @@
+/* BREADCRUMB */
+.breadcrumb-nav {
+  @extend .align-items-center;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 30px;
+  }
+}
+
+.breadcrumb {
+  @extend .p-0,
+  .flex-nowrap;
+  min-width: 0;
+  background-color: transparent;
+
+  a {
+    &:focus {
+      outline: auto 1px rgba(0, 123, 255, .25) !important;
+    }
+  }
+}
+
+.breadcrumb-item {
+  &:not([aria-current="page"]) {
+    @extend .flex-shrink-0;
+  }
+
+  &[aria-current="page"] {
+    @extend .text-truncate;
+  }
+
+  &[data-last-child] {
+    &:before {
+      content: none !important;
+    }
+  }
+
+  &+.breadcrumb-item {
+    &:before {
+      content: '>';
+    }
+  }
+}

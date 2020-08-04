@@ -1,0 +1,48 @@
+/* FILTER CHECKBOX */
+$checkbox-size: 16px;
+
+.filter-checkbox {
+  display: block;
+  margin-bottom: 6px;
+  @extend .position-relative, .font-icons, .icon-checkmark, .text-muted, .fs-16;
+  display: block;
+  cursor: pointer;
+  padding-left: calc(#{$checkbox-size} + 12px);
+
+  &.filter-checkbox__active {
+    &:after {
+      @include themify($themes) {
+        border-color: themed('themeColor');
+        background-color: themed('themeColor');
+      }
+    }
+
+    &:before {
+      @extend .visible;
+    }
+  }
+
+  &:after {
+    content: '';
+    @extend .position-absolute;
+    left: 0;
+    top: 4px;
+    border-radius: 3px;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $blue-thin;
+  }
+
+  &:before {
+    @extend .text-white, .position-absolute, .fs-10, .invisible;
+    left: 3px;
+    top: 5px;
+    z-index: 2;
+  }
+}
+
+.filter-checkbox__counter {
+  @extend .d-inline-block;
+  color: #a4a4a4 !important;
+  margin-left: 2px;
+}
