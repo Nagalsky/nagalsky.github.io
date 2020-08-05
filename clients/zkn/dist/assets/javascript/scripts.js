@@ -360,13 +360,17 @@ $(document).ready(function() {
     if (trigger.attr('data-checked') == 1) {
       trigger.attr('data-checked', 0)
       $(this)
-        .closest('.disable-all-fields')
+        .parent()
+        .parent()
+        .parent()
         .find('.form-control')
         .prop('disabled', false)
     } else {
       trigger.attr('data-checked', 1)
       $(this)
-        .closest('.disable-all-fields')
+        .parent()
+        .parent()
+        .parent()
         .find('.form-control')
         .prop('disabled', true)
     }
@@ -378,13 +382,17 @@ $(document).ready(function() {
     if (trigger.attr('data-checked') == 1) {
       trigger.attr('data-checked', 0)
       $(this)
-        .closest('[data-parent]')
+        .parent()
+        .parent()
+        .parent()
         .find('.form-control')
         .prop('disabled', false)
     } else {
       trigger.attr('data-checked', 1)
       $(this)
-        .closest('[data-parent]')
+        .parent()
+        .parent()
+        .parent()
         .find('.form-control')
         .prop('disabled', true)
     }
