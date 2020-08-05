@@ -2,16 +2,32 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
+$font-path: '../fonts/' !default;
+
+$font-roman: 'Avenir-Roman';
+$font-book: 'Avenir-Book';
+$font-heavy: 'Avenir-Heavy';
+
+.font-roman {
+    font-family: $font-roman !important;
+}
+
+.font-book {
+    font-family: $font-book !important;
+}
+
+.font-heavy {
+    font-family: $font-heavy !important;
+}
+
+
+$font-base: $font-roman;
+
 $font-color: #66615b !default;
 $fill-font-color: rgba(255, 255, 255, 0.8);
-$font-family-sans-serif: 'Montserrat',
-"Helvetica",
-Arial,
-sans-serif;
-$sans-serif-family: 'Montserrat',
-'Helvetica Neue',
-Arial,
-sans-serif;
+$sans-serif-family: $font-base;
+
+
 
 
 $none: 0 !default;
@@ -25,9 +41,9 @@ $orange-bg: #e95e38 !default;
 $smoke-bg: #F5F5F5 !default;
 $light-black: #444 !default;
 
+$black-color: #000000 !default;
 $black-bg: rgba(30, 30, 30, .97) !default;
 
-$black-color: #2c2c2c !default;
 $black-hr: #444444 !default;
 
 $hr-line: rgba(0, 0, 0, .1) !default;
@@ -330,7 +346,7 @@ $height-icon-message-sm: 20px;
 $width-icon-message-sm: 20px;
 
 $white-navbar: rgba(#FFFFFF, .96);
-$primary-navbar: rgba(#34ACDC, .98);
+$primary-navbar: #2d5ca4;
 $info-navbar: rgba(#5BCAFF, .98);
 $success-navbar: rgba(#4CD964, .98);
 $warning-navbar: rgba(#FF9500, .98);
@@ -409,3 +425,6 @@ $social-behance-state-color: lighten(#1769ff, 6%) !default;
 $input-color-placeholder: #999 !default;
 
 $zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+// Box color
+$box-primary-border-color: #979797;
