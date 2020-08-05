@@ -42,9 +42,14 @@
                 </div>
 
                 <div class="box box--rounded">
-                    <h1 class="mb-md-0">Deventer Ziekenhuis, locatie Deventer</h1>
                     <div class="d-flex align-items-center justify-content-between flex-row mb-4">
-                        <p class="mb-0 mr-4">Ziekenhuis</p>
+                        <div class="flex-fill d-flex">
+                            <img src="assets/images/temp/uploaded-logo.png" alt="" class="company-logo">
+                            <div class="flex-fill">
+                                <h1 class="mb-0">Deventer Ziekenhuis, locatie Deventer</h1>
+                                <p class="mb-0 mr-4">Ziekenhuis</p>
+                            </div>
+                        </div>
                         <div class="ratinge__score flex-shrink-0">
                             8
                             <div class="ratinge__score-decimal">.8</div>
@@ -52,33 +57,20 @@
                     </div>
 
                     <div class="d-flex justify-content-between flex-column flex-md-row mb-4">
-                        <div class="address mb-4 mb-md-0 mr-md-5">
-                            <div class="address__item">
-                                <div class="address__title">
-                                    Adres
-                                </div>
-
-                                <div class="address__text">
-                                    Nico Bolkesteinlaan 75<br />7416 SE Deventer
-                                </div>
+                        <div class="mb-4 mb-md-0 mr-md-5">
+                            <div class="row">
+                                <div class="col-4 font-base-bold">Adres</div>
+                                <div class="col-8">Nico Bolkesteinlaan 75 7416 SE Deventer</div>
                             </div>
 
-                            <div class="address__item">
-                                <div class="address__title">
-                                    Telefoon
-                                </div>
-
-                                <div class="address__text">
-                                    0570-535353
-                                </div>
+                            <div class="row mt-1">
+                                <div class="col-4 font-base-bold">Telefoon</div>
+                                <div class="col-8">0570-535353</div>
                             </div>
 
-                            <div class="address__item">
-                                <div class="address__title">
-                                    Website
-                                </div>
-
-                                <div class="address__text">
+                            <div class="row mt-1">
+                                <div class="col-4 font-base-bold">Website</div>
+                                <div class="col-8">
                                     <a href="https://www.dz.nl/" target="_blank">https://www.dz.nl/</a>
                                 </div>
                             </div>
@@ -133,8 +125,7 @@
                                         <label class="col-sm-3 col-form-label">Logo</label>
                                         <div class="col-sm-9">
                                             <div class="mb-4">
-                                                <img src="https://testzkn.e-activesites.nl/cache/0/7/1/d/f/071df1d0ed452797c68c93393f587bc2d5cdbadd.png?v392"
-                                                    alt="" class="img-fluid">
+                                                <img src="assets/images/temp/avatar2.png" alt="" class="img-fluid">
                                             </div>
                                             <div class="form-group">
                                                 <input type="file" />
@@ -180,8 +171,7 @@
                                         <label for="" class="col-sm-3 col-form-label">Foto's en video</label>
                                         <div class="col-sm-9">
                                             <div class="mb-4">
-                                                <img src="https://testzkn.e-activesites.nl/cache/0/7/1/d/f/071df1d0ed452797c68c93393f587bc2d5cdbadd.png?v392"
-                                                    alt="" class="img-fluid">
+                                                <img src="assets/images/temp/avatar2.png" alt="" class="img-fluid">
                                             </div>
                                             <div class="form-group">
                                                 <input type="file" />
@@ -210,8 +200,7 @@
                                         <label for="" class="col-sm-3 col-form-label">Foto 1</label>
                                         <div class="col-sm-9">
                                             <div class="mb-4">
-                                                <img src="https://testzkn.e-activesites.nl/cache/0/7/1/d/f/071df1d0ed452797c68c93393f587bc2d5cdbadd.png?v392"
-                                                    alt="" class="img-fluid">
+                                                <img src="assets/images/temp/avatar2.png" alt="" class="img-fluid">
                                             </div>
                                             <div class="form-group">
                                                 <input type="file" />
@@ -240,8 +229,7 @@
                                         <label for="" class="col-sm-3 col-form-label">Foto 2</label>
                                         <div class="col-sm-9">
                                             <div class="mb-4">
-                                                <img src="https://testzkn.e-activesites.nl/cache/0/7/1/d/f/071df1d0ed452797c68c93393f587bc2d5cdbadd.png?v392"
-                                                    alt="" class="img-fluid">
+                                                <img src="assets/images/temp/avatar2.png" alt="" class="img-fluid">
                                             </div>
                                             <div class="form-group">
                                                 <input type="file" />
@@ -389,7 +377,7 @@
                                             class="col-sm-3 col-form-label">Verzorgingsgebied gemeenten</label>
                                         <div class="col-sm-9">
                                             <textarea name="" id="" cols="10" rows="3"
-                                                class="form-control form-control-regular textarea-sm"></textarea>
+                                                class="form-control form-control-regular textarea-sm">6</textarea>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -539,181 +527,214 @@
                                 <fieldset>
                                     <h2>Openingstijden</h2>
                                     <p>Geef hier uw reguliere openingstijden op, bijvoorbeeld 8:30 tot 17:30.</p>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="wizard_extra_opening_hours_hidden">
-                                            <label class="custom-control-label"
-                                                for="wizard_extra_opening_hours_hidden">Geen
-                                                openingstijden tonen</label>
+                                    <div class="disable-all-fields">
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="wizard_extra_opening_hours_hidden" data-disable-all-fields
+                                                    data-checked="0">
+                                                <label class="custom-control-label"
+                                                    for="wizard_extra_opening_hours_hidden">Geen
+                                                    openingstijden tonen</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="table-responsive">
+                                            <table class="table table-centered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Dag</th>
+                                                        <th scope="col">Van</th>
+                                                        <th scope="col">Tot</th>
+                                                        <th scope="col"></th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-parent>
+                                                        <th scope="row">Maandag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_monday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_monday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row">Dinsdag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_tuesday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_tuesday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row">Woensdag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_wednesday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_wednesday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row">Donderdag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_thursday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_thursday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row">Vrijdag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_friday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_friday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row">Zaterdag</th>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_saturday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_saturday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr data-parent>
+                                                        <th scope="row" class="pb-4">Zondag</th>
+                                                        <td class="pb-4">
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td class="pb-4">
+                                                            <input type="text"
+                                                                class="form-control form-control-regular">
+                                                        </td>
+                                                        <td class="pb-4">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="wizard_extra_opening_hours_sunday_disabled"
+                                                                    data-checked="0" data-check-row>
+                                                                <label class="custom-control-label"
+                                                                    for="wizard_extra_opening_hours_sunday_disabled">
+                                                                    <span
+                                                                        class="d-none d-sm-inline-block">Gesloten</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="pb-4"></td>
+                                                    </tr>
+
+                                                    <trx>
+                                                        <th class="pt-4"></th>
+                                                        <td class="pt-4">
+                                                            <button type="button" class="btn btn-theme">Opslaan <i
+                                                                    class="icon-chevron-right ml-3"></i></button>
+                                                        </td>
+                                                        <td class="pt-4"></td>
+                                                        <td class="pt-4"></td>
+                                                        <td class="pt-4"></td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-
-
-                                    <div class="table-responsive">
-                                        <table class="table table-centered">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Dag</th>
-                                                    <th scope="col">Van</th>
-                                                    <th scope="col">Tot</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">Maandag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_monday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_monday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Dinsdag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_tuesday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_tuesday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Woensdag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_wednesday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_wednesday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Donderdag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_thursday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_thursday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Vrijdag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_friday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_friday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Zaterdag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_saturday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_saturday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <th scope="row">Zondag</th>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control form-control-regular">
-                                                    </td>
-                                                    <td>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="wizard_extra_opening_hours_sunday_disabled">
-                                                            <label class="custom-control-label"
-                                                                for="wizard_extra_opening_hours_sunday_disabled">
-                                                                Gesloten</label>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
                                 </fieldset>
-
-                                <hr class="hr-sm">
-
-                                <div class="row">
-                                    <div class="col-sm-9 offset-sm-3">
-                                        <button type="button" class="btn btn-theme">Opslaan <i
-                                                class="icon-chevron-right ml-3"></i></button>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                     </div>

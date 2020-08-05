@@ -186,7 +186,7 @@ $(document).ready(function() {
                 </div>
 
                 <div class="col-md-3">
-                  <button type="button" class="btn btn-danger font-base-regular" data-removefield="collection">Verwijderen</button>
+                  <button type="button" class="btn btn-danger font-base-regular" data-remove="collection">Verwijderen</button>
                 </div>
               </div>
             </div>`
@@ -200,9 +200,9 @@ $(document).ready(function() {
   personProfileFormAddFields()
 
   function deletePersonProfileFormAddFields() {
-    var btnDelete = $('[data-removefield="collection"]')
+    var btnDelete = '[data-remove="collection"]'
 
-    $(document).on('click', btnDelete, function(event) {
+    $(document).on('click', btnDelete, function() {
       $(this)
         .parent()
         .parent()
@@ -249,20 +249,6 @@ $(document).ready(function() {
   }
 
   emailadressenFormAddFields()
-
-  // function selectAllCheckboxes() {
-  //   var clicked = false
-  //   $('.select-all__toggle').on('click', function(e) {
-  //     e.preventDefault()
-  //     $(this)
-  //       .parent()
-  //       .find('.custom-control-input')
-  //       .prop('checked', !clicked)
-  //     clicked = !clicked
-  //   })
-  // }
-
-  // selectAllCheckboxes()
 
   function initSelectAll() {
     function addHandler() {
