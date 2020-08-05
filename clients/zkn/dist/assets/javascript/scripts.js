@@ -162,34 +162,33 @@ $(document).ready(function() {
       })
         .append(
           $(
-            `<div class="form-group">
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="form-group">
-                    <div class="row">
-                      <label for="user_person_profile_handigeLinks_links_name_${i}" class="col-md-3 col-form-label"><b>Naam</b></label>
-                      <div class="col-md-9">
-                          <input type="text" id="user_person_profile_handigeLinks_links_name_${i}" class="form-control form-control-regular">
-                          <p class="form-text text-wrap">Bijv. ALS de wereld uit</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="row">
-                      <label for="user_person_profile_handigeLinks_links_link_${i}" class="col-md-3 col-form-label"><b>Link</b></label>
-                      <div class="col-md-9">
-                          <input type="text" id="user_person_profile_handigeLinks_links_link_${i}" class="form-control form-control-regular">
-                          <p class="form-text text-wrap">Bijv. https://www.zorgkaartnederland.nl/blog/als-de-wereld-uit</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3">
-                  <button type="button" class="btn btn-danger font-base-regular" data-remove="collection">Verwijderen</button>
-                </div>
-              </div>
-            </div>`
+            '<div class="form-group">' +
+              '<div class="row">' +
+              '<div class="col-md-9">' +
+              '<div class="form-group">' +
+              '<div class="row">' +
+              '<label for="user_person_profile_handigeLinks_links_name_${i}" class="col-md-3 col-form-label"><b>Naam</b></label>' +
+              '<div class="col-md-9">' +
+              '<input type="text" id="user_person_profile_handigeLinks_links_name_${i}" class="form-control form-control-regular">' +
+              '<p class="form-text text-wrap">Bijv. ALS de wereld uit</p>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-group">' +
+              '<div class="row">' +
+              '<label for="user_person_profile_handigeLinks_links_link_${i}" class="col-md-3 col-form-label"><b>Link</b></label>' +
+              '<div class="col-md-9">' +
+              '<input type="text" id="user_person_profile_handigeLinks_links_link_${i}" class="form-control form-control-regular">' +
+              '<p class="form-text text-wrap">Bijv. https://www.zorgkaartnederland.nl/blog/als-de-wereld-uit</p>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '<div class="col-md-3">' +
+              '<button type="button" class="btn btn-danger font-base-regular" data-remove="collection">Verwijderen</button>' +
+              '</div>' +
+              '</div>' +
+              '</div>'
           )
         )
         .appendTo(collapseHolder)
@@ -226,21 +225,15 @@ $(document).ready(function() {
       })
         .append(
           $(
-            `
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label font-base-regular"
-                    for="form-field-emailadres-${i}">E-mailadres</label>
-                <div class="col-sm-9">
-                    <div class="d-flex">
-                        <input type="email" class="form-control form-control-regular flex-fill"
-                            id="form-field-emailadres-${i}">
-
-                        <button type="button" class="btn btn-theme flex-shrink-0 ml-3">Verwijderen
-                            <i class="icon-chevron-right ml-3"></i></button>
-                    </div>
-                </div>
-              </div>
-            `
+            '<div class="form-group row">' +
+              '<label class="col-sm-3 col-form-label font-base-regular" for="form-field-emailadres-${i}">E-mailadres</label>' +
+              '<div class="col-sm-9">' +
+              '<div class="d-flex">' +
+              '<input type="email" class="form-control form-control-regular flex-fill" id="form-field-emailadres-${i}">' +
+              '<button type="button" class="btn btn-theme flex-shrink-0 ml-3">Verwijderen <i class="icon-chevron-right ml-3"></i></button>' +
+              '</div>' +
+              '</div>' +
+              '</div>'
           )
         )
         .appendTo(collapseHolder)
