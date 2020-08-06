@@ -88,7 +88,7 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <div class="main-panel">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top">
+      <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-minimize">
@@ -162,13 +162,224 @@ The above copyright notice and this permission notice shall be included in all c
 
       <div class="content">
         <div class="box">
-          <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-md-between">
-            <h1 class="mb-md-0 font-book">Org Name</h1>
+          <div class="d-flex flex-column flex-xl-row align-items-xl-end justify-content-xl-between mb-3">
+            <h1 class="mb-xl-0 font-book">Org Name</h1>
 
-            <div class="flex-shrink-0">datepicker goes here</div>
+            <div class="flex-shrink-0 d-flex flex-column flex-md-row align-items-md-end">
+              <div class="form-group datepicker-holder mb-md-0 mr-md-4">
+                <i class="datepicker-holder__icon fa fa-calendar"></i>
+                <input type="text" class="form-control datepicker" placeholder="Pick a day" icons="date">
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="../assets/img/timeline-nav-chart.jpg" alt="" class="w-100">
+              </div>
+            </div>
           </div>
 
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#tabs-goals" role="tab" aria-expanded="true">Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-activity" role="tab" aria-expanded="false">Activity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-details" role="tab" aria-expanded="false">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-indicators" role="tab"
+                aria-expanded="false">Indicators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-structure" role="tab"
+                aria-expanded="false">Structure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-team" role="tab" aria-expanded="false">Team</a>
+            </li>
+          </ul>
 
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabs-goals" role="tabpanel" aria-expanded="true">
+              <div class="accordions" id="accordion-tabs-goals">
+                <div class="accordion">
+                  <button class="btn accordion__toggle accordion__toggle--title" type="button" data-toggle="collapse"
+                    data-target="#accordion-tabs-goals-1" aria-expanded="true" aria-controls="accordion-tabs-goals-1">
+                    Requirements
+                  </button>
+
+                  <div id="accordion-tabs-goals-1" class="collapse show" data-parent="#accordion-tabs-goals">
+                    <div class="accordion__body">
+                      <ul class="nav nav-tabs nav-tabs-has-indicator" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#tabs-accordion-tabs-goals-competencies"
+                            role="tab" aria-expanded="true">Competencies</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#tabs-accordion-tabs-goals-qualifications"
+                            role="tab" aria-expanded="false">Qualifications</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#tabs-accordion-tabs-goals-responsibilities"
+                            role="tab" aria-expanded="false">Responsibilities</a>
+                        </li>
+                      </ul>
+
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-accordion-tabs-goals-competencies" role="tabpanel"
+                          aria-expanded="true">
+                          <div class="accordions accordions--has-divider"
+                            id="accordion-tabs-goals-requirements-competencies">
+                            <div class="accordion">
+                              <button class="btn accordion__toggle" type="button" data-toggle="collapse"
+                                data-target="#accordion-tabs-goals-requirements-competencies-1" aria-expanded="true"
+                                aria-controls="accordion-tabs-goals-requirements-competencies-1">
+                                Abilities
+                              </button>
+
+                              <div id="accordion-tabs-goals-requirements-competencies-1" class="collapse show"
+                                data-parent="#accordion-tabs-goals-requirements-competencies">
+                                <div class="accordion__body">
+                                  Abilities content
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="accordion">
+                              <button class="btn accordion__toggle" type="button" data-toggle="collapse"
+                                data-target="#accordion-tabs-goals-requirements-competencies-2" aria-expanded="false"
+                                aria-controls="accordion-tabs-goals-requirements-competencies-2">
+                                Interests
+                              </button>
+
+                              <div id="accordion-tabs-goals-requirements-competencies-2" class="collapse"
+                                data-parent="#accordion-tabs-goals-requirements-competencies">
+                                <div class="accordion__body">
+                                  Interests content
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="accordion">
+                              <button class="btn accordion__toggle" type="button" data-toggle="collapse"
+                                data-target="#accordion-tabs-goals-requirements-competencies-3" aria-expanded="false"
+                                aria-controls="accordion-tabs-goals-requirements-competencies-3">
+                                Knowledge
+                              </button>
+
+                              <div id="accordion-tabs-goals-requirements-competencies-3" class="collapse"
+                                data-parent="#accordion-tabs-goals-requirements-competencies">
+                                <div class="accordion__body">
+                                  Knowledge content
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="accordion">
+                              <button class="btn accordion__toggle" type="button" data-toggle="collapse"
+                                data-target="#accordion-tabs-goals-requirements-competencies-4" aria-expanded="false"
+                                aria-controls="accordion-tabs-goals-requirements-competencies-4">
+                                Skills
+                              </button>
+
+                              <div id="accordion-tabs-goals-requirements-competencies-4" class="collapse"
+                                data-parent="#accordion-tabs-goals-requirements-competencies">
+                                <div class="accordion__body">
+                                  Skills content
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="accordion">
+                              <button class="btn accordion__toggle" type="button" data-toggle="collapse"
+                                data-target="#accordion-tabs-goals-requirements-competencies-5" aria-expanded="false"
+                                aria-controls="accordion-tabs-goals-requirements-competencies-5">
+                                Styles
+                              </button>
+
+                              <div id="accordion-tabs-goals-requirements-competencies-5" class="collapse"
+                                data-parent="#accordion-tabs-goals-requirements-competencies">
+                                <div class="accordion__body">
+                                  Styles content
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tab-pane" id="tabs-accordion-tabs-goals-qualifications" role="tabpanel"
+                          aria-expanded="false">
+                          tabs-accordion-tabs-goals-qualifications
+                        </div>
+
+                        <div class="tab-pane" id="tabs-accordion-tabs-goals-responsibilities" role="tabpanel"
+                          aria-expanded="false">
+                          tabs-accordion-tabs-goals-responsibilities
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion">
+                  <button class="btn accordion__toggle accordion__toggle--title collapsed" type="button"
+                    data-toggle="collapse" data-target="#accordion-tabs-goals-2" aria-expanded="false"
+                    aria-controls="accordion-tabs-goals-2">
+                    Jobs
+                  </button>
+                  <div id="accordion-tabs-goals-2" class="collapse" data-parent="#accordion-tabs-goals">
+                    <div class="accordion__body">
+                      accordion tab-goals 2
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion">
+                  <button class="btn accordion__toggle accordion__toggle--title collapsed" type="button"
+                    data-toggle="collapse" data-target="#accordion-tabs-goals-3" aria-expanded="false"
+                    aria-controls="accordion-tabs-goals-3">
+                    Units
+                  </button>
+                  <div id="accordion-tabs-goals-3" class="collapse" data-parent="#accordion-tabs-goals">
+                    <div class="accordion__body">
+                      accordion tab-goals 3
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="tab-pane" id="tabs-activity" role="tabpanel" aria-expanded="false">
+              tabs-activity
+            </div>
+
+
+
+            <div class="tab-pane" id="tabs-details" role="tabpanel" aria-expanded="false">
+              tabs-details
+            </div>
+
+
+
+            <div class="tab-pane" id="tabs-indicators" role="tabpanel" aria-expanded="false">
+              tabs-indicators
+            </div>
+
+
+
+            <div class="tab-pane" id="tabs-structure" role="tabpanel" aria-expanded="false">
+              tabs-structure
+            </div>
+
+
+
+            <div class="tab-pane" id="tabs-team" role="tabpanel" aria-expanded="false">
+              tabs-team
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -203,6 +414,13 @@ The above copyright notice and this permission notice shall be included in all c
   <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // initialise Datetimepicker and Sliders
+      demo.initDateTimePicker();
+    });
+  </script>
 </body>
 
 </html>
