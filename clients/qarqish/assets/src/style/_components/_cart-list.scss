@@ -11,7 +11,8 @@ $cart-counter-btn-size: 32px;
 .cart-list__item {
     @extend .checkbox,
     .d-flex,
-    .position-relative;
+    .position-relative,
+    .flex-wrap;
     padding-top: 20px;
     margin-top: 20px;
     border-top: 1px solid $silver;
@@ -37,6 +38,20 @@ $cart-counter-btn-size: 32px;
         @extend .position-absolute;
         top: 20px;
         left: 0;
+    }
+
+    &--static {
+        @extend .pl-0;
+
+        &:not(:first-of-type) {
+            border-top: none;
+        }
+
+        .cart-list__wishlist {
+            &:before {
+                content: none;
+            }
+        }
     }
 }
 
@@ -137,7 +152,8 @@ $cart-counter-btn-size: 32px;
 .cart-list__counter {
     @extend .d-flex,
     .align-items-center,
-    .justify-content-between;
+    .justify-content-between,
+    .mt-auto;
     line-height: 1;
 }
 
@@ -175,5 +191,14 @@ $cart-counter-btn-size: 32px;
 
     @include media-breakpoint-down(sm) {
         font-size: 12px;
+    }
+}
+
+.cart-list__field-box {
+    @extend .w-100,
+    .mt-3;
+
+    label {
+        @extend .m-0;
     }
 }
