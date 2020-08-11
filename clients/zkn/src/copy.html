@@ -98,7 +98,7 @@
                     <a href="#" class="tab-link">Locaties</a>
                 </div>
 
-                <div class="tab-content mb-4">
+                <div class="tab-content mx-negative-sm mb-4">
                     <form action="">
                         <h2 class="mb-2">Profielgegevens kopiëren</h2>
                         <p>U kunt de gegevens die zijn ingevuld voor dit profiel kopiëren naar uw andere locaties.</p>
@@ -152,10 +152,13 @@
                         <fieldset>
                             <h2>Stap 2: Naar welke locaties wilt u deze gegevens kopiëren?</h2>
 
-                            <a href="javascript:;" class="select-all__toggle d-inline-block mb-3"
-                                data-checked="0">Selecteer alles
-                                / selecteer
-                                niets</a>
+                            <div class="d-flex flex-wrap align-items-center mb-3">
+                                <a href="javascript:;" class="select-all__toggle d-inline-block"
+                                    data-checked="0">Selecteer alles</a>
+                                <div class="color-theme mx-1">/</div>
+                                <a href="javascript:;" class="d-inline-block" data-uncheck>selecteer
+                                    niets</a>
+                            </div>
 
                             <div class="select-all">
                                 <div class="custom-control custom-checkbox mb-2">
@@ -215,14 +218,10 @@
 
                         <hr class="hr-sm">
 
-                        <div class="row">
-                            <div class="col-sm-10 offset-sm-2">
-                                <button type="button" class="btn btn-theme">Profielgegevens koplëren <i
-                                        class="icon-chevron-right ml-3"></i></button>
-                                <button type="button" class="btn btn-secondary">Annuleren <i
-                                        class="icon-chevron-right ml-3"></i></button>
-                            </div>
-                        </div>
+                        <button type="button" class="btn btn-theme">Profielgegevens koplëren <i
+                                class="icon-chevron-right ml-3"></i></button>
+                        <button type="button" class="btn btn-secondary">Annuleren <i
+                                class="icon-chevron-right ml-3"></i></button>
                     </form>
                 </div>
 

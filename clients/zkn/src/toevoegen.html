@@ -17,25 +17,47 @@
                     <p class="mb-0 mr-2 flex-shrink-0">U bent hier:</p>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="#">E-mail alerts</a></li>
+                        <li class="breadcrumb-item"><a href="#">E-mailalerts</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Toevoegen</li>
                     </ol>
                 </nav>
 
                 <div class="box box--rounded">
-                    <h1>E-mail alerts</h1>
-                    <p>E-mail alerts sturen wij nadat iemand een waardering over uw dienstverband heeft geplaatst op
-                        ZorgkaartNederland. Geef aan of en hoe vaak u een e-mail wilt ontvangen.</p>
+                    <h1>E-mailalerts</h1>
+                    <p>Door een e-mailalert in te stellen krijgt u een e-mail wanneer iemand een waardering over uw
+                        locatie(s) heeft geschreven. Geef hieronder aan hoe vaak u deze e-mail wilt ontvangen en op naar
+                        welk e-mailadres. U kunt meerdere lijsten aanmaken.</p>
 
                     <form action="">
                         <div class="form-group row">
-                            <label for="form-field-onderwerp" class="col-sm-3 col-form-label">Onderwerp<span
+                            <label for="form-field-naam-van-alert" class="col-sm-3 col-form-label">Naam van alert<span
                                     class="required"></span></label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control form-control-regular" id="form-field-onderwerp">
-                                <p class="form-text">Geef een onderwerp voor de e-mail alerts op. Tip: gebruik
-                                    bijvoorbeeld de naam van uw locatie.
+                                <input type="text" class="form-control form-control-regular"
+                                    id="form-field-naam-van-alert">
+                                <p class="form-text">Geef de e-mailalert een naam. Tip: Gebruik bijvoorbeeld de naam van
+                                    de locatie of ontvanger.
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="form-field-ealert-voor-waarderingen" class="col-sm-3 col-form-label">E-alert
+                                voor waarderingen met een cijfer lager dan<span class="required"></span></label>
+                            <div class="col-sm-auto">
+                                <select name="" id="form-field-ealert-voor-waarderingen"
+                                    class="form-control form-control-regular">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                    <option value="">10</option>
+                                </select>
                             </div>
                         </div>
 
@@ -45,14 +67,23 @@
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="custom-checkbox-direct">
                                     <label class="custom-control-label" for="custom-checkbox-direct">Direct. U ontvangt
-                                        een e-mail
-                                        zodra een waardering geplaatst is.</label>
+                                        een e-mail meteen nadat een waardering is geplaatst.</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="custom-checkbox-dagelijks">
-                                    <label class="custom-control-label" for="custom-checkbox-dagelijks">Dagelijks. U
-                                        ontvangt eenmaal
-                                        per dag een e-mail met alle waarderingen die op deze dag geplaatst zijn.</label>
+                                    <label class="custom-control-label"
+                                        for="custom-checkbox-dagelijks">Dagelijks</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-checkbox-wekelijks">
+                                    <label class="custom-control-label"
+                                        for="custom-checkbox-wekelijks">Wekelijks</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="custom-checkbox-maandelijks">
+                                    <label class="custom-control-label"
+                                        for="custom-checkbox-maandelijks">Maandelijks</label>
                                 </div>
                             </div>
                         </div>
@@ -82,142 +113,72 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="form-field-organisaties" class="col-sm-3 col-form-label">Organisaties</label>
+                            <label class="col-sm-3 col-form-label">Organisaties<span class="required"></span></label>
                             <div class="col-sm-9">
-
-                                <a href="javascript:;" class="select-all__toggle d-inline-block mb-3"
-                                    data-checked="0">Selecteer
-                                    alles /
-                                    selecteer
-                                    niets</a>
+                                <div class="d-flex flex-wrap align-items-center mb-3">
+                                    <a href="javascript:;" class="select-all__toggle d-inline-block"
+                                        data-checked="0">Selecteer alles</a>
+                                    <div class="color-theme mx-1">/</div>
+                                    <a href="javascript:;" class="d-inline-block" data-uncheck>selecteer
+                                        niets</a>
+                                </div>
 
                                 <div class="select-all">
                                     <div class="custom-control custom-checkbox mb-2">
                                         <input type="checkbox" class="custom-control-input"
-                                            id="form-field-custom-checkbox-1" data-select="childs">
-                                        <label class="custom-control-label" for="form-field-custom-checkbox-1">Custom
-                                            checkbox 1</label>
+                                            id="company_copy_companies_070198ffb6d238019900a778ca04e220"
+                                            name="company_copy[companies][070198ffb6d238019900a778ca04e220]" value="1"
+                                            disabled>
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_070198ffb6d238019900a778ca04e220">Deventer
+                                            Ziekenhuis</label>
                                     </div>
                                     <div class="pl-4">
                                         <div class="custom-control custom-checkbox mb-2">
                                             <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-2">
+                                                id="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d"
+                                                name="company_copy[companies][e19ec33456eb388fb6fdaf2266bf933d]"
+                                                value="1">
                                             <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-2">Custom
-                                                checkbox 2</label>
+                                                for="company_copy_companies_e19ec33456eb388fb6fdaf2266bf933d">Deventer
+                                                Ziekenhuis, Polikliniek Raalte</label>
                                         </div>
-
                                         <div class="custom-control custom-checkbox mb-2">
                                             <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-3">
+                                                id="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5"
+                                                name="company_copy[companies][448ca9f1a3d43eb68a3a0316920232d5]"
+                                                value="1">
                                             <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-3">Custom
-                                                checkbox 3</label>
+                                                for="company_copy_companies_448ca9f1a3d43eb68a3a0316920232d5">Deventer
+                                                Deventer Ziekenhuis, Polikliniek Rijssen</label>
                                         </div>
-
                                         <div class="custom-control custom-checkbox mb-2">
                                             <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-4">
+                                                id="company_copy_companies_83ae650bc31c32f4b907990189361448"
+                                                name="company_copy[companies][83ae650bc31c32f4b907990189361448]"
+                                                value="1">
                                             <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-4">Custom
-                                                checkbox 4</label>
+                                                for="company_copy_companies_83ae650bc31c32f4b907990189361448">Deventer
+                                                Ziekenhuis, locatie Deventer</label>
                                         </div>
-
                                         <div class="custom-control custom-checkbox mb-2">
                                             <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-5">
+                                                id="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a"
+                                                name="company_copy[companies][44c4d64fb80b355e8340327b79c6fc6a]"
+                                                value="1">
                                             <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-5">Custom
-                                                checkbox 5</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-6">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-6">Custom
-                                                checkbox 6</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-7">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-7">Custom
-                                                checkbox 7</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-8">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-8">Custom
-                                                checkbox 8</label>
+                                                for="company_copy_companies_44c4d64fb80b355e8340327b79c6fc6a">Dialyseafdeling
+                                                Deventer Ziekenhuis</label>
                                         </div>
                                     </div>
 
                                     <div class="custom-control custom-checkbox mb-2">
                                         <input type="checkbox" class="custom-control-input"
-                                            id="form-field-custom-checkbox-9" data-select="childs">
-                                        <label class="custom-control-label" for="form-field-custom-checkbox-9">Custom
-                                            checkbox 9</label>
-                                    </div>
-                                    <div class="pl-4">
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-10">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-10">Custom
-                                                checkbox 10</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-11">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-11">Custom
-                                                checkbox 11</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-12">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-12">Custom
-                                                checkbox 12</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-13">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-13">Custom
-                                                checkbox 13</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-14">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-14">Custom
-                                                checkbox 14</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-15">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-15">Custom
-                                                checkbox 15</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-2">
-                                            <input type="checkbox" class="custom-control-input"
-                                                id="form-field-custom-checkbox-16">
-                                            <label class="custom-control-label"
-                                                for="form-field-custom-checkbox-16">Custom
-                                                checkbox 16</label>
-                                        </div>
+                                            id="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa"
+                                            name="company_copy[companies][2c9859cc3ba3313a9f0c1bc53c0ab9aa]" value="1">
+                                        <label class="custom-control-label"
+                                            for="company_copy_companies_2c9859cc3ba3313a9f0c1bc53c0ab9aa">Patiëntenfederatie
+                                            Nederland</label>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +188,7 @@
                             <label for="form-field-organisaties" class="col-sm-3 col-form-label"><small>Velden met een *
                                     zijn verplicht</small></label>
                             <div class="col-sm-9">
-                                <button type="button" class="btn btn-theme">Distributielijst opslaan
+                                <button type="button" class="btn btn-theme">E-mailalert opslaan
                                     <i class="icon-chevron-right ml-3"></i></button>
                             </div>
                         </div>

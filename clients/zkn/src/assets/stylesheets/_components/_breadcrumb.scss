@@ -10,7 +10,8 @@
 
 .breadcrumb {
   @extend .p-0,
-  .flex-nowrap;
+  .flex-nowrap,
+  .flex-fill;
   min-width: 0;
   background-color: transparent;
 
@@ -31,6 +32,8 @@
   }
 
   &[data-last-child] {
+    @extend .ml-auto;
+
     &:before {
       content: none !important;
     }
