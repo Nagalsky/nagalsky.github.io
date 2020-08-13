@@ -1,0 +1,28 @@
+/* CARD BOX */
+
+.card-box {
+    @extend .p-3,
+    .text-center,
+    .d-flex,
+    .flex-column,
+    .flex-fill,
+    .mx-auto,
+    .font-bold,
+    .text-muted,
+    .w-100;
+    box-shadow: 0px 9px 8px rgba($black, .3);
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+        max-width: 316px;
+        margin-bottom: 80px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0px 0px 8px rgba($black, .3);
+    }
+}
