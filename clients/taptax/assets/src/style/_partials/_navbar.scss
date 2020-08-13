@@ -2,12 +2,15 @@
 
 .navbar {
     @extend .overflow-hidden,
-    .position-relative;
+    .bg-white,
+    .sticky-top;
+    min-height: 64px;
 
     @include media-breakpoint-up(lg) {
         background: url('../img/bg/navbar-gradient.png') no-repeat center right / cover;
         padding-top: 52px;
         padding-bottom: 52px;
+        min-height: 181px;
     }
 
     &:after {
@@ -34,11 +37,6 @@
 
 .navbar-nav {
     .nav-item {
-        &.active {
-            .nav-link {
-                @extend .font-bold;
-            }
-        }
 
         .nav-link {
             @extend .text-uppercase,
@@ -61,6 +59,10 @@
             &:hover,
             &:focus {
                 @extend .text-blue;
+            }
+
+            &.active {
+                @extend .font-bold;
             }
         }
     }

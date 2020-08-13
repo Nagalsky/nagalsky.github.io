@@ -5147,7 +5147,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .card-box {
+.bg-white, .navbar, .card-box {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -5954,7 +5954,7 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .navbar, .footer, .section, .hero, .gallery-holder, .gallery__item {
+.position-relative, .footer, .section, .hero, .gallery-holder, .gallery__item {
   position: relative !important; }
 
 .position-absolute, .section-simple-pay:before, .hero:before, .hero:after, .gallery .swiper-slide:before, .gallery__button-prev,
@@ -5983,7 +5983,7 @@ button.bg-dark:focus {
   z-index: 1030; }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top {
+  .sticky-top, .navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -8297,7 +8297,7 @@ button.swiper-pagination-bullet {
 .gallery__button-next {
   color: #979797 !important; }
 
-.bg-white, .card-box {
+.bg-white, .navbar, .card-box {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -8331,7 +8331,7 @@ button.swiper-pagination-bullet {
 .font-medium, .hero__title, .gallery__title {
   font-family: "Roboto-Medium" !important; }
 
-.font-bold, .navbar-nav .nav-item.active .nav-link, .footer, b,
+.font-bold, .navbar-nav .nav-item .nav-link.active, .footer, b,
 .bold, .btn, .box, .card-box {
   font-family: "Roboto-Bold" !important; }
 
@@ -8355,22 +8355,24 @@ button.swiper-pagination-bullet {
 	Title variables
 *************************/
 /* NAVBAR */
-@media (min-width: 992px) {
-  .navbar {
-    background: url("../img/bg/navbar-gradient.png") no-repeat center right/cover;
-    padding-top: 52px;
-    padding-bottom: 52px; } }
-
-@media (min-width: 992px) {
-  .navbar:after {
-    content: '';
-    position: absolute;
-    top: -240px;
-    right: -210px;
-    width: 300px;
-    height: 300px;
-    background: url("../img/bg/navbar-triangle.png") no-repeat 50% 50%/contain;
-    z-index: 10; } }
+.navbar {
+  min-height: 64px; }
+  @media (min-width: 992px) {
+    .navbar {
+      background: url("../img/bg/navbar-gradient.png") no-repeat center right/cover;
+      padding-top: 52px;
+      padding-bottom: 52px;
+      min-height: 181px; } }
+  @media (min-width: 992px) {
+    .navbar:after {
+      content: '';
+      position: absolute;
+      top: -240px;
+      right: -210px;
+      width: 300px;
+      height: 300px;
+      background: url("../img/bg/navbar-triangle.png") no-repeat 50% 50%/contain;
+      z-index: 10; } }
 
 .navbar-brand {
   width: 160px; }
@@ -8679,6 +8681,7 @@ ul {
 .hero {
   z-index: 20;
   background-attachment: fixed;
+  background-position: 50% 0%;
   min-height: 300px;
   padding-top: 40px;
   padding-bottom: 40px; }
