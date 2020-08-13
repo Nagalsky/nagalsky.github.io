@@ -5147,7 +5147,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white {
+.bg-white, .card-box {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -5957,7 +5957,7 @@ button.bg-dark:focus {
 .position-relative, .navbar, .footer, .section, .hero, .gallery-holder, .gallery__item {
   position: relative !important; }
 
-.position-absolute, .hero:before, .hero:after, .gallery .swiper-slide:before, .gallery__button-prev,
+.position-absolute, .section-simple-pay:before, .hero:before, .hero:after, .gallery .swiper-slide:before, .gallery__button-prev,
 .gallery__button-next {
   position: absolute !important; }
 
@@ -6029,7 +6029,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .hero:before, .card-box {
+.w-100, .section-simple-pay:before, .hero:before, .card-box {
   width: 100% !important; }
 
 .w-auto {
@@ -6044,7 +6044,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .hero:before {
+.h-100, .section-simple-pay:before, .hero:before {
   height: 100% !important; }
 
 .h-auto {
@@ -8297,7 +8297,7 @@ button.swiper-pagination-bullet {
 .gallery__button-next {
   color: #979797 !important; }
 
-.bg-white {
+.bg-white, .card-box {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -8510,7 +8510,7 @@ p {
 
 /* FLEX */
 /* HAS BG */
-.has-bg, .hero {
+.has-bg, .section-simple-pay:before, .hero {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
@@ -8648,6 +8648,13 @@ ul {
   .section-simple-pay > div {
     -webkit-transform: skew(0deg, 6deg);
             transform: skew(0deg, 6deg); }
+  .section-simple-pay:before {
+    content: '';
+    left: 0;
+    top: 0;
+    background-image: url("../img/temp/istockphoto-881542122-1024x1024.jpg");
+    background-attachment: fixed;
+    opacity: .1; }
 
 .section-your-own-boss {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d5d3d4), to(#ffffff));
@@ -8671,6 +8678,7 @@ ul {
 /* HERO */
 .hero {
   z-index: 20;
+  background-attachment: fixed;
   min-height: 300px;
   padding-top: 40px;
   padding-bottom: 40px; }
