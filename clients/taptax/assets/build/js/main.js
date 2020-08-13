@@ -18454,7 +18454,6 @@ return Popper;
 // Import custom js-files
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
-  // init: false,
   navigation: {
     nextEl: ".gallery__button-next",
     prevEl: ".gallery__button-prev"
