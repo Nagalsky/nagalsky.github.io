@@ -23,6 +23,20 @@ $(document).ready(function() {
   $(".modal").on("shown.bs.modal", function(e) {
     swiper2.update();
   });
+
+  var videoSrc = $("#modal-video iframe").attr("src");
+
+  $("#modal-video").on("show.bs.modal", function() {
+    // on opening the modal
+    // set the video to autostart
+    $("#modal-video iframe").attr("src", videoSrc + "&amp;autoplay=1");
+  });
+
+  $("#modal-video").on("hidden.bs.modal", function(e) {
+    // on closing the modal
+    // stop the video
+    $("#modal-video iframe").attr("src", null);
+  });
 });
 
 //Swiper gallery
