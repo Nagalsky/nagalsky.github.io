@@ -51,3 +51,47 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.phone-gallery-holder {
+  @extend .position-relative;
+  padding: 10px 12px;
+
+  @include media-breakpoint-down(md) {
+    margin: 0 auto;
+    width: 280px;
+  }
+}
+
+.phone-gallery {
+  @extend .position-relative,
+  .overflow-hidden;
+  border-radius: 20px;
+
+  .swiper-slide {
+    height: 460px;
+
+
+    @include media-breakpoint-up(lg) {
+      height: 360px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 460px;
+    }
+
+    >img {
+      @extend .h-100;
+      object-fit: cover;
+    }
+  }
+}
+
+.phone-gallery__phone {
+  @extend .position-absolute,
+  .w-100,
+  .h-100;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  pointer-events: none;
+}

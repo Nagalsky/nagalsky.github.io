@@ -5946,16 +5946,16 @@ button.bg-dark:focus {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .navbar {
+.overflow-hidden, .navbar, .phone-gallery {
   overflow: hidden !important; }
 
 .position-static, .gallery__button--static {
   position: static !important; }
 
-.position-relative, .footer, .section, .hero, .gallery-holder, .blog {
+.position-relative, .footer, .section, .hero, .gallery-holder, .phone-gallery-holder, .phone-gallery, .blog {
   position: relative !important; }
 
-.position-absolute, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before, .hero:after {
+.position-absolute, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before, .hero:after, .phone-gallery__phone {
   position: absolute !important; }
 
 .position-fixed {
@@ -6026,7 +6026,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before, .card-box {
+.w-100, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before, .card-box, .phone-gallery__phone {
   width: 100% !important; }
 
 .w-auto {
@@ -6041,7 +6041,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before {
+.h-100, .section-simple-pay:before, .section-how-does-it-work:before, .section-articles:before, .hero:before, .phone-gallery .swiper-slide > img, .phone-gallery__phone {
   height: 100% !important; }
 
 .h-auto {
@@ -8859,6 +8859,33 @@ ul {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1; }
+
+.phone-gallery-holder {
+  padding: 10px 12px; }
+  @media (max-width: 991.98px) {
+    .phone-gallery-holder {
+      margin: 0 auto;
+      width: 280px; } }
+
+.phone-gallery {
+  border-radius: 20px; }
+  .phone-gallery .swiper-slide {
+    height: 460px; }
+    @media (min-width: 992px) {
+      .phone-gallery .swiper-slide {
+        height: 360px; } }
+    @media (min-width: 1200px) {
+      .phone-gallery .swiper-slide {
+        height: 460px; } }
+    .phone-gallery .swiper-slide > img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+.phone-gallery__phone {
+  left: 0;
+  top: 0;
+  z-index: 30;
+  pointer-events: none; }
 
 /* BLOG */
 .blog {
