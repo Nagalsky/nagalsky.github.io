@@ -18536,9 +18536,9 @@ var swiper2 = new Swiper(".modal-gallery", {
 //Swiper modal blog gallery
 var swiper3 = new Swiper(".phone-gallery", {
   slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  }
+  loop: true
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false
+  // }
 });

@@ -54,11 +54,19 @@
 
 .phone-gallery-holder {
   @extend .position-relative;
-  padding: 10px 12px;
+  padding: 15px 15px;
 
   @include media-breakpoint-down(md) {
     margin: 0 auto;
     width: 280px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 0px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 15px 17px;
   }
 }
 
@@ -68,20 +76,20 @@
   border-radius: 20px;
 
   .swiper-slide {
-    height: 460px;
+    // height: 460px;
 
 
-    @include media-breakpoint-up(lg) {
-      height: 360px;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   height: 360px;
+    // }
 
-    @include media-breakpoint-up(xl) {
-      height: 460px;
-    }
+    // @include media-breakpoint-up(xl) {
+    //   height: 460px;
+    // }
 
     >img {
       @extend .h-100;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
