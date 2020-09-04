@@ -6026,7 +6026,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .gallery img, .box:before, .box__inner, .box__btn, .core-box {
+.w-100, .navbar-collapse-holder, .gallery img, .box:before, .box__inner, .box__btn, .core-box {
   width: 100% !important; }
 
 .w-auto {
@@ -6769,13 +6769,15 @@ button.bg-dark:focus {
   .py-md-0 {
     padding-top: 0 !important; }
   .pr-md-0,
-  .px-md-0 {
+  .px-md-0,
+  .navbar {
     padding-right: 0 !important; }
   .pb-md-0, .navbar,
   .py-md-0 {
     padding-bottom: 0 !important; }
   .pl-md-0,
-  .px-md-0 {
+  .px-md-0,
+  .navbar {
     padding-left: 0 !important; }
   .p-md-1 {
     padding: 0.25rem !important; }
@@ -8341,32 +8343,29 @@ button.swiper-pagination-bullet {
     .navbar-brand {
       width: 300px; } }
 
-.navbar-collapse-holder {
-  margin-left: -15px;
-  margin-right: -15px;
-  width: calc(100% + 30px); }
-  .navbar-collapse-holder > .container {
-    z-index: 20; }
-    @media (min-width: 992px) {
-      .navbar-collapse-holder > .container {
-        padding-bottom: 15px;
-        padding-top: 35px; }
-        .navbar-collapse-holder > .container:before {
-          content: "";
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 80px 90px 80px;
-          border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
-          position: absolute;
-          left: -30px;
-          bottom: 0;
-          z-index: 10; } }
-  .navbar-collapse-holder .nav-link {
-    color: #ffffff; }
-    .navbar-collapse-holder .nav-link:hover, .navbar-collapse-holder .nav-link:focus {
-      color: #c6b494; }
+.navbar-collapse-holder > .container {
+  z-index: 20; }
+  @media (min-width: 992px) {
+    .navbar-collapse-holder > .container {
+      padding-bottom: 15px;
+      padding-top: 35px; }
+      .navbar-collapse-holder > .container:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 80px 90px 80px;
+        border-color: transparent transparent rgba(255, 255, 255, 0.5) transparent;
+        position: absolute;
+        left: -30px;
+        bottom: 0;
+        z-index: 10; } }
+
+.navbar-collapse-holder .nav-link {
+  color: #ffffff; }
+  .navbar-collapse-holder .nav-link:hover, .navbar-collapse-holder .nav-link:focus {
+    color: #c6b494; }
 
 /* FOOTER */
 .footer {
