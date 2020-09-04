@@ -2,6 +2,29 @@
 
 
 .footer {
-  height: 200px;
-  @include gradient-x($start-color: rgba(white, .0), $end-color: rgba(white, .5), $start-percent: 0%, $end-percent: 100%);
+    @extend .bg-black,
+    .text-white,
+    .text-center,
+    .text-md-left;
+    padding: 35px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 60px 0 25px 0;
+    }
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $link-color-mouseover;
+            text-decoration: none;
+        }
+    }
+}
+
+.footer__logo {
+    @extend .d-block,
+    .mx-auto;
+    width: 100px;
 }
