@@ -314,7 +314,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
-.lead, .home-box--sold:before, .view-all:before {
+.lead, .home-box--sold:before, .view-all:before, .homeowners-box {
   font-size: 1.25rem;
   font-weight: 300; }
 
@@ -5955,11 +5955,11 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .navbar-collapse-holder, .navbar-collapse-holder > .container, .box, .box__content, .core-box, .hero-gallery .swiper-slide, .home-box, .home-plan, .view-all {
+.position-relative, .navbar-collapse-holder, .navbar-collapse-holder > .container, .box, .box__content, .core-box, .hero-gallery .swiper-slide, .home-box, .home-plan, .view-all, .homeowners-box {
   position: relative !important; }
 
 .position-absolute, .box:before, .box__inner, .core-box:before, .hero-gallery__button-prev,
-.hero-gallery__button-next, .hero-gallery__content, .home-box--sold:before, .view-all:before {
+.hero-gallery__button-next, .hero-gallery__content, .home-box--sold:before, .view-all:before, .homeowners-box:before {
   position: absolute !important; }
 
 .position-fixed {
@@ -6045,7 +6045,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .box:hover:before, .box:active:before, .core-box:before, .hero-gallery__content, .view-all:before {
+.h-100, .box:hover:before, .box:active:before, .core-box:before, .hero-gallery__content, .view-all:before, .homeowners-box:before {
   height: 100% !important; }
 
 .h-auto {
@@ -6261,7 +6261,8 @@ button.bg-dark:focus {
   padding: 1rem !important; }
 
 .pt-3,
-.py-3 {
+.py-3,
+.homeowners-box {
   padding-top: 1rem !important; }
 
 .pr-3,
@@ -6271,7 +6272,8 @@ button.bg-dark:focus {
   padding-right: 1rem !important; }
 
 .pb-3,
-.py-3 {
+.py-3,
+.homeowners-box {
   padding-bottom: 1rem !important; }
 
 .pl-3,
@@ -6295,7 +6297,7 @@ button.bg-dark:focus {
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
-.pl-4,
+.pl-4, .homeowners-box,
 .px-4 {
   padding-left: 1.5rem !important; }
 
@@ -8313,7 +8315,7 @@ button.swiper-pagination-bullet {
 .bg-silver, .community__title {
   background-color: #dddddd !important; }
 
-.bg-gold, .core-box:before {
+.bg-gold, .core-box:before, .homeowners-box:before {
   background-color: #c6b494 !important; }
 
 .bg-muted {
@@ -8492,6 +8494,11 @@ p {
   @media (max-width: 767.98px) {
     .title, .hero-gallery__title {
       font-size: 30px; } }
+
+.title-sm {
+  font-family: "Heatwood";
+  line-height: 2.5;
+  word-break: break-all; }
 
 /* FLEX */
 /* HAS BG */
@@ -8714,3 +8721,10 @@ select.form-control {
   background: rgba(0, 0, 0, 0.25);
   left: 0;
   top: 0; }
+
+/* homeowners box */
+.homeowners-box:before {
+  content: '';
+  left: 0;
+  top: 0;
+  width: 10px; }
