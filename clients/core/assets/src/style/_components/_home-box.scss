@@ -1,0 +1,34 @@
+/* HOME BOX */
+
+.home-box {
+    @extend .position-relative,
+    .d-block,
+    .mb-4;
+
+    &--sold {
+        &:before {
+            content: 'SOLD';
+            @extend .text-uppercase,
+            .w-100,
+            .text-center,
+            .font-avenir-black,
+            .position-absolute,
+            .py-1,
+            .bg-danger,
+            .lead,
+            .text-white;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.home-box__body {
+    @extend .pt-2,
+    .text-center;
+}
+
+.home-box__title {
+    @extend .mb-0,
+    .text-muted;
+}
