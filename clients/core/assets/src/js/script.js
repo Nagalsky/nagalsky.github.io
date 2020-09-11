@@ -1,11 +1,11 @@
 //Swiper gallery
 var swiper = new Swiper(".gallery", {
   slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  }
+  loop: true
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false
+  // }
 });
 
 //Swiper hero gallery
@@ -16,11 +16,11 @@ var swiperHeroGallery = new Swiper(".hero-gallery", {
     nextEl: ".hero-gallery__button-next",
     prevEl: ".hero-gallery__button-prev"
   },
-  autoHeight: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  }
+  autoHeight: true
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false
+  // }
 });
 
 $(document).ready(function() {
@@ -40,5 +40,10 @@ $(document).ready(function() {
         }
       });
     }, 500);
+  });
+
+  $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
   });
 });
