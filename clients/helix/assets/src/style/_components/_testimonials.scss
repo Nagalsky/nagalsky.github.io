@@ -1,0 +1,74 @@
+/* TESTIMONIALS */
+
+.testimonials-holder {
+    @extend .position-relative,
+    .font-icons,
+    .helix-icon-quote-right;
+
+    &:before {
+        @extend .position-absolute,
+        .text-gray-100;
+
+        left: auto;
+        right: 15px;
+        top: 50%;
+        font-size: 100px;
+        transform: translateY(-50%);
+
+        @include media-breakpoint-up(lg) {
+            right: auto;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            font-size: 100px;
+            transform: translateY(0%);
+        }
+    }
+
+
+}
+
+.testimonials-control {
+    @extend .d-flex,
+    .align-items-center,
+    .pl-md-5,
+    .mt-4,
+    .mt-md-0;
+
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        right: 0;
+        bottom: -6px;
+        z-index: 20;
+        background-color: $white;
+    }
+}
+
+.testimonial-button-prev,
+.testimonial-button-next {
+    @extend .font-icons,
+    .text-gray-700,
+    .lead;
+    cursor: pointer;
+}
+
+.testimonial-button-prev {
+    @extend .helix-icon-arrow-left,
+    .mr-3;
+}
+
+.testimonial-button-next {
+    @extend .helix-icon-arrow-right,
+    .ml-3;
+}
+
+.testimonial-pagination {
+    @extend .mx-auto,
+    .flex-fill,
+    .text-center;
+    @extend .text-gray-700;
+
+    .swiper-pagination-current {
+        @extend .text-blue-700;
+    }
+}
