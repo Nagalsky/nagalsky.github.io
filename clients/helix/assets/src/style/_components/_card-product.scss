@@ -13,6 +13,11 @@
     padding: 64px 16px 0px 16px;
     border-top-style: solid;
     border-top-width: 6px;
+    align-items: stretch;
+
+    >* {
+        z-index: 2;
+    }
 
     @include media-breakpoint-up(md) {
         padding: 64px 24px 32px 24px;
@@ -60,10 +65,15 @@
     }
 
     @include media-breakpoint-up(md) {
-        max-width: 320px;
+        max-width: 200px;
         max-height: 200px;
         position: absolute;
         right: 0;
         bottom: 0;
+        z-index: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: 320px;
     }
 }
