@@ -1,1 +1,34 @@
 /* BUTTONS */
+
+.btn {
+    @extend .font-bold,
+    .align-items-center,
+    .justify-content-center;
+    display: inline-flex;
+    border-radius: $base-radius;
+    padding: 9px 12px;
+    border: none;
+
+    &-primary {
+        @include gradient-y($start-color: #0168ff, $end-color: #055ee0, $start-percent: 0%, $end-percent: 100%);
+
+        &:hover,
+        &:focus,
+        &:active {
+            @include gradient-y($start-color: #055ee0, $end-color: #055ee0, $start-percent: 0%, $end-percent: 100%);
+        }
+    }
+
+    &-white {
+        @include button-variants($bg: $white, $color: $blue-600);
+    }
+
+    &-md {
+        padding: 14.5px 24.5px;
+        font-size: 18px;
+    }
+}
+
+.btn-icon {
+    font-size: 140%;
+}
