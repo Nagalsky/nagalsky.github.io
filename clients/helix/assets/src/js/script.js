@@ -38,4 +38,18 @@ $(document).ready(function() {
 
   //Initial Bootstrap popover
   $('[data-toggle="popover"]').popover();
+
+  //Initial Datepicker
+  $(function() {
+    $(".datepicker").datetimepicker({
+      format: "L"
+    });
+  });
+
+  //Initial Timepicker
+  $(function() {
+    $(".timepicker").datetimepicker({
+      format: "LT"
+    });
+  });
 });

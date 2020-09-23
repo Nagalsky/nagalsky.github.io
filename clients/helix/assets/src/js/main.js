@@ -7,6 +7,12 @@
 // Import Owl
 //= ../../../node_modules/owl.carousel/dist/owl.carousel.min.js
 
+// Import moment.js
+//= ../../../node_modules/moment/min/moment.min.js
+
+// Import datetimepicker
+//= ../../../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js
