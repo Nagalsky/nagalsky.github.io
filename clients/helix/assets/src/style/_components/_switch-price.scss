@@ -1,0 +1,40 @@
+/* SWITCH PRICE */
+
+.switch-price {
+    @extend .d-flex,
+    .d-sm-inline-flex,
+    .bg-white;
+    border-radius: $base-radius;
+    padding: 2px;
+    box-shadow: 0 2px 2px 0 rgba(60, 66, 74, 0.08);
+}
+
+.switch-price__item {
+    @extend .flex-fill;
+
+    input[type="radio"] {
+        @extend .d-none;
+
+        &:checked {
+            &~.switch-price__label {
+                background-image: linear-gradient(to top, #0168ff, #055ee0);
+                @extend .text-white;
+            }
+        }
+    }
+}
+
+.switch-price__label {
+    @extend .m-0,
+    .fs-18,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center;
+    cursor: pointer;
+    padding: 4px 15px;
+    border-radius: 8px;
+
+    @include media-breakpoint-up(sm) {
+        width: 184px;
+    }
+}

@@ -23,6 +23,24 @@
         @include button-variants($bg: $white, $color: $blue-600);
     }
 
+    &-blue-outline {
+        @include button-outline-variants($color: $blue-600);
+    }
+
+    &-green-outline {
+        @include button-outline-variants($color: $green-400);
+    }
+
+    &-pink-outline {
+        @include button-outline-variants($color: $pink-400);
+    }
+
+    &-icon {
+        @extend .border-0,
+        .p-0,
+        .shadow-none;
+    }
+
     &-md {
         padding: 14.5px 24.5px;
         font-size: 18px;

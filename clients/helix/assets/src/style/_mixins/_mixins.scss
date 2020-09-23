@@ -1,26 +1,27 @@
 /* MIXINS */
 
 // Placeholder text
-@mixin custom-placeholder(
-  $color: $placeholder-color,
+@mixin custom-placeholder($color: $placeholder-color,
   $font-size: $placeholder-font-size,
-  $font-family: $placeholder-font-style
-) {
+  $font-family: $placeholder-font-style) {
   &:-moz-placeholder {
     color: $color;
     font-size: $font-size;
     font-family: $font-family;
   }
+
   &::-moz-placeholder {
     color: $color;
     font-size: $font-size;
     font-family: $font-family;
   }
+
   &:-ms-input-placeholder {
     color: $color;
     font-size: $font-size;
     font-family: $font-family;
   }
+
   &::-webkit-input-placeholder {
     color: $color;
     font-size: $font-size;
@@ -33,12 +34,15 @@
   &:-moz-placeholder {
     opacity: $opacity;
   }
+
   &::-moz-placeholder {
     opacity: $opacity;
   }
+
   &:-ms-input-placeholder {
     opacity: $opacity;
   }
+
   &::-webkit-input-placeholder {
     opacity: $opacity;
   }
@@ -49,6 +53,7 @@
   background: $bg;
   color: $color;
   border-color: $bg;
+
   &:hover,
   &:active,
   &:focus,
@@ -62,7 +67,10 @@
 @mixin button-outline-variants($color: $btn-color) {
   background: transparent;
   color: $color;
+  border-width: 2px;
+  border-style: solid;
   border-color: $color;
+
   &:hover,
   &:active,
   &:focus,

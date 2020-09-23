@@ -10,35 +10,401 @@
     //= template/navbar-with-active-state-of-the-link.html
 
     <main>
-        <section class="section text-center">
+        <section class="section">
             <div class="container">
-                <span class="label label__green mb-3">PRODUCT NAME</span>
-                <h1>
-                    Stay in control of material <br class="d-none d-lg-inline-block" />
-                    management
-                </h1>
-                <p class="fs-20 mb-5">End-to-end material co-ordination for your project:</p>
-                <div class="d-flex align-items-center justify-content-center flex-wrap mb-4">
-                    <span class="label-info"><span class="icon-box icon-box--pink mr-3"><i
-                                class="helix-icon-package"></i></span> Warehouse management</span>
-                    <span class="label-info"><span class="icon-box icon-box--yellow mr-3"><i
-                                class="helix-icon-shuffle"></i></span> Allocation handling</span>
-                    <span class="label-info"><span class="icon-box icon-box--blue mr-3"><i
-                                class="helix-icon-zap"></i></span> Requisitions</span>
+                <div class="row align-items-end">
+                    <div class="col-lg-6 col-xl-8 mb-4 mb-lg-0">
+                        <h1>Select plan that fits your needs</h1>
+                        <p class="fs-20">Select a plan below to use our system after trial ends</p>
+                    </div>
+
+                    <div class="col-lg-6 col-xl-4 d-lg-flex justify-content-lg-end">
+                        <div class="switch-price">
+                            <div class="switch-price__item">
+                                <input type="radio" id="switch-price-1" name="radio-group" checked>
+                                <label for="switch-price-1" class="switch-price__label">Yearly <span
+                                        class="badge badge-primary ml-2">SAVE 20%</span></label>
+                            </div>
+                            <div class="switch-price__item">
+                                <input type="radio" id="switch-price-2" name="radio-group">
+                                <label for="switch-price-2" class="switch-price__label">Monthly</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="btn btn-primary btn-md d-flex d-md-inline-flex">Book a demo <i
-                        class="helix-icon-chevron-right btn-icon"></i></a>
             </div>
         </section>
 
-        <section class="section section--has-gradient">
-            <div class="container">
-                olo
+        <section class="section bg-gray-100 pt-0">
+            <div class="price-tab-box">
+                <div class="container">
+                    <div class="price-tab-holder">
+                        <div class="nav price-tab" role="tablist">
+                            <a class="price-tab__link price-tab__link--orange active" id="nav-home-tab"
+                                data-toggle="tab" href="#price-tab-1" role="tab" aria-selected="true">
+                                <span class="label label__orange">PRODUCT NAME</span>
+                                <p class="price-tab__link-title mt-3">Progressively assure, plan and track</p>
+                            </a>
+
+                            <a class="price-tab__link price-tab__link--green" id="nav-profile-tab" data-toggle="tab"
+                                href="#price-tab-2" role="tab" aria-selected="false">
+                                <span class="label label__green">PRODUCT NAME</span>
+                                <p class="price-tab__link-title mt-3">End to end material management</p>
+                            </a>
+                        </div>
+
+                        <div class="tab-content price-tab__content">
+                            <div class="tab-pane price-pane-orange price-tab-pane fade show active" id="price-tab-1"
+                                role="tabpanel">
+                                <span class="label label__orange mb-3 d-md-none">PRODUCT NAME</span>
+                                <p class="fs-20 font-bold d-xl-none">Progressively assure, plan and track</p>
+
+                                <div class="row row-cols-1 row-cols-lg-3">
+                                    <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                                        <div class="price-card price-card--blue">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$6</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Basic</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-blue-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Here’s what you’ve got with Basic plan:</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Forms</div>
+                                                    <div class="price-card__list-item">Communication with context</div>
+                                                    <div class="price-card__list-item">Unlimited free viewers</div>
+                                                    <div class="price-card__list-item">iOS and Android apps</div>
+                                                    <div class="price-card__list-item">Dashboards(1 board/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                                        <div class="price-card price-card--most-popular">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$12</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Standart</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-green-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Standart plan includes all Basic features +</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Timeline & Calendar views</div>
+                                                    <div class="price-card__list-item">Share boards with guests</div>
+                                                    <div class="price-card__list-item">Advanced search</div>
+                                                    <div class="price-card__list-item">Automations (250 actions/month)
+                                                    </div>
+                                                    <div class="price-card__list-item">Integrations (250 actions/month)
+                                                    </div>
+                                                    <div class="price-card__list-item">Dashboards (3 boards/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex flex-column">
+                                        <div class="price-card price-card--pink">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$18</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Pro</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-pink-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Pro plan includes all Standart features +</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Enterprise-scale Automations &
+                                                        Integrations</div>
+                                                    <div class="price-card__list-item">Enterprise-grade security &
+                                                        governance</div>
+                                                    <div class="price-card__list-item">Advanced reporting & analytics
+                                                        <button class="btn btn-icon ml-2" type="button"
+                                                            data-container="body" data-toggle="popover"
+                                                            data-trigger="focus hover"
+                                                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i
+                                                                class="helix-icon-info fs-20 text-pink-400"></i></button>
+                                                    </div>
+                                                    <div class="price-card__list-item">Multi-level permissions</div>
+                                                    <div class="price-card__list-item">Tailored onboarding</div>
+                                                    <div class="price-card__list-item">Premium support</div>
+                                                    <div class="price-card__list-item">Dashboards (50 boards/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane price-pane-green price-tab-pane fade" id="price-tab-2" role="tabpanel">
+                                <span class="label label__green mb-3 d-md-none">PRODUCT NAME</span>
+                                <p class="fs-20 font-bold d-xl-none">End to end material management</p>
+
+                                <div class="row row-cols-1 row-cols-lg-3">
+                                    <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                                        <div class="price-card price-card--blue">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$6</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Basic</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-blue-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Here’s what you’ve got with Basic plan:</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Forms</div>
+                                                    <div class="price-card__list-item">Communication with context</div>
+                                                    <div class="price-card__list-item">Unlimited free viewers</div>
+                                                    <div class="price-card__list-item">iOS and Android apps</div>
+                                                    <div class="price-card__list-item">Dashboards(1 board/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col mb-4 mb-lg-0 d-flex flex-column">
+                                        <div class="price-card price-card--most-popular">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$12</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Standart</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-green-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Standart plan includes all Basic features +</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Timeline & Calendar views</div>
+                                                    <div class="price-card__list-item">Share boards with guests</div>
+                                                    <div class="price-card__list-item">Advanced search</div>
+                                                    <div class="price-card__list-item">Automations (250 actions/month)
+                                                    </div>
+                                                    <div class="price-card__list-item">Integrations (250 actions/month)
+                                                    </div>
+                                                    <div class="price-card__list-item">Dashboards (3 boards/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex flex-column">
+                                        <div class="price-card price-card--pink">
+                                            <div class="price-card__header">
+                                                <h4 class="price-card__price price-card__extended-color">$18</h4>
+                                                <h6 class="price-card__title price-card__extended-color">Pro</h6>
+                                                <p class="mb-3">Short description for Basic plan</p>
+                                                <a href="#" class="btn btn-pink-outline btn-md">Try for free <i
+                                                        class="helix-icon-chevron-right btn-icon"></i></a>
+                                            </div>
+
+                                            <div class="price-card__body">
+                                                <h6 class="mb-3">Pro plan includes all Standart features +</h6>
+                                                <div class="price-card__list">
+                                                    <div class="price-card__list-item">Enterprise-scale Automations &
+                                                        Integrations</div>
+                                                    <div class="price-card__list-item">Enterprise-grade security &
+                                                        governance</div>
+                                                    <div class="price-card__list-item">Advanced reporting & analytics
+                                                        <button class="btn btn-icon ml-2" type="button"
+                                                            data-container="body" data-toggle="popover"
+                                                            data-trigger="focus hover"
+                                                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i
+                                                                class="helix-icon-info fs-20 text-pink-400"></i></button>
+                                                    </div>
+                                                    <div class="price-card__list-item">Multi-level permissions</div>
+                                                    <div class="price-card__list-item">Tailored onboarding</div>
+                                                    <div class="price-card__list-item">Premium support</div>
+                                                    <div class="price-card__list-item">Dashboards (50 boards/dashboard)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-center mb-5">Frequently asked questions</h3>
+
+                    <div class="accordions" id="accordion">
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-1" aria-expanded="true">
+                                Which plan is right for me?
+                            </button>
+
+                            <div id="accordion-1" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-2" aria-expanded="false">
+                                How does our pricing work?
+                            </button>
+
+                            <div id="accordion-2" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-3" aria-expanded="false">
+                                What if I change my mind?
+                            </button>
+
+                            <div id="accordion-3" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Supercharge your process by allowing engineers to requisition materials at the touch
+                                    of a button. By linking requisitions to the latest design data you can ensure that
+                                    the materials requested match the latest design revision.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-4" aria-expanded="false">
+                                Do you offer any discounted plans?
+                            </button>
+
+                            <div id="accordion-4" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-5" aria-expanded="false">
+                                How can I manage my billing?
+                            </button>
+
+                            <div id="accordion-5" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-6" aria-expanded="false">
+                                Can I change my plan?
+                            </button>
+
+                            <div id="accordion-6" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-7" aria-expanded="false">
+                                How secure is helixrail.com?
+                            </button>
+
+                            <div id="accordion-7" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <button class="accordion__toggle collapsed" type="button" data-toggle="collapse"
+                                data-target="#accordion-8" aria-expanded="false">
+                                What payment methods do you accept?
+                            </button>
+
+                            <div id="accordion-8" class="collapse" data-parent="#accordion">
+                                <div class="accordion__body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    //= template/footer.html
+    //= template/footer-gray.html
 
     //= template/scripts-dependencies.html
 </body>

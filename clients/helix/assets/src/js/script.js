@@ -35,4 +35,7 @@ $(document).ready(function() {
       .find(".testimonial-pagination")
       .html(item + " / " + items);
   }
+
+  //Initial Bootstrap popover
+  $('[data-toggle="popover"]').popover();
 });
