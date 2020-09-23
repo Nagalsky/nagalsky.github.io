@@ -17,3 +17,21 @@
         margin-bottom: 100px;
     }
 }
+
+.blog-article__img {
+    @extend .w-100,
+    .mb-5;
+    border-radius: $base-radius;
+}
+
+.blog-article__box {
+    font-size: 18px;
+
+    &+.blog-article__box {
+        margin-top: 32px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 40px;
+        }
+    }
+}
