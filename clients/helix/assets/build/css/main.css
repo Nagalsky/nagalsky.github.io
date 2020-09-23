@@ -5213,7 +5213,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card {
+.bg-white, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card, .blog-article {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -8321,7 +8321,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-pink-700 {
   color: #674fff !important; }
 
-.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card {
+.bg-white, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card, .blog-article {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -8831,6 +8831,9 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.helix-icon-chevron-left:before {
+  content: "\e924"; }
+
 .helix-icon-rotate-cw:before {
   content: "\e923"; }
 
@@ -8936,9 +8939,6 @@ ul {
 
 .helix-icon-bell:before {
   content: "\e91e"; }
-
-.helix-icon-activity:before {
-  content: "\e91f"; }
 
 /* Fonts */
 @font-face {
@@ -9565,6 +9565,7 @@ textarea.form-control {
       padding: 24px; } }
 
 .blog-card__text-truncated {
+  width: 100%;
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9576,3 +9577,18 @@ textarea.form-control {
   -webkit-line-clamp: 3;
   /* number of lines to show */
   -webkit-box-orient: vertical; }
+
+/* BLOG ARTICLE */
+.blog-article {
+  border-radius: 10px;
+  box-shadow: 0 34px 210px 0 rgba(60, 66, 74, 0.08);
+  padding: 24px 15px;
+  margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    .blog-article {
+      padding: 40px 24px;
+      margin-bottom: 80px; } }
+  @media (min-width: 1200px) {
+    .blog-article {
+      padding: 40px 200px;
+      margin-bottom: 100px; } }
