@@ -1,0 +1,31 @@
+/* ICON CARD */
+
+$icon-card-size: 76px;
+
+.icon-card {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .mx-auto,
+    .fs-30,
+    .mb-3;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(60, 66, 74, 0.08);
+    width: $icon-card-size;
+    height: $icon-card-size;
+
+    &--orange {
+        @extend .bg-orange-100,
+        .text-orange-700;
+    }
+
+    &--red {
+        @extend .bg-red-100,
+        .text-red-700;
+    }
+
+    &--green {
+        @extend .bg-green-100,
+        .text-green-600;
+    }
+}
