@@ -1951,7 +1951,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .accordion__toggle {
+.btn, .accordion__toggle, .blog-load-more {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1971,21 +1971,22 @@ textarea.form-control {
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .accordion__toggle {
+    .btn, .accordion__toggle, .blog-load-more {
       -webkit-transition: none;
       transition: none; } }
-  .btn:hover, .accordion__toggle:hover {
+  .btn:hover, .accordion__toggle:hover, .blog-load-more:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .accordion__toggle:focus, .btn.focus, .focus.accordion__toggle {
+  .btn:focus, .accordion__toggle:focus, .blog-load-more:focus, .btn.focus, .focus.accordion__toggle, .focus.blog-load-more {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .disabled.accordion__toggle, .btn:disabled, .accordion__toggle:disabled {
+  .btn.disabled, .disabled.accordion__toggle, .disabled.blog-load-more, .btn:disabled, .accordion__toggle:disabled, .blog-load-more:disabled {
     opacity: 0.65; }
 
-a.btn.disabled, a.disabled.accordion__toggle,
+a.btn.disabled, a.disabled.accordion__toggle, a.disabled.blog-load-more,
 fieldset:disabled a.btn,
-fieldset:disabled a.accordion__toggle {
+fieldset:disabled a.accordion__toggle,
+fieldset:disabled a.blog-load-more {
   pointer-events: none; }
 
 .btn-primary {
@@ -2378,13 +2379,13 @@ fieldset:disabled a.accordion__toggle {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .accordion__toggle {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .accordion__toggle, .btn-group-lg > .blog-load-more {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .accordion__toggle {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .accordion__toggle, .btn-group-sm > .blog-load-more {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2633,23 +2634,28 @@ input[type="button"].btn-block {
   display: -webkit-inline-box;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .accordion__toggle,
+  .btn-group > .btn, .btn-group > .accordion__toggle, .btn-group > .blog-load-more,
   .btn-group-vertical > .btn,
-  .btn-group-vertical > .accordion__toggle {
+  .btn-group-vertical > .accordion__toggle,
+  .btn-group-vertical > .blog-load-more {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1 1 auto; }
-    .btn-group > .btn:hover, .btn-group > .accordion__toggle:hover,
+    .btn-group > .btn:hover, .btn-group > .accordion__toggle:hover, .btn-group > .blog-load-more:hover,
     .btn-group-vertical > .btn:hover,
-    .btn-group-vertical > .accordion__toggle:hover {
+    .btn-group-vertical > .accordion__toggle:hover,
+    .btn-group-vertical > .blog-load-more:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .accordion__toggle:focus, .btn-group > .btn:active, .btn-group > .accordion__toggle:active, .btn-group > .btn.active, .btn-group > .active.accordion__toggle,
+    .btn-group > .btn:focus, .btn-group > .accordion__toggle:focus, .btn-group > .blog-load-more:focus, .btn-group > .btn:active, .btn-group > .accordion__toggle:active, .btn-group > .blog-load-more:active, .btn-group > .btn.active, .btn-group > .active.accordion__toggle, .btn-group > .active.blog-load-more,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .accordion__toggle:focus,
+    .btn-group-vertical > .blog-load-more:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .accordion__toggle:active,
+    .btn-group-vertical > .blog-load-more:active,
     .btn-group-vertical > .btn.active,
-    .btn-group-vertical > .active.accordion__toggle {
+    .btn-group-vertical > .active.accordion__toggle,
+    .btn-group-vertical > .active.blog-load-more {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2661,19 +2667,21 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .accordion__toggle:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .accordion__toggle:not(:first-child), .btn-group > .blog-load-more:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .accordion__toggle:not(:last-child):not(.dropdown-toggle), .btn-group > .blog-load-more:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .accordion__toggle {
+.btn-group > .btn-group:not(:last-child) > .accordion__toggle,
+.btn-group > .btn-group:not(:last-child) > .blog-load-more {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .accordion__toggle:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .accordion__toggle:not(:first-child), .btn-group > .blog-load-more:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .accordion__toggle {
+.btn-group > .btn-group:not(:first-child) > .accordion__toggle,
+.btn-group > .btn-group:not(:first-child) > .blog-load-more {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2687,11 +2695,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .accordion__toggle + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .accordion__toggle + .dropdown-toggle-split, .btn-group-sm > .blog-load-more + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .accordion__toggle + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .accordion__toggle + .dropdown-toggle-split, .btn-group-lg > .blog-load-more + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2706,33 +2714,40 @@ input[type="button"].btn-block {
   
   .btn-group-vertical > .btn,
   .btn-group-vertical > .accordion__toggle,
+  .btn-group-vertical > .blog-load-more,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child), .btn-group-vertical > .blog-load-more:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .accordion__toggle:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .blog-load-more:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  .btn-group-vertical > .btn-group:not(:last-child) > .accordion__toggle {
+  .btn-group-vertical > .btn-group:not(:last-child) > .accordion__toggle,
+  .btn-group-vertical > .btn-group:not(:last-child) > .blog-load-more {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child), .btn-group-vertical > .blog-load-more:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  .btn-group-vertical > .btn-group:not(:first-child) > .accordion__toggle {
+  .btn-group-vertical > .btn-group:not(:first-child) > .accordion__toggle,
+  .btn-group-vertical > .btn-group:not(:first-child) > .blog-load-more {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .btn-group-toggle > .accordion__toggle,
+.btn-group-toggle > .btn, .btn-group-toggle > .accordion__toggle, .btn-group-toggle > .blog-load-more,
 .btn-group-toggle > .btn-group > .btn,
-.btn-group-toggle > .btn-group > .accordion__toggle {
+.btn-group-toggle > .btn-group > .accordion__toggle,
+.btn-group-toggle > .btn-group > .blog-load-more {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .accordion__toggle input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .accordion__toggle input[type="radio"], .btn-group-toggle > .blog-load-more input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .accordion__toggle input[type="checkbox"],
+  .btn-group-toggle > .blog-load-more input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .accordion__toggle input[type="radio"],
+  .btn-group-toggle > .btn-group > .blog-load-more input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .accordion__toggle input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .accordion__toggle input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .blog-load-more input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2798,30 +2813,41 @@ input[type="button"].btn-block {
 .input-group-append {
   display: -webkit-box;
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .accordion__toggle,
+  .input-group-prepend .btn, .input-group-prepend .accordion__toggle, .input-group-prepend .blog-load-more,
   .input-group-append .btn,
-  .input-group-append .accordion__toggle {
+  .input-group-append .accordion__toggle,
+  .input-group-append .blog-load-more {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .accordion__toggle:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend .accordion__toggle:focus, .input-group-prepend .blog-load-more:focus,
     .input-group-append .btn:focus,
-    .input-group-append .accordion__toggle:focus {
+    .input-group-append .accordion__toggle:focus,
+    .input-group-append .blog-load-more:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .accordion__toggle + .btn, .input-group-prepend .btn + .accordion__toggle, .input-group-prepend .accordion__toggle + .accordion__toggle,
+  .input-group-prepend .btn + .btn, .input-group-prepend .accordion__toggle + .btn, .input-group-prepend .blog-load-more + .btn, .input-group-prepend .btn + .accordion__toggle, .input-group-prepend .accordion__toggle + .accordion__toggle, .input-group-prepend .blog-load-more + .accordion__toggle, .input-group-prepend .btn + .blog-load-more, .input-group-prepend .accordion__toggle + .blog-load-more, .input-group-prepend .blog-load-more + .blog-load-more,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .accordion__toggle + .input-group-text,
+  .input-group-prepend .blog-load-more + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .input-group-text + .accordion__toggle,
+  .input-group-prepend .input-group-text + .blog-load-more,
   .input-group-append .btn + .btn,
   .input-group-append .accordion__toggle + .btn,
+  .input-group-append .blog-load-more + .btn,
   .input-group-append .btn + .accordion__toggle,
   .input-group-append .accordion__toggle + .accordion__toggle,
+  .input-group-append .blog-load-more + .accordion__toggle,
+  .input-group-append .btn + .blog-load-more,
+  .input-group-append .accordion__toggle + .blog-load-more,
+  .input-group-append .blog-load-more + .blog-load-more,
   .input-group-append .btn + .input-group-text,
   .input-group-append .accordion__toggle + .input-group-text,
+  .input-group-append .blog-load-more + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
-  .input-group-append .input-group-text + .accordion__toggle {
+  .input-group-append .input-group-text + .accordion__toggle,
+  .input-group-append .input-group-text + .blog-load-more {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2860,8 +2886,10 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-prepend > .accordion__toggle,
+.input-group-lg > .input-group-prepend > .blog-load-more,
 .input-group-lg > .input-group-append > .btn,
-.input-group-lg > .input-group-append > .accordion__toggle {
+.input-group-lg > .input-group-append > .accordion__toggle,
+.input-group-lg > .input-group-append > .blog-load-more {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2877,8 +2905,10 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-prepend > .accordion__toggle,
+.input-group-sm > .input-group-prepend > .blog-load-more,
 .input-group-sm > .input-group-append > .btn,
-.input-group-sm > .input-group-append > .accordion__toggle {
+.input-group-sm > .input-group-append > .accordion__toggle,
+.input-group-sm > .input-group-append > .blog-load-more {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2888,24 +2918,28 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .accordion__toggle,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .accordion__toggle, .input-group > .input-group-prepend > .blog-load-more,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .accordion__toggle,
+.input-group > .input-group-append:not(:last-child) > .blog-load-more,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .blog-load-more:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .accordion__toggle,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .accordion__toggle, .input-group > .input-group-append > .blog-load-more,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .accordion__toggle,
+.input-group > .input-group-prepend:not(:first-child) > .blog-load-more,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .accordion__toggle:not(:first-child),
+.input-group > .input-group-prepend:first-child > .blog-load-more:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3925,7 +3959,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .accordion__toggle .badge {
+.btn .badge, .accordion__toggle .badge, .blog-load-more .badge {
   position: relative;
   top: -1px; }
 
@@ -5179,7 +5213,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after {
+.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -5200,7 +5234,7 @@ button.bg-dark:focus {
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
 
-.border-0, .navbar-toggler, .btn-icon, .accordion__toggle {
+.border-0, .navbar-toggler, .btn-icon, .accordion__toggle, .blog-load-more {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5302,7 +5336,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navbar-brand, .navbar-nav .nav-link, .navbar-toggler, .footer__nav, .footer__nav-link, .card-product__img, .testimonials-control, .icon-card, .switch-price, .switch-price__label, .price-tab__link, .price-card, .price-card__list-item, .contact-tabs, .contact-tab__link, .checkbox-bordered__label, .checkbox__label {
+.d-flex, .navbar-brand, .navbar-nav .nav-link, .navbar-toggler, .footer__nav, .footer__nav-link, .card-product__img, .testimonials-control, .icon-card, .switch-price, .switch-price__label, .price-tab__link, .price-card, .price-card__list-item, .contact-tabs, .contact-tab__link, .checkbox-bordered__label, .checkbox__label, .blog-card__body {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5459,7 +5493,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .footer__nav, .price-tab__link, .price-card, .contact-tab__link {
+.flex-column, .footer__nav, .price-tab__link, .price-card, .contact-tab__link, .blog-card__body, .blog-load-more {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5483,7 +5517,7 @@ button.bg-dark:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill, .testimonial-pagination, .switch-price__item, .price-card {
+.flex-fill, .testimonial-pagination, .switch-price__item, .price-card, .blog-card__body {
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important; }
 
@@ -5509,7 +5543,7 @@ button.bg-dark:focus {
   -webkit-box-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .navbar-toggler, .btn, .accordion__toggle, .icon-box, .icon-card, .switch-price__label, .price-tab__link, .contact-tab__link, .contact-icon-box {
+.justify-content-center, .navbar-toggler, .btn, .accordion__toggle, .blog-load-more, .icon-box, .icon-card, .switch-price__label, .price-tab__link, .contact-tab__link, .contact-icon-box {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -5528,7 +5562,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .navbar-nav .nav-link, .navbar-toggler, .footer__nav-link, .btn, .accordion__toggle, .testimonials-control, .label-info, .icon-box, .icon-card, .switch-price__label, .price-tab__link, .price-card__list-item, .contact-icon-box, .checkbox-bordered__label, .checkbox__label {
+.align-items-center, .navbar-nav .nav-link, .navbar-toggler, .footer__nav-link, .btn, .accordion__toggle, .blog-load-more, .testimonials-control, .label-info, .icon-box, .icon-card, .switch-price__label, .price-tab__link, .price-card__list-item, .contact-icon-box, .checkbox-bordered__label, .checkbox__label {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -5980,16 +6014,16 @@ button.bg-dark:focus {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .card-product, .info-card, .price-tab-holder, .contact-holder {
+.overflow-hidden, .card-product, .info-card, .price-tab-holder, .contact-holder, .blog-card {
   overflow: hidden !important; }
 
 .position-static {
   position: static !important; }
 
-.position-relative, .navbar, .navbar-nav .nav-link, .navbar-toggler, .footer__top, .pre-footer, .pre-footer__box, .form-group--has-icon, .work-box-holder, .work-box, .card-product, .list-success__item, .testimonials-holder, .image-floated, .price-tab-box, .price-card, .accordion__toggle, .contact-box, .checkbox-bordered__label, .checkbox__label {
+.position-relative, .navbar, .navbar-nav .nav-link, .navbar-toggler, .footer__top, .pre-footer, .pre-footer__box, .form-group--has-icon, .work-box-holder, .work-box, .card-product, .list-success__item, .testimonials-holder, .image-floated, .price-tab-box, .price-card, .accordion__toggle, .contact-box, .checkbox-bordered__label, .checkbox__label, .blogs {
   position: relative !important; }
 
-.position-absolute, .navbar:before, .navbar-nav .nav-link:before, .navbar-nav .nav-link:after, .footer__top:before, .pre-footer:before, .pre-footer__box:before, .form-icon, .work-box-holder:before, .card-product__label, .list-success__item:before, .testimonials-holder:before, .image-floated:before, .price-card--most-popular:after, .accordion__toggle:before, .contact-box:before, .checkbox-bordered__label:before, .checkbox-bordered__label:after, .checkbox__label:before, .checkbox__label:after {
+.position-absolute, .navbar:before, .navbar-nav .nav-link:before, .navbar-nav .nav-link:after, .footer__top:before, .pre-footer:before, .pre-footer__box:before, .form-icon, .work-box-holder:before, .card-product__label, .list-success__item:before, .testimonials-holder:before, .image-floated:before, .price-card--most-popular:after, .accordion__toggle:before, .contact-box:before, .checkbox-bordered__label:before, .checkbox-bordered__label:after, .checkbox__label:before, .checkbox__label:after, .blogs:before {
   position: absolute !important; }
 
 .position-fixed, .navbar-overlay {
@@ -6048,7 +6082,7 @@ button.bg-dark:focus {
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
-.shadow-none, .btn-icon, .accordion__toggle {
+.shadow-none, .btn-icon, .accordion__toggle, .blog-load-more {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6060,7 +6094,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navbar:before, .navbar-overlay, .footer__top:before, .pre-footer:before, .pre-footer__box:before, .work-box-holder:before, .card-product, .list-success__item, .image-floated:before, .accordion__toggle, .contact-box:before {
+.w-100, .navbar:before, .navbar-overlay, .footer__top:before, .pre-footer:before, .pre-footer__box:before, .work-box-holder:before, .card-product, .list-success__item, .image-floated:before, .accordion__toggle, .contact-box:before, .blogs:before, .blog-card__img {
   width: 100% !important; }
 
 .w-auto {
@@ -6075,7 +6109,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .navbar-overlay, .footer__top:before, .pre-footer__box:before {
+.h-100, .navbar-overlay, .footer__top:before, .pre-footer__box:before, .blog-card__img {
   height: 100% !important; }
 
 .h-auto {
@@ -7660,7 +7694,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.accordion__toggle) {
+  a:not(.btn):not(.accordion__toggle):not(.blog-load-more) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -7913,7 +7947,7 @@ a.text-dark:hover, a.text-dark:focus {
  * Copyright 2016-2018 Jonathan Peterson
  * Licensed under MIT (https://github.com/tempusdominus/bootstrap-3/blob/master/LICENSE)
  */
-.sr-only, .bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .btn[data-action="clear"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="clear"]::after, .bootstrap-datetimepicker-widget .btn[data-action="today"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="today"]::after, .bootstrap-datetimepicker-widget .picker-switch::after, .bootstrap-datetimepicker-widget table th.prev::after, .bootstrap-datetimepicker-widget table th.next::after {
+.sr-only, .bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .btn[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .btn[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .btn[data-action="clear"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="clear"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="clear"]::after, .bootstrap-datetimepicker-widget .btn[data-action="today"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="today"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="today"]::after, .bootstrap-datetimepicker-widget .picker-switch::after, .bootstrap-datetimepicker-widget table th.prev::after, .bootstrap-datetimepicker-widget table th.next::after {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -8008,31 +8042,31 @@ a.text-dark:hover, a.text-dark:focus {
 .bootstrap-datetimepicker-widget button[data-action] {
   padding: 6px; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementHours"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="incrementHours"]::after {
   content: "Increment Hours"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementMinutes"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="incrementMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="incrementMinutes"]::after {
   content: "Increment Minutes"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementHours"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="decrementHours"]::after {
   content: "Decrement Hours"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementMinutes"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="decrementMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="decrementMinutes"]::after {
   content: "Decrement Minutes"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showHours"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showHours"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="showHours"]::after {
   content: "Show Hours"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showMinutes"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="showMinutes"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="showMinutes"]::after {
   content: "Show Minutes"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="togglePeriod"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="togglePeriod"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="togglePeriod"]::after {
   content: "Toggle AM/PM"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="clear"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="clear"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="clear"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="clear"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="clear"]::after {
   content: "Clear the picker"; }
 
-.bootstrap-datetimepicker-widget .btn[data-action="today"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="today"]::after {
+.bootstrap-datetimepicker-widget .btn[data-action="today"]::after, .bootstrap-datetimepicker-widget .accordion__toggle[data-action="today"]::after, .bootstrap-datetimepicker-widget .blog-load-more[data-action="today"]::after {
   content: "Set the date to today"; }
 
 .bootstrap-datetimepicker-widget .picker-switch {
@@ -8187,7 +8221,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-blue-500 {
   color: #3076ff !important; }
 
-.text-blue-600, .footer__link:hover, .footer__nav-link:hover, .footer__link:focus, .footer__nav-link:focus, .footer__link:active, .footer__nav-link:active, .badge-primary, .price-card--blue .price-card__extended-color, .accordion__toggle:not(.collapsed), .checkbox-bordered input[type="checkbox"]:checked ~ .checkbox-bordered__label {
+.text-blue-600, .footer__link:hover, .footer__nav-link:hover, .footer__link:focus, .footer__nav-link:focus, .footer__link:active, .footer__nav-link:active, .badge-primary, .price-card--blue .price-card__extended-color, .accordion__toggle:not(.collapsed), .checkbox-bordered input[type="checkbox"]:checked ~ .checkbox-bordered__label, .blog-load-more:hover, .blog-load-more:focus, .blog-load-more:active {
   color: #0168ff !important; }
 
 .text-blue-700, .testimonial-pagination .swiper-pagination-current, .price-tab__link.active, .contact-tab__link.active, .checkbox-bordered__label, .checkbox__label {
@@ -8254,7 +8288,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #7c7f9e !important; }
 
 .text-gray-700, .form-icon, .testimonial-button-prev,
-.testimonial-button-next, .testimonial-pagination, .price-tab__link, .price-tab__link:not(.active) .label, .contact-tab__link {
+.testimonial-button-next, .testimonial-pagination, .badge-gray, .price-tab__link, .price-tab__link:not(.active) .label, .contact-tab__link, .blog-load-more {
   color: #6d6f87 !important; }
 
 .text-red-100 {
@@ -8287,7 +8321,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-pink-700 {
   color: #674fff !important; }
 
-.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after {
+.bg-white, .navbar, .pre-footer:before, .work-box-holder:before, .card-product, .info-card, .image-floated:before, .switch-price, .badge-primary, .price-tab__link, .accordion, .contact-box:before, .contact-holder, .contact-tab__link.active, .checkbox-bordered__label, .checkbox-bordered__label:after, .checkbox__label, .checkbox__label:after, .blogs:before, .blog-card {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -8359,7 +8393,7 @@ a.text-dark:hover, a.text-dark:focus {
 .bg-gray-100, .footer--gray .pre-footer:before, .price-card, .contact-tab__link {
   background-color: #f8f9fb !important; }
 
-.bg-gray-200, .price-tab__link:not(.active) .label, .contact-icon-box {
+.bg-gray-200, .badge-gray, .price-tab__link:not(.active) .label, .contact-icon-box {
   background-color: #e9eaee !important; }
 
 .bg-gray-300 {
@@ -8413,7 +8447,7 @@ a.text-dark:hover, a.text-dark:focus {
 .font-medium, label {
   font-family: "Circular-Std-Medium"; }
 
-.font-bold, .navbar-nav .nav-link, .btn, .accordion__toggle, .card-product__label, .list-success__item, .label, .label-info, .switch-price__label, .price-tab__link.active .price-tab__link-title, .price-card--most-popular:after, .price-card__price, .price-card__title, .contact-tab__link.active, .checkbox-bordered input[type="checkbox"]:checked ~ .checkbox-bordered__label {
+.font-bold, .navbar-nav .nav-link, .btn, .accordion__toggle, .blog-load-more, .card-product__label, .list-success__item, .label, .label-info, .switch-price__label, .price-tab__link.active .price-tab__link-title, .price-card--most-popular:after, .price-card__price, .price-card__title, .contact-tab__link.active, .checkbox-bordered input[type="checkbox"]:checked ~ .checkbox-bordered__label {
   font-family: "Circular-Std-Bold"; }
 
 .font-icons:before, .navbar-nav .nav-link:before, .navbar-toggler:before, .list-success__item:before, .testimonials-holder:before, .testimonial-button-prev:before,
@@ -8797,6 +8831,9 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.helix-icon-rotate-cw:before {
+  content: "\e923"; }
+
 .helix-icon-check:before, .checkbox-bordered__label:before, .checkbox__label:before {
   content: "\e922"; }
 
@@ -8978,7 +9015,7 @@ textarea.form-control {
   height: 104px; }
 
 /* BUTTONS */
-.btn, .accordion__toggle {
+.btn, .accordion__toggle, .blog-load-more {
   display: -webkit-inline-box;
   display: inline-flex;
   border-radius: 10px;
@@ -9495,3 +9532,47 @@ textarea.form-control {
     height: 24px;
     border-radius: 6px;
     border: solid 1px #d3d6dd; }
+
+/* BLOG CARD */
+.blogs {
+  z-index: 20; }
+  .blogs:before {
+    content: '';
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 190px; }
+    @media (min-width: 768px) {
+      .blogs:before {
+        height: 220px; } }
+    @media (min-width: 1200px) {
+      .blogs:before {
+        height: 240px; } }
+
+.blog-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(60, 66, 74, 0.08);
+  margin-bottom: 24px; }
+
+.blog-card__img {
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.blog-card__body {
+  padding: 15px; }
+  @media (min-width: 768px) {
+    .blog-card__body {
+      padding: 24px; } }
+
+.blog-card__text-truncated {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;
+  /* fallback */
+  max-height: 72px;
+  /* fallback */
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical; }
