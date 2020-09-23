@@ -1,7 +1,8 @@
 /* INFO CARD */
 
 .info-card {
-    @extend .overflow-hidden;
+    @extend .overflow-hidden,
+    .bg-white;
     box-shadow: 0 34px 210px 0 rgba(60, 66, 74, 0.08);
     border-radius: $base-radius;
     margin-bottom: 48px;
@@ -12,6 +13,11 @@
 
     @include media-breakpoint-up(lg) {
         margin-bottom: 100px;
+    }
+
+    &--square {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
