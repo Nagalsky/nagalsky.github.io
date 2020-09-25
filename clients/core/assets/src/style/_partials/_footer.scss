@@ -23,8 +23,20 @@
     }
 }
 
+.footer__logos {
+    @extend .d-flex,
+    .ml-md-4,
+    .mt-3,
+    .mt-md-0;
+}
+
 .footer__logo {
     @extend .d-block,
-    .mx-auto;
-    width: 100px;
+    .mx-auto,
+    .w-100;
+    max-width: 80px;
+
+    &+.footer__logo {
+        @extend .ml-3;
+    }
 }
