@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -6026,7 +6027,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navigation__logo, .navigation__overlay {
+.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay {
   width: 100% !important; }
 
 .w-auto {
@@ -7816,6 +7817,11 @@ a.text-dark:hover, a.text-dark:focus {
 .navigation__logo {
   max-width: 216px;
   margin-bottom: 30px; }
+  .navigation__logo svg {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=‘0’); }
 
 .navigation__overlay {
   left: 0;
