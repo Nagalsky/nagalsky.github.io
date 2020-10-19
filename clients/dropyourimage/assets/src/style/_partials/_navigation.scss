@@ -1,0 +1,81 @@
+/* NAVIGATION */
+
+.navigation {
+    @extend .position-fixed,
+    .h-100,
+    .overflow-auto,
+    .text-white,
+    .d-flex,
+    .flex-column;
+    width: 80%;
+    background-color: $navigation-bg;
+    @include transition($base-animation);
+    padding: 15px;
+    transform: translateX(-100%);
+    z-index: 80;
+    left: 0;
+    top: 0;
+
+    &--is-opened {
+        transform: translateX(0%);
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: $navigation-width;
+        transform: translateX(0%);
+        padding: 38px;
+    }
+}
+
+.navigation__logo {
+    @extend .d-block,
+    .w-100;
+    max-width: 216px;
+    margin-bottom: 30px;
+}
+
+.navigation__overlay {
+    @extend .d-lg-none,
+    .position-fixed,
+    .w-100,
+    .h-100;
+    left: 0;
+    top: 0;
+    z-index: 60;
+    background-color: rgba($navigation-bg, .55);
+    opacity: 0;
+    visibility: hidden;
+    @include transition($base-animation);
+    cursor: pointer;
+
+    &--is-opened {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.navigation-nav {
+    @extend .d-flex,
+    .flex-column,
+    .mb-4,
+    .flex-shrink-0;
+}
+
+.navigation-nav__item {
+    @extend .text-white,
+    .d-flex,
+    .align-items-center,
+    .fs-16,
+    .font-opensans-semibold;
+    padding: 14px 15px;
+    border-radius: $base-radius;
+
+    &.active,
+    &:hover {
+        @extend .bg-blue100;
+    }
+}
+
+.navigation-nav__icon {
+    @extend .mr-3;
+}
