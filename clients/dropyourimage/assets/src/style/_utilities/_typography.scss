@@ -10,6 +10,35 @@ body {
   background-color: $body-bg;
 }
 
+/* The new <main> is not styled in the UA stylesheet for IE10, so we need to set it to display block */
+main {
+  display: block;
+}
+
+.flexboxtweener,
+.flexboxtweener>body {
+  height: 100%;
+}
+
+body {
+  @extend .d-flex,
+  .flex-column;
+  min-height: 100vh;
+}
+
+
+.main {
+  @extend .d-flex,
+  .flex-column,
+  .flex-fill;
+
+  >.container-fluid {
+    @extend .d-flex,
+    .flex-column,
+    .flex-fill;
+  }
+}
+
 h1,
 h2,
 h3,

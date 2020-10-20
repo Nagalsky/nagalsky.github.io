@@ -1,0 +1,41 @@
+/* TOOLTIP */
+
+.tooltip {
+    font-family: inherit;
+
+    &.bs-tooltip-top {
+        .arrow {
+            &:before {
+                border-top-color: $blue200;
+            }
+        }
+    }
+
+    &.bs-tooltip-bottom {
+        .arrow {
+            &:before {
+                border-bottom-color: $blue200;
+            }
+        }
+    }
+
+    &.bs-tooltip-right {
+        .arrow {
+            &:before {
+                border-right-color: $blue200;
+            }
+        }
+    }
+
+    &.bs-tooltip-left {
+        .arrow {
+            &:before {
+                border-left-color: $blue200;
+            }
+        }
+    }
+}
+
+.tooltip-inner {
+    @extend .bg-blue200;
+}

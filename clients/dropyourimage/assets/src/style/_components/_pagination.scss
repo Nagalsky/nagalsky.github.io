@@ -1,0 +1,34 @@
+/* PAGINATION */
+
+.pagination {}
+
+.page-item {
+    @extend .text-gray700;
+    align-self: baseline;
+
+    &:first-child,
+    &:last-child,
+    &.active {
+        .page-link {
+            @extend .font-opensans-bold,
+            .text-blue200;
+        }
+    }
+
+    &:first-child {
+        @extend .mr-2,
+        .mr-md-4;
+    }
+
+    &:last-child {
+        @extend .ml-2,
+        .ml-md-4;
+    }
+}
+
+.page-link {
+    @extend .border-0,
+    .bg-transparent,
+    .text-gray700;
+    border-radius: 0 !important;
+}

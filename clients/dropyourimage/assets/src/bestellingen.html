@@ -18,351 +18,271 @@
                 </button>
             </div>
             
-            <div class="d-flex flex-column flex-md-row align-items-center heading">
+            <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center heading">
                 <h1 class="mb-md-0 mr-md-5">Bestellingen</h1>
                 <a href="#" class="btn btn-success btn-lg font-segoeui-semibold">Order aanmaken</a>
             </div>
+
+            <div class="d-md-flex align-items-md-center justify-content-md-between mb-4">
+                <div class="d-flex flex-wrap flex-shrink-0 mb-4 mb-md-0">
+                    <button type="button" class="btn btn-primary btn-sm mr-2 mb-2">Alle</button>
+                    <button type="button" class="btn btn-link btn-sm mr-2 mb-2">Te betalen</button>
+                    <button type="button" class="btn btn-link btn-sm mr-2 mb-2">Afgerond</button>
+                </div>
+
+                <form class="form-serch">
+                    <i class="form-serch__icon icon-search"></i>
+                    <input type="search" class="form-control" placeholder="Zoeken...">
+                </form>
+            </div>
             
 
-            <div class="row mb-5">
-                <div class="col-xl-8 mb-4 mb-xl-0">
-                    <h3>Recente bestellingen</h3>
+            <table data-toggle="table" data-classes="table bootstrap-table">
+                <thead>
+                    <tr>
+                        <th data-field="naam">Naam</th>
+                        <th data-field="aantal">Aantal</th>
+                        <th data-field="prijs-totaal">Prijs totaal</th>
+                        <th data-field="datum-besteld">Datum besteld</th>
+                        <th data-field="upload">Upload</th>
+                        <th data-field="specificatie">Specificatie</th>
+                        <th data-field="status">
+                            Status
+                            <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
+                                data-toggle="popover" 
+                                data-container="body" 
+                                data-placement="auto"
+                                data-trigger="focus hover"
+                                title="Waarom is en KvK-nummer verplicht?" 
+                                data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
+                                >
+                                <i class="icon-information-solid"></i>
+                            </button>
+                        </th>
+                        <th data-field="acties" data-halign="right" data-align="right">
+                            Acties
+                            <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
+                                data-toggle="popover" 
+                                data-container="body" 
+                                data-placement="auto"
+                                data-trigger="focus hover"
+                                title="Waarom is en KvK-nummer verplicht?" 
+                                data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
+                                >
+                                <i class="icon-information-solid"></i>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
 
-                    <table data-toggle="table" data-classes="table bootstrap-table">
-                        <thead>
-                            <tr>
-                                <th data-field="naam">Naam</th>
-                                <th data-field="aantal">Aantal</th>
-                                <th data-field="prijs-totaal">Prijs totaal</th>
-                                <th data-field="datum-besteld">Datum besteld</th>
-                                <th data-field="status">
-                                    Status
-                                    <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
-                                        data-toggle="popover" 
-                                        data-container="body" 
-                                        data-placement="auto"
-                                        data-trigger="focus hover"
-                                        title="Waarom is en KvK-nummer verplicht?" 
-                                        data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
-                                        >
-                                        <i class="icon-information-solid"></i>
-                                    </button>
-                                </th>
-                                <th data-field="acties" data-halign="left" data-align="right">
-                                    Acties
-                                    <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
-                                        data-toggle="popover" 
-                                        data-container="body" 
-                                        data-placement="auto"
-                                        data-trigger="focus hover"
-                                        title="Waarom is en KvK-nummer verplicht?" 
-                                        data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
-                                        >
-                                        <i class="icon-information-solid"></i>
-                                    </button>
-                                </th>
-                            </tr>
-                        </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-block btn-table">Te betalen</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-delete"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                        <tbody>
-                            <tr>
-                                <td>
-                                    Appeltaart
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-warning btn-block btn-table">Te betalen</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-delete"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-muted btn-block btn-table">In uitvoering</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>
-                                    Appeltaart
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-muted btn-block btn-table">In uitvoering</a>
-                                </td>
-                                <td></td>
-                            </tr>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>
-                                    Appeltaart
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
-                                </td>
-                                <td></td>
-                            </tr>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>
-                                    Appeltaart
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
-                                </td>
-                                <td></td>
-                            </tr>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                            <tr>
-                                <td>
-                                    Appeltaart
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <tr>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Afgerond</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                    <div class="text-right">
-                        <a href="#" class="btn btn-link font-opensans-bold fs-14">
-                            Naar bestellingen <i class="icon-arrow-right ml-2 fs-18"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xl-4">
-                    <h3>Statistieken</h3>
-
-                    <div class="box">
-                        <div id="chart-bar"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-8 mb-4 mb-xl-0">
-                    <h3>Recente facturen</h3>
-
-                    <table data-toggle="table" data-classes="table bootstrap-table">
-                        <thead>
-                            <tr>
-                                <th data-field="factuurnummer">Factuurnummer</th>
-                                <th data-field="aantal">Aantal</th>
-                                <th data-field="prijs-totaal">Prijs totaal</th>
-                                <th data-field="datum-besteld">Datum besteld</th>
-                                <th data-field="status">
-                                    Status
-                                    <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
-                                        data-toggle="popover" 
-                                        data-container="body" 
-                                        data-placement="auto"
-                                        data-trigger="focus hover"
-                                        title="Waarom is en KvK-nummer verplicht?" 
-                                        data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
-                                        >
-                                        <i class="icon-information-solid"></i>
-                                    </button>
-                                </th>
-                                <th data-field="acties" data-halign="left" data-align="right">
-                                    Acties
-                                    <button type="button" class="btn btn-icon fs-16 p-0 ml-2" 
-                                        data-toggle="popover" 
-                                        data-container="body" 
-                                        data-placement="auto"
-                                        data-trigger="focus hover"
-                                        title="Waarom is en KvK-nummer verplicht?" 
-                                        data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
-                                        >
-                                        <i class="icon-information-solid"></i>
-                                    </button>
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    #1231241
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-download"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    #1231241
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-download"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    #1231241
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-download"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    #1231241
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-download"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    #1231241
-                                </td>
-                                <td>
-                                    100
-                                </td>
-                                <td>
-                                    €200,00
-                                </td>
-                                <td>
-                                    22/08/2020
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="icon-download"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="text-right">
-                        <a href="#" class="btn btn-link font-opensans-bold fs-14">
-                            Naar facturen <i class="icon-arrow-right ml-2 fs-18"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xl-4">
-                    <h3>Vragen of feedback</h3>
-
-                    <div class="feedback-boxes">
-                        <div class="feedback-box">
-                            <i class="feedback-box__icon icon-headphones-human"></i>
-                            <p>Komt u er niet uit? Bekijk de veelgestelde vragen of neem direct contact met ons op.</p>
-                            <a href="#" class="btn btn-primary btn-block font-segoeui-semibold fs-14 mt-auto text-nowrap" data-toggle="modal" data-target="#modal-сlaim-uw-gratis-afbeeldingen">Naar contact <i class="icon-arrow-right ml-2 fs-18"></i></a>
-                        </div>
-                        <div class="feedback-box">
-                            <i class="feedback-box__icon icon-medical-personnel-doctor"></i>
-                            <p>Feedback? Graag horen wij wat wij kunnen verbeteren aan onze service.</p>
-                            <a href="#" class="btn btn-primary btn-block font-segoeui-semibold fs-14 mt-auto text-nowrap" data-toggle="modal" data-target="#modal-feedback">Geef feedback <i class="icon-launch ml-2 fs-18"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Vorige</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">...</li>
+                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Volgende</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </main>

@@ -1,0 +1,24 @@
+/* SEARCH FORM */
+
+.form-serch {
+    @extend .d-flex,
+    .align-items-center;
+
+    .form-control {
+        height: 39px;
+        @include custom-placeholder($color: #c4c4c4,
+            $font-size: 14px,
+            $font-family: $field-placeholder-font);
+
+        @media (min-width: 1400px) {
+            min-width: 410px;
+        }
+    }
+}
+
+.form-serch__icon {
+    @extend .flex-shrink-0,
+    .fs-24,
+    .text-blue200,
+    .mr-4;
+}
