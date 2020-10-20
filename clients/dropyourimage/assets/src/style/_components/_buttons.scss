@@ -3,14 +3,61 @@
 .btn {
     border-radius: $base-radius;
     font-size: 12px;
+    font-family: $opensans-semibold;
+    padding: 7px 13px;
+    min-height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &-success {
         @include button-variants($bg: $green100, $color: $white);
     }
 
+    &-warning {
+        @include button-variants($bg: $warning, $color: $black100);
+    }
+
+    &-muted {
+        @include button-variants($bg: $gray200, $color: $black100);
+    }
+
+    &-success-secondary {
+        @include button-variants($bg: $green200, $color: $black100);
+    }
+
+    &-primary {
+        @include button-variants($bg: $blue200, $color: $white);
+    }
+
+    &-primary-outline {
+        @include button-outline-variants($color: $blue200);
+    }
+
+    &-link {
+        color: $blue200;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: darken($blue200, 10%);
+            text-decoration: none;
+        }
+    }
+
+    &-icon {
+        @extend .border-0,
+        .shadow-none,
+        .bg-transparent,
+        .py-0;
+        font-size: 28px;
+    }
+
     &-lg {
-        font-size: 14px;
-        padding: 13px 20px;
+        @include media-breakpoint-up(sm) {
+            font-size: 14px;
+            padding: 13px 40px;
+        }
     }
 
     &-block {

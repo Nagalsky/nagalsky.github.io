@@ -4,6 +4,15 @@
 // Import Popper
 //= ../../../node_modules/popper.js/dist/umd/popper.js
 
+// Apexcharts
+//= ../../../node_modules/apexcharts/dist/apexcharts.min.js
+
+// Bootstrap datatable
+//= ../../../node_modules/bootstrap-table/dist/bootstrap-table.min.js
+
+// Bootstrap select
+//= ../../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js

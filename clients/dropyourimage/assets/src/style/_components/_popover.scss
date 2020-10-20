@@ -1,0 +1,62 @@
+/* POPOVER */
+
+.popover {
+    @extend .border-0,
+    .shadow;
+    font-family: inherit;
+    border-radius: $base-radius;
+
+    // &.bs-popover-bottom {
+    //     .arrow {
+    //         top: -2px
+    //     }
+    // }
+
+    .popover-header,
+    .popover-body {
+        @extend .bg-white,
+        .position-relative;
+        z-index: 20;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+    }
+
+    .popover-header {
+        @extend .border-0;
+
+        &:before {
+            content: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+    }
+
+    .popover-body {
+        @extend .text-black200;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .arrow {
+        // width: 26px !important;
+        // height: 26px !important;
+        // @extend .bg-white,
+        // .shadow;
+        // border-radius: 4px;
+        // transform: rotate(45deg);
+        // z-index: -1;
+
+        &:before {
+            content: none !important
+        }
+    }
+}

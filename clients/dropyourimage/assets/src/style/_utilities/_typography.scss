@@ -34,7 +34,11 @@ h6,
 
 h1,
 .h1 {
-  font-size: 50px;
+  font-size: 42px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 50px;
+  }
 }
 
 h2,
@@ -49,7 +53,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 h5,
@@ -84,5 +88,13 @@ p {
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.heading {
+  margin-bottom: 35px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 70px;
   }
 }

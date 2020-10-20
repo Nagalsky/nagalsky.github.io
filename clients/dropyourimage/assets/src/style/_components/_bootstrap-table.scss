@@ -1,0 +1,72 @@
+/* BOOTSTRAP TABLE */
+
+$table-primary-border-color: $body-bg;
+
+.bootstrap-table {
+    >thead {
+        >tr {
+
+            >td {
+                @extend .font-opensans-bold;
+            }
+
+            >th,
+            td {
+                @extend .border-0;
+
+                .btn-icon {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+
+    >thead,
+    >tbody {
+        >tr {
+
+            >th,
+            td {
+                padding: 6px 36px;
+
+                &:last-child {
+                    padding-right: 16px;
+
+                    .th-inner {
+                        padding: 18px 16px 18px 36px !important;
+                    }
+                }
+
+                .th-inner {
+                    padding: 18px 36px 18px 36px !important;
+                }
+            }
+        }
+    }
+
+    >tbody {
+        >tr {
+            &:first-child {
+
+                >th,
+                td {
+                    border-top: none;
+                }
+            }
+
+            >th,
+            td {
+                @extend .bg-white;
+                border-color: $table-primary-border-color;
+                border-width: 3px;
+            }
+        }
+    }
+
+    .btn-table {
+        @extend .px-1,
+        .text-nowrap,
+        .w-100;
+        max-width: 90px;
+    }
+}
