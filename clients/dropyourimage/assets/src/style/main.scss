@@ -1,3 +1,17 @@
+//Add custom breakpoint for the Bootstrap grid
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1700px);
+
+$container-max-widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1640px);
+
 @import "../../../node_modules/bootstrap/scss/_functions";
 @import "../../../node_modules/bootstrap/scss/_variables";
 @import "../../../node_modules/bootstrap/scss/_mixins";
@@ -38,6 +52,7 @@
 @import "../../../node_modules/apexcharts/dist/apexcharts";
 @import "../../../node_modules/bootstrap-table/dist/bootstrap-table.min";
 @import "../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min";
+@import "../../../node_modules/simplebar/dist/simplebar.min";
 @import "./_mixins/mixins";
 @import "./_variables/variables";
 @import "./_partials/navbar";
@@ -70,3 +85,6 @@
 @import "./_components/form-serch";
 @import "./_components/tooltip";
 @import "./_components/pagination";
+@import "./_components/details";
+@import "./_components/product";
+@import "./_components/simplebar";

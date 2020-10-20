@@ -1,0 +1,22 @@
+/* DETAILS */
+
+.details {
+    margin-bottom: 1rem;
+}
+
+.detail {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-between,
+    .flex-wrap;
+
+    &+.detail {
+        @extend .mt-3;
+    }
+}
+
+.detail__title {
+    @extend .flex-shrink-0,
+    .font-opensans-semibold,
+    .mr-3;
+}

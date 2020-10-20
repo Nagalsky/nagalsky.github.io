@@ -26,4 +26,8 @@ $(document).ready(function() {
   $(function() {
     $('[data-toggle="tooltip"]').tooltip();
   });
+
+  //Olol
+  // var divHeight = $("[data-product-height]").height();
+  // $(".products-holder").css("max-height", divHeight + "px");
 });

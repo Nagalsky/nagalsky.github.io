@@ -1,0 +1,45 @@
+/* PRODUCT */
+
+.products-holder {
+    @include media-breakpoint-up(xl) {
+        max-height: calc(100vh - 345px);
+    }
+}
+
+.products {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        grid-gap: 34px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.product {
+    @extend .position-relative;
+}
+
+.product__inner {
+    @extend .d-block,
+    .mb-1;
+}
+
+.product__description {
+    @extend .fs-12,
+    .font-opensans-semibold;
+}

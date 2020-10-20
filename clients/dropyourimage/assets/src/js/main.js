@@ -13,6 +13,9 @@
 // Bootstrap select
 //= ../../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js
 
+// Simplebar custom scrollbar
+//= ../../../node_modules/simplebar/dist/simplebar.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js
