@@ -10,17 +10,19 @@
 
     <main class="main">
         <div class="container-fluid">
-            <div class="d-flex align-items-center mb-1">
-                <a href="#" class="font-opensans-bold d-inline-flex align-items-center ml-auto">Uitloggen <i class="icon-login fs-18 ml-1"></i></a>
+            <div class="heading" data-get-heading-height>
+                <div class="d-flex align-items-center mb-1">
+                    <a href="#" class="font-opensans-bold d-inline-flex align-items-center ml-auto">Uitloggen <i class="icon-login fs-18 ml-1"></i></a>
 
-                <button type="button" class="navigation__toggle">
-                    <i class="icon-menu"></i>
-                </button>
-            </div>
-            
-            <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center heading">
-                <h1 class="mb-md-0 mr-md-5">Naam bestelling</h1>
-                <a href="#" class="btn btn-success-secondary btn-long">Afgerond</a>
+                    <button type="button" class="navigation__toggle">
+                        <i class="icon-menu"></i>
+                    </button>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                    <h1 class="mb-md-0 mr-md-5">Naam bestelling</h1>
+                    <a href="#" class="btn btn-success-secondary btn-long">Afgerond</a>
+                </div>
             </div>
             
             <div class="row">
@@ -28,10 +30,10 @@
                     <div class="box">
                         <div class="d-flex flex-wrap mb-4">
                             <button type="submit" class="btn btn-primary-outline font-segoeui-semibold fs-14"><i class="icon-desktop-monitor-download mr-2 fs-18"></i> Download input</button>
-                            <button type="submit" class="btn btn-primary font-segoeui-semibold fs-14 ml-2"><i class="icon-desktop-monitor-download mr-2 fs-18"></i> Download output</button>
+                            <button type="submit" class="btn btn-primary font-segoeui-semibold fs-14 ml-2" data-toggle="modal" data-target="#modal-download-output"><i class="icon-desktop-monitor-download mr-2 fs-18"></i> Download output</button>
                         </div>
                         
-                        <div class="products-holder" data-simplebar>
+                        <div class="products-holder" data-simplebar data-set-product-height>
                             <div class="products">
                                 <div class="product">
                                     <a href="#" class="product__inner">

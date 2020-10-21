@@ -18516,7 +18516,9 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
   });
 
-  //Olol
-  // var divHeight = $("[data-product-height]").height();
-  // $(".products-holder").css("max-height", divHeight + "px");
+  //Get height of the page and set it to product box(for custom vertical scrollbar)
+  $(function() {
+    var divHeight = $("[data-get-heading-height]").height();
+    $("[data-set-product-height]").css({ maxHeight: "calc(100vh - 260px - " + divHeight + "px)" });
+  });
 });
