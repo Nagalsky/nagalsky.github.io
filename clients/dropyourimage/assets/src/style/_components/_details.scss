@@ -1,14 +1,15 @@
 /* DETAILS */
 
 .details {
-    margin-bottom: 1rem;
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 }
 
 .detail {
     @extend .d-flex,
     .align-items-center,
-    .justify-content-between,
-    .flex-wrap;
+    .justify-content-between;
 
     &+.detail {
         @extend .mt-3;
@@ -19,4 +20,8 @@
     @extend .flex-shrink-0,
     .font-opensans-semibold,
     .mr-3;
+}
+
+.detail__value {
+    @extend .text-truncate;
 }
