@@ -1,6 +1,8 @@
 /* BOOTSTRAP TABLE */
 
 $table-primary-border-color: $body-bg;
+$table-checkbox-size: 20px;
+$table-checkbox-sm-size: 16px;
 
 .bootstrap-table {
     @extend .mb-4;
@@ -70,5 +72,69 @@ $table-primary-border-color: $body-bg;
         .text-nowrap,
         .w-100;
         max-width: 90px;
+    }
+
+    .bs-checkbox {
+        label {
+            line-height: 1;
+
+            [type="checkbox"] {
+                position: absolute;
+                left: -9999px;
+                opacity: 0;
+                visibility: hidden;
+
+                &:checked {
+                    &+span {
+                        &:before {
+                            background-color: $blue200;
+                            border-color: $blue200;
+                        }
+
+                        &:after {
+                            transform: scale(1) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+
+            span {
+                @extend .position-relative,
+                .m-0,
+                .fs-16,
+                .font-opensans-semibold,
+                .text-black200,
+                .d-block;
+                padding-left: $table-checkbox-sm-size+16px;
+                cursor: pointer;
+                min-height: $table-checkbox-sm-size;
+
+                &:before,
+                &:after {
+                    content: '';
+                    @extend .position-absolute;
+                }
+
+                &:before {
+                    left: 0;
+                    top: 1px;
+                    width: $table-checkbox-sm-size;
+                    height: $table-checkbox-sm-size;
+                    border: 1px solid $gray500;
+                    border-radius: $base-radius;
+                }
+
+                &:after {
+                    left: 4px;
+                    top: 5px;
+                    width: $table-checkbox-sm-size - 8px;
+                    height: $table-checkbox-sm-size / 3;
+                    @include transition($base-animation);
+                    transform: scale(0) rotate(-45deg);
+                    border-bottom: 1px solid $white;
+                    border-left: 1px solid $white;
+                }
+            }
+        }
     }
 }
