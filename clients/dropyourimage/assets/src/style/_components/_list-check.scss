@@ -1,0 +1,27 @@
+/* LIST SUCCESS */
+
+.list-check {
+    &--success {
+        .list-check__item {
+            &:before {
+                @extend .text-green100;
+            }
+        }
+    }
+}
+
+.list-check__item {
+    @extend .icon-check,
+    .font-icons,
+    .d-flex,
+    .align-items-center;
+
+    &:before {
+        @extend .mr-2,
+        .fs-18;
+    }
+
+    &+.list-check__item {
+        margin-top: 4px;
+    }
+}

@@ -2,6 +2,7 @@
 
 $field-border-color: #b5b5b5;
 $field-height: 49px;
+$field-sm-height: 37px;
 $field-placeholder-font-size: 16px;
 $field-placeholder-font: $opensans-regular;
 
@@ -11,10 +12,21 @@ $field-placeholder-font: $opensans-regular;
 	-moz-appearance: none;
 	border-color: $field-border-color;
 	height: $field-height;
+	font-size: $field-placeholder-font-size;
 	@extend .px-4;
 	@include custom-placeholder($color: $black200,
 		$font-size: $field-placeholder-font-size,
 		$font-family: $field-placeholder-font);
+
+	&--placeholder-gray {
+		@include custom-placeholder($color: $gray75,
+			$font-size: $field-placeholder-font-size,
+			$font-family: $field-placeholder-font);
+	}
+
+	&.form-control--sm {
+		height: $field-sm-height;
+	}
 }
 
 
@@ -33,4 +45,22 @@ textarea.form-control {
 label {
 	font-size: 16px;
 	font-family: $opensans-semibold;
+}
+
+.form-control-label-box {
+	@extend .position-relative;
+
+	.form-control {
+		padding-right: 45px !important;
+	}
+
+	.form-control-label {
+		@extend .position-absolute,
+		.text-black200,
+		.font-opensans-semibold,
+		.fs-16;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+	}
 }

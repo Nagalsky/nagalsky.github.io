@@ -1,0 +1,25 @@
+/* UPLOADED IMAGE BOX */
+
+$uploaded-image-box-size: 114px;
+
+.uploaded-image-box {
+    @extend .position-relative,
+    .overflow-hidden,
+    .base-radius,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center;
+    height: $uploaded-image-box-size;
+    width: $uploaded-image-box-size;
+    border: 1px solid $gray;
+}
+
+.uploaded-image-box__remove {
+    @extend .btn-icon,
+    .position-absolute,
+    .p-0;
+    z-index: 1;
+    top: 1px;
+    right: 1px;
+    line-height: 1;
+}

@@ -45,8 +45,94 @@ $(document).ready(function() {
     });
   });
 
+  //Get height of the page and set it to collapse box(for custom vertical scrollbar)
   $(function() {
     var divHeight = $("[data-get-heading-height]").height();
     $("[data-set-box-collapse-height]").css({ maxHeight: "calc(100vh - 188px - " + divHeight + "px)" });
+  });
+
+  //Bootstrap colorpickers
+  $(function() {
+    $("#colorpicker")
+      .colorpicker({
+        inline: true,
+        container: true,
+        extensions: [
+          {
+            name: "swatches",
+            options: {
+              colors: {
+                tetrad1: "#000",
+                tetrad2: "#000",
+                tetrad3: "#000",
+                tetrad4: "#000"
+              },
+              namesAsValues: false
+            }
+          }
+        ]
+      })
+      .on("colorpickerChange colorpickerCreate", function(e) {
+        var colors = e.color.generate("tetrad");
+
+        colors.forEach(function(color, i) {
+          var colorStr = color.string(),
+            swatch = e.colorpicker.picker.find('.colorpicker-swatch[data-name="tetrad' + (i + 1) + '"]');
+
+          swatch
+            .attr("data-value", colorStr)
+            .attr("title", colorStr)
+            .find("> i")
+            .css("background-color", colorStr);
+        });
+      });
+
+    $("#colorpicker2")
+      .colorpicker({
+        inline: true,
+        container: true,
+        extensions: [
+          {
+            name: "swatches",
+            options: {
+              colors: {
+                tetrad1: "#000",
+                tetrad2: "#000",
+                tetrad3: "#000",
+                tetrad4: "#000"
+              },
+              namesAsValues: false
+            }
+          }
+        ]
+      })
+      .on("colorpickerChange colorpickerCreate", function(e) {
+        var colors = e.color.generate("tetrad");
+
+        colors.forEach(function(color, i) {
+          var colorStr = color.string(),
+            swatch = e.colorpicker.picker.find('.colorpicker-swatch[data-name="tetrad' + (i + 1) + '"]');
+
+          swatch
+            .attr("data-value", colorStr)
+            .attr("title", colorStr)
+            .find("> i")
+            .css("background-color", colorStr);
+        });
+      });
+  });
+
+  //Resume box opne/close action
+  $(".resume__open").on("click", function(e) {
+    e.preventDefault();
+    $(this)
+      .closest(".resume")
+      .addClass("is-opened");
+  });
+  $(".resume__close").on("click", function(e) {
+    e.preventDefault();
+    $(this)
+      .closest(".resume")
+      .removeClass("is-opened");
   });
 });

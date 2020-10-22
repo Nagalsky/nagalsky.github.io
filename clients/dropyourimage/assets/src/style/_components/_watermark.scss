@@ -1,0 +1,27 @@
+/* WATERMARK */
+
+.watermark {
+    @extend .text-center;
+    width: 154px;
+
+    .radio {
+        @extend .my-0,
+        .mx-auto;
+        width: 20px;
+        height: 20px;
+
+        .radio__label {
+            padding-left: 20px;
+        }
+    }
+
+}
+
+.watermark__inner {
+    @extend .mb-1,
+    .p-2;
+    border: 1px solid $silver;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}

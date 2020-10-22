@@ -10,14 +10,13 @@ body {
   background-color: $body-bg;
 }
 
-/* The new <main> is not styled in the UA stylesheet for IE10, so we need to set it to display block */
 main {
   display: block;
 }
 
 .flexboxtweener,
 .flexboxtweener>body {
-  height: 100%;
+  @extend .h-100;
 }
 
 body {
@@ -126,4 +125,8 @@ p {
   @include media-breakpoint-up(lg) {
     margin-bottom: 50px;
   }
+}
+
+.hr--dark {
+  border-color: $gray500;
 }
