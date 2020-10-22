@@ -6526,11 +6526,11 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
+.position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
 .popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box {
   position: relative !important; }
 
-.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove {
+.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove {
   position: absolute !important; }
 
 .position-fixed, .navigation, .navigation__overlay, .resume {
@@ -10513,7 +10513,7 @@ div.fixed-table-scroll-outer {
 .font-ubuntu-medium, .price-box {
   font-family: "Ubuntu-Medium" !important; }
 
-.font-icons:before, .box-collapse__toggle:before, .list-check__item:before {
+.font-icons:before, .bootstrap-table .table > thead th .sortable:before, .box-collapse__toggle:before, .list-check__item:before {
   font-family: "icomoon"; }
 
 /*************************
@@ -10828,10 +10828,10 @@ ul {
 .icon-create:before {
   content: "\e915"; }
 
-.icon-arrow-down:before, .box-collapse__toggle:before {
+.icon-arrow-down:before, .bootstrap-table .table > thead th .sortable:before, .box-collapse__toggle:before {
   content: "\e913"; }
 
-.icon-arrow-up:before, .box-collapse.is-opened .box-collapse__toggle:before {
+.icon-arrow-up:before, .bootstrap-table .table > thead th .sortable.desc:before, .box-collapse.is-opened .box-collapse__toggle:before {
   content: "\e914"; }
 
 .icon-desktop-monitor-download:before {
@@ -11152,6 +11152,14 @@ label {
     border-color: #2d2d2d transparent transparent transparent; }
 
 /* BOOTSTRAP TABLE */
+.bootstrap-table .table > thead th .sortable {
+  background-image: none !important; }
+  .bootstrap-table .table > thead th .sortable:before {
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
 .bootstrap-table > thead > tr > th .btn-icon, .bootstrap-table > thead > tr > th .box-collapse__toggle, .bootstrap-table > thead > tr > th .uploaded-image-box__remove,
 .bootstrap-table > thead > tr td .btn-icon,
 .bootstrap-table > thead > tr td .box-collapse__toggle,

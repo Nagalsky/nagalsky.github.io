@@ -73,7 +73,7 @@
                 <thead>
                     <tr>
                         <th data-checkbox="true"></th>
-                        <th data-field="factuurnummer">Factuurnummer</th>
+                        <th data-field="factuurnummer" data-sortable="true" data-sorter="factuurnummerSorter">Factuurnummer</th>
                         <th data-field="aantal">Aantal</th>
                         <th data-field="prijs-totaal">Prijs totaal</th>
                         <th data-field="datum-besteld">Datum besteld</th>
@@ -112,43 +112,10 @@
                     <tr>
                         <td></td>
                         <td>
-                            Appeltaart
+                            #1231241
                         </td>
                         <td>
-                            100
-                        </td>
-                        <td>
-                            €200,00
-                        </td>
-                        <td>
-                            22/08/2020
-                        </td>
-                        <td>
-                            SFTP
-                        </td>
-                        <td>
-                            Appeltaart
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-icon">
-                                <i class="icon-download"></i>
-                            </button>
-                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
-                                <i class="icon-visibility"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>
-                            Appeltaart
-                        </td>
-                        <td>
-                            100
+                            1001
                         </td>
                         <td>
                             €200,00
@@ -178,43 +145,10 @@
                     <tr>
                         <td></td>
                         <td>
-                            Appeltaart
+                            #7777
                         </td>
                         <td>
-                            100
-                        </td>
-                        <td>
-                            €200,00
-                        </td>
-                        <td>
-                            22/08/2020
-                        </td>
-                        <td>
-                            SFTP
-                        </td>
-                        <td>
-                            Appeltaart
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-icon">
-                                <i class="icon-download"></i>
-                            </button>
-                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
-                                <i class="icon-visibility"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>
-                            Appeltaart
-                        </td>
-                        <td>
-                            100
+                            1002
                         </td>
                         <td>
                             €200,00
@@ -244,10 +178,10 @@
                     <tr>
                         <td></td>
                         <td>
-                            Appeltaart
+                            #8888
                         </td>
                         <td>
-                            100
+                            1003
                         </td>
                         <td>
                             €200,00
@@ -277,10 +211,76 @@
                     <tr>
                         <td></td>
                         <td>
+                            #25363
+                        </td>
+                        <td>
+                            1004
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
                             Appeltaart
                         </td>
                         <td>
-                            100
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            #313131
+                        </td>
+                        <td>
+                            1005
+                        </td>
+                        <td>
+                            €200,00
+                        </td>
+                        <td>
+                            22/08/2020
+                        </td>
+                        <td>
+                            SFTP
+                        </td>
+                        <td>
+                            Appeltaart
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success-secondary btn-block btn-table">Betaald</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-icon">
+                                <i class="icon-download"></i>
+                            </button>
+                            <button type="button" class="btn btn-icon" data-toggle="tooltip" data-placement="top" title="bekijken">
+                                <i class="icon-visibility"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            #98765
+                        </td>
+                        <td>
+                            1006
                         </td>
                         <td>
                             €200,00
@@ -461,5 +461,13 @@
     </div>
 
     <script src="js/main.min.js"></script>
+
+    <script>
+        function factuurnummerSorter(a, b) {
+            var aa = a.replace('#', '')
+            var bb = b.replace('#', '')
+            return aa - bb
+        }
+    </script>
 </body>
 </html>

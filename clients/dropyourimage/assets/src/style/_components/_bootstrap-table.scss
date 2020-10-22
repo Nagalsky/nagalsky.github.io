@@ -7,6 +7,30 @@ $table-checkbox-sm-size: 16px;
 .bootstrap-table {
     @extend .mb-4;
 
+    .table {
+        >thead {
+            th {
+                .sortable {
+                    @extend .position-relative,
+                    .font-icons,
+                    .icon-arrow-down;
+                    background-image: none !important;
+
+                    &.desc {
+                        @extend .icon-arrow-up;
+                    }
+
+                    &:before {
+                        @extend .position-absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
     >thead {
         >tr {
 
