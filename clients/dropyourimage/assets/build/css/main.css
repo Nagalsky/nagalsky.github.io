@@ -2123,7 +2123,7 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
-.resume__close {
+.resume__close, .accordion__toggle {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2144,31 +2144,32 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
-    .resume__close {
+    .resume__close, .accordion__toggle {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover, .navigation__toggle:hover, .box-toggle:hover, .box-collapse-create:hover, .resume__open:hover,
-  .resume__close:hover {
+  .resume__close:hover, .accordion__toggle:hover {
     color: #212529;
     text-decoration: none; }
   .btn:focus, .navigation__toggle:focus, .box-toggle:focus, .box-collapse-create:focus, .resume__open:focus,
-  .resume__close:focus, .btn.focus, .focus.navigation__toggle, .focus.box-toggle, .focus.box-collapse-create, .focus.resume__open,
-  .focus.resume__close {
+  .resume__close:focus, .accordion__toggle:focus, .btn.focus, .focus.navigation__toggle, .focus.box-toggle, .focus.box-collapse-create, .focus.resume__open,
+  .focus.resume__close, .focus.accordion__toggle {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, .disabled.navigation__toggle, .disabled.box-toggle, .disabled.box-collapse-create, .disabled.resume__open,
-  .disabled.resume__close, .btn:disabled, .navigation__toggle:disabled, .box-toggle:disabled, .box-collapse-create:disabled, .resume__open:disabled,
-  .resume__close:disabled {
+  .disabled.resume__close, .disabled.accordion__toggle, .btn:disabled, .navigation__toggle:disabled, .box-toggle:disabled, .box-collapse-create:disabled, .resume__open:disabled,
+  .resume__close:disabled, .accordion__toggle:disabled {
     opacity: 0.65; }
 
 a.btn.disabled, a.disabled.navigation__toggle, a.disabled.box-toggle, a.disabled.box-collapse-create, a.disabled.resume__open,
-a.disabled.resume__close,
+a.disabled.resume__close, a.disabled.accordion__toggle,
 fieldset:disabled a.btn,
 fieldset:disabled a.navigation__toggle,
 fieldset:disabled a.box-toggle,
 fieldset:disabled a.box-collapse-create,
 fieldset:disabled a.resume__open,
-fieldset:disabled a.resume__close {
+fieldset:disabled a.resume__close,
+fieldset:disabled a.accordion__toggle {
   pointer-events: none; }
 
 .btn-primary {
@@ -2562,14 +2563,14 @@ fieldset:disabled a.resume__close {
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .navigation__toggle, .btn-group-lg > .box-toggle, .btn-group-lg > .box-collapse-create, .btn-group-lg > .resume__open,
-.btn-group-lg > .resume__close {
+.btn-group-lg > .resume__close, .btn-group-lg > .accordion__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navigation__toggle, .btn-group-sm > .box-toggle, .btn-group-sm > .box-collapse-create, .btn-group-sm > .resume__open,
-.btn-group-sm > .resume__close {
+.btn-group-sm > .resume__close, .btn-group-sm > .accordion__toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2831,47 +2832,52 @@ input.box-collapse-create[type="button"] {
   display: inline-flex;
   vertical-align: middle; }
   .btn-group > .btn, .btn-group > .navigation__toggle, .btn-group > .box-toggle, .btn-group > .box-collapse-create, .btn-group > .resume__open,
-  .btn-group > .resume__close,
+  .btn-group > .resume__close, .btn-group > .accordion__toggle,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .navigation__toggle,
   .btn-group-vertical > .box-toggle,
   .btn-group-vertical > .box-collapse-create,
   .btn-group-vertical > .resume__open,
-  .btn-group-vertical > .resume__close {
+  .btn-group-vertical > .resume__close,
+  .btn-group-vertical > .accordion__toggle {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1 1 auto; }
     .btn-group > .btn:hover, .btn-group > .navigation__toggle:hover, .btn-group > .box-toggle:hover, .btn-group > .box-collapse-create:hover, .btn-group > .resume__open:hover,
-    .btn-group > .resume__close:hover,
+    .btn-group > .resume__close:hover, .btn-group > .accordion__toggle:hover,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .navigation__toggle:hover,
     .btn-group-vertical > .box-toggle:hover,
     .btn-group-vertical > .box-collapse-create:hover,
     .btn-group-vertical > .resume__open:hover,
-    .btn-group-vertical > .resume__close:hover {
+    .btn-group-vertical > .resume__close:hover,
+    .btn-group-vertical > .accordion__toggle:hover {
       z-index: 1; }
     .btn-group > .btn:focus, .btn-group > .navigation__toggle:focus, .btn-group > .box-toggle:focus, .btn-group > .box-collapse-create:focus, .btn-group > .resume__open:focus,
-    .btn-group > .resume__close:focus, .btn-group > .btn:active, .btn-group > .navigation__toggle:active, .btn-group > .box-toggle:active, .btn-group > .box-collapse-create:active, .btn-group > .resume__open:active,
-    .btn-group > .resume__close:active, .btn-group > .btn.active, .btn-group > .active.navigation__toggle, .btn-group > .active.box-toggle, .btn-group > .active.box-collapse-create, .btn-group > .active.resume__open,
-    .btn-group > .active.resume__close,
+    .btn-group > .resume__close:focus, .btn-group > .accordion__toggle:focus, .btn-group > .btn:active, .btn-group > .navigation__toggle:active, .btn-group > .box-toggle:active, .btn-group > .box-collapse-create:active, .btn-group > .resume__open:active,
+    .btn-group > .resume__close:active, .btn-group > .accordion__toggle:active, .btn-group > .btn.active, .btn-group > .active.navigation__toggle, .btn-group > .active.box-toggle, .btn-group > .active.box-collapse-create, .btn-group > .active.resume__open,
+    .btn-group > .active.resume__close, .btn-group > .active.accordion__toggle,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .navigation__toggle:focus,
     .btn-group-vertical > .box-toggle:focus,
     .btn-group-vertical > .box-collapse-create:focus,
     .btn-group-vertical > .resume__open:focus,
     .btn-group-vertical > .resume__close:focus,
+    .btn-group-vertical > .accordion__toggle:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .navigation__toggle:active,
     .btn-group-vertical > .box-toggle:active,
     .btn-group-vertical > .box-collapse-create:active,
     .btn-group-vertical > .resume__open:active,
     .btn-group-vertical > .resume__close:active,
+    .btn-group-vertical > .accordion__toggle:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.navigation__toggle,
     .btn-group-vertical > .active.box-toggle,
     .btn-group-vertical > .active.box-collapse-create,
     .btn-group-vertical > .active.resume__open,
-    .btn-group-vertical > .active.resume__close {
+    .btn-group-vertical > .active.resume__close,
+    .btn-group-vertical > .active.accordion__toggle {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2884,29 +2890,31 @@ input.box-collapse-create[type="button"] {
     width: auto; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .navigation__toggle:not(:first-child), .btn-group > .box-toggle:not(:first-child), .btn-group > .box-collapse-create:not(:first-child), .btn-group > .resume__open:not(:first-child),
-.btn-group > .resume__close:not(:first-child),
+.btn-group > .resume__close:not(:first-child), .btn-group > .accordion__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .navigation__toggle:not(:last-child):not(.dropdown-toggle), .btn-group > .box-toggle:not(:last-child):not(.dropdown-toggle), .btn-group > .box-collapse-create:not(:last-child):not(.dropdown-toggle), .btn-group > .resume__open:not(:last-child):not(.dropdown-toggle),
-.btn-group > .resume__close:not(:last-child):not(.dropdown-toggle),
+.btn-group > .resume__close:not(:last-child):not(.dropdown-toggle), .btn-group > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn-group:not(:last-child) > .navigation__toggle,
 .btn-group > .btn-group:not(:last-child) > .box-toggle,
 .btn-group > .btn-group:not(:last-child) > .box-collapse-create,
 .btn-group > .btn-group:not(:last-child) > .resume__open,
-.btn-group > .btn-group:not(:last-child) > .resume__close {
+.btn-group > .btn-group:not(:last-child) > .resume__close,
+.btn-group > .btn-group:not(:last-child) > .accordion__toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .navigation__toggle:not(:first-child), .btn-group > .box-toggle:not(:first-child), .btn-group > .box-collapse-create:not(:first-child), .btn-group > .resume__open:not(:first-child),
-.btn-group > .resume__close:not(:first-child),
+.btn-group > .resume__close:not(:first-child), .btn-group > .accordion__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .btn-group:not(:first-child) > .navigation__toggle,
 .btn-group > .btn-group:not(:first-child) > .box-toggle,
 .btn-group > .btn-group:not(:first-child) > .box-collapse-create,
 .btn-group > .btn-group:not(:first-child) > .resume__open,
-.btn-group > .btn-group:not(:first-child) > .resume__close {
+.btn-group > .btn-group:not(:first-child) > .resume__close,
+.btn-group > .btn-group:not(:first-child) > .accordion__toggle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2920,11 +2928,11 @@ input.box-collapse-create[type="button"] {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .navigation__toggle + .dropdown-toggle-split, .btn-group-sm > .box-toggle + .dropdown-toggle-split, .btn-group-sm > .box-collapse-create + .dropdown-toggle-split, .btn-group-sm > .resume__open + .dropdown-toggle-split, .btn-group-sm > .resume__close + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .navigation__toggle + .dropdown-toggle-split, .btn-group-sm > .box-toggle + .dropdown-toggle-split, .btn-group-sm > .box-collapse-create + .dropdown-toggle-split, .btn-group-sm > .resume__open + .dropdown-toggle-split, .btn-group-sm > .resume__close + .dropdown-toggle-split, .btn-group-sm > .accordion__toggle + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .navigation__toggle + .dropdown-toggle-split, .btn-group-lg > .box-toggle + .dropdown-toggle-split, .btn-group-lg > .box-collapse-create + .dropdown-toggle-split, .btn-group-lg > .resume__open + .dropdown-toggle-split, .btn-group-lg > .resume__close + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .navigation__toggle + .dropdown-toggle-split, .btn-group-lg > .box-toggle + .dropdown-toggle-split, .btn-group-lg > .box-collapse-create + .dropdown-toggle-split, .btn-group-lg > .resume__open + .dropdown-toggle-split, .btn-group-lg > .resume__close + .dropdown-toggle-split, .btn-group-lg > .accordion__toggle + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2943,61 +2951,68 @@ input.box-collapse-create[type="button"] {
   .btn-group-vertical > .box-collapse-create,
   .btn-group-vertical > .resume__open,
   .btn-group-vertical > .resume__close,
+  .btn-group-vertical > .accordion__toggle,
   .btn-group-vertical > .btn-group {
     width: 100%; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navigation__toggle:not(:first-child), .btn-group-vertical > .box-toggle:not(:first-child), .btn-group-vertical > .box-collapse-create:not(:first-child), .btn-group-vertical > .resume__open:not(:first-child),
-  .btn-group-vertical > .resume__close:not(:first-child),
+  .btn-group-vertical > .resume__close:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
   .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .navigation__toggle:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .box-toggle:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .box-collapse-create:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .resume__open:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .resume__close:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .resume__close:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .navigation__toggle,
   .btn-group-vertical > .btn-group:not(:last-child) > .box-toggle,
   .btn-group-vertical > .btn-group:not(:last-child) > .box-collapse-create,
   .btn-group-vertical > .btn-group:not(:last-child) > .resume__open,
-  .btn-group-vertical > .btn-group:not(:last-child) > .resume__close {
+  .btn-group-vertical > .btn-group:not(:last-child) > .resume__close,
+  .btn-group-vertical > .btn-group:not(:last-child) > .accordion__toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navigation__toggle:not(:first-child), .btn-group-vertical > .box-toggle:not(:first-child), .btn-group-vertical > .box-collapse-create:not(:first-child), .btn-group-vertical > .resume__open:not(:first-child),
-  .btn-group-vertical > .resume__close:not(:first-child),
+  .btn-group-vertical > .resume__close:not(:first-child), .btn-group-vertical > .accordion__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .navigation__toggle,
   .btn-group-vertical > .btn-group:not(:first-child) > .box-toggle,
   .btn-group-vertical > .btn-group:not(:first-child) > .box-collapse-create,
   .btn-group-vertical > .btn-group:not(:first-child) > .resume__open,
-  .btn-group-vertical > .btn-group:not(:first-child) > .resume__close {
+  .btn-group-vertical > .btn-group:not(:first-child) > .resume__close,
+  .btn-group-vertical > .btn-group:not(:first-child) > .accordion__toggle {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group-toggle > .btn, .btn-group-toggle > .navigation__toggle, .btn-group-toggle > .box-toggle, .btn-group-toggle > .box-collapse-create, .btn-group-toggle > .resume__open,
-.btn-group-toggle > .resume__close,
+.btn-group-toggle > .resume__close, .btn-group-toggle > .accordion__toggle,
 .btn-group-toggle > .btn-group > .btn,
 .btn-group-toggle > .btn-group > .navigation__toggle,
 .btn-group-toggle > .btn-group > .box-toggle,
 .btn-group-toggle > .btn-group > .box-collapse-create,
 .btn-group-toggle > .btn-group > .resume__open,
-.btn-group-toggle > .btn-group > .resume__close {
+.btn-group-toggle > .btn-group > .resume__close,
+.btn-group-toggle > .btn-group > .accordion__toggle {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .navigation__toggle input[type="radio"], .btn-group-toggle > .box-toggle input[type="radio"], .btn-group-toggle > .box-collapse-create input[type="radio"], .btn-group-toggle > .resume__open input[type="radio"], .btn-group-toggle > .resume__close input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .navigation__toggle input[type="radio"], .btn-group-toggle > .box-toggle input[type="radio"], .btn-group-toggle > .box-collapse-create input[type="radio"], .btn-group-toggle > .resume__open input[type="radio"], .btn-group-toggle > .resume__close input[type="radio"], .btn-group-toggle > .accordion__toggle input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .navigation__toggle input[type="checkbox"],
   .btn-group-toggle > .box-toggle input[type="checkbox"],
   .btn-group-toggle > .box-collapse-create input[type="checkbox"],
   .btn-group-toggle > .resume__open input[type="checkbox"],
   .btn-group-toggle > .resume__close input[type="checkbox"],
+  .btn-group-toggle > .accordion__toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .navigation__toggle input[type="radio"],
   .btn-group-toggle > .btn-group > .box-toggle input[type="radio"],
   .btn-group-toggle > .btn-group > .box-collapse-create input[type="radio"],
   .btn-group-toggle > .btn-group > .resume__open input[type="radio"],
   .btn-group-toggle > .btn-group > .resume__close input[type="radio"],
+  .btn-group-toggle > .btn-group > .accordion__toggle input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .navigation__toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .box-toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .box-collapse-create input[type="checkbox"],
   .btn-group-toggle > .btn-group > .resume__open input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .resume__close input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .resume__close input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .accordion__toggle input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -3064,37 +3079,41 @@ input.box-collapse-create[type="button"] {
   display: -webkit-box;
   display: flex; }
   .input-group-prepend .btn, .input-group-prepend .navigation__toggle, .input-group-prepend .box-toggle, .input-group-prepend .box-collapse-create, .input-group-prepend .resume__open,
-  .input-group-prepend .resume__close,
+  .input-group-prepend .resume__close, .input-group-prepend .accordion__toggle,
   .input-group-append .btn,
   .input-group-append .navigation__toggle,
   .input-group-append .box-toggle,
   .input-group-append .box-collapse-create,
   .input-group-append .resume__open,
-  .input-group-append .resume__close {
+  .input-group-append .resume__close,
+  .input-group-append .accordion__toggle {
     position: relative;
     z-index: 2; }
     .input-group-prepend .btn:focus, .input-group-prepend .navigation__toggle:focus, .input-group-prepend .box-toggle:focus, .input-group-prepend .box-collapse-create:focus, .input-group-prepend .resume__open:focus,
-    .input-group-prepend .resume__close:focus,
+    .input-group-prepend .resume__close:focus, .input-group-prepend .accordion__toggle:focus,
     .input-group-append .btn:focus,
     .input-group-append .navigation__toggle:focus,
     .input-group-append .box-toggle:focus,
     .input-group-append .box-collapse-create:focus,
     .input-group-append .resume__open:focus,
-    .input-group-append .resume__close:focus {
+    .input-group-append .resume__close:focus,
+    .input-group-append .accordion__toggle:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .navigation__toggle + .btn, .input-group-prepend .box-toggle + .btn, .input-group-prepend .box-collapse-create + .btn, .input-group-prepend .resume__open + .btn, .input-group-prepend .resume__close + .btn, .input-group-prepend .btn + .navigation__toggle, .input-group-prepend .navigation__toggle + .navigation__toggle, .input-group-prepend .box-toggle + .navigation__toggle, .input-group-prepend .box-collapse-create + .navigation__toggle, .input-group-prepend .resume__open + .navigation__toggle, .input-group-prepend .resume__close + .navigation__toggle, .input-group-prepend .btn + .box-toggle, .input-group-prepend .navigation__toggle + .box-toggle, .input-group-prepend .box-toggle + .box-toggle, .input-group-prepend .box-collapse-create + .box-toggle, .input-group-prepend .resume__open + .box-toggle, .input-group-prepend .resume__close + .box-toggle, .input-group-prepend .btn + .box-collapse-create, .input-group-prepend .navigation__toggle + .box-collapse-create, .input-group-prepend .box-toggle + .box-collapse-create, .input-group-prepend .box-collapse-create + .box-collapse-create, .input-group-prepend .resume__open + .box-collapse-create, .input-group-prepend .resume__close + .box-collapse-create, .input-group-prepend .btn + .resume__open, .input-group-prepend .navigation__toggle + .resume__open, .input-group-prepend .box-toggle + .resume__open, .input-group-prepend .box-collapse-create + .resume__open, .input-group-prepend .resume__open + .resume__open, .input-group-prepend .resume__close + .resume__open,
+  .input-group-prepend .btn + .btn, .input-group-prepend .navigation__toggle + .btn, .input-group-prepend .box-toggle + .btn, .input-group-prepend .box-collapse-create + .btn, .input-group-prepend .resume__open + .btn, .input-group-prepend .resume__close + .btn, .input-group-prepend .accordion__toggle + .btn, .input-group-prepend .btn + .navigation__toggle, .input-group-prepend .navigation__toggle + .navigation__toggle, .input-group-prepend .box-toggle + .navigation__toggle, .input-group-prepend .box-collapse-create + .navigation__toggle, .input-group-prepend .resume__open + .navigation__toggle, .input-group-prepend .resume__close + .navigation__toggle, .input-group-prepend .accordion__toggle + .navigation__toggle, .input-group-prepend .btn + .box-toggle, .input-group-prepend .navigation__toggle + .box-toggle, .input-group-prepend .box-toggle + .box-toggle, .input-group-prepend .box-collapse-create + .box-toggle, .input-group-prepend .resume__open + .box-toggle, .input-group-prepend .resume__close + .box-toggle, .input-group-prepend .accordion__toggle + .box-toggle, .input-group-prepend .btn + .box-collapse-create, .input-group-prepend .navigation__toggle + .box-collapse-create, .input-group-prepend .box-toggle + .box-collapse-create, .input-group-prepend .box-collapse-create + .box-collapse-create, .input-group-prepend .resume__open + .box-collapse-create, .input-group-prepend .resume__close + .box-collapse-create, .input-group-prepend .accordion__toggle + .box-collapse-create, .input-group-prepend .btn + .resume__open, .input-group-prepend .navigation__toggle + .resume__open, .input-group-prepend .box-toggle + .resume__open, .input-group-prepend .box-collapse-create + .resume__open, .input-group-prepend .resume__open + .resume__open, .input-group-prepend .resume__close + .resume__open, .input-group-prepend .accordion__toggle + .resume__open,
   .input-group-prepend .btn + .resume__close,
   .input-group-prepend .navigation__toggle + .resume__close,
   .input-group-prepend .box-toggle + .resume__close,
   .input-group-prepend .box-collapse-create + .resume__close,
   .input-group-prepend .resume__open + .resume__close,
   .input-group-prepend .resume__close + .resume__close,
+  .input-group-prepend .accordion__toggle + .resume__close, .input-group-prepend .btn + .accordion__toggle, .input-group-prepend .navigation__toggle + .accordion__toggle, .input-group-prepend .box-toggle + .accordion__toggle, .input-group-prepend .box-collapse-create + .accordion__toggle, .input-group-prepend .resume__open + .accordion__toggle, .input-group-prepend .resume__close + .accordion__toggle, .input-group-prepend .accordion__toggle + .accordion__toggle,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .navigation__toggle + .input-group-text,
   .input-group-prepend .box-toggle + .input-group-text,
   .input-group-prepend .box-collapse-create + .input-group-text,
   .input-group-prepend .resume__open + .input-group-text,
   .input-group-prepend .resume__close + .input-group-text,
+  .input-group-prepend .accordion__toggle + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .input-group-text + .navigation__toggle,
@@ -3102,55 +3121,71 @@ input.box-collapse-create[type="button"] {
   .input-group-prepend .input-group-text + .box-collapse-create,
   .input-group-prepend .input-group-text + .resume__open,
   .input-group-prepend .input-group-text + .resume__close,
+  .input-group-prepend .input-group-text + .accordion__toggle,
   .input-group-append .btn + .btn,
   .input-group-append .navigation__toggle + .btn,
   .input-group-append .box-toggle + .btn,
   .input-group-append .box-collapse-create + .btn,
   .input-group-append .resume__open + .btn,
   .input-group-append .resume__close + .btn,
+  .input-group-append .accordion__toggle + .btn,
   .input-group-append .btn + .navigation__toggle,
   .input-group-append .navigation__toggle + .navigation__toggle,
   .input-group-append .box-toggle + .navigation__toggle,
   .input-group-append .box-collapse-create + .navigation__toggle,
   .input-group-append .resume__open + .navigation__toggle,
   .input-group-append .resume__close + .navigation__toggle,
+  .input-group-append .accordion__toggle + .navigation__toggle,
   .input-group-append .btn + .box-toggle,
   .input-group-append .navigation__toggle + .box-toggle,
   .input-group-append .box-toggle + .box-toggle,
   .input-group-append .box-collapse-create + .box-toggle,
   .input-group-append .resume__open + .box-toggle,
   .input-group-append .resume__close + .box-toggle,
+  .input-group-append .accordion__toggle + .box-toggle,
   .input-group-append .btn + .box-collapse-create,
   .input-group-append .navigation__toggle + .box-collapse-create,
   .input-group-append .box-toggle + .box-collapse-create,
   .input-group-append .box-collapse-create + .box-collapse-create,
   .input-group-append .resume__open + .box-collapse-create,
   .input-group-append .resume__close + .box-collapse-create,
+  .input-group-append .accordion__toggle + .box-collapse-create,
   .input-group-append .btn + .resume__open,
   .input-group-append .navigation__toggle + .resume__open,
   .input-group-append .box-toggle + .resume__open,
   .input-group-append .box-collapse-create + .resume__open,
   .input-group-append .resume__open + .resume__open,
   .input-group-append .resume__close + .resume__open,
+  .input-group-append .accordion__toggle + .resume__open,
   .input-group-append .btn + .resume__close,
   .input-group-append .navigation__toggle + .resume__close,
   .input-group-append .box-toggle + .resume__close,
   .input-group-append .box-collapse-create + .resume__close,
   .input-group-append .resume__open + .resume__close,
   .input-group-append .resume__close + .resume__close,
+  .input-group-append .accordion__toggle + .resume__close,
+  .input-group-append .btn + .accordion__toggle,
+  .input-group-append .navigation__toggle + .accordion__toggle,
+  .input-group-append .box-toggle + .accordion__toggle,
+  .input-group-append .box-collapse-create + .accordion__toggle,
+  .input-group-append .resume__open + .accordion__toggle,
+  .input-group-append .resume__close + .accordion__toggle,
+  .input-group-append .accordion__toggle + .accordion__toggle,
   .input-group-append .btn + .input-group-text,
   .input-group-append .navigation__toggle + .input-group-text,
   .input-group-append .box-toggle + .input-group-text,
   .input-group-append .box-collapse-create + .input-group-text,
   .input-group-append .resume__open + .input-group-text,
   .input-group-append .resume__close + .input-group-text,
+  .input-group-append .accordion__toggle + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .input-group-text + .navigation__toggle,
   .input-group-append .input-group-text + .box-toggle,
   .input-group-append .input-group-text + .box-collapse-create,
   .input-group-append .input-group-text + .resume__open,
-  .input-group-append .input-group-text + .resume__close {
+  .input-group-append .input-group-text + .resume__close,
+  .input-group-append .input-group-text + .accordion__toggle {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3193,12 +3228,14 @@ input.box-collapse-create[type="button"] {
 .input-group-lg > .input-group-prepend > .box-collapse-create,
 .input-group-lg > .input-group-prepend > .resume__open,
 .input-group-lg > .input-group-prepend > .resume__close,
+.input-group-lg > .input-group-prepend > .accordion__toggle,
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > .navigation__toggle,
 .input-group-lg > .input-group-append > .box-toggle,
 .input-group-lg > .input-group-append > .box-collapse-create,
 .input-group-lg > .input-group-append > .resume__open,
-.input-group-lg > .input-group-append > .resume__close {
+.input-group-lg > .input-group-append > .resume__close,
+.input-group-lg > .input-group-append > .accordion__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3218,12 +3255,14 @@ input.box-collapse-create[type="button"] {
 .input-group-sm > .input-group-prepend > .box-collapse-create,
 .input-group-sm > .input-group-prepend > .resume__open,
 .input-group-sm > .input-group-prepend > .resume__close,
+.input-group-sm > .input-group-prepend > .accordion__toggle,
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > .navigation__toggle,
 .input-group-sm > .input-group-append > .box-toggle,
 .input-group-sm > .input-group-append > .box-collapse-create,
 .input-group-sm > .input-group-append > .resume__open,
-.input-group-sm > .input-group-append > .resume__close {
+.input-group-sm > .input-group-append > .resume__close,
+.input-group-sm > .input-group-append > .accordion__toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3234,7 +3273,7 @@ input.box-collapse-create[type="button"] {
   padding-right: 1.75rem; }
 
 .input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .navigation__toggle, .input-group > .input-group-prepend > .box-toggle, .input-group > .input-group-prepend > .box-collapse-create, .input-group > .input-group-prepend > .resume__open,
-.input-group > .input-group-prepend > .resume__close,
+.input-group > .input-group-prepend > .resume__close, .input-group > .input-group-prepend > .accordion__toggle,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .navigation__toggle,
@@ -3242,6 +3281,7 @@ input.box-collapse-create[type="button"] {
 .input-group > .input-group-append:not(:last-child) > .box-collapse-create,
 .input-group > .input-group-append:not(:last-child) > .resume__open,
 .input-group > .input-group-append:not(:last-child) > .resume__close,
+.input-group > .input-group-append:not(:last-child) > .accordion__toggle,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .navigation__toggle:not(:last-child):not(.dropdown-toggle),
@@ -3249,12 +3289,13 @@ input.box-collapse-create[type="button"] {
 .input-group > .input-group-append:last-child > .box-collapse-create:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .resume__open:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .resume__close:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .accordion__toggle:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > .navigation__toggle, .input-group > .input-group-append > .box-toggle, .input-group > .input-group-append > .box-collapse-create, .input-group > .input-group-append > .resume__open,
-.input-group > .input-group-append > .resume__close,
+.input-group > .input-group-append > .resume__close, .input-group > .input-group-append > .accordion__toggle,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .navigation__toggle,
@@ -3262,6 +3303,7 @@ input.box-collapse-create[type="button"] {
 .input-group > .input-group-prepend:not(:first-child) > .box-collapse-create,
 .input-group > .input-group-prepend:not(:first-child) > .resume__open,
 .input-group > .input-group-prepend:not(:first-child) > .resume__close,
+.input-group > .input-group-prepend:not(:first-child) > .accordion__toggle,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .navigation__toggle:not(:first-child),
@@ -3269,6 +3311,7 @@ input.box-collapse-create[type="button"] {
 .input-group > .input-group-prepend:first-child > .box-collapse-create:not(:first-child),
 .input-group > .input-group-prepend:first-child > .resume__open:not(:first-child),
 .input-group > .input-group-prepend:first-child > .resume__close:not(:first-child),
+.input-group > .input-group-prepend:first-child > .accordion__toggle:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4320,7 +4363,7 @@ input.box-collapse-create[type="button"] {
   .badge:empty {
     display: none; }
 
-.btn .badge, .navigation__toggle .badge, .box-toggle .badge, .box-collapse-create .badge, .resume__open .badge, .resume__close .badge {
+.btn .badge, .navigation__toggle .badge, .box-toggle .badge, .box-collapse-create .badge, .resume__open .badge, .resume__close .badge, .accordion__toggle .badge {
   position: relative;
   top: -1px; }
 
@@ -5619,7 +5662,7 @@ button.bg-dark:focus {
 
 .border-0, .navigation__toggle, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-table > thead > tr > th,
 .bootstrap-table > thead > tr td, .popover, .popover .popover-header, .modal-content, .page-link, .box-collapse-create, .resume__open,
-.resume__close {
+.resume__close, .accordion__toggle {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5692,7 +5735,7 @@ button.bg-dark:focus {
 .rounded-pill {
   border-radius: 50rem !important; }
 
-.rounded-0, .box-toggle {
+.rounded-0, .box-toggle, .accordion__toggle {
   border-radius: 0 !important; }
 
 .clearfix::after {
@@ -5709,7 +5752,7 @@ button.bg-dark:focus {
 .d-inline-block, .radio-switch__label {
   display: inline-block !important; }
 
-.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item {
+.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item, .accordion__toggle {
   display: block !important; }
 
 .d-table {
@@ -6527,10 +6570,10 @@ button.bg-dark:focus {
   position: static !important; }
 
 .position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
-.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan {
+.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan, .accordion__toggle {
   position: relative !important; }
 
-.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before {
+.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before, .accordion__toggle:before {
   position: absolute !important; }
 
 .position-fixed, .navigation, .navigation__overlay, .resume {
@@ -6590,7 +6633,7 @@ button.bg-dark:focus {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
 .shadow-none, .navigation__toggle, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-select .dropdown-toggle, .resume__open,
-.resume__close {
+.resume__close, .accordion__toggle {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6602,7 +6645,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo {
+.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo, .accordion__toggle {
   width: 100% !important; }
 
 .w-auto {
@@ -6743,7 +6786,7 @@ button.bg-dark:focus {
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4, .navigation-nav, .price-box:not(:last-child), .bootstrap-table, .feedback-box__icon, .box-collapse__heading-logo, .box-collapse__info, .account-nav,
+.mb-4, .navigation-nav, .price-box:not(:last-child), .bootstrap-table, .feedback-box__icon, .box-collapse__heading-logo, .box-collapse__info, .account:not(:last-child), .account-nav, .accordion:not(:last-child),
 .my-4 {
   margin-bottom: 1.5rem !important; }
 
@@ -8308,7 +8351,7 @@ button.bg-dark:focus {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-left, .box-toggle {
+.text-left, .box-toggle, .accordion__toggle {
   text-align: left !important; }
 
 .text-right {
@@ -8477,7 +8520,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important; }
   a:not(.btn):not(.navigation__toggle):not(.box-toggle):not(.box-collapse-create):not(.resume__open):not(
-  .resume__close) {
+  .resume__close):not(.accordion__toggle) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9137,16 +9180,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: -1px !important; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .navigation__toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .box-toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .box-collapse-create, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .resume__open,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .resume__close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .resume__close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .accordion__toggle {
   border-radius: 0; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .navigation__toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .box-toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .box-collapse-create, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .resume__open,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .resume__close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .resume__close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .accordion__toggle {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .navigation__toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .box-toggle, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .box-collapse-create, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .resume__open,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .resume__close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .resume__close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .accordion__toggle {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
@@ -10357,7 +10400,7 @@ div.fixed-table-scroll-outer {
   color: #0c0c0c !important; }
 
 .text-black200, dl dd, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span,
-.popover .popover-body, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label {
+.popover .popover-body, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle {
   color: #474747 !important; }
 
 .text-black300 {
@@ -10502,7 +10545,7 @@ div.fixed-table-scroll-outer {
 
 .font-opensans-semibold, .navigation-nav__item, .form-control-label-box .form-control-label, .btn-counter, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .detail__title, .product__description, .checkbox__label, .resume .table > thead > tr > th,
 .resume .table > thead > tr td, .resume .table > tfoot > tr > th,
-.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before {
+.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before, .accordion__toggle {
   font-family: "OpenSans-SemiBold" !important; }
 
 .font-opensans-bold, dl dt, .btn-field-show-password, .bootstrap-table > thead > tr > td, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
@@ -10519,7 +10562,7 @@ div.fixed-table-scroll-outer {
 .font-ubuntu-medium, .price-box {
   font-family: "Ubuntu-Medium" !important; }
 
-.font-icons:before, .bootstrap-table .table > thead th .sortable:before, .box-collapse__toggle:before, .list-check__item:before {
+.font-icons:before, .bootstrap-table .table > thead th .sortable:before, .box-collapse__toggle:before, .list-check__item:before, .accordion__toggle:before {
   font-family: "icomoon"; }
 
 /*************************
@@ -10726,6 +10769,9 @@ p {
     .mb-xl {
       margin-bottom: 120px; } }
 
+b {
+  font-family: "OpenSans-Bold"; }
+
 /* FLEX */
 /* HAS BG */
 .has-bg {
@@ -10753,7 +10799,7 @@ p {
 .fs-15, .price-box__currency {
   font-size: 15px !important; }
 
-.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label {
+.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle {
   font-size: 16px !important; }
 
 .fs-17 {
@@ -10778,7 +10824,7 @@ p {
 .fs-23 {
   font-size: 23px !important; }
 
-.fs-24, .form-serch__icon {
+.fs-24, .form-serch__icon, .accordion__toggle:before {
   font-size: 24px !important; }
 
 .fs-25, .navigation-nav__icon {
@@ -10839,6 +10885,12 @@ ul {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-plus:before, .accordion__toggle:before {
+  content: "\e909"; }
+
+.icon-minus:before, .accordion__toggle:not(.collapsed):before {
+  content: "\e91a"; }
 
 .icon-eye-off:before {
   content: "\e912"; }
@@ -10905,9 +10957,6 @@ ul {
 
 .icon-delete:before {
   content: "\e908"; }
-
-.icon-plus:before {
-  content: "\e909"; }
 
 .icon-arrow-right:before {
   content: "\e90a"; }
@@ -11049,7 +11098,7 @@ label {
 
 /* BUTTONS */
 .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
-.resume__close {
+.resume__close, .accordion__toggle {
   border-radius: 2px;
   font-size: 12px;
   font-family: "OpenSans-SemiBold";
@@ -11122,7 +11171,7 @@ label {
     min-height: auto; }
   @media (min-width: 576px) {
     .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .navigation__toggle, .btn-group-lg > .box-toggle, .btn-group-lg > .box-collapse-create, .btn-group-lg > .resume__open,
-    .btn-group-lg > .resume__close {
+    .btn-group-lg > .resume__close, .btn-group-lg > .accordion__toggle {
       font-size: 14px;
       padding: 13px 40px;
       min-height: 49px; } }
@@ -11132,7 +11181,7 @@ label {
     min-height: 23px; }
   @media (min-width: 576px) {
     .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navigation__toggle, .btn-group-sm > .box-toggle, .btn-group-sm > .box-collapse-create, .btn-group-sm > .resume__open,
-    .btn-group-sm > .resume__close {
+    .btn-group-sm > .resume__close, .btn-group-sm > .accordion__toggle {
       font-size: 18px;
       padding: 5px 21px; } }
   @media (min-width: 576px) {
@@ -11719,7 +11768,7 @@ label {
       margin-top: 34px; } }
   @media (max-width: 575.98px) {
     .resume-footer .btn, .resume-footer .navigation__toggle, .resume-footer .box-toggle, .resume-footer .box-collapse-create, .resume-footer .resume__open,
-    .resume-footer .resume__close {
+    .resume-footer .resume__close, .resume-footer .accordion__toggle {
       font-size: 11px; } }
 
 /* ACCOUNT */
@@ -11783,3 +11832,18 @@ label {
     top: -25px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+
+/* ACCORDION */
+.accordion__item {
+  border-bottom: 1px solid #707070; }
+
+.accordion__toggle {
+  padding: 20px 50px 20px 0; }
+  .accordion__toggle:before {
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+.accordion__body {
+  padding-bottom: 20px; }
