@@ -123,16 +123,69 @@ $(document).ready(function() {
   });
 
   //Resume box opne/close action
-  $(".resume__open").on("click", function(e) {
-    e.preventDefault();
-    $(this)
-      .closest(".resume")
-      .addClass("is-opened");
+  $(function() {
+    $(".resume__open").on("click", function(e) {
+      e.preventDefault();
+      $(this)
+        .closest(".resume")
+        .addClass("is-opened");
+    });
   });
-  $(".resume__close").on("click", function(e) {
-    e.preventDefault();
-    $(this)
-      .closest(".resume")
-      .removeClass("is-opened");
+
+  $(function() {
+    $(".resume__close").on("click", function(e) {
+      e.preventDefault();
+      $(this)
+        .closest(".resume")
+        .removeClass("is-opened");
+    });
+  });
+
+  //Show hide password in input type password
+  $(".btn-field-show-password").on("click", function(e) {
+    var target = e.currentTarget;
+    $(target).hasClass("show") ? hidePassword($(target)) : showPassword($(target));
+  });
+  function hidePassword(e) {
+    e.removeClass("show").addClass("hide");
+    e.parent()
+      .next("input")
+      .attr("type", "password");
+  }
+  function showPassword(e) {
+    e.removeClass("hide").addClass("show");
+    e.parent()
+      .next("input")
+      .attr("type", "text");
+  }
+
+  //Edit field action
+  $(function() {
+    $(".btn-edit-field").on("click", function(e) {
+      e.preventDefault();
+      $(this).addClass("invisible");
+      $(this)
+        .parent()
+        .find("input")
+        .removeClass("form-control--secondary")
+        .focus();
+      $(this)
+        .parent()
+        .find(".btn-close-edit-field")
+        .removeClass("invisible");
+    });
+
+    $(".btn-close-edit-field").on("click", function(e) {
+      e.preventDefault();
+      $(this).addClass("invisible");
+      $(this)
+        .parent()
+        .find("input")
+        .addClass("form-control--secondary");
+      $(this)
+        .parent()
+        .find(".btn-edit-field")
+        .removeClass("invisible");
+    });
   });
 });

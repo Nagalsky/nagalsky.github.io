@@ -130,3 +130,30 @@ p {
 .hr--dark {
   border-color: $gray500;
 }
+
+dl {
+  dt {
+    @extend .font-opensans-bold,
+    .text-blue200;
+  }
+
+  dd {
+    @extend .text-black200;
+  }
+}
+
+.mb-xl {
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 120px;
+  }
+}

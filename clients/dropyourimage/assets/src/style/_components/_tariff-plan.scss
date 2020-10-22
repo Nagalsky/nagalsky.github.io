@@ -1,0 +1,73 @@
+/* TARRIF PLAN */
+
+$plan-border-color: #b5b5b5;
+
+
+.tariff-plans {
+    display: grid;
+    grid-gap: 45px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media-breakpoint-up(md) {
+        grid-gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @include media-breakpoint-up(xl) {
+        grid-gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.tariff-plan {
+    @extend .base-radius,
+    .position-relative,
+    .d-flex,
+    .flex-column;
+    border: 1px solid $plan-border-color;
+    padding: 15px;
+    min-width: 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 15px 15px 65px 15px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding: 25px 25px 125px 25px;
+    }
+
+    .price-box {
+        margin-bottom: 35px !important;
+
+        @include media-breakpoint-up(md) {
+            font-size: 22px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 35px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 50px;
+        }
+    }
+
+    &:before {
+        content: attr(data-title);
+        @extend .position-absolute,
+        .font-opensans-semibold,
+        .text-truncate;
+        left: 50%;
+        top: -25px;
+        transform: translateX(-50%);
+    }
+
+    .list-check__item {
+        @extend .text-truncate,
+        .d-block;
+    }
+}
+
+.tariff-plan__title {
+    @extend .text-truncate;
+}

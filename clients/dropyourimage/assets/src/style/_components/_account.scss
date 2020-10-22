@@ -1,0 +1,38 @@
+/* ACCOUNT */
+
+.account {
+    @extend .d-flex,
+    .flex-column,
+    .flex-xl-row;
+}
+
+.account-nav {
+    @extend .flex-shrink-0,
+    .mb-4,
+    .mb-xl-0;
+
+    @include media-breakpoint-up(sm) {
+        width: 130px;
+        margin-right: 60px;
+    }
+}
+
+.account-nav__item {
+    @extend .d-block,
+    .text-xl-right,
+    .fs-18,
+    .text-black500;
+
+    &.active {
+        @extend .text-blue200,
+        .font-opensans-bold;
+    }
+
+    &+.account-nav__item {
+        margin-top: 14px;
+    }
+}
+
+.account-body {
+    @extend .flex-fill;
+}

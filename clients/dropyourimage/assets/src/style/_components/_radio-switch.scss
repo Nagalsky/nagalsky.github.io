@@ -1,0 +1,37 @@
+/* RADIO SWITCH */
+
+.radio-switchs {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.radio-switch {
+    @extend .mb-1;
+
+    [type="radio"] {
+        position: absolute;
+        left: -9999px;
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked {
+            &+.radio-switch__label {
+                @extend .bg-blue200,
+                .text-white;
+            }
+        }
+    }
+}
+
+.radio-switch__label {
+    @extend .base-radius,
+    .mr-3,
+    .mb-1,
+    .font-opensans-semibold,
+    .bg-white,
+    .text-blue200,
+    .d-inline-block,
+    .fs-14;
+    padding: 3px 8px;
+    cursor: pointer;
+}

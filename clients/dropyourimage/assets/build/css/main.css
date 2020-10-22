@@ -5594,9 +5594,9 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
+.bg-white, .form-control--secondary:focus, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td, .popover .popover-header,
-.popover .popover-body, .feedback-box, .box-collapse, .resume {
+.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label {
   background-color: #fff !important; }
 
 .bg-transparent, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-select .dropdown-toggle, .page-link {
@@ -5706,10 +5706,10 @@ button.bg-dark:focus {
 .d-inline {
   display: inline !important; }
 
-.d-inline-block {
+.d-inline-block, .radio-switch__label {
   display: inline-block !important; }
 
-.d-block, .navigation__logo, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body {
+.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item {
   display: block !important; }
 
 .d-table {
@@ -5721,7 +5721,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navigation, .navigation-nav, .navigation-nav__item, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-boxes, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__body-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .resume-footer {
+.d-flex, .navigation, .navigation-nav, .navigation-nav__item, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-boxes, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__body-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .resume-footer, .account, .radio-switchs, .tariff-plan {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5900,7 +5900,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .navigation, .navigation-nav, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .box-toggle, .feedback-box, .box-collapse__body-inner {
+.flex-column, .navigation, .navigation-nav, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .box-toggle, .feedback-box, .box-collapse__body-inner, .account, .tariff-plan {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5915,7 +5915,7 @@ button.bg-dark:focus {
   -webkit-box-direction: reverse !important;
           flex-direction: column-reverse !important; }
 
-.flex-wrap, .feedback-boxes {
+.flex-wrap, .feedback-boxes, .radio-switchs {
   flex-wrap: wrap !important; }
 
 .flex-nowrap {
@@ -5924,7 +5924,7 @@ button.bg-dark:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-box, .box-collapse__heading, .box-collapse__info {
+.flex-fill, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-box, .box-collapse__heading, .box-collapse__info, .account-body {
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important; }
 
@@ -5937,7 +5937,7 @@ button.bg-dark:focus {
           flex-grow: 1 !important; }
 
 .flex-shrink-0, .navigation-nav, .btn-counter, .form-serch__icon, .detail__title, .box-collapse__header-inner, .box-collapse__edit, .resume__open,
-.resume__close {
+.resume__close, .account-nav {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -6009,7 +6009,7 @@ button.bg-dark:focus {
 .align-self-end {
   align-self: flex-end !important; }
 
-.align-self-center {
+.align-self-center, .btn-field-show-password {
   align-self: center !important; }
 
 .align-self-baseline {
@@ -6289,7 +6289,7 @@ button.bg-dark:focus {
     align-self: stretch !important; } }
 
 @media (min-width: 1200px) {
-  .flex-xl-row {
+  .flex-xl-row, .account {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
             flex-direction: row !important; }
@@ -6527,10 +6527,10 @@ button.bg-dark:focus {
   position: static !important; }
 
 .position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
-.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box {
+.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan {
   position: relative !important; }
 
-.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove {
+.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before {
   position: absolute !important; }
 
 .position-fixed, .navigation, .navigation__overlay, .resume {
@@ -6685,7 +6685,7 @@ button.bg-dark:focus {
 .mx-1 {
   margin-right: 0.25rem !important; }
 
-.mb-1, .product__inner, .watermark__inner,
+.mb-1, .product__inner, .watermark__inner, .radio-switch, .radio-switch__label,
 .my-1 {
   margin-bottom: 0.25rem !important; }
 
@@ -6719,7 +6719,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-top: 1rem !important; }
 
-.mr-3, .navigation-nav__icon, .btn-counter, .detail__title,
+.mr-3, .navigation-nav__icon, .btn-counter, .detail__title, .radio-switch__label,
 .mx-3 {
   margin-right: 1rem !important; }
 
@@ -6743,7 +6743,7 @@ button.bg-dark:focus {
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4, .navigation-nav, .price-box:not(:last-child), .bootstrap-table, .feedback-box__icon, .box-collapse__heading-logo, .box-collapse__info,
+.mb-4, .navigation-nav, .price-box:not(:last-child), .bootstrap-table, .feedback-box__icon, .box-collapse__heading-logo, .box-collapse__info, .account-nav,
 .my-4 {
   margin-bottom: 1.5rem !important; }
 
@@ -7792,7 +7792,7 @@ button.bg-dark:focus {
   .mr-xl-0,
   .mx-xl-0 {
     margin-right: 0 !important; }
-  .mb-xl-0,
+  .mb-xl-0, .account-nav,
   .my-xl-0 {
     margin-bottom: 0 !important; }
   .ml-xl-0,
@@ -8303,7 +8303,7 @@ button.bg-dark:focus {
 .text-nowrap, .bootstrap-table .btn-table {
   white-space: nowrap !important; }
 
-.text-truncate, .detail__value {
+.text-truncate, .btn-field-show-password, .detail__value, .tariff-plan:before, .tariff-plan .list-check__item, .tariff-plan__title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -8344,7 +8344,7 @@ button.bg-dark:focus {
 @media (min-width: 1200px) {
   .text-xl-left {
     text-align: left !important; }
-  .text-xl-right {
+  .text-xl-right, .account-nav__item {
     text-align: right !important; }
   .text-xl-center {
     text-align: center !important; } }
@@ -8384,7 +8384,7 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .navigation, .navigation-nav__item, .btn-primary-outline .btn-counter {
+.text-white, .navigation, .navigation-nav__item, .btn-primary-outline .btn-counter, .radio-switch [type="radio"]:checked + .radio-switch__label {
   color: #fff !important; }
 
 .text-primary {
@@ -10347,7 +10347,7 @@ div.fixed-table-scroll-outer {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .navigation, .navigation-nav__item, .btn-primary-outline .btn-counter {
+.text-white, .navigation, .navigation-nav__item, .btn-primary-outline .btn-counter, .radio-switch [type="radio"]:checked + .radio-switch__label {
   color: #ffffff !important; }
 
 .text-black {
@@ -10356,7 +10356,7 @@ div.fixed-table-scroll-outer {
 .text-black100 {
   color: #0c0c0c !important; }
 
-.text-black200, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span,
+.text-black200, dl dd, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span,
 .popover .popover-body, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label {
   color: #474747 !important; }
 
@@ -10366,13 +10366,13 @@ div.fixed-table-scroll-outer {
 .text-black400, .box-collapse-create {
   color: #3a3a3a !important; }
 
-.text-black500, .box-toggle {
+.text-black500, .box-toggle, .account-nav__item {
   color: #2a2a2a !important; }
 
 .text-blue100 {
   color: #1c2c44 !important; }
 
-.text-blue200, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .feedback-box__icon, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .form-serch__icon, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link {
+.text-blue200, dl dt, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .feedback-box__icon, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .form-serch__icon, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .account-nav__item.active, .radio-switch__label {
   color: #152339 !important; }
 
 .text-gray {
@@ -10417,9 +10417,12 @@ div.fixed-table-scroll-outer {
 .text-silver {
   color: #d5d5d5 !important; }
 
-.bg-white, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
+.text-silver50 {
+  color: #eeeeee !important; }
+
+.bg-white, .form-control--secondary:focus, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td, .popover .popover-header,
-.popover .popover-body, .feedback-box, .box-collapse, .resume {
+.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -10443,7 +10446,7 @@ div.fixed-table-scroll-outer {
 .bg-blue100, .navigation-nav__item.active, .navigation-nav__item:hover {
   background-color: #1c2c44 !important; }
 
-.bg-blue200, .btn-primary-outline .btn-counter, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before {
+.bg-blue200, .btn-primary-outline .btn-counter, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label {
   background-color: #152339 !important; }
 
 .bg-gray {
@@ -10488,6 +10491,9 @@ div.fixed-table-scroll-outer {
 .bg-silver {
   background-color: #d5d5d5 !important; }
 
+.bg-silver50, .form-control--secondary {
+  background-color: #eeeeee !important; }
+
 /*************************
 	Fonts variables
 *************************/
@@ -10496,12 +10502,12 @@ div.fixed-table-scroll-outer {
 
 .font-opensans-semibold, .navigation-nav__item, .form-control-label-box .form-control-label, .btn-counter, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .detail__title, .product__description, .checkbox__label, .resume .table > thead > tr > th,
 .resume .table > thead > tr td, .resume .table > tfoot > tr > th,
-.resume .table > tfoot > tr td {
+.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before {
   font-family: "OpenSans-SemiBold" !important; }
 
-.font-opensans-bold, .bootstrap-table > thead > tr > td, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
+.font-opensans-bold, dl dt, .btn-field-show-password, .bootstrap-table > thead > tr > td, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
 .resume .table > tfoot > tr td:last-child, .resume__open,
-.resume__close {
+.resume__close, .account-nav__item.active {
   font-family: "OpenSans-Bold" !important; }
 
 .font-segoeui-regular, .price-box__currency {
@@ -10519,7 +10525,7 @@ div.fixed-table-scroll-outer {
 /*************************
 	Base variables
 *************************/
-.base-radius, .btn-counter, .uploaded-image-box {
+.base-radius, .btn-counter, .uploaded-image-box, .radio-switch__label, .tariff-plan {
   border-radius: 2px !important; }
 
 /*************************
@@ -10708,6 +10714,18 @@ p {
 .hr--dark {
   border-color: #707070; }
 
+.mb-xl {
+  margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    .mb-xl {
+      margin-bottom: 60px; } }
+  @media (min-width: 992px) {
+    .mb-xl {
+      margin-bottom: 80px; } }
+  @media (min-width: 1200px) {
+    .mb-xl {
+      margin-bottom: 120px; } }
+
 /* FLEX */
 /* HAS BG */
 .has-bg {
@@ -10729,7 +10747,7 @@ p {
   font-size: 13px !important; }
 
 .fs-14, .price-box__item, .box-toggle, .box-collapse-create, .resume__open,
-.resume__close {
+.resume__close, .radio-switch__label {
   font-size: 14px !important; }
 
 .fs-15, .price-box__currency {
@@ -10742,7 +10760,7 @@ p {
   font-size: 17px !important; }
 
 .fs-18, .navigation__toggle, .box-collapse__toggle, .list-check__item:before, .resume .table > thead > tr > th,
-.resume .table > thead > tr td {
+.resume .table > thead > tr td, .account-nav__item {
   font-size: 18px !important; }
 
 .fs-19 {
@@ -10768,6 +10786,18 @@ p {
 
 .fs-26 {
   font-size: 26px !important; }
+
+.fs-27 {
+  font-size: 27px !important; }
+
+.fs-28 {
+  font-size: 28px !important; }
+
+.fs-29 {
+  font-size: 29px !important; }
+
+.fs-30 {
+  font-size: 30px !important; }
 
 /* RESET STYLES */
 *:hover, *:focus, *:active {
@@ -10970,8 +11000,12 @@ ul {
     color: #c1c1c1;
     font-size: 16px;
     font-family: "OpenSans-Regular"; }
+  .form-control--secondary {
+    border-color: #eeeeee; }
   .form-control.form-control--sm {
     height: 37px; }
+  .form-control.form-control--xs {
+    height: 33px; }
 
 textarea.form-control {
   resize: none; }
@@ -10994,6 +11028,24 @@ label {
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
+
+.btn-field-show-password {
+  min-height: auto;
+  cursor: pointer; }
+
+.btn-edit-field,
+.btn-close-edit-field {
+  -webkit-transition: 0;
+  transition: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-edit-field,
+    .btn-close-edit-field {
+      -webkit-transition: none;
+      transition: none; } }
+  .btn-edit-field.invisible,
+  .btn-close-edit-field.invisible {
+    width: 0;
+    height: 0; }
 
 /* BUTTONS */
 .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
@@ -11074,6 +11126,10 @@ label {
       font-size: 14px;
       padding: 13px 40px;
       min-height: 49px; } }
+  .btn-xs {
+    font-size: 14px;
+    padding: 0px 16px;
+    min-height: 23px; }
   @media (min-width: 576px) {
     .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navigation__toggle, .btn-group-sm > .box-toggle, .btn-group-sm > .box-collapse-create, .btn-group-sm > .resume__open,
     .btn-group-sm > .resume__close {
@@ -11083,6 +11139,10 @@ label {
     .btn-long {
       padding-left: 28px;
       padding-right: 28px; } }
+  @media (min-width: 576px) {
+    .btn-long-lg {
+      padding-left: 60px;
+      padding-right: 60px; } }
   @media (min-width: 576px) {
     .btn-long-xl {
       padding-left: 100px;
@@ -11135,6 +11195,9 @@ label {
   @media (min-width: 1200px) {
     .box--sm {
       padding: 25px 30px; } }
+  @media (min-width: 1200px) {
+    .box--xl {
+      padding: 40px 66px; } }
 
 .box-toggle {
   padding-right: 50px; }
@@ -11658,3 +11721,65 @@ label {
     .resume-footer .btn, .resume-footer .navigation__toggle, .resume-footer .box-toggle, .resume-footer .box-collapse-create, .resume-footer .resume__open,
     .resume-footer .resume__close {
       font-size: 11px; } }
+
+/* ACCOUNT */
+@media (min-width: 576px) {
+  .account-nav {
+    width: 130px;
+    margin-right: 60px; } }
+
+.account-nav__item + .account-nav__item {
+  margin-top: 14px; }
+
+/* RADIO SWITCH */
+.radio-switch [type="radio"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  visibility: hidden; }
+
+.radio-switch__label {
+  padding: 3px 8px;
+  cursor: pointer; }
+
+/* TARRIF PLAN */
+.tariff-plans {
+  display: grid;
+  grid-gap: 45px;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  @media (min-width: 768px) {
+    .tariff-plans {
+      grid-gap: 12px;
+      grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 1200px) {
+    .tariff-plans {
+      grid-gap: 12px;
+      grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.tariff-plan {
+  border: 1px solid #b5b5b5;
+  padding: 15px;
+  min-width: 0; }
+  @media (min-width: 768px) {
+    .tariff-plan {
+      padding: 15px 15px 65px 15px; } }
+  @media (min-width: 1700px) {
+    .tariff-plan {
+      padding: 25px 25px 125px 25px; } }
+  .tariff-plan .price-box {
+    margin-bottom: 35px !important; }
+    @media (min-width: 768px) {
+      .tariff-plan .price-box {
+        font-size: 22px; } }
+    @media (min-width: 1200px) {
+      .tariff-plan .price-box {
+        font-size: 35px; } }
+    @media (min-width: 1700px) {
+      .tariff-plan .price-box {
+        font-size: 50px; } }
+  .tariff-plan:before {
+    content: attr(data-title);
+    left: 50%;
+    top: -25px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
