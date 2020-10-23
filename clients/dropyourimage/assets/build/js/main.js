@@ -24786,6 +24786,18 @@ $(document).ready(function() {
         .parent()
         .toggleClass("is-opened");
     });
+
+    $(".box-collapse__checkbox").change(function() {
+      if ($(this).is(":checked")) {
+        $(this)
+          .closest(".box-collapse--checkbox")
+          .addClass("is-opened");
+      } else {
+        $(this)
+          .closest(".box-collapse--checkbox")
+          .removeClass("is-opened");
+      }
+    });
   });
 
   //Get height of the page and set it to collapse box(for custom vertical scrollbar)

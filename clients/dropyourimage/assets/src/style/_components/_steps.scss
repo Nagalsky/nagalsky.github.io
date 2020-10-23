@@ -1,0 +1,149 @@
+/* STEPS */
+
+$step-color: $gray100;
+$step-active-color: $blue200;
+$step-counter-size: 34px;
+
+.steps {
+    display: flex;
+}
+
+.step {
+    @extend .position-relative,
+    .text-center,
+    .d-flex,
+    .flex-column,
+    .align-items-center,
+    .flex-fill;
+    color: $step-color;
+    z-index: 20;
+
+    @include media-breakpoint-up(sm) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    &:first-child {
+        @extend .pl-0;
+
+        @include media-breakpoint-down(xs) {
+            align-items: flex-start !important;
+        }
+
+        &:before {
+            content: none !important;
+        }
+
+        &:after {
+            width: 65% !important;
+
+            @include media-breakpoint-down(xs) {
+                width: 85% !important;
+            }
+        }
+    }
+
+    &:last-child {
+        @extend .pr-0;
+
+        @include media-breakpoint-down(xs) {
+            align-items: flex-end !important;
+        }
+
+        &:after {
+            content: none !important;
+        }
+
+        &:before {
+            width: 65% !important;
+
+            @include media-breakpoint-down(xs) {
+                width: 85% !important;
+            }
+        }
+    }
+
+
+    &.is-active {
+        color: $step-active-color;
+
+        .step__inner {
+            background-color: $step-active-color;
+        }
+
+        &:before,
+        &:after {
+            background-color: $step-active-color;
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        @extend .position-absolute,
+        .w-50;
+        height: 4px;
+        background-color: $step-color;
+        top: 10px;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            top: 15px;
+        }
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
+
+.step__inner {
+    @extend .d-inline-flex,
+    .align-items-center,
+    .justify-content-center,
+    .rounded-circle,
+    .text-white,
+    .font-ubuntu-medium;
+    margin-bottom: 10px;
+    width: $step-counter-size - 10px;
+    height: $step-counter-size - 10px;
+    background-color: $step-color;
+
+    @include media-breakpoint-up(md) {
+        width: $step-counter-size;
+        height: $step-counter-size;
+        font-size: 16px;
+    }
+}
+
+.step__title {
+    @extend .font-opensans-semibold;
+
+    @include media-breakpoint-down(xs) {
+        font-size: 11px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 16px;
+    }
+
+}

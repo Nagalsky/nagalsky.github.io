@@ -24,6 +24,21 @@
             @extend .d-block;
         }
     }
+
+    &--checkbox {
+        .box-collapse__toggle {
+            @extend .d-none;
+        }
+
+        .box-collapse__header {
+            padding: 15px;
+
+            @include media-breakpoint-up(xl) {
+                padding: 24px 30px;
+                min-height: 73px;
+            }
+        }
+    }
 }
 
 .box-collapse__toggle {
@@ -61,7 +76,7 @@
     .mr-md-4,
     .mb-4,
     .mb-lg-0;
-    max-width: 155px;
+    max-width: 100px;
 }
 
 .box-collapse__header-inner {
