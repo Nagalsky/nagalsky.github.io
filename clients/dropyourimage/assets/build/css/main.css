@@ -5639,7 +5639,7 @@ button.bg-dark:focus {
 
 .bg-white, .form-control--secondary:focus, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td, .popover .popover-header,
-.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label {
+.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label, .radio-box__label {
   background-color: #fff !important; }
 
 .bg-transparent, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-select .dropdown-toggle, .page-link {
@@ -5729,7 +5729,7 @@ button.bg-dark:focus {
 .rounded-lg {
   border-radius: 0.3rem !important; }
 
-.rounded-circle, .radio__label:before, .radio__label:after, .step__inner {
+.rounded-circle, .radio__label:before, .radio__label:after, .step__inner, .radio-box__label:before, .radio-box__label:after {
   border-radius: 50% !important; }
 
 .rounded-pill {
@@ -5743,7 +5743,7 @@ button.bg-dark:focus {
   clear: both;
   content: ""; }
 
-.d-none, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body {
+.d-none, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body, .radio-box__hidden-box {
   display: none !important; }
 
 .d-inline {
@@ -5752,7 +5752,7 @@ button.bg-dark:focus {
 .d-inline-block, .radio-switch__label {
   display: inline-block !important; }
 
-.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item, .accordion__toggle {
+.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item, .accordion__toggle, .radio-box [type="radio"]:checked + .radio-box__label .radio-box__hidden-box, .radio-box__label {
   display: block !important; }
 
 .d-table {
@@ -6570,10 +6570,10 @@ button.bg-dark:focus {
   position: static !important; }
 
 .position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
-.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan, .accordion__toggle, .step {
+.popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan, .accordion__toggle, .step, .radio-box__label {
   position: relative !important; }
 
-.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before, .accordion__toggle:before, .step:before, .step:after {
+.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before, .accordion__toggle:before, .step:before, .step:after, .radio-box__label:before, .radio-box__label:after {
   position: absolute !important; }
 
 .position-fixed, .navigation, .navigation__overlay, .resume {
@@ -6696,7 +6696,7 @@ button.bg-dark:focus {
   content: "";
   background-color: rgba(0, 0, 0, 0); }
 
-.m-0, .bootstrap-table .bs-checkbox label span, .radio__label, .checkbox__label {
+.m-0, .bootstrap-table .bs-checkbox label span, .radio__label, .checkbox__label, .radio-box__label {
   margin: 0 !important; }
 
 .mt-0,
@@ -6777,7 +6777,7 @@ button.bg-dark:focus {
 .m-4 {
   margin: 1.5rem !important; }
 
-.mt-4,
+.mt-4, .radio-box__hidden-box,
 .my-4 {
   margin-top: 1.5rem !important; }
 
@@ -10400,7 +10400,7 @@ div.fixed-table-scroll-outer {
   color: #0c0c0c !important; }
 
 .text-black200, dl dd, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span,
-.popover .popover-body, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle {
+.popover .popover-body, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle, .radio-box__label {
   color: #474747 !important; }
 
 .text-black300 {
@@ -10465,7 +10465,7 @@ div.fixed-table-scroll-outer {
 
 .bg-white, .form-control--secondary:focus, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td, .popover .popover-header,
-.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label {
+.popover .popover-body, .feedback-box, .box-collapse, .resume, .radio-switch__label, .radio-box__label {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -10489,7 +10489,7 @@ div.fixed-table-scroll-outer {
 .bg-blue100, .navigation-nav__item.active, .navigation-nav__item:hover {
   background-color: #1c2c44 !important; }
 
-.bg-blue200, .btn-primary-outline .btn-counter, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label {
+.bg-blue200, .btn-primary-outline .btn-counter, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label, .radio-box__label:after {
   background-color: #152339 !important; }
 
 .bg-gray {
@@ -10540,7 +10540,7 @@ div.fixed-table-scroll-outer {
 /*************************
 	Fonts variables
 *************************/
-.font-opensans-regular, .price-box__item, .bootstrap-select .dropdown-toggle {
+.font-opensans-regular, .price-box__item, .bootstrap-select .dropdown-toggle, .radio-box__label {
   font-family: "OpenSans-Regular" !important; }
 
 .font-opensans-semibold, .navigation-nav__item, .form-control-label-box .form-control-label, .btn-counter, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .detail__title, .product__description, .checkbox__label, .resume .table > thead > tr > th,
@@ -10568,7 +10568,7 @@ div.fixed-table-scroll-outer {
 /*************************
 	Base variables
 *************************/
-.base-radius, .btn-counter, .uploaded-image-box, .radio-switch__label, .tariff-plan {
+.base-radius, .btn-counter, .uploaded-image-box, .radio-switch__label, .tariff-plan, .radio-box__label {
   border-radius: 2px !important; }
 
 /*************************
@@ -10799,7 +10799,7 @@ b {
 .fs-15, .price-box__currency {
   font-size: 15px !important; }
 
-.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle {
+.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle, .radio-box__label {
   font-size: 16px !important; }
 
 .fs-17 {
@@ -11941,3 +11941,58 @@ label {
 @media (min-width: 992px) {
   .step__title {
     font-size: 16px; } }
+
+/* RADIO-box */
+.radio-box + .radio-box {
+  margin-top: 20px; }
+
+.radio-box [type="radio"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  visibility: hidden; }
+  .radio-box [type="radio"]:checked + .radio-box__label {
+    box-shadow: 0px 0px 0px 2px #152339 inset;
+    border-color: #152339; }
+    .radio-box [type="radio"]:checked + .radio-box__label:before {
+      border-color: #152339; }
+    .radio-box [type="radio"]:checked + .radio-box__label:after {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+
+.radio-box__label {
+  cursor: pointer;
+  padding: 15px 15px 15px 58px;
+  border: 1px solid #707070; }
+  @media (min-width: 768px) {
+    .radio-box__label {
+      padding: 25px 25px 25px 78px; } }
+  .radio-box__label:before, .radio-box__label:after {
+    content: ''; }
+  .radio-box__label:before {
+    left: 15px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #434343;
+    top: 30px; }
+    @media (min-width: 576px) {
+      .radio-box__label:before {
+        left: 28px;
+        top: 50px; } }
+  .radio-box__label:after {
+    left: 21px;
+    width: 16px;
+    height: 16px;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    top: 36px; }
+    @media (prefers-reduced-motion: reduce) {
+      .radio-box__label:after {
+        -webkit-transition: none;
+        transition: none; } }
+    @media (min-width: 576px) {
+      .radio-box__label:after {
+        left: 34px;
+        top: 56px; } }
