@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+    <title>Step 4 page</title>
+</head>
+<body>
+    
+    //= template/navigation.html
+
+    <main class="main">
+        <div class="container-fluid">
+            <div class="mb-5" data-get-heading-height>
+                <div class="d-flex align-items-center mb-1">
+                    <div class="steps d-none d-sm-flex">
+                        <div class="step is-active">
+                            <div class="step__inner">1</div>
+                            <p class="step__title">Specificatie</p>
+                        </div>
+                        <div class="step is-active">
+                            <div class="step__inner">2</div>
+                            <p class="step__title">Upload methode</p>
+                        </div>
+                        <div class="step is-active">
+                            <div class="step__inner">3</div>
+                            <p class="step__title">Uploaden</p>
+                        </div>
+                        <div class="step is-active">
+                            <div class="step__inner">4</div>
+                            <p class="step__title">Afronden</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="navigation__toggle ml-auto">
+                        <i class="icon-menu"></i>
+                    </button>
+                </div>
+
+                <div class="steps d-sm-none mb-4">
+                    <div class="step is-active">
+                        <div class="step__inner">1</div>
+                        <p class="step__title">Specificatie</p>
+                    </div>
+                    <div class="step is-active">
+                        <div class="step__inner">2</div>
+                        <p class="step__title">Upload methode</p>
+                    </div>
+                    <div class="step is-active">
+                        <div class="step__inner">3</div>
+                        <p class="step__title">Uploaden</p>
+                    </div>
+                    <div class="step is-active">
+                        <div class="step__inner">4</div>
+                        <p class="step__title">Afronden</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-md-between mt-sm-5 heading">
+                    <h1 class="mb-md-0 mr-md-4 fs-28">Rond uw bestelling af</h1>
+                    <a href="#" class="btn btn-success btn-lg btn-long-lg">Volgende</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-between">
+                <div class="col-xxl-8 col-xl-8 mb-4 mb-xl-0">
+                    <h3>Bestelling details</h3>
+
+                    <div class="table-responsive mb-xl">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Specificatie</th>
+                                    <th>Aantal</th>
+                                    <th>Prijs p/afbeelding</th>
+                                    <th class="text-right">Prijs</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Afbeeldingen</td>
+                                    <td>Gebakjes</td>
+                                    <td>200</td>
+                                    <td>€1,25</td>
+                                    <td class="text-right">€250</td>
+                                </tr>
+                                <tr>
+                                    <td>Afbeeldingen</td>
+                                    <td>Gratis afbeeldingen</td>
+                                    <td>5</td>
+                                    <td>€1,25</td>
+                                    <td class="text-right">-€6,25</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot class="fs-18">
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>Totaal:</th>
+                                <th class="text-right">Prijs</th>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <h3 class="mb-2">Betaalmethode</h3>
+                    <p class="fs-16 text-black200">Kies uw betaalmethode en rond uw bestelling af.</p>
+
+                    <div class="payment-method">
+                        <div class="payment-method__item">
+                            <p class="payment-method__title">Credit card</p>
+                            <div class="payment-method-radio">
+                                <input type="radio" id="payment-method-radio-1" name="payment-method-radio-group" checked>
+                                <label for="payment-method-radio-1" class="payment-method-radio__label">
+                                    <img src="img/temp/cards.png" alt="" class="img-fluid">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="payment-method__item">
+                            <p class="payment-method__title">PayPal</p>
+                            <div class="payment-method-radio">
+                                <input type="radio" id="payment-method-radio-2" name="payment-method-radio-group">
+                                <label for="payment-method-radio-2" class="payment-method-radio__label">
+                                    <img src="img/temp/paypal.png" alt="" class="img-fluid">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="payment-method__item">
+                            <p class="payment-method__title">iDeal</p>
+                            <div class="payment-method-radio">
+                                <input type="radio" id="payment-method-radio-3" name="payment-method-radio-group">
+                                <label for="payment-method-radio-3" class="payment-method-radio__label">
+                                    <img src="img/temp/deal.png" alt="" class="img-fluid">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-3 col-xl-4">
+                    <h3>Adresgegevens</h3>
+
+                    <form action="">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="form-group">
+                                    <label for="form-field-Straatnaam">Straatnaam</label>
+                                    <input type="text" class="form-control" id="form-field-Straatnaam" placeholder="Edisonstraat">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="form-field-Huisnummer">Huisnummer</label>
+                                    <input type="text" class="form-control" id="form-field-Huisnummer" placeholder="2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-field-Postcode">Postcode</label>
+                            <input type="text" class="form-control" id="form-field-Postcode" placeholder="2171 TV">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-field-Plaats">Plaats</label>
+                            <input type="text" class="form-control" id="form-field-Plaats" placeholder="Sassenheim">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/modals.html
+
+    //= template/scripts-dependencies.html
+</body>
+</html>
