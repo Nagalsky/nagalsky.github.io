@@ -19,6 +19,9 @@
 // Bootstrap colorpicker
 //= ../../../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js
 
+// Dropzone
+//= ../../../node_modules/dropzone/dist/dropzone.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js
