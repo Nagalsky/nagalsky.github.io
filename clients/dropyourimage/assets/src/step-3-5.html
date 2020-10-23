@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+    <title>Step 3 page</title>
+</head>
+<body>
+    
+    //= template/navigation.html
+
+    <main class="main">
+        <div class="container-fluid">
+            <div class="mb-5" data-get-heading-height>
+                <div class="d-flex align-items-center mb-1">
+                    <div class="steps d-none d-sm-flex">
+                        <div class="step is-active">
+                            <div class="step__inner">1</div>
+                            <p class="step__title">Specificatie</p>
+                        </div>
+                        <div class="step is-active">
+                            <div class="step__inner">2</div>
+                            <p class="step__title">Upload methode</p>
+                        </div>
+                        <div class="step is-active">
+                            <div class="step__inner">3</div>
+                            <p class="step__title">Uploaden</p>
+                        </div>
+                        <div class="step">
+                            <div class="step__inner">4</div>
+                            <p class="step__title">Afronden</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="navigation__toggle ml-auto">
+                        <i class="icon-menu"></i>
+                    </button>
+                </div>
+
+                <div class="steps d-sm-none mb-4">
+                    <div class="step is-active">
+                        <div class="step__inner">1</div>
+                        <p class="step__title">Specificatie</p>
+                    </div>
+                    <div class="step is-active">
+                        <div class="step__inner">2</div>
+                        <p class="step__title">Upload methode</p>
+                    </div>
+                    <div class="step is-active">
+                        <div class="step__inner">3</div>
+                        <p class="step__title">Uploaden</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__inner">4</div>
+                        <p class="step__title">Afronden</p>
+                    </div>
+                </div>
+                
+                <h1 class="mb-md-0 mr-md-4 fs-28 mt-sm-5 heading">SFTP upload</h1>
+            </div>
+
+            <div class="row justify-content-between">
+                <div class="col-xxl-5 col-xl-6 col-xl-6 mb-4 mb-xl-0">
+                    <h3>Stappenplan SFTP upload</h3>
+                    <p class="fs-16 text-black200">Gebruik onze SFTP server om snel al uw afbeeldingen te uploaden. Dit is erg handig voor grote aantallen afbeeldingen. Gebruik de onderstaande gegevens om in te loggen.</p>
+                    <div class="box mb-lg">
+                        <dl class="row fs-16 mb-0">
+                            <dt class="col-sm-5 col-xxl-4">Host:</dt>
+                            <dd class="col-sm-7 col-xxl-6">ftp.dropyourimage.com</dd>
+
+                            <dt class="col-sm-5 col-xxl-4">Gebruikersnaam:</dt>
+                            <dd class="col-sm-7 col-xxl-6">Uw e-mailadres</dd>
+
+                            <dt class="col-sm-5 col-xxl-4">Wachtwoord:</dt>
+                            <dd class="col-sm-7 col-xxl-6">Uw naam</dd>
+
+                            <dt class="col-sm-5 col-xxl-4">Locatie:</dt>
+                            <dd class="col-sm-7 col-xxl-6"><i>/orderid/input</i></dd>
+
+                            <dt class="col-sm-5 col-xxl-4">Persoonlijke sleutel:</dt>
+                            <dd class="col-sm-7 col-xxl-6"><a href="#" class="btn btn-primary btn-xs">Download</a></dd>
+                        </dl>
+                    </div>
+
+                    <p class="fs-16 text-black200">Na het inloggen moeten de bestanden in de onderstaande map worden geplaats.</p>
+                    <div class="box mb-lg">
+                        <dl class="row fs-16 mb-0">
+                            <dt class="col-sm-5 col-xxl-4">Upload:</dt>
+                            <dd class="col-sm-7 col-xxl-6 mb-0"><i>/orderid/input</i></dd>
+                        </dl>
+                    </div>
+
+                    <p class="fs-16 text-black200">Wacht tot alle bestanden zijn geupload. Als wij zien dat er geen uploads meer plaatsvinden wordt de order aangemaakt  en de folder gesloten. De order staat op dit moment klaar in uw account.</p>
+                </div>
+
+                <div class="col-xxl-5 col-xl-6">
+                    <h3>SFTP documentatie</h3>
+                    <p class="fs-16 text-black200">Geen ervaring met SFTP of FileZilla? bekijk onze documentatie met de onderstaande knop.</p>
+                    <a href="#" class="btn btn-primary btn-lg font-segoeui-semibold fs-14 mb-xl">Naar documentatie <i class="icon-launch ml-2 fs-18"></i></a>
+
+                    <h3>SFTP Client</h3>
+                    <p class="fs-16 text-black200">U kunt meerdere soorten SFTP programma's gebruiken om met onze servers te verbinden. Als u nog geen SFTP programma geïnstalleerd heeft, raden wij FileZilla aan. Dit is een gratis applicatie voor Windows en MacOS. U kunt dit programma downloaden met de onderstaande knop.</p>
+                    <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-end">
+                        <img src="img/temp/fz.svg" alt="" class="imf-fluid mr-sm-4 mb-4 mb-sm-0">
+                        <a href="#" class="btn btn-primary btn-lg font-segoeui-semibold fs-14">Downloadpagina <i class="icon-launch ml-2 fs-18"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/modals.html
+
+    //= template/scripts-dependencies.html
+</body>
+</html>

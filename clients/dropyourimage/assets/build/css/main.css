@@ -5764,7 +5764,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navigation, .navigation-nav, .navigation-nav__item, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-boxes, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__body-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .resume-footer, .account, .radio-switchs, .tariff-plan, .step, .dropzone, .dropzone__message {
+.d-flex, .navigation, .navigation-nav, .navigation-nav__item, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-boxes, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__body-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .resume-footer, .account, .radio-switchs, .tariff-plan, .step, .dropzone, .dropzone__message, .upload-state-box {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5967,7 +5967,7 @@ button.bg-dark:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-box, .box-collapse__heading, .box-collapse__info, .account-body, .step, .dropzone__message-body {
+.flex-fill, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .feedback-box, .box-collapse__heading, .box-collapse__info, .account-body, .step, .dropzone__message-body, .upload-state-box__text-box {
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important; }
 
@@ -5980,7 +5980,7 @@ button.bg-dark:focus {
           flex-grow: 1 !important; }
 
 .flex-shrink-0, .navigation-nav, .btn-counter, .form-serch__icon, .detail__title, .box-collapse__header-inner, .box-collapse__edit, .resume__open,
-.resume__close, .account-nav, .dropzone__icon {
+.resume__close, .account-nav, .dropzone__icon, .upload-state-box__img {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -6009,7 +6009,7 @@ button.bg-dark:focus {
   -webkit-box-align: start !important;
           align-items: flex-start !important; }
 
-.align-items-end {
+.align-items-end, .upload-state-box {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
@@ -6645,7 +6645,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo, .accordion__toggle {
+.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo, .accordion__toggle, .upload-state-box__img {
   width: 100% !important; }
 
 .w-auto {
@@ -6708,7 +6708,7 @@ button.bg-dark:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0,
+.mb-0, .upload-state-box__title,
 .my-0,
 .watermark .radio {
   margin-bottom: 0 !important; }
@@ -6782,7 +6782,7 @@ button.bg-dark:focus {
   margin-top: 1.5rem !important; }
 
 .mr-4, .form-serch__icon, .resume__open,
-.resume__close,
+.resume__close, .upload-state-box__img,
 .mx-4 {
   margin-right: 1.5rem !important; }
 
@@ -10770,7 +10770,7 @@ div.fixed-table-scroll-outer {
 .text-blue100 {
   color: #1c2c44 !important; }
 
-.text-blue200, dl dt, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .feedback-box__icon, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .form-serch__icon, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .account-nav__item.active, .radio-switch__label, .dropzone__message {
+.text-blue200, dl dt, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .feedback-box__icon, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .form-serch__icon, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .account-nav__item.active, .radio-switch__label, .dropzone__message, .upload-state-box__state {
   color: #152339 !important; }
 
 .text-gray {
@@ -10817,6 +10817,9 @@ div.fixed-table-scroll-outer {
 
 .text-silver50 {
   color: #eeeeee !important; }
+
+.text-silver100, .upload-state-box__title {
+  color: #8d8d8d !important; }
 
 .bg-white, .form-control--secondary:focus, .btn-primary-outline:hover .btn-counter, .btn-primary-outline:focus .btn-counter, .btn-primary-outline:active .btn-counter, .box, .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td, .popover .popover-header,
@@ -10892,6 +10895,9 @@ div.fixed-table-scroll-outer {
 .bg-silver50, .form-control--secondary {
   background-color: #eeeeee !important; }
 
+.bg-silver100 {
+  background-color: #8d8d8d !important; }
+
 /*************************
 	Fonts variables
 *************************/
@@ -10900,7 +10906,7 @@ div.fixed-table-scroll-outer {
 
 .font-opensans-semibold, .navigation-nav__item, .form-control-label-box .form-control-label, .btn-counter, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .detail__title, .product__description, .checkbox__label, .resume .table > thead > tr > th,
 .resume .table > thead > tr td, .resume .table > tfoot > tr > th,
-.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before, .accordion__toggle, .step__title, .dropzone__subtitle {
+.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before, .accordion__toggle, .step__title, .dropzone__subtitle, .upload-state-box__title {
   font-family: "OpenSans-SemiBold" !important; }
 
 .font-opensans-bold, dl dt, .btn-field-show-password, .bootstrap-table > thead > tr > td, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
@@ -10919,6 +10925,9 @@ div.fixed-table-scroll-outer {
 
 .font-ubuntu-medium, .price-box, .step__inner {
   font-family: "Ubuntu-Medium" !important; }
+
+.font-ubuntu-bold, .upload-state-box__state {
+  font-family: "Ubuntu-Bold" !important; }
 
 .font-icons:before, .bootstrap-table .table > thead th .sortable:before, .box-collapse__toggle:before, .list-check__item:before, .accordion__toggle:before {
   font-family: "icomoon"; }
@@ -11127,6 +11136,12 @@ p {
     .mb-xl {
       margin-bottom: 120px; } }
 
+.mb-lg {
+  margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .mb-lg {
+      margin-bottom: 60px; } }
+
 b {
   font-family: "OpenSans-Bold"; }
 
@@ -11157,7 +11172,7 @@ b {
 .fs-15, .price-box__currency {
   font-size: 15px !important; }
 
-.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle, .radio-box__label {
+.fs-16, .navigation-nav__item, .form-control-label-box .form-control-label, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-toggle, .bootstrap-select .dropdown-menu .dropdown-menu a, .checkbox__label, .accordion, .accordion__toggle, .radio-box__label, .upload-state-box__title {
   font-size: 16px !important; }
 
 .fs-17 {
@@ -11188,7 +11203,7 @@ b {
 .fs-25, .navigation-nav__icon {
   font-size: 25px !important; }
 
-.fs-26 {
+.fs-26, .upload-state-box__state {
   font-size: 26px !important; }
 
 .fs-27 {
@@ -11372,6 +11387,13 @@ ul {
   font-family: 'Ubuntu-Medium';
   src: url("../fonts/ubuntu/Ubuntu-Medium.woff2") format("woff2"), url("../fonts/ubuntu/Ubuntu-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url("../fonts/ubuntu/Ubuntu-Bold.woff2") format("woff2"), url("../fonts/ubuntu/Ubuntu-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
@@ -12375,3 +12397,10 @@ label {
   @media (min-width: 992px) {
     .dropzone__icon {
       font-size: 80px; } }
+
+/* UPLOAD STATE BOX */
+.upload-state-box__img {
+  max-width: 92px; }
+
+.upload-state-box__text-box {
+  margin-bottom: 40px; }
