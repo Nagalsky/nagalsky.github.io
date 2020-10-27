@@ -1732,12 +1732,12 @@ pre {
     .table-responsive-xxl > .table-bordered {
       border: 0; } }
 
-.table-responsive {
+.table-responsive, .bootstrap-table, .bootstrap-table .fixed-table-container {
   display: block;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; }
-  .table-responsive > .table-bordered {
+  .table-responsive > .table-bordered, .bootstrap-table > .table-bordered, .bootstrap-table .fixed-table-container > .table-bordered {
     border: 0; }
 
 .form-control {
@@ -11993,6 +11993,10 @@ label {
 
 .page-link {
   border-radius: 0 !important; }
+  @media (max-width: 575.98px) {
+    .page-link {
+      padding-left: 6px !important;
+      padding-right: 6px !important; } }
 
 /* DETAILS */
 .details:not(:last-child) {
