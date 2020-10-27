@@ -28508,17 +28508,17 @@ $(document).ready(function() {
   });
 
   $(function() {
-    $("[data-radio-collapse-child]").on("change", function(e) {
-      if ($(this).is(":checked")) {
+    $("[data-radio-collapse-child]").on("change", function() {
+      if ($(this).attr("value") == "show-box") {
         $(this)
           .closest(".box")
           .find(".box-hidden-childs")
-          .addClass("is-opened");
+          .addClass("is-opened", this.checked);
       } else {
         $(this)
           .closest(".box")
           .find(".box-hidden-childs")
-          .removeClass("is-opened");
+          .removeClass("is-opened", this.unchecked);
       }
     });
   });
@@ -28534,6 +28534,22 @@ $(document).ready(function() {
         $(this)
           .closest(".box")
           .find(".box-hidden-item")
+          .removeClass("is-opened", this.unchecked);
+      }
+    });
+  });
+
+  $(function() {
+    $("[data-collapse-radio-hidden-item]").on("change", function() {
+      if ($(this).attr("value") == "show-box") {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item, .box-hidden-childs")
+          .addClass("is-opened", this.checked);
+      } else {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item, .box-hidden-childs")
           .removeClass("is-opened", this.unchecked);
       }
     });
