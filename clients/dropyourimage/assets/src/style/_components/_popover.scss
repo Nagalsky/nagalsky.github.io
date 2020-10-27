@@ -7,12 +7,6 @@
     border-radius: $base-radius;
     font-size: 14px;
 
-    // &.bs-popover-bottom {
-    //     .arrow {
-    //         top: -2px
-    //     }
-    // }
-
     .popover-header,
     .popover-body {
         @extend .bg-white,
@@ -45,16 +39,15 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+
+        .fs-15 {
+            @include media-breakpoint-down(xs) {
+                font-size: 12px !important;
+            }
+        }
     }
 
     .arrow {
-        // width: 26px !important;
-        // height: 26px !important;
-        // @extend .bg-white,
-        // .shadow;
-        // border-radius: 4px;
-        // transform: rotate(45deg);
-        // z-index: -1;
 
         &:before {
             content: none !important
@@ -67,12 +60,16 @@
     @extend .position-relative;
 
     .popover {
-        min-width: 260px;
+        min-width: 280px;
 
         @include media-breakpoint-up(sm) {
             width: 100%;
-            min-width: 600px;
+            min-width: 400px;
             max-width: 100%;
+        }
+
+        @include media-breakpoint-up(md) {
+            min-width: 600px;
         }
     }
 }

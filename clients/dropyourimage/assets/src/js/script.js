@@ -227,15 +227,11 @@ $(document).ready(function() {
     $("[data-collapse-box]").on("change", function(e) {
       if ($(this).is(":checked")) {
         $(this)
-          .parent()
-          .parent()
-          .parent()
+          .closest(".box")
           .addClass("is-opened");
       } else {
         $(this)
-          .parent()
-          .parent()
-          .parent()
+          .closest(".box")
           .removeClass("is-opened");
       }
     });

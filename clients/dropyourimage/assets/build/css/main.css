@@ -5947,7 +5947,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .navigation, .navigation-nav, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .box-toggle, .feedback-box, .box-collapse__body-inner, .account, .tariff-plan, .step, .dropzone__message {
+.flex-column, .navigation, .navigation-nav, body, .main, .main > .container-fluid, .main > .container-sm, .main > .container-md, .main > .container-lg, .main > .container-xl, .main > .container-xxl, .box-toggle, .feedback-box, .box-collapse__body-inner, .account, .account-nav, .tariff-plan, .step, .dropzone__message {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -11846,16 +11846,22 @@ label {
     .popover .popover-body {
       padding-top: 20px;
       padding-bottom: 20px; } }
+  @media (max-width: 575.98px) {
+    .popover .popover-body .fs-15, .popover .popover-body .price-box__currency {
+      font-size: 12px !important; } }
   .popover .arrow:before {
     content: none !important; }
 
 .popover-box .popover {
-  min-width: 260px; }
+  min-width: 280px; }
   @media (min-width: 576px) {
     .popover-box .popover {
       width: 100%;
-      min-width: 600px;
+      min-width: 400px;
       max-width: 100%; } }
+  @media (min-width: 768px) {
+    .popover-box .popover {
+      min-width: 600px; } }
 
 /* FEEDBACK BOX */
 .feedback-boxes {
