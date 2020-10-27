@@ -37,11 +37,16 @@ $(document).ready(function() {
 
   //Box collapse open/close state
   $(function() {
-    $(".box-collapse__toggle").on("click", function(e) {
+    $(".box-collapse__toggle, .box-collapse__header").on("click", function(e) {
       e.preventDefault();
       $(this)
         .parent()
         .toggleClass("is-opened");
+    });
+
+    $(".box-collapse__header a").on("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
     });
 
     $(".box-collapse__checkbox").change(function() {
@@ -201,5 +206,166 @@ $(document).ready(function() {
     });
   });
 
-  //Dropzone
+  //Check checkbox while click on the paren box
+  $(function() {
+    $("[data-whole-box-check-checkbox]").on("click", function() {
+      var checkbox = $(this)
+        .parent()
+        .parent()
+        .find("[data-collapse-box]");
+      $(this)
+        .parent()
+        .parent()
+        .toggleClass("is-opened");
+      checkbox.prop("checked", !checkbox.prop("checked"));
+    });
+  });
+
+  $(function() {
+    $("[data-collapse-box]").on("change", function(e) {
+      if ($(this).is(":checked")) {
+        $(this)
+          .parent()
+          .parent()
+          .parent()
+          .addClass("is-opened");
+      } else {
+        $(this)
+          .parent()
+          .parent()
+          .parent()
+          .removeClass("is-opened");
+      }
+    });
+  });
+
+  $(function() {
+    $("[data-collapse-hidden-item]").on("change", function(e) {
+      if ($(this).is(":checked")) {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item")
+          .addClass("is-opened");
+      } else {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item")
+          .removeClass("is-opened");
+      }
+    });
+  });
+
+  $(function() {
+    $("[data-radio-collapse-child]").on("change", function(e) {
+      if ($(this).is(":checked")) {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-childs")
+          .addClass("is-opened");
+      } else {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-childs")
+          .removeClass("is-opened");
+      }
+    });
+  });
+
+  $(function() {
+    $("[data-radio-collapse-hidden-item]").on("change", function() {
+      if ($(this).attr("value") == "show-box") {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item")
+          .addClass("is-opened", this.checked);
+      } else {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item")
+          .removeClass("is-opened", this.unchecked);
+      }
+    });
+  });
+
+  //Add form row(specificatie-nieuw page)
+  $(function() {
+    var collapseBtn = $("[data-add-row");
+    var collapseHolder = $(".collapse-holder");
+    var i = 0;
+
+    collapseBtn.on("click", function() {
+      $("<div />")
+        .append(
+          $(
+            '<div class="form-group">' +
+              '<div class="row no-gutters">' +
+              '<div class="col-5 col-xxl-auto">' +
+              '<label for="form-field-breedte' +
+              i +
+              '" class="tex-black200">Breedte</label>' +
+              '<input type="text" id="form-field-breedte' +
+              i +
+              '" class="form-control">' +
+              "</div>" +
+              '<div class="col-2 col-xxl-1 text-center align-self-end mb-3">' +
+              '<span class="fs-16 text-black200">X</span>' +
+              "</div>" +
+              '<div class="col-5 col-xxl-auto">' +
+              '<label for="form-field-hoogte' +
+              i +
+              '" class="tex-black200">Hoogte</label>' +
+              '<input type="text" id="form-field-hoogte' +
+              i +
+              '" class="form-control">' +
+              "</div>" +
+              "</div>"
+          )
+        )
+        .appendTo(collapseHolder);
+      i++;
+    });
+  });
+
+  //Watermark change text
+  $(function() {
+    $(".watermark__radio").on("click", function() {
+      if ($(this).attr("value") == "watermark__top-left") {
+        $(".watermark__title").html("Linksboven");
+      }
+      if ($(this).attr("value") == "watermark__top-middle") {
+        $(".watermark__title").html("Midden-Boven");
+      }
+      if ($(this).attr("value") == "watermark__top-right") {
+        $(".watermark__title").html("Rechtsboven");
+      }
+      if ($(this).attr("value") == "watermark__middle-left") {
+        $(".watermark__title").html("Midden-Links");
+      }
+      if ($(this).attr("value") == "watermark__middle-middle") {
+        $(".watermark__title").html("Midden-Midden");
+      }
+      if ($(this).attr("value") == "watermark__middle-right") {
+        $(".watermark__title").html("Midden-Rechts");
+      }
+      if ($(this).attr("value") == "watermark__bottom-left") {
+        $(".watermark__title").html("Rechtsonder");
+      }
+      if ($(this).attr("value") == "watermark__bottom-middle") {
+        $(".watermark__title").html("Midden-Onder");
+      }
+      if ($(this).attr("value") == "watermark__bottom-right") {
+        $(".watermark__title").html("Rechtsonder");
+      }
+    });
+  });
+
+  //Bootstrap tooltip inside bootstra-table
+  $(function() {
+    $(".bootstrap-table tbody").on("mouseover", ".btn-icon", function() {
+      $('[data-toggle="tooltip"]').tooltip({
+        trigger: "hover",
+        html: true
+      });
+    });
+  });
 });

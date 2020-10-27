@@ -5605,12 +5605,14 @@ button.bg-info:hover,
 button.bg-info:focus {
   background-color: #117a8b !important; }
 
-.bg-warning {
+.bg-warning, .table-label--warning {
   background-color: #ffc107 !important; }
 
-a.bg-warning:hover, a.bg-warning:focus,
+a.bg-warning:hover, a.table-label--warning:hover, a.bg-warning:focus, a.table-label--warning:focus,
 button.bg-warning:hover,
-button.bg-warning:focus {
+button.table-label--warning:hover,
+button.bg-warning:focus,
+button.table-label--warning:focus {
   background-color: #d39e00 !important; }
 
 .bg-danger {
@@ -5661,7 +5663,7 @@ button.bg-dark:focus {
   border-left: 1px solid #dee2e6 !important; }
 
 .border-0, .navigation__toggle, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-table > thead > tr > th,
-.bootstrap-table > thead > tr td, .popover, .popover .popover-header, .modal-content, .page-link, .box-collapse-create, .resume__open,
+.bootstrap-table > thead > tr td, .bootstrap-table .fixed-table-container.fixed-height:not(.has-footer), .popover, .popover .popover-header, .modal-content, .page-link, .box-collapse-create, .resume__open,
 .resume__close, .accordion__toggle, .dropzone {
   border: 0 !important; }
 
@@ -5743,7 +5745,7 @@ button.bg-dark:focus {
   clear: both;
   content: ""; }
 
-.d-none, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body, .radio-box__hidden-box {
+.d-none, .box-hidden-box, .box-hidden-item, .box-hidden-childs, .bootstrap-table .pagination-detail, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body, .radio-box__hidden-box {
   display: none !important; }
 
 .d-inline {
@@ -5752,7 +5754,7 @@ button.bg-dark:focus {
 .d-inline-block, .radio-switch__label {
   display: inline-block !important; }
 
-.d-block, .navigation__logo, .btn-field-show-password, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item, .accordion__toggle, .radio-box [type="radio"]:checked + .radio-box__label .radio-box__hidden-box, .radio-box__label {
+.d-block, .navigation__logo, .btn-field-show-password, .box.is-opened .box-hidden-box, .box-hidden-item.is-opened, .box-hidden-childs.is-opened, .bootstrap-table .bs-checkbox label span, .radio__label, .product__inner, .box-collapse.is-opened .box-collapse__body, .checkbox__label, .resume.is-opened .resume-body, .account-nav__item, .tariff-plan .list-check__item, .accordion__toggle, .radio-box [type="radio"]:checked + .radio-box__label .radio-box__hidden-box, .radio-box__label {
   display: block !important; }
 
 .d-table {
@@ -5768,7 +5770,7 @@ button.bg-dark:focus {
   display: -webkit-box !important;
   display: flex !important; }
 
-.d-inline-flex, .navigation__toggle, .btn-counter, .step__inner {
+.d-inline-flex, .navigation__toggle, .btn-counter, .step__inner, .table-label {
   display: -webkit-inline-box !important;
   display: inline-flex !important; }
 
@@ -5994,7 +5996,7 @@ button.bg-dark:focus {
   -webkit-box-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .btn-counter, .feedback-box, .uploaded-image-box, .step__inner, .dropzone, .payment-method-radio__label {
+.justify-content-center, .btn-counter, .feedback-box, .uploaded-image-box, .step__inner, .dropzone, .payment-method-radio__label, .table-label {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -6013,7 +6015,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .navigation-nav__item, .navigation__toggle, .btn-counter, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .step, .step__inner, .dropzone, .dropzone__message, .payment-method-radio__label {
+.align-items-center, .navigation-nav__item, .navigation__toggle, .btn-counter, .feedback-box, .bootstrap-select .dropdown-toggle .filter-option, .form-serch, .detail, .box-collapse__header-inner, .box-collapse__edit, .list-check__item, .uploaded-image-box, .resume-header, .step, .step__inner, .dropzone, .dropzone__message, .payment-method-radio__label, .table-label {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6569,11 +6571,13 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
+.position-relative, .form-control-label-box, .box-toggle, .bootstrap-table .table > thead th .sortable, .bootstrap-table > thead > tr > th.bs-checkbox .th-inner,
+.bootstrap-table > thead > tr td.bs-checkbox .th-inner, .bootstrap-table > tbody > tr.selected .bs-checkbox, .bootstrap-table .bs-checkbox label span, .popover .popover-header,
 .popover .popover-body, .popover-box, .radio__label, .product, .box-collapse, .checkbox__label, .uploaded-image-box, .tariff-plan, .accordion__toggle, .step, .radio-box__label, .payment-method-radio__label, .box-404 {
   position: relative !important; }
 
-.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before, .accordion__toggle:before, .step:before, .step:after, .radio-box__label:before, .radio-box__label:after, .payment-method-radio__label:before, .payment-method-radio__label:after, .box-404__figure, .box-404_basket {
+.position-absolute, .form-control-label-box .form-control-label, .box-toggle:before, .bootstrap-table .table > thead th .sortable:before, .bootstrap-table > thead > tr > th.bs-checkbox .th-inner:after,
+.bootstrap-table > thead > tr td.bs-checkbox .th-inner:after, .bootstrap-table > tbody > tr.selected .bs-checkbox:before, .bootstrap-table .bs-checkbox label span:before, .bootstrap-table .bs-checkbox label span:after, .radio__label:before, .radio__label:after, .box-collapse__toggle, .checkbox__label:before, .checkbox__label:after, .uploaded-image-box__remove, .tariff-plan:before, .accordion__toggle:before, .step:before, .step:after, .radio-box__label:before, .radio-box__label:after, .payment-method-radio__label:before, .payment-method-radio__label:after, .box-404__figure, .box-404_basket {
   position: absolute !important; }
 
 .position-fixed, .navigation, .navigation__overlay, .resume {
@@ -6645,7 +6649,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo, .accordion__toggle, .upload-state-box__img, .box-404 {
+.w-100, .navigation__logo, .navigation__logo svg, .navigation__overlay, .bootstrap-table .btn-table, .box-collapse__heading-logo, .accordion__toggle, .upload-state-box__img, .box-404, .table-label {
   width: 100% !important; }
 
 .w-auto {
@@ -6661,7 +6665,7 @@ button.bg-dark:focus {
   height: 75% !important; }
 
 .h-100, .navigation, .navigation__overlay, .flexboxtweener,
-.flexboxtweener > body {
+.flexboxtweener > body, .bootstrap-table > tbody > tr.selected .bs-checkbox:before {
   height: 100% !important; }
 
 .h-auto {
@@ -6758,7 +6762,7 @@ button.bg-dark:focus {
 .m-3 {
   margin: 1rem !important; }
 
-.mt-3, .detail + .detail,
+.mt-3, .box-hidden-childs, .detail + .detail,
 .my-3 {
   margin-top: 1rem !important; }
 
@@ -6777,7 +6781,7 @@ button.bg-dark:focus {
 .m-4 {
   margin: 1.5rem !important; }
 
-.mt-4, .radio-box__hidden-box,
+.mt-4, .box-hidden-box, .box-hidden-item, .radio-box__hidden-box,
 .my-4 {
   margin-top: 1.5rem !important; }
 
@@ -6856,7 +6860,8 @@ button.bg-dark:focus {
 
 .pr-1,
 .px-1,
-.bootstrap-table .btn-table {
+.bootstrap-table .btn-table,
+.table-label {
   padding-right: 0.25rem !important; }
 
 .pb-1,
@@ -6865,7 +6870,8 @@ button.bg-dark:focus {
 
 .pl-1,
 .px-1,
-.bootstrap-table .btn-table {
+.bootstrap-table .btn-table,
+.table-label {
   padding-left: 0.25rem !important; }
 
 .p-2, .watermark__inner {
@@ -8348,7 +8354,7 @@ button.bg-dark:focus {
 .text-nowrap, .bootstrap-table .btn-table {
   white-space: nowrap !important; }
 
-.text-truncate, .btn-field-show-password, .detail__value, .tariff-plan:before, .tariff-plan .list-check__item, .tariff-plan__title {
+.text-truncate, .btn-field-show-password, .detail__value, .tariff-plan:before, .tariff-plan .list-check__item, .tariff-plan__title, .table-label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -8359,7 +8365,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, .watermark, .step {
+.text-center, .watermark, .step, .table-label {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -10750,7 +10756,7 @@ div.fixed-table-scroll-outer {
 .text-white, .navigation, .navigation-nav__item, .btn-primary-outline .btn-counter, .radio-switch [type="radio"]:checked + .radio-switch__label, .step__inner {
   color: #ffffff !important; }
 
-.text-black {
+.text-black, .table-label {
   color: #000000 !important; }
 
 .text-black100 {
@@ -10849,7 +10855,7 @@ div.fixed-table-scroll-outer {
 .bg-blue100, .navigation-nav__item.active, .navigation-nav__item:hover {
   background-color: #1c2c44 !important; }
 
-.bg-blue200, .btn-primary-outline .btn-counter, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label, .radio-box__label:after, .payment-method-radio__label:after {
+.bg-blue200, .btn-primary-outline .btn-counter, .bootstrap-table > tbody > tr.selected .bs-checkbox:before, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label, .radio-box__label:after, .payment-method-radio__label:after {
   background-color: #152339 !important; }
 
 .bg-gray {
@@ -10864,7 +10870,7 @@ div.fixed-table-scroll-outer {
 .bg-gray100 {
   background-color: #C2C2C2 !important; }
 
-.bg-gray200 {
+.bg-gray200, .table-label--muted {
   background-color: #e6e6e6 !important; }
 
 .bg-gray300 {
@@ -10885,10 +10891,10 @@ div.fixed-table-scroll-outer {
 .bg-green100 {
   background-color: #2c9424 !important; }
 
-.bg-green200 {
+.bg-green200, .table-label--success {
   background-color: #40a738 !important; }
 
-.bg-warning {
+.bg-warning, .table-label--warning {
   background-color: #ded00d !important; }
 
 .bg-silver {
@@ -10908,10 +10914,10 @@ div.fixed-table-scroll-outer {
 
 .font-opensans-semibold, .navigation-nav__item, .form-control-label-box .form-control-label, .btn-counter, .bootstrap-table .bs-checkbox label span, .radio__label, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .detail__title, .product__description, .checkbox__label, .resume .table > thead > tr > th,
 .resume .table > thead > tr td, .resume .table > tfoot > tr > th,
-.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before, .accordion__toggle, .step__title, .dropzone__subtitle, .upload-state-box__title, .payment-method__title, .box-404__subtitle {
+.resume .table > tfoot > tr td, .radio-switch__label, .tariff-plan:before, .accordion__toggle, .step__title, .dropzone__subtitle, .upload-state-box__title, .payment-method__title, .box-404__subtitle, .table-label {
   font-family: "OpenSans-SemiBold" !important; }
 
-.font-opensans-bold, dl dt, .btn-field-show-password, .bootstrap-table > thead > tr > td, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
+.font-opensans-bold, dl dt, .btn-field-show-password, .bootstrap-table > thead > tr > td, .tooltip, .page-item:first-child .page-link, .page-item:last-child .page-link, .page-item.active .page-link, .box-collapse-create, .resume .table > tfoot > tr > th:last-child,
 .resume .table > tfoot > tr td:last-child, .resume__open,
 .resume__close, .account-nav__item.active, .box-404__title {
   font-family: "OpenSans-Bold" !important; }
@@ -10940,7 +10946,7 @@ div.fixed-table-scroll-outer {
 /*************************
 	Base variables
 *************************/
-.base-radius, .btn-counter, .uploaded-image-box, .radio-switch__label, .tariff-plan, .radio-box__label, .dropzone {
+.base-radius, .btn-counter, .uploaded-image-box, .radio-switch__label, .tariff-plan, .radio-box__label, .dropzone, .table-label {
   border-radius: 2px !important; }
 
 /*************************
@@ -11155,6 +11161,9 @@ p {
 b {
   font-family: "OpenSans-Bold"; }
 
+.min-h-auto {
+  min-height: auto !important; }
+
 /* FLEX */
 /* HAS BG */
 .has-bg, .box-404__figure {
@@ -11169,7 +11178,7 @@ b {
 .fs-11 {
   font-size: 11px !important; }
 
-.fs-12, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .product__description {
+.fs-12, .bootstrap-select .dropdown-menu .dropdown-menu a small, .bootstrap-select .filter-option-inner-inner > small, .product__description, .table-label {
   font-size: 12px !important; }
 
 .fs-13, .feedback-box {
@@ -11495,7 +11504,8 @@ label {
 .btn-edit-field,
 .btn-close-edit-field {
   -webkit-transition: 0;
-  transition: 0; }
+  transition: 0;
+  min-width: 58px; }
   @media (prefers-reduced-motion: reduce) {
     .btn-edit-field,
     .btn-close-edit-field {
@@ -11504,7 +11514,8 @@ label {
   .btn-edit-field.invisible,
   .btn-close-edit-field.invisible {
     width: 0;
-    height: 0; }
+    height: 0;
+    min-width: 0; }
 
 /* BUTTONS */
 .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
@@ -11575,7 +11586,7 @@ label {
       color: #070c14;
       text-decoration: none; }
   .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove {
-    font-size: 24px;
+    font-size: 26px;
     padding-left: 1px;
     padding-right: 1px;
     min-height: auto; }
@@ -11655,8 +11666,24 @@ label {
     .box--sm {
       padding: 25px 30px; } }
   @media (min-width: 1200px) {
+    .box--sm .box__inner {
+      padding: 25px 30px;
+      margin: -25px -30px; } }
+  @media (min-width: 1200px) {
     .box--xl {
       padding: 40px 66px; } }
+  @media (min-width: 1200px) {
+    .box--xl .box__inner {
+      padding: 40px 66px;
+      margin: -40px -66px; } }
+
+.box__inner {
+  padding: 15px;
+  margin: -15px; }
+  @media (min-width: 1200px) {
+    .box__inner {
+      padding: 30px;
+      margin: -30px; } }
 
 .box-toggle {
   padding-right: 50px; }
@@ -11688,6 +11715,14 @@ label {
 .bootstrap-table > thead > tr td .uploaded-image-box__remove {
   min-height: auto; }
 
+.bootstrap-table > thead > tr > th.bs-checkbox .th-inner:after,
+.bootstrap-table > thead > tr td.bs-checkbox .th-inner:after {
+  content: 'Alle';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px; }
+
 .bootstrap-table > thead > tr > th,
 .bootstrap-table > thead > tr td,
 .bootstrap-table > tbody > tr > th,
@@ -11712,6 +11747,13 @@ label {
 .bootstrap-table > tbody > tr:first-child > th,
 .bootstrap-table > tbody > tr:first-child td {
   border-top: none; }
+
+.bootstrap-table > tbody > tr.selected .bs-checkbox:before {
+  content: '';
+  width: 6px;
+  border-radius: 2px 0 0 2px;
+  left: 0;
+  top: 0; }
 
 .bootstrap-table > tbody > tr > th,
 .bootstrap-table > tbody > tr td {
@@ -11746,7 +11788,8 @@ label {
       width: 16px;
       height: 16px;
       border: 1px solid #707070;
-      border-radius: 2px; }
+      border-radius: 2px;
+      background-color: #ffffff; }
     .bootstrap-table .bs-checkbox label span:after {
       left: 4px;
       top: 5px;
@@ -11847,14 +11890,14 @@ label {
 .radio--sub {
   padding-left: 45px; }
 
-.radio [type="radio"] {
+.radio input {
   position: absolute;
   left: -9999px;
   opacity: 0;
   visibility: hidden; }
-  .radio [type="radio"]:checked + .radio__label:before {
+  .radio input:checked + .radio__label:before {
     border-color: #152339; }
-  .radio [type="radio"]:checked + .radio__label:after {
+  .radio input:checked + .radio__label:after {
     -webkit-transform: scale(1);
             transform: scale(1); }
 
@@ -11932,16 +11975,17 @@ label {
       min-width: 410px; } }
 
 /* TOOLTIP */
-.tooltip {
-  font-family: inherit; }
-  .tooltip.bs-tooltip-top .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow:before {
-    border-top-color: #152339; }
-  .tooltip.bs-tooltip-bottom .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow:before {
-    border-bottom-color: #152339; }
-  .tooltip.bs-tooltip-right .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow:before {
-    border-right-color: #152339; }
-  .tooltip.bs-tooltip-left .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow:before {
-    border-left-color: #152339; }
+.tooltip.bs-tooltip-top .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow:before {
+  border-top-color: #152339; }
+
+.tooltip.bs-tooltip-bottom .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow:before {
+  border-bottom-color: #152339; }
+
+.tooltip.bs-tooltip-right .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow:before {
+  border-right-color: #152339; }
+
+.tooltip.bs-tooltip-left .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow:before {
+  border-left-color: #152339; }
 
 /* PAGINATION */
 .page-item {
@@ -11984,6 +12028,9 @@ label {
 /* SIMPLEBAR */
 .simplebar-scrollbar.simplebar-visible:before {
   opacity: 1; }
+
+.simplebar-track.simplebar-vertical {
+  right: -15px; }
 
 /* BOX COLLAPSE */
 @media (max-width: 1199.98px) {
@@ -12045,15 +12092,17 @@ label {
     height: 5.33333px;
     top: 7px; }
 
-.checkbox [type="checkbox"] {
+.checkbox input {
   position: absolute;
   left: -9999px;
   opacity: 0;
   visibility: hidden; }
-  .checkbox [type="checkbox"]:checked + .checkbox__label:before {
+  .checkbox input[disabled] + .checkbox__label {
+    opacity: .5; }
+  .checkbox input:checked + .checkbox__label:before {
     background-color: #152339;
     border-color: #152339; }
-  .checkbox [type="checkbox"]:checked + .checkbox__label:after {
+  .checkbox input:checked + .checkbox__label:after {
     -webkit-transform: scale(1) rotate(-45deg);
             transform: scale(1) rotate(-45deg); }
 
@@ -12195,6 +12244,10 @@ label {
 
 .account-nav__item + .account-nav__item {
   margin-top: 14px; }
+
+@media (min-width: 1700px) {
+  .account-body {
+    max-width: 1100px; } }
 
 /* RADIO SWITCH */
 .radio-switch [type="radio"] {
@@ -12557,3 +12610,8 @@ label {
   @media (min-width: 1200px) {
     .box-404_basket {
       right: -80px; } }
+
+/* TABLE LABEL */
+.table-label {
+  max-width: 90px;
+  min-height: 35px; }
