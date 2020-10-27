@@ -28437,6 +28437,7 @@ $(document).ready(function() {
         .parent()
         .find("input")
         .removeClass("form-control--secondary")
+        .prop("disabled", false)
         .focus();
       $(this)
         .parent()
@@ -28450,7 +28451,8 @@ $(document).ready(function() {
       $(this)
         .parent()
         .find("input")
-        .addClass("form-control--secondary");
+        .addClass("form-control--secondary")
+        .prop("disabled", true);
       $(this)
         .parent()
         .find(".btn-edit-field")

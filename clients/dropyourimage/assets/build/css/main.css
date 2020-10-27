@@ -5746,7 +5746,7 @@ button.bg-dark:focus {
   content: ""; }
 
 .d-none, .box-hidden-box, .box-hidden-item, .box-hidden-childs,
-.box-hidden-item-secondary, .bootstrap-table .pagination-detail, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body, .radio-box__hidden-box {
+.box-hidden-item-secondary, .box-collapse--checkbox .box-collapse__toggle, .box-collapse__body, .resume.is-opened .resume-header, .resume-body, .radio-box__hidden-box {
   display: none !important; }
 
 .d-inline {
@@ -6745,7 +6745,7 @@ button.bg-dark:focus {
 .m-2 {
   margin: 0.5rem !important; }
 
-.mt-2,
+.mt-2, .box + .box,
 .my-2 {
   margin-top: 0.5rem !important; }
 
@@ -10858,7 +10858,7 @@ div.fixed-table-scroll-outer {
 .bg-blue100, .navigation-nav__item.active, .navigation-nav__item:hover {
   background-color: #1c2c44 !important; }
 
-.bg-blue200, .btn-primary-outline .btn-counter, .bootstrap-table > tbody > tr.selected .bs-checkbox:before, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label, .radio-box__label:after, .payment-method-radio__label:after {
+.bg-blue200, .btn-primary-outline .btn-counter, .bootstrap-table > tbody > tr.selected .bs-checkbox:before, .bootstrap-table .pagination-detail .dropdown-toggle, .radio__label:after, .tooltip-inner, .simplebar-scrollbar:before, .radio-switch [type="radio"]:checked + .radio-switch__label, .radio-box__label:after, .payment-method-radio__label:after {
   background-color: #152339 !important; }
 
 .bg-gray {
@@ -11520,6 +11520,17 @@ label {
     height: 0;
     min-width: 0; }
 
+.no-arrow {
+  -moz-appearance: textfield; }
+
+.no-arrow::-webkit-inner-spin-button {
+  display: none; }
+
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 /* BUTTONS */
 .btn, .navigation__toggle, .box-toggle, .box-collapse-create, .resume__open,
 .resume__close, .accordion__toggle {
@@ -11808,6 +11819,9 @@ label {
         .bootstrap-table .bs-checkbox label span:after {
           -webkit-transition: none;
           transition: none; } }
+
+.bootstrap-table .pagination-detail .dropdown-toggle {
+  border-color: #152339; }
 
 /* POPOVER */
 .popover {
