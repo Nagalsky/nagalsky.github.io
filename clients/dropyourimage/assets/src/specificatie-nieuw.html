@@ -409,12 +409,26 @@
                                                             <label for="form-radio-automatisch-croppen" class="radio__label">Automatisch croppen <small class="text-blue200">GRATIS</small></label>
                                                         </div>
                                                         <div class="radio">
-                                                            <input type="radio" id="form-radio-vaste-margin" name="form-radio-group-3" data-radio-collapse-hidden-item>
+                                                            <input type="radio" id="form-radio-vaste-margin" name="form-radio-group-3" value="show-second-box" data-radio-collapse-hidden-item>
                                                             <label for="form-radio-vaste-margin" class="radio__label">Vaste margin <small class="text-blue200">0,25</small></label>
                                                         </div>
                                                         <div class="radio">
                                                             <input type="radio" id="form-radio-variabele-margin" name="form-radio-group-3" value="show-box" data-radio-collapse-hidden-item>
                                                             <label for="form-radio-variabele-margin" class="radio__label">Variabele margin <small class="text-blue200">0,25</small></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="box-hidden-item-secondary">
+                                                    <div class="row">
+                                                        <div class="col-6 col-xxl-3">
+                                                            <div class="form-group">
+                                                                <label class="text-black200"></label>
+                                                                <div class="form-control-label-box">
+                                                                    <input type="text" class="form-control form-control--sm" value="20">
+                                                                    <span class="form-control-label">%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -735,7 +749,7 @@
 
                                                 <div class="box-hidden-box">
                                                     <div class="form-control-label-box d-inline-block">
-                                                        <input type="text" class="form-control form-control--sm form-control--placeholder-gray w-auto" placeholder="0">
+                                                        <input type="number" class="form-control form-control--sm form-control--placeholder-gray w-auto" placeholder="0">
                                                         <span class="form-control-label">Kb</span>
                                                     </div> 
                                                 </div>
@@ -1343,16 +1357,21 @@
                                     </div>
 
                                     <div class="col-xxl-1 col-2">
-                                        <button type="button" class="btn btn-icon fs-23 p-0" 
-                                        data-toggle="popover" 
-                                        data-container="body" 
-                                        data-placement="right"
-                                        data-trigger="focus hover"
-                                        title="Waarom is en KvK-nummer verplicht?" 
-                                        data-content="Wij vragen een KvK-nummer aan onze klanten om misbruik van ons systeem te voorkomen. Wij vinden het belangrijk dat bedrijven de mogelijkheid krijgen om onze service zonder kosten te kunnen testen. Dit is helaas niet mogelijk zonder beveiliging."
-                                        >
-                                        <i class="icon-information-solid"></i>
-                                    </button>
+                                        <div class="popover-box popover-box-opmerking">
+                                            <button type="button" class="btn btn-icon fs-23 p-0" 
+                                                data-toggle="popover" 
+                                                data-container=".popover-box-opmerking" 
+                                                data-placement="right"
+                                                data-trigger="focus hover"
+                                                data-html="true"
+                                                data-content="
+                                                    <h5 class='mb-2'>Opmerking</h5>
+                                                    <p>Geef specifieke aanwijzingen of verzoek.</p>
+                                                "
+                                                >
+                                                <i class="icon-information-solid"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

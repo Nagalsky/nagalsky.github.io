@@ -284,6 +284,18 @@ $(document).ready(function() {
           .find(".box-hidden-item")
           .removeClass("is-opened", this.unchecked);
       }
+
+      if ($(this).attr("value") == "show-second-box") {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item-secondary")
+          .addClass("is-opened", this.checked);
+      } else {
+        $(this)
+          .closest(".box")
+          .find(".box-hidden-item-secondary")
+          .removeClass("is-opened", this.unchecked);
+      }
     });
   });
 
