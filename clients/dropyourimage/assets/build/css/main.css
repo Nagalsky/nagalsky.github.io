@@ -5664,7 +5664,10 @@ button.bg-dark:focus {
 
 .border-0, .navigation__toggle, .btn-icon, .box-collapse__toggle, .uploaded-image-box__remove, .box-toggle, .bootstrap-table > thead > tr > th,
 .bootstrap-table > thead > tr td, .bootstrap-table .fixed-table-container.fixed-height:not(.has-footer), .popover, .popover .popover-header, .modal-content, .page-link, .box-collapse-create, .resume__open,
-.resume__close, .accordion__toggle, .dropzone {
+.resume__close, .accordion__toggle, .dropzone, .table-no-border > tbody > tr > th,
+.table-no-border > tbody > tr td,
+.table-no-border > thead > tr > th,
+.table-no-border > thead > tr td {
   border: 0 !important; }
 
 .border-top-0 {
@@ -10969,6 +10972,10 @@ div.fixed-table-scroll-outer {
 *************************/
 /* NAVBAR */
 /* NAVIGATION */
+.navigation-is-opened .navbar-link {
+  opacity: 0;
+  visibility: hidden; }
+
 .navigation {
   width: 80%;
   background-color: #152339;
@@ -11144,7 +11151,7 @@ p {
   border-color: #707070; }
 
 .mb-xl {
-  margin-bottom: 50px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
     .mb-xl {
       margin-bottom: 60px; } }

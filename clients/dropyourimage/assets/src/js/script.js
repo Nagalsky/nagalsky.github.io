@@ -4,12 +4,14 @@ $(document).ready(function() {
     $(".navigation__toggle").on("click", function(e) {
       e.preventDefault();
       $(".navigation").toggleClass("navigation--is-opened");
+      $("body").toggleClass("navigation-is-opened");
       $(".navigation__overlay").toggleClass("navigation__overlay--is-opened");
     });
 
     $(".navigation__overlay").on("click", function(e) {
       e.preventDefault();
       $(this).toggleClass("navigation__overlay--is-opened");
+      $("body").removeClass("navigation-is-opened");
       $(".navigation").removeClass("navigation--is-opened");
     });
   });
