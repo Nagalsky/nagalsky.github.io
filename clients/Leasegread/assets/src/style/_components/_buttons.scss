@@ -1,0 +1,28 @@
+/* BUTTONS */
+
+.btn {
+    @extend .font-base-semibold,
+    .radius-sm;
+    padding: 12px 27px;
+    &-gradient-blue {
+        @extend .border-0,
+        .text-white;
+        @include gradient-x($start-color: #04b4ff, $end-color: #4adeff, $start-percent: 0%, $end-percent: 100%);
+        &:hover,
+        &:focus,
+        &:active {
+            @include gradient-x($start-color: #4adeff, $end-color: #04b4ff, $start-percent: 0%, $end-percent: 100%);
+        }
+    }
+    &-secondary {
+        @extend .text-white;
+        background-color: $blue300;
+        border-color: $blue300;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: darken($blue300, 10%);
+            border-color: darken($blue300, 10%);
+        }
+    }
+}

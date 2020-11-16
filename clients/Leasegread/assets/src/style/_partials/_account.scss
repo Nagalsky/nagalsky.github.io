@@ -1,0 +1,158 @@
+/* ACCOUNT */
+
+$account-aside-width-xl: 520px;
+$account-aside-width-xs: 380px;
+.account {
+    @extend .position-relative;
+    min-width: 0;
+}
+
+.account__aside {
+    @extend .d-flex,
+    .flex-column;
+    padding: 25px 0 25px 0;
+    @include gradient-y($start-color: #f7fbff, $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+    @include media-breakpoint-up(lg) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow-y: auto;
+        width: $account-aside-width-xs;
+        padding-top: 56px;
+    }
+    @include media-breakpoint-up(xl) {
+        width: $account-aside-width-xl;
+    }
+}
+
+.account__aside__header,
+.account__aside__body,
+.account__aside__footer {
+    @extend .w-100;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-up(xl) {
+        padding-left: 60px;
+    }
+}
+
+.account__aside__header {
+    margin-bottom: 30px;
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-between;
+    @include media-breakpoint-up(xl) {
+        padding-right: 37px;
+        margin-bottom: 50px;
+    }
+}
+
+.account__aside__logo {
+    @extend .d-block,
+    .w-100;
+    max-width: 178px;
+}
+
+.account__aside__dropdown {
+    @extend .btn,
+    .shadow-none,
+    .radius-xs,
+    .text-blue100,
+    .font-base-semibold,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .border-0,
+    .font-icons,
+    .icon-angle-down,
+    .position-relative,
+    .flex-shrink-0,
+    .ml-4;
+    padding: 9.5px 45px 9.5px 17px !important;
+    background-color: $blue200;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($blue200, 5%);
+    }
+    &:before {
+        @extend .position-absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        font-size: 16px;
+    }
+}
+
+.account__aside__body,
+.account__aside__footer {
+    @include media-breakpoint-up(xl) {
+        padding-right: 77px;
+    }
+}
+
+.account__aside__body {
+    margin-bottom: 30px;
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 50px;
+    }
+}
+
+.account__aside__footer {
+    @extend .mt-auto,
+    .d-flex,
+    .align-items-center,
+    .justify-content-between,
+    .fs-16,
+    .font-base-semibold,
+    .text-gray100;
+}
+
+.account__body {
+    @extend .d-none,
+    .d-lg-block;
+    min-width: 0;
+    @include media-breakpoint-up(lg) {
+        margin-left: $account-aside-width-xs;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-left: $account-aside-width-xl;
+    }
+}
+
+.account__aside__spacer {
+    height: 35px;
+    @include media-breakpoint-up(lg) {
+        height: 60px;
+    }
+}
+
+.account__body__gallery {
+    .swiper-slide {
+        height: 100vh;
+        @extend .has-bg,
+        .px-4,
+        .d-flex,
+        .align-items-center,
+        .justify-content-center;
+    }
+    .swiper-pagination {
+        @include media-breakpoint-up(lg) {
+            bottom: 50px !important;
+        }
+        @include media-breakpoint-up(xl) {
+            bottom: 70px !important;
+        }
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            @extend .bg-white,
+            .mx-2;
+            opacity: .4;
+            &-active {
+                opacity: 1;
+            }
+        }
+    }
+}

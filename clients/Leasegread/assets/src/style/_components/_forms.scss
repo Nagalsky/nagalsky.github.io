@@ -1,0 +1,21 @@
+/* FORMS */
+
+$field-height: 50px;
+.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: $field-height;
+    border-color: $blue50;
+    @extend .px-4,
+    .fs-16,
+    .font-base-semibold,
+    .radius-xs;
+    @include custom-placeholder($color: $gray100, $font-size: 16px, $font-family: $font-base-semibold);
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($blue500, .25);
+    }
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
