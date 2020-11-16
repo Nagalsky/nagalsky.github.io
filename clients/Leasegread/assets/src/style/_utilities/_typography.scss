@@ -14,10 +14,12 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    width: 100%;
     @extend .d-flex,
-    .flex-column;
+    .flex-column,
+    .w-100;
+    @include media-breakpoint-up(sm) {
+        min-height: 100vh;
+    }
 }
 
 .header,
