@@ -1,0 +1,50 @@
+/* ASIDE */
+
+.aside {
+    @extend .position-fixed,
+    .h-100,
+    .overflow-auto,
+    .d-none,
+    .d-lg-flex,
+    .flex-column;
+    left: 0;
+    top: 0;
+    width: $aside-width;
+    //background-image: linear-gradient(to top, #ffffff, rgba(210, 232, 255, 0.18));
+    @include gradient-y($start-color: #f7fbff, $end-color: #feffff, $start-percent: 0%, $end-percent: 100%);
+    padding: 30px 15px 55px 15px;
+}
+
+.aside__logo {
+    @extend .d-block,
+    .pl-3;
+    max-width: 140px;
+    margin-bottom: 50px;
+}
+
+.aside__nav {
+    @extend .mb-4,
+    .d-flex,
+    .flex-column;
+}
+
+.aside__nav__item {
+    @extend .position-relative,
+    .fs-16,
+    .font-base-semibold;
+    padding: 10px 15px;
+    border-radius: $radius-sm 0 0 $radius-sm;
+    &.active {
+        @extend .text-blue500,
+        .bg-white;
+    }
+    &+.aside__nav__item {
+        margin-top: 10px;
+    }
+}
+
+.aside__footer {
+    @extend .mt-auto,
+    .flex-shrink-0,
+    .pl-3;
+}
