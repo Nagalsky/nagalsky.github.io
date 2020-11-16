@@ -8449,7 +8449,8 @@ button.swiper-pagination-bullet {
 .font-base-regular {
   font-family: "Source-Sans-Pro-Regular" !important; }
 
-.font-base-semibold, .account__aside__dropdown, .account__aside__footer, .form-control, .btn, .dropdown-item {
+.font-base-semibold, .account__aside__dropdown, .account__aside__footer, b,
+.bold, .form-control, .btn, .dropdown-item {
   font-family: "Source-Sans-Pro-SemiBold" !important; }
 
 /* Font for buttons */
@@ -8513,11 +8514,11 @@ button.swiper-pagination-bullet {
       top: 0;
       height: 100%;
       overflow-y: auto;
-      width: 380px;
-      padding-top: 56px; } }
+      width: 380px; } }
   @media (min-width: 1200px) {
     .account__aside {
-      width: 520px; } }
+      width: 520px;
+      padding-top: 56px; } }
 
 .account__aside__header,
 .account__aside__body,
@@ -8551,6 +8552,10 @@ button.swiper-pagination-bullet {
             transform: translateY(-50%);
     right: 12px;
     font-size: 16px; }
+
+@media (min-width: 1200px) {
+  .account__aside__heading {
+    white-space: nowrap; } }
 
 @media (min-width: 1200px) {
   .account__aside__body,
@@ -8688,67 +8693,67 @@ p {
 
 /* FONT SIZES */
 .fs-10 {
-  font-size: 10px; }
+  font-size: 10px !important; }
 
 .fs-11 {
-  font-size: 11px; }
+  font-size: 11px !important; }
 
 .fs-12 {
-  font-size: 12px; }
+  font-size: 12px !important; }
 
 .fs-13 {
-  font-size: 13px; }
+  font-size: 13px !important; }
 
 .fs-14 {
-  font-size: 14px; }
+  font-size: 14px !important; }
 
 .fs-15 {
-  font-size: 15px; }
+  font-size: 15px !important; }
 
 .fs-16, .account__aside__footer, .form-control {
-  font-size: 16px; }
+  font-size: 16px !important; }
 
 .fs-17 {
-  font-size: 17px; }
+  font-size: 17px !important; }
 
 .fs-18, .simple-login-button {
-  font-size: 18px; }
+  font-size: 18px !important; }
 
 .fs-19 {
-  font-size: 19px; }
+  font-size: 19px !important; }
 
 .fs-20 {
-  font-size: 20px; }
+  font-size: 20px !important; }
 
 .fs-21 {
-  font-size: 21px; }
+  font-size: 21px !important; }
 
 .fs-22 {
-  font-size: 22px; }
+  font-size: 22px !important; }
 
 .fs-23 {
-  font-size: 23px; }
+  font-size: 23px !important; }
 
 .fs-24 {
-  font-size: 24px; }
+  font-size: 24px !important; }
 
 .fs-25 {
-  font-size: 25px; }
+  font-size: 25px !important; }
 
 .fs-26 {
-  font-size: 26px; }
+  font-size: 26px !important; }
 
 .fs-27 {
-  font-size: 27px; }
+  font-size: 27px !important; }
 
 .fs-28 {
-  font-size: 28px; }
+  font-size: 28px !important; }
 
 .fs-29 {
-  font-size: 29px; }
+  font-size: 29px !important; }
 
 .fs-30 {
-  font-size: 30px; }
+  font-size: 30px !important; }
 
 /* RESET STYLES */
 *:hover, *:focus, *:active {
@@ -8888,9 +8893,10 @@ ul {
 /* PANEL */
 /* SIMPLE LOGIN BUTTONS */
 .simple-login-button {
-  border: 2px solid #455880;
-  margin-bottom: 20px;
+  border: 1px solid #455880;
   width: 50px;
   height: 36px; }
   .simple-login-button:not(:last-child) {
     margin-right: 20px; }
+  .simple-login-button--xl {
+    height: 46px; }
