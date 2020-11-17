@@ -1,0 +1,122 @@
+/* TABLE */
+
+.table {
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    >thead {
+        >tr {
+            >th,
+            td {
+                @extend .border-0,
+                .fs-13,
+                .text-blue1000,
+                .font-base-semibold;
+            }
+        }
+    }
+    >tbody {
+        >tr {
+            >th,
+            td {
+                border-color: $gray50;
+                @extend .py-4;
+            }
+            >th {
+                @extend .font-base-semibold;
+            }
+            &.table-child-row {
+                >th,
+                td {
+                    @extend .p-0;
+                }
+            }
+        }
+    }
+    &-hover {
+        >tbody {
+            >tr {
+                &:hover {
+                    box-shadow: 0px 0px 30px rgba(207, 207, 207, 0.25);
+                    @extend .bg-white;
+                    .label--success {
+                        box-shadow: 0 6px 16px 0 darken($green500, 5%);
+                    }
+                    .label--warning {
+                        box-shadow: 0 6px 16px 0 $yellow600;
+                    }
+                    .label--danger {
+                        box-shadow: 0 6px 16px 0 darken($red500, 5%);
+                    }
+                    .table-button-delete {
+                        @extend .text-red500;
+                    }
+                }
+                &.table-child-row {
+                    &:hover {
+                        @extend .bg-transparent,
+                        .shadow-none;
+                    }
+                }
+            }
+        }
+    }
+    .label {
+        white-space: nowrap;
+    }
+}
+
+.table-buttons {
+    @extend .d-flex;
+}
+
+.table-button {
+    @extend .btn,
+    .border-0,
+    .p-2,
+    .btn,
+    .border-0,
+    .shadow-none,
+    .text-blue400,
+    .fs-15;
+    &+.table-button {
+        @extend .ml-2;
+    }
+    &-delete {
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-red500;
+        }
+    }
+}
+
+.table-child-row {
+    @extend .d-none;
+    &--is-opened {
+        display: table-row !important;
+    }
+}
+
+.table-rows-show-holder {
+    @extend .flex-shrink-0;
+    .btn {
+        @extend .shadow-none,
+        .border-0,
+        .bg-gray500;
+        padding: 12px 16px;
+        border-radius: 8px !important;
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .bg-gray300;
+        }
+    }
+}
+
+.table-rows-show-holder__heading {
+    @extend .fs-13,
+    .font-base-semibold,
+    .text-gray700,
+    .ml-2;
+}

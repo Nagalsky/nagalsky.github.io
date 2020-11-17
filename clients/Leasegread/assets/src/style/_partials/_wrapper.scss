@@ -1,7 +1,16 @@
 /* WRAPPER */
 
 .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
     @include media-breakpoint-up(lg) {
         margin-left: $aside-width;
+        padding-left: 40px;
+        padding-right: 40px;
     }
+}
+
+.wrapper-content {
+    @extend .pt-2,
+    .pb-5;
 }

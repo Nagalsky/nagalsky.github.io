@@ -1,0 +1,21 @@
+/* LABEL */
+
+.label {
+    @extend .d-inline-block,
+    .fs-13,
+    .font-base-semibold;
+    border-radius: 5px;
+    padding: 2px 13px;
+    &--success {
+        @extend .bg-green500,
+        .text-white;
+    }
+    &--warning {
+        @extend .text-yellow600,
+        .bg-yellow500;
+    }
+    &--danger {
+        @extend .bg-red500,
+        .text-white;
+    }
+}

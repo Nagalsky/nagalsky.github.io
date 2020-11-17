@@ -1,1 +1,13 @@
 /* PANEL */
+
+.panel {
+    @extend .bg-white,
+    .d-flex,
+    .flex-column;
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: 0 11px 12px 0 rgba(149, 149, 149, 0.12);
+    @include media-breakpoint-up(md) {
+        padding: 32px 25px;
+    }
+}

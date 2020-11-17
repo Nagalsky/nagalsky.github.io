@@ -1,0 +1,63 @@
+/* HEADER */
+
+.header {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-between,
+    .py-3,
+    .py-lg-4;
+}
+
+.header__logo {
+    @extend .d-block,
+    .d-lg-none,
+    .flex-shrink-0,
+    .mr-4;
+    width: 32px;
+}
+
+.header__panel {
+    @extend .ml-auto,
+    .d-flex,
+    .align-items-center;
+}
+
+.header__buttons {
+    @extend .d-flex,
+    .align-items-center,
+    .flex-shrink-0,
+    .ml-3,
+    .ml-md-4;
+}
+
+.header__button {
+    @extend .position-relative,
+    .text-blue900;
+    font-size: 20px;
+    @include media-breakpoint-up(md) {
+        font-size: 24px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-blue500;
+    }
+    &+.header__button {
+        @extend .ml-3,
+        .ml-md-4;
+    }
+    &-toggle-aside {
+        @extend .d-lg-none;
+    }
+}
+
+.header__button__indicator {
+    @extend .rounded-circle,
+    .bg-red500,
+    .position-absolute;
+    top: 5px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0px 0px 0px 2px $white;
+}

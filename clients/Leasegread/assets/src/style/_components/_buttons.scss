@@ -1,7 +1,7 @@
 /* BUTTONS */
 
 .btn {
-    @extend .font-base-semibold,
+    @extend .font-secondary-medium,
     .radius-sm;
     padding: 12px 27px;
     &-gradient-blue {
@@ -12,6 +12,9 @@
         &:focus,
         &:active {
             @include gradient-x($start-color: #4adeff, $end-color: #04b4ff, $start-percent: 0%, $end-percent: 100%);
+        }
+        &.has-shadow {
+            box-shadow: 0 2px 9px 0px #4adeff;
         }
     }
     &-secondary {

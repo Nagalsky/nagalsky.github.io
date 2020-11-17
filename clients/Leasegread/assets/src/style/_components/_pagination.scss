@@ -1,0 +1,58 @@
+/* PAGINATION */
+
+$pagination-item-size: 38px;
+.pagination {
+    .page-item {
+        &.active {
+            .page-link {
+                @extend .text-blue400;
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+        &:first-child {
+            .page-link {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+        }
+        &:last-child {
+            .page-link {
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+        }
+    }
+    .page-link {
+        @extend .border-0,
+        .position-relative,
+        .p-0,
+        .d-inline-flex,
+        .align-items-center,
+        .justify-content-center,
+        .font-base-semibold,
+        .text-blue1000,
+        .bg-gray500,
+        .overflow-hidden;
+        width: $pagination-item-size;
+        height: $pagination-item-size;
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+        &:before {
+            @extend .position-absolute,
+            .w-100,
+            .bg-blue500;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            opacity: 0;
+            @include transition($base-animation);
+            border-radius: 2px;
+        }
+    }
+}

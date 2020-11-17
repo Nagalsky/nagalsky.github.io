@@ -14,27 +14,1048 @@
 <body>
 
     <main class="main">
+        <div class="aside-overlay"></div>
+        
         <aside class="aside">
             <a href="#" class="aside__logo">
                 <img src="img/elements/logo.svg" alt="" class="w-100">
             </a>
         
             <div class="aside__nav">
-                <a href="#" class="aside__nav__item active">Dashboard</a>
-                <a href="#" class="aside__nav__item">Applicant</a>
-                <a href="#" class="aside__nav__item">Questions</a>
+                <a href="#" class="aside__nav__item active">
+                    <span class="aside__nav__item__rounded-corner"></span>
+                    <span class="aside__nav__inner"><i class="icon-dashboard aside__nav__icon"></i> Dashboard</span>
+                </a>
+                <a href="#" class="aside__nav__item">
+                    <span class="aside__nav__item__rounded-corner"></span>
+                    <span class="aside__nav__inner"><i class="icon-applicant aside__nav__icon"></i> Applicant</span>
+                </a>
+                <a href="#" class="aside__nav__item">
+                    <span class="aside__nav__item__rounded-corner"></span>
+                    <span class="aside__nav__inner"><i class="icon-questions aside__nav__icon"></i> Questions</span>
+                </a>
             </div>
         
             <div class="aside__footer">
-                aside__footer
+                <a href="#" class="aside__nav__item">
+                    <span class="aside__nav__inner"><i class="icon-questions-rounded aside__nav__icon"></i> Support</span>
+                </a>
             </div>
         </aside>
 
-        <div class="wrapper">wrapper</div>
+        <div class="wrapper">
+            <header class="header">
+                <a href="#" class="header__logo">
+                    <img src="img/elements/logo-xs.svg" class="w-100" alt="">
+                </a>
+
+                <div class="header__panel">
+                    <a href="#" class="btn btn-gradient-blue has-shadow px-3 px-sm-4">Add Applicant</a>
+                    <div class="header__buttons">
+                        <a href="#" class="header__button">
+                            <span class="header__button__indicator"></span>
+                            <i class="icon-bell"></i>
+                        </a>
+                        <a href="#" class="header__button">
+                            <i class="icon-settings"></i>
+                        </a>
+                        <a href="#" class="header__button header__button-toggle-aside">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrapper-content">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 mb-4">
+                    <div class="col mb-3 mb-md-0">
+                        <div class="stats">
+                            <img src="img/temp/stats-1.png" class="w-100" alt="">
+                            <div class="stats__inner">
+                                <h3 class="stats__title">243</h3>
+                                <p class="fs-16 text-truncate">Applicant Request</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 mb-md-0">
+                        <div class="stats">
+                            <img src="img/temp/stats-2.png" class="w-100" alt="">
+                            <div class="stats__inner">
+                                <h3 class="stats__title">23</h3>
+                                <p class="fs-16 text-truncate">Panding Applicant Response</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="stats">
+                            <img src="img/temp/stats-3.png" class="w-100" alt="">
+                            <div class="stats__inner">
+                                <h3 class="stats__title">233</h3>
+                                <p class="fs-16 text-truncate">Panding Reference Response</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-box">
+                    <nav class="tabs-holder d-flex flex-column flex-md-row">
+                        <div class="nav flex-fill mb-3 mb-md-0" id="myTab">
+                            <a class="tab-btn active" data-toggle="tab" href="#tab-new-applicant">New Applicant</a>
+                            <a class="tab-btn" data-toggle="tab" href="#tab-questions-added">Questions Added</a>
+                            <a class="tab-btn" data-toggle="tab" href="#tab-reports">Reports</a>
+                            <a class="tab-btn" data-toggle="tab" href="#tab-reminder">Reminder</a>
+                        </div>
+
+                        <form class="search-box">
+                            <input type="search" class="form-control" placeholder="Search...">
+                            <button type="submit" class="search-box__submit">
+                                <i class="icon-search"></i>
+                            </button>
+                            <button type="button" class="search-box__toggle">
+                                <i class="icon-search"></i>
+                            </button>
+                        </form>
+                    </nav>
+
+                    <div class="tab-content pt-4">
+                        <div class="tab-pane fade show active" id="tab-new-applicant">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Property</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Chandravadan Karmakar
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Frank Boehm
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Malin Quist
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--warning">Waiting for Refrence</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Zoe Miller
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Filipa Gaspar
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Gatsharan Sangrota
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Monica Böttger
+                                            </th>
+                                            <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                            <td>Residential</td>
+                                            <td>
+                                                <span class="label label--success">Response Recived</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex flex-column align-items-center flex-sm-row align-items-sm-end justify-content-sm-between">
+                                <div class="table-rows-show-holder mr-sm-4 mb-3 mb-sm-0">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        10 <span class="table-rows-show-holder__heading">Rows Show</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">50</a>
+                                        <a class="dropdown-item" href="#">100</a>
+                                        <a class="dropdown-item" href="#">150</a>
+                                    </div>
+                                </div>
+
+                                <ul class="pagination">
+                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">04</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-questions-added">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Questions</th>
+                                            <th scope="col">Reference Type</th>
+                                            <th scope="col">Question Type </th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Are they likely to pay on-time?
+                                            </th>
+                                            <td>Professional</td>
+                                            <td>Yes/No</td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Will they keep my rental property in good condition?
+                                            </th>
+                                            <td>Rental</td>
+                                            <td>Options</td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Are they likely to pay on-time?
+                                            </th>
+                                            <td>Professional</td>
+                                            <td>Yes/No</td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Will they keep my rental property in good condition?
+                                            </th>
+                                            <td>Rental</td>
+                                            <td>Options</td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Are they likely to pay on-time?
+                                            </th>
+                                            <td>Professional</td>
+                                            <td>Yes/No</td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex flex-column align-items-center flex-sm-row align-items-sm-end justify-content-sm-between">
+                                <div class="table-rows-show-holder mr-sm-4 mb-3 mb-sm-0">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        10 <span class="table-rows-show-holder__heading">Rows Show</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">50</a>
+                                        <a class="dropdown-item" href="#">100</a>
+                                        <a class="dropdown-item" href="#">150</a>
+                                    </div>
+                                </div>
+
+                                <ul class="pagination">
+                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">04</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-reports">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Applicant Name</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Chandravadan Karmakar
+                                            </th>
+                                            <td>
+                                                <span class="label label--success">Approved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Frank Boehm
+                                            </th>
+                                            <td>
+                                                <span class="label label--danger">Unapproved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Chandravadan Karmakar
+                                            </th>
+                                            <td>
+                                                <span class="label label--success">Approved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Frank Boehm
+                                            </th>
+                                            <td>
+                                                <span class="label label--danger">Unapproved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Chandravadan Karmakar
+                                            </th>
+                                            <td>
+                                                <span class="label label--success">Approved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Frank Boehm
+                                            </th>
+                                            <td>
+                                                <span class="label label--danger">Unapproved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="table-parent-row">
+                                            <th>
+                                                Chandravadan Karmakar
+                                            </th>
+                                            <td>
+                                                <span class="label label--success">Approved</span>
+                                            </td>
+                                            <td>
+                                                <div class="table-buttons">
+                                                    <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                    <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-child-row">
+                                            <td colspan="5">
+                                                <div class="box box--muted">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="text" class="form-control" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                                <input type="email" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                                <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                            </div>
+                                                            <div class="col-xl-1 col-sm-2 d-flex">
+                                                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex flex-column align-items-center flex-sm-row align-items-sm-end justify-content-sm-between">
+                                <div class="table-rows-show-holder mr-sm-4 mb-3 mb-sm-0">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        10 <span class="table-rows-show-holder__heading">Rows Show</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">50</a>
+                                        <a class="dropdown-item" href="#">100</a>
+                                        <a class="dropdown-item" href="#">150</a>
+                                    </div>
+                                </div>
+
+                                <ul class="pagination">
+                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">04</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-reminder">
+                            <div class="row">
+                                <div class="col-xl-9 col-lg-8 col-md-7 mb-4 mb-md-0">
+                                    <h4>Calendar</h4>
+
+                                    <div id='calendar'></div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-5">
+                                    <h4>Events & Reminder</h4>
+
+                                    <div class="panel">Box goes here</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
     <script src="js/main.min.js"></script>
+
+    <!-- <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     var calendarEl = document.getElementById('calendar');
+        //     var calendar = new FullCalendar.Calendar(calendarEl, {
+        //         initialView: 'dayGridMonth'
+        //     });
+        //     calendar.render();
+        // });
+
+        $(document).ready(function() {
+            $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+                $("#calendar").fullCalendar("rerenderEvents");
+            });
+            $("#myTab a:first").tab("show");
+
+            //$('#calendar').fullCalendar()
+        });
+    </script> -->
 </body>
 
 </html>
