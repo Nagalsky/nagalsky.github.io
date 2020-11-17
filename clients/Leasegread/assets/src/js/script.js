@@ -14,6 +14,34 @@ var swiper = new Swiper("#account-gallery", {
     }
 });
 
+//Init fullcalendar
+document.addEventListener("DOMContentLoaded", function() {
+    var calendarEl = document.getElementById("calendar");
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth",
+        headerToolbar: {
+            start: "",
+            center: "",
+            end: ""
+        },
+        events: [{
+                title: "Birthday Party",
+                start: "2020-11-17"
+            },
+            {
+                title: "Click for Google",
+                url: "http://google.com/",
+                start: "2020-11-18"
+            }
+        ]
+    });
+    calendar.render();
+
+    $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+        calendar.render();
+    });
+});
+
 $(document).ready(function() {
     //Mobile menu action
     $(function() {
@@ -60,15 +88,26 @@ $(document).ready(function() {
     });
 
     // $("#calendar").fullCalendar({
-    //     weekends: false // will hide Saturdays and Sundays
+    //     initialView: "dayGridMonth",
+    //     headerToolbar: {
+    //         start: "",
+    //         center: "",
+    //         end: ""
+    //     },
+    //     eventLimit: true,
+    //     events: [{
+    //             title: "Birthday Party",
+    //             start: "2020-11-17"
+    //         },
+    //         {
+    //             title: "Click for Google",
+    //             url: "http://google.com/",
+    //             start: "2020-11-18"
+    //         }
+    //     ]
     // });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    var calendarEl = document.getElementById("calendar");
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: "dayGridMonth",
-        weekends: false
-    });
-    calendar.render();
+    // $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+    //     $("#calendar").fullCalendar("render");
+    // });
 });

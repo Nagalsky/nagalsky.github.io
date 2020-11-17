@@ -8,7 +8,7 @@
 //= ../../../node_modules/swiper/swiper-bundle.min.js
 
 // Import Fullcalendar
-//= ../../../node_modules/fullcalendar/main.js
+//= ../../../node_modules/fullcalendar/main.min.js
 
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
