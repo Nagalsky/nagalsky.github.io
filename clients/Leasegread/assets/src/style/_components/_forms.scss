@@ -19,3 +19,30 @@ $field-height: 50px;
 .form-group {
     margin-bottom: 24px;
 }
+
+.form-control-has-icon {
+    @extend .position-relative;
+    >.form-control {
+        padding-left: 50px !important;
+    }
+    .form-control-icon {
+        @extend .position-absolute,
+        .text-blue400,
+        .fs-16;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 26px;
+    }
+}
+
+.custom-select {
+    height: $field-height;
+    @extend .px-4,
+    .fs-16,
+    .font-base-semibold,
+    .radius-xs;
+    border-color: $blue50;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEzIDEiIHN0cm9rZT0iIzQ1NTg4MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+    background-size: 14px;
+    padding-right: 36px !important;
+}

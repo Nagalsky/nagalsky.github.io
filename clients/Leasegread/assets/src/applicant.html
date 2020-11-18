@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    //= template/head.html
+    <title>Applicant</title>
+</head>
+
+<body>
+
+    <main class="main">
+        //= template/aside.html
+
+        <div class="wrapper">
+            <header class="header">
+                <a href="#" class="header__logo">
+                    <img src="img/elements/logo-xs.svg" class="w-100" alt="">
+                </a>
+
+                <div class="header__panel">
+                    <a href="#" class="btn btn-gradient-blue has-shadow px-3 px-sm-4">Add Applicant</a>
+                    <div class="header__buttons">
+                        <a href="#" class="header__button">
+                            <span class="header__button__indicator"></span>
+                            <i class="icon-bell"></i>
+                        </a>
+                        <a href="#" class="header__button">
+                            <i class="icon-settings"></i>
+                        </a>
+                        <a href="#" class="header__button header__button-toggle-aside">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrapper-content">
+                <div class="box box--sky box--rounded mb-4">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-xl-7 col-md-6 col-sm-4 mb-3 mb-sm-0">
+                                <div class="form-control-has-icon">
+                                    <i class="icon-search form-control-icon"></i>
+                                    <input type="search" class="form-control" placeholder="Search">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-md-2 col-sm-3 mb-3 mb-sm-0">
+                                <select class="custom-select bg-white border-0">
+                                    <option selected>Residential</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-2 col-md-2 col-sm-3 mb-3 mb-sm-0">
+                                <select class="custom-select bg-white border-0">
+                                    <option selected>Response Recived</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-1 col-md-2 col-sm-2 d-flex">
+                                <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Find</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="table-box">
+                    <table data-toggle="table" data-classes="table bootstrap-table" data-pagination="true" data-page-size="14">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Property</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-parent-row">
+                                <th>
+                                    Chandravadan Karmakar
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Frank Boehm
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Malin Quist
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--warning">Waiting for Refrence</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Zoe Miller
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Filipa Gaspar
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Gatsharan Sangrota
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Monica Böttger
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Chandravadan Karmakar 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Frank Boehm 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Malin Quist 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--warning">Waiting for Refrence</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Zoe Miller 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Filipa Gaspar 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Gatsharan Sangrota 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Monica Böttger 1
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Chandravadan Karmakar 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Frank Boehm 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Malin Quist 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--warning">Waiting for Refrence</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Zoe Miller 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Filipa Gaspar 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Gatsharan Sangrota 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Monica Böttger 2
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Chandravadan Karmakar 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Frank Boehm 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Malin Quist 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--warning">Waiting for Refrence</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Zoe Miller 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Filipa Gaspar 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Gatsharan Sangrota 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Monica Böttger 3
+                                </th>
+                                <td>3 Park Heath Cottages, Park Heath, Cheswardine, TF9 2NR</td>
+                                <td>Residential</td>
+                                <td>
+                                    <span class="label label--success">Response Recived</span>
+                                </td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                        <button type="button" class="table-button table-button-delete">
+                                                        <i class="icon-delete"></i>
+                                                    </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <div class="col-xl-5 col-sm-4 mb-3 mb-sm-0">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="col-xl-3 col-sm-3 mb-3 mb-sm-0">
+                                                    <input type="tel" class="form-control" placeholder="Mobile Number">
+                                                </div>
+                                                <div class="col-xl-1 col-sm-2 d-flex">
+                                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Add</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    //= template/scripts-dependencies.html
+
+
+</body>
+
+</html>
