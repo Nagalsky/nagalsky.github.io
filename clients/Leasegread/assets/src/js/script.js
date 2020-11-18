@@ -18,15 +18,27 @@ var swiper = new Swiper("#account-gallery", {
 document.addEventListener("DOMContentLoaded", function() {
     var calendarEl = document.getElementById("calendar");
     var calendar = new FullCalendar.Calendar(calendarEl, {
+        contentHeight: 650,
         initialView: "dayGridMonth",
         headerToolbar: {
             start: "",
             center: "",
             end: ""
         },
+        dayMaxEventRows: true,
+        views: {
+            timeGrid: {
+                dayMaxEventRows: 1
+            }
+        },
         events: [{
                 title: "Birthday Party",
                 start: "2020-11-17"
+            },
+            {
+                title: "Click for Google",
+                url: "http://google.com/",
+                start: "2020-11-18"
             },
             {
                 title: "Click for Google",
@@ -78,7 +90,7 @@ $(document).ready(function() {
 
     //Table collapse action
     $(function() {
-        $(".table-button-edit").on("click", function(e) {
+        $("body").on("click", ".table-button-edit", function(e) {
             e.preventDefault();
             $(this)
                 .closest(".table-parent-row")
@@ -86,28 +98,4 @@ $(document).ready(function() {
                 .toggleClass("table-child-row--is-opened");
         });
     });
-
-    // $("#calendar").fullCalendar({
-    //     initialView: "dayGridMonth",
-    //     headerToolbar: {
-    //         start: "",
-    //         center: "",
-    //         end: ""
-    //     },
-    //     eventLimit: true,
-    //     events: [{
-    //             title: "Birthday Party",
-    //             start: "2020-11-17"
-    //         },
-    //         {
-    //             title: "Click for Google",
-    //             url: "http://google.com/",
-    //             start: "2020-11-18"
-    //         }
-    //     ]
-    // });
-
-    // $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
-    //     $("#calendar").fullCalendar("render");
-    // });
 });

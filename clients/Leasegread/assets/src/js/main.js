@@ -10,6 +10,9 @@
 // Import Fullcalendar
 //= ../../../node_modules/fullcalendar/main.min.js
 
+// Import Bootstrap-table
+//= ../../../node_modules/bootstrap-table/dist/bootstrap-table.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js

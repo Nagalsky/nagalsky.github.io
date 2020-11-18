@@ -1,0 +1,87 @@
+/* CALENDAR */
+
+.calendar {
+    &.fc {
+        .fc-header-toolbar {
+            @extend .d-none;
+        }
+        table {
+            @extend .border-0;
+            >thead,
+            >tbody {
+                >tr {
+                    >th,
+                    td {
+                        @extend .border-0;
+                    }
+                }
+            }
+            .fc-col-header {
+                .fc-col-header-cell-cushion {
+                    @extend .fs-16,
+                    .font-base-semibold,
+                    .text-gray700,
+                    .pt-3,
+                    .pb-5;
+                }
+                .fc-scrollgrid-sync-inner {
+                    @extend .text-left;
+                }
+            }
+            .fc-daygrid-body {
+                .fc-daygrid-day {
+                    border-radius: 12px;
+                    &.fc-day-today {
+                        background-color: rgba($blue500, .1);
+                    }
+                }
+                .fc-daygrid-day-top {
+                    @extend .justify-content-start,
+                    .flex-row,
+                    .fs-16,
+                    .font-base-semibold,
+                    .text-blue400;
+                }
+                .fc-daygrid-day-events {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .fc-daygrid-day-frame {
+                    @extend .p-2;
+                    border-radius: 12px;
+                    &:hover {
+                        @extend .bg-white;
+                        box-shadow: 0 11px 12px 0 rgba(149, 149, 149, 0.12);
+                    }
+                }
+                .fc-h-event {
+                    @extend .border-0;
+                    background-color: rgba(#007cff, .1);
+                    border-radius: 9px;
+                    padding: 10px;
+                }
+                .fc-daygrid-event {
+                    @extend .text-center;
+                    .fc-event-main {
+                        @extend .text-blue400,
+                        .fs-12,
+                        .font-base-semibold;
+                    }
+                }
+                .fc-daygrid-event-harness {
+                    &+.fc-daygrid-event-harness {
+                        margin-top: 10px;
+                    }
+                }
+                .fc-daygrid-day-bottom {
+                    @extend .text-center;
+                }
+                .fc-daygrid-more-link {
+                    @extend .text-blue400,
+                    .fs-16,
+                    .font-base-semibold;
+                }
+            }
+        }
+    }
+}

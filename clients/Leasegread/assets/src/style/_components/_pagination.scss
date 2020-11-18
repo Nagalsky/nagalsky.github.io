@@ -11,13 +11,17 @@ $pagination-item-size: 38px;
                 }
             }
         }
-        &:first-child {
+        &.page-pre,
+        &.page-next {
+            @extend .d-none;
+        }
+        &:nth-child(2) {
             .page-link {
                 border-top-left-radius: 8px;
                 border-bottom-left-radius: 8px;
             }
         }
-        &:last-child {
+        &:nth-last-child(2) {
             .page-link {
                 border-top-right-radius: 8px;
                 border-bottom-right-radius: 8px;
@@ -34,7 +38,8 @@ $pagination-item-size: 38px;
         .font-base-semibold,
         .text-blue1000,
         .bg-gray500,
-        .overflow-hidden;
+        .overflow-hidden,
+        .shadow-none;
         width: $pagination-item-size;
         height: $pagination-item-size;
         &:hover {
