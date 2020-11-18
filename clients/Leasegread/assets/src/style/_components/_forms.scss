@@ -45,3 +45,25 @@ $field-height: 50px;
     background: $white url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEzIDEiIHN0cm9rZT0iIzQ1NTg4MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==") no-repeat right 18px center/14px 10px;
     padding-right: 44px !important;
 }
+
+.form-secondary {
+    @extend .mx-auto;
+    max-width: 620px;
+}
+
+.input-group {
+    .form-control {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
+.input-group-text {
+    @extend .bg-white,
+    .px-4,
+    .fs-13,
+    .font-base-semibold,
+    .text-gray100;
+    border-radius: $radius-xs 0 0 $radius-xs;
+    border-color: $blue50;
+}

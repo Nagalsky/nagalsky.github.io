@@ -11,7 +11,8 @@
                 @extend .border-0,
                 .fs-13,
                 .text-blue1000,
-                .font-base-semibold;
+                .font-base-semibold,
+                .text-nowrap;
             }
         }
     }
@@ -21,6 +22,9 @@
             td {
                 border-color: $gray50;
                 @extend .py-4;
+                &:first-child {
+                    @extend .font-base-semibold;
+                }
             }
             >th {
                 @extend .font-base-semibold;
