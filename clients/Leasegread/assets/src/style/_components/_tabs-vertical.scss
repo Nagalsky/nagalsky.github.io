@@ -1,0 +1,36 @@
+/* TABS VERTICAL */
+
+.tabs-vertical {
+    @extend .flex-column;
+    @include media-breakpoint-up(md) {
+        max-width: 210px;
+    }
+}
+
+.tabs-vertical-btn {
+    @extend .fs-16,
+    .font-base-semibold,
+    .text-gray700,
+    .position-relative;
+    padding-right: 30px;
+    &.active {
+        @extend .text-blue500;
+        &:after {
+            content: '';
+            @extend .position-absolute,
+            .bg-blue500,
+            .rounded-circle;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+        }
+    }
+    &+.tabs-vertical-btn {
+        margin-top: 20px;
+        @include media-breakpoint-up(md) {
+            margin-top: 32px;
+        }
+    }
+}

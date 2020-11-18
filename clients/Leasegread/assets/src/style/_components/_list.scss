@@ -1,0 +1,22 @@
+/* LIST */
+
+.list {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.list__item {
+    @extend .mb-2,
+    .d-inline-flex,
+    .align-items-center,
+    .font-base-semibold;
+    margin-right: 15px;
+    @include media-breakpoint-down(md) {
+        font-size: 16px;
+        margin-right: 25px;
+    }
+    @include media-breakpoint-down(xl) {
+        font-size: 18px;
+        margin-right: 50px;
+    }
+}

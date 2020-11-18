@@ -5468,7 +5468,7 @@ button.bg-dark:focus {
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
 
-.border-0, .account__aside__dropdown, .btn-gradient-blue, .table > thead > tr > th,
+.border-0, .account__aside__dropdown, .btn-gradient-blue, .btn-icon, .table > thead > tr > th,
 .table > thead > tr td, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
 .table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .calendar.fc table, .calendar.fc table > thead > tr > th,
 .calendar.fc table > thead > tr td,
@@ -5540,7 +5540,7 @@ button.bg-dark:focus {
 .rounded-lg {
   border-radius: 0.3rem !important; }
 
-.rounded-circle, .aside__nav__inner:after, .header__button__indicator, .step__inner:before {
+.rounded-circle, .aside__nav__inner:after, .header__button__indicator, .step__inner:before, .tabs-vertical-btn.active:after {
   border-radius: 50% !important; }
 
 .rounded-pill {
@@ -5576,11 +5576,11 @@ button.bg-dark:focus {
   display: table-cell !important; }
 
 .d-flex, .account__aside, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside, .aside__nav, .aside__nav__inner, .header, .header__panel, .header__buttons, html, body, .main, .simple-login-buttons, .simple-login-button, .stats__inner, .search-box, .search-box--is-opened .search-box__submit,
-.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before {
+.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list {
   display: -webkit-box !important;
   display: flex !important; }
 
-.d-inline-flex, .pagination .page-link, .event__add-event, .close {
+.d-inline-flex, .pagination .page-link, .event__add-event, .close, .list__item {
   display: -webkit-inline-box !important;
   display: inline-flex !important; }
 
@@ -5734,7 +5734,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .account__aside, .aside, .aside__nav, body, .main, .stats__inner, .fixed-table-pagination, .events, .steps {
+.flex-column, .account__aside, .aside, .aside__nav, body, .main, .stats__inner, .fixed-table-pagination, .events, .steps, .tabs-vertical {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5749,7 +5749,7 @@ button.bg-dark:focus {
   -webkit-box-direction: reverse !important;
           flex-direction: column-reverse !important; }
 
-.flex-wrap, .simple-login-buttons {
+.flex-wrap, .simple-login-buttons, .list {
   flex-wrap: wrap !important; }
 
 .flex-nowrap {
@@ -5807,7 +5807,7 @@ button.bg-dark:focus {
           align-items: flex-end !important; }
 
 .align-items-center, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside__nav__inner, .header, .header__panel, .header__buttons, .simple-login-button, .search-box__toggle,
-.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close, .step__inner, .step__inner:before {
+.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close, .step__inner, .step__inner:before, .list__item {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6266,10 +6266,10 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner {
+.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner, .tabs-vertical-btn {
   position: relative !important; }
 
-.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after {
+.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after, .tabs-vertical-btn.active:after {
   position: absolute !important; }
 
 .position-fixed, .aside-overlay, .aside {
@@ -6328,7 +6328,7 @@ button.bg-dark:focus {
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
-.shadow-none, .account__aside__dropdown, .search-box__toggle,
+.shadow-none, .account__aside__dropdown, .btn-icon, .search-box__toggle,
 .search-box__submit, .table-hover > tbody > tr.table-child-row:hover, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
 .table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .event__dropdown-btn, .event__add-event, .close {
   box-shadow: none !important; }
@@ -6444,7 +6444,7 @@ button.bg-dark:focus {
 .account__body__gallery .swiper-pagination .swiper-pagination-bullet {
   margin-right: 0.5rem !important; }
 
-.mb-2,
+.mb-2, .list__item,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -6517,7 +6517,8 @@ button.bg-dark:focus {
   padding: 0 !important; }
 
 .pt-0,
-.py-0 {
+.py-0,
+.btn-icon {
   padding-top: 0 !important; }
 
 .pr-0,
@@ -6525,7 +6526,8 @@ button.bg-dark:focus {
   padding-right: 0 !important; }
 
 .pb-0,
-.py-0 {
+.py-0,
+.btn-icon {
   padding-bottom: 0 !important; }
 
 .pl-0,
@@ -6559,7 +6561,8 @@ button.bg-dark:focus {
   padding-top: 0.5rem !important; }
 
 .pr-2,
-.px-2 {
+.px-2,
+.btn-icon {
   padding-right: 0.5rem !important; }
 
 .pb-2,
@@ -6567,7 +6570,8 @@ button.bg-dark:focus {
   padding-bottom: 0.5rem !important; }
 
 .pl-2,
-.px-2 {
+.px-2,
+.btn-icon {
   padding-left: 0.5rem !important; }
 
 .p-3, .table-box {
@@ -10036,7 +10040,7 @@ div.fixed-table-scroll-outer {
 .search-box__submit, .table-button, .pagination .page-item.active .page-link, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__link {
   color: #52638d !important; }
 
-.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active {
+.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active, .tabs-vertical-btn.active {
   color: #3387ff !important; }
 
 .text-blue600 {
@@ -10088,7 +10092,7 @@ div.fixed-table-scroll-outer {
 .text-gray600 {
   color: #999bab !important; }
 
-.text-gray700, .tab-btn, .table-rows-show-holder__heading, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle .page-size:after, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .event__header__heading {
+.text-gray700, .tab-btn, .table-rows-show-holder__heading, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle .page-size:after, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .event__header__heading, .tabs-vertical-btn {
   color: #a4afc6 !important; }
 
 .text-green500 {
@@ -10116,7 +10120,7 @@ div.fixed-table-scroll-outer {
 .bg-blue400 {
   background-color: #52638d !important; }
 
-.bg-blue500, .aside__nav__inner:after, .tab-btn:before, .pagination .page-link:before, .step--is-active .step__inner:before {
+.bg-blue500, .aside__nav__inner:after, .tab-btn:before, .pagination .page-link:before, .step--is-active .step__inner:before, .tabs-vertical-btn.active:after {
   background-color: #3387ff !important; }
 
 .bg-blue600 {
@@ -10186,7 +10190,7 @@ div.fixed-table-scroll-outer {
 .font-base-semibold, .account__aside__dropdown, .account__aside__footer, .aside__nav__item, b,
 .bold, .form-control, .custom-select, .input-group-text, .dropdown-item, .stats, .tab-btn, .table > thead > tr > th,
 .table > thead > tr td, .table > tbody > tr > th:first-child,
-.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before {
+.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .tabs-vertical-btn, .list__item {
   font-family: "Source-Sans-Pro-SemiBold" !important; }
 
 /* Font for buttons */
@@ -10197,8 +10201,8 @@ div.fixed-table-scroll-outer {
 .font-secondary-bold {
   font-family: "Heebo-Bold" !important; }
 
-.font-icons:before, .account__aside__dropdown:before, .close:before {
-  font-family: "icomoon"; }
+.font-icons:before, .account__aside__dropdown:before, .close:before, .step--is-done .step__inner:before {
+  font-family: "icomoon" !important; }
 
 /*************************
 	Base variables
@@ -10225,7 +10229,7 @@ div.fixed-table-scroll-outer {
 .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
   border-radius: 14px !important; }
 
-.radius-md, .table-box {
+.radius-md, .table-box, .box--rounded {
   border-radius: 20px !important; }
 
 .radius-lg {
@@ -10594,7 +10598,7 @@ p {
 .fs-12, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main {
   font-size: 12px !important; }
 
-.fs-13, .input-group-text, .table > thead > tr > th,
+.fs-13, .form-control.form-control--sm, .custom-select.custom-select--sm, .input-group-text, .table > thead > tr > th,
 .table > thead > tr td, .table-rows-show-holder__heading, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle .page-size:after, .label {
   font-size: 13px !important; }
 
@@ -10604,7 +10608,7 @@ p {
 .fs-15, .table-button {
   font-size: 15px !important; }
 
-.fs-16, .account__aside__footer, .aside__nav__item, .form-control, .form-control-has-icon .form-control-icon, .custom-select, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__dropdown-btn, .event__link {
+.fs-16, .account__aside__footer, .aside__nav__item, .form-control, .form-control-has-icon .form-control-icon, .custom-select, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__dropdown-btn, .event__link, .tabs-vertical-btn {
   font-size: 16px !important; }
 
 .fs-17 {
@@ -10691,11 +10695,20 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-envelope-o:before {
+  content: "\e911"; }
+
+.icon-checkmark:before, .step--is-done .step__inner:before {
+  content: "\e912"; }
+
 .icon-clear:before, .close:before {
   content: "\e910"; }
 
 .icon-edit:before {
   content: "\e908"; }
+
+.icon-phone:before {
+  content: "\e913"; }
 
 .icon-plus:before {
   content: "\e90f"; }
@@ -10795,6 +10808,22 @@ ul {
     font-family: "Source-Sans-Pro-SemiBold"; }
   .form-control:focus {
     box-shadow: 0 0 0 0.2rem rgba(51, 135, 255, 0.25); }
+  .form-control.form-control--sm:-moz-placeholder {
+    color: #8693B2;
+    font-size: 13px;
+    font-family: "Source-Sans-Pro-SemiBold"; }
+  .form-control.form-control--sm::-moz-placeholder {
+    color: #8693B2;
+    font-size: 13px;
+    font-family: "Source-Sans-Pro-SemiBold"; }
+  .form-control.form-control--sm:-ms-input-placeholder {
+    color: #8693B2;
+    font-size: 13px;
+    font-family: "Source-Sans-Pro-SemiBold"; }
+  .form-control.form-control--sm::-webkit-input-placeholder {
+    color: #8693B2;
+    font-size: 13px;
+    font-family: "Source-Sans-Pro-SemiBold"; }
 
 .form-group {
   margin-bottom: 24px; }
@@ -10845,6 +10874,17 @@ ul {
     .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
       background-color: #6a8edb;
       border-color: #6a8edb; }
+  .btn-outline-blue {
+    background: transparent;
+    color: #455880;
+    border-color: #455880;
+    border-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .btn-outline-blue:hover, .btn-outline-blue:active, .btn-outline-blue:focus, .btn-outline-blue.active {
+      background: #455880 !important;
+      border-color: #455880 !important;
+      color: #ffffff !important; }
 
 /* SECTION */
 .section {
@@ -10888,6 +10928,17 @@ ul {
 .table-box {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f5fbff), to(rgba(245, 251, 255, 0)));
   background-image: linear-gradient(to bottom, #f5fbff, rgba(245, 251, 255, 0)); }
+  .table-box--sub {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d9efff), to(rgba(245, 251, 255, 0)));
+    background-image: linear-gradient(to bottom, #d9efff, rgba(245, 251, 255, 0)); }
+    @media (max-width: 767.98px) {
+      .table-box--sub {
+        margin-left: -1rem;
+        margin-right: -1rem; } }
+    @media (min-width: 768px) {
+      .table-box--sub {
+        margin-top: -1.5rem;
+        margin-right: -1.5rem; } }
 
 /* TABS */
 @media (min-width: 768px) {
@@ -10988,14 +11039,13 @@ ul {
 
 /* BOX */
 .box {
-  padding: 20px 15px; }
+  padding: 20px 15px;
+  background-color: #ffffff; }
   @media (min-width: 768px) {
     .box {
       padding: 32px 25px; } }
   .box--sky {
     background-color: rgba(243, 250, 255, 0.98); }
-  .box--rounded {
-    border-radius: 20px; }
 
 /* PAGINATION */
 .pagination .page-item.active .page-link:before {
@@ -11139,3 +11189,34 @@ ul {
     height: 46px;
     background-color: #d0ebfe;
     z-index: 10; }
+
+/* TABS VERTICAL */
+@media (min-width: 768px) {
+  .tabs-vertical {
+    max-width: 210px; } }
+
+.tabs-vertical-btn {
+  padding-right: 30px; }
+  .tabs-vertical-btn.active:after {
+    content: '';
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 6px;
+    height: 6px; }
+  .tabs-vertical-btn + .tabs-vertical-btn {
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      .tabs-vertical-btn + .tabs-vertical-btn {
+        margin-top: 32px; } }
+
+/* LIST */
+.list__item {
+  margin-right: 15px;
+  font-size: 18px;
+  margin-right: 50px; }
+  @media (max-width: 991.98px) {
+    .list__item {
+      font-size: 16px;
+      margin-right: 25px; } }

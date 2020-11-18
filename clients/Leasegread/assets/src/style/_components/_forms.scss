@@ -14,6 +14,10 @@ $field-height: 50px;
     &:focus {
         box-shadow: 0 0 0 0.2rem rgba($blue500, .25);
     }
+    &.form-control--sm {
+        @extend .fs-13;
+        @include custom-placeholder($color: $gray100, $font-size: 13px, $font-family: $font-base-semibold);
+    }
 }
 
 .form-group {
@@ -44,6 +48,9 @@ $field-height: 50px;
     border-color: $blue50;
     background: $white url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEzIDEiIHN0cm9rZT0iIzQ1NTg4MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==") no-repeat right 18px center/14px 10px;
     padding-right: 44px !important;
+    &.custom-select--sm {
+        @extend .fs-13;
+    }
 }
 
 .form-secondary {
