@@ -1,0 +1,26 @@
+/* CLOSE */
+
+$close-btn-size: 40px;
+.close {
+    @extend .d-inline-flex,
+    .btn,
+    .p-0,
+    .border-0,
+    .shadow-none,
+    .align-items-center,
+    .justify-content-center,
+    .text-blue800,
+    .font-icons,
+    .icon-clear;
+    width: $close-btn-size;
+    height: $close-btn-size;
+    background-color: $blue200 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    border-radius: 8px !important;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($blue200, 5%) !important;
+    }
+}

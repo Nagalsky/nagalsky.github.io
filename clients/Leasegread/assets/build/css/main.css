@@ -1951,7 +1951,7 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1972,32 +1972,33 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn, .account__aside__dropdown, .search-box__toggle,
-    .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event {
+    .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover, .account__aside__dropdown:hover, .search-box__toggle:hover,
-  .search-box__submit:hover, .table-button:hover, .event__dropdown-btn:hover, .event__add-event:hover {
+  .search-box__submit:hover, .table-button:hover, .event__dropdown-btn:hover, .event__add-event:hover, .close:hover {
     color: #212529;
     text-decoration: none; }
   .btn:focus, .account__aside__dropdown:focus, .search-box__toggle:focus,
-  .search-box__submit:focus, .table-button:focus, .event__dropdown-btn:focus, .event__add-event:focus, .btn.focus, .focus.account__aside__dropdown, .focus.search-box__toggle,
-  .focus.search-box__submit, .focus.table-button, .focus.event__dropdown-btn, .focus.event__add-event {
+  .search-box__submit:focus, .table-button:focus, .event__dropdown-btn:focus, .event__add-event:focus, .close:focus, .btn.focus, .focus.account__aside__dropdown, .focus.search-box__toggle,
+  .focus.search-box__submit, .focus.table-button, .focus.event__dropdown-btn, .focus.event__add-event, .focus.close {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, .disabled.account__aside__dropdown, .disabled.search-box__toggle,
-  .disabled.search-box__submit, .disabled.table-button, .disabled.event__dropdown-btn, .disabled.event__add-event, .btn:disabled, .account__aside__dropdown:disabled, .search-box__toggle:disabled,
-  .search-box__submit:disabled, .table-button:disabled, .event__dropdown-btn:disabled, .event__add-event:disabled {
+  .disabled.search-box__submit, .disabled.table-button, .disabled.event__dropdown-btn, .disabled.event__add-event, .disabled.close, .btn:disabled, .account__aside__dropdown:disabled, .search-box__toggle:disabled,
+  .search-box__submit:disabled, .table-button:disabled, .event__dropdown-btn:disabled, .event__add-event:disabled, .close:disabled {
     opacity: 0.65; }
 
 a.btn.disabled, a.disabled.account__aside__dropdown, a.disabled.search-box__toggle,
-a.disabled.search-box__submit, a.disabled.table-button, a.disabled.event__dropdown-btn, a.disabled.event__add-event,
+a.disabled.search-box__submit, a.disabled.table-button, a.disabled.event__dropdown-btn, a.disabled.event__add-event, a.disabled.close,
 fieldset:disabled a.btn,
 fieldset:disabled a.account__aside__dropdown,
 fieldset:disabled a.search-box__toggle,
 fieldset:disabled a.search-box__submit,
 fieldset:disabled a.table-button,
 fieldset:disabled a.event__dropdown-btn,
-fieldset:disabled a.event__add-event {
+fieldset:disabled a.event__add-event,
+fieldset:disabled a.close {
   pointer-events: none; }
 
 .btn-primary {
@@ -2391,14 +2392,14 @@ fieldset:disabled a.event__add-event {
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .account__aside__dropdown, .btn-group-lg > .search-box__toggle,
-.btn-group-lg > .search-box__submit, .btn-group-lg > .table-button, .btn-group-lg > .event__dropdown-btn, .btn-group-lg > .event__add-event {
+.btn-group-lg > .search-box__submit, .btn-group-lg > .table-button, .btn-group-lg > .event__dropdown-btn, .btn-group-lg > .event__add-event, .btn-group-lg > .close {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .account__aside__dropdown, .btn-group-sm > .search-box__toggle,
-.btn-group-sm > .search-box__submit, .btn-group-sm > .table-button, .btn-group-sm > .event__dropdown-btn, .btn-group-sm > .event__add-event {
+.btn-group-sm > .search-box__submit, .btn-group-sm > .table-button, .btn-group-sm > .event__dropdown-btn, .btn-group-sm > .event__add-event, .btn-group-sm > .close {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2648,31 +2649,33 @@ input[type="button"].btn-block {
   display: inline-flex;
   vertical-align: middle; }
   .btn-group > .btn, .btn-group > .account__aside__dropdown, .btn-group > .search-box__toggle,
-  .btn-group > .search-box__submit, .btn-group > .table-button, .btn-group > .event__dropdown-btn, .btn-group > .event__add-event,
+  .btn-group > .search-box__submit, .btn-group > .table-button, .btn-group > .event__dropdown-btn, .btn-group > .event__add-event, .btn-group > .close,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .account__aside__dropdown,
   .btn-group-vertical > .search-box__toggle,
   .btn-group-vertical > .search-box__submit,
   .btn-group-vertical > .table-button,
   .btn-group-vertical > .event__dropdown-btn,
-  .btn-group-vertical > .event__add-event {
+  .btn-group-vertical > .event__add-event,
+  .btn-group-vertical > .close {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1 1 auto; }
     .btn-group > .btn:hover, .btn-group > .account__aside__dropdown:hover, .btn-group > .search-box__toggle:hover,
-    .btn-group > .search-box__submit:hover, .btn-group > .table-button:hover, .btn-group > .event__dropdown-btn:hover, .btn-group > .event__add-event:hover,
+    .btn-group > .search-box__submit:hover, .btn-group > .table-button:hover, .btn-group > .event__dropdown-btn:hover, .btn-group > .event__add-event:hover, .btn-group > .close:hover,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .account__aside__dropdown:hover,
     .btn-group-vertical > .search-box__toggle:hover,
     .btn-group-vertical > .search-box__submit:hover,
     .btn-group-vertical > .table-button:hover,
     .btn-group-vertical > .event__dropdown-btn:hover,
-    .btn-group-vertical > .event__add-event:hover {
+    .btn-group-vertical > .event__add-event:hover,
+    .btn-group-vertical > .close:hover {
       z-index: 1; }
     .btn-group > .btn:focus, .btn-group > .account__aside__dropdown:focus, .btn-group > .search-box__toggle:focus,
-    .btn-group > .search-box__submit:focus, .btn-group > .table-button:focus, .btn-group > .event__dropdown-btn:focus, .btn-group > .event__add-event:focus, .btn-group > .btn:active, .btn-group > .account__aside__dropdown:active, .btn-group > .search-box__toggle:active,
-    .btn-group > .search-box__submit:active, .btn-group > .table-button:active, .btn-group > .event__dropdown-btn:active, .btn-group > .event__add-event:active, .btn-group > .btn.active, .btn-group > .active.account__aside__dropdown, .btn-group > .active.search-box__toggle,
-    .btn-group > .active.search-box__submit, .btn-group > .active.table-button, .btn-group > .active.event__dropdown-btn, .btn-group > .active.event__add-event,
+    .btn-group > .search-box__submit:focus, .btn-group > .table-button:focus, .btn-group > .event__dropdown-btn:focus, .btn-group > .event__add-event:focus, .btn-group > .close:focus, .btn-group > .btn:active, .btn-group > .account__aside__dropdown:active, .btn-group > .search-box__toggle:active,
+    .btn-group > .search-box__submit:active, .btn-group > .table-button:active, .btn-group > .event__dropdown-btn:active, .btn-group > .event__add-event:active, .btn-group > .close:active, .btn-group > .btn.active, .btn-group > .active.account__aside__dropdown, .btn-group > .active.search-box__toggle,
+    .btn-group > .active.search-box__submit, .btn-group > .active.table-button, .btn-group > .active.event__dropdown-btn, .btn-group > .active.event__add-event, .btn-group > .active.close,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .account__aside__dropdown:focus,
     .btn-group-vertical > .search-box__toggle:focus,
@@ -2680,6 +2683,7 @@ input[type="button"].btn-block {
     .btn-group-vertical > .table-button:focus,
     .btn-group-vertical > .event__dropdown-btn:focus,
     .btn-group-vertical > .event__add-event:focus,
+    .btn-group-vertical > .close:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .account__aside__dropdown:active,
     .btn-group-vertical > .search-box__toggle:active,
@@ -2687,13 +2691,15 @@ input[type="button"].btn-block {
     .btn-group-vertical > .table-button:active,
     .btn-group-vertical > .event__dropdown-btn:active,
     .btn-group-vertical > .event__add-event:active,
+    .btn-group-vertical > .close:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.account__aside__dropdown,
     .btn-group-vertical > .active.search-box__toggle,
     .btn-group-vertical > .active.search-box__submit,
     .btn-group-vertical > .active.table-button,
     .btn-group-vertical > .active.event__dropdown-btn,
-    .btn-group-vertical > .active.event__add-event {
+    .btn-group-vertical > .active.event__add-event,
+    .btn-group-vertical > .active.close {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2706,31 +2712,33 @@ input[type="button"].btn-block {
     width: auto; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .account__aside__dropdown:not(:first-child), .btn-group > .search-box__toggle:not(:first-child),
-.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child),
+.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle), .btn-group > .search-box__toggle:not(:last-child):not(.dropdown-toggle),
-.btn-group > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .event__add-event:not(:last-child):not(.dropdown-toggle),
+.btn-group > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group > .close:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn-group:not(:last-child) > .account__aside__dropdown,
 .btn-group > .btn-group:not(:last-child) > .search-box__toggle,
 .btn-group > .btn-group:not(:last-child) > .search-box__submit,
 .btn-group > .btn-group:not(:last-child) > .table-button,
 .btn-group > .btn-group:not(:last-child) > .event__dropdown-btn,
-.btn-group > .btn-group:not(:last-child) > .event__add-event {
+.btn-group > .btn-group:not(:last-child) > .event__add-event,
+.btn-group > .btn-group:not(:last-child) > .close {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .account__aside__dropdown:not(:first-child), .btn-group > .search-box__toggle:not(:first-child),
-.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child),
+.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .btn-group:not(:first-child) > .account__aside__dropdown,
 .btn-group > .btn-group:not(:first-child) > .search-box__toggle,
 .btn-group > .btn-group:not(:first-child) > .search-box__submit,
 .btn-group > .btn-group:not(:first-child) > .table-button,
 .btn-group > .btn-group:not(:first-child) > .event__dropdown-btn,
-.btn-group > .btn-group:not(:first-child) > .event__add-event {
+.btn-group > .btn-group:not(:first-child) > .event__add-event,
+.btn-group > .btn-group:not(:first-child) > .close {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2744,11 +2752,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-sm > .search-box__toggle + .dropdown-toggle-split, .btn-group-sm > .search-box__submit + .dropdown-toggle-split, .btn-group-sm > .table-button + .dropdown-toggle-split, .btn-group-sm > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-sm > .event__add-event + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-sm > .search-box__toggle + .dropdown-toggle-split, .btn-group-sm > .search-box__submit + .dropdown-toggle-split, .btn-group-sm > .table-button + .dropdown-toggle-split, .btn-group-sm > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-sm > .event__add-event + .dropdown-toggle-split, .btn-group-sm > .close + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-lg > .search-box__toggle + .dropdown-toggle-split, .btn-group-lg > .search-box__submit + .dropdown-toggle-split, .btn-group-lg > .table-button + .dropdown-toggle-split, .btn-group-lg > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-lg > .event__add-event + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-lg > .search-box__toggle + .dropdown-toggle-split, .btn-group-lg > .search-box__submit + .dropdown-toggle-split, .btn-group-lg > .table-button + .dropdown-toggle-split, .btn-group-lg > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-lg > .event__add-event + .dropdown-toggle-split, .btn-group-lg > .close + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2768,46 +2776,50 @@ input[type="button"].btn-block {
   .btn-group-vertical > .table-button,
   .btn-group-vertical > .event__dropdown-btn,
   .btn-group-vertical > .event__add-event,
+  .btn-group-vertical > .close,
   .btn-group-vertical > .btn-group {
     width: 100%; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .account__aside__dropdown:not(:first-child), .btn-group-vertical > .search-box__toggle:not(:first-child),
-  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child),
+  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
   .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .search-box__toggle:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__add-event:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .close:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .account__aside__dropdown,
   .btn-group-vertical > .btn-group:not(:last-child) > .search-box__toggle,
   .btn-group-vertical > .btn-group:not(:last-child) > .search-box__submit,
   .btn-group-vertical > .btn-group:not(:last-child) > .table-button,
   .btn-group-vertical > .btn-group:not(:last-child) > .event__dropdown-btn,
-  .btn-group-vertical > .btn-group:not(:last-child) > .event__add-event {
+  .btn-group-vertical > .btn-group:not(:last-child) > .event__add-event,
+  .btn-group-vertical > .btn-group:not(:last-child) > .close {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .account__aside__dropdown:not(:first-child), .btn-group-vertical > .search-box__toggle:not(:first-child),
-  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child),
+  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .account__aside__dropdown,
   .btn-group-vertical > .btn-group:not(:first-child) > .search-box__toggle,
   .btn-group-vertical > .btn-group:not(:first-child) > .search-box__submit,
   .btn-group-vertical > .btn-group:not(:first-child) > .table-button,
   .btn-group-vertical > .btn-group:not(:first-child) > .event__dropdown-btn,
-  .btn-group-vertical > .btn-group:not(:first-child) > .event__add-event {
+  .btn-group-vertical > .btn-group:not(:first-child) > .event__add-event,
+  .btn-group-vertical > .btn-group:not(:first-child) > .close {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group-toggle > .btn, .btn-group-toggle > .account__aside__dropdown, .btn-group-toggle > .search-box__toggle,
-.btn-group-toggle > .search-box__submit, .btn-group-toggle > .table-button, .btn-group-toggle > .event__dropdown-btn, .btn-group-toggle > .event__add-event,
+.btn-group-toggle > .search-box__submit, .btn-group-toggle > .table-button, .btn-group-toggle > .event__dropdown-btn, .btn-group-toggle > .event__add-event, .btn-group-toggle > .close,
 .btn-group-toggle > .btn-group > .btn,
 .btn-group-toggle > .btn-group > .account__aside__dropdown,
 .btn-group-toggle > .btn-group > .search-box__toggle,
 .btn-group-toggle > .btn-group > .search-box__submit,
 .btn-group-toggle > .btn-group > .table-button,
 .btn-group-toggle > .btn-group > .event__dropdown-btn,
-.btn-group-toggle > .btn-group > .event__add-event {
+.btn-group-toggle > .btn-group > .event__add-event,
+.btn-group-toggle > .btn-group > .close {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .account__aside__dropdown input[type="radio"], .btn-group-toggle > .search-box__toggle input[type="radio"], .btn-group-toggle > .search-box__submit input[type="radio"], .btn-group-toggle > .table-button input[type="radio"], .btn-group-toggle > .event__dropdown-btn input[type="radio"], .btn-group-toggle > .event__add-event input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .account__aside__dropdown input[type="radio"], .btn-group-toggle > .search-box__toggle input[type="radio"], .btn-group-toggle > .search-box__submit input[type="radio"], .btn-group-toggle > .table-button input[type="radio"], .btn-group-toggle > .event__dropdown-btn input[type="radio"], .btn-group-toggle > .event__add-event input[type="radio"], .btn-group-toggle > .close input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .account__aside__dropdown input[type="checkbox"],
   .btn-group-toggle > .search-box__toggle input[type="checkbox"],
@@ -2815,6 +2827,7 @@ input[type="button"].btn-block {
   .btn-group-toggle > .table-button input[type="checkbox"],
   .btn-group-toggle > .event__dropdown-btn input[type="checkbox"],
   .btn-group-toggle > .event__add-event input[type="checkbox"],
+  .btn-group-toggle > .close input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .account__aside__dropdown input[type="radio"],
   .btn-group-toggle > .btn-group > .search-box__toggle input[type="radio"],
@@ -2822,13 +2835,15 @@ input[type="button"].btn-block {
   .btn-group-toggle > .btn-group > .table-button input[type="radio"],
   .btn-group-toggle > .btn-group > .event__dropdown-btn input[type="radio"],
   .btn-group-toggle > .btn-group > .event__add-event input[type="radio"],
+  .btn-group-toggle > .btn-group > .close input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .account__aside__dropdown input[type="checkbox"],
   .btn-group-toggle > .btn-group > .search-box__toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .search-box__submit input[type="checkbox"],
   .btn-group-toggle > .btn-group > .table-button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .event__dropdown-btn input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .event__add-event input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .event__add-event input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .close input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2895,34 +2910,37 @@ input[type="button"].btn-block {
   display: -webkit-box;
   display: flex; }
   .input-group-prepend .btn, .input-group-prepend .account__aside__dropdown, .input-group-prepend .search-box__toggle,
-  .input-group-prepend .search-box__submit, .input-group-prepend .table-button, .input-group-prepend .event__dropdown-btn, .input-group-prepend .event__add-event,
+  .input-group-prepend .search-box__submit, .input-group-prepend .table-button, .input-group-prepend .event__dropdown-btn, .input-group-prepend .event__add-event, .input-group-prepend .close,
   .input-group-append .btn,
   .input-group-append .account__aside__dropdown,
   .input-group-append .search-box__toggle,
   .input-group-append .search-box__submit,
   .input-group-append .table-button,
   .input-group-append .event__dropdown-btn,
-  .input-group-append .event__add-event {
+  .input-group-append .event__add-event,
+  .input-group-append .close {
     position: relative;
     z-index: 2; }
     .input-group-prepend .btn:focus, .input-group-prepend .account__aside__dropdown:focus, .input-group-prepend .search-box__toggle:focus,
-    .input-group-prepend .search-box__submit:focus, .input-group-prepend .table-button:focus, .input-group-prepend .event__dropdown-btn:focus, .input-group-prepend .event__add-event:focus,
+    .input-group-prepend .search-box__submit:focus, .input-group-prepend .table-button:focus, .input-group-prepend .event__dropdown-btn:focus, .input-group-prepend .event__add-event:focus, .input-group-prepend .close:focus,
     .input-group-append .btn:focus,
     .input-group-append .account__aside__dropdown:focus,
     .input-group-append .search-box__toggle:focus,
     .input-group-append .search-box__submit:focus,
     .input-group-append .table-button:focus,
     .input-group-append .event__dropdown-btn:focus,
-    .input-group-append .event__add-event:focus {
+    .input-group-append .event__add-event:focus,
+    .input-group-append .close:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .account__aside__dropdown + .btn, .input-group-prepend .search-box__toggle + .btn, .input-group-prepend .search-box__submit + .btn, .input-group-prepend .table-button + .btn, .input-group-prepend .event__dropdown-btn + .btn, .input-group-prepend .event__add-event + .btn, .input-group-prepend .btn + .account__aside__dropdown, .input-group-prepend .account__aside__dropdown + .account__aside__dropdown, .input-group-prepend .search-box__toggle + .account__aside__dropdown, .input-group-prepend .search-box__submit + .account__aside__dropdown, .input-group-prepend .table-button + .account__aside__dropdown, .input-group-prepend .event__dropdown-btn + .account__aside__dropdown, .input-group-prepend .event__add-event + .account__aside__dropdown, .input-group-prepend .btn + .search-box__toggle, .input-group-prepend .account__aside__dropdown + .search-box__toggle, .input-group-prepend .search-box__toggle + .search-box__toggle, .input-group-prepend .search-box__submit + .search-box__toggle, .input-group-prepend .table-button + .search-box__toggle, .input-group-prepend .event__dropdown-btn + .search-box__toggle, .input-group-prepend .event__add-event + .search-box__toggle,
+  .input-group-prepend .btn + .btn, .input-group-prepend .account__aside__dropdown + .btn, .input-group-prepend .search-box__toggle + .btn, .input-group-prepend .search-box__submit + .btn, .input-group-prepend .table-button + .btn, .input-group-prepend .event__dropdown-btn + .btn, .input-group-prepend .event__add-event + .btn, .input-group-prepend .close + .btn, .input-group-prepend .btn + .account__aside__dropdown, .input-group-prepend .account__aside__dropdown + .account__aside__dropdown, .input-group-prepend .search-box__toggle + .account__aside__dropdown, .input-group-prepend .search-box__submit + .account__aside__dropdown, .input-group-prepend .table-button + .account__aside__dropdown, .input-group-prepend .event__dropdown-btn + .account__aside__dropdown, .input-group-prepend .event__add-event + .account__aside__dropdown, .input-group-prepend .close + .account__aside__dropdown, .input-group-prepend .btn + .search-box__toggle, .input-group-prepend .account__aside__dropdown + .search-box__toggle, .input-group-prepend .search-box__toggle + .search-box__toggle, .input-group-prepend .search-box__submit + .search-box__toggle, .input-group-prepend .table-button + .search-box__toggle, .input-group-prepend .event__dropdown-btn + .search-box__toggle, .input-group-prepend .event__add-event + .search-box__toggle, .input-group-prepend .close + .search-box__toggle,
   .input-group-prepend .btn + .search-box__submit,
   .input-group-prepend .account__aside__dropdown + .search-box__submit,
   .input-group-prepend .search-box__toggle + .search-box__submit,
   .input-group-prepend .search-box__submit + .search-box__submit,
   .input-group-prepend .table-button + .search-box__submit,
   .input-group-prepend .event__dropdown-btn + .search-box__submit,
-  .input-group-prepend .event__add-event + .search-box__submit, .input-group-prepend .btn + .table-button, .input-group-prepend .account__aside__dropdown + .table-button, .input-group-prepend .search-box__toggle + .table-button, .input-group-prepend .search-box__submit + .table-button, .input-group-prepend .table-button + .table-button, .input-group-prepend .event__dropdown-btn + .table-button, .input-group-prepend .event__add-event + .table-button, .input-group-prepend .btn + .event__dropdown-btn, .input-group-prepend .account__aside__dropdown + .event__dropdown-btn, .input-group-prepend .search-box__toggle + .event__dropdown-btn, .input-group-prepend .search-box__submit + .event__dropdown-btn, .input-group-prepend .table-button + .event__dropdown-btn, .input-group-prepend .event__dropdown-btn + .event__dropdown-btn, .input-group-prepend .event__add-event + .event__dropdown-btn, .input-group-prepend .btn + .event__add-event, .input-group-prepend .account__aside__dropdown + .event__add-event, .input-group-prepend .search-box__toggle + .event__add-event, .input-group-prepend .search-box__submit + .event__add-event, .input-group-prepend .table-button + .event__add-event, .input-group-prepend .event__dropdown-btn + .event__add-event, .input-group-prepend .event__add-event + .event__add-event,
+  .input-group-prepend .event__add-event + .search-box__submit,
+  .input-group-prepend .close + .search-box__submit, .input-group-prepend .btn + .table-button, .input-group-prepend .account__aside__dropdown + .table-button, .input-group-prepend .search-box__toggle + .table-button, .input-group-prepend .search-box__submit + .table-button, .input-group-prepend .table-button + .table-button, .input-group-prepend .event__dropdown-btn + .table-button, .input-group-prepend .event__add-event + .table-button, .input-group-prepend .close + .table-button, .input-group-prepend .btn + .event__dropdown-btn, .input-group-prepend .account__aside__dropdown + .event__dropdown-btn, .input-group-prepend .search-box__toggle + .event__dropdown-btn, .input-group-prepend .search-box__submit + .event__dropdown-btn, .input-group-prepend .table-button + .event__dropdown-btn, .input-group-prepend .event__dropdown-btn + .event__dropdown-btn, .input-group-prepend .event__add-event + .event__dropdown-btn, .input-group-prepend .close + .event__dropdown-btn, .input-group-prepend .btn + .event__add-event, .input-group-prepend .account__aside__dropdown + .event__add-event, .input-group-prepend .search-box__toggle + .event__add-event, .input-group-prepend .search-box__submit + .event__add-event, .input-group-prepend .table-button + .event__add-event, .input-group-prepend .event__dropdown-btn + .event__add-event, .input-group-prepend .event__add-event + .event__add-event, .input-group-prepend .close + .event__add-event, .input-group-prepend .btn + .close, .input-group-prepend .account__aside__dropdown + .close, .input-group-prepend .search-box__toggle + .close, .input-group-prepend .search-box__submit + .close, .input-group-prepend .table-button + .close, .input-group-prepend .event__dropdown-btn + .close, .input-group-prepend .event__add-event + .close, .input-group-prepend .close + .close,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .account__aside__dropdown + .input-group-text,
   .input-group-prepend .search-box__toggle + .input-group-text,
@@ -2930,6 +2948,7 @@ input[type="button"].btn-block {
   .input-group-prepend .table-button + .input-group-text,
   .input-group-prepend .event__dropdown-btn + .input-group-text,
   .input-group-prepend .event__add-event + .input-group-text,
+  .input-group-prepend .close + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .input-group-text + .account__aside__dropdown,
@@ -2938,6 +2957,7 @@ input[type="button"].btn-block {
   .input-group-prepend .input-group-text + .table-button,
   .input-group-prepend .input-group-text + .event__dropdown-btn,
   .input-group-prepend .input-group-text + .event__add-event,
+  .input-group-prepend .input-group-text + .close,
   .input-group-append .btn + .btn,
   .input-group-append .account__aside__dropdown + .btn,
   .input-group-append .search-box__toggle + .btn,
@@ -2945,6 +2965,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .btn,
   .input-group-append .event__dropdown-btn + .btn,
   .input-group-append .event__add-event + .btn,
+  .input-group-append .close + .btn,
   .input-group-append .btn + .account__aside__dropdown,
   .input-group-append .account__aside__dropdown + .account__aside__dropdown,
   .input-group-append .search-box__toggle + .account__aside__dropdown,
@@ -2952,6 +2973,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .account__aside__dropdown,
   .input-group-append .event__dropdown-btn + .account__aside__dropdown,
   .input-group-append .event__add-event + .account__aside__dropdown,
+  .input-group-append .close + .account__aside__dropdown,
   .input-group-append .btn + .search-box__toggle,
   .input-group-append .account__aside__dropdown + .search-box__toggle,
   .input-group-append .search-box__toggle + .search-box__toggle,
@@ -2959,6 +2981,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .search-box__toggle,
   .input-group-append .event__dropdown-btn + .search-box__toggle,
   .input-group-append .event__add-event + .search-box__toggle,
+  .input-group-append .close + .search-box__toggle,
   .input-group-append .btn + .search-box__submit,
   .input-group-append .account__aside__dropdown + .search-box__submit,
   .input-group-append .search-box__toggle + .search-box__submit,
@@ -2966,6 +2989,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .search-box__submit,
   .input-group-append .event__dropdown-btn + .search-box__submit,
   .input-group-append .event__add-event + .search-box__submit,
+  .input-group-append .close + .search-box__submit,
   .input-group-append .btn + .table-button,
   .input-group-append .account__aside__dropdown + .table-button,
   .input-group-append .search-box__toggle + .table-button,
@@ -2973,6 +2997,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .table-button,
   .input-group-append .event__dropdown-btn + .table-button,
   .input-group-append .event__add-event + .table-button,
+  .input-group-append .close + .table-button,
   .input-group-append .btn + .event__dropdown-btn,
   .input-group-append .account__aside__dropdown + .event__dropdown-btn,
   .input-group-append .search-box__toggle + .event__dropdown-btn,
@@ -2980,6 +3005,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .event__dropdown-btn,
   .input-group-append .event__dropdown-btn + .event__dropdown-btn,
   .input-group-append .event__add-event + .event__dropdown-btn,
+  .input-group-append .close + .event__dropdown-btn,
   .input-group-append .btn + .event__add-event,
   .input-group-append .account__aside__dropdown + .event__add-event,
   .input-group-append .search-box__toggle + .event__add-event,
@@ -2987,6 +3013,15 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .event__add-event,
   .input-group-append .event__dropdown-btn + .event__add-event,
   .input-group-append .event__add-event + .event__add-event,
+  .input-group-append .close + .event__add-event,
+  .input-group-append .btn + .close,
+  .input-group-append .account__aside__dropdown + .close,
+  .input-group-append .search-box__toggle + .close,
+  .input-group-append .search-box__submit + .close,
+  .input-group-append .table-button + .close,
+  .input-group-append .event__dropdown-btn + .close,
+  .input-group-append .event__add-event + .close,
+  .input-group-append .close + .close,
   .input-group-append .btn + .input-group-text,
   .input-group-append .account__aside__dropdown + .input-group-text,
   .input-group-append .search-box__toggle + .input-group-text,
@@ -2994,6 +3029,7 @@ input[type="button"].btn-block {
   .input-group-append .table-button + .input-group-text,
   .input-group-append .event__dropdown-btn + .input-group-text,
   .input-group-append .event__add-event + .input-group-text,
+  .input-group-append .close + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .input-group-text + .account__aside__dropdown,
@@ -3001,7 +3037,8 @@ input[type="button"].btn-block {
   .input-group-append .input-group-text + .search-box__submit,
   .input-group-append .input-group-text + .table-button,
   .input-group-append .input-group-text + .event__dropdown-btn,
-  .input-group-append .input-group-text + .event__add-event {
+  .input-group-append .input-group-text + .event__add-event,
+  .input-group-append .input-group-text + .close {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3045,13 +3082,15 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .table-button,
 .input-group-lg > .input-group-prepend > .event__dropdown-btn,
 .input-group-lg > .input-group-prepend > .event__add-event,
+.input-group-lg > .input-group-prepend > .close,
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > .account__aside__dropdown,
 .input-group-lg > .input-group-append > .search-box__toggle,
 .input-group-lg > .input-group-append > .search-box__submit,
 .input-group-lg > .input-group-append > .table-button,
 .input-group-lg > .input-group-append > .event__dropdown-btn,
-.input-group-lg > .input-group-append > .event__add-event {
+.input-group-lg > .input-group-append > .event__add-event,
+.input-group-lg > .input-group-append > .close {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3072,13 +3111,15 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .table-button,
 .input-group-sm > .input-group-prepend > .event__dropdown-btn,
 .input-group-sm > .input-group-prepend > .event__add-event,
+.input-group-sm > .input-group-prepend > .close,
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > .account__aside__dropdown,
 .input-group-sm > .input-group-append > .search-box__toggle,
 .input-group-sm > .input-group-append > .search-box__submit,
 .input-group-sm > .input-group-append > .table-button,
 .input-group-sm > .input-group-append > .event__dropdown-btn,
-.input-group-sm > .input-group-append > .event__add-event {
+.input-group-sm > .input-group-append > .event__add-event,
+.input-group-sm > .input-group-append > .close {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3089,7 +3130,7 @@ input[type="button"].btn-block {
   padding-right: 1.75rem; }
 
 .input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .account__aside__dropdown, .input-group > .input-group-prepend > .search-box__toggle,
-.input-group > .input-group-prepend > .search-box__submit, .input-group > .input-group-prepend > .table-button, .input-group > .input-group-prepend > .event__dropdown-btn, .input-group > .input-group-prepend > .event__add-event,
+.input-group > .input-group-prepend > .search-box__submit, .input-group > .input-group-prepend > .table-button, .input-group > .input-group-prepend > .event__dropdown-btn, .input-group > .input-group-prepend > .event__add-event, .input-group > .input-group-prepend > .close,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .account__aside__dropdown,
@@ -3098,6 +3139,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:not(:last-child) > .table-button,
 .input-group > .input-group-append:not(:last-child) > .event__dropdown-btn,
 .input-group > .input-group-append:not(:last-child) > .event__add-event,
+.input-group > .input-group-append:not(:last-child) > .close,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle),
@@ -3106,12 +3148,13 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:last-child > .table-button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .event__add-event:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .close:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > .account__aside__dropdown, .input-group > .input-group-append > .search-box__toggle,
-.input-group > .input-group-append > .search-box__submit, .input-group > .input-group-append > .table-button, .input-group > .input-group-append > .event__dropdown-btn, .input-group > .input-group-append > .event__add-event,
+.input-group > .input-group-append > .search-box__submit, .input-group > .input-group-append > .table-button, .input-group > .input-group-append > .event__dropdown-btn, .input-group > .input-group-append > .event__add-event, .input-group > .input-group-append > .close,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .account__aside__dropdown,
@@ -3120,6 +3163,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:not(:first-child) > .table-button,
 .input-group > .input-group-prepend:not(:first-child) > .event__dropdown-btn,
 .input-group > .input-group-prepend:not(:first-child) > .event__add-event,
+.input-group > .input-group-prepend:not(:first-child) > .close,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .account__aside__dropdown:not(:first-child),
@@ -3128,6 +3172,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:first-child > .table-button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .event__dropdown-btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .event__add-event:not(:first-child),
+.input-group > .input-group-prepend:first-child > .close:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4147,7 +4192,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .account__aside__dropdown .badge, .search-box__toggle .badge, .search-box__submit .badge, .table-button .badge, .event__dropdown-btn .badge, .event__add-event .badge {
+.btn .badge, .account__aside__dropdown .badge, .search-box__toggle .badge, .search-box__submit .badge, .table-button .badge, .event__dropdown-btn .badge, .event__add-event .badge, .close .badge {
   position: relative;
   top: -1px; }
 
@@ -5425,10 +5470,10 @@ button.bg-dark:focus {
 
 .border-0, .account__aside__dropdown, .btn-gradient-blue, .table > thead > tr > th,
 .table > thead > tr td, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .calendar.fc table, .calendar.fc table > thead > tr > th,
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .calendar.fc table, .calendar.fc table > thead > tr > th,
 .calendar.fc table > thead > tr td,
 .calendar.fc table > tbody > tr > th,
-.calendar.fc table > tbody > tr td, .calendar.fc table .fc-daygrid-body .fc-h-event, .event__dropdown-btn, .event__add-event {
+.calendar.fc table > tbody > tr td, .calendar.fc table .fc-daygrid-body .fc-h-event, .event__dropdown-btn, .event__add-event, .close {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5535,7 +5580,7 @@ button.bg-dark:focus {
   display: -webkit-box !important;
   display: flex !important; }
 
-.d-inline-flex, .pagination .page-link, .event__add-event {
+.d-inline-flex, .pagination .page-link, .event__add-event, .close {
   display: -webkit-inline-box !important;
   display: inline-flex !important; }
 
@@ -5742,7 +5787,7 @@ button.bg-dark:focus {
           justify-content: flex-end !important; }
 
 .justify-content-center, .account__aside__dropdown, .account__body__gallery .swiper-slide, .simple-login-button, .stats__inner, .search-box__toggle,
-.search-box__submit, .pagination .page-link, .event__add-event {
+.search-box__submit, .pagination .page-link, .event__add-event, .close {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -5762,7 +5807,7 @@ button.bg-dark:focus {
           align-items: flex-end !important; }
 
 .align-items-center, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside__nav__inner, .header, .header__panel, .header__buttons, .simple-login-button, .search-box__toggle,
-.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event {
+.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6285,7 +6330,7 @@ button.bg-dark:focus {
 
 .shadow-none, .account__aside__dropdown, .search-box__toggle,
 .search-box__submit, .table-hover > tbody > tr.table-child-row:hover, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .event__dropdown-btn, .event__add-event {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .event__dropdown-btn, .event__add-event, .close {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6468,7 +6513,7 @@ button.bg-dark:focus {
 
 .p-0, .search-box__toggle,
 .search-box__submit, .table > tbody > tr.table-child-row > th,
-.table > tbody > tr.table-child-row td, .pagination .page-link, .event__dropdown-btn, .event__add-event {
+.table > tbody > tr.table-child-row td, .pagination .page-link, .event__dropdown-btn, .event__add-event, .close {
   padding: 0 !important; }
 
 .pt-0,
@@ -7913,7 +7958,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important; }
   a:not(.btn):not(.account__aside__dropdown):not(.search-box__toggle):not(
-  .search-box__submit):not(.table-button):not(.event__dropdown-btn):not(.event__add-event) {
+  .search-box__submit):not(.table-button):not(.event__dropdown-btn):not(.event__add-event):not(.close) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9669,16 +9714,16 @@ button.swiper-pagination-bullet {
   margin-left: -1px !important; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__add-event {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .close {
   border-radius: 0; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__add-event {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .close {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__add-event {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .close {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
@@ -9993,7 +10038,7 @@ div.fixed-table-scroll-outer {
 .text-blue700, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle {
   color: #3b3f64 !important; }
 
-.text-blue800, .simple-login-button, .event__dropdown-btn {
+.text-blue800, .simple-login-button, .event__dropdown-btn, .close {
   color: #455880 !important; }
 
 .text-blue900, .header__button {
@@ -10104,16 +10149,16 @@ div.fixed-table-scroll-outer {
   background-color: #e9f0f7 !important; }
 
 .bg-gray300, .table-rows-show-holder .btn:hover, .table-rows-show-holder .account__aside__dropdown:hover, .table-rows-show-holder .search-box__toggle:hover,
-.table-rows-show-holder .search-box__submit:hover, .table-rows-show-holder .table-button:hover, .table-rows-show-holder .event__dropdown-btn:hover, .table-rows-show-holder .event__add-event:hover, .table-rows-show-holder .btn:focus, .table-rows-show-holder .account__aside__dropdown:focus, .table-rows-show-holder .search-box__toggle:focus,
-.table-rows-show-holder .search-box__submit:focus, .table-rows-show-holder .table-button:focus, .table-rows-show-holder .event__dropdown-btn:focus, .table-rows-show-holder .event__add-event:focus, .table-rows-show-holder .btn:active, .table-rows-show-holder .account__aside__dropdown:active, .table-rows-show-holder .search-box__toggle:active,
-.table-rows-show-holder .search-box__submit:active, .table-rows-show-holder .table-button:active, .table-rows-show-holder .event__dropdown-btn:active, .table-rows-show-holder .event__add-event:active {
+.table-rows-show-holder .search-box__submit:hover, .table-rows-show-holder .table-button:hover, .table-rows-show-holder .event__dropdown-btn:hover, .table-rows-show-holder .event__add-event:hover, .table-rows-show-holder .close:hover, .table-rows-show-holder .btn:focus, .table-rows-show-holder .account__aside__dropdown:focus, .table-rows-show-holder .search-box__toggle:focus,
+.table-rows-show-holder .search-box__submit:focus, .table-rows-show-holder .table-button:focus, .table-rows-show-holder .event__dropdown-btn:focus, .table-rows-show-holder .event__add-event:focus, .table-rows-show-holder .close:focus, .table-rows-show-holder .btn:active, .table-rows-show-holder .account__aside__dropdown:active, .table-rows-show-holder .search-box__toggle:active,
+.table-rows-show-holder .search-box__submit:active, .table-rows-show-holder .table-button:active, .table-rows-show-holder .event__dropdown-btn:active, .table-rows-show-holder .event__add-event:active, .table-rows-show-holder .close:active {
   background-color: #eef0f4 !important; }
 
 .bg-gray400 {
   background-color: #c7cdd9 !important; }
 
 .bg-gray500, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link {
   background-color: #f0f4f8 !important; }
 
 .bg-gray600 {
@@ -10138,13 +10183,13 @@ div.fixed-table-scroll-outer {
 
 /* Font for buttons */
 .font-secondary-medium, .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
   font-family: "Heebo-Medium" !important; }
 
 .font-secondary {
   font-family: "Heebo-Bold" !important; }
 
-.font-icons:before, .account__aside__dropdown:before {
+.font-icons:before, .account__aside__dropdown:before, .close:before {
   font-family: "icomoon"; }
 
 /*************************
@@ -10169,7 +10214,7 @@ div.fixed-table-scroll-outer {
   border-radius: 8px !important; }
 
 .radius-sm, .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
   border-radius: 14px !important; }
 
 .radius-md, .table-box {
@@ -10638,6 +10683,9 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-clear:before, .close:before {
+  content: "\e910"; }
+
 .icon-edit:before {
   content: "\e908"; }
 
@@ -10760,7 +10808,7 @@ ul {
 
 /* BUTTONS */
 .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
   padding: 12px 27px; }
   .btn-gradient-blue {
     background-image: -webkit-gradient(linear, left top, right top, from(#04b4ff), to(#4adeff));
@@ -10898,7 +10946,7 @@ ul {
   display: table-row !important; }
 
 .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close {
   padding: 12px 16px;
   border-radius: 8px !important; }
 
@@ -11009,3 +11057,14 @@ ul {
   .event__add-event:hover, .event__add-event:focus, .event__add-event:active {
     background-image: -webkit-gradient(linear, left top, right top, from(#4adeff), to(#04b4ff));
     background-image: linear-gradient(to right, #4adeff, #04b4ff); }
+
+/* CLOSE */
+.close {
+  width: 40px;
+  height: 40px;
+  background-color: #d0ebfe !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  border-radius: 8px !important; }
+  .close:hover, .close:focus, .close:active {
+    background-color: #b7e0fd !important; }

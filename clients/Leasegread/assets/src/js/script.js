@@ -14,46 +14,6 @@ var swiper = new Swiper("#account-gallery", {
     }
 });
 
-//Init fullcalendar
-document.addEventListener("DOMContentLoaded", function() {
-    var calendarEl = document.getElementById("calendar");
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        contentHeight: 650,
-        initialView: "dayGridMonth",
-        headerToolbar: {
-            start: "",
-            center: "",
-            end: ""
-        },
-        dayMaxEventRows: true,
-        views: {
-            timeGrid: {
-                dayMaxEventRows: 1
-            }
-        },
-        events: [{
-                title: "Birthday Party",
-                start: "2020-11-17"
-            },
-            {
-                title: "Click for Google",
-                url: "http://google.com/",
-                start: "2020-11-18"
-            },
-            {
-                title: "Click for Google",
-                url: "http://google.com/",
-                start: "2020-11-18"
-            }
-        ]
-    });
-    calendar.render();
-
-    $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
-        calendar.render();
-    });
-});
-
 $(document).ready(function() {
     //Mobile menu action
     $(function() {
