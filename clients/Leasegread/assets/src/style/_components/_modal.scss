@@ -1,7 +1,5 @@
 /* MODAL */
 
-.modal {}
-
 .modal-content {
     @extend .border-0,
     .radius-lg;
@@ -34,5 +32,12 @@
 .modal-body {
     @include media-breakpoint-up(sm) {
         padding-bottom: 32px;
+    }
+}
+
+.modal-backdrop {
+    background-color: rgba($blue800, .6);
+    &.show {
+        opacity: 1;
     }
 }
