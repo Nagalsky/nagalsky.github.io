@@ -121,3 +121,30 @@ b,
 .title {
     font-size: 36px;
 }
+
+.title-md {
+    font-size: 32px;
+}
+
+.title-with-line {
+    @extend .position-relative;
+    &:after {
+        content: '';
+        @extend .position-absolute,
+        .w-100;
+        z-index: 2;
+        height: 2px;
+        background-color: rgba(69, 88, 128, 0.3);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    >span {
+        @extend .d-inline-block,
+        .py-1,
+        .pr-3,
+        .bg-white,
+        .position-relative;
+        z-index: 10;
+    }
+}
