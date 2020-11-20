@@ -1951,7 +1951,7 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1972,25 +1972,25 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn, .account__aside__dropdown, .search-box__toggle,
-    .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
+    .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover, .account__aside__dropdown:hover, .search-box__toggle:hover,
-  .search-box__submit:hover, .table-button:hover, .event__dropdown-btn:hover, .event__add-event:hover, .close:hover {
+  .search-box__submit:hover, .table-button:hover, .event__dropdown-btn:hover, .event__add-event:hover, .close:hover, .question__toggle:hover {
     color: #212529;
     text-decoration: none; }
   .btn:focus, .account__aside__dropdown:focus, .search-box__toggle:focus,
-  .search-box__submit:focus, .table-button:focus, .event__dropdown-btn:focus, .event__add-event:focus, .close:focus, .btn.focus, .focus.account__aside__dropdown, .focus.search-box__toggle,
-  .focus.search-box__submit, .focus.table-button, .focus.event__dropdown-btn, .focus.event__add-event, .focus.close {
+  .search-box__submit:focus, .table-button:focus, .event__dropdown-btn:focus, .event__add-event:focus, .close:focus, .question__toggle:focus, .btn.focus, .focus.account__aside__dropdown, .focus.search-box__toggle,
+  .focus.search-box__submit, .focus.table-button, .focus.event__dropdown-btn, .focus.event__add-event, .focus.close, .focus.question__toggle {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, .disabled.account__aside__dropdown, .disabled.search-box__toggle,
-  .disabled.search-box__submit, .disabled.table-button, .disabled.event__dropdown-btn, .disabled.event__add-event, .disabled.close, .btn:disabled, .account__aside__dropdown:disabled, .search-box__toggle:disabled,
-  .search-box__submit:disabled, .table-button:disabled, .event__dropdown-btn:disabled, .event__add-event:disabled, .close:disabled {
+  .disabled.search-box__submit, .disabled.table-button, .disabled.event__dropdown-btn, .disabled.event__add-event, .disabled.close, .disabled.question__toggle, .btn:disabled, .account__aside__dropdown:disabled, .search-box__toggle:disabled,
+  .search-box__submit:disabled, .table-button:disabled, .event__dropdown-btn:disabled, .event__add-event:disabled, .close:disabled, .question__toggle:disabled {
     opacity: 0.65; }
 
 a.btn.disabled, a.disabled.account__aside__dropdown, a.disabled.search-box__toggle,
-a.disabled.search-box__submit, a.disabled.table-button, a.disabled.event__dropdown-btn, a.disabled.event__add-event, a.disabled.close,
+a.disabled.search-box__submit, a.disabled.table-button, a.disabled.event__dropdown-btn, a.disabled.event__add-event, a.disabled.close, a.disabled.question__toggle,
 fieldset:disabled a.btn,
 fieldset:disabled a.account__aside__dropdown,
 fieldset:disabled a.search-box__toggle,
@@ -1998,7 +1998,8 @@ fieldset:disabled a.search-box__submit,
 fieldset:disabled a.table-button,
 fieldset:disabled a.event__dropdown-btn,
 fieldset:disabled a.event__add-event,
-fieldset:disabled a.close {
+fieldset:disabled a.close,
+fieldset:disabled a.question__toggle {
   pointer-events: none; }
 
 .btn-primary {
@@ -2392,14 +2393,14 @@ fieldset:disabled a.close {
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .account__aside__dropdown, .btn-group-lg > .search-box__toggle,
-.btn-group-lg > .search-box__submit, .btn-group-lg > .table-button, .btn-group-lg > .event__dropdown-btn, .btn-group-lg > .event__add-event, .btn-group-lg > .close {
+.btn-group-lg > .search-box__submit, .btn-group-lg > .table-button, .btn-group-lg > .event__dropdown-btn, .btn-group-lg > .event__add-event, .btn-group-lg > .close, .btn-group-lg > .question__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .account__aside__dropdown, .btn-group-sm > .search-box__toggle,
-.btn-group-sm > .search-box__submit, .btn-group-sm > .table-button, .btn-group-sm > .event__dropdown-btn, .btn-group-sm > .event__add-event, .btn-group-sm > .close {
+.btn-group-sm > .search-box__submit, .btn-group-sm > .table-button, .btn-group-sm > .event__dropdown-btn, .btn-group-sm > .event__add-event, .btn-group-sm > .close, .btn-group-sm > .question__toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2649,7 +2650,7 @@ input[type="button"].btn-block {
   display: inline-flex;
   vertical-align: middle; }
   .btn-group > .btn, .btn-group > .account__aside__dropdown, .btn-group > .search-box__toggle,
-  .btn-group > .search-box__submit, .btn-group > .table-button, .btn-group > .event__dropdown-btn, .btn-group > .event__add-event, .btn-group > .close,
+  .btn-group > .search-box__submit, .btn-group > .table-button, .btn-group > .event__dropdown-btn, .btn-group > .event__add-event, .btn-group > .close, .btn-group > .question__toggle,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .account__aside__dropdown,
   .btn-group-vertical > .search-box__toggle,
@@ -2657,12 +2658,13 @@ input[type="button"].btn-block {
   .btn-group-vertical > .table-button,
   .btn-group-vertical > .event__dropdown-btn,
   .btn-group-vertical > .event__add-event,
-  .btn-group-vertical > .close {
+  .btn-group-vertical > .close,
+  .btn-group-vertical > .question__toggle {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1 1 auto; }
     .btn-group > .btn:hover, .btn-group > .account__aside__dropdown:hover, .btn-group > .search-box__toggle:hover,
-    .btn-group > .search-box__submit:hover, .btn-group > .table-button:hover, .btn-group > .event__dropdown-btn:hover, .btn-group > .event__add-event:hover, .btn-group > .close:hover,
+    .btn-group > .search-box__submit:hover, .btn-group > .table-button:hover, .btn-group > .event__dropdown-btn:hover, .btn-group > .event__add-event:hover, .btn-group > .close:hover, .btn-group > .question__toggle:hover,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .account__aside__dropdown:hover,
     .btn-group-vertical > .search-box__toggle:hover,
@@ -2670,12 +2672,13 @@ input[type="button"].btn-block {
     .btn-group-vertical > .table-button:hover,
     .btn-group-vertical > .event__dropdown-btn:hover,
     .btn-group-vertical > .event__add-event:hover,
-    .btn-group-vertical > .close:hover {
+    .btn-group-vertical > .close:hover,
+    .btn-group-vertical > .question__toggle:hover {
       z-index: 1; }
     .btn-group > .btn:focus, .btn-group > .account__aside__dropdown:focus, .btn-group > .search-box__toggle:focus,
-    .btn-group > .search-box__submit:focus, .btn-group > .table-button:focus, .btn-group > .event__dropdown-btn:focus, .btn-group > .event__add-event:focus, .btn-group > .close:focus, .btn-group > .btn:active, .btn-group > .account__aside__dropdown:active, .btn-group > .search-box__toggle:active,
-    .btn-group > .search-box__submit:active, .btn-group > .table-button:active, .btn-group > .event__dropdown-btn:active, .btn-group > .event__add-event:active, .btn-group > .close:active, .btn-group > .btn.active, .btn-group > .active.account__aside__dropdown, .btn-group > .active.search-box__toggle,
-    .btn-group > .active.search-box__submit, .btn-group > .active.table-button, .btn-group > .active.event__dropdown-btn, .btn-group > .active.event__add-event, .btn-group > .active.close,
+    .btn-group > .search-box__submit:focus, .btn-group > .table-button:focus, .btn-group > .event__dropdown-btn:focus, .btn-group > .event__add-event:focus, .btn-group > .close:focus, .btn-group > .question__toggle:focus, .btn-group > .btn:active, .btn-group > .account__aside__dropdown:active, .btn-group > .search-box__toggle:active,
+    .btn-group > .search-box__submit:active, .btn-group > .table-button:active, .btn-group > .event__dropdown-btn:active, .btn-group > .event__add-event:active, .btn-group > .close:active, .btn-group > .question__toggle:active, .btn-group > .btn.active, .btn-group > .active.account__aside__dropdown, .btn-group > .active.search-box__toggle,
+    .btn-group > .active.search-box__submit, .btn-group > .active.table-button, .btn-group > .active.event__dropdown-btn, .btn-group > .active.event__add-event, .btn-group > .active.close, .btn-group > .active.question__toggle,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .account__aside__dropdown:focus,
     .btn-group-vertical > .search-box__toggle:focus,
@@ -2684,6 +2687,7 @@ input[type="button"].btn-block {
     .btn-group-vertical > .event__dropdown-btn:focus,
     .btn-group-vertical > .event__add-event:focus,
     .btn-group-vertical > .close:focus,
+    .btn-group-vertical > .question__toggle:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .account__aside__dropdown:active,
     .btn-group-vertical > .search-box__toggle:active,
@@ -2692,6 +2696,7 @@ input[type="button"].btn-block {
     .btn-group-vertical > .event__dropdown-btn:active,
     .btn-group-vertical > .event__add-event:active,
     .btn-group-vertical > .close:active,
+    .btn-group-vertical > .question__toggle:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.account__aside__dropdown,
     .btn-group-vertical > .active.search-box__toggle,
@@ -2699,7 +2704,8 @@ input[type="button"].btn-block {
     .btn-group-vertical > .active.table-button,
     .btn-group-vertical > .active.event__dropdown-btn,
     .btn-group-vertical > .active.event__add-event,
-    .btn-group-vertical > .active.close {
+    .btn-group-vertical > .active.close,
+    .btn-group-vertical > .active.question__toggle {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2712,12 +2718,12 @@ input[type="button"].btn-block {
     width: auto; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .account__aside__dropdown:not(:first-child), .btn-group > .search-box__toggle:not(:first-child),
-.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child),
+.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child), .btn-group > .question__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle), .btn-group > .search-box__toggle:not(:last-child):not(.dropdown-toggle),
-.btn-group > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group > .close:not(:last-child):not(.dropdown-toggle),
+.btn-group > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group > .close:not(:last-child):not(.dropdown-toggle), .btn-group > .question__toggle:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn-group:not(:last-child) > .account__aside__dropdown,
 .btn-group > .btn-group:not(:last-child) > .search-box__toggle,
@@ -2725,12 +2731,13 @@ input[type="button"].btn-block {
 .btn-group > .btn-group:not(:last-child) > .table-button,
 .btn-group > .btn-group:not(:last-child) > .event__dropdown-btn,
 .btn-group > .btn-group:not(:last-child) > .event__add-event,
-.btn-group > .btn-group:not(:last-child) > .close {
+.btn-group > .btn-group:not(:last-child) > .close,
+.btn-group > .btn-group:not(:last-child) > .question__toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .btn-group > .btn:not(:first-child), .btn-group > .account__aside__dropdown:not(:first-child), .btn-group > .search-box__toggle:not(:first-child),
-.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child),
+.btn-group > .search-box__submit:not(:first-child), .btn-group > .table-button:not(:first-child), .btn-group > .event__dropdown-btn:not(:first-child), .btn-group > .event__add-event:not(:first-child), .btn-group > .close:not(:first-child), .btn-group > .question__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .btn-group:not(:first-child) > .account__aside__dropdown,
 .btn-group > .btn-group:not(:first-child) > .search-box__toggle,
@@ -2738,7 +2745,8 @@ input[type="button"].btn-block {
 .btn-group > .btn-group:not(:first-child) > .table-button,
 .btn-group > .btn-group:not(:first-child) > .event__dropdown-btn,
 .btn-group > .btn-group:not(:first-child) > .event__add-event,
-.btn-group > .btn-group:not(:first-child) > .close {
+.btn-group > .btn-group:not(:first-child) > .close,
+.btn-group > .btn-group:not(:first-child) > .question__toggle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2752,11 +2760,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-sm > .search-box__toggle + .dropdown-toggle-split, .btn-group-sm > .search-box__submit + .dropdown-toggle-split, .btn-group-sm > .table-button + .dropdown-toggle-split, .btn-group-sm > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-sm > .event__add-event + .dropdown-toggle-split, .btn-group-sm > .close + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-sm > .search-box__toggle + .dropdown-toggle-split, .btn-group-sm > .search-box__submit + .dropdown-toggle-split, .btn-group-sm > .table-button + .dropdown-toggle-split, .btn-group-sm > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-sm > .event__add-event + .dropdown-toggle-split, .btn-group-sm > .close + .dropdown-toggle-split, .btn-group-sm > .question__toggle + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-lg > .search-box__toggle + .dropdown-toggle-split, .btn-group-lg > .search-box__submit + .dropdown-toggle-split, .btn-group-lg > .table-button + .dropdown-toggle-split, .btn-group-lg > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-lg > .event__add-event + .dropdown-toggle-split, .btn-group-lg > .close + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .account__aside__dropdown + .dropdown-toggle-split, .btn-group-lg > .search-box__toggle + .dropdown-toggle-split, .btn-group-lg > .search-box__submit + .dropdown-toggle-split, .btn-group-lg > .table-button + .dropdown-toggle-split, .btn-group-lg > .event__dropdown-btn + .dropdown-toggle-split, .btn-group-lg > .event__add-event + .dropdown-toggle-split, .btn-group-lg > .close + .dropdown-toggle-split, .btn-group-lg > .question__toggle + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2777,14 +2785,15 @@ input[type="button"].btn-block {
   .btn-group-vertical > .event__dropdown-btn,
   .btn-group-vertical > .event__add-event,
   .btn-group-vertical > .close,
+  .btn-group-vertical > .question__toggle,
   .btn-group-vertical > .btn-group {
     width: 100%; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .account__aside__dropdown:not(:first-child), .btn-group-vertical > .search-box__toggle:not(:first-child),
-  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child),
+  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child), .btn-group-vertical > .question__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
   .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .search-box__toggle:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .close:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .search-box__submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .table-button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .event__add-event:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .close:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .question__toggle:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .account__aside__dropdown,
   .btn-group-vertical > .btn-group:not(:last-child) > .search-box__toggle,
@@ -2792,11 +2801,12 @@ input[type="button"].btn-block {
   .btn-group-vertical > .btn-group:not(:last-child) > .table-button,
   .btn-group-vertical > .btn-group:not(:last-child) > .event__dropdown-btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .event__add-event,
-  .btn-group-vertical > .btn-group:not(:last-child) > .close {
+  .btn-group-vertical > .btn-group:not(:last-child) > .close,
+  .btn-group-vertical > .btn-group:not(:last-child) > .question__toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .account__aside__dropdown:not(:first-child), .btn-group-vertical > .search-box__toggle:not(:first-child),
-  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child),
+  .btn-group-vertical > .search-box__submit:not(:first-child), .btn-group-vertical > .table-button:not(:first-child), .btn-group-vertical > .event__dropdown-btn:not(:first-child), .btn-group-vertical > .event__add-event:not(:first-child), .btn-group-vertical > .close:not(:first-child), .btn-group-vertical > .question__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .account__aside__dropdown,
   .btn-group-vertical > .btn-group:not(:first-child) > .search-box__toggle,
@@ -2804,12 +2814,13 @@ input[type="button"].btn-block {
   .btn-group-vertical > .btn-group:not(:first-child) > .table-button,
   .btn-group-vertical > .btn-group:not(:first-child) > .event__dropdown-btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .event__add-event,
-  .btn-group-vertical > .btn-group:not(:first-child) > .close {
+  .btn-group-vertical > .btn-group:not(:first-child) > .close,
+  .btn-group-vertical > .btn-group:not(:first-child) > .question__toggle {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group-toggle > .btn, .btn-group-toggle > .account__aside__dropdown, .btn-group-toggle > .search-box__toggle,
-.btn-group-toggle > .search-box__submit, .btn-group-toggle > .table-button, .btn-group-toggle > .event__dropdown-btn, .btn-group-toggle > .event__add-event, .btn-group-toggle > .close,
+.btn-group-toggle > .search-box__submit, .btn-group-toggle > .table-button, .btn-group-toggle > .event__dropdown-btn, .btn-group-toggle > .event__add-event, .btn-group-toggle > .close, .btn-group-toggle > .question__toggle,
 .btn-group-toggle > .btn-group > .btn,
 .btn-group-toggle > .btn-group > .account__aside__dropdown,
 .btn-group-toggle > .btn-group > .search-box__toggle,
@@ -2817,9 +2828,10 @@ input[type="button"].btn-block {
 .btn-group-toggle > .btn-group > .table-button,
 .btn-group-toggle > .btn-group > .event__dropdown-btn,
 .btn-group-toggle > .btn-group > .event__add-event,
-.btn-group-toggle > .btn-group > .close {
+.btn-group-toggle > .btn-group > .close,
+.btn-group-toggle > .btn-group > .question__toggle {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .account__aside__dropdown input[type="radio"], .btn-group-toggle > .search-box__toggle input[type="radio"], .btn-group-toggle > .search-box__submit input[type="radio"], .btn-group-toggle > .table-button input[type="radio"], .btn-group-toggle > .event__dropdown-btn input[type="radio"], .btn-group-toggle > .event__add-event input[type="radio"], .btn-group-toggle > .close input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .account__aside__dropdown input[type="radio"], .btn-group-toggle > .search-box__toggle input[type="radio"], .btn-group-toggle > .search-box__submit input[type="radio"], .btn-group-toggle > .table-button input[type="radio"], .btn-group-toggle > .event__dropdown-btn input[type="radio"], .btn-group-toggle > .event__add-event input[type="radio"], .btn-group-toggle > .close input[type="radio"], .btn-group-toggle > .question__toggle input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .account__aside__dropdown input[type="checkbox"],
   .btn-group-toggle > .search-box__toggle input[type="checkbox"],
@@ -2828,6 +2840,7 @@ input[type="button"].btn-block {
   .btn-group-toggle > .event__dropdown-btn input[type="checkbox"],
   .btn-group-toggle > .event__add-event input[type="checkbox"],
   .btn-group-toggle > .close input[type="checkbox"],
+  .btn-group-toggle > .question__toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .account__aside__dropdown input[type="radio"],
   .btn-group-toggle > .btn-group > .search-box__toggle input[type="radio"],
@@ -2836,6 +2849,7 @@ input[type="button"].btn-block {
   .btn-group-toggle > .btn-group > .event__dropdown-btn input[type="radio"],
   .btn-group-toggle > .btn-group > .event__add-event input[type="radio"],
   .btn-group-toggle > .btn-group > .close input[type="radio"],
+  .btn-group-toggle > .btn-group > .question__toggle input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .account__aside__dropdown input[type="checkbox"],
   .btn-group-toggle > .btn-group > .search-box__toggle input[type="checkbox"],
@@ -2843,7 +2857,8 @@ input[type="button"].btn-block {
   .btn-group-toggle > .btn-group > .table-button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .event__dropdown-btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .event__add-event input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .close input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .close input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .question__toggle input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2910,7 +2925,7 @@ input[type="button"].btn-block {
   display: -webkit-box;
   display: flex; }
   .input-group-prepend .btn, .input-group-prepend .account__aside__dropdown, .input-group-prepend .search-box__toggle,
-  .input-group-prepend .search-box__submit, .input-group-prepend .table-button, .input-group-prepend .event__dropdown-btn, .input-group-prepend .event__add-event, .input-group-prepend .close,
+  .input-group-prepend .search-box__submit, .input-group-prepend .table-button, .input-group-prepend .event__dropdown-btn, .input-group-prepend .event__add-event, .input-group-prepend .close, .input-group-prepend .question__toggle,
   .input-group-append .btn,
   .input-group-append .account__aside__dropdown,
   .input-group-append .search-box__toggle,
@@ -2918,11 +2933,12 @@ input[type="button"].btn-block {
   .input-group-append .table-button,
   .input-group-append .event__dropdown-btn,
   .input-group-append .event__add-event,
-  .input-group-append .close {
+  .input-group-append .close,
+  .input-group-append .question__toggle {
     position: relative;
     z-index: 2; }
     .input-group-prepend .btn:focus, .input-group-prepend .account__aside__dropdown:focus, .input-group-prepend .search-box__toggle:focus,
-    .input-group-prepend .search-box__submit:focus, .input-group-prepend .table-button:focus, .input-group-prepend .event__dropdown-btn:focus, .input-group-prepend .event__add-event:focus, .input-group-prepend .close:focus,
+    .input-group-prepend .search-box__submit:focus, .input-group-prepend .table-button:focus, .input-group-prepend .event__dropdown-btn:focus, .input-group-prepend .event__add-event:focus, .input-group-prepend .close:focus, .input-group-prepend .question__toggle:focus,
     .input-group-append .btn:focus,
     .input-group-append .account__aside__dropdown:focus,
     .input-group-append .search-box__toggle:focus,
@@ -2930,9 +2946,10 @@ input[type="button"].btn-block {
     .input-group-append .table-button:focus,
     .input-group-append .event__dropdown-btn:focus,
     .input-group-append .event__add-event:focus,
-    .input-group-append .close:focus {
+    .input-group-append .close:focus,
+    .input-group-append .question__toggle:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .account__aside__dropdown + .btn, .input-group-prepend .search-box__toggle + .btn, .input-group-prepend .search-box__submit + .btn, .input-group-prepend .table-button + .btn, .input-group-prepend .event__dropdown-btn + .btn, .input-group-prepend .event__add-event + .btn, .input-group-prepend .close + .btn, .input-group-prepend .btn + .account__aside__dropdown, .input-group-prepend .account__aside__dropdown + .account__aside__dropdown, .input-group-prepend .search-box__toggle + .account__aside__dropdown, .input-group-prepend .search-box__submit + .account__aside__dropdown, .input-group-prepend .table-button + .account__aside__dropdown, .input-group-prepend .event__dropdown-btn + .account__aside__dropdown, .input-group-prepend .event__add-event + .account__aside__dropdown, .input-group-prepend .close + .account__aside__dropdown, .input-group-prepend .btn + .search-box__toggle, .input-group-prepend .account__aside__dropdown + .search-box__toggle, .input-group-prepend .search-box__toggle + .search-box__toggle, .input-group-prepend .search-box__submit + .search-box__toggle, .input-group-prepend .table-button + .search-box__toggle, .input-group-prepend .event__dropdown-btn + .search-box__toggle, .input-group-prepend .event__add-event + .search-box__toggle, .input-group-prepend .close + .search-box__toggle,
+  .input-group-prepend .btn + .btn, .input-group-prepend .account__aside__dropdown + .btn, .input-group-prepend .search-box__toggle + .btn, .input-group-prepend .search-box__submit + .btn, .input-group-prepend .table-button + .btn, .input-group-prepend .event__dropdown-btn + .btn, .input-group-prepend .event__add-event + .btn, .input-group-prepend .close + .btn, .input-group-prepend .question__toggle + .btn, .input-group-prepend .btn + .account__aside__dropdown, .input-group-prepend .account__aside__dropdown + .account__aside__dropdown, .input-group-prepend .search-box__toggle + .account__aside__dropdown, .input-group-prepend .search-box__submit + .account__aside__dropdown, .input-group-prepend .table-button + .account__aside__dropdown, .input-group-prepend .event__dropdown-btn + .account__aside__dropdown, .input-group-prepend .event__add-event + .account__aside__dropdown, .input-group-prepend .close + .account__aside__dropdown, .input-group-prepend .question__toggle + .account__aside__dropdown, .input-group-prepend .btn + .search-box__toggle, .input-group-prepend .account__aside__dropdown + .search-box__toggle, .input-group-prepend .search-box__toggle + .search-box__toggle, .input-group-prepend .search-box__submit + .search-box__toggle, .input-group-prepend .table-button + .search-box__toggle, .input-group-prepend .event__dropdown-btn + .search-box__toggle, .input-group-prepend .event__add-event + .search-box__toggle, .input-group-prepend .close + .search-box__toggle, .input-group-prepend .question__toggle + .search-box__toggle,
   .input-group-prepend .btn + .search-box__submit,
   .input-group-prepend .account__aside__dropdown + .search-box__submit,
   .input-group-prepend .search-box__toggle + .search-box__submit,
@@ -2940,7 +2957,8 @@ input[type="button"].btn-block {
   .input-group-prepend .table-button + .search-box__submit,
   .input-group-prepend .event__dropdown-btn + .search-box__submit,
   .input-group-prepend .event__add-event + .search-box__submit,
-  .input-group-prepend .close + .search-box__submit, .input-group-prepend .btn + .table-button, .input-group-prepend .account__aside__dropdown + .table-button, .input-group-prepend .search-box__toggle + .table-button, .input-group-prepend .search-box__submit + .table-button, .input-group-prepend .table-button + .table-button, .input-group-prepend .event__dropdown-btn + .table-button, .input-group-prepend .event__add-event + .table-button, .input-group-prepend .close + .table-button, .input-group-prepend .btn + .event__dropdown-btn, .input-group-prepend .account__aside__dropdown + .event__dropdown-btn, .input-group-prepend .search-box__toggle + .event__dropdown-btn, .input-group-prepend .search-box__submit + .event__dropdown-btn, .input-group-prepend .table-button + .event__dropdown-btn, .input-group-prepend .event__dropdown-btn + .event__dropdown-btn, .input-group-prepend .event__add-event + .event__dropdown-btn, .input-group-prepend .close + .event__dropdown-btn, .input-group-prepend .btn + .event__add-event, .input-group-prepend .account__aside__dropdown + .event__add-event, .input-group-prepend .search-box__toggle + .event__add-event, .input-group-prepend .search-box__submit + .event__add-event, .input-group-prepend .table-button + .event__add-event, .input-group-prepend .event__dropdown-btn + .event__add-event, .input-group-prepend .event__add-event + .event__add-event, .input-group-prepend .close + .event__add-event, .input-group-prepend .btn + .close, .input-group-prepend .account__aside__dropdown + .close, .input-group-prepend .search-box__toggle + .close, .input-group-prepend .search-box__submit + .close, .input-group-prepend .table-button + .close, .input-group-prepend .event__dropdown-btn + .close, .input-group-prepend .event__add-event + .close, .input-group-prepend .close + .close,
+  .input-group-prepend .close + .search-box__submit,
+  .input-group-prepend .question__toggle + .search-box__submit, .input-group-prepend .btn + .table-button, .input-group-prepend .account__aside__dropdown + .table-button, .input-group-prepend .search-box__toggle + .table-button, .input-group-prepend .search-box__submit + .table-button, .input-group-prepend .table-button + .table-button, .input-group-prepend .event__dropdown-btn + .table-button, .input-group-prepend .event__add-event + .table-button, .input-group-prepend .close + .table-button, .input-group-prepend .question__toggle + .table-button, .input-group-prepend .btn + .event__dropdown-btn, .input-group-prepend .account__aside__dropdown + .event__dropdown-btn, .input-group-prepend .search-box__toggle + .event__dropdown-btn, .input-group-prepend .search-box__submit + .event__dropdown-btn, .input-group-prepend .table-button + .event__dropdown-btn, .input-group-prepend .event__dropdown-btn + .event__dropdown-btn, .input-group-prepend .event__add-event + .event__dropdown-btn, .input-group-prepend .close + .event__dropdown-btn, .input-group-prepend .question__toggle + .event__dropdown-btn, .input-group-prepend .btn + .event__add-event, .input-group-prepend .account__aside__dropdown + .event__add-event, .input-group-prepend .search-box__toggle + .event__add-event, .input-group-prepend .search-box__submit + .event__add-event, .input-group-prepend .table-button + .event__add-event, .input-group-prepend .event__dropdown-btn + .event__add-event, .input-group-prepend .event__add-event + .event__add-event, .input-group-prepend .close + .event__add-event, .input-group-prepend .question__toggle + .event__add-event, .input-group-prepend .btn + .close, .input-group-prepend .account__aside__dropdown + .close, .input-group-prepend .search-box__toggle + .close, .input-group-prepend .search-box__submit + .close, .input-group-prepend .table-button + .close, .input-group-prepend .event__dropdown-btn + .close, .input-group-prepend .event__add-event + .close, .input-group-prepend .close + .close, .input-group-prepend .question__toggle + .close, .input-group-prepend .btn + .question__toggle, .input-group-prepend .account__aside__dropdown + .question__toggle, .input-group-prepend .search-box__toggle + .question__toggle, .input-group-prepend .search-box__submit + .question__toggle, .input-group-prepend .table-button + .question__toggle, .input-group-prepend .event__dropdown-btn + .question__toggle, .input-group-prepend .event__add-event + .question__toggle, .input-group-prepend .close + .question__toggle, .input-group-prepend .question__toggle + .question__toggle,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .account__aside__dropdown + .input-group-text,
   .input-group-prepend .search-box__toggle + .input-group-text,
@@ -2949,6 +2967,7 @@ input[type="button"].btn-block {
   .input-group-prepend .event__dropdown-btn + .input-group-text,
   .input-group-prepend .event__add-event + .input-group-text,
   .input-group-prepend .close + .input-group-text,
+  .input-group-prepend .question__toggle + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .input-group-text + .account__aside__dropdown,
@@ -2958,6 +2977,7 @@ input[type="button"].btn-block {
   .input-group-prepend .input-group-text + .event__dropdown-btn,
   .input-group-prepend .input-group-text + .event__add-event,
   .input-group-prepend .input-group-text + .close,
+  .input-group-prepend .input-group-text + .question__toggle,
   .input-group-append .btn + .btn,
   .input-group-append .account__aside__dropdown + .btn,
   .input-group-append .search-box__toggle + .btn,
@@ -2966,6 +2986,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .btn,
   .input-group-append .event__add-event + .btn,
   .input-group-append .close + .btn,
+  .input-group-append .question__toggle + .btn,
   .input-group-append .btn + .account__aside__dropdown,
   .input-group-append .account__aside__dropdown + .account__aside__dropdown,
   .input-group-append .search-box__toggle + .account__aside__dropdown,
@@ -2974,6 +2995,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .account__aside__dropdown,
   .input-group-append .event__add-event + .account__aside__dropdown,
   .input-group-append .close + .account__aside__dropdown,
+  .input-group-append .question__toggle + .account__aside__dropdown,
   .input-group-append .btn + .search-box__toggle,
   .input-group-append .account__aside__dropdown + .search-box__toggle,
   .input-group-append .search-box__toggle + .search-box__toggle,
@@ -2982,6 +3004,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .search-box__toggle,
   .input-group-append .event__add-event + .search-box__toggle,
   .input-group-append .close + .search-box__toggle,
+  .input-group-append .question__toggle + .search-box__toggle,
   .input-group-append .btn + .search-box__submit,
   .input-group-append .account__aside__dropdown + .search-box__submit,
   .input-group-append .search-box__toggle + .search-box__submit,
@@ -2990,6 +3013,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .search-box__submit,
   .input-group-append .event__add-event + .search-box__submit,
   .input-group-append .close + .search-box__submit,
+  .input-group-append .question__toggle + .search-box__submit,
   .input-group-append .btn + .table-button,
   .input-group-append .account__aside__dropdown + .table-button,
   .input-group-append .search-box__toggle + .table-button,
@@ -2998,6 +3022,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .table-button,
   .input-group-append .event__add-event + .table-button,
   .input-group-append .close + .table-button,
+  .input-group-append .question__toggle + .table-button,
   .input-group-append .btn + .event__dropdown-btn,
   .input-group-append .account__aside__dropdown + .event__dropdown-btn,
   .input-group-append .search-box__toggle + .event__dropdown-btn,
@@ -3006,6 +3031,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .event__dropdown-btn,
   .input-group-append .event__add-event + .event__dropdown-btn,
   .input-group-append .close + .event__dropdown-btn,
+  .input-group-append .question__toggle + .event__dropdown-btn,
   .input-group-append .btn + .event__add-event,
   .input-group-append .account__aside__dropdown + .event__add-event,
   .input-group-append .search-box__toggle + .event__add-event,
@@ -3014,6 +3040,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .event__add-event,
   .input-group-append .event__add-event + .event__add-event,
   .input-group-append .close + .event__add-event,
+  .input-group-append .question__toggle + .event__add-event,
   .input-group-append .btn + .close,
   .input-group-append .account__aside__dropdown + .close,
   .input-group-append .search-box__toggle + .close,
@@ -3022,6 +3049,16 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .close,
   .input-group-append .event__add-event + .close,
   .input-group-append .close + .close,
+  .input-group-append .question__toggle + .close,
+  .input-group-append .btn + .question__toggle,
+  .input-group-append .account__aside__dropdown + .question__toggle,
+  .input-group-append .search-box__toggle + .question__toggle,
+  .input-group-append .search-box__submit + .question__toggle,
+  .input-group-append .table-button + .question__toggle,
+  .input-group-append .event__dropdown-btn + .question__toggle,
+  .input-group-append .event__add-event + .question__toggle,
+  .input-group-append .close + .question__toggle,
+  .input-group-append .question__toggle + .question__toggle,
   .input-group-append .btn + .input-group-text,
   .input-group-append .account__aside__dropdown + .input-group-text,
   .input-group-append .search-box__toggle + .input-group-text,
@@ -3030,6 +3067,7 @@ input[type="button"].btn-block {
   .input-group-append .event__dropdown-btn + .input-group-text,
   .input-group-append .event__add-event + .input-group-text,
   .input-group-append .close + .input-group-text,
+  .input-group-append .question__toggle + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .input-group-text + .account__aside__dropdown,
@@ -3038,7 +3076,8 @@ input[type="button"].btn-block {
   .input-group-append .input-group-text + .table-button,
   .input-group-append .input-group-text + .event__dropdown-btn,
   .input-group-append .input-group-text + .event__add-event,
-  .input-group-append .input-group-text + .close {
+  .input-group-append .input-group-text + .close,
+  .input-group-append .input-group-text + .question__toggle {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3083,6 +3122,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .event__dropdown-btn,
 .input-group-lg > .input-group-prepend > .event__add-event,
 .input-group-lg > .input-group-prepend > .close,
+.input-group-lg > .input-group-prepend > .question__toggle,
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > .account__aside__dropdown,
 .input-group-lg > .input-group-append > .search-box__toggle,
@@ -3090,7 +3130,8 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .table-button,
 .input-group-lg > .input-group-append > .event__dropdown-btn,
 .input-group-lg > .input-group-append > .event__add-event,
-.input-group-lg > .input-group-append > .close {
+.input-group-lg > .input-group-append > .close,
+.input-group-lg > .input-group-append > .question__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3112,6 +3153,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .event__dropdown-btn,
 .input-group-sm > .input-group-prepend > .event__add-event,
 .input-group-sm > .input-group-prepend > .close,
+.input-group-sm > .input-group-prepend > .question__toggle,
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > .account__aside__dropdown,
 .input-group-sm > .input-group-append > .search-box__toggle,
@@ -3119,7 +3161,8 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .table-button,
 .input-group-sm > .input-group-append > .event__dropdown-btn,
 .input-group-sm > .input-group-append > .event__add-event,
-.input-group-sm > .input-group-append > .close {
+.input-group-sm > .input-group-append > .close,
+.input-group-sm > .input-group-append > .question__toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3130,7 +3173,7 @@ input[type="button"].btn-block {
   padding-right: 1.75rem; }
 
 .input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .account__aside__dropdown, .input-group > .input-group-prepend > .search-box__toggle,
-.input-group > .input-group-prepend > .search-box__submit, .input-group > .input-group-prepend > .table-button, .input-group > .input-group-prepend > .event__dropdown-btn, .input-group > .input-group-prepend > .event__add-event, .input-group > .input-group-prepend > .close,
+.input-group > .input-group-prepend > .search-box__submit, .input-group > .input-group-prepend > .table-button, .input-group > .input-group-prepend > .event__dropdown-btn, .input-group > .input-group-prepend > .event__add-event, .input-group > .input-group-prepend > .close, .input-group > .input-group-prepend > .question__toggle,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .account__aside__dropdown,
@@ -3140,6 +3183,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:not(:last-child) > .event__dropdown-btn,
 .input-group > .input-group-append:not(:last-child) > .event__add-event,
 .input-group > .input-group-append:not(:last-child) > .close,
+.input-group > .input-group-append:not(:last-child) > .question__toggle,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .account__aside__dropdown:not(:last-child):not(.dropdown-toggle),
@@ -3149,12 +3193,13 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:last-child > .event__dropdown-btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .event__add-event:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .close:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .question__toggle:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > .account__aside__dropdown, .input-group > .input-group-append > .search-box__toggle,
-.input-group > .input-group-append > .search-box__submit, .input-group > .input-group-append > .table-button, .input-group > .input-group-append > .event__dropdown-btn, .input-group > .input-group-append > .event__add-event, .input-group > .input-group-append > .close,
+.input-group > .input-group-append > .search-box__submit, .input-group > .input-group-append > .table-button, .input-group > .input-group-append > .event__dropdown-btn, .input-group > .input-group-append > .event__add-event, .input-group > .input-group-append > .close, .input-group > .input-group-append > .question__toggle,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .account__aside__dropdown,
@@ -3164,6 +3209,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:not(:first-child) > .event__dropdown-btn,
 .input-group > .input-group-prepend:not(:first-child) > .event__add-event,
 .input-group > .input-group-prepend:not(:first-child) > .close,
+.input-group > .input-group-prepend:not(:first-child) > .question__toggle,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .account__aside__dropdown:not(:first-child),
@@ -3173,6 +3219,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:first-child > .event__dropdown-btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .event__add-event:not(:first-child),
 .input-group > .input-group-prepend:first-child > .close:not(:first-child),
+.input-group > .input-group-prepend:first-child > .question__toggle:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4192,7 +4239,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .account__aside__dropdown .badge, .search-box__toggle .badge, .search-box__submit .badge, .table-button .badge, .event__dropdown-btn .badge, .event__add-event .badge, .close .badge {
+.btn .badge, .account__aside__dropdown .badge, .search-box__toggle .badge, .search-box__submit .badge, .table-button .badge, .event__dropdown-btn .badge, .event__add-event .badge, .close .badge, .question__toggle .badge {
   position: relative;
   top: -1px; }
 
@@ -5447,7 +5494,7 @@ button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
 .bg-white, .account__body__gallery .swiper-pagination .swiper-pagination-bullet, .aside__nav__item:after, .aside__nav__item.active, .aside__nav__item__rounded-corner:after, .aside__nav__inner:before, .input-group-text, .simple-login-button, .search-box__toggle,
-.search-box__submit, .table-hover > tbody > tr:hover, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-frame:hover, .events {
+.search-box__submit, .table-hover > tbody > tr:hover, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-frame:hover, .events, .question:before, .box-field__label {
   background-color: #fff !important; }
 
 .bg-transparent, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .table-hover > tbody > tr.table-child-row:hover, .event__dropdown-btn {
@@ -5470,10 +5517,10 @@ button.bg-dark:focus {
 
 .border-0, .account__aside__dropdown, .btn-gradient-blue, .btn-icon, .table > thead > tr > th,
 .table > thead > tr td, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .calendar.fc table, .calendar.fc table > thead > tr > th,
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .table-rows-show-holder .question__toggle, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .calendar.fc table, .calendar.fc table > thead > tr > th,
 .calendar.fc table > thead > tr td,
 .calendar.fc table > tbody > tr > th,
-.calendar.fc table > tbody > tr td, .calendar.fc table .fc-daygrid-body .fc-h-event, .event__dropdown-btn, .event__add-event, .close {
+.calendar.fc table > tbody > tr td, .calendar.fc table .fc-daygrid-body .fc-h-event, .event__dropdown-btn, .event__add-event, .close, .question--is-opened, .modal-content, .modal-header {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5554,7 +5601,7 @@ button.bg-dark:focus {
   clear: both;
   content: ""; }
 
-.d-none, .account__body, .aside__logo, .search-box--is-opened .search-box__toggle, .search-box__toggle, .table-child-row, .fixed-table-pagination .pagination-detail .pagination-info, .pagination .page-item.page-pre, .pagination .page-item.page-next, .calendar.fc .fc-header-toolbar {
+.d-none, .account__body, .aside__logo, .search-box--is-opened .search-box__toggle, .search-box__toggle, .table-child-row, .fixed-table-pagination .pagination-detail .pagination-info, .pagination .page-item.page-pre, .pagination .page-item.page-next, .calendar.fc .fc-header-toolbar, .question__body {
   display: none !important; }
 
 .d-inline {
@@ -5563,7 +5610,7 @@ button.bg-dark:focus {
 .d-inline-block, .label {
   display: inline-block !important; }
 
-.d-block, .account__aside__logo, .aside__nav__item, .header__logo {
+.d-block, .account__aside__logo, .aside__nav__item, .header__logo, .question--is-opened .question__body, .box-field__label {
   display: block !important; }
 
 .d-table {
@@ -5576,7 +5623,7 @@ button.bg-dark:focus {
   display: table-cell !important; }
 
 .d-flex, .account__aside, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside, .aside__nav, .aside__nav__inner, .header, .header__panel, .header__buttons, html, body, .main, .simple-login-buttons, .simple-login-button, .stats__inner, .search-box, .search-box--is-opened .search-box__submit,
-.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list {
+.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list, .box-fields {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5749,7 +5796,7 @@ button.bg-dark:focus {
   -webkit-box-direction: reverse !important;
           flex-direction: column-reverse !important; }
 
-.flex-wrap, .simple-login-buttons, .list {
+.flex-wrap, .simple-login-buttons, .list, .box-fields {
   flex-wrap: wrap !important; }
 
 .flex-nowrap {
@@ -5778,7 +5825,7 @@ button.bg-dark:focus {
 .flex-shrink-1 {
   flex-shrink: 1 !important; }
 
-.justify-content-start, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top {
+.justify-content-start, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .question__toggle {
   -webkit-box-pack: start !important;
           justify-content: flex-start !important; }
 
@@ -6266,10 +6313,10 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner, .tabs-vertical-btn {
+.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner, .tabs-vertical-btn, .question, .question__toggle, .question__body {
   position: relative !important; }
 
-.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after, .tabs-vertical-btn.active:after {
+.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after, .tabs-vertical-btn.active:after, .question:before, .question__toggle:before, .box-field input {
   position: absolute !important; }
 
 .position-fixed, .aside-overlay, .aside {
@@ -6330,7 +6377,7 @@ button.bg-dark:focus {
 
 .shadow-none, .account__aside__dropdown, .btn-icon, .search-box__toggle,
 .search-box__submit, .table-hover > tbody > tr.table-child-row:hover, .table-button, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .event__dropdown-btn, .event__add-event, .close {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .table-rows-show-holder .question__toggle, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6343,7 +6390,7 @@ button.bg-dark:focus {
   width: 75% !important; }
 
 .w-100, .account__aside__header,
-.account__aside__body, .account__aside__footer, .account__aside__logo, .aside-overlay, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, body, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step__inner {
+.account__aside__body, .account__aside__footer, .account__aside__logo, .aside-overlay, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, body, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step__inner, .question__toggle {
   width: 100% !important; }
 
 .w-auto {
@@ -6358,7 +6405,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .aside-overlay, .aside, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .stats__inner {
+.h-100, .aside-overlay, .aside, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .stats__inner, .question:before {
   height: 100% !important; }
 
 .h-auto {
@@ -6394,7 +6441,7 @@ button.bg-dark:focus {
   background-color: rgba(0, 0, 0, 0); }
 
 .m-0, .fixed-table-pagination .pagination-detail,
-.fixed-table-pagination .pagination {
+.fixed-table-pagination .pagination, .box-field__label {
   margin: 0 !important; }
 
 .mt-0,
@@ -6444,7 +6491,7 @@ button.bg-dark:focus {
 .account__body__gallery .swiper-pagination .swiper-pagination-bullet {
   margin-right: 0.5rem !important; }
 
-.mb-2, .list__item,
+.mb-2, .list__item, .question__body, .box-field,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -6461,7 +6508,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-top: 1rem !important; }
 
-.mr-3, .aside__nav__icon, .step__inner:before,
+.mr-3, .aside__nav__icon, .step__inner:before, .box-fields .box-field,
 .mx-3 {
   margin-right: 1rem !important; }
 
@@ -6484,7 +6531,7 @@ button.bg-dark:focus {
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4, .aside__nav, .event,
+.mb-4, .aside__nav, .event, .questions:not(:last-child),
 .my-4 {
   margin-bottom: 1.5rem !important; }
 
@@ -6569,7 +6616,7 @@ button.bg-dark:focus {
 .py-2 {
   padding-bottom: 0.5rem !important; }
 
-.pl-2,
+.pl-2, .question__toggle,
 .px-2,
 .btn-icon {
   padding-left: 0.5rem !important; }
@@ -6606,7 +6653,8 @@ button.bg-dark:focus {
 .py-4,
 .table > tbody > tr > th,
 .table > tbody > tr td,
-.event {
+.event,
+.question__toggle {
   padding-top: 1.5rem !important; }
 
 .pr-4,
@@ -6617,11 +6665,12 @@ button.bg-dark:focus {
 .input-group-text {
   padding-right: 1.5rem !important; }
 
-.pb-4,
+.pb-4, .question__body,
 .py-4,
 .table > tbody > tr > th,
 .table > tbody > tr td,
-.event {
+.event,
+.question__toggle {
   padding-bottom: 1.5rem !important; }
 
 .pl-4,
@@ -6639,7 +6688,7 @@ button.bg-dark:focus {
 .py-5 {
   padding-top: 3rem !important; }
 
-.pr-5,
+.pr-5, .question__toggle,
 .px-5 {
   padding-right: 3rem !important; }
 
@@ -7808,13 +7857,13 @@ button.bg-dark:focus {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-left, .calendar.fc table .fc-col-header .fc-scrollgrid-sync-inner {
+.text-left, .calendar.fc table .fc-col-header .fc-scrollgrid-sync-inner, .question__toggle {
   text-align: left !important; }
 
 .text-right, .event__footer {
   text-align: right !important; }
 
-.text-center, .calendar.fc table .fc-daygrid-body .fc-daygrid-event, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-bottom {
+.text-center, .calendar.fc table .fc-daygrid-body .fc-daygrid-event, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-bottom, .box-field__label {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -7959,7 +8008,7 @@ a.text-dark:hover, a.text-dark:focus {
 .visible {
   visibility: visible !important; }
 
-.invisible {
+.invisible, .box-field input {
   visibility: hidden !important; }
 
 @media print {
@@ -7969,7 +8018,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important; }
   a:not(.btn):not(.account__aside__dropdown):not(.search-box__toggle):not(
-  .search-box__submit):not(.table-button):not(.event__dropdown-btn):not(.event__add-event):not(.close) {
+  .search-box__submit):not(.table-button):not(.event__dropdown-btn):not(.event__add-event):not(.close):not(.question__toggle) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9725,16 +9774,16 @@ button.swiper-pagination-bullet {
   margin-left: -1px !important; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group > .question__toggle {
   border-radius: 0; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:first-child > .question__toggle {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
 .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .account__aside__dropdown, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__toggle,
-.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .close {
+.bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .search-box__submit, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .table-button, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__dropdown-btn, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .event__add-event, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .close, .bootstrap-table .fixed-table-toolbar .columns .btn-group > .btn-group:last-child > .question__toggle {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
@@ -10046,7 +10095,7 @@ div.fixed-table-scroll-outer {
 .text-blue600 {
   color: #007CFF !important; }
 
-.text-blue700, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .step--is-active, .step--is-done {
+.text-blue700, .custom-select, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .step--is-active, .step--is-done, .box-field__label {
   color: #3b3f64 !important; }
 
 .text-blue800, .simple-login-button, .event__dropdown-btn, .close, .step__inner:before {
@@ -10099,7 +10148,7 @@ div.fixed-table-scroll-outer {
   color: #16d895 !important; }
 
 .bg-white, .account__body__gallery .swiper-pagination .swiper-pagination-bullet, .aside__nav__item:after, .aside__nav__item.active, .aside__nav__item__rounded-corner:after, .aside__nav__inner:before, .input-group-text, .simple-login-button, .search-box__toggle,
-.search-box__submit, .table-hover > tbody > tr:hover, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-frame:hover, .events {
+.search-box__submit, .table-hover > tbody > tr:hover, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-frame:hover, .events, .question:before, .box-field__label {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -10160,16 +10209,16 @@ div.fixed-table-scroll-outer {
   background-color: #e9f0f7 !important; }
 
 .bg-gray300, .table-rows-show-holder .btn:hover, .table-rows-show-holder .account__aside__dropdown:hover, .table-rows-show-holder .search-box__toggle:hover,
-.table-rows-show-holder .search-box__submit:hover, .table-rows-show-holder .table-button:hover, .table-rows-show-holder .event__dropdown-btn:hover, .table-rows-show-holder .event__add-event:hover, .table-rows-show-holder .close:hover, .table-rows-show-holder .btn:focus, .table-rows-show-holder .account__aside__dropdown:focus, .table-rows-show-holder .search-box__toggle:focus,
-.table-rows-show-holder .search-box__submit:focus, .table-rows-show-holder .table-button:focus, .table-rows-show-holder .event__dropdown-btn:focus, .table-rows-show-holder .event__add-event:focus, .table-rows-show-holder .close:focus, .table-rows-show-holder .btn:active, .table-rows-show-holder .account__aside__dropdown:active, .table-rows-show-holder .search-box__toggle:active,
-.table-rows-show-holder .search-box__submit:active, .table-rows-show-holder .table-button:active, .table-rows-show-holder .event__dropdown-btn:active, .table-rows-show-holder .event__add-event:active, .table-rows-show-holder .close:active {
+.table-rows-show-holder .search-box__submit:hover, .table-rows-show-holder .table-button:hover, .table-rows-show-holder .event__dropdown-btn:hover, .table-rows-show-holder .event__add-event:hover, .table-rows-show-holder .close:hover, .table-rows-show-holder .question__toggle:hover, .table-rows-show-holder .btn:focus, .table-rows-show-holder .account__aside__dropdown:focus, .table-rows-show-holder .search-box__toggle:focus,
+.table-rows-show-holder .search-box__submit:focus, .table-rows-show-holder .table-button:focus, .table-rows-show-holder .event__dropdown-btn:focus, .table-rows-show-holder .event__add-event:focus, .table-rows-show-holder .close:focus, .table-rows-show-holder .question__toggle:focus, .table-rows-show-holder .btn:active, .table-rows-show-holder .account__aside__dropdown:active, .table-rows-show-holder .search-box__toggle:active,
+.table-rows-show-holder .search-box__submit:active, .table-rows-show-holder .table-button:active, .table-rows-show-holder .event__dropdown-btn:active, .table-rows-show-holder .event__add-event:active, .table-rows-show-holder .close:active, .table-rows-show-holder .question__toggle:active {
   background-color: #eef0f4 !important; }
 
 .bg-gray400 {
   background-color: #c7cdd9 !important; }
 
 .bg-gray500, .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .table-rows-show-holder .question__toggle, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .pagination .page-link {
   background-color: #f0f4f8 !important; }
 
 .bg-gray600 {
@@ -10190,18 +10239,18 @@ div.fixed-table-scroll-outer {
 .font-base-semibold, .account__aside__dropdown, .account__aside__footer, .aside__nav__item, b,
 .bold, .form-control, .custom-select, .input-group-text, .dropdown-item, .stats, .tab-btn, .table > thead > tr > th,
 .table > thead > tr td, .table > tbody > tr > th:first-child,
-.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .tabs-vertical-btn, .list__item {
+.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .tabs-vertical-btn, .list__item, .box-field__label {
   font-family: "Source-Sans-Pro-SemiBold" !important; }
 
 /* Font for buttons */
 .font-secondary-medium, .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
   font-family: "Heebo-Medium" !important; }
 
 .font-secondary-bold {
   font-family: "Heebo-Bold" !important; }
 
-.font-icons:before, .account__aside__dropdown:before, .close:before, .step--is-done .step__inner:before {
+.font-icons:before, .account__aside__dropdown:before, .close:before, .step--is-done .step__inner:before, .question__toggle:before {
   font-family: "icomoon" !important; }
 
 /*************************
@@ -10222,17 +10271,16 @@ div.fixed-table-scroll-outer {
 /*************************
 	Radius variables
 *************************/
-.radius-xs, .account__aside__dropdown, .form-control, .custom-select, .dropdown-menu, .simple-login-button, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle {
+.radius-xs, .account__aside__dropdown, .form-control, .custom-select, .dropdown-menu, .simple-login-button, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .box-field__label {
   border-radius: 8px !important; }
 
-.radius-sm, .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
+.radius-sm {
   border-radius: 14px !important; }
 
 .radius-md, .table-box, .box--rounded {
   border-radius: 20px !important; }
 
-.radius-lg {
+.radius-lg, .modal-content {
   border-radius: 30px !important; }
 
 /*************************
@@ -10743,7 +10791,7 @@ ul {
 .icon-settings:before {
   content: "\e90c"; }
 
-.icon-angle-down:before, .account__aside__dropdown:before {
+.icon-angle-down:before, .account__aside__dropdown:before, .question__toggle:before {
   content: "\e900"; }
 
 .icon-facebook:before {
@@ -10856,8 +10904,9 @@ ul {
 
 /* BUTTONS */
 .btn, .account__aside__dropdown, .search-box__toggle,
-.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close {
-  padding: 12px 27px; }
+.search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
+  padding: 12px 27px;
+  border-radius: 10px; }
   .btn-gradient-blue {
     background-image: -webkit-gradient(linear, left top, right top, from(#04b4ff), to(#4adeff));
     background-image: linear-gradient(to right, #04b4ff 0%, #4adeff 100%);
@@ -10885,6 +10934,9 @@ ul {
       background: #455880 !important;
       border-color: #455880 !important;
       color: #ffffff !important; }
+  .btn-md {
+    padding-top: 12.5px;
+    padding-bottom: 12.5px; }
 
 /* SECTION */
 .section {
@@ -11016,7 +11068,7 @@ ul {
   display: table-row !important; }
 
 .table-rows-show-holder .btn, .table-rows-show-holder .account__aside__dropdown, .table-rows-show-holder .search-box__toggle,
-.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close {
+.table-rows-show-holder .search-box__submit, .table-rows-show-holder .table-button, .table-rows-show-holder .event__dropdown-btn, .table-rows-show-holder .event__add-event, .table-rows-show-holder .close, .table-rows-show-holder .question__toggle {
   padding: 12px 16px;
   border-radius: 8px !important; }
 
@@ -11221,3 +11273,93 @@ ul {
     .list__item {
       font-size: 16px;
       margin-right: 25px; } }
+
+/* ACCORDION */
+.question:before {
+  border-radius: 15px;
+  left: 0;
+  top: -1px;
+  box-shadow: 0 18px 36px 0 rgba(207, 207, 207, 0.25);
+  content: '';
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  margin-left: -15px;
+  margin-right: -15px;
+  width: calc(100% + 30px);
+  opacity: 0;
+  z-index: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .question:before {
+      -webkit-transition: none;
+      transition: none; } }
+  @media (min-width: 768px) {
+    .question:before {
+      margin-left: -30px;
+      margin-right: -30px;
+      width: calc(100% + 60px); } }
+
+.question--is-opened:before {
+  opacity: 1; }
+
+.question--is-opened .question__toggle:before {
+  color: rgba(69, 88, 128, 0.5);
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg); }
+
+.question:not(:last-child) {
+  border-bottom: 1px solid rgba(51, 135, 255, 0.19); }
+
+.question__toggle,
+.question__body {
+  z-index: 10; }
+
+.question__toggle {
+  border-radius: 0 !important; }
+  .question__toggle:before {
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    color: #455880; }
+    @media (prefers-reduced-motion: reduce) {
+      .question__toggle:before {
+        -webkit-transition: none;
+        transition: none; } }
+
+/* BOX FIELD */
+.box-field input:checked ~ .box-field__label {
+  background-color: #bfe3ee !important; }
+
+.box-field__label {
+  border: 1px solid #bfe3ee;
+  padding: 18.5px 20px;
+  cursor: pointer;
+  min-width: 140px;
+  -webkit-transition: 250ms;
+  transition: 250ms; }
+  @media (prefers-reduced-motion: reduce) {
+    .box-field__label {
+      -webkit-transition: none;
+      transition: none; } }
+
+/* MODAL */
+@media (min-width: 576px) {
+  .modal-header,
+  .modal-body {
+    padding-left: 32px;
+    padding-right: 32px; } }
+
+.modal-header {
+  padding-top: 1.5rem; }
+  @media (min-width: 576px) {
+    .modal-header {
+      padding-top: 32px; } }
+  @media (max-width: 575.98px) {
+    .modal-header .close {
+      margin-right: 0; } }
+
+@media (min-width: 576px) {
+  .modal-body {
+    padding-bottom: 32px; } }

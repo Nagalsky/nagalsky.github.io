@@ -1,0 +1,37 @@
+/* BOX FIELD */
+
+.box-fields {
+    @extend .d-flex,
+    .flex-wrap;
+    .box-field {
+        @extend .mr-3;
+    }
+}
+
+.box-field {
+    @extend .mb-2;
+    input {
+        @extend .position-absolute,
+        .invisible;
+        &:checked {
+            &~.box-field__label {
+                background-color: $blue50 !important;
+            }
+        }
+    }
+}
+
+.box-field__label {
+    @extend .d-block,
+    .m-0,
+    .radius-xs,
+    .font-base-semibold,
+    .bg-white,
+    .text-blue700,
+    .text-center;
+    border: 1px solid $blue50;
+    padding: 18.5px 20px;
+    cursor: pointer;
+    min-width: 140px;
+    @include transition($base-animation);
+}

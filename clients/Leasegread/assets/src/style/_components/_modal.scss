@@ -1,0 +1,38 @@
+/* MODAL */
+
+.modal {}
+
+.modal-content {
+    @extend .border-0,
+    .radius-lg;
+}
+
+.modal-header {
+    @extend .border-0;
+}
+
+.modal-header,
+.modal-body {
+    @include media-breakpoint-up(sm) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+.modal-header {
+    padding-top: 1.5rem;
+    @include media-breakpoint-up(sm) {
+        padding-top: 32px;
+    }
+    .close {
+        @include media-breakpoint-down(xs) {
+            margin-right: 0;
+        }
+    }
+}
+
+.modal-body {
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 32px;
+    }
+}

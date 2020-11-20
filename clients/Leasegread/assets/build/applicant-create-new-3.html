@@ -107,56 +107,105 @@
 
                         <div class="table-box table-box--sub flex-fill">
                             <div class="box bg-transparent py-0">
+                                <div class="mb-4 d-flex align-items-center justify-content-between">
+                                    <h5 class="m-0">All Questions</h5>
+                                    <button class="btn btn-secondary flex-shrink-0 ml-3" data-toggle="modal" data-target="#modal-add-question">+ Add Custom Question</button>
+                                </div>
+
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tab-professional">
-                                        <div class="mb-4 d-flex align-items-center justify-content-between">
-                                            <h5 class="m-0">All Questions</h5>
-                                            <button class="btn btn-secondary flex-shrink-0 ml-3">
-                                                +  Add Custom Question
-                                            </button>
-                                        </div>
-
-                                        <div class="accordion" id="accordionExample">
-                                            <div class="card">
-                                                <div class="card-header" id="headingOne">
-                                                    <h2 class="mb-0">
-                                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</button>
-                                                    </h2>
-                                                </div>
-
-                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        <div class="questions">
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Are they likely to pay
+                                                    on-time?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-1">
+                                                            <label class="box-field__label" for="box-field-1-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-2">
+                                                            <label class="box-field__label" for="box-field-1-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-3">
+                                                            <label class="box-field__label" for="box-field-1-3">20k+
+                                                                month</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingTwo">
-                                                    <h2 class="mb-0">
-                                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</button>
-                                                    </h2>
-                                                </div>
-                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they keep my rental
+                                                    property in good condition?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-1">
+                                                            <label class="box-field__label" for="box-field-2-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-2">
+                                                            <label class="box-field__label" for="box-field-2-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-3">
+                                                            <label class="box-field__label" for="box-field-2-3">20k+
+                                                                month</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingThree">
-                                                    <h2 class="mb-0">
-                                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</button>
-                                                    </h2>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they cause trouble
+                                                    with the neighbors?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-1">
+                                                            <label class="box-field__label" for="box-field-3-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-2">
+                                                            <label class="box-field__label" for="box-field-3-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-3">
+                                                            <label class="box-field__label" for="box-field-3-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                                    <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">What's the rent?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-1">
+                                                            <label class="box-field__label" for="box-field-4-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-2">
+                                                            <label class="box-field__label" for="box-field-4-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-3">
+                                                            <label class="box-field__label" for="box-field-4-3">20k+
+                                                                month</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,11 +213,201 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="tab-rental">
-                                        2
+                                        <div class="questions">
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Are they likely to pay
+                                                    on-time?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-1" id="box-field-tab2-1-1">
+                                                            <label class="box-field__label" for="box-field-tab2-1-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-1" id="box-field-tab2-1-2">
+                                                            <label class="box-field__label" for="box-field-tab2-1-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-1" id="box-field-tab2-1-3">
+                                                            <label class="box-field__label" for="box-field-tab2-1-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they keep my rental
+                                                    property in good condition?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-2" id="box-field-tab2-2-1">
+                                                            <label class="box-field__label" for="box-field-tab2-2-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-2" id="box-field-tab2-2-2">
+                                                            <label class="box-field__label" for="box-field-tab2-2-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-2" id="box-field-tab-2-3">
+                                                            <label class="box-field__label" for="box-field-tab-2-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they cause trouble
+                                                    with the neighbors?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-3" id="box-field-tab2-3-1">
+                                                            <label class="box-field__label" for="box-field-tab2-3-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-3" id="box-field-tab2-3-2">
+                                                            <label class="box-field__label" for="box-field-tab2-3-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-3" id="box-field-tab2-3-3">
+                                                            <label class="box-field__label" for="box-field-tab2-3-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">What's the rent?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-4" id="box-field-box-field-tab2-4-1">
+                                                            <label class="box-field__label" for="box-field-box-field-tab2-4-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-4" id="box-field-box-field-tab2-4-2">
+                                                            <label class="box-field__label" for="box-field-box-field-tab2-4-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2-4" id="box-field-box-field-tab2-4-4">
+                                                            <label class="box-field__label" for="box-field-box-field-tab2-4-4">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="tab-pane fade" id="tab-employer">
-                                        3
+                                        <div class="questions">
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Are they likely to pay
+                                                    on-time?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-1" id="box-field-tab3-1-1">
+                                                            <label class="box-field__label" for="box-field-tab3-1-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-1" id="box-field-tab3-1-2">
+                                                            <label class="box-field__label" for="box-field-tab3-1-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-1" id="box-field-tab3-1-3">
+                                                            <label class="box-field__label" for="box-field-tab3-1-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they keep my rental
+                                                    property in good condition?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-2" id="box-field-tab3-2-1">
+                                                            <label class="box-field__label" for="box-field-tab3-2-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-2" id="box-field-tab3-2-2">
+                                                            <label class="box-field__label" for="box-field-tab3-2-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-2" id="box-field-tab3-2-3">
+                                                            <label class="box-field__label" for="box-field-tab3-2-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">Will they cause trouble
+                                                    with the neighbors?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-3" id="box-field-tab3-4-1">
+                                                            <label class="box-field__label" for="box-field-tab3-4-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-3" id="box-field-tab3-4-2">
+                                                            <label class="box-field__label" for="box-field-tab3-4-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-3" id="box-field-tab3-4-3">
+                                                            <label class="box-field__label" for="box-field-tab3-4-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="question">
+                                                <button class="question__toggle" type="button">What's the rent?</button>
+                                                <div class="question__body">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-4" id="box-field-box-field-tab3-5-1">
+                                                            <label class="box-field__label" for="box-field-box-field-tab3-5-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-4" id="box-field-box-field-tab3-5-2">
+                                                            <label class="box-field__label" for="box-field-box-field-tab3-5-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3-4" id="box-field-box-field-tab3-5-3">
+                                                            <label class="box-field__label" for="box-field-box-field-tab3-5-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +425,59 @@
         </div>
     </main>
 
+
+
     <script src="js/main.min.js"></script>
+
+    <div></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-add-question" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-blue800 m-0">Add Questions</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row mb-4">
+                            <div class="col-sm-5 col-xl-4">
+                                <select class="custom-select custom-select--sm text-blue400">
+                                    <option selected>Range</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <input type="text" class="form-control form-control--sm mb-4" placeholder="Question" value="Will they cause trouble with the neighbors?">
+    
+                        <div class="box-fields mb-4">
+                            <div class="box-field">
+                                <input type="radio" name="box-field-radios-modal" id="box-field-modal-1">
+                                <label class="box-field__label" for="box-field-modal-1">10k - 15k month</label>
+                            </div>
+                            <div class="box-field">
+                                <input type="radio" name="box-field-radios-modal" id="box-field-modal-2">
+                                <label class="box-field__label" for="box-field-modal-2">15k - 20k month</label>
+                            </div>
+                            <div class="box-field">
+                                <input type="radio" name="box-field-radios-modal" id="box-field-modal-3">
+                                <label class="box-field__label" for="box-field-modal-3">20k+ month</label>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex">
+                            <button type="submit" class="btn btn-secondary btn-md mr-4">Add</button>
+                            <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>

@@ -18532,4 +18532,14 @@ $(document).ready(function() {
                 .toggleClass("table-child-row--is-opened");
         });
     });
+
+    //Accordion item toggle class
+    $(function() {
+        $(".question__toggle").on("click", function(e) {
+            e.preventDefault();
+            $(this)
+                .closest(".question")
+                .toggleClass("question--is-opened");
+        });
+    });
 });
