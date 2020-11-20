@@ -57,6 +57,13 @@ $(document).ready(function() {
                 .next(".table-child-row")
                 .toggleClass("table-child-row--is-opened");
         });
+
+        $("body").on("click", "[data-dismiss='table']", function(e) {
+            e.preventDefault();
+            $(this)
+                .closest(".table-child-row")
+                .removeClass("table-child-row--is-opened");
+        });
     });
 
     //Accordion item toggle class

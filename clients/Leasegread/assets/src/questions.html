@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    //= template/head.html
+    <title>Questions</title>
+</head>
+
+<body>
+
+    <main class="main">
+        //= template/aside.html
+
+        <div class="wrapper">
+            <header class="header">
+                <a href="#" class="header__logo">
+                    <img src="img/elements/logo-xs.svg" class="w-100" alt="">
+                </a>
+
+                <h1 class="h3 m-0 d-none d-md-block text-blue800">Applicant</h1>
+
+                <div class="header__panel">
+                    <div class="header__buttons">
+                        <a href="#" class="header__button">
+                            <span class="header__button__indicator"></span>
+                            <i class="icon-bell"></i>
+                        </a>
+                        <a href="#" class="header__button">
+                            <i class="icon-settings"></i>
+                        </a>
+                        <a href="#" class="header__button header__button-toggle-aside">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrapper-content">
+                <h1 class="h3 d-md-none text-blue800">Applicant</h1>
+
+                <div class="d-xl-flex align-items-xl-center mb-4">
+                    <div class="box box--sky box--rounded flex-fill mb-4 mb-xl-0">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-xl-7 col-md-6 col-sm-4 mb-3 mb-sm-0">
+                                    <div class="form-control-has-icon">
+                                        <i class="icon-search form-control-icon"></i>
+                                        <input type="search" class="form-control" placeholder="Search">
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-md-2 col-sm-3 mb-3 mb-sm-0">
+                                    <select class="custom-select bg-white border-0">
+                                    <option selected>Residential</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                </div>
+                                <div class="col-xl-2 col-md-2 col-sm-3 mb-3 mb-sm-0">
+                                    <select class="custom-select bg-white border-0">
+                                    <option selected>Response Recived</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                </div>
+                                <div class="col-xl-1 col-md-2 col-sm-2 d-flex">
+                                    <button type="submit" class="btn btn-secondary px-sm-1 table-btn-form">Find</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <button type="button" class="btn btn-gradient-blue fs-16 ml-xl-5" data-toggle="modal" data-target="#modal-add-question-table">Add Question</button>
+                </div>
+
+                <div class="table-box">
+                    <table data-toggle="table" data-classes="table bootstrap-table" data-pagination="true" data-page-size="14">
+                        <thead>
+                            <tr>
+                                <th scope="col">Questions</th>
+                                <th scope="col">Reference Type</th>
+                                <th scope="col">Question Type </th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-parent-row">
+                                <th>
+                                    Are they likely to pay on-time?
+                                </th>
+                                <td>Professional</td>
+                                <td>Yes/No</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-1">
+                                                            <label class="box-field__label" for="box-field-1-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-2">
+                                                            <label class="box-field__label" for="box-field-1-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-1" id="box-field-1-3">
+                                                            <label class="box-field__label" for="box-field-1-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Will they keep my rental property in good condition?
+                                </th>
+                                <td>Rental</td>
+                                <td>Options</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-1">
+                                                            <label class="box-field__label" for="box-field-2-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-2">
+                                                            <label class="box-field__label" for="box-field-2-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-2" id="box-field-2-3">
+                                                            <label class="box-field__label" for="box-field-2-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    How long was the tenancy?
+                                </th>
+                                <td>Rental</td>
+                                <td>Range</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-1">
+                                                            <label class="box-field__label" for="box-field-3-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-2">
+                                                            <label class="box-field__label" for="box-field-3-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-3" id="box-field-3-3">
+                                                            <label class="box-field__label" for="box-field-3-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Are they likely to pay on-time?
+                                </th>
+                                <td>Professional</td>
+                                <td>Yes/No</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-1">
+                                                            <label class="box-field__label" for="box-field-4-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-2">
+                                                            <label class="box-field__label" for="box-field-4-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-4" id="box-field-4-3">
+                                                            <label class="box-field__label" for="box-field-4-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Will they keep my rental property in good condition?
+                                </th>
+                                <td>Rental</td>
+                                <td>Options</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-5" id="box-field-5-1">
+                                                            <label class="box-field__label" for="box-field-5-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-5" id="box-field-5-2">
+                                                            <label class="box-field__label" for="box-field-5-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-5" id="box-field-5-3">
+                                                            <label class="box-field__label" for="box-field-5-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    How long was the tenancy?
+                                </th>
+                                <td>Rental</td>
+                                <td>Range</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-6" id="box-field-6-1">
+                                                            <label class="box-field__label" for="box-field-6-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-6" id="box-field-6-2">
+                                                            <label class="box-field__label" for="box-field-6-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-6" id="box-field-6-3">
+                                                            <label class="box-field__label" for="box-field-6-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Are they likely to pay on-time?
+                                </th>
+                                <td>Professional</td>
+                                <td>Yes/No</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-7" id="box-field-7-1">
+                                                            <label class="box-field__label" for="box-field-7-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-7" id="box-field-7-2">
+                                                            <label class="box-field__label" for="box-field-7-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-7" id="box-field-7-3">
+                                                            <label class="box-field__label" for="box-field-7-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Will they keep my rental property in good condition?
+                                </th>
+                                <td>Rental</td>
+                                <td>Options</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-8" id="box-field-8-1">
+                                                            <label class="box-field__label" for="box-field-8-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-8" id="box-field-8-2">
+                                                            <label class="box-field__label" for="box-field-8-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-8" id="box-field-8-3">
+                                                            <label class="box-field__label" for="box-field-8-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    How long was the tenancy?
+                                </th>
+                                <td>Rental</td>
+                                <td>Range</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-9" id="box-field-9-1">
+                                                            <label class="box-field__label" for="box-field-9-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-9" id="box-field-9-2">
+                                                            <label class="box-field__label" for="box-field-9-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-9" id="box-field-9-3">
+                                                            <label class="box-field__label" for="box-field-9-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-parent-row">
+                                <th>
+                                    Are they likely to pay on-time?
+                                </th>
+                                <td>Professional</td>
+                                <td>Yes/No</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button type="button" class="table-button table-button-edit"><i class="icon-edit"></i></button>
+                                        <button type="button" class="table-button table-button-delete"><i class="icon-delete"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-child-row">
+                                <td colspan="5">
+                                    <div class="box box--muted">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-xl-2 col-sm-4 mb-3">
+                                                    <select class="custom-select custom-select--sm text-blue400">
+                                                        <option selected>Select Reference</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-xl-10 col-sm-8 mb-3">
+                                                    <input type="text" class="form-control form-control--placeholder-secondary" placeholder="What's the rent?">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row mb-4">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4 mb-3">
+                                                    <div class="box-fields">
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-10" id="box-field-10-1">
+                                                            <label class="box-field__label" for="box-field-10-1">10k -
+                                                                15k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-10" id="box-field-10-2">
+                                                            <label class="box-field__label" for="box-field-10-2">15k -
+                                                                20k month</label>
+                                                        </div>
+                                                        <div class="box-field">
+                                                            <input type="radio" name="box-field-radios-10" id="box-field-10-3">
+                                                            <label class="box-field__label" for="box-field-10-3">20k+
+                                                                month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-xl-10 col-sm-8 offset-xl-2 offset-sm-4">
+                                                    <div class="d-flex">
+                                                        <button type="submit" class="btn btn-secondary btn-md mr-4">Save</button>
+                                                        <button type="button" class="btn btn-outline-blue btn-md" data-dismiss="table">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/scripts-dependencies.html
+
+    <div></div>
+
+    //= template/modal-add-questions-table.html
+
+</body>
+
+</html>
