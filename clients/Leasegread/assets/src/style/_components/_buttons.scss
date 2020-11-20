@@ -1,5 +1,6 @@
 /* BUTTONS */
 
+$btn-icon-box-size: 40px;
 .btn {
     @extend .font-secondary-medium;
     padding: 12px 27px;
@@ -28,6 +29,16 @@
             border-color: darken($blue300, 10%);
         }
     }
+    &-white {
+        @extend .text-blue800,
+        .bg-white;
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-white,
+            .bg-blue800;
+        }
+    }
     &-outline-blue {
         @include button-outline-variants($color: $blue800);
         padding-top: 10px;
@@ -38,9 +49,40 @@
         .px-2,
         .py-0,
         .shadow-none;
+        &--delete {
+            &:hover,
+            &:focus,
+            &:active {
+                @extend .text-red500;
+            }
+        }
+    }
+    &-icon-box {
+        @extend .radius-xs,
+        .d-flex,
+        .align-items-center,
+        .justify-content-center,
+        .flex-shrink-0,
+        .text-blue400,
+        .shadow-none,
+        .p-0,
+        .fs-16;
+        width: $btn-icon-box-size;
+        height: $btn-icon-box-size;
+        background-color: $blue200;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: darken($blue200, 5%);
+        }
     }
     &-md {
         padding-top: 12.5px;
         padding-bottom: 12.5px;
+    }
+    &-sm {
+        padding-top: 8.5px;
+        padding-bottom: 8.5px;
+        font-size: 14px;
     }
 }

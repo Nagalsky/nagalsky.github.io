@@ -68,4 +68,5 @@ $(document).ready(function() {
                 .toggleClass("question--is-opened");
         });
     });
+
 });

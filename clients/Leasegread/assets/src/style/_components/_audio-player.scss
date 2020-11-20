@@ -1,0 +1,52 @@
+/* AUDIO PLAYER */
+
+$audio-player-btn-size: 38px;
+.audio-player {
+    @extend .d-flex,
+    .align-items-center,
+    .pr-lg-4;
+}
+
+.audio-player__btn {
+    @extend .flex-shrink-0,
+    .btn,
+    .rounded-circle,
+    .border-0,
+    .shadow-none,
+    .p-0,
+    .bg-white,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center;
+    width: $audio-player-btn-size;
+    height: $audio-player-btn-size;
+    img {
+        @extend .w-100;
+        max-width: 14px;
+    }
+}
+
+.audio-player__progress {
+    @extend .flex-fill,
+    .mx-3,
+    .bg-white,
+    .position-relative,
+    .radius-xs;
+    height: 8px;
+}
+
+.audio-player__progress__line {
+    @include transition($base-animation);
+    @extend .radius-xs,
+    .position-absolute,
+    .h-100,
+    .bg-blue500;
+    left: 0;
+    top: 0;
+}
+
+.audio-player__time {
+    @extend .flex-shrink-0,
+    .font-base-semibold;
+    color: rgba($blue400, .68)
+}

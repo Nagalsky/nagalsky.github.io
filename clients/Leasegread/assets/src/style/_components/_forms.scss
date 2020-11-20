@@ -18,6 +18,10 @@ $field-height: 50px;
         @extend .fs-13;
         @include custom-placeholder($color: $gray100, $font-size: 13px, $font-family: $font-base-semibold);
     }
+    &.form-control--placeholder-secondary {
+        @extend .fs-14;
+        @include custom-placeholder($color: $blue700, $font-size: 13px, $font-family: $font-base-semibold);
+    }
 }
 
 .form-group {
@@ -83,4 +87,5 @@ label {
 textarea.form-control {
     resize: none;
     height: 86px;
+    @extend .pt-3;
 }

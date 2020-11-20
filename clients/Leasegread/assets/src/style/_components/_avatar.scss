@@ -1,0 +1,35 @@
+/* AVATAR */
+
+$avatar-size: 46px;
+.avatar-holder {
+    @extend .d-flex,
+    .align-items-center;
+    min-width: 0;
+}
+
+.avatar {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .rounded-circle,
+    .bg-blue200,
+    .text-blue500,
+    .font-icons,
+    .icon-user,
+    .fs-20,
+    .flex-shrink-0,
+    .mr-3;
+    height: $avatar-size;
+    width: $avatar-size;
+}
+
+.avatar-name {
+    @extend .font-base-semibold,
+    .text-truncate;
+    @include media-breakpoint-up(lg) {
+        font-size: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 18px;
+    }
+}

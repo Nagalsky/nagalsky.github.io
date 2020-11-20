@@ -1,0 +1,24 @@
+/* REPORT BOX */
+
+.report-box {
+    @extend .radius-md,
+    .has-bg;
+    padding: 20px 15px;
+    @include media-breakpoint-up(md) {
+        padding: 46px 32px;
+    }
+}
+
+.report-box__stats {
+    @extend .flex-shrink-0,
+    .d-flex,
+    .align-items-center,
+    .font-secondary-medium,
+    .fs-16,
+    .text-white;
+}
+
+.report-box__stats-total-score {
+    @extend .fs-26,
+    .text-blue800;
+}
