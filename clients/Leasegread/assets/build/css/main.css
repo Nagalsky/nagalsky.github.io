@@ -5623,7 +5623,7 @@ button.bg-dark:focus {
   display: table-cell !important; }
 
 .d-flex, .account__aside, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside, .aside__nav, .aside__nav__inner, .header, .header__panel, .header__buttons, html, body, .main, .simple-login-buttons, .simple-login-button, .stats__inner, .search-box, .search-box--is-opened .search-box__submit,
-.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list, .box-fields {
+.search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list, .box-fields, .page-step-header {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5834,7 +5834,7 @@ button.bg-dark:focus {
           justify-content: flex-end !important; }
 
 .justify-content-center, .account__aside__dropdown, .account__body__gallery .swiper-slide, .simple-login-button, .stats__inner, .search-box__toggle,
-.search-box__submit, .pagination .page-link, .event__add-event, .close, .step__inner:before {
+.search-box__submit, .pagination .page-link, .event__add-event, .close, .step__inner:before, .page-step-header {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -5854,7 +5854,7 @@ button.bg-dark:focus {
           align-items: flex-end !important; }
 
 .align-items-center, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside__nav__inner, .header, .header__panel, .header__buttons, .simple-login-button, .search-box__toggle,
-.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close, .step__inner, .step__inner:before, .list__item {
+.search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close, .step__inner, .step__inner:before, .list__item, .page-step-header {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6313,10 +6313,10 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner, .tabs-vertical-btn, .question, .question__toggle, .question__body {
+.position-relative, .account, .account__aside__dropdown, .aside__nav__item, .aside__nav__inner, .header__button, .form-control-has-icon, .stats, .tabs-holder, .tab-btn, .search-box, .pagination .page-link, .step, .step__inner, .tabs-vertical-btn, .question, .question__toggle, .question__body, .checkbox__label, .page-step-header {
   position: relative !important; }
 
-.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after, .tabs-vertical-btn.active:after, .question:before, .question__toggle:before, .box-field input {
+.position-absolute, .account__aside__dropdown:before, .aside__nav__item:before, .aside__nav__item:after, .aside__nav__item__rounded-corner, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, .aside__nav__inner:after, .aside__nav__inner:before, .header__button__indicator, .form-control-has-icon .form-control-icon, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step:not(:last-child):after, .tabs-vertical-btn.active:after, .question:before, .question__toggle:before, .box-field input, .checkbox input, .checkbox__label:before, .page-step-header:before, .page-step-header:after {
   position: absolute !important; }
 
 .position-fixed, .aside-overlay, .aside {
@@ -6390,7 +6390,7 @@ button.bg-dark:focus {
   width: 75% !important; }
 
 .w-100, .account__aside__header,
-.account__aside__body, .account__aside__footer, .account__aside__logo, .aside-overlay, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, body, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step__inner, .question__toggle {
+.account__aside__body, .account__aside__footer, .account__aside__logo, .aside-overlay, .aside__nav__item__rounded-corner:after, .aside__nav__item__rounded-corner:before, body, .stats__inner, .tab-btn:before, .pagination .page-link:before, .step__inner, .question__toggle, .page-step-header:before, .page-step-header--step-3:after {
   width: 100% !important; }
 
 .w-auto {
@@ -6504,7 +6504,7 @@ button.bg-dark:focus {
   margin: 1rem !important; }
 
 .mt-3,
-.fixed-table-pagination .pagination,
+.fixed-table-pagination .pagination, .page-step-footer__link + .page-step-footer__link,
 .my-3 {
   margin-top: 1rem !important; }
 
@@ -6531,7 +6531,7 @@ button.bg-dark:focus {
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4, .aside__nav, .event, .questions:not(:last-child),
+.mb-4, .aside__nav, .event, .questions:not(:last-child), .page-step-header,
 .my-4 {
   margin-bottom: 1.5rem !important; }
 
@@ -6662,7 +6662,8 @@ button.bg-dark:focus {
 .account__body__gallery .swiper-slide,
 .form-control,
 .custom-select,
-.input-group-text {
+.input-group-text,
+.box-field__label {
   padding-right: 1.5rem !important; }
 
 .pb-4, .question__body,
@@ -6678,7 +6679,8 @@ button.bg-dark:focus {
 .account__body__gallery .swiper-slide,
 .form-control,
 .custom-select,
-.input-group-text {
+.input-group-text,
+.box-field__label {
   padding-left: 1.5rem !important; }
 
 .p-5 {
@@ -6820,7 +6822,7 @@ button.bg-dark:focus {
   .m-sm-0 {
     margin: 0 !important; }
   .mt-sm-0,
-  .fixed-table-pagination .pagination, .step + .step,
+  .fixed-table-pagination .pagination, .step + .step, .page-step-footer__link + .page-step-footer__link,
   .my-sm-0 {
     margin-top: 0 !important; }
   .mr-sm-0,
@@ -7863,7 +7865,7 @@ button.bg-dark:focus {
 .text-right, .event__footer {
   text-align: right !important; }
 
-.text-center, .calendar.fc table .fc-daygrid-body .fc-daygrid-event, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-bottom, .box-field__label {
+.text-center, .calendar.fc table .fc-daygrid-body .fc-daygrid-event, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-bottom, .box-field__label, .page-step-header {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -7925,7 +7927,7 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .btn-gradient-blue, .btn-secondary, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event {
+.text-white, .btn-gradient-blue, .btn-secondary, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header {
   color: #fff !important; }
 
 .text-primary {
@@ -8008,7 +8010,7 @@ a.text-dark:hover, a.text-dark:focus {
 .visible {
   visibility: visible !important; }
 
-.invisible, .box-field input {
+.invisible, .box-field input, .checkbox input {
   visibility: hidden !important; }
 
 @media print {
@@ -10067,7 +10069,7 @@ div.fixed-table-scroll-outer {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .btn-gradient-blue, .btn-secondary, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event {
+.text-white, .btn-gradient-blue, .btn-secondary, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header {
   color: #ffffff !important; }
 
 .text-black {
@@ -10089,16 +10091,16 @@ div.fixed-table-scroll-outer {
 .search-box__submit, .table-button, .pagination .page-item.active .page-link, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__link {
   color: #52638d !important; }
 
-.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active, .tabs-vertical-btn.active {
+.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active, .tabs-vertical-btn.active, .page-step-footer__link:hover, .page-step-footer__link:focus, .page-step-footer__link:active {
   color: #3387ff !important; }
 
 .text-blue600 {
   color: #007CFF !important; }
 
-.text-blue700, .custom-select, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .step--is-active, .step--is-done, .box-field__label {
+.text-blue700, .custom-select, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .step--is-active, .step--is-done, .box-field__label, .checkbox__label {
   color: #3b3f64 !important; }
 
-.text-blue800, .simple-login-button, .event__dropdown-btn, .close, .step__inner:before {
+.text-blue800, .simple-login-button, .event__dropdown-btn, .close, .step__inner:before, .page-step-footer__link {
   color: #455880 !important; }
 
 .text-blue900, .header__button {
@@ -10144,7 +10146,7 @@ div.fixed-table-scroll-outer {
 .text-gray700, .tab-btn, .table-rows-show-holder__heading, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle .page-size:after, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .event__header__heading, .tabs-vertical-btn {
   color: #a4afc6 !important; }
 
-.text-green500 {
+.text-green500, .checkbox__label:before {
   color: #16d895 !important; }
 
 .bg-white, .account__body__gallery .swiper-pagination .swiper-pagination-bullet, .aside__nav__item:after, .aside__nav__item.active, .aside__nav__item__rounded-corner:after, .aside__nav__inner:before, .input-group-text, .simple-login-button, .search-box__toggle,
@@ -10169,7 +10171,7 @@ div.fixed-table-scroll-outer {
 .bg-blue400 {
   background-color: #52638d !important; }
 
-.bg-blue500, .aside__nav__inner:after, .tab-btn:before, .pagination .page-link:before, .step--is-active .step__inner:before, .tabs-vertical-btn.active:after {
+.bg-blue500, .aside__nav__inner:after, .tab-btn:before, .pagination .page-link:before, .step--is-active .step__inner:before, .tabs-vertical-btn.active:after, .page-step-header:after {
   background-color: #3387ff !important; }
 
 .bg-blue600 {
@@ -10237,9 +10239,9 @@ div.fixed-table-scroll-outer {
   font-family: "Source-Sans-Pro-Regular" !important; }
 
 .font-base-semibold, .account__aside__dropdown, .account__aside__footer, .aside__nav__item, b,
-.bold, .form-control, .custom-select, .input-group-text, .dropdown-item, .stats, .tab-btn, .table > thead > tr > th,
+.bold, .form-control, .custom-select, .input-group-text, label, .dropdown-item, .stats, .tab-btn, .table > thead > tr > th,
 .table > thead > tr td, .table > tbody > tr > th:first-child,
-.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .tabs-vertical-btn, .list__item, .box-field__label {
+.table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .tabs-vertical-btn, .list__item, .box-field__label, .checkbox__label, .page-step-footer__link {
   font-family: "Source-Sans-Pro-SemiBold" !important; }
 
 /* Font for buttons */
@@ -10250,7 +10252,7 @@ div.fixed-table-scroll-outer {
 .font-secondary-bold {
   font-family: "Heebo-Bold" !important; }
 
-.font-icons:before, .account__aside__dropdown:before, .close:before, .step--is-done .step__inner:before, .question__toggle:before {
+.font-icons:before, .account__aside__dropdown:before, .close:before, .step--is-done .step__inner:before, .question__toggle:before, .checkbox__label:before {
   font-family: "icomoon" !important; }
 
 /*************************
@@ -10629,9 +10631,12 @@ p {
 .underline {
   text-decoration: underline !important; }
 
+.title {
+  font-size: 36px; }
+
 /* FLEX */
 /* HAS BG */
-.has-bg, .account__body__gallery .swiper-slide {
+.has-bg, .account__body__gallery .swiper-slide, .page-step-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
@@ -10763,6 +10768,12 @@ ul {
 
 .icon-menu:before {
   content: "\e90d"; }
+
+.icon-blank-check-box:before, .checkbox__label:before {
+  content: "\e914"; }
+
+.icon-check-box:before, .checkbox input:checked ~ .checkbox__label:before {
+  content: "\e915"; }
 
 .icon-dots:before {
   content: "\e90e"; }
@@ -10902,6 +10913,10 @@ ul {
   border-radius: 8px 0 0 8px;
   border-color: #bfe3ee; }
 
+textarea.form-control {
+  resize: none;
+  height: 86px; }
+
 /* BUTTONS */
 .btn, .account__aside__dropdown, .search-box__toggle,
 .search-box__submit, .table-button, .event__dropdown-btn, .event__add-event, .close, .question__toggle {
@@ -10991,6 +11006,12 @@ ul {
       .table-box--sub {
         margin-top: -1.5rem;
         margin-right: -1.5rem; } }
+  @media (min-width: 992px) {
+    .table-box--lg {
+      padding: 50px !important; } }
+  .table-box--gradient {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d9efff), to(rgba(245, 251, 255, 0)));
+    background-image: linear-gradient(to bottom, #d9efff, rgba(245, 251, 255, 0)); }
 
 /* TABS */
 @media (min-width: 768px) {
@@ -11332,6 +11353,9 @@ ul {
 .box-field input:checked ~ .box-field__label {
   background-color: #bfe3ee !important; }
 
+.box-field--sm .box-field__label {
+  min-width: auto; }
+
 .box-field__label {
   border: 1px solid #bfe3ee;
   padding: 18.5px 20px;
@@ -11363,3 +11387,36 @@ ul {
 @media (min-width: 576px) {
   .modal-body {
     padding-bottom: 32px; } }
+
+/* CHECKBOX */
+.checkbox__label {
+  cursor: pointer;
+  padding-left: 30px; }
+  .checkbox__label:before {
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+/* PAGE STEP */
+.page-step-header {
+  height: 175px; }
+  .page-step-header:before, .page-step-header:after {
+    content: '';
+    height: 8px;
+    bottom: -8px;
+    left: 0; }
+  .page-step-header:before {
+    z-index: 5;
+    background-color: rgba(51, 135, 255, 0.2); }
+  .page-step-header:after {
+    z-index: 6; }
+  .page-step-header--step-2:after {
+    width: 100px; }
+
+.page-step-footer {
+  padding: 30px 0; }
+
+@media (min-width: 576px) {
+  .page-step-footer__link {
+    font-size: 18px; } }

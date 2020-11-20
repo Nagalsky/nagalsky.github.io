@@ -1,0 +1,30 @@
+/* CHECKBOX */
+
+.checkbox {
+    input {
+        @extend .position-absolute,
+        .invisible;
+        &:checked {
+            &~.checkbox__label {
+                @extend .icon-check-box;
+            }
+        }
+    }
+}
+
+.checkbox__label {
+    @extend .font-base-semibold,
+    .text-blue700,
+    .position-relative,
+    .font-icons,
+    .icon-blank-check-box;
+    cursor: pointer;
+    padding-left: 30px;
+    &:before {
+        @extend .position-absolute,
+        .text-green500;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

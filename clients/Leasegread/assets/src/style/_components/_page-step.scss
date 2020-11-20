@@ -1,0 +1,61 @@
+/* PAGE STEP */
+
+.page-step-header {
+    @extend .position-relative,
+    .has-bg,
+    .text-center,
+    .text-white,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .mb-4;
+    height: 175px;
+    &:before,
+    &:after {
+        content: '';
+        @extend .position-absolute;
+        height: 8px;
+        bottom: -8px;
+        left: 0;
+    }
+    &:before {
+        @extend .w-100;
+        z-index: 5;
+        background-color: rgba($blue500, .2);
+    }
+    &:after {
+        @extend .bg-blue500;
+        z-index: 6;
+    }
+    &--step-2 {
+        &:after {
+            width: 100px;
+        }
+    }
+    &--step-3 {
+        &:after {
+            @extend .w-100;
+        }
+    }
+}
+
+.page-step-footer {
+    padding: 30px 0;
+}
+
+.page-step-footer__link {
+    @extend .text-blue800,
+    .font-base-semibold;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-blue500;
+    }
+    @include media-breakpoint-up(sm) {
+        font-size: 18px;
+    }
+    &+.page-step-footer__link {
+        @extend .mt-3,
+        .mt-sm-0;
+    }
+}
