@@ -18488,6 +18488,22 @@ var swiper = new Swiper("#account-gallery", {
     }
 });
 
+//Init swiper testimonial gallery
+var swiper = new Swiper(".testimonial-gallery", {
+    slidesPerView: 1,
+    effect: "fade",
+    loop: true,
+    speed: 600,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
+});
+
 $(document).ready(function() {
     //Mobile menu action
     $(function() {
