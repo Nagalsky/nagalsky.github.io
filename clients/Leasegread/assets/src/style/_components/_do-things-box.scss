@@ -1,0 +1,55 @@
+/* do thing box */
+
+.do-things-box {
+    @extend .position-relative,
+    .bg-blue;
+    z-index: 10;
+    border-radius: $radius-md;
+    @include media-breakpoint-up(md) {
+        border-radius: $radius-md 0 0 $radius-md;
+    }
+    &:before {
+        @extend .position-absolute;
+        z-index: -1;
+        width: 500px;
+        height: calc(100% + 100px);
+        background: radial-gradient(/* dot repeated via background-size */
+        circle at 6px 6px, $blue500 2px, transparent 3px, transparent 20px) 0 0 / 20px 20px;
+        top: -50px;
+        left: -50px;
+        background-blend-mode: multiply, /* only blend the first layer to keep dots hidden */
+        normal, normal, normal;
+        @include media-breakpoint-up(md) {
+            content: '';
+        }
+    }
+    &:after {
+        @extend .position-absolute;
+        z-index: -1;
+        background-color: $white;
+        top: -50px;
+        left: 65px;
+        height: 50px;
+        width: 390px;
+        @include media-breakpoint-up(md) {
+            content: '';
+        }
+    }
+}
+
+.do-things-box__inner {
+    @extend .position-relative,
+    .bg-blue;
+    z-index: 20;
+    padding: 45px 15px;
+    border-radius: $radius-md;
+    @include media-breakpoint-up(md) {
+        border-radius: $radius-md 0 0 $radius-md;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 60px 0px 60px 30px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 115px 0px 115px 60px;
+    }
+}

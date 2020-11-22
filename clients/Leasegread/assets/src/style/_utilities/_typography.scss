@@ -63,7 +63,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 45px;
+    font-size: 40px;
 }
 
 h3,
@@ -126,6 +126,12 @@ b,
     font-size: 32px;
 }
 
+.title-xs {
+    @include media-breakpoint-up(xl) {
+        font-size: 56px;
+    }
+}
+
 .title-with-line {
     @extend .position-relative;
     &:after {
@@ -147,4 +153,9 @@ b,
         .position-relative;
         z-index: 10;
     }
+}
+
+.content-img {
+    @extend .position-relative;
+    z-index: 10;
 }
