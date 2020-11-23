@@ -5659,7 +5659,7 @@ button.bg-dark:focus {
 .d-inline-block, .title-with-line > span, .label {
   display: inline-block !important; }
 
-.d-block, .account__aside__logo, .aside__nav__item, .header__logo, .header-main__logo, .question--is-opened .question__body, .box-field__label, .testimonial__avatar {
+.d-block, .account__aside__logo, .aside__nav__item, .header__logo, .header-main__logo, .footer-main__logo, .question--is-opened .question__body, .box-field__label, .testimonial__avatar {
   display: block !important; }
 
 .d-table {
@@ -5671,7 +5671,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .account__aside, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside, .aside__nav, .aside__nav__inner, .header, .header__panel, .header__buttons, html, body, .main, .btn-icon-box, .simple-login-buttons, .simple-login-button, .stats__inner, .search-box, .search-box--is-opened .search-box__submit,
+.d-flex, .account__aside, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside, .aside__nav, .aside__nav__inner, .header, .header__panel, .header__buttons, .footer-main-nav, .footer-main-nav__item, html, body, .main, .btn-icon-box, .simple-login-buttons, .simple-login-button, .stats__inner, .search-box, .search-box--is-opened .search-box__submit,
 .search-box__submit, .table-buttons, .fixed-table-pagination, .events, .event__header, .steps, .step, .step__inner, .step__inner:before, .list, .box-fields, .page-step-header, .avatar-holder, .avatar, .report-box__stats, .audio-player, .audio-player__btn, .info-box {
   display: -webkit-box !important;
   display: flex !important; }
@@ -5830,7 +5830,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .account__aside, .aside, .aside__nav, body, .main, .stats__inner, .fixed-table-pagination, .events, .steps, .tabs-vertical {
+.flex-column, .account__aside, .aside, .aside__nav, .footer-main-nav, body, .main, .stats__inner, .fixed-table-pagination, .events, .steps, .tabs-vertical {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5902,7 +5902,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside__nav__inner, .header, .header__panel, .header__buttons, .btn-icon-box, .simple-login-button, .search-box__toggle,
+.align-items-center, .account__aside__header, .account__aside__dropdown, .account__aside__footer, .account__body__gallery .swiper-slide, .aside__nav__inner, .header, .header__panel, .header__buttons, .footer-main-nav__item, .btn-icon-box, .simple-login-button, .search-box__toggle,
 .search-box__submit, .fixed-table-pagination, .pagination .page-link, .event__header, .event__add-event, .close, .step__inner, .step__inner:before, .list__item, .page-step-header, .avatar-holder, .avatar, .report-box__stats, .audio-player, .audio-player__btn, .info-box {
   -webkit-box-align: center !important;
           align-items: center !important; }
@@ -6657,8 +6657,7 @@ button.bg-dark:focus {
   padding: 0.5rem !important; }
 
 .pt-2, .wrapper-content,
-.py-2,
-.footer-main__bottom {
+.py-2 {
   padding-top: 0.5rem !important; }
 
 .pr-2,
@@ -6667,8 +6666,7 @@ button.bg-dark:focus {
   padding-right: 0.5rem !important; }
 
 .pb-2,
-.py-2,
-.footer-main__bottom {
+.py-2 {
   padding-bottom: 0.5rem !important; }
 
 .pl-2, .question__toggle,
@@ -6706,6 +6704,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4,
+.footer-main__bottom,
 .table > tbody > tr > th,
 .table > tbody > tr td,
 .event,
@@ -6723,6 +6722,7 @@ button.bg-dark:focus {
 
 .pb-4, .question__body,
 .py-4,
+.footer-main__bottom,
 .table > tbody > tr > th,
 .table > tbody > tr td,
 .event,
@@ -6996,13 +6996,15 @@ button.bg-dark:focus {
   .p-sm-2 {
     padding: 0.5rem !important; }
   .pt-sm-2,
-  .py-sm-2 {
+  .py-sm-2,
+  .footer-main__bottom {
     padding-top: 0.5rem !important; }
   .pr-sm-2,
   .px-sm-2 {
     padding-right: 0.5rem !important; }
   .pb-sm-2,
-  .py-sm-2 {
+  .py-sm-2,
+  .footer-main__bottom {
     padding-bottom: 0.5rem !important; }
   .pl-sm-2,
   .px-sm-2 {
@@ -7988,7 +7990,7 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .footer-main__bottom, .btn-gradient-blue, .btn-secondary, .btn-white:hover, .btn-white:focus, .btn-white:active, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header, .report-box__stats, .candidates-box {
+.text-white, .footer-main__bottom, .footer-main-nav__title, .footer-main__bottom__link, .btn-gradient-blue, .btn-secondary, .btn-white:hover, .btn-white:focus, .btn-white:active, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header, .report-box__stats, .candidates-box {
   color: #fff !important; }
 
 .text-primary {
@@ -10130,13 +10132,13 @@ div.fixed-table-scroll-outer {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .footer-main__bottom, .btn-gradient-blue, .btn-secondary, .btn-white:hover, .btn-white:focus, .btn-white:active, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header, .report-box__stats, .candidates-box {
+.text-white, .footer-main__bottom, .footer-main-nav__title, .footer-main__bottom__link, .btn-gradient-blue, .btn-secondary, .btn-white:hover, .btn-white:focus, .btn-white:active, .simple-login-button:hover, .simple-login-button:focus, .simple-login-button:active, .stats, .label--success, .label--danger, .event__add-event, .page-step-header, .report-box__stats, .candidates-box {
   color: #ffffff !important; }
 
 .text-black {
   color: #000000 !important; }
 
-.text-black100 {
+.text-black100, .footer-main-nav__item:hover, .footer-main-nav__item:focus, .footer-main-nav__item:active {
   color: #333758 !important; }
 
 .text-blue {
@@ -10158,7 +10160,7 @@ div.fixed-table-scroll-outer {
 .search-box__submit, .table-button, .pagination .page-item.active .page-link, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__link {
   color: #52638d !important; }
 
-.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active, .tabs-vertical-btn.active, .page-step-footer__link:hover, .page-step-footer__link:focus, .page-step-footer__link:active, .avatar, .dropzone__label {
+.text-blue500, .aside__nav__item:hover, .aside__nav__item:focus, .aside__nav__item:active, .aside__nav__item.active, .header__button:hover, .header__button:focus, .header__button:active, .footer-main__bottom__link:hover, .footer-main__bottom__link:focus, .footer-main__bottom__link:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item.active, .tab-btn:hover, .tab-btn.active, .event__link:hover, .event__link:focus, .event__link:active, .tabs-vertical-btn.active, .page-step-footer__link:hover, .page-step-footer__link:focus, .page-step-footer__link:active, .avatar, .dropzone__label {
   color: #3387ff !important; }
 
 .text-blue600 {
@@ -10313,7 +10315,7 @@ div.fixed-table-scroll-outer {
   font-family: "Source-Sans-Pro-Regular" !important; }
 
 .font-base-semibold,
-.footer, .account__aside__dropdown, .account__aside__footer, .aside__nav__item, b,
+.footer, .account__aside__dropdown, .account__aside__footer, .aside__nav__item, .footer-main__bottom__link, b,
 .bold, .form-control, .custom-select, .input-group-text, label, .dropdown-item, .stats, .tab-btn, .table > thead > tr > th,
 .table > thead > tr td, .table > tbody > tr > th:first-child,
 .table > tbody > tr td:first-child, .table > tbody > tr > th, .table-rows-show-holder__heading, .label, .pagination .page-link, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-event .fc-event-main, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__link, .step, .step__inner:before, .step__title, .tabs-vertical-btn, .list__item, .box-field__label, .checkbox__label, .page-step-footer__link, .avatar-name, .audio-player__time {
@@ -10660,6 +10662,47 @@ div.fixed-table-scroll-outer {
       padding-top: 110px;
       padding-bottom: 130px; } }
 
+.footer-main__logo {
+  width: 148px;
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .footer-main__logo {
+      margin-bottom: 90px; } }
+
+.footer-main-nav__item {
+  color: rgba(255, 255, 255, 0.6); }
+  .footer-main-nav__item + .footer-main-nav__item {
+    margin-top: 30px; }
+
+.footer-main-nav__title {
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .footer-main-nav__title {
+      margin-bottom: 30px; } }
+  @media (min-width: 1200px) {
+    .footer-main-nav__title {
+      margin-bottom: 50px; } }
+
+.footer-main-nav-grid {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 576px) {
+    .footer-main-nav-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 768px) {
+    .footer-main-nav-grid {
+      grid-gap: 90px; } }
+  @media (min-width: 1200px) {
+    .footer-main-nav-grid {
+      grid-gap: 140px; } }
+  @media (min-width: 768px) {
+    .footer-main-nav-grid .footer-main-nav {
+      max-width: 90px; } }
+
+.footer-main__bottom__link + .footer-main__bottom__link {
+  margin-left: 60px; }
+
 /* BOOTSTRAP VARIABLES */
 html,
 body {
@@ -10794,7 +10837,7 @@ p {
 .fs-15, .table-button {
   font-size: 15px !important; }
 
-.fs-16, .account__aside__footer, .aside__nav__item, .form-control, .form-control-has-icon .form-control-icon, .custom-select, .btn-icon-box, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__dropdown-btn, .event__link, .tabs-vertical-btn, .report-box__stats {
+.fs-16, .account__aside__footer, .aside__nav__item, .footer-main__bottom, .footer-main-nav__item, .footer-main-nav__title, .form-control, .form-control-has-icon .form-control-icon, .custom-select, .btn-icon-box, .fixed-table-pagination .pagination-detail .page-list .dropdown-toggle, .calendar.fc table .fc-col-header .fc-col-header-cell-cushion, .calendar.fc table .fc-daygrid-body .fc-daygrid-day-top, .calendar.fc table .fc-daygrid-body .fc-daygrid-more-link, .event__header__heading, .event__dropdown-btn, .event__link, .tabs-vertical-btn, .report-box__stats {
   font-size: 16px !important; }
 
 .fs-17 {

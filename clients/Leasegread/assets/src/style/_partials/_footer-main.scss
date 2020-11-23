@@ -1,7 +1,5 @@
 /* FOOTER MAIN */
 
-.footer-main {}
-
 .footer-main__top {
     @extend .has-bg;
     background-image: url('../img/bg/footer-main__bg.png');
@@ -14,7 +12,83 @@
 }
 
 .footer-main__bottom {
-    @extend .py-2,
+    @extend .py-4,
+    .py-sm-2,
     .bg-blue800,
-    .text-white;
+    .text-white,
+    .fs-16;
+}
+
+.footer-main__logo {
+    @extend .d-block;
+    width: 148px;
+    margin-bottom: 25px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 90px;
+    }
+}
+
+.footer-main-nav {
+    @extend .d-flex,
+    .flex-column;
+}
+
+.footer-main-nav__item {
+    @extend .d-flex,
+    .align-items-center,
+    .fs-16;
+    color: rgba($white, .6);
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-black100;
+    }
+    &+.footer-main-nav__item {
+        margin-top: 30px;
+    }
+}
+
+.footer-main-nav__title {
+    margin-bottom: 25px;
+    @extend .text-white,
+    .fs-16;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 50px;
+    }
+}
+
+.footer-main-nav-grid {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include media-breakpoint-up(md) {
+        grid-gap: 90px;
+    }
+    @include media-breakpoint-up(xl) {
+        grid-gap: 140px;
+    }
+    .footer-main-nav {
+        @include media-breakpoint-up(md) {
+            max-width: 90px;
+        }
+    }
+}
+
+.footer-main__bottom__link {
+    @extend .text-white,
+    .font-base-semibold;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-blue500;
+    }
+    &+.footer-main__bottom__link {
+        margin-left: 60px;
+    }
 }
