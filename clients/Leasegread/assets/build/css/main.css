@@ -11905,6 +11905,17 @@ textarea.form-control {
   @media (min-width: 992px) {
     .info-box {
       margin-bottom: 80px; } }
+  @media (max-width: 991.98px) {
+    .info-box:after {
+      content: '';
+      background-color: rgba(51, 135, 255, 0.07);
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      height: 40px;
+      bottom: -40px;
+      width: 4px; } }
   @media (min-width: 992px) {
     .info-box--single {
       width: 490px;
@@ -11935,6 +11946,9 @@ textarea.form-control {
     top: -15px;
     right: -135px;
     background-blend-mode: multiply, normal, normal, normal; }
+    @media (max-width: 991.98px) {
+      .info-box--last:after {
+        content: none; } }
     @media (min-width: 992px) {
       .info-box--last:after {
         content: ''; } }
