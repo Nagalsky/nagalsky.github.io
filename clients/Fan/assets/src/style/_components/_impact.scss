@@ -1,0 +1,61 @@
+/* IMPACT */
+
+.impact {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    @include media-breakpoint-up(md) {
+        grid-column-gap: 60px;
+        grid-row-gap: 70px;
+        grid-template-columns: repeat(1, 1fr 1.5fr);
+    }
+    @include media-breakpoint-up(xl) {
+        grid-column-gap: 120px;
+    }
+}
+
+.impact__item {
+    @extend .fs-18,
+    .font-manrope-regular;
+}
+
+.impact__heading {
+    @extend .mb-0,
+    .text-white,
+    .font-manrope-extrabold;
+    font-size: 40px;
+    @include media-breakpoint-up(lg) {
+        font-size: 60px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 80px;
+    }
+}
+
+.impact__line {
+    @extend .position-relative,
+    .bg-warning;
+    width: calc(100% - 20px);
+    height: 1px;
+    &:after,
+    &:before {
+        content: '';
+        @extend .position-absolute,
+        .bg-warning;
+    }
+    &:before {
+        right: -24px;
+        top: 10px;
+        height: 1px;
+        width: 28px;
+        transform: rotate(45deg);
+    }
+    &:after {
+        right: -30px;
+        top: 10px;
+        height: 1px;
+        width: 20px;
+        transform: rotate(90deg);
+    }
+}

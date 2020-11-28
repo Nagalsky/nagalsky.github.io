@@ -1,0 +1,52 @@
+/* SECTION */
+
+.section {
+    @extend .position-relative;
+    padding: 50px 0;
+    @include media-breakpoint-up(md) {
+        padding: 90px 0;
+    }
+    &-has-divider {
+        border-bottom: 1px solid $silver-soft;
+    }
+    &-skew {
+        padding-top: 50px;
+        transform: skew(0deg, 4deg);
+        z-index: 10;
+        margin-top: 60px;
+        @include media-breakpoint-up(md) {
+            margin-top: 160px;
+        }
+        &:before {
+            left: 0;
+            bottom: -1%;
+            height: 50%;
+            width: 100%;
+            background-color: $blue100;
+            content: '';
+            position: absolute;
+            transform: skewY(-4deg);
+            z-index: -1;
+        }
+        >.container {
+            @extend .position-relative;
+            z-index: 3;
+            transform: skewY(-4deg);
+        }
+        .img-floated {
+            transform: skewY(-4deg);
+            @extend .mx-auto,
+            .d-block;
+            width: 90%;
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                right: 25px;
+                top: -80px;
+                width: 45%;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 36%;
+            }
+        }
+    }
+}

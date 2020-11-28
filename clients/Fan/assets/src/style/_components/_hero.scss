@@ -1,0 +1,24 @@
+/* HERO */
+
+.hero {
+    @extend .position-relative,
+    .bg-black100,
+    .text-white;
+    background-repeat: no-repeat;
+    background-image: url('../../img/bg/hero-bg.png');
+    background-position: right center;
+    background-size: contain;
+    padding: 20px 0 100px 0;
+    @include media-breakpoint-up(lg) {
+        padding: 245px 0 215px 0;
+    }
+    @include media-breakpoint-down(sm) {
+        background-position: right bottom;
+    }
+}
+
+.hero__heading {
+    @extend .font-bwdarius-bold,
+    .text-white;
+    line-height: 1.5;
+}

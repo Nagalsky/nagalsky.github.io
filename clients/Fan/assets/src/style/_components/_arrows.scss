@@ -1,0 +1,51 @@
+/* ARROWS */
+
+$arrow-size: 40px;
+.arrows {
+    @extend .d-flex;
+}
+
+.arrow {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .rounded-circle,
+    .font-icons;
+    width: $arrow-size;
+    height: $arrow-size;
+    border-width: 1px;
+    border-style: solid;
+    &:first-child {
+        @extend .icon-arrow-left;
+    }
+    &:last-child {
+        @extend .icon-arrow-right;
+    }
+    &+.arrow {
+        margin-left: 14px;
+    }
+    &--black {
+        border-color: $black50;
+        background-color: $black50;
+        color: $white;
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-white,
+            .bg-black;
+            border-color: $black;
+        }
+    }
+    &--white {
+        border-color: $white;
+        background-color: transparent;
+        color: $white;
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-black,
+            .bg-white;
+            border-color: $white;
+        }
+    }
+}
