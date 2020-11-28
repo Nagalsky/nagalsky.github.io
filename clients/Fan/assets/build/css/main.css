@@ -5255,7 +5255,7 @@ button.bg-dark:focus {
   clear: both;
   content: ""; }
 
-.d-none {
+.d-none, .box-card__inner {
   display: none !important; }
 
 .d-inline {
@@ -5276,7 +5276,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .footer__nav, .footer__social-list, .footer__social-list-item, .arrows, .arrow, .fundraise-cards-gallery-holder .swiper-wrapper, .fundraise-cards-gallery-holder .swiper-slide, .fundraise-card, .fundraise-card__body, .tabs, .work-box__icon-box {
+.d-flex, .footer__nav, .footer__social-list, .footer__social-list-item, .arrows, .arrow, .fundraise-cards-gallery-holder .swiper-wrapper, .fundraise-cards-gallery-holder .swiper-slide, .fundraise-card, .fundraise-card__body, .tabs, .work-box__icon-box, .gallery-box-cards .swiper-wrapper, .gallery-box-cards .swiper-slide, .box-card {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5433,7 +5433,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .fundraise-card, .fundraise-card__body {
+.flex-column, .fundraise-card, .fundraise-card__body, .box-card {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5954,16 +5954,16 @@ button.bg-dark:focus {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .fundraise-card, .fundraise-card__header {
+.overflow-hidden, .fundraise-card, .fundraise-card__header, .box-card {
   overflow: hidden !important; }
 
 .position-static {
   position: static !important; }
 
-.position-relative, .section, .section-skew > .container, .hero, .fundraise-card__header, .fundraise-card__body, .heading-with-divider, .work-box, .impact__line {
+.position-relative, .section, .section-skew > .container, .hero, .arrows, .fundraise-card__header, .fundraise-card__body, .heading-with-divider, .work-box, .impact__line, .box-card {
   position: relative !important; }
 
-.position-absolute, .impact__line:after, .impact__line:before {
+.position-absolute, .section--box-cards:before, .impact__line:after, .impact__line:before {
   position: absolute !important; }
 
 .position-fixed {
@@ -6034,7 +6034,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .fundraise-card__header__img, .work-box__icon {
+.w-100, .section--box-cards:before, .fundraise-card__header__img, .work-box__icon, .box-card, .box-card__img {
   width: 100% !important; }
 
 .w-auto {
@@ -6049,10 +6049,10 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .fundraise-card__header__img {
+.h-100, .fundraise-card__header__img, .box-card__inner {
   height: 100% !important; }
 
-.h-auto {
+.h-auto, .gallery-box-cards .swiper-slide {
   height: auto !important; }
 
 .mw-100 {
@@ -6084,7 +6084,7 @@ button.bg-dark:focus {
   content: "";
   background-color: rgba(0, 0, 0, 0); }
 
-.m-0 {
+.m-0, .box-card__heading {
   margin: 0 !important; }
 
 .mt-0,
@@ -6412,7 +6412,7 @@ button.bg-dark:focus {
 .m-auto {
   margin: auto !important; }
 
-.mt-auto,
+.mt-auto, .box-card__img,
 .my-auto {
   margin-top: auto !important; }
 
@@ -6779,7 +6779,7 @@ button.bg-dark:focus {
   .pr-md-0,
   .px-md-0 {
     padding-right: 0 !important; }
-  .pb-md-0,
+  .pb-md-0, .section--box-cards,
   .py-md-0 {
     padding-bottom: 0 !important; }
   .pl-md-0,
@@ -7533,7 +7533,7 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .navbar-nav .nav-item .nav-link, .footer__nav-item, .footer__social-list-item, .btn-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .hero, .hero__heading, .arrow--black:hover, .arrow--black:focus, .arrow--black:active, .impact__heading {
+.text-white, .navbar-nav .nav-item .nav-link, .footer__nav-item, .footer__social-list-item, .btn-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .hero, .hero__heading, .arrow--black:hover, .arrow--black:focus, .arrow--black:active, .arrow--outline-black:hover, .arrow--outline-black:focus, .arrow--outline-black:active, .impact__heading, .box-card__inner, .box-card__heading {
   color: #fff !important; }
 
 .text-primary {
@@ -8278,7 +8278,7 @@ button.swiper-pagination-bullet {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .navbar-nav .nav-item .nav-link, .footer__nav-item, .footer__social-list-item, .btn-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .hero, .hero__heading, .arrow--black:hover, .arrow--black:focus, .arrow--black:active, .impact__heading {
+.text-white, .navbar-nav .nav-item .nav-link, .footer__nav-item, .footer__social-list-item, .btn-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .hero, .hero__heading, .arrow--black:hover, .arrow--black:focus, .arrow--black:active, .arrow--outline-black:hover, .arrow--outline-black:focus, .arrow--outline-black:active, .impact__heading, .box-card__inner, .box-card__heading {
   color: #ffffff !important; }
 
 .text-black, .arrow--white:hover, .arrow--white:focus, .arrow--white:active, .fundraise-card__heading {
@@ -8326,10 +8326,10 @@ button.swiper-pagination-bullet {
 .bg-white, .arrow--white:hover, .arrow--white:focus, .arrow--white:active {
   background-color: #ffffff !important; }
 
-.bg-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .arrow--black:hover, .arrow--black:focus, .arrow--black:active {
+.bg-black, .btn-black:hover, .btn-black:focus, .btn-black:active, .arrow--black:hover, .arrow--black:focus, .arrow--black:active, .arrow--outline-black:hover, .arrow--outline-black:focus, .arrow--outline-black:active {
   background-color: #000000 !important; }
 
-.bg-black50, .footer, .work-box__icon-box {
+.bg-black50, .footer, .section--box-cards:before, .work-box__icon-box {
   background-color: #0e171f !important; }
 
 .bg-black100, .hero {
@@ -8386,7 +8386,7 @@ button.swiper-pagination-bullet {
 .font-bergentext-regular, .navbar-nav .nav-item .nav-link, .tab, .work-box__heading {
   font-family: "BergenText-Regular" !important; }
 
-.font-bergentext-semibold, .tab.active {
+.font-bergentext-semibold, .tab.active, .box-card__heading {
   font-family: "BergenText-SemiBold" !important; }
 
 .font-bergentext-bold {
@@ -8404,7 +8404,7 @@ button.swiper-pagination-bullet {
 .font-lato-medium {
   font-family: "Lato-Medium" !important; }
 
-.font-circular-std-book {
+.font-circular-std-book, .box-card__inner {
   font-family: "Circular-Std-Book" !important; }
 
 .font-bwdarius-bold, .hero__heading {
@@ -8955,6 +8955,19 @@ ul {
       @media (min-width: 1200px) {
         .section-skew .img-floated {
           width: 36%; } }
+  .section--box-cards {
+    z-index: 10; }
+    @media (min-width: 768px) {
+      .section--box-cards {
+        padding-top: 140px; } }
+    .section--box-cards:before {
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      z-index: -1; }
+      @media (min-width: 768px) {
+        .section--box-cards:before {
+          content: ''; } }
 
 /* CARD */
 /* DROPDOWN */
@@ -8978,6 +8991,9 @@ ul {
   line-height: 1.5; }
 
 /* ARROWS */
+.arrows {
+  z-index: 25; }
+
 .arrow {
   width: 40px;
   height: 40px;
@@ -8997,6 +9013,12 @@ ul {
     color: #ffffff; }
     .arrow--white:hover, .arrow--white:focus, .arrow--white:active {
       border-color: #ffffff; }
+  .arrow--outline-black {
+    border-color: #000000;
+    background-color: #ffffff;
+    color: #000000; }
+    .arrow--outline-black:hover, .arrow--outline-black:focus, .arrow--outline-black:active {
+      border-color: #000000; }
 
 /* Fundraise Card */
 .fundraise-cards-gallery-holder {
@@ -9216,3 +9238,65 @@ ul {
     width: 20px;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
+
+/* BOX CARD */
+@media (min-width: 1400px) {
+  .gallery-box-cards {
+    margin-top: -80px; } }
+
+@media (min-width: 992px) {
+  .gallery-box-cards .swiper-slide-next .box-card__inner {
+    display: block !important; }
+  .gallery-box-cards .swiper-slide-next .box-card__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover; } }
+
+@media (max-width: 991.98px) {
+  .gallery-box-cards .swiper-slide-active .box-card__inner {
+    display: -webkit-box !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center; }
+  .gallery-box-cards .swiper-slide-active .box-card__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover; } }
+
+.box-card {
+  border-radius: 10px; }
+
+.box-card__inner {
+  padding: 30px 15px;
+  background-color: rgba(0, 0, 0, 0.6); }
+  @media (min-width: 768px) {
+    .box-card__inner {
+      padding: 185px 45px 55px 45px; } }
+  @media (min-width: 992px) {
+    .box-card__inner {
+      font-size: 17px; } }
+
+.box-card__img {
+  border-radius: 10px; }
+
+.box-card__heading {
+  font-size: 28px; }
+  @media (min-width: 768px) {
+    .box-card__heading {
+      font-size: 38px; } }
+  @media (min-width: 992px) {
+    .box-card__heading {
+      font-size: 50px; } }

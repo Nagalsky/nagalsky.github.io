@@ -1,0 +1,91 @@
+/* BOX CARD */
+
+.gallery-box-cards {
+    @media (min-width: 1400px) {
+        margin-top: -80px;
+    }
+    .swiper-wrapper {
+        @extend .d-flex;
+    }
+    .swiper-slide {
+        @extend .h-auto,
+        .d-flex;
+        &-next {
+            @include media-breakpoint-up(lg) {
+                .box-card__inner {
+                    display: block !important;
+                }
+                .box-card__img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-active {
+            @include media-breakpoint-down(md) {
+                .box-card__inner {
+                    display: flex !important;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .box-card__img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.box-card {
+    @extend .position-relative,
+    .overflow-hidden,
+    .d-flex,
+    .flex-column,
+    .w-100;
+    border-radius: 10px;
+}
+
+.box-card__inner {
+    @extend .d-none,
+    .h-100,
+    .text-white,
+    .font-circular-std-book;
+    padding: 30px 15px;
+    background-color: rgba($black, .6);
+    @include media-breakpoint-up(md) {
+        padding: 185px 45px 55px 45px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 17px;
+    }
+}
+
+.box-card__img {
+    @extend .w-100,
+    .mt-auto;
+    border-radius: 10px;
+}
+
+.box-card__heading {
+    @extend .font-bergentext-semibold,
+    .text-white,
+    .m-0;
+    font-size: 28px;
+    @include media-breakpoint-up(md) {
+        font-size: 38px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 50px;
+    }
+}
