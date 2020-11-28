@@ -18492,6 +18492,8 @@ var galleryThumbs = new Swiper('.gallery-box-cards-thumbs', {
     loopedSlides: 5, //looped slides should be the same
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    allowTouchMove: false,
+    noSwiping: true,
 });
 var galleryTop = new Swiper('.gallery-box-cards', {
     spaceBetween: 10,
