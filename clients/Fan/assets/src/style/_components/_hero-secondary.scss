@@ -1,0 +1,74 @@
+/* HERO */
+
+.hero-secondary {
+    @extend .position-relative,
+    .text-white,
+    .has-bg;
+    z-index: 10;
+    background-image: url('../img/bg/hero-secondary-bg.jpg');
+    padding: 60px 0;
+    @include media-breakpoint-up(lg) {
+        padding: 245px 0 80px 0;
+    }
+    &:before {
+        @extend .position-absolute,
+        .w-100,
+        .h-100;
+        content: '';
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: rgba($black100, .97);
+    }
+}
+
+.hero-secondary__heading {
+    @extend .font-bwdarius-bold,
+    .text-white;
+    line-height: 1.5;
+}
+
+.hero-secondary__form {
+    .form-group {
+        @extend .m-0,
+        .position-relative,
+        .d-flex;
+    }
+    .form-control {
+        @extend .rounded-0,
+        .border-0,
+        .flex-fill;
+        height: 60px;
+        font-size: 16px;
+        padding-left: 53px;
+        @include custom-placeholder($color: #8c97ac, $font-size: 16px, $font-family: $font-manrope-regular);
+        @include media-breakpoint-up(md) {
+            @include custom-placeholder($color: #8c97ac, $font-size: 18px, $font-family: $font-manrope-regular);
+            padding-left: 88px;
+            font-size: 18px;
+            height: 107px;
+        }
+    }
+    .btn-submit {
+        @extend .flex-shrink-0,
+        .font-manrope-medium,
+        .rounded-0,
+        .px-md-5;
+        font-size: 16px;
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 20px;
+        }
+    }
+    .form-icon {
+        @extend .position-absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+        @include media-breakpoint-up(md) {
+            left: 40px;
+        }
+    }
+}
