@@ -9,6 +9,26 @@ body {
     line-height: $body-line-height;
 }
 
+html {
+    @extend .d-flex;
+}
+
+body {
+    min-height: 100vh;
+    @extend .w-100,
+    .d-flex,
+    .flex-column;
+}
+
+.navbar,
+.footer {
+    @extend .flex-shrink-0
+}
+
+.main {
+    flex-grow: 1;
+}
+
 h1,
 h2,
 h3,
