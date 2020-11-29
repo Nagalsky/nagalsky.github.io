@@ -1,0 +1,30 @@
+/* checkobox-panel */
+
+.checkbox-panel {
+    @extend .d-inline-block;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    input {
+        @extend .d-none,
+        .invisible,
+        .position-absolute;
+        &:checked {
+            &~.checkbox-panel__label {
+                border-color: $green50;
+                @extend .bg-green50,
+                .text-white;
+            }
+        }
+    }
+}
+
+.checkbox-panel__label {
+    cursor: pointer;
+    @extend .fs-13,
+    .text-muted,
+    .font-circular-std-book,
+    .radius-base,
+    .d-block;
+    padding: 9.5px 17px;
+    border: 1px solid #dde0e5;
+}

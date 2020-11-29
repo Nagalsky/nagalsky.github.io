@@ -7,6 +7,9 @@
 // Import Swiper
 //= ../../../node_modules/swiper/swiper-bundle.min.js
 
+// Import Rangeslider
+//= ../../../node_modules/rangeslider.js/dist/rangeslider.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js

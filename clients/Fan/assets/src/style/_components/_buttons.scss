@@ -16,6 +16,15 @@
     &-fb {
         @include button-variants($bg: #395ba9, $color: $white);
     }
+    &-muted {
+        @extend .text-muted;
+        background-color: #dde0e5;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: darken(#dde0e5, 10%);
+        }
+    }
     &-outline-white {
         border-color: $white;
         color: $white;

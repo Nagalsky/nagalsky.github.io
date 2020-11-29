@@ -7,7 +7,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/main.min.css">
-    <title>Dashboard page</title>
+    <title>Start your campaign page</title>
 </head>
 
 <body>
@@ -64,161 +64,123 @@
     </nav>
 
     <main class="main">
-        <section class="nav-box">
-            <div class="container">
-                <nav class="nav-box__nav">
-                    <a href="#" class="nav-box__link active">Dashboard</a>
-                    <a href="#" class="nav-box__link">My Campaigns</a>
-                    <a href="#" class="nav-box__link">Contributors</a>
-                    <a href="#" class="nav-box__link">Profile</a>
-                </nav>
-            </div>
-        </section>
         <section class="section section--sm">
             <div class="container">
-                <nav aria-label="breadcrumb" class="mb-4">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                    </ol>
-                </nav>
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-4 mb-md-5">
+                    <nav aria-label="breadcrumb" class="mb-4 mb-md-0">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">My Campaigns</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Create Campaign</li>
+                        </ol>
+                    </nav>
 
-                <h1 class="h4 text-green700 mb-5">Hello, Jenny Oada</h1>
-                <a href="#" class="btn btn-outline-black mb-4">Create a campaign</a>
-
-                <div class="campaigns-stats">
-                    <div class="campaigns-stats__item">
-                        <span class="campaigns-stats__indicator"></span>
-                        <div class="campaigns-stats__body">
-                            <h3 class="campaigns-stats__heading">30,200 Kr</h3>
-                            <p>Total funds raised</p>
-                        </div>
-                    </div>
-
-                    <div class="campaigns-stats__item">
-                        <span class="campaigns-stats__indicator"></span>
-                        <div class="campaigns-stats__body">
-                            <h3 class="campaigns-stats__heading">180</h3>
-                            <p>Backers</p>
-                        </div>
-                    </div>
-
-                    <div class="campaigns-stats__item">
-                        <span class="campaigns-stats__indicator"></span>
-                        <div class="campaigns-stats__body">
-                            <h3 class="campaigns-stats__heading">2</h3>
-                            <p>Campaigns Created</p>
-                        </div>
+                    <div class="d-flex flex-column flex-sm-row">
+                        <a href="#" class="btn btn-outline-black mb-4 mb-sm-0 mr-sm-4">Save Campaign</a>
+                        <a href="#" class="btn btn-muted">Review and Launch</a>
                     </div>
                 </div>
 
-                <h4 class="text-muted200 font-bergentext-semibold">Recent Activities</h4>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-10">
+                        <h1 class="h3 text-green700">Let’s get ready to start your campaign!</h1>
+                        <p class="fs-18 text-muted font-circular-std-book mb-5">We want to create the best onboarding for you – please fill out the information below. Your answers will be locked for this campaign and can’t be changed later.</p>
 
-                <div class="card card-table bg-silver border-0">
-                    <div class="table-responsive">
-                        <table class="table table-campaigns mb-0">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="table-avatar">
-                                            <img src="img/elements/navbar-avatar.jpg" alt="" class="table-avatar__img">
-                                            <div class="table-avatar__name">Joseph Newman</div>
+                        <form action="">
+                            <p class="fs-16 text-muted font-circular-std-medium">Who are you raising funds for?</p>
+
+                            <div class="mb-4 mb-md-5">
+                                <div class="radio radio--inline">
+                                    <input id="radio-1-1" type="radio" name="radios">
+                                    <label class="radio__label" for="radio-1-1">Myself / Individual</label>
+                                </div>
+
+                                <div class="radio radio--inline">
+                                    <input id="radio-1-2" type="radio" name="radios">
+                                    <label class="radio__label" for="radio-1-2">An organisation / Non Profit</label>
+                                </div>
+                            </div>
+
+                            <p class="fs-16 text-muted font-circular-std-medium">What product do you want to buy with the funds?</p>
+
+                            <div class="mb-4">
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-1" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-1">Footballs</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-2" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-2">T-Shirts</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-3" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-3">Team Jerseys</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-4" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-4">Football Pitch</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-5" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-5">Training Jerseys</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-6" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-6">Soccer boots</label>
+                                </div>
+                                <div class="checkbox-panel">
+                                    <input id="checkbox-1-7" type="checkbox">
+                                    <label class="checkbox-panel__label" for="checkbox-1-7">Others</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4 mb-md-5">
+                                <label for="field-describe" class="fs-18 font-circular-std-book text-silver500">Describe what you want to buy here</label>
+                                <input type="text" class="form-control" id="field-describe" placeholder="Product description">
+                            </div>
+
+                            <div class="form-group">
+                                <p class="fs-16 text-muted font-circular-std-medium">How much do you want to raise?</p>
+
+                                <div class="range-slider-holder">
+                                    <div class="range-slider__value">
+                                        <output>0</output><span>Kr</span>
+                                    </div>
+
+                                    <input type="range" min="10" max="1000" step="10" value="300">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="field-amount" class="fs-18 font-circular-std-book text-silver500">Amount</label>
+                                            <input type="text" class="form-control" id="field-amount">
                                         </div>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CAMPAIGN TITLE</p>
-                                        <p class="fs-16 font-montserrat-medium text-muted200">Træner-kursus til frivillige</p>
-                                    </td>
-                                    <td>
-                                        <p><i class="icon-calendar text-green700 fs-12 text-muted200 font-manrope-medium mr-3"></i> November 16, 2019</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CAMPAIGN TITLE</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">1,000 Kr</p>
-                                    </td>
-                                </tr>
+                                    </div>
 
-                                <tr>
-                                    <td>
-                                        <div class="table-avatar">
-                                            <img src="img/elements/navbar-avatar.jpg" alt="" class="table-avatar__img">
-                                            <div class="table-avatar__name">Isobel Graham</div>
+                                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="field-backers" class="fs-18 font-circular-std-book text-silver500">No of backers</label>
+                                            <input type="text" class="form-control" id="field-backers">
                                         </div>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CAMPAIGN TITLE</p>
-                                        <p class="fs-16 font-montserrat-medium text-muted200">Investering i forbedret græsplane</p>
-                                    </td>
-                                    <td>
-                                        <p><i class="icon-calendar text-green700 fs-12 text-muted200 font-manrope-medium mr-3"></i> November 16, 2019</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CAMPAIGN TITLE</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">500 Kr</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-sm-center flex-column flex-sm-row justify-content-sm-between mb-4">
-                    <h4 class="text-muted200 font-bergentext-semibold mb-sm-0">On-going Campaign</h4>
-                    <a href="#" class="text-black50 font-bergentext-regular d-inline-flex align-items-center">View all campaign <i class="icon-left-arrow ml-2"></i></a>
-                </div>
-
-                <div class="card bg-silver border-0">
-                    <div class="table-responsive">
-                        <table class="table table-campaigns mb-0">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="table-media">
-                                            <img src="img/temp/card-img-1.png" alt="" class="table-media__img">
-                                            <div class="table-media__title">Træner-kursus til frivillige</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CREATED ON</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">12</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">GOAL</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">5,000 Kr</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">GOAL</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">2,454 Kr</p>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="table-media">
-                                            <img src="img/temp/card-img-1.png" alt="" class="table-media__img">
-                                            <div class="table-media__title">Investering i forbedret græsplane</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">CREATED ON</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">12</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">GOAL</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">5,000 Kr</p>
-                                    </td>
-                                    <td>
-                                        <p class="table__heading">GOAL</p>
-                                        <p class="fs-16 text-muted200 font-bergentext-semibold">2,454 Kr</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer-campaign">
+        <div class="container">
+            <div class="d-flex">
+                <a href="#" class="btn btn-outline-black mr-4 px-4 px-md-5">Back</a>
+                <a href="#" class="btn btn-black px-4 px-md-5">Continue</a>
+            </div>
+        </div>
+    </footer>
 
     <div></div>
 
