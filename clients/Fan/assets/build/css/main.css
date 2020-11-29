@@ -6022,7 +6022,7 @@ button.bg-dark:focus {
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
-.shadow-none, .comment__form textarea {
+.shadow-none, .form-control, .comment__form textarea {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6034,7 +6034,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .btn-icon, .section--box-cards:before, .fundraise-card__header__img, .work-box__icon, .box-card, .box-card__img, .hero-secondary:before, .campaigns .fundraise-card, .comments__no-comments__icon {
+.w-100, .btn-icon, .section--box-cards:before, .fundraise-card__header__img, .work-box__icon, .box-card, .box-card__img, .hero-secondary:before, .campaigns .fundraise-card, .comments__no-comments__icon, .form-box {
   width: 100% !important; }
 
 .w-auto {
@@ -6422,7 +6422,8 @@ button.bg-dark:focus {
 .mx-auto,
 .footer__logo,
 .section-skew .img-floated,
-.tab-box {
+.tab-box,
+.form-box {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -6433,7 +6434,8 @@ button.bg-dark:focus {
 .mx-auto,
 .footer__logo,
 .section-skew .img-floated,
-.tab-box {
+.tab-box,
+.form-box {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -7572,10 +7574,10 @@ a.text-info:hover, a.text-info:focus {
 a.text-warning:hover, .navbar-nav .nav-item a.nav-link:hover, a.navbar-toggler:hover, a.footer__nav-item:hover, a.text-warning:focus, .navbar-nav .nav-item a.nav-link:focus, a.navbar-toggler:focus, a.footer__nav-item:focus {
   color: #ba8b00 !important; }
 
-.text-danger {
+.text-danger, .invalid-feedback {
   color: #dc3545 !important; }
 
-a.text-danger:hover, a.text-danger:focus {
+a.text-danger:hover, a.invalid-feedback:hover, a.text-danger:focus, a.invalid-feedback:focus {
   color: #a71d2a !important; }
 
 .text-light {
@@ -7593,7 +7595,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-body {
   color: #212529 !important; }
 
-.text-muted, .btn.disabled, .btn:disabled, .stat, .share__link {
+.text-muted, label, .btn.disabled, .btn:disabled, .stat, .share__link {
   color: #6c757d !important; }
 
 .text-black-50 {
@@ -8290,7 +8292,7 @@ button.swiper-pagination-bullet {
 .text-black, .arrow--white:hover, .arrow--white:focus, .arrow--white:active, .fundraise-card__heading {
   color: #000000 !important; }
 
-.text-black50, .tab.active, .stat__heading, .share__title, .avatar-group__title, .comment__form textarea {
+.text-black50, .form-control, .tab.active, .stat__heading, .share__title, .avatar-group__title, .comment__form textarea {
   color: #0e171f !important; }
 
 .text-black100 {
@@ -8323,7 +8325,7 @@ button.swiper-pagination-bullet {
 .text-silver-soft {
   color: #e2e4e8 !important; }
 
-.text-muted, .btn.disabled, .btn:disabled, .stat, .share__link {
+.text-muted, label, .btn.disabled, .btn:disabled, .stat, .share__link {
   color: #5c6278 !important; }
 
 .text-blue {
@@ -8338,8 +8340,11 @@ button.swiper-pagination-bullet {
 .text-blue-soft, .tab, .comments, .comment__name {
   color: #222831 !important; }
 
-.text-danger {
+.text-danger, .invalid-feedback {
   color: #cb2e2d !important; }
+
+.text-danger100 {
+  color: #cf0100 !important; }
 
 .bg-white, .arrow--white:hover, .arrow--white:focus, .arrow--white:active {
   background-color: #ffffff !important; }
@@ -8398,10 +8403,13 @@ button.swiper-pagination-bullet {
 .bg-danger {
   background-color: #cb2e2d !important; }
 
+.bg-danger100 {
+  background-color: #cf0100 !important; }
+
 /*************************
 	Fonts variables
 *************************/
-.font-manrope-regular, .footer__nav-item, .impact__item, .comments {
+.font-manrope-regular, .footer__nav-item, .invalid-feedback, .impact__item, .comments {
   font-family: "Manrope-Regular" !important; }
 
 .font-manrope-medium, .hero-secondary__form .btn-submit {
@@ -8437,8 +8445,11 @@ button.swiper-pagination-bullet {
 .font-lato-medium {
   font-family: "Lato-Medium" !important; }
 
-.font-circular-std-book, .box-card__inner {
+.font-circular-std-book, .form-control, label, .box-card__inner {
   font-family: "Circular-Std-Book" !important; }
+
+.font-circular-std-black {
+  font-family: "Circular-Std-Black" !important; }
 
 .font-bwdarius-bold, .hero__heading, .hero-secondary__heading {
   font-family: "BwDarius-Bold" !important; }
@@ -8464,7 +8475,7 @@ button.swiper-pagination-bullet {
 /*************************
 	Radius variables
 *************************/
-.radius-base {
+.radius-base, .form-box {
   border-radius: 5px !important; }
 
 .radius-md {
@@ -8641,7 +8652,7 @@ p {
 .fs-12 {
   font-size: 12px !important; }
 
-.fs-13 {
+.fs-13, .invalid-feedback {
   font-size: 13px !important; }
 
 .fs-14 {
@@ -8656,7 +8667,7 @@ p {
 .fs-17 {
   font-size: 17px !important; }
 
-.fs-18, .navbar-nav .nav-item .nav-link, .impact__item, .share__title, .share__link, .comments, .comment__name {
+.fs-18, .navbar-nav .nav-item .nav-link, .form-control, label, .impact__item, .share__title, .share__link, .comments, .comment__name {
   font-size: 18px !important; }
 
 .fs-19 {
@@ -8893,10 +8904,39 @@ ul {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Circular-Std-Black';
+  src: url("../fonts/CircularStd/CircularStd-Black.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
 /* FORMS */
 .form-control {
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+  height: 60px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-color: #ececf4; }
+  .form-control:-moz-placeholder {
+    color: #dde0e5;
+    font-size: 18px;
+    font-family: "Circular-Std-Book"; }
+  .form-control::-moz-placeholder {
+    color: #dde0e5;
+    font-size: 18px;
+    font-family: "Circular-Std-Book"; }
+  .form-control:-ms-input-placeholder {
+    color: #dde0e5;
+    font-size: 18px;
+    font-family: "Circular-Std-Book"; }
+  .form-control::-webkit-input-placeholder {
+    color: #dde0e5;
+    font-size: 18px;
+    font-family: "Circular-Std-Book"; }
+  .form-control:focus {
+    border-color: #ececf4; }
 
 /* BUTTONS */
 .btn {
@@ -8918,6 +8958,22 @@ ul {
     .btn-warning:hover, .btn-warning:active, .btn-warning:focus, .btn-warning.active {
       background: #e99b03 !important;
       border-color: #e99b03 !important;
+      color: #ffffff !important; }
+  .btn-danger {
+    background: #cf0100;
+    color: #ffffff;
+    border-color: #cf0100; }
+    .btn-danger:hover, .btn-danger:active, .btn-danger:focus, .btn-danger.active {
+      background: #9c0100 !important;
+      border-color: #9c0100 !important;
+      color: #ffffff !important; }
+  .btn-fb {
+    background: #395ba9;
+    color: #ffffff;
+    border-color: #395ba9; }
+    .btn-fb:hover, .btn-fb:active, .btn-fb:focus, .btn-fb.active {
+      background: #2c4683 !important;
+      border-color: #2c4683 !important;
       color: #ffffff !important; }
   .btn-outline-white {
     border-color: #ffffff;
@@ -9574,3 +9630,12 @@ ul {
     font-family: "Manrope-Regular"; }
   .comment__form textarea:focus {
     border-color: #0e171f; }
+
+/* FORM BOX */
+.form-box {
+  max-width: 500px;
+  background-color: #f8f8fa;
+  padding: 25px 15px; }
+  @media (min-width: 576px) {
+    .form-box {
+      padding: 40px 34px; } }
