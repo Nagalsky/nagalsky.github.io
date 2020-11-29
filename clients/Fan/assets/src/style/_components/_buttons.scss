@@ -48,4 +48,16 @@
             padding: 19.5px 44px;
         }
     }
+    &.disabled,
+    &:disabled {
+        @extend .text-muted;
+        background-color: #dde0e5 !important;
+        cursor: not-allowed;
+    }
+}
+
+.btn-icon {
+    @extend .w-100,
+    .d-inline-block;
+    max-width: 20px;
 }

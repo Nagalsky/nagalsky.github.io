@@ -75,3 +75,54 @@ var galleryTop = new Swiper('.gallery-box-cards', {
         swiper: galleryThumbs,
     },
 });
+
+
+
+var galleryThumbnailsBottom = new Swiper('.gallery-thumbnails-bottom', {
+    spaceBetween: 10,
+    slidesPerView: 6,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 8,
+        },
+    },
+});
+var galleryThumbnailsTop = new Swiper('.gallery-thumbnails-top', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+        nextEl: '.arrow--next',
+        prevEl: '.arrow--prev',
+    },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    grabCursor: true,
+    thumbs: {
+        swiper: galleryThumbnailsBottom,
+    },
+});
+
+$(document).ready(function() {
+    //Comments form
+    $(function() {
+        $('.comments__btn-submit').attr('disabled', true);
+
+        $('.comment__form textarea').on('keyup', function() {
+            var textarea_value = $(".comment__form textarea").val();
+
+            if (textarea_value != '') {
+                $('.comments__btn-submit').attr('disabled', false);
+            } else {
+                $('.comments__btn-submit').attr('disabled', true);
+            }
+        });
+    });
+});

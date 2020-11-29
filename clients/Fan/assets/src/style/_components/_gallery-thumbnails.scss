@@ -1,0 +1,32 @@
+/* gallery-thumbnails */
+
+.gallery-thumbnails-top {
+    margin-bottom: 10px;
+    .swiper-slide {
+        img {
+            border-radius: 10px;
+        }
+    }
+    .arrow {
+        @extend .position-absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        &--prev {
+            left: 1rem;
+        }
+        &--next {
+            right: 1rem;
+        }
+    }
+}
+
+.gallery-thumbnails-bottom {
+    .swiper-slide {
+        border-radius: 6px;
+        overflow: hidden;
+        &-thumb-active {
+            border: solid 2px $warning100;
+        }
+    }
+}

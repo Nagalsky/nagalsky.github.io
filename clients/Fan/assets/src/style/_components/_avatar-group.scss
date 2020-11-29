@@ -1,0 +1,44 @@
+/* AVATAR GROUP */
+
+$avatar-group-item-size: 40px;
+.avatar-group {
+    @extend .d-flex,
+    .flex-column,
+    .flex-sm-row,
+    .align-items-sm-center;
+}
+
+.avatar-group__items {
+    @extend .d-flex,
+    .flex-row-reverse,
+    .justify-content-end;
+}
+
+.avatar-group__item {
+    @extend .overflow-hidden,
+    .rounded-circle;
+    width: $avatar-group-item-size;
+    height: $avatar-group-item-size;
+    border: 1px solid $white;
+    &:not(:last-child) {
+        margin-left: -0.5rem;
+    }
+}
+
+.avatar-group__title {
+    @extend .flex-shrink-0,
+    .ml-sm-2,
+    .mt-sm-0,
+    .mt-2,
+    .font-montserrat-bold,
+    .text-black50;
+    font-size: 16px;
+    @include media-breakpoint-up(md) {
+        font-size: 20px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-warning100;
+    }
+}

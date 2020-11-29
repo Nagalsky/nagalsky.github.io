@@ -1,0 +1,33 @@
+/* STATS */
+
+.stats {
+    @extend .d-flex;
+}
+
+.stat {
+    @extend .text-muted;
+    padding-right: 15px;
+    @include media-breakpoint-up(sm) {
+        padding-right: 30px;
+    }
+    &:not(:last-child) {
+        border-right: 1px solid $silver200;
+    }
+    &+.stat {
+        padding-left: 15px;
+        @include media-breakpoint-up(sm) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.stat__heading {
+    @extend .font-montserrat-bold,
+    .m-0,
+    .text-black50;
+    line-height: 1;
+    font-size: 32px;
+    @include media-breakpoint-up(sm) {
+        font-size: 40px;
+    }
+}

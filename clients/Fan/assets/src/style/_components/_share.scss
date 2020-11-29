@@ -1,0 +1,27 @@
+/* SHARE */
+
+.share {
+    @extend .d-flex,
+    .flex-wrap,
+    .align-items-center;
+}
+
+.share__title {
+    @extend .mr-3,
+    .fs-18,
+    .text-black50,
+    .font-bergentext-regular;
+}
+
+.share__link {
+    @extend .text-muted,
+    .fs-18;
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-warning100;
+    }
+    &+.share__link {
+        @extend .ml-2;
+    }
+}
