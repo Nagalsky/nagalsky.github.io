@@ -1,5 +1,6 @@
 /* NAVBAR */
 
+$nav-avatar-size: 34px;
 .navbar {
     background-color: rgba(29, 28, 30, 0.97);
     @include media-breakpoint-up(lg) {
@@ -30,11 +31,24 @@
 
 .navbar-nav {
     .nav-item {
+        &.dropdown {
+            &.show {
+                .nav-dropdown-toggle {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
         .nav-link {
             @extend .fs-18,
             .text-white,
             .font-bergentext-regular;
             @include media-breakpoint-up(lg) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            @include media-breakpoint-up(xl) {
                 padding-left: 20px;
                 padding-right: 20px;
             }
@@ -51,4 +65,24 @@
     @extend .border-0,
     .text-warning,
     .fs-24;
+}
+
+.nav-avatar {
+    @extend .rounded-circle,
+    .mr-2;
+    width: $nav-avatar-size;
+    height: $nav-avatar-size;
+}
+
+.nav-dropdown-toggle {
+    @extend .pr-4,
+    .py-lg-0;
+    &:after {
+        font-family: $font-icons;
+        @extend .fs-12,
+        .ml-3;
+        color: #939bb4;
+        @include transition($base-animation);
+        content: "\e902";
+    }
 }

@@ -1,1 +1,25 @@
 /* BREADCRUMB */
+
+.breadcrumb {
+    @extend .p-0,
+    .bg-transparent;
+}
+
+.breadcrumb-item {
+    @extend .fs-11,
+    .text-muted,
+    .font-bergentext-regular;
+    a {
+        @extend .text-muted;
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-warning100;
+        }
+    }
+    &+.breadcrumb-item {
+        &:before {
+            @extend .text-muted;
+        }
+    }
+}

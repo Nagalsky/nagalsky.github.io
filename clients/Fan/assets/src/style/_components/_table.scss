@@ -1,0 +1,69 @@
+/* TABLE */
+
+.table {
+    &-campaigns {
+        tbody {
+            >tr {
+                >th,
+                >td {
+                    border: none;
+                    vertical-align: middle;
+                    @include media-breakpoint-up(md) {
+                        padding: 20px 30px;
+                    }
+                }
+                &:not(:first-child) {
+                    >th,
+                    >td {
+                        border-top: 10px solid $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-avatar {
+    @extend .d-flex,
+    .align-items-center;
+}
+
+.table-avatar__img {
+    @extend .rounded-circle,
+    .mr-3;
+    width: 44px;
+    height: 44px;
+}
+
+.table-avatar__name {
+    @extend .flex-fill,
+    .fs-16,
+    .text-muted200,
+    .font-manrope-bold;
+}
+
+.table__heading {
+    @extend .text-uppercase,
+    .mb-1,
+    .fs-10,
+    .text-silver400,
+    .font-bergentext-regular;
+}
+
+.table-media {
+    @extend .d-flex,
+    .align-items-center;
+}
+
+.table-media__img {
+    @extend .radius-lg,
+    .mr-3;
+    width: 90px;
+}
+
+.table-media__title {
+    @extend .flex-fill,
+    .fs-16,
+    .text-muted200,
+    .font-montserrat-medium;
+}
