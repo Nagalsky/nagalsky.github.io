@@ -1,0 +1,49 @@
+/* upload-box */
+
+.upload-box {
+    @extend .mb-3;
+    width: 108px;
+}
+
+.uploaded-box {
+    @extend .position-relative,
+    .mb-3;
+    max-width: 220px;
+    &:hover,
+    &:focus,
+    &:active {
+        .uploaded-box__control {
+            opacity: 1;
+        }
+    }
+}
+
+.uploaded-box__img {
+    @extend .w-100;
+}
+
+.uploaded-box__control {
+    @include transition($base-animation);
+    @extend .position-absolute,
+    .w-100,
+    .h-100,
+    .d-flex,
+    .justify-content-end,
+    .align-items-start,
+    .p-3;
+    background-color: rgba($black50, .5);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    ;
+}
+
+.uploaded-box__btn-control {
+    @extend .btn,
+    .border-0,
+    .shadow-none,
+    .p-0;
+    &+.uploaded-box__btn-control {
+        @extend .ml-1;
+    }
+}
