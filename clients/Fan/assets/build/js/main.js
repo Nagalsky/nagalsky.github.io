@@ -18520,7 +18520,7 @@ var galleryTop = new Swiper('.gallery-box-cards', {
             slidesPerView: 2,
             spaceBetween: 20,
         },
-        767: {
+        991: {
             slidesPerView: 3,
             spaceBetween: 32,
         },
