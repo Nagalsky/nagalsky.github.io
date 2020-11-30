@@ -6033,7 +6033,7 @@ footer, .fundraise-card__logo, .heading-with-divider:after, .hero-secondary__for
 .position-relative, .nav-box__link, .section, .section-skew > .container, .hero, .arrows, .fundraise-card__header, .fundraise-card__body, .heading-with-divider, .work-box, .impact__line, .box-card, .hero-secondary, .hero-secondary__form .form-group, .radio__label, .uploaded-box {
   position: relative !important; }
 
-.position-absolute, .nav-box__link.active:after, .section--box-cards:before, .impact__line:after, .impact__line:before, .hero-secondary:before, .hero-secondary__form .form-icon, .gallery-thumbnails-top .arrow, .radio input, .radio__label:before, .radio__label:after, .checkbox-panel input, .uploaded-box__control {
+.position-absolute, .nav-box__link.active:after, .section--box-cards:before, .hero:after, .impact__line:after, .impact__line:before, .hero-secondary:before, .hero-secondary__form .form-icon, .gallery-thumbnails-top .arrow, .radio input, .radio__label:before, .radio__label:after, .checkbox-panel input, .uploaded-box__control {
   position: absolute !important; }
 
 .position-fixed {
@@ -6104,7 +6104,7 @@ footer, .fundraise-card__logo, .heading-with-divider:after, .hero-secondary__for
 .w-75 {
   width: 75% !important; }
 
-.w-100, .nav-box__link.active:after, body, .btn-icon, .section--box-cards:before, .fundraise-card__header__img, .work-box__icon, .box-card, .box-card__img, .hero-secondary:before, .campaigns .fundraise-card, .comments__no-comments__icon, .form-box, .campaigns-empty__icon, .uploaded-box__img, .uploaded-box__control {
+.w-100, .nav-box__link.active:after, body, .btn-icon, .section--box-cards:before, .hero:after, .fundraise-card__header__img, .work-box__icon, .box-card, .box-card__img, .hero-secondary:before, .campaigns .fundraise-card, .comments__no-comments__icon, .form-box, .campaigns-empty__icon, .uploaded-box__img, .uploaded-box__control {
   width: 100% !important; }
 
 .w-auto {
@@ -6119,7 +6119,7 @@ footer, .fundraise-card__logo, .heading-with-divider:after, .hero-secondary__for
 .h-75 {
   height: 75% !important; }
 
-.h-100, .fundraise-card__header__img, .box-card__inner, .hero-secondary:before, .uploaded-box__control {
+.h-100, .hero:after, .fundraise-card__header__img, .box-card__inner, .hero-secondary:before, .uploaded-box__control {
   height: 100% !important; }
 
 .h-auto, .gallery-box-cards .swiper-slide {
@@ -9385,13 +9385,20 @@ textarea.form-control {
 /* PANEL */
 /* HERO */
 .hero {
+  z-index: 10;
   padding: 20px 0 100px 0; }
-  @media (min-width: 768px) {
-    .hero {
-      background-repeat: no-repeat;
-      background-image: url("../img/bg/hero-bg.png");
-      background-position: right center;
-      background-size: contain; } }
+  .hero:after {
+    content: '';
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg/hero-bg.png");
+    background-position: right center;
+    background-size: contain;
+    z-index: -1; }
+    @media (max-width: 767.98px) {
+      .hero:after {
+        opacity: .2; } }
   @media (min-width: 992px) {
     .hero {
       padding: 245px 0 215px 0; } }
