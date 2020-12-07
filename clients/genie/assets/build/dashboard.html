@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Dashboard page</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="alert alert-warning d-flex align-items-center flex-wrap" role="alert">
+            <div class="text-uppercase mr-3 bold">
+                <i class="icon-warning mr-3"></i> IMPORTANT!
+            </div>
+            <span class="fs-12 text-blue"><b>3</b> Changes to Kindergarten</span>
+        </div>
+
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">
+                <img src="img/elements/logo.svg" alt="" class="w-100">
+            </a>
+        
+            <div class="d-flex align-items-center d-md-none ml-auto mr-3">
+                <button type="button" class="btn btn-icon position-relative mr-3">
+                    <span class="navbar-notification-counter">3</span>
+                    <i class="icon-notification"></i>
+                </button>
+        
+                <div class="dropdown">
+                    <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                        <div class="flex-fill">
+                            <p class="navbar-user__name">Sarah Fisher</p>
+                            <p class="navbar-user__role">Centre Maneger</p>
+                        </div>
+                    </button>
+        
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon-menu"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Daily view </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Weekly Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Staff overview </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admin settings </a>
+                    </li>
+                </ul>
+                <div class="d-none d-md-flex flex-column flex-md-row align-items-md-center">
+                    <button type="button" class="btn btn-icon position-relative mr-4">
+                        <span class="navbar-notification-counter">3</span>
+                        <i class="icon-notification"></i>
+                    </button>
+        
+                    <div class="dropdown">
+                        <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                            <div class="flex-fill">
+                                <p class="navbar-user__name">Sarah Fisher</p>
+                                <p class="navbar-user__role">Centre Maneger</p>
+                            </div>
+                        </button>
+        
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="row">
+                <div class="col-md-4 d-flex">
+                    <div class="box w-100">
+                        <h5 class="mb-1">Calendar</h5>
+                        <p class="fs-12 text-silver-soft">Choose a day to look at</p>
+
+                        <div class="calendar-panel" id="calendar-panel"></div>
+                    </div>
+                </div>
+                <div class="col-md-8 d-flex">
+                    <div class="box w-100">
+                        <div class="d-flex flex-column flex-lg-row mb-4">
+                            <div class="order-lg-1 mb-3 mb-lg-0">
+                                <button type="button" class="btn btn-secondary">Today</button>
+                            </div>
+
+                            <div class="order-lg-3 d-flex align-items-center jusityf-content-between mb-3 mb-lg-0">
+                                <div class="flex-fill mr-2">
+                                    <span class="fs-12 text-silver-soft">NQF : <span
+                                            class="fs-13 text-primary font-medium">4.6</span>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-shadow">Submit Day</button>
+                            </div>
+
+                            <div class="order-lg-2 flex-fill d-flex align-items-center justify-content-between mx-lg-4">
+                                <button type="button" class="btn-control flex-shrink-0">
+                                    <i class="fc-icon fc-icon-chevron-left"></i>
+                                </button>
+                                <h6 class="mb-0 mx-3">Monday 4th August 2020</h6>
+                                <button type="button" class="btn-control flex-shrink-0">
+                                    <i class="fc-icon fc-icon-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-sm-row align-item-center justify-content-between mb-3">
+                            <h5 class="mb-3 mb-sm-0">Monday Overview</h5>
+
+                            <div class="custom-control custom-switch d-flex align-items-center">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <label class="custom-control-label fs-12 text-silver-soft" for="customSwitch1">Turn on
+                                    family grouping</label>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table m-0">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                            Room name
+                                        </td>
+                                        <td scope="col">
+                                            Bookings <button type="button"
+                                                class="btn btn-white btn-sm btn-rounded btn-shadow ml-2">+
+                                                Add</button>
+                                        </td>
+                                        <td scope="col">
+                                            Allocated
+                                        </td>
+                                        <td scope="col">
+                                            Staff
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Junior Kindy</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                        <th>17</th>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="bordered">328.6</th>
+                                        <th class="bordered">12.0</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box has-bg" style="background-image: url('img/bg/process-box-bg.svg');">
+                <div class="d-flex mb-3 align-items-center justify-content-between">
+                    <div class="flex-fill d-flex align-items-center">
+                        <div class="icon-box icon-box--success mr-3">
+                            <i class="icon-process"></i>
+                        </div>
+                        <h5>Process</h5>
+                    </div>
+                    <h4 class="fs-32 m-0 flex-shrink-0 ml-4 font-black">64 <sup class="fs-15">%</sup></h4>
+                </div>
+
+                <div class="progress bg-success-secondary mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <img src="img/icons/info.svg" alt="" class="img-fluid flex-shrink-0 mr-2">
+                    <p class="fs-13">When you have completed a section, hit save to make sure your daily task is
+                        completed </p>
+                </div>
+            </div>
+
+            <div class="box pb-md-0">
+                <div class="day-calendar-grid">
+                    <div class="day-calendar-aside mb-4 md-md-0">
+                        <h5 class="mb-1">Choose a room </h5>
+                        <p class="fs-12 text-silver-soft">Choose a room to roster</p>
+
+                        <select class="selectpicker" data-style="btn-muted btn-block btn-md" data-width="100%">
+                            <option data-content="<span class='room-badge room-badge--sky'></span> Kindergarten">
+                                Kindergarten
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--success'></span> Kindergarten2">
+                                Kindergarten2
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--blue'></span> Kindergarten3">
+                                Kindergarten3
+                            </option>
+                            <option
+                                data-content="<span class='room-badge room-badge--success-soft'></span> Kindergarten4">
+                                Kindergarten4
+                            </option>
+                            <option
+                                data-content="<span class='room-badge room-badge--success-secondary'></span> Kindergarten5">
+                                Kindergarten5
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--rose'></span> Kindergarten6">
+                                Kindergarten6
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--warning'></span> Kindergarten7">
+                                Kindergarten7
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--pink'></span> Kindergarten8">
+                                Kindergarten8
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--orange'></span> Kindergarten9">
+                                Kindergarten9
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="day-calendar-body">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-4">
+                            <div class="flex-fill mb-3 mb-sm-0">
+                                <h5 class="mb-1">Staff allocation calendar</h5>
+                                <p class="fs-12 text-silver-soft">Plan your day</p>
+                            </div>
+
+                            <div class="flex-shrink-0 d-flex align-items-center justify-content-center">
+                                <div class="custom-control custom-switch d-flex align-items-center flex-fill mr-4">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                    <label class="custom-control-label fs-12 text-silver-soft"
+                                        for="customSwitch2">Automate the roster</label>
+                                </div>
+
+                                <button type="button" class="btn btn-primary btn-shadow flex-shrink-0">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/main.min.js"></script>
+
+    <script>
+        //Init fullcalendar
+        document.addEventListener("DOMContentLoaded", function () {
+            var calendarEl = document.getElementById("calendar-panel");
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                contentHeight: 220,
+                fixedWeekCount: false,
+                headerToolbar: {
+                    left: 'timeGridDay,dayGridWeek,dayGridMonth',
+                    center: 'prev,title,next',
+                    right: ''
+                },
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>
