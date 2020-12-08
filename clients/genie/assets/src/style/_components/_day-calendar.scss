@@ -18,11 +18,18 @@ $day-grid-width: 35px;
 
 .day-calendar-body {
     @extend .flex-fill,
-    .pb-4;
+    .pb-4,
+    .bg-white;
     min-width: 0;
+    border-radius: 0 0 $radius-base 0;
 
-    @include media-breakpoint-up(md) {
-        background-color: $white;
+    @include media-breakpoint-down(sm) {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 0 0 $radius-base $radius-base;
     }
 }
 
