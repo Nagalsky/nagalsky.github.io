@@ -18472,7 +18472,6 @@ $(document).ready(function(){
         //check selected items
         $("input.select-item").click(function () {
             var checked = this.checked;
-            console.log(checked);
             checkSelected();
         });
 
