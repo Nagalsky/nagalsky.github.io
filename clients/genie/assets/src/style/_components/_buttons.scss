@@ -34,6 +34,20 @@
         @include button-variants($bg: $blue-thin, $color: $primary);
     }
 
+    &-outline-primary {
+        @extend .bg-transparent,
+        .text-blue;
+        border-color: $sky;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .bg-sky,
+            .text-white;
+            border-color: $sky;
+        }
+    }
+
     &-rounded {
         border-radius: 10px;
     }

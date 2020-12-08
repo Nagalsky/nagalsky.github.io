@@ -5333,7 +5333,7 @@ button.bg-dark:focus {
 .bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
   background-color: #fff !important; }
 
-.bg-transparent, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
+.bg-transparent, .btn-outline-primary, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
 .calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today, .btn-control {
   background-color: transparent !important; }
 
@@ -5357,7 +5357,7 @@ button.bg-dark:focus {
 .calendar-panel .fc-scrollgrid-liquid thead tr td,
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .custom-switch .custom-control-label:before, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__event--add-event, .day-calendar__add-event, .staff-list__btn-add-member {
+.table > thead > tr td, .day-calendar__event--add-event, .day-calendar__add-event, .staff-list__btn-add-member, .modal-content {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5666,7 +5666,7 @@ button.bg-dark:focus {
   -webkit-box-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .navbar-notification-counter, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.justify-content-center, .navbar-notification-counter, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .modal-footer {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -6472,7 +6472,9 @@ button.bg-dark:focus {
   padding: 1.5rem !important; }
 
 .pt-4, .day-calendar,
-.py-4 {
+.py-4,
+.modal-body,
+.modal-footer {
   padding-top: 1.5rem !important; }
 
 .pr-4,
@@ -6482,7 +6484,9 @@ button.bg-dark:focus {
   padding-right: 1.5rem !important; }
 
 .pb-4, .day-calendar-body,
-.py-4 {
+.py-4,
+.modal-body,
+.modal-footer {
   padding-bottom: 1.5rem !important; }
 
 .pl-4,
@@ -7027,13 +7031,17 @@ button.bg-dark:focus {
   .py-md-4 {
     padding-top: 1.5rem !important; }
   .pr-md-4,
-  .px-md-4 {
+  .px-md-4,
+  .modal-body,
+  .modal-footer {
     padding-right: 1.5rem !important; }
   .pb-md-4,
   .py-md-4 {
     padding-bottom: 1.5rem !important; }
   .pl-md-4,
-  .px-md-4 {
+  .px-md-4,
+  .modal-body,
+  .modal-footer {
     padding-left: 1.5rem !important; }
   .p-md-5 {
     padding: 3rem !important; }
@@ -7729,7 +7737,7 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited {
+.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited {
   color: #fff !important; }
 
 .text-primary, .navbar-user__name,
@@ -9336,7 +9344,7 @@ a.text-dark:hover, a.text-dark:focus {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited {
+.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited {
   color: #ffffff !important; }
 
 .text-black, .staff-list__btn-add-member:hover, .staff-list__btn-add-member:focus, .staff-list__btn-add-member:active {
@@ -9370,7 +9378,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-muted {
   color: #c5d0de !important; }
 
-.text-blue, .day-calendar__event, .day-calendar__event-btn {
+.text-blue, .btn-outline-primary, .day-calendar__event, .day-calendar__event-btn {
   color: #182B54 !important; }
 
 .text-blue-thin {
@@ -9397,7 +9405,7 @@ a.text-dark:hover, a.text-dark:focus {
 .bg-black {
   background-color: #000000 !important; }
 
-.bg-sky, .navbar-nav > .nav-item > a.nav-link:before, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
+.bg-sky, .navbar-nav > .nav-item > a.nav-link:before, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
 .calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__event--add-event:after {
   background-color: #487EFB !important; }
 
@@ -10028,6 +10036,10 @@ ul {
       background: #dee8ff !important;
       border-color: #dee8ff !important;
       color: #556280 !important; }
+  .btn-outline-primary {
+    border-color: #487EFB; }
+    .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+      border-color: #487EFB; }
   .btn-rounded {
     border-radius: 10px; }
   .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn {
@@ -10149,7 +10161,8 @@ ul {
 
 .table > tbody > tr > th,
 .table > tbody > tr td {
-  border-color: rgba(85, 98, 128, 0.09); }
+  border-color: rgba(85, 98, 128, 0.09);
+  vertical-align: middle; }
 
 .table > tbody > tr > th {
   font-weight: normal; }
@@ -10334,3 +10347,18 @@ ul {
   margin-top: 10px; }
 
 /* MODAL */
+.modal-backdrop.show {
+  opacity: .54; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 640px; } }
+
+.modal-content {
+  border-radius: 10px; }
+
+.modal-footer {
+  border-top-color: rgba(85, 98, 128, 0.09);
+  background-color: #f3f7ff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
