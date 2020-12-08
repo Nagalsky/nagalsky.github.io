@@ -5330,7 +5330,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
   background-color: #fff !important; }
 
 .bg-transparent, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
@@ -9391,7 +9391,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-success-secondary {
   color: #E4F7ED !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -10058,9 +10058,10 @@ ul {
 /* BOX */
 .box {
   padding: 24px 16px; }
-  .box--gradient {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-6%, #ffffff), to(#f2f6ff));
-    background-image: linear-gradient(to bottom, #ffffff -6%, #f2f6ff); }
+  @media (min-width: 768px) {
+    .box--gradient {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-6%, #ffffff), to(#f2f6ff));
+      background-image: linear-gradient(to bottom, #ffffff -6%, #f2f6ff); } }
 
 /* CALENDAR PANEL */
 .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group,
@@ -10180,6 +10181,9 @@ ul {
 
 .day-calendar-body {
   min-width: 0; }
+  @media (min-width: 768px) {
+    .day-calendar-body {
+      background-color: #ffffff; } }
 
 .day-calendar {
   overflow-x: auto; }

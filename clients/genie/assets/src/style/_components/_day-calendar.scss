@@ -18,9 +18,12 @@ $day-grid-width: 35px;
 
 .day-calendar-body {
     @extend .flex-fill,
-    .bg-white,
     .pb-4;
     min-width: 0;
+
+    @include media-breakpoint-up(md) {
+        background-color: $white;
+    }
 }
 
 .day-calendar {
