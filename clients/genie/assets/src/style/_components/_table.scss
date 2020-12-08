@@ -68,3 +68,24 @@
         }
     }
 }
+
+
+.table-control-box {
+    @extend .flex-shrink-0,
+    .d-flex,
+    .flex-column,
+    .flex-sm-row;
+
+    @include media-breakpoint-up(lg) {
+
+        .form-control,
+        .bootstrap-select {
+            width: 150px !important;
+        }
+    }
+}
+
+.table-text-limit {
+    @extend .text-truncate;
+    max-width: 120px;
+}
