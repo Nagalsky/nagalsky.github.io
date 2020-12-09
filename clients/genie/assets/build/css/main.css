@@ -9367,6 +9367,199 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   float: none; }
 
+[data-simplebar] {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  align-content: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start; }
+
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit; }
+
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0; }
+
+.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch; }
+
+.simplebar-content-wrapper {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+
+.simplebar-content-wrapper::-webkit-scrollbar, .simplebar-hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0; }
+
+.simplebar-content:after, .simplebar-content:before {
+  content: ' ';
+  display: table; }
+
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none; }
+
+.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-box-flex: inherit;
+          flex-grow: inherit;
+  flex-shrink: 0;
+  flex-basis: 0; }
+
+.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1; }
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden; }
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+  pointer-events: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none; }
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all; }
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 10px; }
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: '';
+  background: #000;
+  border-radius: 7px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear; }
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: .5;
+  -webkit-transition: opacity 0s linear;
+  transition: opacity 0s linear; }
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px; }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px; }
+
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto; }
+
+[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0; }
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.simplebar-hide-scrollbar {
+  position: fixed;
+  left: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
@@ -10511,6 +10704,10 @@ ul {
   .calendar-grid-aside {
     width: 227px; } }
 
+@media (min-width: 768px) {
+  .calendar-grid-aside .staff-list {
+    padding-top: 64px; } }
+
 .calendar-grid-body {
   min-width: 0;
   border-radius: 0 0 10px 0; }
@@ -10605,7 +10802,7 @@ ul {
 .calendar-day__cell {
   z-index: 10;
   width: 153px;
-  height: 90px;
+  height: 95px;
   border-left: 1px solid rgba(85, 98, 128, 0.09); }
 
 .calendar-day__cell-grid {
@@ -10687,7 +10884,7 @@ ul {
 .calendar-week__cell {
   z-index: 10;
   width: 110px;
-  height: 95px;
+  height: 106px;
   border-left: 1px solid rgba(85, 98, 128, 0.09); }
 
 .calendar-week__cell-grid {
@@ -10759,6 +10956,9 @@ ul {
   overflow-x: auto;
   padding-top: 20px;
   border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+  @media (min-width: 768px) {
+    .calendar-month {
+      padding-top: 40px; } }
 
 .calendar-month__row:first-child .calendar-month__cell {
   height: 10px; }
@@ -10841,3 +11041,16 @@ ul {
   .calendar-month__event--warning {
     border-left-color: #efb843;
     background-color: rgba(239, 184, 67, 0.3); }
+
+/* SIMPLEBAR */
+.simplebar-track.simplebar-horizontal {
+  background-color: #e6edff;
+  border-radius: 4px;
+  height: 6px; }
+  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    height: 6px;
+    top: 0; }
+    .simplebar-track.simplebar-horizontal .simplebar-scrollbar.simplebar-visible:before {
+      opacity: 1; }
+    .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+      background-color: #bcc8e4; }
