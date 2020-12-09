@@ -80,3 +80,32 @@
         @extend .text-black;
     }
 }
+
+
+.staff-list__panel {
+    @extend .mb-3,
+    .radius-base,
+    .p-3;
+
+    &--pink {
+        background-color: #f2daf7;
+    }
+
+    &--danger {
+        background-color: $danger-secondary;
+    }
+
+    &--success {
+        background-color: $success-secondary;
+    }
+
+    &--warning {
+        background-color: #f7e6c1;
+    }
+}
+
+.staff-list__panel-name {
+    @extend .fs-13,
+    .font-medium,
+    .mb-2;
+}

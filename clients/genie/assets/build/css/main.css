@@ -5262,12 +5262,14 @@ a.close.disabled {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.bg-primary {
+.bg-primary, .switch-label:before {
   background-color: #007bff !important; }
 
-a.bg-primary:hover, a.bg-primary:focus,
+a.bg-primary:hover, a.switch-label:hover:before, a.bg-primary:focus, a.switch-label:focus:before,
 button.bg-primary:hover,
-button.bg-primary:focus {
+button.switch-label:hover:before,
+button.bg-primary:focus,
+button.switch-label:focus:before {
   background-color: #0062cc !important; }
 
 .bg-secondary {
@@ -5330,7 +5332,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label {
   background-color: #fff !important; }
 
 .bg-transparent, .btn-outline-primary, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
@@ -5424,7 +5426,7 @@ button.bg-dark:focus {
 .rounded-lg {
   border-radius: 0.3rem !important; }
 
-.rounded-circle, .navbar-user__avatar, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .room-badge {
+.rounded-circle, .navbar-user__avatar, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .room-badge, .switch-label:before {
   border-radius: 50% !important; }
 
 .rounded-pill {
@@ -5447,7 +5449,7 @@ button.bg-dark:focus {
 .d-inline-block {
   display: inline-block !important; }
 
-.d-block, .naviation-link {
+.d-block, .naviation-link, .calendar-tab, .calendar-week__cell-grid-time__item--heading {
   display: block !important; }
 
 .d-table {
@@ -5459,7 +5461,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .table-control-box, .icon-box, .day-calendar__body-row, .day-calendar__body-cell, .day-calendar__body__item__grid, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .naviation {
+.d-flex, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .table-control-box, .icon-box, .day-calendar__body-row, .day-calendar__body-cell, .day-calendar__body__item__grid, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .naviation, .switch-label, .calendar-tabs, .calendar-day__row, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__row, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__row, .calendar-month__cell-grid, .calendar-month__cell-grid-time {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5504,7 +5506,7 @@ button.bg-dark:focus {
     display: table-row !important; }
   .d-md-table-cell {
     display: table-cell !important; }
-  .d-md-flex, .day-calendar-grid {
+  .d-md-flex, .day-calendar-grid, .calendar-grid {
     display: -webkit-box !important;
     display: flex !important; }
   .d-md-inline-flex {
@@ -5634,13 +5636,13 @@ button.bg-dark:focus {
 .flex-wrap {
   flex-wrap: wrap !important; }
 
-.flex-nowrap, .day-calendar__body-row, .day-calendar__body-cell {
+.flex-nowrap, .day-calendar__body-row, .day-calendar__body-cell, .calendar-day__row, .calendar-week__row, .calendar-month__row {
   flex-wrap: nowrap !important; }
 
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill, .day-calendar-body, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item {
+.flex-fill, .day-calendar-body, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item, .calendar-grid-body, .calendar-day__cell-grid__item, .calendar-week__cell-grid__item, .calendar-month__cell-grid__item {
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important; }
 
@@ -5652,7 +5654,7 @@ button.bg-dark:focus {
   -webkit-box-flex: 1 !important;
           flex-grow: 1 !important; }
 
-.flex-shrink-0, .navbar-user__avatar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .table-control-box, .day-calendar-aside {
+.flex-shrink-0, .navbar-user__avatar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .table-control-box, .day-calendar-aside, .calendar-grid-aside, .calendar-tabs, .calendar-day__cell, .calendar-day__cell-grid-time__item, .calendar-week__cell, .calendar-week__cell-grid-time__item, .calendar-month__cell, .calendar-month__cell-grid-time__item {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -5670,7 +5672,7 @@ button.bg-dark:focus {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
-.justify-content-between, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div {
+.justify-content-between, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .switch-label, .calendar-tabs {
   -webkit-box-pack: justify !important;
           justify-content: space-between !important; }
 
@@ -5685,7 +5687,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.align-items-center, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .switch-label {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6143,11 +6145,11 @@ button.bg-dark:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, .navbar-nav > .nav-item > a.nav-link, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item, .naviation-link {
+.position-relative, .navbar-nav > .nav-item > a.nav-link, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item, .naviation-link, .switch-label, .calendar-tab, .calendar-day__cell, .calendar-day__cell-grid__item, .calendar-day__cell-grid-time__item, .calendar-week__cell, .calendar-week__cell-grid__item, .calendar-week__cell-grid-time__item, .calendar-month__cell, .calendar-month__cell-grid__item, .calendar-month__cell-grid-time__item {
   position: relative !important; }
 
 .position-absolute, .navbar-nav > .nav-item > a.nav-link:before, .navbar-notification-counter, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body__item__grid, .day-calendar__body__time, .day-calendar__event, .day-calendar__event--add-event:after, .naviation-link:after {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body__item__grid, .day-calendar__body__time, .day-calendar__event, .day-calendar__event--add-event:after, .naviation-link:after, .switch input, .switch-label:before, .calendar-tab:before, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-day__event, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-week__event, .calendar-month__cell-grid, .calendar-month__cell-grid-time, .calendar-month__event {
   position: absolute !important; }
 
 .position-fixed {
@@ -6221,7 +6223,7 @@ button.bg-dark:focus {
 
 .w-100, .navbar-nav > .nav-item > a.nav-link:before, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk,
 .calendar-panel .fc-header-toolbar .fc-button-group, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body-cell, .day-calendar__body__item__grid, .staff-list__btn-add-member, .naviation-link {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body-cell, .day-calendar__body__item__grid, .staff-list__btn-add-member, .naviation-link, .calendar-tabs, .calendar-tab:before, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__cell-grid, .calendar-month__cell-grid-time {
   width: 100% !important; }
 
 .w-auto {
@@ -6236,7 +6238,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, .day-calendar__body__item__grid, .day-calendar__body__item__grid-item {
+.h-100, .day-calendar__body__item__grid, .day-calendar__body__item__grid-item, .calendar-day__cell-grid, .calendar-week__cell-grid, .calendar-month__cell-grid {
   height: 100% !important; }
 
 .h-auto {
@@ -6271,7 +6273,7 @@ button.bg-dark:focus {
   content: "";
   background-color: rgba(0, 0, 0, 0); }
 
-.m-0, .navbar-user__name {
+.m-0, .navbar-user__name, .switch-label {
   margin: 0 !important; }
 
 .mt-0,
@@ -6322,7 +6324,7 @@ button.bg-dark:focus {
 .mx-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2,
+.mb-2, .staff-list__panel-name,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -6341,7 +6343,7 @@ button.bg-dark:focus {
 .mx-3 {
   margin-right: 1rem !important; }
 
-.mb-3, .staff-list:not(:last-child),
+.mb-3, .staff-list:not(:last-child), .staff-list__panel,
 .my-3 {
   margin-bottom: 1rem !important; }
 
@@ -6435,7 +6437,8 @@ button.bg-dark:focus {
 
 .pr-2,
 .px-2,
-.day-calendar {
+.day-calendar,
+.switch-label {
   padding-right: 0.5rem !important; }
 
 .pb-2, .calendar-panel .fc-scrollgrid-liquid thead tr th,
@@ -6446,10 +6449,11 @@ button.bg-dark:focus {
 
 .pl-2,
 .px-2,
-.day-calendar {
+.day-calendar,
+.switch-label {
   padding-left: 0.5rem !important; }
 
-.p-3 {
+.p-3, .staff-list__panel {
   padding: 1rem !important; }
 
 .pt-3,
@@ -6460,7 +6464,10 @@ button.bg-dark:focus {
 
 .pr-3,
 .px-3,
-.family-group__item {
+.family-group__item,
+.calendar-day__body,
+.calendar-week__body,
+.calendar-month__body {
   padding-right: 1rem !important; }
 
 .pb-3,
@@ -6471,7 +6478,10 @@ button.bg-dark:focus {
 
 .pl-3,
 .px-3,
-.family-group__item {
+.family-group__item,
+.calendar-day__body,
+.calendar-week__body,
+.calendar-month__body {
   padding-left: 1rem !important; }
 
 .p-4 {
@@ -6486,10 +6496,11 @@ button.bg-dark:focus {
 .pr-4,
 .px-4,
 .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group,
+.calendar-tabs {
   padding-right: 1.5rem !important; }
 
-.pb-4, .day-calendar-body,
+.pb-4, .day-calendar-body, .calendar-grid-body,
 .py-4,
 .modal-body,
 .modal-footer {
@@ -6498,7 +6509,8 @@ button.bg-dark:focus {
 .pl-4,
 .px-4,
 .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group,
+.calendar-tabs {
   padding-left: 1.5rem !important; }
 
 .p-5 {
@@ -6938,7 +6950,7 @@ button.bg-dark:focus {
   .mt-md-3,
   .my-md-3 {
     margin-top: 1rem !important; }
-  .mr-md-3, .day-calendar-aside,
+  .mr-md-3, .day-calendar-aside, .calendar-grid-aside,
   .mx-md-3 {
     margin-right: 1rem !important; }
   .mb-md-3,
@@ -7024,14 +7036,16 @@ button.bg-dark:focus {
     padding-top: 1rem !important; }
   .pr-md-3,
   .px-md-3,
-  .naviation {
+  .naviation,
+  .calendar-grid-body {
     padding-right: 1rem !important; }
   .pb-md-3,
   .py-md-3 {
     padding-bottom: 1rem !important; }
   .pl-md-3,
   .px-md-3,
-  .naviation {
+  .naviation,
+  .calendar-grid-body {
     padding-left: 1rem !important; }
   .p-md-4 {
     padding: 1.5rem !important; }
@@ -7686,7 +7700,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, .family-group__item {
+.text-center, .family-group__item, .calendar-week__cell-grid-time__item, .calendar-month__cell-grid-time__item {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -7724,7 +7738,7 @@ button.bg-dark:focus {
 .text-lowercase {
   text-transform: lowercase !important; }
 
-.text-uppercase {
+.text-uppercase, .switch-label__title {
   text-transform: uppercase !important; }
 
 .text-capitalize, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
@@ -7756,10 +7770,10 @@ button.bg-dark:focus {
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th,
 .table > tbody > tr td, .table > tfoot > tr > th,
-.table > tfoot > tr td, .staff-list__btn-add-member {
+.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item {
   color: #007bff !important; }
 
-a.text-primary:hover, a.navbar-user__name:hover, a.staff-list__btn-add-member:hover, a.text-primary:focus, a.navbar-user__name:focus, a.staff-list__btn-add-member:focus {
+a.text-primary:hover, a.navbar-user__name:hover, a.staff-list__btn-add-member:hover, a.calendar-tab:hover, a.calendar-week__cell-grid-time__item:hover, a.text-primary:focus, a.navbar-user__name:focus, a.staff-list__btn-add-member:focus, a.calendar-tab:focus, a.calendar-week__cell-grid-time__item:focus {
   color: #0056b3 !important; }
 
 .text-secondary {
@@ -7836,7 +7850,7 @@ a.text-dark:hover, a.text-dark:focus {
 .visible {
   visibility: visible !important; }
 
-.invisible {
+.invisible, .switch input {
   visibility: hidden !important; }
 
 @media print {
@@ -9363,7 +9377,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #000000 !important; }
 
 .text-sky, .navbar-nav > .nav-item.active .nav-link, .navbar-nav > .nav-item.active .nav-link:hover, .navbar-nav > .nav-item > a.nav-link:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:hover,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:focus, .btn-control:hover, .btn-control:focus, .day-calendar__add-event, .naviation-link:hover, .naviation-link:active, .naviation-link.active {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:focus, .btn-control:hover, .btn-control:focus, .day-calendar__add-event, .naviation-link:hover, .naviation-link:active, .naviation-link.active, .calendar-tab:hover, .calendar-tab.active, .calendar-tab.active:focus, .calendar-tab.active:active {
   color: #487EFB !important; }
 
 .text-sky-secondary {
@@ -9381,7 +9395,7 @@ a.text-dark:hover, a.text-dark:focus {
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th,
 .table > tbody > tr td, .table > tfoot > tr > th,
-.table > tfoot > tr td, .staff-list__btn-add-member {
+.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item {
   color: #556280 !important; }
 
 .text-gray {
@@ -9389,6 +9403,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-muted {
   color: #c5d0de !important; }
+
+.text-muted-soft {
+  color: #333333 !important; }
 
 .text-blue, .btn-outline-primary, .day-calendar__event, .day-calendar__event-btn {
   color: #182B54 !important; }
@@ -9411,14 +9428,14 @@ a.text-dark:hover, a.text-dark:focus {
 .text-success-secondary {
   color: #E4F7ED !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label {
   background-color: #ffffff !important; }
 
 .bg-black {
   background-color: #000000 !important; }
 
 .bg-sky, .navbar-nav > .nav-item > a.nav-link:before, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__event--add-event:after, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active, .naviation-link:after {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__event--add-event:after, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active, .naviation-link:after, .switch input:checked + .switch-label:before, .calendar-tab:before {
   background-color: #487EFB !important; }
 
 .bg-sky-secondary {
@@ -9430,13 +9447,16 @@ a.text-dark:hover, a.text-dark:focus {
 .bg-muted, .custom-switch .custom-control-input:checked ~ .custom-control-label:before {
   background-color: #c5d0de !important; }
 
+.bg-muted-soft {
+  background-color: #333333 !important; }
+
 .bg-silver {
   background-color: #F6F6F6 !important; }
 
 .bg-silver-soft {
   background-color: #ABB1C0 !important; }
 
-.bg-primary {
+.bg-primary, .switch-label:before {
   background-color: #556280 !important; }
 
 .bg-blue {
@@ -9444,7 +9464,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .bg-blue-thin, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group,
 .calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__event--add-event {
+.table > thead > tr td, .day-calendar__event--add-event, .calendar-tabs {
   background-color: #f2f6ff !important; }
 
 .bg-danger, .navbar-notification-counter, .day-calendar__body__time--highlited {
@@ -9471,7 +9491,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .font-medium, .navbar-user__name,
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
-.calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th, .day-calendar__body__time, .day-calendar__event__name, .staff-list__name, .staff-list__btn-add-member, .family-group__item {
+.calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th, .day-calendar__body__time, .day-calendar__event__name, .staff-list__name, .staff-list__btn-add-member, .staff-list__panel-name, .family-group__item, .calendar-day__cell-grid-time__item, .calendar-week__cell-grid-time__item, .calendar-month__cell-grid-time__item {
   font-family: "Roboto-Medium" !important; }
 
 .font-bold {
@@ -9502,7 +9522,7 @@ a.text-dark:hover, a.text-dark:focus {
 /*************************
 	Radius variables
 *************************/
-.radius-base, .navbar, .day-calendar__add-event, .staff-list__item, .staff-list__btn-add, .staff-list__btn-add-member {
+.radius-base, .navbar, .day-calendar__add-event, .staff-list__item, .staff-list__btn-add, .staff-list__btn-add-member, .staff-list__panel {
   border-radius: 6px; }
 
 .radius-xs {
@@ -9790,12 +9810,12 @@ b {
 .fs-9 {
   font-size: 9px !important; }
 
-.fs-10, .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .day-calendar__body__time, .day-calendar__event, .day-calendar__event__role, .staff-list__name, .staff-list__role {
+.fs-10, .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .day-calendar__body__time, .day-calendar__event, .day-calendar__event__role, .staff-list__name, .staff-list__role, .switch-label__title, .calendar-day__cell-grid-time__item {
   font-size: 10px !important; }
 
 .fs-11, .calendar-panel .fc-scrollgrid-liquid thead tr th,
 .calendar-panel .fc-scrollgrid-liquid thead tr td, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__body__time--heading, .day-calendar__body__time--highlited {
+.table > thead > tr td, .day-calendar__body__time--heading, .day-calendar__body__time--highlited, .calendar-week__cell-grid-time__item, .calendar-month__cell-grid-time__item {
   font-size: 11px !important; }
 
 .fs-12,
@@ -9807,7 +9827,7 @@ b {
 .table > tfoot > tr td, .day-calendar__add-event, .staff-list__btn-add-member, .family-group__item {
   font-size: 12px !important; }
 
-.fs-13, .navbar-nav > .nav-item > a.nav-link, .navbar-user__name, .alert, .day-calendar__event__name, .naviation-link {
+.fs-13, .navbar-nav > .nav-item > a.nav-link, .navbar-user__name, .alert, .day-calendar__event__name, .staff-list__panel-name, .naviation-link, .calendar-tab {
   font-size: 13px !important; }
 
 .fs-14, .btn-control {
@@ -10400,6 +10420,18 @@ ul {
   padding: 10px 15px;
   margin-top: 10px; }
 
+.staff-list__panel--pink {
+  background-color: #f2daf7; }
+
+.staff-list__panel--danger {
+  background-color: #F8E2E1; }
+
+.staff-list__panel--success {
+  background-color: #E4F7ED; }
+
+.staff-list__panel--warning {
+  background-color: #f7e6c1; }
+
 /* MODAL */
 .modal-backdrop.show {
   opacity: .54; }
@@ -10428,6 +10460,11 @@ ul {
   background-size: cover;
   background-position: 50% 50%;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5LjI1NyIgaGVpZ2h0PSI5LjI1NyIgdmlld0JveD0iMCAwIDkuMjU3IDkuMjU3Ij4KICA8cGF0aCBpZD0iQXJyb3ciIGQ9Ik0uNjU0LDYuNTQ2QS42NTUuNjU1LDAsMCwxLDAsNS44OTFWLjY1NGEuNjU1LjY1NSwwLDAsMSwxLjMwOSwwVjUuMjM2SDUuODkxYS42NTUuNjU1LDAsMSwxLDAsMS4zMDlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDQuNjI5KSByb3RhdGUoLTQ1KSIgZmlsbD0iIzU1NjI4MCIvPgo8L3N2Zz4K"); }
+
+.bootstrap-select .dropdown-toggle.disabled {
+  opacity: 1 !important; }
+  .bootstrap-select .dropdown-toggle.disabled:hover {
+    color: inherit !important; }
 
 /* FAMILY GROUP */
 .family-group {
@@ -10468,3 +10505,339 @@ ul {
     border-top: solid 1px rgba(85, 98, 128, 0.09); }
   .naviation-link.active:after {
     opacity: 1; }
+
+/* CALENDAR GRID */
+@media (min-width: 768px) {
+  .calendar-grid-aside {
+    width: 227px; } }
+
+.calendar-grid-body {
+  min-width: 0;
+  border-radius: 0 0 10px 0; }
+  @media (max-width: 767.98px) {
+    .calendar-grid-body {
+      margin-left: -16px;
+      margin-right: -16px;
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 0 0 10px 10px; } }
+
+/* SWITCH */
+.switch input:disabled + .switch-label {
+  cursor: not-allowed; }
+  .switch input:disabled + .switch-label:before {
+    background-color: #d5d5d5 !important; }
+  .switch input:disabled + .switch-label .switch-label__title--left {
+    color: #d5d5d5 !important; }
+  .switch input:disabled + .switch-label .switch-label__title--right {
+    color: #d5d5d5 !important; }
+
+.switch input:checked + .switch-label:before {
+  right: 4px;
+  left: auto; }
+
+.switch input:checked + .switch-label .switch-label__title--left {
+  opacity: 1; }
+
+.switch input:checked + .switch-label .switch-label__title--right {
+  opacity: 0; }
+
+.switch-label {
+  border-radius: 100px;
+  width: 49px;
+  height: 22px; }
+  .switch-label:before {
+    content: '';
+    left: 4px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 2px 4px 0 rgba(72, 126, 251, 0.2);
+    z-index: 10; }
+
+.switch-label__title--left {
+  color: rgba(72, 126, 251, 0.99);
+  opacity: 0; }
+
+.switch-label__title--right {
+  color: rgba(85, 98, 128, 0.99);
+  opacity: 1; }
+
+/* CALENDAR TABS */
+.calendar-tabs {
+  border-radius: 21px; }
+  @media (min-width: 768px) {
+    .calendar-tabs {
+      margin-left: 50px;
+      max-width: 278px; } }
+
+.calendar-tab {
+  padding: 11.5px 10px; }
+  .calendar-tab:before {
+    content: '';
+    height: 2px;
+    border-radius: 17px;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    opacity: 0;
+    left: 0;
+    bottom: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      .calendar-tab:before {
+        -webkit-transition: none;
+        transition: none; } }
+  .calendar-tab.active:before {
+    opacity: 1; }
+
+/* CALENDAR DAY */
+.calendar-day {
+  overflow-x: auto;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-day__row:first-child .calendar-day__cell {
+  height: 30px; }
+
+.calendar-day__row + .calendar-day__row .calendar-day__cell {
+  border-top: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-day__cell {
+  z-index: 10;
+  width: 153px;
+  height: 90px;
+  border-left: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-day__cell-grid {
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
+.calendar-day__cell-grid__item {
+  width: 38px; }
+  .calendar-day__cell-grid__item + .calendar-day__cell-grid__item {
+    border-left: 1px dashed rgba(85, 98, 128, 0.09); }
+
+.calendar-day__cell-grid-time {
+  top: -20px;
+  left: -13px; }
+
+.calendar-day__cell-grid-time__item {
+  color: rgba(85, 98, 128, 0.2);
+  width: 38px; }
+
+.calendar-day__event {
+  left: -1px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  width: 441px;
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  z-index: 10; }
+  .calendar-day__event--gap-1 {
+    margin-left: 38px; }
+  .calendar-day__event--gap-2 {
+    margin-left: calc(38px * 2 + 2px); }
+  .calendar-day__event--gap-3 {
+    margin-left: calc(38px * 3 + 2px); }
+  .calendar-day__event--gap-4 {
+    margin-left: calc(38px * 4 + 2px); }
+  .calendar-day__event--gap-5 {
+    margin-left: calc(38px * 5 + 2px); }
+  .calendar-day__event--gap-6 {
+    margin-left: calc(38px * 6 + 2px); }
+  .calendar-day__event--gap-7 {
+    margin-left: calc(38px * 7 + 2px); }
+  .calendar-day__event--gap-8 {
+    margin-left: calc(38px * 8 + 2px); }
+  .calendar-day__event--gap-9 {
+    margin-left: calc(38px * 9 + 2px); }
+  .calendar-day__event--gap-10 {
+    margin-left: calc(38px * 10 + 2px); }
+  .calendar-day__event--pink {
+    border-left-color: #de65f7;
+    background-color: rgba(222, 101, 247, 0.3); }
+  .calendar-day__event--success {
+    border-left-color: #79d6a7;
+    background-color: rgba(121, 214, 167, 0.3); }
+  .calendar-day__event--danger {
+    border-left-color: #da6e69;
+    background-color: rgba(218, 110, 105, 0.3); }
+  .calendar-day__event--warning {
+    border-left-color: #efb843;
+    background-color: rgba(239, 184, 67, 0.3); }
+
+/* CALENDAR WEEK */
+.calendar-week {
+  overflow-x: auto;
+  padding-top: 35px;
+  border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-week__row:first-child .calendar-week__cell {
+  height: 10px; }
+
+.calendar-week__row + .calendar-week__row .calendar-week__cell {
+  border-top: 1px solid rgba(85, 98, 128, 0.09); }
+  .calendar-week__row + .calendar-week__row .calendar-week__cell:last-child {
+    border-right: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-week__cell {
+  z-index: 10;
+  width: 110px;
+  height: 95px;
+  border-left: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-week__cell-grid {
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
+.calendar-week__cell-grid__item {
+  width: 38px; }
+  .calendar-week__cell-grid__item + .calendar-week__cell-grid__item {
+    border-left: 1px dashed rgba(85, 98, 128, 0.09); }
+
+.calendar-week__cell-grid-time {
+  top: -35px;
+  left: -19px; }
+
+.calendar-week__cell-grid-time__item {
+  width: 38px; }
+
+.calendar-week__cell-grid-time__item--heading {
+  color: rgba(85, 98, 128, 0.5) !important; }
+
+.calendar-week__event {
+  left: -1px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  width: 441px;
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  z-index: 10; }
+  .calendar-week__event--gap-1 {
+    margin-left: 110px; }
+  .calendar-week__event--gap-2 {
+    margin-left: calc(110px * 2 + 2px); }
+  .calendar-week__event--gap-3 {
+    margin-left: calc(110px * 3 + 2px); }
+  .calendar-week__event--gap-4 {
+    margin-left: calc(110px * 4 + 2px); }
+  .calendar-week__event--gap-5 {
+    margin-left: calc(110px * 5 + 2px); }
+  .calendar-week__event--gap-6 {
+    margin-left: calc(110px * 6 + 2px); }
+  .calendar-week__event--gap-7 {
+    margin-left: calc(110px * 7 + 2px); }
+  .calendar-week__event--gap-8 {
+    margin-left: calc(110px * 8 + 2px); }
+  .calendar-week__event--gap-9 {
+    margin-left: calc(110px * 9 + 2px); }
+  .calendar-week__event--gap-10 {
+    margin-left: calc(110px * 10 + 2px); }
+  .calendar-week__event--pink {
+    border-left-color: #de65f7;
+    background-color: rgba(222, 101, 247, 0.3); }
+  .calendar-week__event--success {
+    border-left-color: #79d6a7;
+    background-color: rgba(121, 214, 167, 0.3); }
+  .calendar-week__event--danger {
+    border-left-color: #da6e69;
+    background-color: rgba(218, 110, 105, 0.3); }
+  .calendar-week__event--warning {
+    border-left-color: #efb843;
+    background-color: rgba(239, 184, 67, 0.3); }
+
+/* CALENDAR WEEK */
+.calendar-month {
+  overflow-x: auto;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-month__row:first-child .calendar-month__cell {
+  height: 10px; }
+
+.calendar-month__row + .calendar-month__row .calendar-month__cell {
+  border-top: 1px solid rgba(85, 98, 128, 0.09); }
+  .calendar-month__row + .calendar-month__row .calendar-month__cell:last-child {
+    border-right: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-month__cell {
+  z-index: 10;
+  width: 110px;
+  height: 95px;
+  border-left: 1px solid rgba(85, 98, 128, 0.09); }
+
+.calendar-month__cell-grid {
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
+.calendar-month__cell-grid__item {
+  width: 38px; }
+  .calendar-month__cell-grid__item + .calendar-month__cell-grid__item {
+    border-left: 1px dashed rgba(85, 98, 128, 0.09); }
+
+.calendar-month__cell-grid-time {
+  top: -20px;
+  left: -19px; }
+
+.calendar-month__cell-grid-time__item {
+  width: 38px;
+  color: rgba(85, 98, 128, 0.5); }
+
+.calendar-month__event {
+  left: -1px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  width: 110px;
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  z-index: 10; }
+  .calendar-month__event--sm {
+    width: 47px; }
+  .calendar-month__event--xs {
+    width: 42px; }
+  .calendar-month__event--md {
+    width: 68px; }
+  .calendar-month__event--gap-1 {
+    margin-left: 110px; }
+  .calendar-month__event--gap-2 {
+    margin-left: calc(110px * 2 + 1px); }
+  .calendar-month__event--gap-3 {
+    margin-left: calc(110px * 3 + 1px); }
+  .calendar-month__event--gap-4 {
+    margin-left: calc(110px * 4 + 1px); }
+  .calendar-month__event--gap-5 {
+    margin-left: calc(110px * 5 + 1px); }
+  .calendar-month__event--gap-6 {
+    margin-left: calc(110px * 6 + 1px); }
+  .calendar-month__event--gap-7 {
+    margin-left: calc(110px * 7 + 1px); }
+  .calendar-month__event--gap-8 {
+    margin-left: calc(110px * 8 + 1px); }
+  .calendar-month__event--gap-9 {
+    margin-left: calc(110px * 9 + 1px); }
+  .calendar-month__event--gap-10 {
+    margin-left: calc(110px * 10 + 1px); }
+  .calendar-month__event--pink {
+    border-left-color: #de65f7;
+    background-color: rgba(222, 101, 247, 0.3); }
+  .calendar-month__event--success {
+    border-left-color: #79d6a7;
+    background-color: rgba(121, 214, 167, 0.3); }
+  .calendar-month__event--danger {
+    border-left-color: #da6e69;
+    background-color: rgba(218, 110, 105, 0.3); }
+  .calendar-month__event--warning {
+    border-left-color: #efb843;
+    background-color: rgba(239, 184, 67, 0.3); }

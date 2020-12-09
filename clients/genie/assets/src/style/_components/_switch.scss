@@ -1,0 +1,90 @@
+/* SWITCH */
+
+.switch {
+    input {
+        @extend .invisible,
+        .position-absolute;
+
+        &:disabled {
+            &+.switch-label {
+                cursor: not-allowed;
+
+                &:before {
+                    background-color: #d5d5d5 !important;
+                }
+
+                .switch-label__title {
+                    &--left {
+                        color: #d5d5d5 !important;
+                    }
+
+                    &--right {
+                        color: #d5d5d5 !important;
+                    }
+                }
+            }
+        }
+
+        &:checked {
+            &+.switch-label {
+                &:before {
+                    @extend .bg-sky;
+                    right: 4px;
+                    left: auto;
+                }
+
+                .switch-label__title {
+
+                    &--left {
+                        opacity: 1;
+                    }
+
+                    &--right {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.switch-label {
+    @extend .m-0,
+    .d-flex,
+    .align-items-center,
+    .justify-content-between,
+    .position-relative,
+    .bg-white,
+    .px-2;
+    border-radius: 100px;
+    width: 49px;
+    height: 22px;
+
+    &:before {
+        content: '';
+        @extend .position-absolute,
+        .bg-primary,
+        .rounded-circle;
+        left: 4px;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        box-shadow: 0 2px 4px 0 rgba(72, 126, 251, 0.2);
+        z-index: 10;
+    }
+}
+
+.switch-label__title {
+    @extend .fs-10,
+    .text-uppercase;
+
+    &--left {
+        color: rgba($sky, .99);
+        opacity: 0;
+    }
+
+    &--right {
+        color: rgba($primary, .99);
+        opacity: 1;
+    }
+}
