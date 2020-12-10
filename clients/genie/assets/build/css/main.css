@@ -1950,7 +1950,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .collapse-box__toggle {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1970,25 +1970,26 @@ textarea.form-control {
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+    .btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .collapse-box__toggle {
       -webkit-transition: none;
       transition: none; } }
-  .btn:hover, .navbar-user:hover, .day-calendar__event-btn:hover, .day-calendar__add-event:hover, .staff-list__btn-add:hover, .staff-list__btn-add-member:hover {
+  .btn:hover, .navbar-user:hover, .day-calendar__event-btn:hover, .day-calendar__add-event:hover, .staff-list__btn-add:hover, .staff-list__btn-add-member:hover, .collapse-box__toggle:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .navbar-user:focus, .day-calendar__event-btn:focus, .day-calendar__add-event:focus, .staff-list__btn-add:focus, .staff-list__btn-add-member:focus, .btn.focus, .focus.navbar-user, .focus.day-calendar__event-btn, .focus.day-calendar__add-event, .focus.staff-list__btn-add, .focus.staff-list__btn-add-member {
+  .btn:focus, .navbar-user:focus, .day-calendar__event-btn:focus, .day-calendar__add-event:focus, .staff-list__btn-add:focus, .staff-list__btn-add-member:focus, .collapse-box__toggle:focus, .btn.focus, .focus.navbar-user, .focus.day-calendar__event-btn, .focus.day-calendar__add-event, .focus.staff-list__btn-add, .focus.staff-list__btn-add-member, .focus.collapse-box__toggle {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .disabled.navbar-user, .disabled.day-calendar__event-btn, .disabled.day-calendar__add-event, .disabled.staff-list__btn-add, .disabled.staff-list__btn-add-member, .btn:disabled, .navbar-user:disabled, .day-calendar__event-btn:disabled, .day-calendar__add-event:disabled, .staff-list__btn-add:disabled, .staff-list__btn-add-member:disabled {
+  .btn.disabled, .disabled.navbar-user, .disabled.day-calendar__event-btn, .disabled.day-calendar__add-event, .disabled.staff-list__btn-add, .disabled.staff-list__btn-add-member, .disabled.collapse-box__toggle, .btn:disabled, .navbar-user:disabled, .day-calendar__event-btn:disabled, .day-calendar__add-event:disabled, .staff-list__btn-add:disabled, .staff-list__btn-add-member:disabled, .collapse-box__toggle:disabled {
     opacity: 0.65; }
 
-a.btn.disabled, a.disabled.navbar-user, a.disabled.day-calendar__event-btn, a.disabled.day-calendar__add-event, a.disabled.staff-list__btn-add, a.disabled.staff-list__btn-add-member,
+a.btn.disabled, a.disabled.navbar-user, a.disabled.day-calendar__event-btn, a.disabled.day-calendar__add-event, a.disabled.staff-list__btn-add, a.disabled.staff-list__btn-add-member, a.disabled.collapse-box__toggle,
 fieldset:disabled a.btn,
 fieldset:disabled a.navbar-user,
 fieldset:disabled a.day-calendar__event-btn,
 fieldset:disabled a.day-calendar__add-event,
 fieldset:disabled a.staff-list__btn-add,
-fieldset:disabled a.staff-list__btn-add-member {
+fieldset:disabled a.staff-list__btn-add-member,
+fieldset:disabled a.collapse-box__toggle {
   pointer-events: none; }
 
 .btn-primary {
@@ -2381,13 +2382,13 @@ fieldset:disabled a.staff-list__btn-add-member {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .navbar-user, .btn-group-lg > .day-calendar__event-btn, .btn-group-lg > .day-calendar__add-event, .btn-group-lg > .staff-list__btn-add, .btn-group-lg > .staff-list__btn-add-member {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .navbar-user, .btn-group-lg > .day-calendar__event-btn, .btn-group-lg > .day-calendar__add-event, .btn-group-lg > .staff-list__btn-add, .btn-group-lg > .staff-list__btn-add-member, .btn-group-lg > .collapse-box__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .btn-group-sm > .collapse-box__toggle, .day-calendar__event-btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2636,43 +2637,48 @@ input[type="button"].btn-block {
   display: -webkit-inline-box;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .navbar-user, .btn-group > .day-calendar__event-btn, .btn-group > .day-calendar__add-event, .btn-group > .staff-list__btn-add, .btn-group > .staff-list__btn-add-member,
+  .btn-group > .btn, .btn-group > .navbar-user, .btn-group > .day-calendar__event-btn, .btn-group > .day-calendar__add-event, .btn-group > .staff-list__btn-add, .btn-group > .staff-list__btn-add-member, .btn-group > .collapse-box__toggle,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .navbar-user,
   .btn-group-vertical > .day-calendar__event-btn,
   .btn-group-vertical > .day-calendar__add-event,
   .btn-group-vertical > .staff-list__btn-add,
-  .btn-group-vertical > .staff-list__btn-add-member {
+  .btn-group-vertical > .staff-list__btn-add-member,
+  .btn-group-vertical > .collapse-box__toggle {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1 1 auto; }
-    .btn-group > .btn:hover, .btn-group > .navbar-user:hover, .btn-group > .day-calendar__event-btn:hover, .btn-group > .day-calendar__add-event:hover, .btn-group > .staff-list__btn-add:hover, .btn-group > .staff-list__btn-add-member:hover,
+    .btn-group > .btn:hover, .btn-group > .navbar-user:hover, .btn-group > .day-calendar__event-btn:hover, .btn-group > .day-calendar__add-event:hover, .btn-group > .staff-list__btn-add:hover, .btn-group > .staff-list__btn-add-member:hover, .btn-group > .collapse-box__toggle:hover,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .navbar-user:hover,
     .btn-group-vertical > .day-calendar__event-btn:hover,
     .btn-group-vertical > .day-calendar__add-event:hover,
     .btn-group-vertical > .staff-list__btn-add:hover,
-    .btn-group-vertical > .staff-list__btn-add-member:hover {
+    .btn-group-vertical > .staff-list__btn-add-member:hover,
+    .btn-group-vertical > .collapse-box__toggle:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .navbar-user:focus, .btn-group > .day-calendar__event-btn:focus, .btn-group > .day-calendar__add-event:focus, .btn-group > .staff-list__btn-add:focus, .btn-group > .staff-list__btn-add-member:focus, .btn-group > .btn:active, .btn-group > .navbar-user:active, .btn-group > .day-calendar__event-btn:active, .btn-group > .day-calendar__add-event:active, .btn-group > .staff-list__btn-add:active, .btn-group > .staff-list__btn-add-member:active, .btn-group > .btn.active, .btn-group > .active.navbar-user, .btn-group > .active.day-calendar__event-btn, .btn-group > .active.day-calendar__add-event, .btn-group > .active.staff-list__btn-add, .btn-group > .active.staff-list__btn-add-member,
+    .btn-group > .btn:focus, .btn-group > .navbar-user:focus, .btn-group > .day-calendar__event-btn:focus, .btn-group > .day-calendar__add-event:focus, .btn-group > .staff-list__btn-add:focus, .btn-group > .staff-list__btn-add-member:focus, .btn-group > .collapse-box__toggle:focus, .btn-group > .btn:active, .btn-group > .navbar-user:active, .btn-group > .day-calendar__event-btn:active, .btn-group > .day-calendar__add-event:active, .btn-group > .staff-list__btn-add:active, .btn-group > .staff-list__btn-add-member:active, .btn-group > .collapse-box__toggle:active, .btn-group > .btn.active, .btn-group > .active.navbar-user, .btn-group > .active.day-calendar__event-btn, .btn-group > .active.day-calendar__add-event, .btn-group > .active.staff-list__btn-add, .btn-group > .active.staff-list__btn-add-member, .btn-group > .active.collapse-box__toggle,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .navbar-user:focus,
     .btn-group-vertical > .day-calendar__event-btn:focus,
     .btn-group-vertical > .day-calendar__add-event:focus,
     .btn-group-vertical > .staff-list__btn-add:focus,
     .btn-group-vertical > .staff-list__btn-add-member:focus,
+    .btn-group-vertical > .collapse-box__toggle:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .navbar-user:active,
     .btn-group-vertical > .day-calendar__event-btn:active,
     .btn-group-vertical > .day-calendar__add-event:active,
     .btn-group-vertical > .staff-list__btn-add:active,
     .btn-group-vertical > .staff-list__btn-add-member:active,
+    .btn-group-vertical > .collapse-box__toggle:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.navbar-user,
     .btn-group-vertical > .active.day-calendar__event-btn,
     .btn-group-vertical > .active.day-calendar__add-event,
     .btn-group-vertical > .active.staff-list__btn-add,
-    .btn-group-vertical > .active.staff-list__btn-add-member {
+    .btn-group-vertical > .active.staff-list__btn-add-member,
+    .btn-group-vertical > .active.collapse-box__toggle {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2684,27 +2690,29 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .navbar-user:not(:first-child), .btn-group > .day-calendar__event-btn:not(:first-child), .btn-group > .day-calendar__add-event:not(:first-child), .btn-group > .staff-list__btn-add:not(:first-child), .btn-group > .staff-list__btn-add-member:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .navbar-user:not(:first-child), .btn-group > .day-calendar__event-btn:not(:first-child), .btn-group > .day-calendar__add-event:not(:first-child), .btn-group > .staff-list__btn-add:not(:first-child), .btn-group > .staff-list__btn-add-member:not(:first-child), .btn-group > .collapse-box__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .navbar-user:not(:last-child):not(.dropdown-toggle), .btn-group > .day-calendar__event-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .day-calendar__add-event:not(:last-child):not(.dropdown-toggle), .btn-group > .staff-list__btn-add:not(:last-child):not(.dropdown-toggle), .btn-group > .staff-list__btn-add-member:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .navbar-user:not(:last-child):not(.dropdown-toggle), .btn-group > .day-calendar__event-btn:not(:last-child):not(.dropdown-toggle), .btn-group > .day-calendar__add-event:not(:last-child):not(.dropdown-toggle), .btn-group > .staff-list__btn-add:not(:last-child):not(.dropdown-toggle), .btn-group > .staff-list__btn-add-member:not(:last-child):not(.dropdown-toggle), .btn-group > .collapse-box__toggle:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn-group:not(:last-child) > .navbar-user,
 .btn-group > .btn-group:not(:last-child) > .day-calendar__event-btn,
 .btn-group > .btn-group:not(:last-child) > .day-calendar__add-event,
 .btn-group > .btn-group:not(:last-child) > .staff-list__btn-add,
-.btn-group > .btn-group:not(:last-child) > .staff-list__btn-add-member {
+.btn-group > .btn-group:not(:last-child) > .staff-list__btn-add-member,
+.btn-group > .btn-group:not(:last-child) > .collapse-box__toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .navbar-user:not(:first-child), .btn-group > .day-calendar__event-btn:not(:first-child), .btn-group > .day-calendar__add-event:not(:first-child), .btn-group > .staff-list__btn-add:not(:first-child), .btn-group > .staff-list__btn-add-member:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .navbar-user:not(:first-child), .btn-group > .day-calendar__event-btn:not(:first-child), .btn-group > .day-calendar__add-event:not(:first-child), .btn-group > .staff-list__btn-add:not(:first-child), .btn-group > .staff-list__btn-add-member:not(:first-child), .btn-group > .collapse-box__toggle:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .btn-group > .btn-group:not(:first-child) > .navbar-user,
 .btn-group > .btn-group:not(:first-child) > .day-calendar__event-btn,
 .btn-group > .btn-group:not(:first-child) > .day-calendar__add-event,
 .btn-group > .btn-group:not(:first-child) > .staff-list__btn-add,
-.btn-group > .btn-group:not(:first-child) > .staff-list__btn-add-member {
+.btn-group > .btn-group:not(:first-child) > .staff-list__btn-add-member,
+.btn-group > .btn-group:not(:first-child) > .collapse-box__toggle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2718,11 +2726,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .navbar-user + .dropdown-toggle-split, .btn-group-sm > .day-calendar__event-btn + .dropdown-toggle-split, .btn-group-sm > .day-calendar__add-event + .dropdown-toggle-split, .btn-group-sm > .staff-list__btn-add + .dropdown-toggle-split, .btn-group-sm > .staff-list__btn-add-member + .dropdown-toggle-split, .day-calendar__event-btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .navbar-user + .dropdown-toggle-split, .btn-group-sm > .day-calendar__event-btn + .dropdown-toggle-split, .btn-group-sm > .day-calendar__add-event + .dropdown-toggle-split, .btn-group-sm > .staff-list__btn-add + .dropdown-toggle-split, .btn-group-sm > .staff-list__btn-add-member + .dropdown-toggle-split, .btn-group-sm > .collapse-box__toggle + .dropdown-toggle-split, .day-calendar__event-btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .navbar-user + .dropdown-toggle-split, .btn-group-lg > .day-calendar__event-btn + .dropdown-toggle-split, .btn-group-lg > .day-calendar__add-event + .dropdown-toggle-split, .btn-group-lg > .staff-list__btn-add + .dropdown-toggle-split, .btn-group-lg > .staff-list__btn-add-member + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .navbar-user + .dropdown-toggle-split, .btn-group-lg > .day-calendar__event-btn + .dropdown-toggle-split, .btn-group-lg > .day-calendar__add-event + .dropdown-toggle-split, .btn-group-lg > .staff-list__btn-add + .dropdown-toggle-split, .btn-group-lg > .staff-list__btn-add-member + .dropdown-toggle-split, .btn-group-lg > .collapse-box__toggle + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2741,57 +2749,64 @@ input[type="button"].btn-block {
   .btn-group-vertical > .day-calendar__add-event,
   .btn-group-vertical > .staff-list__btn-add,
   .btn-group-vertical > .staff-list__btn-add-member,
+  .btn-group-vertical > .collapse-box__toggle,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navbar-user:not(:first-child), .btn-group-vertical > .day-calendar__event-btn:not(:first-child), .btn-group-vertical > .day-calendar__add-event:not(:first-child), .btn-group-vertical > .staff-list__btn-add:not(:first-child), .btn-group-vertical > .staff-list__btn-add-member:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navbar-user:not(:first-child), .btn-group-vertical > .day-calendar__event-btn:not(:first-child), .btn-group-vertical > .day-calendar__add-event:not(:first-child), .btn-group-vertical > .staff-list__btn-add:not(:first-child), .btn-group-vertical > .staff-list__btn-add-member:not(:first-child), .btn-group-vertical > .collapse-box__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .navbar-user:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .day-calendar__event-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .day-calendar__add-event:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .staff-list__btn-add:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .staff-list__btn-add-member:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .navbar-user:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .day-calendar__event-btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .day-calendar__add-event:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .staff-list__btn-add:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .staff-list__btn-add-member:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .collapse-box__toggle:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .navbar-user,
   .btn-group-vertical > .btn-group:not(:last-child) > .day-calendar__event-btn,
   .btn-group-vertical > .btn-group:not(:last-child) > .day-calendar__add-event,
   .btn-group-vertical > .btn-group:not(:last-child) > .staff-list__btn-add,
-  .btn-group-vertical > .btn-group:not(:last-child) > .staff-list__btn-add-member {
+  .btn-group-vertical > .btn-group:not(:last-child) > .staff-list__btn-add-member,
+  .btn-group-vertical > .btn-group:not(:last-child) > .collapse-box__toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navbar-user:not(:first-child), .btn-group-vertical > .day-calendar__event-btn:not(:first-child), .btn-group-vertical > .day-calendar__add-event:not(:first-child), .btn-group-vertical > .staff-list__btn-add:not(:first-child), .btn-group-vertical > .staff-list__btn-add-member:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .navbar-user:not(:first-child), .btn-group-vertical > .day-calendar__event-btn:not(:first-child), .btn-group-vertical > .day-calendar__add-event:not(:first-child), .btn-group-vertical > .staff-list__btn-add:not(:first-child), .btn-group-vertical > .staff-list__btn-add-member:not(:first-child), .btn-group-vertical > .collapse-box__toggle:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .navbar-user,
   .btn-group-vertical > .btn-group:not(:first-child) > .day-calendar__event-btn,
   .btn-group-vertical > .btn-group:not(:first-child) > .day-calendar__add-event,
   .btn-group-vertical > .btn-group:not(:first-child) > .staff-list__btn-add,
-  .btn-group-vertical > .btn-group:not(:first-child) > .staff-list__btn-add-member {
+  .btn-group-vertical > .btn-group:not(:first-child) > .staff-list__btn-add-member,
+  .btn-group-vertical > .btn-group:not(:first-child) > .collapse-box__toggle {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .btn-group-toggle > .navbar-user, .btn-group-toggle > .day-calendar__event-btn, .btn-group-toggle > .day-calendar__add-event, .btn-group-toggle > .staff-list__btn-add, .btn-group-toggle > .staff-list__btn-add-member,
+.btn-group-toggle > .btn, .btn-group-toggle > .navbar-user, .btn-group-toggle > .day-calendar__event-btn, .btn-group-toggle > .day-calendar__add-event, .btn-group-toggle > .staff-list__btn-add, .btn-group-toggle > .staff-list__btn-add-member, .btn-group-toggle > .collapse-box__toggle,
 .btn-group-toggle > .btn-group > .btn,
 .btn-group-toggle > .btn-group > .navbar-user,
 .btn-group-toggle > .btn-group > .day-calendar__event-btn,
 .btn-group-toggle > .btn-group > .day-calendar__add-event,
 .btn-group-toggle > .btn-group > .staff-list__btn-add,
-.btn-group-toggle > .btn-group > .staff-list__btn-add-member {
+.btn-group-toggle > .btn-group > .staff-list__btn-add-member,
+.btn-group-toggle > .btn-group > .collapse-box__toggle {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .navbar-user input[type="radio"], .btn-group-toggle > .day-calendar__event-btn input[type="radio"], .btn-group-toggle > .day-calendar__add-event input[type="radio"], .btn-group-toggle > .staff-list__btn-add input[type="radio"], .btn-group-toggle > .staff-list__btn-add-member input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .navbar-user input[type="radio"], .btn-group-toggle > .day-calendar__event-btn input[type="radio"], .btn-group-toggle > .day-calendar__add-event input[type="radio"], .btn-group-toggle > .staff-list__btn-add input[type="radio"], .btn-group-toggle > .staff-list__btn-add-member input[type="radio"], .btn-group-toggle > .collapse-box__toggle input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .btn-group-toggle > .navbar-user input[type="checkbox"],
   .btn-group-toggle > .day-calendar__event-btn input[type="checkbox"],
   .btn-group-toggle > .day-calendar__add-event input[type="checkbox"],
   .btn-group-toggle > .staff-list__btn-add input[type="checkbox"],
   .btn-group-toggle > .staff-list__btn-add-member input[type="checkbox"],
+  .btn-group-toggle > .collapse-box__toggle input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .navbar-user input[type="radio"],
   .btn-group-toggle > .btn-group > .day-calendar__event-btn input[type="radio"],
   .btn-group-toggle > .btn-group > .day-calendar__add-event input[type="radio"],
   .btn-group-toggle > .btn-group > .staff-list__btn-add input[type="radio"],
   .btn-group-toggle > .btn-group > .staff-list__btn-add-member input[type="radio"],
+  .btn-group-toggle > .btn-group > .collapse-box__toggle input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .navbar-user input[type="checkbox"],
   .btn-group-toggle > .btn-group > .day-calendar__event-btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .day-calendar__add-event input[type="checkbox"],
   .btn-group-toggle > .btn-group > .staff-list__btn-add input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .staff-list__btn-add-member input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .staff-list__btn-add-member input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .collapse-box__toggle input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2857,30 +2872,33 @@ input[type="button"].btn-block {
 .input-group-append {
   display: -webkit-box;
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .navbar-user, .input-group-prepend .day-calendar__event-btn, .input-group-prepend .day-calendar__add-event, .input-group-prepend .staff-list__btn-add, .input-group-prepend .staff-list__btn-add-member,
+  .input-group-prepend .btn, .input-group-prepend .navbar-user, .input-group-prepend .day-calendar__event-btn, .input-group-prepend .day-calendar__add-event, .input-group-prepend .staff-list__btn-add, .input-group-prepend .staff-list__btn-add-member, .input-group-prepend .collapse-box__toggle,
   .input-group-append .btn,
   .input-group-append .navbar-user,
   .input-group-append .day-calendar__event-btn,
   .input-group-append .day-calendar__add-event,
   .input-group-append .staff-list__btn-add,
-  .input-group-append .staff-list__btn-add-member {
+  .input-group-append .staff-list__btn-add-member,
+  .input-group-append .collapse-box__toggle {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .navbar-user:focus, .input-group-prepend .day-calendar__event-btn:focus, .input-group-prepend .day-calendar__add-event:focus, .input-group-prepend .staff-list__btn-add:focus, .input-group-prepend .staff-list__btn-add-member:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend .navbar-user:focus, .input-group-prepend .day-calendar__event-btn:focus, .input-group-prepend .day-calendar__add-event:focus, .input-group-prepend .staff-list__btn-add:focus, .input-group-prepend .staff-list__btn-add-member:focus, .input-group-prepend .collapse-box__toggle:focus,
     .input-group-append .btn:focus,
     .input-group-append .navbar-user:focus,
     .input-group-append .day-calendar__event-btn:focus,
     .input-group-append .day-calendar__add-event:focus,
     .input-group-append .staff-list__btn-add:focus,
-    .input-group-append .staff-list__btn-add-member:focus {
+    .input-group-append .staff-list__btn-add-member:focus,
+    .input-group-append .collapse-box__toggle:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .navbar-user + .btn, .input-group-prepend .day-calendar__event-btn + .btn, .input-group-prepend .day-calendar__add-event + .btn, .input-group-prepend .staff-list__btn-add + .btn, .input-group-prepend .staff-list__btn-add-member + .btn, .input-group-prepend .btn + .navbar-user, .input-group-prepend .navbar-user + .navbar-user, .input-group-prepend .day-calendar__event-btn + .navbar-user, .input-group-prepend .day-calendar__add-event + .navbar-user, .input-group-prepend .staff-list__btn-add + .navbar-user, .input-group-prepend .staff-list__btn-add-member + .navbar-user, .input-group-prepend .btn + .day-calendar__event-btn, .input-group-prepend .navbar-user + .day-calendar__event-btn, .input-group-prepend .day-calendar__event-btn + .day-calendar__event-btn, .input-group-prepend .day-calendar__add-event + .day-calendar__event-btn, .input-group-prepend .staff-list__btn-add + .day-calendar__event-btn, .input-group-prepend .staff-list__btn-add-member + .day-calendar__event-btn, .input-group-prepend .btn + .day-calendar__add-event, .input-group-prepend .navbar-user + .day-calendar__add-event, .input-group-prepend .day-calendar__event-btn + .day-calendar__add-event, .input-group-prepend .day-calendar__add-event + .day-calendar__add-event, .input-group-prepend .staff-list__btn-add + .day-calendar__add-event, .input-group-prepend .staff-list__btn-add-member + .day-calendar__add-event, .input-group-prepend .btn + .staff-list__btn-add, .input-group-prepend .navbar-user + .staff-list__btn-add, .input-group-prepend .day-calendar__event-btn + .staff-list__btn-add, .input-group-prepend .day-calendar__add-event + .staff-list__btn-add, .input-group-prepend .staff-list__btn-add + .staff-list__btn-add, .input-group-prepend .staff-list__btn-add-member + .staff-list__btn-add, .input-group-prepend .btn + .staff-list__btn-add-member, .input-group-prepend .navbar-user + .staff-list__btn-add-member, .input-group-prepend .day-calendar__event-btn + .staff-list__btn-add-member, .input-group-prepend .day-calendar__add-event + .staff-list__btn-add-member, .input-group-prepend .staff-list__btn-add + .staff-list__btn-add-member, .input-group-prepend .staff-list__btn-add-member + .staff-list__btn-add-member,
+  .input-group-prepend .btn + .btn, .input-group-prepend .navbar-user + .btn, .input-group-prepend .day-calendar__event-btn + .btn, .input-group-prepend .day-calendar__add-event + .btn, .input-group-prepend .staff-list__btn-add + .btn, .input-group-prepend .staff-list__btn-add-member + .btn, .input-group-prepend .collapse-box__toggle + .btn, .input-group-prepend .btn + .navbar-user, .input-group-prepend .navbar-user + .navbar-user, .input-group-prepend .day-calendar__event-btn + .navbar-user, .input-group-prepend .day-calendar__add-event + .navbar-user, .input-group-prepend .staff-list__btn-add + .navbar-user, .input-group-prepend .staff-list__btn-add-member + .navbar-user, .input-group-prepend .collapse-box__toggle + .navbar-user, .input-group-prepend .btn + .day-calendar__event-btn, .input-group-prepend .navbar-user + .day-calendar__event-btn, .input-group-prepend .day-calendar__event-btn + .day-calendar__event-btn, .input-group-prepend .day-calendar__add-event + .day-calendar__event-btn, .input-group-prepend .staff-list__btn-add + .day-calendar__event-btn, .input-group-prepend .staff-list__btn-add-member + .day-calendar__event-btn, .input-group-prepend .collapse-box__toggle + .day-calendar__event-btn, .input-group-prepend .btn + .day-calendar__add-event, .input-group-prepend .navbar-user + .day-calendar__add-event, .input-group-prepend .day-calendar__event-btn + .day-calendar__add-event, .input-group-prepend .day-calendar__add-event + .day-calendar__add-event, .input-group-prepend .staff-list__btn-add + .day-calendar__add-event, .input-group-prepend .staff-list__btn-add-member + .day-calendar__add-event, .input-group-prepend .collapse-box__toggle + .day-calendar__add-event, .input-group-prepend .btn + .staff-list__btn-add, .input-group-prepend .navbar-user + .staff-list__btn-add, .input-group-prepend .day-calendar__event-btn + .staff-list__btn-add, .input-group-prepend .day-calendar__add-event + .staff-list__btn-add, .input-group-prepend .staff-list__btn-add + .staff-list__btn-add, .input-group-prepend .staff-list__btn-add-member + .staff-list__btn-add, .input-group-prepend .collapse-box__toggle + .staff-list__btn-add, .input-group-prepend .btn + .staff-list__btn-add-member, .input-group-prepend .navbar-user + .staff-list__btn-add-member, .input-group-prepend .day-calendar__event-btn + .staff-list__btn-add-member, .input-group-prepend .day-calendar__add-event + .staff-list__btn-add-member, .input-group-prepend .staff-list__btn-add + .staff-list__btn-add-member, .input-group-prepend .staff-list__btn-add-member + .staff-list__btn-add-member, .input-group-prepend .collapse-box__toggle + .staff-list__btn-add-member, .input-group-prepend .btn + .collapse-box__toggle, .input-group-prepend .navbar-user + .collapse-box__toggle, .input-group-prepend .day-calendar__event-btn + .collapse-box__toggle, .input-group-prepend .day-calendar__add-event + .collapse-box__toggle, .input-group-prepend .staff-list__btn-add + .collapse-box__toggle, .input-group-prepend .staff-list__btn-add-member + .collapse-box__toggle, .input-group-prepend .collapse-box__toggle + .collapse-box__toggle,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .navbar-user + .input-group-text,
   .input-group-prepend .day-calendar__event-btn + .input-group-text,
   .input-group-prepend .day-calendar__add-event + .input-group-text,
   .input-group-prepend .staff-list__btn-add + .input-group-text,
   .input-group-prepend .staff-list__btn-add-member + .input-group-text,
+  .input-group-prepend .collapse-box__toggle + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .input-group-text + .navbar-user,
@@ -2888,55 +2906,71 @@ input[type="button"].btn-block {
   .input-group-prepend .input-group-text + .day-calendar__add-event,
   .input-group-prepend .input-group-text + .staff-list__btn-add,
   .input-group-prepend .input-group-text + .staff-list__btn-add-member,
+  .input-group-prepend .input-group-text + .collapse-box__toggle,
   .input-group-append .btn + .btn,
   .input-group-append .navbar-user + .btn,
   .input-group-append .day-calendar__event-btn + .btn,
   .input-group-append .day-calendar__add-event + .btn,
   .input-group-append .staff-list__btn-add + .btn,
   .input-group-append .staff-list__btn-add-member + .btn,
+  .input-group-append .collapse-box__toggle + .btn,
   .input-group-append .btn + .navbar-user,
   .input-group-append .navbar-user + .navbar-user,
   .input-group-append .day-calendar__event-btn + .navbar-user,
   .input-group-append .day-calendar__add-event + .navbar-user,
   .input-group-append .staff-list__btn-add + .navbar-user,
   .input-group-append .staff-list__btn-add-member + .navbar-user,
+  .input-group-append .collapse-box__toggle + .navbar-user,
   .input-group-append .btn + .day-calendar__event-btn,
   .input-group-append .navbar-user + .day-calendar__event-btn,
   .input-group-append .day-calendar__event-btn + .day-calendar__event-btn,
   .input-group-append .day-calendar__add-event + .day-calendar__event-btn,
   .input-group-append .staff-list__btn-add + .day-calendar__event-btn,
   .input-group-append .staff-list__btn-add-member + .day-calendar__event-btn,
+  .input-group-append .collapse-box__toggle + .day-calendar__event-btn,
   .input-group-append .btn + .day-calendar__add-event,
   .input-group-append .navbar-user + .day-calendar__add-event,
   .input-group-append .day-calendar__event-btn + .day-calendar__add-event,
   .input-group-append .day-calendar__add-event + .day-calendar__add-event,
   .input-group-append .staff-list__btn-add + .day-calendar__add-event,
   .input-group-append .staff-list__btn-add-member + .day-calendar__add-event,
+  .input-group-append .collapse-box__toggle + .day-calendar__add-event,
   .input-group-append .btn + .staff-list__btn-add,
   .input-group-append .navbar-user + .staff-list__btn-add,
   .input-group-append .day-calendar__event-btn + .staff-list__btn-add,
   .input-group-append .day-calendar__add-event + .staff-list__btn-add,
   .input-group-append .staff-list__btn-add + .staff-list__btn-add,
   .input-group-append .staff-list__btn-add-member + .staff-list__btn-add,
+  .input-group-append .collapse-box__toggle + .staff-list__btn-add,
   .input-group-append .btn + .staff-list__btn-add-member,
   .input-group-append .navbar-user + .staff-list__btn-add-member,
   .input-group-append .day-calendar__event-btn + .staff-list__btn-add-member,
   .input-group-append .day-calendar__add-event + .staff-list__btn-add-member,
   .input-group-append .staff-list__btn-add + .staff-list__btn-add-member,
   .input-group-append .staff-list__btn-add-member + .staff-list__btn-add-member,
+  .input-group-append .collapse-box__toggle + .staff-list__btn-add-member,
+  .input-group-append .btn + .collapse-box__toggle,
+  .input-group-append .navbar-user + .collapse-box__toggle,
+  .input-group-append .day-calendar__event-btn + .collapse-box__toggle,
+  .input-group-append .day-calendar__add-event + .collapse-box__toggle,
+  .input-group-append .staff-list__btn-add + .collapse-box__toggle,
+  .input-group-append .staff-list__btn-add-member + .collapse-box__toggle,
+  .input-group-append .collapse-box__toggle + .collapse-box__toggle,
   .input-group-append .btn + .input-group-text,
   .input-group-append .navbar-user + .input-group-text,
   .input-group-append .day-calendar__event-btn + .input-group-text,
   .input-group-append .day-calendar__add-event + .input-group-text,
   .input-group-append .staff-list__btn-add + .input-group-text,
   .input-group-append .staff-list__btn-add-member + .input-group-text,
+  .input-group-append .collapse-box__toggle + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .input-group-text + .navbar-user,
   .input-group-append .input-group-text + .day-calendar__event-btn,
   .input-group-append .input-group-text + .day-calendar__add-event,
   .input-group-append .input-group-text + .staff-list__btn-add,
-  .input-group-append .input-group-text + .staff-list__btn-add-member {
+  .input-group-append .input-group-text + .staff-list__btn-add-member,
+  .input-group-append .input-group-text + .collapse-box__toggle {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2979,12 +3013,14 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .day-calendar__add-event,
 .input-group-lg > .input-group-prepend > .staff-list__btn-add,
 .input-group-lg > .input-group-prepend > .staff-list__btn-add-member,
+.input-group-lg > .input-group-prepend > .collapse-box__toggle,
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > .navbar-user,
 .input-group-lg > .input-group-append > .day-calendar__event-btn,
 .input-group-lg > .input-group-append > .day-calendar__add-event,
 .input-group-lg > .input-group-append > .staff-list__btn-add,
-.input-group-lg > .input-group-append > .staff-list__btn-add-member {
+.input-group-lg > .input-group-append > .staff-list__btn-add-member,
+.input-group-lg > .input-group-append > .collapse-box__toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3004,12 +3040,14 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .day-calendar__add-event,
 .input-group-sm > .input-group-prepend > .staff-list__btn-add,
 .input-group-sm > .input-group-prepend > .staff-list__btn-add-member,
+.input-group-sm > .input-group-prepend > .collapse-box__toggle,
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > .navbar-user,
 .input-group-sm > .input-group-append > .day-calendar__event-btn,
 .input-group-sm > .input-group-append > .day-calendar__add-event,
 .input-group-sm > .input-group-append > .staff-list__btn-add,
-.input-group-sm > .input-group-append > .staff-list__btn-add-member {
+.input-group-sm > .input-group-append > .staff-list__btn-add-member,
+.input-group-sm > .input-group-append > .collapse-box__toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3019,7 +3057,7 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .navbar-user, .input-group > .input-group-prepend > .day-calendar__event-btn, .input-group > .input-group-prepend > .day-calendar__add-event, .input-group > .input-group-prepend > .staff-list__btn-add, .input-group > .input-group-prepend > .staff-list__btn-add-member,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .navbar-user, .input-group > .input-group-prepend > .day-calendar__event-btn, .input-group > .input-group-prepend > .day-calendar__add-event, .input-group > .input-group-prepend > .staff-list__btn-add, .input-group > .input-group-prepend > .staff-list__btn-add-member, .input-group > .input-group-prepend > .collapse-box__toggle,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .navbar-user,
@@ -3027,6 +3065,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:not(:last-child) > .day-calendar__add-event,
 .input-group > .input-group-append:not(:last-child) > .staff-list__btn-add,
 .input-group > .input-group-append:not(:last-child) > .staff-list__btn-add-member,
+.input-group > .input-group-append:not(:last-child) > .collapse-box__toggle,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .navbar-user:not(:last-child):not(.dropdown-toggle),
@@ -3034,11 +3073,12 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:last-child > .day-calendar__add-event:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .staff-list__btn-add:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .staff-list__btn-add-member:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .collapse-box__toggle:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .navbar-user, .input-group > .input-group-append > .day-calendar__event-btn, .input-group > .input-group-append > .day-calendar__add-event, .input-group > .input-group-append > .staff-list__btn-add, .input-group > .input-group-append > .staff-list__btn-add-member,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .navbar-user, .input-group > .input-group-append > .day-calendar__event-btn, .input-group > .input-group-append > .day-calendar__add-event, .input-group > .input-group-append > .staff-list__btn-add, .input-group > .input-group-append > .staff-list__btn-add-member, .input-group > .input-group-append > .collapse-box__toggle,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .navbar-user,
@@ -3046,6 +3086,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:not(:first-child) > .day-calendar__add-event,
 .input-group > .input-group-prepend:not(:first-child) > .staff-list__btn-add,
 .input-group > .input-group-prepend:not(:first-child) > .staff-list__btn-add-member,
+.input-group > .input-group-prepend:not(:first-child) > .collapse-box__toggle,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .navbar-user:not(:first-child),
@@ -3053,6 +3094,7 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:first-child > .day-calendar__add-event:not(:first-child),
 .input-group > .input-group-prepend:first-child > .staff-list__btn-add:not(:first-child),
 .input-group > .input-group-prepend:first-child > .staff-list__btn-add-member:not(:first-child),
+.input-group > .input-group-prepend:first-child > .collapse-box__toggle:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4072,7 +4114,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .navbar-user .badge, .day-calendar__event-btn .badge, .day-calendar__add-event .badge, .staff-list__btn-add .badge, .staff-list__btn-add-member .badge {
+.btn .badge, .navbar-user .badge, .day-calendar__event-btn .badge, .day-calendar__add-event .badge, .staff-list__btn-add .badge, .staff-list__btn-add-member .badge, .collapse-box__toggle .badge {
   position: relative;
   top: -1px; }
 
@@ -5304,16 +5346,18 @@ button.bg-warning:hover,
 button.bg-warning:focus {
   background-color: #d39e00 !important; }
 
-.bg-danger, .navbar-notification-counter, .day-calendar__body__time--highlited {
+.bg-danger, .navbar-notification-counter, .day-calendar__body__time--highlited, .calendar-day__cell-grid-time__item--highlited {
   background-color: #dc3545 !important; }
 
-a.bg-danger:hover, a.navbar-notification-counter:hover, a.day-calendar__body__time--highlited:hover, a.bg-danger:focus, a.navbar-notification-counter:focus, a.day-calendar__body__time--highlited:focus,
+a.bg-danger:hover, a.navbar-notification-counter:hover, a.day-calendar__body__time--highlited:hover, a.calendar-day__cell-grid-time__item--highlited:hover, a.bg-danger:focus, a.navbar-notification-counter:focus, a.day-calendar__body__time--highlited:focus, a.calendar-day__cell-grid-time__item--highlited:focus,
 button.bg-danger:hover,
 button.navbar-notification-counter:hover,
 button.day-calendar__body__time--highlited:hover,
+button.calendar-day__cell-grid-time__item--highlited:hover,
 button.bg-danger:focus,
 button.navbar-notification-counter:focus,
-button.day-calendar__body__time--highlited:focus {
+button.day-calendar__body__time--highlited:focus,
+button.calendar-day__cell-grid-time__item--highlited:focus {
   background-color: #bd2130 !important; }
 
 .bg-light {
@@ -5332,7 +5376,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label, .collapse-box__toggle {
   background-color: #fff !important; }
 
 .bg-transparent, .btn-outline-primary, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
@@ -5359,7 +5403,7 @@ button.bg-dark:focus {
 .calendar-panel .fc-scrollgrid-liquid thead tr td,
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .custom-switch .custom-control-label:before, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__event--add-event, .day-calendar__add-event, .staff-list__btn-add-member, .modal-content, .bootstrap-select .dropdown-toggle:after {
+.table > thead > tr td, .day-calendar__event--add-event, .day-calendar__add-event, .staff-list__btn-add-member, .modal-content, .bootstrap-select .dropdown-toggle:after, .collapse-box__toggle {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5426,7 +5470,7 @@ button.bg-dark:focus {
 .rounded-lg {
   border-radius: 0.3rem !important; }
 
-.rounded-circle, .navbar-user__avatar, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .room-badge, .switch-label:before {
+.rounded-circle, .navbar-user__avatar, .navbar-notification-counter, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .room-badge, .switch-label:before, .collapse-box__toggle {
   border-radius: 50% !important; }
 
 .rounded-pill {
@@ -5446,7 +5490,7 @@ button.bg-dark:focus {
 .d-inline {
   display: inline !important; }
 
-.d-inline-block {
+.d-inline-block, .day-calendar__event__label--warning {
   display: inline-block !important; }
 
 .d-block, .naviation-link, .calendar-tab, .calendar-week__cell-grid-time__item--heading {
@@ -5461,7 +5505,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .table-control-box, .icon-box, .day-calendar__body-row, .day-calendar__body-cell, .day-calendar__body__item__grid, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .naviation, .switch-label, .calendar-tabs, .calendar-day__row, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__row, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__row, .calendar-month__cell-grid, .calendar-month__cell-grid-time {
+.d-flex, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .table-control-box, .icon-box, .day-calendar__body-row, .day-calendar__body-cell, .day-calendar__body__item__grid, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .naviation, .switch-label, .calendar-tabs, .calendar-day__row, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__row, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__row, .calendar-month__cell-grid, .calendar-month__cell-grid-time, .collapse-box, .collapse-box__header, .collapse-box__toggle {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5618,7 +5662,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .calendar-panel .fc-header-toolbar, .table-control-box, .naviation {
+.flex-column, .calendar-panel .fc-header-toolbar, .table-control-box, .naviation, .collapse-box {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5642,7 +5686,7 @@ button.bg-dark:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill, .day-calendar-body, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item, .calendar-grid-body, .calendar-day__cell-grid__item, .calendar-week__cell-grid__item, .calendar-month__cell-grid__item {
+.flex-fill, .day-calendar-body, .day-calendar__body-cell, .day-calendar__body__item, .day-calendar__body__item__grid-item, .calendar-grid-body, .calendar-day__cell-grid__item, .calendar-week__cell-grid__item, .calendar-month__cell-grid__item, .collapse-box__divider, .collapse-box__body {
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important; }
 
@@ -5668,7 +5712,7 @@ button.bg-dark:focus {
   -webkit-box-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .navbar-notification-counter, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .modal-footer {
+.justify-content-center, .navbar-notification-counter, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .modal-footer, .collapse-box__toggle {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -5687,7 +5731,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .switch-label {
+.align-items-center, .navbar-user, .navbar-notification-counter, .custom-select .filter-option, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day .fc-daygrid-day-number, .btn-control, .icon-box, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .switch-label, .collapse-box__header, .collapse-box__toggle {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -6209,7 +6253,7 @@ button.bg-dark:focus {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
 .shadow-none, .btn-icon, .navbar-user, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .custom-switch .custom-control-label:before, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .custom-switch .custom-control-label:before, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .collapse-box__toggle {
   box-shadow: none !important; }
 
 .w-25 {
@@ -6221,9 +6265,9 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navbar-nav > .nav-item > a.nav-link:before, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk,
+.w-100, .navbar-nav > .nav-item > a.nav-link:before, .box, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk,
 .calendar-panel .fc-header-toolbar .fc-button-group, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:before,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body-cell, .day-calendar__body__item__grid, .staff-list__btn-add-member, .naviation-link, .calendar-tabs, .calendar-tab:before, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__cell-grid, .calendar-month__cell-grid-time {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:before, .day-calendar__body-cell, .day-calendar__body__item__grid, .staff-list__btn-add-member, .naviation-link, .calendar-tabs, .calendar-tab:before, .calendar-day__cell-grid, .calendar-day__cell-grid-time, .calendar-week__cell-grid, .calendar-week__cell-grid-time, .calendar-month__cell-grid, .calendar-month__cell-grid-time, .collapse-box {
   width: 100% !important; }
 
 .w-auto {
@@ -6284,7 +6328,7 @@ button.bg-dark:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0, .day-calendar__event__name, .staff-list__name,
+.mb-0, .day-calendar__event__name, .staff-list__name, .collapse-box .box,
 .my-0 {
   margin-bottom: 0 !important; }
 
@@ -6324,7 +6368,7 @@ button.bg-dark:focus {
 .mx-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, .staff-list__panel-name,
+.mb-2, .staff-list__panel-name, .collapse-box__header,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -6339,7 +6383,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-top: 1rem !important; }
 
-.mr-3,
+.mr-3, .collapse-box__divider,
 .mx-3 {
   margin-right: 1rem !important; }
 
@@ -6389,7 +6433,7 @@ button.bg-dark:focus {
 .mx-5 {
   margin-left: 3rem !important; }
 
-.p-0, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .day-calendar__add-event, .staff-list__btn-add {
+.p-0, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .btn-control, .day-calendar__add-event, .staff-list__btn-add, .collapse-box__toggle {
   padding: 0 !important; }
 
 .pt-0,
@@ -7763,17 +7807,17 @@ button.bg-dark:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active {
+.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active, .calendar-day__cell-grid-time__item--highlited {
   color: #fff !important; }
 
 .text-primary, .navbar-user__name,
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th,
 .table > tbody > tr td, .table > tfoot > tr > th,
-.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item {
+.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item, .collapse-box__toggle {
   color: #007bff !important; }
 
-a.text-primary:hover, a.navbar-user__name:hover, a.staff-list__btn-add-member:hover, a.calendar-tab:hover, a.calendar-week__cell-grid-time__item:hover, a.text-primary:focus, a.navbar-user__name:focus, a.staff-list__btn-add-member:focus, a.calendar-tab:focus, a.calendar-week__cell-grid-time__item:focus {
+a.text-primary:hover, a.navbar-user__name:hover, a.staff-list__btn-add-member:hover, a.calendar-tab:hover, a.calendar-week__cell-grid-time__item:hover, a.collapse-box__toggle:hover, a.text-primary:focus, a.navbar-user__name:focus, a.staff-list__btn-add-member:focus, a.calendar-tab:focus, a.calendar-week__cell-grid-time__item:focus, a.collapse-box__toggle:focus {
   color: #0056b3 !important; }
 
 .text-secondary {
@@ -7859,7 +7903,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.navbar-user):not(.day-calendar__event-btn):not(.day-calendar__add-event):not(.staff-list__btn-add):not(.staff-list__btn-add-member) {
+  a:not(.btn):not(.navbar-user):not(.day-calendar__event-btn):not(.day-calendar__add-event):not(.staff-list__btn-add):not(.staff-list__btn-add-member):not(.collapse-box__toggle) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9563,14 +9607,14 @@ a.text-dark:hover, a.text-dark:focus {
 /* MIXINS */
 /* VARIABLES */
 /* Color variables */
-.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active {
+.text-white, .navbar-notification-counter, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .calendar-panel .fc-scrollgrid-liquid tbody .fc-daygrid-day.fc-day-today .fc-daygrid-day-number, .day-calendar__body__time--highlited, .bootstrap-select .dropdown-menu .dropdown-item.active, .bootstrap-select .dropdown-menu .dropdown-item:active, .calendar-day__cell-grid-time__item--highlited {
   color: #ffffff !important; }
 
 .text-black, .staff-list__btn-add-member:hover, .staff-list__btn-add-member:focus, .staff-list__btn-add-member:active {
   color: #000000 !important; }
 
 .text-sky, .navbar-nav > .nav-item.active .nav-link, .navbar-nav > .nav-item.active .nav-link:hover, .navbar-nav > .nav-item > a.nav-link:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:hover,
-.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:focus, .btn-control:hover, .btn-control:focus, .day-calendar__add-event, .naviation-link:hover, .naviation-link:active, .naviation-link.active, .calendar-tab:hover, .calendar-tab.active, .calendar-tab.active:focus, .calendar-tab.active:active {
+.calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:hover, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button:focus, .btn-control:hover, .btn-control:focus, .day-calendar__add-event, .naviation-link:hover, .naviation-link:active, .naviation-link.active, .calendar-tab:hover, .calendar-tab.active, .calendar-tab.active:focus, .calendar-tab.active:active, .collapse-box__toggle:hover, .collapse-box__toggle:focus, .collapse-box__toggle:active {
   color: #487EFB !important; }
 
 .text-sky-secondary {
@@ -9588,7 +9632,7 @@ a.text-dark:hover, a.text-dark:focus {
 .calendar-panel .fc-scrollgrid-liquid tbody tr th,
 .calendar-panel .fc-scrollgrid-liquid tbody tr td, .table > tbody > tr > th,
 .table > tbody > tr td, .table > tfoot > tr > th,
-.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item {
+.table > tfoot > tr td, .staff-list__btn-add-member, .calendar-tab, .calendar-week__cell-grid-time__item, .collapse-box__toggle {
   color: #556280 !important; }
 
 .text-gray {
@@ -9621,7 +9665,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-success-secondary {
   color: #E4F7ED !important; }
 
-.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label {
+.bg-white, .navbar, .box, .custom-switch .custom-control-input:checked ~ .custom-control-label:after, .custom-switch .custom-control-label:after, .day-calendar-body, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .calendar-grid-body, .switch-label, .collapse-box__toggle {
   background-color: #ffffff !important; }
 
 .bg-black {
@@ -9657,10 +9701,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .bg-blue-thin, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk .fc-button-group,
 .calendar-panel .fc-header-toolbar .fc-button-group .fc-button-group, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__event--add-event, .calendar-tabs {
+.table > thead > tr td, .day-calendar__event--blue, .day-calendar__event--add-event, .calendar-tabs {
   background-color: #f2f6ff !important; }
 
-.bg-danger, .navbar-notification-counter, .day-calendar__body__time--highlited {
+.bg-danger, .navbar-notification-counter, .day-calendar__body__time--highlited, .calendar-day__cell-grid-time__item--highlited {
   background-color: #DA6E69 !important; }
 
 .bg-danger-secondary, .icon-box--danger, .day-calendar__event--danger, .staff-list__item--danger {
@@ -9694,8 +9738,8 @@ a.text-dark:hover, a.text-dark:focus {
 .table > tfoot > tr td {
   font-family: "Roboto-Black" !important; }
 
-.font-icons:before {
-  font-family: "fontello"; }
+.font-icons:before, .collapse-box__toggle:before {
+  font-family: "icomoon"; }
 
 /*************************
 	Base variables
@@ -9724,7 +9768,7 @@ a.text-dark:hover, a.text-dark:focus {
 /*************************
 	Gutter variables
 *************************/
-.mb-base-gutter, .navbar, .box {
+.mb-base-gutter, .navbar, .box, .collapse-box {
   margin-bottom: 16px; }
 
 .mr-base-gutter {
@@ -10003,12 +10047,12 @@ b {
 .fs-9 {
   font-size: 9px !important; }
 
-.fs-10, .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .day-calendar__body__time, .day-calendar__event, .day-calendar__event__role, .staff-list__name, .staff-list__role, .switch-label__title, .calendar-day__cell-grid-time__item {
+.fs-10, .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .btn-group-sm > .collapse-box__toggle, .day-calendar__event-btn, .calendar-panel .fc-header-toolbar .fc-toolbar-chunk:nth-child(2) > div .fc-button, .day-calendar__body__time, .day-calendar__event, .day-calendar__event__role, .staff-list__name, .staff-list__role, .switch-label__title, .calendar-day__cell-grid-time__item, .collapse-box__toggle {
   font-size: 10px !important; }
 
 .fs-11, .calendar-panel .fc-scrollgrid-liquid thead tr th,
 .calendar-panel .fc-scrollgrid-liquid thead tr td, .table > thead > tr > th,
-.table > thead > tr td, .day-calendar__body__time--heading, .day-calendar__body__time--highlited, .calendar-week__cell-grid-time__item, .calendar-month__cell-grid-time__item {
+.table > thead > tr td, .day-calendar__body__time--heading, .day-calendar__body__time--highlited, .calendar-day--staff .calendar-day__cell-grid-time__item:first-child, .calendar-day__cell-grid-time__item--highlited, .calendar-week__cell-grid-time__item, .calendar-month__cell-grid-time__item {
   font-size: 11px !important; }
 
 .fs-12,
@@ -10092,6 +10136,40 @@ b {
 .fs-36 {
   font-size: 36px !important; }
 
+/* MARGINS */
+.mb-10 {
+  margin-bottom: 10px !important; }
+
+.mb-11 {
+  margin-bottom: 11px !important; }
+
+.mb-12 {
+  margin-bottom: 12px !important; }
+
+.mb-13 {
+  margin-bottom: 13px !important; }
+
+.mb-14 {
+  margin-bottom: 14px !important; }
+
+.mb-15 {
+  margin-bottom: 15px !important; }
+
+.mb-16 {
+  margin-bottom: 16px !important; }
+
+.mb-17 {
+  margin-bottom: 17px !important; }
+
+.mb-18 {
+  margin-bottom: 18px !important; }
+
+.mb-19 {
+  margin-bottom: 19px !important; }
+
+.mb-20 {
+  margin-bottom: 20px !important; }
+
 /* RESET STYLES */
 *:hover, *:focus, *:active {
   outline: none !important; }
@@ -10156,6 +10234,12 @@ ul {
 
 .icon-arrow-right:before {
   content: "\e902"; }
+
+.icon-arrow-down:before {
+  content: "\e90f"; }
+
+.icon-arrow-up:before, .collapse-box__toggle:before {
+  content: "\e910"; }
 
 .icon-arrow-left:before {
   content: "\e903"; }
@@ -10246,7 +10330,7 @@ ul {
     content: none; }
 
 /* BUTTONS */
-.btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member {
+.btn, .navbar-user, .day-calendar__event-btn, .day-calendar__add-event, .staff-list__btn-add, .staff-list__btn-add-member, .collapse-box__toggle {
   font-size: 13px;
   font-family: "Roboto-Medium";
   padding: 2.5px 11px; }
@@ -10294,7 +10378,7 @@ ul {
       border-color: #487EFB; }
   .btn-rounded {
     border-radius: 10px; }
-  .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .day-calendar__event-btn {
+  .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .navbar-user, .btn-group-sm > .day-calendar__event-btn, .btn-group-sm > .day-calendar__add-event, .btn-group-sm > .staff-list__btn-add, .btn-group-sm > .staff-list__btn-add-member, .btn-group-sm > .collapse-box__toggle, .day-calendar__event-btn {
     padding: 1px 10px; }
   .btn-md {
     padding: 10px 15px; }
@@ -10319,6 +10403,9 @@ ul {
   margin-bottom: 16px; }
   .alert-warning {
     background-image: linear-gradient(92deg, #fffaed, #ffd479 99%); }
+  .alert .close {
+    text-shadow: none;
+    opacity: 1; }
 
 /* BOX */
 .box {
@@ -10478,9 +10565,12 @@ ul {
   min-width: 722px; }
 
 .day-calendar__body-row {
-  min-height: 97px; }
+  min-height: 96px; }
   .day-calendar__body-row:not(:last-child) .day-calendar__body__item {
     border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+
+.day-calendar__body-cell {
+  width: 148px; }
 
 .day-calendar__body__item {
   min-width: 32px;
@@ -10514,18 +10604,23 @@ ul {
 
 .day-calendar__event {
   border-radius: 0 6px 6px 0;
-  border-left: 2px solid #EFB843;
+  border-left: 5px solid #EFB843;
   background-color: #f5f7fa;
   padding: 10px 13px;
   left: -1px;
   bottom: 8px;
   width: calc(100% - 4px);
   z-index: 15;
-  min-height: 83px; }
+  min-height: 50px; }
+  .day-calendar__event--xs {
+    width: calc(100% - 20px);
+    border-left-width: 3px; }
   .day-calendar__event--success {
     border-left-color: #79D6A7; }
   .day-calendar__event--danger {
     border-left-color: #DA6E69; }
+  .day-calendar__event--blue {
+    border-left-color: #487EFB; }
   .day-calendar__event--add-event {
     border-radius: 6px; }
     .day-calendar__event--add-event:after {
@@ -10550,7 +10645,11 @@ ul {
     -webkit-transform: translateX(145px);
             transform: translateX(145px); }
   .day-calendar__event--xl {
-    width: 285px; }
+    width: 297px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 .day-calendar__event__name {
   color: rgba(0, 0, 0, 0.75); }
@@ -10568,6 +10667,12 @@ ul {
   width: 28px;
   height: 28px;
   box-shadow: 0 2px 4px 0 rgba(121, 214, 167, 0.17); }
+
+.day-calendar__event__label {
+  border-radius: 8.5px; }
+  .day-calendar__event__label--warning {
+    background-color: #f7e6c1;
+    padding: 0px 6px; }
 
 /* ROOM BADGE */
 .room-badge {
@@ -10611,7 +10716,7 @@ ul {
 .staff-list__btn-add-member {
   min-height: 40px;
   padding: 10px 15px;
-  margin-top: 10px; }
+  margin-top: 30px; }
 
 .staff-list__panel--pink {
   background-color: #f2daf7; }
@@ -10792,6 +10897,10 @@ ul {
   overflow-x: auto;
   padding-top: 20px;
   border-bottom: 1px solid rgba(85, 98, 128, 0.09); }
+  .calendar-day--staff .calendar-day__cell-grid-time__item:first-child {
+    color: rgba(85, 98, 128, 0.5); }
+  .calendar-day--staff .calendar-day__row:first-child .calendar-day__cell {
+    height: 88px; }
 
 .calendar-day__row:first-child .calendar-day__cell {
   height: 30px; }
@@ -10800,7 +10909,6 @@ ul {
   border-top: 1px solid rgba(85, 98, 128, 0.09); }
 
 .calendar-day__cell {
-  z-index: 10;
   width: 153px;
   height: 95px;
   border-left: 1px solid rgba(85, 98, 128, 0.09); }
@@ -10822,6 +10930,10 @@ ul {
 .calendar-day__cell-grid-time__item {
   color: rgba(85, 98, 128, 0.2);
   width: 38px; }
+  .calendar-day__cell-grid-time__item--highlited {
+    border-radius: 8px;
+    padding: 0px 4px;
+    left: -6px; }
 
 .calendar-day__event {
   left: -1px;
@@ -11054,3 +11166,20 @@ ul {
       opacity: 1; }
     .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
       background-color: #bcc8e4; }
+
+/* COLLAPSE BOX */
+.collapse-box__divider {
+  height: 1px;
+  background-color: rgba(85, 98, 128, 0.09); }
+
+.collapse-box__toggle {
+  box-shadow: 0 2px 4px 0 rgba(72, 126, 251, 0.12);
+  height: 20px;
+  width: 20px; }
+  .collapse-box__toggle--is-opened:before {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.collapse-box__body {
+  display: -webkit-box;
+  display: flex; }

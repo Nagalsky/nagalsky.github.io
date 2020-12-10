@@ -7,6 +7,23 @@ $calendar-day-border-color: rgba(85, 98, 128, 0.09);
     overflow-x: auto;
     padding-top: 20px;
     border-bottom: 1px solid $calendar-day-border-color;
+
+    &--staff {
+        .calendar-day__cell-grid-time__item {
+            &:first-child {
+                @extend .fs-11;
+                color: rgba($primary, .5);
+            }
+        }
+
+        .calendar-day__row {
+            &:first-child {
+                .calendar-day__cell {
+                    height: 88px;
+                }
+            }
+        }
+    }
 }
 
 .calendar-day__body {
@@ -34,7 +51,6 @@ $calendar-day-border-color: rgba(85, 98, 128, 0.09);
 .calendar-day__cell {
     @extend .position-relative,
     .flex-shrink-0;
-    z-index: 10;
     width: $calendar-day-cell-size;
     height: 95px;
     border-left: 1px solid $calendar-day-border-color;
@@ -75,6 +91,15 @@ $calendar-day-border-color: rgba(85, 98, 128, 0.09);
     .font-medium;
     color: rgba($primary, .2);
     width: 38px;
+
+    &--highlited {
+        @extend .bg-danger,
+        .text-white,
+        .fs-11;
+        border-radius: 8px;
+        padding: 0px 4px;
+        left: -6px;
+    }
 }
 
 .calendar-day__event {

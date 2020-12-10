@@ -26,4 +26,12 @@ $(document).ready(function(){
             all.checked = len===total;
         }
     });
+
+    //Collapse box action
+    $(function(){
+        $('.collapse-box__toggle').on('click', function(){
+            $(this).toggleClass('collapse-box__toggle--is-opened')
+            $(this).parent().next('.collapse-box__body').slideToggle(1)
+        })
+    });
 })

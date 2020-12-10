@@ -47,7 +47,7 @@ $day-grid-width: 35px;
 .day-calendar__body-row {
     @extend .d-flex,
     .flex-nowrap;
-    min-height: 97px;
+    min-height: 96px;
 
     &:not(:last-child) {
         .day-calendar__body__item {
@@ -68,6 +68,7 @@ $day-grid-width: 35px;
     .flex-nowrap,
     .w-100,
     .position-relative;
+    width: 148px;
 }
 
 .day-calendar__body__item {
@@ -133,14 +134,19 @@ $day-grid-width: 35px;
     .text-blue,
     .position-absolute;
     border-radius: 0 $radius-base $radius-base 0;
-    border-left: 2px solid $warning;
+    border-left: 5px solid $warning;
     background-color: #f5f7fa;
     padding: 10px 13px;
     left: -1px;
     bottom: 8px;
     width: calc(100% - 4px);
     z-index: 15;
-    min-height: 83px;
+    min-height: 50px;
+
+    &--xs {
+        width: calc(100% - 20px);
+        border-left-width: 3px;
+    }
 
     &--success {
         @extend .bg-success-secondary;
@@ -150,6 +156,11 @@ $day-grid-width: 35px;
     &--danger {
         @extend .bg-danger-secondary;
         border-left-color: $danger;
+    }
+
+    &--blue {
+        @extend .bg-blue-thin;
+        border-left-color: $sky;
     }
 
     &--add-event {
@@ -187,7 +198,10 @@ $day-grid-width: 35px;
     }
 
     &--xl {
-        width: 285px;
+        width: 297px;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
     }
 }
 
@@ -234,4 +248,14 @@ $day-grid-width: 35px;
     width: 28px;
     height: 28px;
     box-shadow: 0 2px 4px 0 rgba(121, 214, 167, 0.17);
+}
+
+.day-calendar__event__label {
+    border-radius: 8.5px;
+
+    &--warning {
+        @extend .d-inline-block;
+        background-color: #f7e6c1;
+        padding: 0px 6px;
+    }
 }
