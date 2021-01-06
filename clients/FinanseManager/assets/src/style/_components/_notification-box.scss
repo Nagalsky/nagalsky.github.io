@@ -1,0 +1,48 @@
+/* NOTIFICATION BOX */
+
+$notification-box-icon-box-size: 52px;
+
+
+
+.notification-box {
+    @extend .d-flex,
+    .align-items-center,
+    .fs-13;
+
+    &+.notification-box {
+        margin-top: 32px;
+    }
+}
+
+.notification-box__icon-box {
+    @extend .flex-shrink-0,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .mr-3;
+    width: $notification-box-icon-box-size - 20px;
+    height: $notification-box-icon-box-size - 20px;
+    font-size: 16px;
+    border-radius: 13px;
+
+    @include media-breakpoint-up(sm) {
+        width: $notification-box-icon-box-size;
+        height: $notification-box-icon-box-size;
+        font-size: 18px;
+    }
+
+    &--success {
+        @extend .bg-green300,
+        .text-green600;
+    }
+
+    &--danger {
+        @extend .bg-rose500,
+        .text-rose700;
+    }
+}
+
+.notification-box__body {
+    @extend .flex-fill,
+    .d-flex;
+}
