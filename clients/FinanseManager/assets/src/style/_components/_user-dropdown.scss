@@ -1,0 +1,35 @@
+/* USER DROPDOWN */
+
+.user-dropdown {
+    @extend .position-relative,
+    .d-flex,
+    .align-items-center,
+    .font-icons,
+    .icon-arrow-down,
+    .btn;
+    border: 1px solid $gray300;
+    padding: 5.5px 36px 5.5px 8px;
+    border-radius: 25px;
+
+    &[aria-expanded="true"] {
+        &:before {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    &:before {
+        @extend .position-absolute,
+        .fs-12;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include transition($base-animation);
+    }
+}
+
+.user-dropdown__avatar {
+    @extend .rounded-circle,
+    .mr-3;
+    width: 38px;
+    height: 38px;
+}

@@ -1,0 +1,29 @@
+/* BUTTONS */
+
+.btn {
+    @extend .align-items-center,
+    .font-medium,
+    .position-relative;
+    display: inline-flex;
+    border-radius: 13px;
+
+    &-primary {
+        @include button-variants($bg: $blue500, $color: $white);
+    }
+
+    &-rose {
+        @include button-variants($bg: $rose500, $color: $blue500);
+    }
+
+    &-circle {
+        border-radius: 25px;
+    }
+
+    &-lg {
+        padding: 12.5px 16px;
+
+        @include media-breakpoint-up(md) {
+            padding: 12.5px 25px;
+        }
+    }
+}
