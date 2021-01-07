@@ -1,0 +1,39 @@
+/* FORM SEARCH */
+
+$form-search-field-border-color: #f4f4f4;
+
+.form-search {
+    @include media-breakpoint-up(lg) {
+        width: 280px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: 450px;
+    }
+
+    .form-group {
+        @extend .position-relative,
+        .m-0;
+    }
+
+    .form-control {
+        border-color: $form-search-field-border-color;
+        padding-left: 50px;
+
+        &:focus {
+            border-color: darken($form-search-field-border-color, 5%);
+        }
+
+        @include custom-placeholder($color: $gray500,
+            $font-size: 13px,
+            $font-family: $font-medium);
+    }
+}
+
+.form-search__icon {
+    @extend .position-absolute,
+    .fs-18;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+}

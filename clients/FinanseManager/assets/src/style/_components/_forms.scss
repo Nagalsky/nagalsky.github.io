@@ -1,6 +1,23 @@
 /* FORMS */
 
+$field-height: 48px;
+$field-bg: $gray600;
+
 .form-control {
-	-webkit-appearance:none;
-	-moz-appearance:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: $field-height;
+	border-radius: $radius-base;
+	background-color: $field-bg;
+	border-color: $field-bg;
+
+	&:focus {
+		background-color: $field-bg;
+		border-color: darken($field-bg, 5%);
+		box-shadow: none;
+	}
+
+	@include custom-placeholder($color: $blue500,
+		$font-size: 14px,
+		$font-family: $font-medium);
 }

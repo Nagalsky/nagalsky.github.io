@@ -6,6 +6,7 @@
     .position-relative;
     display: inline-flex;
     border-radius: 13px;
+    padding: 9px 16px;
 
     &-primary {
         @include button-variants($bg: $blue500, $color: $white);
@@ -15,8 +16,33 @@
         @include button-variants($bg: $rose500, $color: $blue500);
     }
 
+    &-outline-secondary {
+        @include button-outline-variants($border-color: $gray300, $color: $blue500);
+    }
+
     &-circle {
         border-radius: 25px;
+    }
+
+    &-dropdown {
+        @extend .font-icons,
+        .icon-arrow-down;
+        padding-right: 36px;
+
+        &[aria-expanded="true"] {
+            &:before {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+
+        &:before {
+            @extend .position-absolute,
+            .fs-12;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include transition($base-animation);
+        }
     }
 
     &-lg {
