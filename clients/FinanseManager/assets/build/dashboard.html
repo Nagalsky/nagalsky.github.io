@@ -316,8 +316,8 @@
                       </div>
 
                       <div class="d-flex align-items-center justify-content-center">
-                        <a href="#" class="btn btn-primary btn-circle btn-sm">Apply</a>
-                        <a href="#" class="btn btn-outline-primary btn-circle btn-sm ml-3">Clear</a>
+                        <button type="button" class="btn btn-primary btn-circle btn-sm">Apply</button>
+                        <button type="button" class="btn btn-outline-primary btn-circle btn-sm ml-3">Clear</button>
                       </div>
                     </div>
                   </div>
@@ -494,17 +494,6 @@
         show: false,
       },
       colors: ['#ef74c6', '#b957d2', '#5b2ca0', '#ffd285', '#fe9081'],
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200
-          },
-          legend: {
-            position: 'bottom'
-          }
-        }
-      }]
     };
 
     var chart = new ApexCharts(document.querySelector("#donut-chart"), options);
