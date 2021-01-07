@@ -178,14 +178,84 @@
 
           <div class="col-xl-5">
             <div class="row">
-              <div class="col-xl-7 col-sm-6 mb-4 mb-sm-0">
-                <div id="donut-chart"></div>
+              <div class="col-xl-7 col-sm-6 mb-5 mb-sm-0">
+                <div class="donut-chart">
+                  <div id="donut-chart"></div>
+                </div>
+
+                <div class="donut-chart-dropdown">
+                  <div class="donut-chart-dropdown__inner">
+                    <div class="collapse" id="collapse">
+                      <div class="donut-chart-dropdown__body" data-simplebar>
+                        <div class="donut-chart__legend donut-chart__legend--purple"><span
+                            class="flex-fill">Marketing</span> <span class="donut-chart__percent">30%</span></div>
+                        <div class="donut-chart__legend donut-chart__legend--pink"><span class="flex-fill">Rent</span>
+                          <span class="donut-chart__percent">40%</span></div>
+                        <div class="donut-chart__legend donut-chart__legend--rose"><span
+                            class="flex-fill">Repairing</span> <span class="donut-chart__percent">23%</span></div>
+                        <div class="donut-chart__legend donut-chart__legend--orange"><span
+                            class="flex-fill">Goods</span>
+                          <span class="donut-chart__percent">04%</span></div>
+                        <div class="donut-chart__legend donut-chart__legend--yellow"><span
+                            class="flex-fill">Lorem</span>
+                          <span class="donut-chart__percent">10%</span></div>
+                      </div>
+                    </div>
+
+                    <button class="donut-chart-dropdown__toggle" type="button" data-toggle="collapse"
+                      data-target="#collapse" aria-expanded="false">
+                      <i class="icon-arrow-down donut-chart-dropdown__icon"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
 
               <div class="col-xl-5 col-sm-6">
-                right
+                <div class="box box--green">
+                  <div class="box__icon-holder">
+                    <i class="icon-less-expenses"></i>
+                  </div>
+                  <p class="box__title">50%</p>
+                  <p class="box__subtitle">Less Expenses</p>
+                </div>
+
+                <div class="box box--blue">
+                  <div class="box__icon-holder">
+                    <img src="img/icons/amount.svg" class="box__icon-img" alt="">
+                  </div>
+                  <p class="box__title">$1200.00</p>
+                  <p class="box__subtitle">Estimated Expenses</p>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="box-grid">
+          <div class="box-grid__aside">
+            <h2>Status</h2>
+
+            <div class="box box--yellow">
+              <div class="box__icon-holder">
+                <img src="img/icons/request.svg" class="box__icon-img" alt="">
+              </div>
+              <p class="box__title">12</p>
+              <p class="box__subtitle">Request Panding</p>
+              <a href="#" class="btn btn-white btn-circle fs-13 px-4">View <i class="icon-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="box box--red">
+              <div class="box__icon-holder">
+                <img src="img/icons/clock.svg" class="box__icon-img" alt="">
+              </div>
+              <p class="box__title">04</p>
+              <p class="box__subtitle">Reopen request</p>
+              <a href="#" class="btn btn-white btn-circle fs-13 px-4">View <i class="icon-arrow-right ml-2"></i></a>
+            </div>
+          </div>
+
+          <div class="box-grid__body">
+            <h2>Transection</h2>
           </div>
         </div>
       </div>
@@ -203,7 +273,7 @@
         data: [31, 40, 28, 51, 42, 79, 10, 90, 54, 27]
       }],
       chart: {
-        height: 370,
+        height: 360,
         type: 'area',
         fontFamily: 'Roboto-Medium',
         toolbar: {

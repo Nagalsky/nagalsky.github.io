@@ -1,0 +1,142 @@
+/* DONUT CHART */
+
+$donut-dropdown-bg: #f1f3ff;
+
+.donut-chart {
+    @extend .position-relative,
+    .bg-purple500,
+    .p-3,
+    .p-lg-4;
+    border-radius: 25px;
+
+    .apexcharts-datalabel-label {
+        @extend .font-black;
+        fill: $purple600 !important;
+    }
+
+    .apexcharts-datalabel-value {
+        @extend .fs-13,
+        .font-medium;
+        fill: $gray500 !important;
+    }
+}
+
+.donut-chart-dropdown {
+    @extend .mx-4,
+    .position-relative;
+    box-shadow: 0 81px 135px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 0 0 25px 25px;
+}
+
+.donut-chart-dropdown__inner {
+    @extend .w-100,
+    .position-absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+}
+
+.donut-chart-dropdown__toggle {
+    @extend .btn,
+    .border-0,
+    .px-3,
+    .shadow-none,
+    .w-100,
+    .justify-content-center;
+    background: $donut-dropdown-bg;
+    border-radius: 0 0 25px 25px;
+
+    &[aria-expanded="false"] {
+        @extend .py-0;
+    }
+
+    &[aria-expanded="true"] {
+        .donut-chart-dropdown__icon {
+            transform: rotate(-180deg) translateY(-20px);
+        }
+    }
+
+    .donut-chart-dropdown__icon {
+        border-radius: 25px;
+        background: $donut-dropdown-bg;
+        @extend .p-2;
+    }
+}
+
+.donut-chart-dropdown__body {
+    height: 150px;
+    overflow-y: auto;
+    background: $donut-dropdown-bg;
+    padding: 20px 25px 0 25px;
+
+    .simplebar-track.simplebar-vertical {
+        width: 4px;
+        border-radius: 2px;
+        background-color: #e9ecf5 !important;
+        top: 5px;
+        right: 5px;
+    }
+
+    .simplebar-scrollbar {
+        background-color: #aab1c3 !important;
+
+        &:before {
+            background-color: #aab1c3 !important;
+            border-radius: 2px;
+        }
+    }
+}
+
+.donut-chart__legend {
+    @extend .d-flex,
+    .align-items-center,
+    .fs-13;
+
+    &:before {
+        content: '';
+        @extend .flex-shrink-0,
+        .rounded-circle,
+        .mr-3;
+        width: 15px;
+        height: 15px;
+    }
+
+    &--purple {
+        &:before {
+            background-color: #5b2ba0;
+        }
+    }
+
+    &--pink {
+        &:before {
+            background-color: #b857d1;
+        }
+    }
+
+    &--rose {
+        &:before {
+            background-color: #ef74c5;
+        }
+    }
+
+    &--orange {
+        &:before {
+            background-color: #5b2ba0;
+        }
+    }
+
+    &--yellow {
+        &:before {
+            background-color: #ffd286;
+        }
+    }
+
+    &+.donut-chart__legend {
+        margin-top: 18px;
+    }
+}
+
+.donut-chart__percent {
+    @extend .flex-shrink-0,
+    .ml-auto;
+}

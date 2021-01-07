@@ -7,6 +7,9 @@
 // Import Apexchart
 //= ../../../node_modules/apexcharts/dist/apexcharts.min.js
 
+// Import Simplebar
+//= ../../../node_modules/simplebar/dist/simplebar.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js

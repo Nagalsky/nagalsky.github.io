@@ -1,0 +1,22 @@
+/* BOX GRID */
+
+.box-grid {
+    @extend .d-flex,
+    .flex-column,
+    .flex-lg-row;
+}
+
+.box-grid__aside {
+    @extend .flex-shrink-0,
+    .mb-4,
+    .mb-lg-0;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 30px;
+        width: 198px;
+    }
+}
+
+.box-grid__body {
+    @extend .flex-fill;
+}
