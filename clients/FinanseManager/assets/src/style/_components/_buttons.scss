@@ -6,7 +6,7 @@
     .position-relative;
     display: inline-flex;
     border-radius: 13px;
-    padding: 9px 16px;
+    padding: 8.5px 16px;
 
     &-primary {
         @include button-variants($bg: $blue500, $color: $white);
@@ -24,6 +24,16 @@
         @include button-outline-variants($border-color: $gray300, $color: $blue500);
     }
 
+    &-outline-primary {
+        @include button-outline-variants($border-color: $blue500, $color: $blue500);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white !important;
+        }
+    }
+
     &-circle {
         border-radius: 25px;
     }
@@ -31,7 +41,7 @@
     &-dropdown {
         @extend .font-icons,
         .icon-arrow-down;
-        padding-right: 36px;
+        padding-right: 42px;
 
         &[aria-expanded="true"] {
             &:before {
@@ -55,5 +65,9 @@
         @include media-breakpoint-up(md) {
             padding: 12.5px 25px;
         }
+    }
+
+    &-sm {
+        padding: 6px 28px;
     }
 }

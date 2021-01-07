@@ -5,4 +5,11 @@ $(document).ready(function(){
             $('body').toggleClass('navbar-menu-is-closed')
         })
     });
+
+    //Avoid dropdown menu close on click inside
+    $(function(){
+        $(document).on('click', '.dropdown-menu-filter', function (e) {
+            e.stopPropagation();
+        });
+    });
 })

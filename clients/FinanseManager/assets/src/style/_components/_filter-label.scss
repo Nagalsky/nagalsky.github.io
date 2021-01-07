@@ -1,0 +1,30 @@
+/* FILTER LABEL */
+
+.filter-labels {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-xl-end,
+    .flex-wrap;
+
+    @include media-breakpoint-up(xl) {
+        margin-top: -.5rem;
+    }
+}
+
+.filter-label {
+    @extend .position-relative,
+    .d-inline-flex,
+    .align-items-center,
+    .justify-content-center;
+    border-radius: 25px;
+    border: solid 1px $gray300;
+    background-color: #f7fafc;
+    padding: 9.5px 26px;
+    margin-right: 13px;
+    margin-bottom: .5rem;
+}
+
+.filter-label__close {
+    @extend .ml-2,
+    .px-1;
+}

@@ -1,0 +1,50 @@
+/* TABS */
+
+.tabs {
+    border-radius: 25px 25px 0 0;
+    @extend .bg-sky500,
+    .pl-3;
+    border-bottom: 1px solid rgba($sky600, .75);
+}
+
+.tab-link {
+    @extend .position-relative;
+    padding: 19.5px 15px;
+    color: rgba($blue500, .32);
+
+    &:before {
+        content: '';
+        @extend .position-absolute,
+        .w-100,
+        .bg-sky600;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        @include transition($base-animation);
+        opacity: 0;
+    }
+
+    &.active {
+        @extend .text-blue500;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 15px;
+
+        @include media-breakpoint-up(md) {
+            margin-right: 20px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 35px;
+        }
+    }
+}
+
+.tab-content {
+    border-radius: 0 0 25px 25p;
+}

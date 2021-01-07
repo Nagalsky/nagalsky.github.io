@@ -126,8 +126,8 @@
           <h2 class="mb-0">Overview</h2>
 
           <div class="dropdown">
-            <a href="#" class="btn btn-primary btn-circle btn-outline-secondary btn-dropdown" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="btn btn-primary btn-circle btn-outline-secondary btn-dropdown dropdown-toggle-has-arrow"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,20">
               <img src="img/icons/calendar.svg" alt="" class="btn-icon mr-2"> Month
             </a>
 
@@ -223,7 +223,145 @@
           </div>
 
           <div class="box-grid__body">
-            <h2>Transection</h2>
+            <div class="row align-items-center mb-3">
+              <div class="col-xl-2 mb-4 md-xl-0">
+                <h2 class="mb-lg-0">Transection</h2>
+              </div>
+
+              <div class="col-xl-10">
+                <div class="filter-labels">
+                  <span class="filter-label">3+</span>
+                  <span class="filter-label">Apollo Hospital <a href="#" class="filter-label__close">x</a></span>
+                  <span class="filter-label">Coffee shop <a href="#" class="filter-label__close">x</a></span>
+
+                  <div class="dropdown mb-2">
+                    <a href="#"
+                      class="btn btn-primary btn-circle btn-outline-secondary btn-dropdown dropdown-toggle-has-arrow"
+                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      data-offset="0,20">
+                      All Center
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-filter">
+                      <div class="dropdow-list">
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-1" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-1">Coffee shop</label>
+                          </div>
+                        </div>
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-2" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-2">Apollo Hospital</label>
+                          </div>
+                        </div>
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-3" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-3">Multi spciality hospital Multi spciality
+                              hospital</label>
+                          </div>
+                        </div>
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-4" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-4">New martini</label>
+                          </div>
+                        </div>
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-5" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-5">PVR mall</label>
+                          </div>
+                        </div>
+                        <div class="dropdow-list__item">
+                          <div class="radio">
+                            <input type="radio" id="filter-radio-6" name="filter-radios">
+                            <label class="radio__label" for="filter-radio-6">New sarika people’s care</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="btn btn-primary btn-circle btn-sm">Apply</a>
+                        <a href="#" class="btn btn-outline-primary btn-circle btn-sm ml-3">Clear</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav tabs">
+              <a class="tab-link active" data-toggle="tab" href="#tab-panding">Panding</a>
+              <a class="tab-link" data-toggle="tab" href="#tab-approved">Approved</a>
+              <a class="tab-link" data-toggle="tab" href="#tab-declined">Declined</a>
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-panding">
+                <table data-toggle="table">
+                  <thead>
+                    <tr>
+                      <th data-field="categories" data-sortable="true">Categories</th>
+                      <th data-field="required-date" data-sortable="true">Required Date</th>
+                      <th data-field="requested-name" data-sortable="true">Requested Name</th>
+                      <th data-field="supplier" data-sortable="true">Supplier</th>
+                      <th data-field="amount" data-sortable="true">Amount</th>
+                      <th data-field="actions" data-sortable="true">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Marketing</td>
+                      <td>1/12/2021</td>
+                      <td>Amacheah Chukwudi</td>
+                      <td>Neal Rousey</td>
+                      <td>$467.97</td>
+                      <td>Send reminder</td>
+                    </tr>
+
+                    <tr>
+                      <td>Marketing</td>
+                      <td>1/14/2021</td>
+                      <td>Dannie Trapp</td>
+                      <td>Jamey Craghead</td>
+                      <td>$412.43</td>
+                      <td>3 days left</td>
+                    </tr>
+
+                    <tr>
+                      <td>Repairs</td>
+                      <td>3/25/2021</td>
+                      <td>Pablo Berryman</td>
+                      <td>Timothy Upshaw</td>
+                      <td>$475.35</td>
+                      <td>5 days left</td>
+                    </tr>
+
+                    <tr>
+                      <td>Marketing</td>
+                      <td>3/22/2021</td>
+                      <td>Dannie Trapp</td>
+                      <td>Hershel Kitchin</td>
+                      <td>$440.21</td>
+                      <td>3 days left</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+              <div class="tab-pane fade" id="tab-approved">
+                tab-approved
+              </div>
+
+
+              <div class="tab-pane fade" id="tab-declined">
+                tab-declined
+              </div>
+            </div>
           </div>
         </div>
       </div>

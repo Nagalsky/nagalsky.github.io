@@ -1,0 +1,54 @@
+/* RADIO */
+
+$radio-indicator-size: 16px;
+
+.radio {
+    input {
+        @extend .d-none,
+        .invisible;
+
+        &:checked {
+            &+.radio__label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.radio__label {
+    @extend .d-block,
+    .position-relative,
+    .m-0,
+    .fs-16,
+    .font-regular,
+    .text-truncate;
+    cursor: pointer;
+    padding-left: 42px;
+
+    &:before,
+    &:after {
+        content: '';
+        @extend .position-absolute,
+        .rounded-circle;
+        @include transition($base-animation);
+    }
+
+    &:before {
+        width: $radio-indicator-size;
+        height: $radio-indicator-size;
+        left: 0;
+        top: 4px;
+        border: 1px solid rgba($purple700, .2);
+    }
+
+    &:after {
+        width: $radio-indicator-size / 2;
+        height: $radio-indicator-size / 2;
+        left: 4px;
+        top: 8px;
+        @extend .bg-purple700;
+        opacity: 0;
+    }
+}
