@@ -140,17 +140,17 @@
         </div>
 
         <div class="row mb-5">
-          <div class="col-xl-8 col-lg-7 mb-4 mb-lg-0">
-            left
+          <div class="col-xl-7 mb-4 mb-xl-0">
+            <div id="area-chart"></div>
           </div>
 
-          <div class="col-xl-4 col-lg-5">
+          <div class="col-xl-5">
             <div class="row">
-              <div class="col-xl-7 col-lg-6 mb-4 mb-lg-0">
-                left
+              <div class="col-xl-7 col-sm-6 mb-4 mb-sm-0">
+                <div id="donut-chart"></div>
               </div>
 
-              <div class="col-xl-5 col-lg-6">
+              <div class="col-xl-5 col-sm-6">
                 right
               </div>
             </div>
@@ -162,6 +162,114 @@
 
 
   //= template/scripts-dependencies.html
+
+  <script>
+    //Line chart
+    var options = {
+      series: [{
+        name: 'series1',
+        data: [31, 40, 28, 51, 42, 79, 10, 90, 54, 27]
+      }],
+      chart: {
+        height: 370,
+        type: 'area',
+        fontFamily: 'Roboto-Medium',
+        toolbar: {
+          show: false,
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      colors: ["#ff6767"],
+      stroke: {
+        width: [2]
+      },
+      dataLabels: {
+        enabled: false
+      },
+      grid: {
+        borderColor: "#ffb49a",
+        strokeDashArray: 8,
+        row: {
+          colors: ['#ffd2bf']
+        },
+        column: {
+          colors: ['#ffd2bf']
+        }
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return "$" + value;
+          },
+          style: {
+            cssClass: 'chart-yaxis-label',
+            fontSize: '13px',
+          },
+        },
+      },
+      xaxis: {
+        type: 'category',
+        labels: {
+          style: {
+            cssClass: 'chart-xaxis-label',
+            fontSize: '13px',
+          },
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false,
+        },
+      },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#area-chart"), options);
+    chart.render();
+
+    //Donut chart
+    var options = {
+      series: [44, 55, 41, 17, 15],
+      chart: {
+        type: 'donut',
+      },
+      plotOptions: {
+        pie: {
+          donut: {
+            labels: {
+              show: true,
+              total: {
+                show: true,
+              }
+            }
+          }
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#ef74c6', '#b957d2', '#5b2ca0', '#ffd285', '#fe9081'],
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+    };
+
+    var chart = new ApexCharts(document.querySelector("#donut-chart"), options);
+    chart.render();
+  </script>
 </body>
 
 </html>
