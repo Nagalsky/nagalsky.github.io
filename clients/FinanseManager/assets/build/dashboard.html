@@ -277,40 +277,41 @@
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-filter">
                       <div class="dropdow-list">
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-1" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-1">Coffee shop</label>
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-1">
+                            <label class="checkbox__label" for="filter-checkbox-1">Coffee shop</label>
                           </div>
                         </div>
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-2" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-2">Apollo Hospital</label>
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-2">
+                            <label class="checkbox__label" for="filter-checkbox-2">Apollo Hospital</label>
                           </div>
                         </div>
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-3" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-3">Multi spciality hospital Multi spciality
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-3">
+                            <label class="checkbox__label" for="filter-checkbox-3">Multi spciality hospital Multi
+                              spciality
                               hospital</label>
                           </div>
                         </div>
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-4" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-4">New martini</label>
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-4">
+                            <label class="checkbox__label" for="filter-checkbox-4">New martini</label>
                           </div>
                         </div>
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-5" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-5">PVR mall</label>
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-5">
+                            <label class="checkbox__label" for="filter-checkbox-5">PVR mall</label>
                           </div>
                         </div>
                         <div class="dropdow-list__item">
-                          <div class="radio">
-                            <input type="radio" id="filter-radio-6" name="filter-radios">
-                            <label class="radio__label" for="filter-radio-6">New sarika people’s care</label>
+                          <div class="checkbox">
+                            <input type="checkbox" id="filter-checkbox-6">
+                            <label class="checkbox__label" for="filter-checkbox-6">New sarika people’s care</label>
                           </div>
                         </div>
                       </div>
@@ -333,65 +334,413 @@
 
             <div class="tab-content">
               <div class="tab-pane fade show active" id="tab-panding">
-                <table data-toggle="table">
-                  <thead>
-                    <tr>
-                      <th data-field="categories" data-sortable="true">Categories</th>
-                      <th data-field="required-date" data-sortable="true">Required Date</th>
-                      <th data-field="requested-name" data-sortable="true">Requested Name</th>
-                      <th data-field="supplier" data-sortable="true">Supplier</th>
-                      <th data-field="amount" data-sortable="true">Amount</th>
-                      <th data-field="actions" data-sortable="true">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Marketing</td>
-                      <td>1/12/2021</td>
-                      <td>Amacheah Chukwudi</td>
-                      <td>Neal Rousey</td>
-                      <td>$467.97</td>
-                      <td>Send reminder</td>
-                    </tr>
+                <div class="table-responsive">
+                  <table data-toggle="table" data-classes="table table-hover table-sort">
+                    <thead>
+                      <tr>
+                        <th data-field="categories">Categories</th>
+                        <th data-field="required-date">Required Date</th>
+                        <th data-field="requested-name">Requested Name</th>
+                        <th data-field="supplier">Supplier</th>
+                        <th data-field="amount">Amount</th>
+                        <th data-field="actions">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">Marketing</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">1/12/2021</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Amacheah Chukwudi</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Neal Rousey</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">$467.97</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--primary"><i class="icon-notification mr-3 fs-18"></i>
+                              Send
+                              reminder</span>
+                          </div>
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td>Marketing</td>
-                      <td>1/14/2021</td>
-                      <td>Dannie Trapp</td>
-                      <td>Jamey Craghead</td>
-                      <td>$412.43</td>
-                      <td>3 days left</td>
-                    </tr>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            1/14/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Jamey Craghead
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $412.43
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--sky">3 days left</span>
+                          </div>
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td>Repairs</td>
-                      <td>3/25/2021</td>
-                      <td>Pablo Berryman</td>
-                      <td>Timothy Upshaw</td>
-                      <td>$475.35</td>
-                      <td>5 days left</td>
-                    </tr>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Repairs
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/25/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Pablo Berryman
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Timothy Upshaw
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $475.35
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--sky">5 days left</span>
+                          </div>
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td>Marketing</td>
-                      <td>3/22/2021</td>
-                      <td>Dannie Trapp</td>
-                      <td>Hershel Kitchin</td>
-                      <td>$440.21</td>
-                      <td>3 days left</td>
-                    </tr>
-                  </tbody>
-                </table>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/22/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Hershel Kitchin
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $440.21
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <div class="table-actions">
+                              <button type="button" class="table-action-btn table-action-btn--success">
+                                <i class="icon-check-circled"></i>
+                              </button>
+                              <button type="button" class="table-action-btn table-action-btn--danger">
+                                <i class="icon-cancel-circled"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
 
               <div class="tab-pane fade" id="tab-approved">
-                tab-approved
+                <div class="table-responsive">
+                  <table data-toggle="table" data-classes="table table-hover table-sort">
+                    <thead>
+                      <tr>
+                        <th data-field="categories">Categories</th>
+                        <th data-field="required-date">Required Date</th>
+                        <th data-field="requested-name">Requested Name</th>
+                        <th data-field="supplier">Supplier</th>
+                        <th data-field="amount">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">Marketing</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">1/12/2021</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Amacheah Chukwudi</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Neal Rousey</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">$467.97</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            1/14/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Jamey Craghead
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $412.43
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Repairs
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/25/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Pablo Berryman
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Timothy Upshaw
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $475.35
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/22/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Hershel Kitchin
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $440.21
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
 
               <div class="tab-pane fade" id="tab-declined">
-                tab-declined
+                <div class="table-responsive">
+                  <table data-toggle="table" data-classes="table table-hover table-sort">
+                    <thead>
+                      <tr>
+                        <th data-field="categories">Categories</th>
+                        <th data-field="required-date">Required Date</th>
+                        <th data-field="requested-name">Requested Name</th>
+                        <th data-field="supplier">Supplier</th>
+                        <th data-field="amount">Amount</th>
+                        <th data-field="actions">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">Marketing</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">1/12/2021</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Amacheah Chukwudi</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">Neal Rousey</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">$467.97</div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--primary table-label--sm">Reopen</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            1/14/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Jamey Craghead
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $412.43
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--primary table-label--sm">Reopen</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Repairs
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/25/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Pablo Berryman
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Timothy Upshaw
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $475.35
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--primary table-label--sm">Reopen</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-body-inner">
+                            Marketing
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            3/22/2021
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Dannie Trapp
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            Hershel Kitchin
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            $440.21
+                          </div>
+                        </td>
+                        <td>
+                          <div class="table-body-inner">
+                            <span class="table-label table-label--primary table-label--sm">Reopen</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

@@ -9,8 +9,12 @@
 
 .tab-link {
     @extend .position-relative;
-    padding: 19.5px 15px;
+    padding: 19.5px 10px;
     color: rgba($blue500, .32);
+
+    @include media-breakpoint-up(sm) {
+        padding: 19.5px 15px;
+    }
 
     &:before {
         content: '';
@@ -33,7 +37,11 @@
     }
 
     &:not(:last-child) {
-        margin-right: 15px;
+        margin-right: 10px;
+
+        @include media-breakpoint-up(sm) {
+            margin-right: 15px;
+        }
 
         @include media-breakpoint-up(md) {
             margin-right: 20px;
@@ -46,5 +54,6 @@
 }
 
 .tab-content {
-    border-radius: 0 0 25px 25p;
+    @extend .overflow-hidden;
+    border-radius: 0 0 25px 25px;
 }
