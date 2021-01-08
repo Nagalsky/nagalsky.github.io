@@ -20,4 +20,37 @@ $field-bg: $gray600;
 	@include custom-placeholder($color: $blue500,
 		$font-size: 14px,
 		$font-family: $font-medium);
+
+	&.is-invalid {
+		background-image: none;
+		border-color: #ffbaba;
+	}
+}
+
+label {
+	&:not(.checkbox__label, .radio__label) {
+		font-size: 12px;
+		color: $gray500;
+		font-family: $font-medium;
+		letter-spacing: 0.4px;
+	}
+}
+
+select.form-control {
+	padding-right: 40px;
+	background-repeat: no-repeat;
+	background-size: 14px;
+	background-position: right 14px center;
+	background-image: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHRpdGxlPjwvdGl0bGU+CjxnIGlkPSJpY29tb29uLWlnbm9yZSI+CjwvZz4KPHBhdGggZmlsbD0iIzAwMCIgZD0iTTI3NS45NzggMzk4LjIzMWwyMjcuODQzLTIyNy44NDZjNS4yNzQtNS4yNyA4LjE3OS0xMi4zMDQgOC4xNzktMTkuODA1cy0yLjkwNi0xNC41MzYtOC4xOC0xOS44MDVsLTE2Ljc3NS0xNi43NzljLTEwLjkzMS0xMC45MTgtMjguNjk3LTEwLjkxOC0zOS42MTEgMGwtMTkxLjMyOSAxOTEuMzI4LTE5MS41NDEtMTkxLjU0MWMtNS4yNzQtNS4yNy0xMi4zMDUtOC4xOC0xOS44MDItOC4xOC03LjUwNSAwLTE0LjUzNSAyLjkwOS0xOS44MTQgOC4xOGwtMTYuNzcxIDE2Ljc3OWMtNS4yNzQgNS4yNzQtOC4xOCAxMi4zMDQtOC4xOCAxOS44MDVzMi45MDUgMTQuNTM2IDguMTggMTkuODA1bDIyOC4wNTAgMjI4LjA1OWM1LjI5MSA1LjI4MyAxMi4zNTUgOC4xODMgMTkuODY0IDguMTY3IDcuNTM4IDAuMDE3IDE0LjU5OC0yLjg4NSAxOS44ODUtOC4xNjd6Ij48L3BhdGg+Cjwvc3ZnPgo=");
+}
+
+textarea.form-control {
+	resize: none;
+	height: 165px;
+	border-color: $gray700;
+}
+
+.invalid-feedback {
+	@extend .fs-13,
+	.text-rose700;
 }

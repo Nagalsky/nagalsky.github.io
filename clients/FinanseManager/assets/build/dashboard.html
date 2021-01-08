@@ -337,7 +337,7 @@
                 <div class="table-responsive">
                   <table data-toggle="table" data-classes="table table-hover table-sort">
                     <thead>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <th data-field="categories">Categories</th>
                         <th data-field="required-date">Required Date</th>
                         <th data-field="requested-name">Requested Name</th>
@@ -347,7 +347,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">Marketing</div>
                         </td>
@@ -372,7 +372,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -405,7 +405,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Repairs
@@ -438,7 +438,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -487,7 +487,7 @@
                 <div class="table-responsive">
                   <table data-toggle="table" data-classes="table table-hover table-sort">
                     <thead>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <th data-field="categories">Categories</th>
                         <th data-field="required-date">Required Date</th>
                         <th data-field="requested-name">Requested Name</th>
@@ -496,7 +496,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">Marketing</div>
                         </td>
@@ -514,7 +514,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -542,7 +542,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Repairs
@@ -570,7 +570,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -607,7 +607,7 @@
                 <div class="table-responsive">
                   <table data-toggle="table" data-classes="table table-hover table-sort">
                     <thead>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <th data-field="categories">Categories</th>
                         <th data-field="required-date">Required Date</th>
                         <th data-field="requested-name">Requested Name</th>
@@ -617,7 +617,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">Marketing</div>
                         </td>
@@ -640,7 +640,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -673,7 +673,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Repairs
@@ -706,7 +706,7 @@
                         </td>
                       </tr>
 
-                      <tr>
+                      <tr data-toggle="slide-panel">
                         <td>
                           <div class="table-body-inner">
                             Marketing
@@ -749,6 +749,82 @@
     </div>
   </main>
 
+  <div class="slide-panel">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+          <h2 class="mb-0">Request Info</h2>
+          <button type="button" class="slide-panel__close">
+              <i class="icon-cancel"></i>
+          </button>
+      </div>
+  
+      <form action="">
+          <div class="form-group">
+              <label for="field-expense-category">Expense category</label>
+              <select class="form-control" id="field-expense-category">
+                  <option selected>Marketing</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="field-supplier-name">Supplier name</label>
+              <input type="text" class="form-control" id="field-supplier-name" placeholder="Jamey Craghead">
+          </div>
+          <div class="form-group">
+              <label for="field-description">Description</label>
+              <textarea class="form-control" id="field-description" placeholder="Description…"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="field-amount">Amount</label>
+              <!-- is-invalid class added just for an example -->
+              <input type="text" class="form-control is-invalid" id="field-amount">
+              <!-- d-block class added just for an example -->
+              <div class="invalid-feedback d-block">
+                  Add Amount value
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="field-required-by">Required by</label>
+              <input type="text" class="form-control input-datepicker" id="field-required-by">
+          </div>
+          <div class="form-group mb-5">
+              <label for="field-requested-by">Requested by</label>
+              <input type="text" class="form-control" id="field-requested-by" placeholder="Dannie Trapp">
+          </div>
+  
+          <div class="d-flex align-items-center mb-4">
+              <button type="submit" class="btn btn-primary btn-circle btn-md fs-16">Request</button>
+              <button type="submit" class="btn btn-link btn-md fs-16"
+                  data-toggle="slide-panel-decline-box">Cancel</button>
+          </div>
+      </form>
+  
+      <div class="slide-panel__box mt-5">
+          <p class="fs-16">Do you want to send reminder for this request?</p>
+          <button type="button" class="btn btn-white btn-circle"><i class="icon-paper-plane-o mr-3 fs-18"></i>
+              Send</button>
+      </div>
+  </div>
+  
+  <div class="slide-panel-decline-box">
+      <div class="slide-panel-decline-box__inner">
+          <div class="text-right mb-1">
+              <button type="button" class="slide-panel-decline-box__close">
+                  <i class="icon-cancel"></i>
+              </button>
+          </div>
+          <form action="">
+              <div class="form-group">
+                  <label for="field-reason-to-decline">Reason to decline</label>
+                  <textarea class="form-control" id="field-reason-to-decline" placeholder="Description…"></textarea>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-circle btn-md fs-16 px-md-5">Submit</button>
+              </div>
+          </form>
+      </div>
+  </div>
 
   <script src="js/main.min.js"></script>
 

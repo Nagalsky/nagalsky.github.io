@@ -1,0 +1,19 @@
+/* DATEPICKER */
+
+.datepicker {
+    &.dropdown-menu {
+        border-radius: 6px;
+    }
+
+    &:before {
+        content: none;
+    }
+
+    .day {
+        &.active {
+            @extend .bg-blue500,
+            .text-white;
+            background-image: none !important;
+        }
+    }
+}

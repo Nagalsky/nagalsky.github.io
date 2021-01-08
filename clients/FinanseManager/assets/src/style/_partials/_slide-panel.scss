@@ -1,0 +1,109 @@
+/* SLIDE PANEL */
+
+$slide-panel-width: 358px;
+
+.slide-panel {
+    @extend .position-fixed,
+    .h-100,
+    .overflow-auto,
+    .bg-white;
+    width: 100%;
+    top: 0;
+    right: 0;
+    @include transition($base-animation);
+    padding: 25px 15px;
+    z-index: 300;
+    transform: translateX(100%);
+    //transform: translateX(0%);
+
+    @include media-breakpoint-up(sm) {
+        width: $slide-panel-width;
+        padding: 45px 24px;
+    }
+
+    &.is-opened {
+        box-shadow: -14px 1px 47px 0 rgba(56, 62, 137, 0.12);
+        transform: translateX(0%);
+    }
+}
+
+.slide-panel__close {
+    @extend .btn,
+    .border-0,
+    .p-0,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .fs-16;
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    background-color: $gray600;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($gray600, .5%);
+    }
+}
+
+.slide-panel__box {
+    @extend .text-center,
+    .bg-purple500,
+    .p-3,
+    .p-md-4;
+    border-radius: 13px;
+}
+
+.slide-panel-decline-box {
+    @extend .position-fixed,
+    .h-100,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .overflow-auto,
+    .p-3,
+    .px-md-4,
+    .py-md-5;
+    right: 0;
+    top: 0;
+    background-color: rgba($black, .41);
+    z-index: 320;
+    @include transition($base-animation);
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+        width: $slide-panel-width;
+    }
+
+    &.is-opened {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.slide-panel-decline-box__inner {
+    @extend .bg-white,
+    .p-3,
+    .w-100,
+    .my-5;
+    border-radius: 17px;
+    box-shadow: -14px 1px 47px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slide-panel-decline-box__close {
+    @extend .d-inline-flex,
+    .align-items-center,
+    .justify-content-center,
+    .bg-gray600,
+    .btn,
+    .border-0,
+    .shadow-none,
+    .p-0,
+    .fs-12;
+    width: 31px;
+    height: 31px;
+    border-radius: 13px;
+}

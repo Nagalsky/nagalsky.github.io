@@ -13,6 +13,9 @@
 // Import Bootstrap table
 //= ../../../node_modules/bootstrap-table/dist/bootstrap-table.min.js
 
+// Import Bootstrap datepicker
+//= ../../../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
+
 // Import Bootstrap 4 js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js
