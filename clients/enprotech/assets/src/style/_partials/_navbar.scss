@@ -21,9 +21,13 @@
 .navbar-nav {
     >.nav-item {
         >.nav-link {
-            @extend .text-black400,
-            .px-lg-2,
+            @extend .px-lg-2,
             .px-xl-3;
+            color: $black400;
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
 
             &:hover,
             &:active,
