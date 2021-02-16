@@ -1,0 +1,39 @@
+/* BUTTONS */
+
+.btn {
+    @extend .font-bold,
+    .align-items-center,
+    .justify-content-center;
+    padding: 5px 23px;
+    display: inline-flex;
+    min-height: 46px;
+
+    &-secondary {
+        @include button-variants($bg: $gray500, $color: $black500);
+    }
+
+    &-primary {
+        @include button-variants($bg: $orange500, $color: $black500);
+    }
+
+    &-link {
+        @extend .border-0,
+        .text-black500;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .bg-orange500,
+            .text-black500;
+            text-decoration: none;
+        }
+    }
+
+    &-lg {
+        min-height: 58px;
+    }
+
+    &-circle {
+        border-radius: 84px;
+    }
+}

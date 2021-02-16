@@ -1,0 +1,35 @@
+/* NAVBAR */
+
+.navbar {
+    @extend .px-lg-0;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+.navbar-brand {
+    width: 202px;
+
+    @include media-breakpoint-up(xl) {
+        margin-right: 60px;
+    }
+}
+
+.navbar-nav {
+    >.nav-item {
+        >.nav-link {
+            @extend .text-black400,
+            .px-lg-2,
+            .px-xl-3;
+
+            &:hover,
+            &:active,
+            &:focus {
+                @extend .text-orange500;
+            }
+        }
+    }
+}
