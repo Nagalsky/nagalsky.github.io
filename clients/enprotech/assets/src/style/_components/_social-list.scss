@@ -1,0 +1,48 @@
+/* SOCIAL LIST */
+
+.social-list {
+    @extend .d-flex,
+    .flex-column;
+}
+
+.social-list-item {
+    @extend .d-flex,
+    .align-items-center,
+    .text-gray400;
+
+    &:hover,
+    &:focus {
+        @extend .text-orange500;
+
+        .social-list-item__icon-box {
+            border-color: $orange500;
+            @extend .bg-orange500,
+            .text-black500;
+        }
+    }
+
+    &+.social-list-item {
+        @extend .mt-4;
+    }
+}
+
+.social-list-item__icon-box {
+    @extend .rounded-circle,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .mr-3,
+    .mr-sm-4,
+    .flex-shrink-0;
+    @include transition($base-animation);
+    width: 44px;
+    height: 44px;
+    border: 1px solid $gray400;
+    font-size: 16px;
+
+    @include media-breakpoint-up(sm) {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+    }
+}

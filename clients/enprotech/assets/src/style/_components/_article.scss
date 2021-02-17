@@ -1,0 +1,42 @@
+/* ARTICLE */
+
+.articles {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 72px;
+        }
+    }
+}
+
+.article {
+    @extend .position-relative;
+}
+
+.article__img {
+    @extend .w-100,
+    .mb-4;
+    border-radius: 24px;
+}
+
+.article__date {
+    @extend .fs-16,
+    .mb-2;
+}
+
+.article__heading {
+    @extend .fs-26;
+}
+
+.article__btn {
+    @extend .fs-16,
+    .text-black400,
+    .font-bold;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-orange500
+    }
+}
