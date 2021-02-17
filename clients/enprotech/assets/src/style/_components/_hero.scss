@@ -2,7 +2,6 @@
 
 .hero {
     padding: 40px 0;
-    @extend .overflow-hidden;
 
     @include media-breakpoint-up(md) {
         padding: 40px 0;
@@ -14,6 +13,17 @@
 
     [class^="col"] {
         @extend .position-relative;
+    }
+
+    .number-box {
+        @extend .position-absolute;
+        right: 15px;
+        bottom: 15px;
+
+        @include media-breakpoint-up(xl) {
+            right: 40px;
+            bottom: -80px;
+        }
     }
 }
 

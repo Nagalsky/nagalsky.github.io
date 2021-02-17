@@ -5178,7 +5178,7 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-white, .box {
+.bg-white, .box, .number-box {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -5301,7 +5301,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .footer-links, .footer-nav, .gallery-btn, .social-list, .social-list-item, .social-list-item__icon-box {
+.d-flex, .footer-links, .footer-nav, .gallery-btn, .social-list, .social-list-item, .social-list-item__icon-box, .number-box {
   display: -webkit-box !important;
   display: flex !important; }
 
@@ -5458,7 +5458,7 @@ button.bg-dark:focus {
   -webkit-box-direction: normal !important;
           flex-direction: row !important; }
 
-.flex-column, .footer-nav, .social-list {
+.flex-column, .footer-nav, .social-list, .number-box {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
           flex-direction: column !important; }
@@ -5508,7 +5508,7 @@ button.bg-dark:focus {
   -webkit-box-pack: end !important;
           justify-content: flex-end !important; }
 
-.justify-content-center, .btn, .gallery-btn, .social-list-item__icon-box {
+.justify-content-center, .btn, .gallery-btn, .social-list-item__icon-box, .number-box {
   -webkit-box-pack: center !important;
           justify-content: center !important; }
 
@@ -5527,7 +5527,7 @@ button.bg-dark:focus {
   -webkit-box-align: end !important;
           align-items: flex-end !important; }
 
-.align-items-center, .btn, .gallery-btn, .btn-scroll-down, .social-list-item, .social-list-item__icon-box {
+.align-items-center, .btn, .gallery-btn, .btn-scroll-down, .social-list-item, .social-list-item__icon-box, .number-box {
   -webkit-box-align: center !important;
           align-items: center !important; }
 
@@ -5979,16 +5979,16 @@ button.bg-dark:focus {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .hero {
+.overflow-hidden {
   overflow: hidden !important; }
 
 .position-static {
   position: static !important; }
 
-.position-relative, .section, .hero [class^="col"], .hero__img, .article {
+.position-relative, .section, .section [class^="col"], .hero [class^="col"], .hero__img, .article {
   position: relative !important; }
 
-.position-absolute, .section-has-overlay:before, .section-has-overlay:after {
+.position-absolute, .section-has-overlay:before, .section-has-overlay:after, .section-has-number-box .number-box, .hero .number-box {
   position: absolute !important; }
 
 .position-fixed {
@@ -6158,7 +6158,7 @@ button.bg-dark:focus {
 .mx-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, .article__date,
+.mb-2, .article__date, .number-box__heading,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -6299,7 +6299,7 @@ button.bg-dark:focus {
 .px-3 {
   padding-left: 1rem !important; }
 
-.p-4 {
+.p-4, .number-box {
   padding: 1.5rem !important; }
 
 .pt-4,
@@ -7496,7 +7496,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center {
+.text-center, .number-box {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -8257,7 +8257,7 @@ button.swiper-pagination-bullet {
 .text-black400, .article__btn {
   color: #4f4f4f !important; }
 
-.text-orange500, .navbar-nav > .nav-item > .nav-link:hover, .navbar-nav > .nav-item > .nav-link:active, .navbar-nav > .nav-item > .nav-link:focus, .footer-link:hover, .footer-link:focus, .footer-nav__link:hover, .footer-nav__link:focus, .btn-scroll-down:hover, .btn-scroll-down:focus, .btn-scroll-down:active, .article__btn:hover, .article__btn:focus, .article__btn:active, .social-list-item:hover, .social-list-item:focus {
+.text-orange500, .navbar-nav > .nav-item > .nav-link:hover, .navbar-nav > .nav-item > .nav-link:active, .navbar-nav > .nav-item > .nav-link:focus, .footer-link:hover, .footer-link:focus, .footer-nav__link:hover, .footer-nav__link:focus, .btn-scroll-down:hover, .btn-scroll-down:focus, .btn-scroll-down:active, .article__btn:hover, .article__btn:focus, .article__btn:active, .social-list-item:hover, .social-list-item:focus, .number-box__heading {
   color: #ffcb00 !important; }
 
 .text-gray700 {
@@ -8272,7 +8272,7 @@ button.swiper-pagination-bullet {
 .text-gray400, .footer, .footer__heading, .footer-link, .footer-nav__link, .social-list-item {
   color: #e0e0e0 !important; }
 
-.bg-white, .box {
+.bg-white, .box, .number-box {
   background-color: #ffffff !important; }
 
 .bg-black500, .footer {
@@ -8374,6 +8374,9 @@ body {
   color: #4f4f4f;
   font-size: 14px;
   line-height: 1.5; }
+
+.main {
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -8672,7 +8675,7 @@ ul {
       padding: 80px 0; } }
   @media (min-width: 992px) {
     .section--sm {
-      padding: 40px 0; } }
+      padding: 60px 0; } }
   .section-has-overlay {
     padding-top: 80px; }
     .section-has-overlay:before, .section-has-overlay:after {
@@ -8685,6 +8688,13 @@ ul {
     .section-has-overlay:after {
       right: 0;
       border-top-left-radius: 50px; }
+  .section-has-number-box .number-box {
+    right: 15px;
+    bottom: 15px; }
+    @media (min-width: 1200px) {
+      .section-has-number-box .number-box {
+        right: -40px;
+        bottom: 60px; } }
 
 /* BOX */
 .box {
@@ -8715,6 +8725,13 @@ ul {
   @media (min-width: 992px) {
     .hero {
       padding: 140px 0 40px 0; } }
+  .hero .number-box {
+    right: 15px;
+    bottom: 15px; }
+    @media (min-width: 1200px) {
+      .hero .number-box {
+        right: 40px;
+        bottom: -80px; } }
 
 @media (min-width: 768px) {
   .hero__img {
@@ -8823,3 +8840,39 @@ ul {
       width: 56px;
       height: 56px;
       font-size: 20px; } }
+
+/* NUMBER BOX */
+.number-box {
+  box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  width: 160px;
+  height: 160px; }
+  @media (min-width: 768px) {
+    .number-box {
+      width: 200px;
+      height: 200px;
+      font-size: 16px; } }
+
+.number-box__heading {
+  font-size: 40px; }
+
+.number-box__text {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: 21px;
+  /* fallback */
+  max-height: 63px;
+  /* fallback */
+  -webkit-line-clamp: 3;
+  /* number of lines to show */ }
+  @media (min-width: 768px) {
+    .number-box__text {
+      line-height: 27px;
+      /* fallback */
+      max-height: 108px;
+      /* fallback */
+      -webkit-line-clamp: 4;
+      /* number of lines to show */ } }

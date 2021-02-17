@@ -10,7 +10,7 @@
 
   &--sm {
     @include media-breakpoint-up(lg) {
-      padding: 40px 0;
+      padding: 60px 0;
     }
   }
 
@@ -52,5 +52,22 @@
         @extend .bg-orange500;
       }
     }
+  }
+
+  &-has-number-box {
+    .number-box {
+      @extend .position-absolute;
+      right: 15px;
+      bottom: 15px;
+
+      @include media-breakpoint-up(xl) {
+        right: -40px;
+        bottom: 60px;
+      }
+    }
+  }
+
+  [class^="col"] {
+    @extend .position-relative;
   }
 }
