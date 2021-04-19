@@ -38,8 +38,12 @@
         .nav-link {
             @extend .text-uppercase,
             .fs-15,
-            .px-lg-3,
+            .ps-lg-3,
             .text-dark;
+
+            &:not(:last-child) {
+                @extend .pe-lg-3;
+            }
 
             @include media-breakpoint-up(lg) {
                 padding-top: 30px;

@@ -11,7 +11,7 @@
 }
 
 .footer__top {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
     @include media-breakpoint-up(md) {
         margin-bottom: 45px;
@@ -19,10 +19,40 @@
 }
 
 .footer__logo {
-    @extend .d-flex;
+    @extend .d-flex,
+    .mb-3,
+    .mb-lg-0;
     width: 290px;
 
     @include media-breakpoint-up(md) {
         width: 329px;
     }
+}
+
+.footer-nav {
+    @extend .d-flex,
+    .flex-column,
+    .flex-lg-row,
+    .text-center;
+}
+
+.footer-nav__link {
+    @extend .fs-15,
+    .text-dark,
+    .text-uppercase,
+    .px-3,
+    .py-1;
+
+    &:last-child {
+        @extend .pe-lg-0;
+    }
+}
+
+.footer__protected {
+    width: 96px;
+    @extend .d-inline-block;
+}
+
+.footer__bottom {
+    @extend .fs-12;
 }
