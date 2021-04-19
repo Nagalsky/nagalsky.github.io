@@ -7,7 +7,8 @@
 }
 
 .choice {
-    @extend .position-relative;
+    @extend .position-relative,
+    .bg-white;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     box-shadow: 0 5px 15px 0 rgba(47, 69, 92, 0.05);
@@ -126,5 +127,17 @@
         bottom: -10px;
         border-radius: 100px 0 0 100px;
         z-index: 10;
+    }
+}
+
+.btn-toggle-choices {
+    &[aria-expanded="false"] {
+        .icon {
+            transform: rotate(0);
+        }
+    }
+
+    .icon {
+        transform: rotate(180deg);
     }
 }
