@@ -1,2 +1,5 @@
 // Import Bootstrap 5
 //= ../../../node_modules/bootstrap/dist/js/bootstrap.min.js
+
+// Import AOS animation
+//= ../../../node_modules/aos/dist/aos.js
