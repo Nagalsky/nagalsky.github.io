@@ -624,6 +624,35 @@
     </section>
   </main>
 
+  <div class="modal modal-exit fade" id="modal-exit" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-body">
+                  <div class="modal-image-box">
+                      <button type="button" class="btn-close d-sm-none" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="icon-x"></i>
+                      </button>
+                      <img src="img/temp/DuoBoost1.png" alt="" class="modal-image">
+                  </div>
+  
+                  <div class="modal-content-box">
+                      <button type="button" class="btn-close d-none d-sm-block" data-bs-dismiss="modal"
+                          aria-label="Close">
+                          <i class="icon-x"></i>
+                      </button>
+                      <h2 class="modal-title">Wait!</h2>
+                      <p class="fs-16 mb-4">Before you leave...</p>
+                      <img src="img/temp/DuoBoost-021.svg" alt="" class="d-block mx-auto img-fluid mb-3 mb-sm-4">
+                      <a href="#" class="btn btn-primary text-uppercase px-5 mb-3 mb-sm-5">get 50% off</a>
+                      <a href="#" data-bs-dismiss="modal" class="text-decoration-underline fs-12 font-bold">No, I don’t
+                          want to save
+                          money</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
   <footer class="footer">
       <div class="container">
           <div class="footer__top">
@@ -664,16 +693,15 @@
 
   <script>
     AOS.init();
-
-    // var mousecount = 0;
-    // $(document).mouseleave(function () {
-    //   if (event.clientY <= 0) {
-    //     if (mousecount < 1) {
-    //       alert("Do something here!!!");
-    //       mousecount = mousecount + 1;
-    //     }
-    //   }
-    // });
+    var mousecount = 0;
+    $(document).mouseleave(function () {
+      if (event.clientY <= 0) {
+        if (mousecount < 1) {
+          $('#modal-exit').modal('show');
+          mousecount = mousecount + 1;
+        }
+      }
+    });
   </script>
 </body>
 

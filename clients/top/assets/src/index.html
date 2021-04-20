@@ -596,22 +596,23 @@
     </section>
   </main>
 
+  //= template/modal-exit.html
+
   //= template/footer.html
 
   //= template/scripts.html
 
   <script>
     AOS.init();
-
-    // var mousecount = 0;
-    // $(document).mouseleave(function () {
-    //   if (event.clientY <= 0) {
-    //     if (mousecount < 1) {
-    //       alert("Do something here!!!");
-    //       mousecount = mousecount + 1;
-    //     }
-    //   }
-    // });
+    var mousecount = 0;
+    $(document).mouseleave(function () {
+      if (event.clientY <= 0) {
+        if (mousecount < 1) {
+          $('#modal-exit').modal('show');
+          mousecount = mousecount + 1;
+        }
+      }
+    });
   </script>
 </body>
 
