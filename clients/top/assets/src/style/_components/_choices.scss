@@ -132,9 +132,25 @@
 
 .btn-toggle-choices {
     &[aria-expanded="false"] {
+        .less {
+            @extend .d-none;
+        }
+
+        .full {
+            @extend .d-inline-block;
+        }
+
         .icon {
             transform: rotate(0);
         }
+    }
+
+    .less {
+        @extend .d-inline-block;
+    }
+
+    .full {
+        @extend .d-none;
     }
 
     .icon {
