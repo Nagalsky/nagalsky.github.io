@@ -18,12 +18,15 @@
                 class="d-none d-xxl-inline-block" /> Under $50 <span class="font-light">To
                 Improve Your Internet Connection</span>
             </h1>
-            <span class="label label--success text-uppercase d-none d-md-inline-flex">Updated: April 2021</span>
+            <span class="label label--success text-uppercase d-none d-md-inline-flex">Updated: <span
+                class="get-month mx-1 d-inline-block"></span> 2021</span>
           </div>
 
           <div class="col-md-3 text-center">
             <img src="img/temp/DuoBoost1.png" alt="" class="hero__img">
-            <span class="label label--success text-uppercase mt-3 d-md-none">Updated: April 2021</span>
+            <span class="label label--success text-uppercase mt-3 d-md-none">Updated: <span
+                class="get-month mx-1 d-inline-block"></span>
+              2021</span>
           </div>
         </div>
       </div>
@@ -610,6 +613,26 @@
         }
       }
     });
+
+    var d = new Date();
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var n = month[d.getMonth()];
+
+    console.log('month', n)
+
+    $('.get-month').html(n);
   </script>
 </body>
 
