@@ -58,15 +58,33 @@ h1,
 h2,
 .h2 {
   font-size: 36px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+  }
 }
 
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 28px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 36px;
+  }
 }
 
 h4,
-.h4 {}
+.h4 {
+  font-size: 24px;
+}
 
 h5,
 .h5 {}
