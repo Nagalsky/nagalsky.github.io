@@ -1,0 +1,121 @@
+/* HERO */
+
+.hero {
+    @extend .text-white,
+    .text-center;
+    background: linear-gradient(180deg, #3B3B9A 0%, #000000 92.33%, #000000 100%);
+    padding: 75px 0 50px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 85px 0 50px 0;
+    }
+}
+
+.hero__highlight {
+    @extend .d-block,
+    .mx-auto,
+    .img-fluid;
+    width: 112px;
+}
+
+.hero__signup-form {
+    @extend .mx-auto,
+    .d-flex,
+    .position-relative;
+    max-width: 586px;
+
+    &:after {
+        @extend .position-absolute;
+        right: -75px;
+        bottom: -63px;
+        width: 60px;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAycHgiIGhlaWdodD0iMTAycHgiIHZpZXdCb3g9IjAgMCAxMDIgMTAyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPjA2MTcxRTI3LUIwMUEtNDgyQS1BRTZDLTNCMDg3QkEyRTNDMDwvdGl0bGU+CiAgICA8ZGVmcz4KICAgICAgICA8cG9seWdvbiBpZD0icGF0aC0xIiBwb2ludHM9IjkuOTgyMDg5NTdlLTA1IC04LjE4MzI1NDYzZS0wNSA5OS42NjAyNDI3IC04LjE4MzI1NDYzZS0wNSA5OS42NjAyNDI3IDQyLjcyODkgOS45ODIwODk1N2UtMDUgNDIuNzI4OSI+PC9wb2x5Z29uPgogICAgPC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ik5pdHJlby1MYW5kaW5nLVBhZ2UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTM5LjAwMDAwMCwgLTQzOC4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTg5LjU1ODEzNSwgNDg4LjU1ODEzNSkgc2NhbGUoMSwgLTEpIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTExODkuNTU4MTM1LCAtNDg4LjU1ODEzNSkgdHJhbnNsYXRlKDExMzkuNTU4MTM1LCA0NjcuMDU4MTM1KSI+CiAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay0yIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcGF0aC0xIj48L3VzZT4KICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgIDxnIGlkPSJDbGlwLTIiPjwvZz4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNC43NzYxNSw0Mi43MjkwNSBDMjMuMTU1MTUsNDEuNTc0NTUgMjEuMzA0NjUsNDAuNzQzMDUgMTkuNTc1MTUsMzkuNzI4MDUgQzEzLjU5MjY1LDM2LjIxNjA1IDcuMzc3MTUsMzMuMTUzMDUgMS4yMDExNSwzMC4wMjAwNSBDLTAuNjEzMzUsMjkuMDk5NTUgLTAuMTEyODUsMjguNDg5NTUgMS4wMDExNSwyNy42MTU1NSBDNy4xNzg2NSwyMi43NzI1NSAxMy42MjkxNSwxOC4zMjI1NSAyMC4zNzExNSwxNC4zMDI1NSBDMjIuMTE2NjUsMTMuMjYyNTUgMjMuNDIzNjUsMTQuMDIxMDUgMjMuNzAyNjUsMTYuMzA0NTUgQzIzLjkxMjE1LDE4LjAyMzA1IDI0LjE2MzE1LDE5LjcwMjU1IDI0LjU3ODE1LDIxLjM5NjA1IEMyNC45MDg2NSwyMi43NDIwNSAyNS4zNDQ2NSwyMy4xODYwNSAyNi42NzExNSwyMy4xNDYwNSBDMzEuMjQ4NjUsMjMuMDA5MDUgMzUuOTA3NjUsMjMuNDUyNTUgNDAuMzg5NjUsMjIuNzQ4MDUgQzQ3LjE5NDY1LDIxLjY3ODA1IDUzLjk2ODY1LDIwLjM5NjU1IDYwLjYwNTY1LDE4LjI0MzA1IEM3MC4wNTAxNSwxNS4xNzg1NSA3OS4yNTY2NSwxMS42OTY1NSA4Ny45ODU2NSw2Ljk1NjU1IEM5MS4zMzYxNSw1LjEzNzA1IDk0LjUxMzY1LDMuMDYxMDUgOTcuNTYyMTUsMC43OTMwNSBDOTguMTkwMTUsMC4zMjU1NSA5OC43NTE2NSwtMC40MDQ5NSA5OS4zODkxNSwwLjI3OTA1IEMxMDAuMTEwNjUsMS4wNTI1NSA5OS4yMjYxNSwxLjQ2MDA1IDk4LjY2MDY1LDEuOTc4NTUgQzk0LjA1NzE1LDYuMTk0NTUgODkuMTcxNjUsOS45OTgwNSA4My44NjAxNSwxMy4zMTk1NSBDNzcuNTQ0NjUsMTcuMjY4NTUgNzAuOTMyMTUsMjAuNjU4NTUgNjQuMTEyNjUsMjMuNTIyNTUgQzU3LjMwODY1LDI2LjM3OTA1IDUwLjIzMjY1LDI4LjU1MjA1IDQyLjkzNTY1LDMwLjA3MzA1IEMzNy43NTIxNSwzMS4xNTQ1NSAzMi42MzA2NSwzMi4xMDQ1NSAyNy4zNDE2NSwzMS45NjM1NSBDMjYuMDcxNjUsMzEuOTI5NTUgMjUuNzY2NjUsMzIuNTM2MDUgMjUuNzkxMTUsMzMuNjI0NTUgQzI1Ljg0NzY1LDM2LjEyMjA1IDI1Ljg5ODE1LDM4LjYyMDA1IDI1Ljg5MTY1LDQxLjExODA1IEMyNS44OTAxNSw0MS44MDIwNSAyNS45ODM2NSw0Mi42OTMwNSAyNC43NzYxNSw0Mi43MjkwNSIgaWQ9IkZpbGwtMSIgZmlsbD0iI0ZGRkZGRiIgbWFzaz0idXJsKCNtYXNrLTIpIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==");
+
+        @include media-breakpoint-up(md) {
+            content: '';
+        }
+    }
+}
+
+.hero__list-checkmark {
+    margin-bottom: 50px;
+}
+
+.hero__countdown {
+    @extend .position-relative,
+    .mx-auto;
+    width: 220px;
+    margin-bottom: 35px;
+}
+
+.hero__countdown-header {
+    @extend .bg-white,
+    .text-center,
+    .fs-10,
+    .text-info,
+    .text-uppercase,
+    .font-semibold;
+    padding: 2.5px 5px;
+}
+
+.hero__countdown-body {
+    border-bottom: 1px solid rgba($white, .5);
+    border-left: 1px solid rgba($white, .5);
+    border-right: 1px solid rgba($white, .5);
+    @extend .d-flex;
+    padding: 13px 15px;
+}
+
+.hero__countdown__title {
+    @extend .flex-fill,
+    .text-center,
+    .font-bold,
+    .px-2,
+    .position-relative;
+    font-size: 24px;
+
+    &:after {
+        @extend .d-block,
+        .text-center,
+        .font-semibold;
+        font-size: 8px;
+    }
+
+    &--days {
+        &:after {
+            content: 'Days';
+        }
+    }
+
+    &--hours {
+        &:after {
+            content: 'Hours';
+        }
+    }
+
+    &--minutes {
+        &:after {
+            content: 'Minutes';
+        }
+    }
+
+    &--seconds {
+        &:after {
+            content: 'Seconds';
+        }
+    }
+
+    &:not(:last-child) {
+        &:before {
+            content: ':';
+            @extend .position-absolute;
+            top: 12px;
+            right: -1px;
+            font-size: 8px;
+        }
+    }
+}

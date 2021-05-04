@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  //= template/head.html
+  <title>Home page</title>
+</head>
+
+<body>
+  //= template/header.html
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="img/temp/highlight.svg" alt="" class="hero__highlight">
+        <h2 class="text-warning">Today 50% off</h2>
+        <h1 class="mb-md-5">Get more Instagram<br /> followers with <span class="font-semibolditalic">nitreo</span>
+        </h1>
+
+        <form action="" class="signup-form hero__signup-form mb-4">
+          <input type="email" class="form-control border-0 shadow-none rounded-0 bg-transparent ps-md-5"
+            placeholder="Your email address">
+          <button class="btn btn-primary flex-shrink-0 ms-3" type="submit">Sign up now</button>
+        </form>
+
+        <ul class="list-checkmark list-checkmark--horizontal justify-content-center hero__list-checkmark">
+          <li>60 second setup</li>
+          <li>Organic growth</li>
+          <li>Used by 110,000+</li>
+        </ul>
+
+        <div class="hero__countdown">
+          <div class="hero__countdown-header">Expires in</div>
+          <div class="hero__countdown-body">
+            <span id="days" class="hero__countdown__title hero__countdown__title--days">
+            </span>
+            <span id="hours" class="hero__countdown__title hero__countdown__title--hours">
+            </span>
+            <span id="minutes" class="hero__countdown__title hero__countdown__title--minutes">
+            </span>
+            <span id="seconds" class="hero__countdown__title hero__countdown__title--seconds">
+            </span>
+          </div>
+        </div>
+
+        <img src="img/temp/hero-image.png" alt="" class="d-block mx-auto img-fluid mb-4">
+        <img src="img/temp/logos.png" alt="" class="d-block mx-auto img-fluid">
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container">
+        section
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        section
+      </div>
+    </section>
+  </main>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script>
+    (function () {
+      countdown("06/06/2021");
+    })();
+  </script>
+</body>
+
+</html>

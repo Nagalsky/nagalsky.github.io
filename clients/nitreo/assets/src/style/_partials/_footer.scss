@@ -1,0 +1,85 @@
+/* FOOTER */
+
+.footer {
+    @extend .text-center,
+    .bg-dark,
+    .text-white;
+    padding: 50px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 85px 0 120px 0;
+    }
+}
+
+.footer__signup-form {
+    @extend .hero__signup-form;
+    margin-bottom: 44px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 120px;
+    }
+}
+
+.footer__logo {
+    @extend .d-block,
+    .mx-auto;
+    width: 97px;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 48px;
+    }
+}
+
+.footer-nav,
+.footer-info {
+    @extend .d-flex,
+    .flex-wrap,
+    .justify-content-center;
+}
+
+.footer-nav {
+    margin-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+        padding: 4px 24px;
+        margin-bottom: 48px;
+    }
+}
+
+.footer-nav-link {
+    @extend .text-white,
+    .font-semibold;
+    padding-left: 12px;
+    padding-right: 12px;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.footer-info-link {
+    @extend .fs-14,
+    .text-secondary;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
