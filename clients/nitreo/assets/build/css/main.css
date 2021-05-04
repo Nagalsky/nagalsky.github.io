@@ -5029,7 +5029,7 @@ textarea.form-control-lg {
 .position-relative, .hero__countdown, .hero__countdown__title, .signup-form, .list-checkmark > li, .table-cell-recommended, .table-cell-recommended__inner {
   position: relative !important; }
 
-.position-absolute, .header, .footer-star, .hero__signup-form:after, .footer__signup-form:after, .hero__countdown__title:not(:last-child):before, .list-checkmark > li:before, .table-cell-recommended:before {
+.position-absolute, .header, .footer-star, .hero__signup-form:after, .footer__signup-form:after, .hero__countdown__title:not(:last-child):before, .list-checkmark > li:before, .table-plan .filter-text, .table-cell-recommended:before {
   position: absolute !important; }
 
 .position-fixed {
@@ -5041,7 +5041,7 @@ textarea.form-control-lg {
 .top-0, .header, .table-cell-recommended:before {
   top: 0 !important; }
 
-.top-50 {
+.top-50, .table-plan .filter-text {
   top: 50% !important; }
 
 .top-100 {
@@ -5059,7 +5059,7 @@ textarea.form-control-lg {
 .start-0, .header, .list-checkmark > li:before, .table-cell-recommended:before {
   left: 0 !important; }
 
-.start-50 {
+.start-50, .table-plan .filter-text {
   left: 50% !important; }
 
 .start-100 {
@@ -5074,7 +5074,7 @@ textarea.form-control-lg {
 .end-100 {
   right: 100% !important; }
 
-.translate-middle {
+.translate-middle, .table-plan .filter-text {
   transform: translate(-50%, -50%) !important; }
 
 .translate-middle-x {
@@ -6263,7 +6263,7 @@ textarea.form-control-lg {
     display: inline !important; }
   .d-md-inline-block, .footer-star {
     display: inline-block !important; }
-  .d-md-block, .table-cell-recommended {
+  .d-md-block {
     display: block !important; }
   .d-md-grid {
     display: grid !important; }
@@ -6603,7 +6603,7 @@ textarea.form-control-lg {
     display: inline !important; }
   .d-lg-inline-block {
     display: inline-block !important; }
-  .d-lg-block {
+  .d-lg-block, .table-cell-recommended {
     display: block !important; }
   .d-lg-grid {
     display: grid !important; }
@@ -8341,7 +8341,8 @@ ul {
   .table-plan > tbody > tr > td,
   .table-plan > tfoot > tr > th,
   .table-plan > tfoot > tr > td {
-    padding: 18px 24px; }
+    padding: 18px 24px;
+    position: relative; }
   .table-plan > tbody > tr > th,
   .table-plan > tbody > tr > td,
   .table-plan > tfoot > tr > th,
@@ -8359,15 +8360,29 @@ ul {
     letter-spacing: -0.1px;
     font-family: "EuclidCircularA-SemiBold";
     font-size: 24px; }
+  .table-plan > thead > tr .filter {
+    filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 72px; }
   .table-plan > tbody > tr:nth-child(even) > th,
   .table-plan > tbody > tr:nth-child(even) > td {
     background-color: rgba(255, 255, 255, 0.05); }
   .table-plan > tbody > tr > th,
   .table-plan > tbody > tr > td {
     background-color: rgba(255, 255, 255, 0.1); }
+  .table-plan > tbody > tr .filter {
+    filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 60px; }
+    .table-plan > tbody > tr .filter--white {
+      background-color: rgba(255, 255, 255, 0.1); }
   .table-plan > tfoot > tr:first-child > th,
   .table-plan > tfoot > tr:first-child > td {
     background-color: rgba(255, 255, 255, 0.05); }
+  .table-plan > tfoot > tr:first-child .filter {
+    filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 60px; }
 
 .table-indicator {
   width: 30px;
@@ -8386,16 +8401,16 @@ ul {
     transform: scale(1.15); }
     @media (min-width: 768px) {
       .table-cell-recommended:before {
-        top: -17px !important; } }
+        top: -18px !important; } }
     @media (min-width: 992px) {
       .table-cell-recommended:before {
-        top: -14px !important; } }
+        top: -16px !important; } }
     @media (min-width: 1200px) {
       .table-cell-recommended:before {
-        top: -13px !important; } }
+        top: -14px !important; } }
     @media (min-width: 1400px) {
       .table-cell-recommended:before {
-        top: -10px !important; } }
+        top: -13px !important; } }
 
 .table-cell-recommended__inner {
   z-index: 1; }
@@ -8404,10 +8419,10 @@ ul {
       line-height: 18px; } }
   @media (min-width: 992px) {
     .table-cell-recommended__inner {
-      line-height: 26px; } }
+      line-height: 20px; } }
   @media (min-width: 1200px) {
     .table-cell-recommended__inner {
-      line-height: 30px; } }
+      line-height: 26px; } }
   @media (min-width: 1400px) {
     .table-cell-recommended__inner {
-      line-height: 34px; } }
+      line-height: 28px; } }

@@ -12,6 +12,7 @@
             >td {
                 @extend .text-white;
                 padding: 18px 24px;
+                position: relative;
             }
         }
     }
@@ -50,6 +51,12 @@
                 font-family: $font-semibold;
                 font-size: 24px;
             }
+
+            .filter {
+                filter: blur(8px);
+                background-color: rgba($white, 0.05);
+                height: 72px;
+            }
         }
     }
 
@@ -67,6 +74,16 @@
             >td {
                 background-color: rgba($white, .1);
             }
+
+            .filter {
+                filter: blur(8px);
+                background-color: rgba($white, 0.05);
+                height: 60px;
+
+                &--white {
+                    background-color: rgba($white, 0.1);
+                }
+            }
         }
     }
 
@@ -78,8 +95,21 @@
                 >td {
                     background-color: rgba($white, 0.05);
                 }
+
+                .filter {
+                    filter: blur(8px);
+                    background-color: rgba($white, 0.05);
+                    height: 60px;
+                }
             }
         }
+    }
+
+    .filter-text {
+        @extend .position-absolute,
+        .top-50,
+        .start-50,
+        .translate-middle;
     }
 }
 
@@ -105,7 +135,7 @@
     .font-semibold,
     .text-dark,
     .d-none,
-    .d-md-block;
+    .d-lg-block;
     z-index: 2;
     height: 48px;
 
@@ -123,19 +153,19 @@
         transform: scale(1.15);
 
         @include media-breakpoint-up(md) {
-            top: -17px !important;
+            top: -18px !important;
         }
 
         @include media-breakpoint-up(lg) {
-            top: -14px !important;
+            top: -16px !important;
         }
 
         @include media-breakpoint-up(xl) {
-            top: -13px !important;
+            top: -14px !important;
         }
 
         @include media-breakpoint-up(xxl) {
-            top: -10px !important;
+            top: -13px !important;
         }
     }
 }
@@ -149,14 +179,14 @@
     }
 
     @include media-breakpoint-up(lg) {
-        line-height: 26px;
+        line-height: 20px;
     }
 
     @include media-breakpoint-up(xl) {
-        line-height: 30px;
+        line-height: 26px;
     }
 
     @include media-breakpoint-up(xxl) {
-        line-height: 34px;
+        line-height: 28px;
     }
 }
