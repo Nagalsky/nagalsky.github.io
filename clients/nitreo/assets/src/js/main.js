@@ -4,5 +4,9 @@
 // Import Bootstrap 5
 //= ../../../node_modules/bootstrap/dist/js/bootstrap.min.js
 
+// Import jQuery
+//= ../../../node_modules/jquery/dist/jquery.min.js
+
 // Import custom js-files
 //= countdown.js
+//= table-switch-plan.js
