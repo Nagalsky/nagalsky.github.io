@@ -5714,7 +5714,7 @@ textarea.form-control-lg {
 .text-end {
   text-align: right !important; }
 
-.text-center, .footer, .hero, .hero__countdown-header, .hero__countdown__title, .hero__countdown__title:after, .info__item {
+.text-center, .footer, .hero, .hero__countdown-header, .hero__countdown__title, .hero__countdown__title:after {
   text-align: center !important; }
 
 .text-primary, .footer-nav-link:hover, .footer-nav-link:focus, .footer-nav-link:active, .footer-info-link:hover, .footer-info-link:focus, .footer-info-link:active {
@@ -6589,7 +6589,7 @@ textarea.form-control-lg {
     text-align: left !important; }
   .text-md-end {
     text-align: right !important; }
-  .text-md-center {
+  .text-md-center, .info__item {
     text-align: center !important; } }
 
 @media (min-width: 992px) {
@@ -8360,6 +8360,11 @@ ul {
     letter-spacing: -0.1px;
     font-family: "EuclidCircularA-SemiBold";
     font-size: 24px; }
+    @media (max-width: 575.98px) {
+      .table-plan > thead > tr > th:nth-child(2), .table-plan > thead > tr > th:nth-child(3),
+      .table-plan > thead > tr > td:nth-child(2),
+      .table-plan > thead > tr > td:nth-child(3) {
+        min-width: 152px; } }
   .table-plan > tbody > tr:nth-child(even) > th,
   .table-plan > tbody > tr:nth-child(even) > td {
     background-color: rgba(255, 255, 255, 0.05); }
