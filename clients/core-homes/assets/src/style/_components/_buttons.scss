@@ -1,1 +1,13 @@
 /* BUTTONS */
+
+.btn {
+    font-family: $font-bold;
+
+    @include media-breakpoint-up(xxl) {
+        padding: 12.5px 66px;
+    }
+
+    &-primary {
+        @include button-variants($bg: $primary, $color: $white);
+    }
+}
