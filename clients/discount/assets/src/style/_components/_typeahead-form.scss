@@ -1,0 +1,31 @@
+/* TYPEHEAD FORM */
+
+.tt-menu {
+    @extend .bg-white,
+    .w-100,
+    .mt-3,
+    .overflow-hidden,
+    .border,
+    .border-gray200,
+    .rounded-3,
+    .shadow;
+}
+
+.tt-suggestion {
+    @extend .py-1,
+    .px-3,
+    .px-md-4,
+    .text-gray300;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-white,
+        .bg-primary;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 18px;
+    }
+}
