@@ -1,6 +1,6 @@
 var substringMatcher = function (strs) {
   return function findMatches(q, cb) {
-    var matches, substringRegex;
+    let matches, substringRegex;
 
     // an array that will be populated with substring matches
     matches = [];

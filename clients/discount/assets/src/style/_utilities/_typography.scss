@@ -5,6 +5,19 @@ body {
   -webkit-overflow-scrolling: touch;
   font-size: $body-font-size;
   line-height: $body-line-height;
+
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+}
+
+body {
+  @extend .d-md-flex,
+  .flex-md-column;
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 h1,
@@ -21,7 +34,7 @@ h6,
 .h6 {
   margin-top: 0;
   margin-bottom: 20px;
-  line-height: 1.3;
+  line-height: 1.35;
   font-family: $heading-font;
 
   &:last-child {

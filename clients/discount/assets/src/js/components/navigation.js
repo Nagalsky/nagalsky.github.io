@@ -1,9 +1,9 @@
 $(document).ready(function () {
   (function () {
-    var $menu = $(".navigation");
-    var $menuToggle = $(".navigation-toggle");
-    var $menuClose = $(".navigation-close");
-    var $menuMask = $(".navigation-mask");
+    const $menu = $(".navigation");
+    const $menuToggle = $(".navigation-toggle");
+    const $menuClose = $(".navigation-close");
+    const $menuMask = $(".navigation-mask");
     $menuToggle.on("click", function (e) {
       e.preventDefault();
       $menu.toggleClass("is-active");

@@ -11,5 +11,5 @@
 //= ../../../node_modules/typeahead.js/dist/typeahead.jquery.min.js
 
 // Import custom js-files
-//= typehead.js
-//= navigation.js
+//= components/typehead.js
+//= components/navigation.js
