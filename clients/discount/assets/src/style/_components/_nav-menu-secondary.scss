@@ -1,0 +1,40 @@
+/* NAV MENU SECONDARY */
+
+.nav-menu-secondary {
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.nav-menu-secondary__item {
+    @extend .p-3,
+    .d-flex,
+    .align-items-center,
+    .flex-wrap,
+    .text-capitalize,
+    .text-black;
+    border-top: 1px solid $silver;
+
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid $silver;
+    }
+}
+
+.nav-menu-secondary__icon {
+    @extend .flex-shrink-0,
+    .me-3,
+    .fs-20;
+}

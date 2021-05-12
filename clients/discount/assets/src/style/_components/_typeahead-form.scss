@@ -1,5 +1,13 @@
 /* TYPEHEAD FORM */
 
+.typeahead-form {
+    @extend .position-relative;
+
+    .form-control {
+        @extend .pe-5;
+    }
+}
+
 .tt-menu {
     @extend .bg-white,
     .w-100,
@@ -28,4 +36,14 @@
     @include media-breakpoint-up(md) {
         font-size: 18px;
     }
+}
+
+.typeahead-form__icon {
+    @extend .position-absolute,
+    .top-50,
+    .translate-middle-y,
+    .fs-20,
+    .text-primary;
+    pointer-events: none;
+    right: 15px;
 }

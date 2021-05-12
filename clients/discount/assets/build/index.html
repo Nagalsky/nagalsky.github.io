@@ -24,11 +24,86 @@
               <img src="img/elements/logo.png" alt="" class="w-100">
           </a>
   
+          <div class="header__account">
+              <div class="header__sign-in">
+                  <a href="#" class="header__sign-in__icon">
+                      <i class="icon-user"></i>
+                  </a>
+                  <div class="flex-fill d-none d-md-block">
+                      <a href="#" class="header__sign-in__link">Sign In</a>
+                      <p class="header__create-account">or <a href="#" class="text-reset">Create Account</a></p>
+                  </div>
+              </div>
+  
+              <a href="#" class="header__card">
+                  <i class="icon-shopping-cart"></i>
+                  <span class="badge bg-danger rounded-pill">0</span>
+              </a>
+          </div>
+  
           <div id="typeahead-form" class="header__typeahead-form typeahead-form">
-              <input class="form-control typeahead" type="text" placeholder="States of USA">
+              <input class="form-control typeahead" type="text" placeholder="Search By Keyword, Part or Part #">
+              <i class="typeahead-form__icon icon-search"></i>
           </div>
       </div>
   </header>
+
+  <button class="navigation-toggle">
+      <i class="icon-bars"></i>
+  </button>
+  
+  <nav class="navigation">
+      <div class="navigation__header">
+          <button class="navigation-close btn border-0 shadow-none fs-20 text-gray400 flex-shrink-0 me-3 ps-0">
+              <i class="icon-bars"></i>
+          </button>
+          <a href="#" class="btn btn-sky">Shop By Vehicle <i class="icon-circle-right ms-4 ms-md-5"></i></a>
+  
+          <button
+              class="navigation-close btn border-0 shadow-none fs-20 text-sky flex-shrink-0 ms-auto d-none d-md-inline-flex">
+              <i class="icon-close"></i>
+          </button>
+      </div>
+  
+      <div class="navigation__body">
+          <h5>Shop By Category</h5>
+  
+          <div class="nav-menu nav-menu--has-arrow mb-md-5">
+              <a href="#" class="nav-menu__item">AC Compressor, Condenser & Climate Control</a>
+              <a href="#" class="nav-menu__item">Air Filters & Intake System Parts</a>
+              <a href="#" class="nav-menu__item">Alternator, Starter, Tune Up & Engine Electrical</a>
+              <a href="#" class="nav-menu__item">Brake Pads, Rotors, Calipers & Brake Parts</a>
+              <a href="#" class="nav-menu__item">Carburetor Parts & Components</a>
+              <a href="#" class="nav-menu__item">Clutch, Flywheel, Flex Plate & Clutch Parts</a>
+              <a href="#" class="nav-menu__item">Diesel Fuel Injectors & Injection Parts</a>
+              <a href="#" class="nav-menu__item">Drive Belts, Serpentine Belts & Components</a>
+              <a href="#" class="nav-menu__item">Fuel Pump, Filters, Tanks, Caps & Fuel Delivery</a>
+              <a href="#" class="nav-menu__item">Headlights, Tail Lights & Body Electrical Parts</a>
+              <a href="#" class="nav-menu__item">Injectors, Oxygen Sensors, Throttle Body & Fuel Injection</a>
+              <a href="#" class="nav-menu__item">Mirrors, Grilles, Body Mechanical & Trim</a>
+              <a href="#" class="nav-menu__item">Mufflers, Exhaust Manifold & Exhaust System</a>
+              <a href="#" class="nav-menu__item">Radiator, Fan, Thermostat, Water Pump & Cooling System</a>
+              <a href="#" class="nav-menu__item">Shocks, Struts, Control Arm, Ball Joint & Suspension</a>
+              <a href="#" class="nav-menu__item">Steering Rack, Pumps & Steering Parts</a>
+              <a href="#" class="nav-menu__item">Timing Belts, Chains, Head Gaskets & Engine Mechanical</a>
+              <a href="#" class="nav-menu__item">Transmission Filter, Mounts & Transmission Parts</a>
+              <a href="#" class="nav-menu__item">Wheel Bearings, Wheels, Driveshaft & Axle</a>
+          </div>
+  
+          <div class="nav-menu-secondary">
+              <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-shopping-cart"></i> my
+                  cart
+                  - $0.00</a>
+              <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-user"></i> my
+                  account</a>
+              <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-live_help"></i>
+                  customer support</a>
+          </div>
+      </div>
+  </nav>
+  
+  <div class="navigation-mask"></div>
+
   <main>
     <section class="section">
       <div class="container">
@@ -38,50 +113,6 @@
   </main>
 
   <script src="js/main.min.js"></script>
-
-  <script>
-    var substringMatcher = function (strs) {
-      return function findMatches(q, cb) {
-        var matches, substringRegex;
-
-        // an array that will be populated with substring matches
-        matches = [];
-
-        // regex used to determine if a string contains the substring `q`
-        substrRegex = new RegExp(q, 'i');
-
-        // iterate through the pool of strings and for any string that
-        // contains the substring `q`, add it to the `matches` array
-        $.each(strs, function (i, str) {
-          if (substrRegex.test(str)) {
-            matches.push(str);
-          }
-        });
-
-        cb(matches);
-      };
-    };
-
-    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-    ];
-
-    $('#typeahead-form .typeahead').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-    }, {
-      name: 'states',
-      source: substringMatcher(states)
-    });
-  </script>
 </body>
 
 </html>

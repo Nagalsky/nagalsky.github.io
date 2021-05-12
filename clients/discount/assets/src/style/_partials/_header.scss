@@ -6,32 +6,132 @@
 
     >.container {
         @extend .d-flex,
-        .align-items-center;
+        .align-items-center,
+        .flex-wrap,
+        .justify-content-between;
     }
 }
 
 .header__logo {
     @extend .d-inline-block,
-    .order-1;
+    .order-1,
+    .mx-auto,
+    .mx-md-0;
     width: 140px;
 
     @include media-breakpoint-up(md) {
         width: 182px;
-        margin-right: 30px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        margin-right: 60px;
     }
 }
 
 .header__typeahead-form {
     @extend .order-3,
     .order-md-2,
-    .flex-fill;
+    .flex-fill,
+    .mx-xxl-5,
+    .mx-md-4,
+    .mt-3,
+    .mt-md-0;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
 
     .twitter-typeahead {
         @extend .d-block,
         .w-100;
+    }
+
+
+    .form-control {
+        @extend .rounded-pill,
+        .ps-md-4;
+        height: 48px;
+        border-color: $gray700;
+        @include custom-placeholder($color: $black,
+            $font-size: inherit,
+            $font-family: $font-regular);
+
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+            @include custom-placeholder($color: $black,
+                $font-size: 18px,
+                $font-family: $font-regular);
+        }
+    }
+}
+
+.header__account {
+    @extend .d-flex,
+    .align-items-center;
+    @extend .order-2,
+    .order-md-3;
+}
+
+.header__sign-in {
+    @extend .d-flex,
+    .align-items-center;
+}
+
+.header__sign-in__icon {
+    @extend .text-primary,
+    .flex-shrink-0,
+    .me-md-2,
+    .lh-1;
+    font-size: 22px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+    }
+}
+
+.header__sign-in__link {
+    @extend .font-bold,
+    .fs-16,
+    .lh-1;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-decoration-underline;
+    }
+}
+
+.header__create-account {
+    @extend .text-gray300,
+    .fs-13,
+    .lh-1;
+
+    a {
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-decoration-underline;
+        }
+    }
+}
+
+.header__card {
+    @extend .position-relative,
+    .ms-3,
+    .ms-md-4;
+    font-size: 22px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+    }
+
+    .badge {
+        @extend .d-flex,
+        .align-items-center,
+        .justify-content-center,
+        .p-0,
+        .fs-11,
+        .position-absolute;
+        width: 19px;
+        height: 17px;
+        top: -1px;
+        right: -8px;
     }
 }
