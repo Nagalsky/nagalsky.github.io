@@ -10,7 +10,11 @@
 // Import Typeahead js
 //= ../../../node_modules/typeahead.js/dist/typeahead.jquery.min.js
 
+// jQuery Lazyload
+//= ../../../node_modules/jquery-lazy/jquery.lazy.min.js
+
 // Import custom js-files
 //= components/typehead.js
 //= components/navigation.js
 //= components/hero-form.js
+//= components/lazy.js
