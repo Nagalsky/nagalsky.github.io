@@ -1,0 +1,25 @@
+/* PRODUCT */
+
+.product {
+    @extend .position-relative,
+    .p-3,
+    .bg-white,
+    .text-reset,
+    .d-flex,
+    .flex-column,
+    .text-center,
+    .align-items-center,
+    .font-medium;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .shadow;
+    }
+}
+
+.product__img {
+    @extend .d-block,
+    .w-100;
+    max-width: 110px;
+}

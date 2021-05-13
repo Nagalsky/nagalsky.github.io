@@ -13,3 +13,4 @@
 // Import custom js-files
 //= components/typehead.js
 //= components/navigation.js
+//= components/hero-form.js

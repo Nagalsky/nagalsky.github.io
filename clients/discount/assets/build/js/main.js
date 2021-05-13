@@ -121,16 +121,19 @@ $(document).ready(function () {
     const $menuToggle = $(".navigation-toggle");
     const $menuClose = $(".navigation-close");
     const $menuMask = $(".navigation-mask");
+    const $body = $("body");
     $menuToggle.on("click", function (e) {
       e.preventDefault();
       $menu.toggleClass("is-active");
       $menuMask.toggleClass("is-active");
+      $body.toggleClass("modal-open");
     });
 
     $menuClose.on("click", function (e) {
       e.preventDefault();
       $menu.removeClass("is-active");
       $menuMask.removeClass("is-active");
+      $body.removeClass("modal-open");
     });
 
     $(document).on("click touchstart", function (e) {
@@ -140,7 +143,31 @@ $(document).ready(function () {
       ) {
         $menu.removeClass("is-active");
         $menuMask.removeClass("is-active");
+        $body.removeClass("modal-open");
       }
+    });
+  })();
+});
+$(document).ready(function () {
+  (function () {
+    $("#field-select-make").change(function () {
+      $(this)
+        .removeClass("form-select--is-active")
+        .addClass("form-select--is-done");
+      $("#field-select-model")
+        .prop("disabled", false)
+        .addClass("form-select--is-active");
+    });
+    $("#field-select-model").change(function () {
+      $(this)
+        .removeClass("form-select--is-active")
+        .addClass("form-select--is-done");
+      $("#field-select-year")
+        .prop("disabled", false)
+        .addClass("form-select--is-active");
+    });
+    $("#field-select-year").change(function () {
+      $("#field-submit").prop("disabled", false);
     });
   })();
 });
