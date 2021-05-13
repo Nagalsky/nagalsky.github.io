@@ -7,8 +7,13 @@
     >.container {
         @extend .d-flex,
         .align-items-center,
+        .justify-content-between,
         .flex-wrap,
-        .justify-content-between;
+        .flex-md-nowrap;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 65px;
+        }
     }
 }
 
@@ -63,7 +68,8 @@
 
 .header__account {
     @extend .d-flex,
-    .align-items-center;
+    .align-items-center,
+    .flex-shrink-0;
     @extend .order-2,
     .order-md-3;
 }

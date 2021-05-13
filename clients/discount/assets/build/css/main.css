@@ -5786,7 +5786,7 @@ textarea.form-control-lg {
 .flex-grow-1 {
   flex-grow: 1 !important; }
 
-.flex-shrink-0, .header__sign-in__icon, .footer, .pre-footer, .nav-menu-secondary__icon, .pre-footer-form .btn-submit {
+.flex-shrink-0, .header__account, .header__sign-in__icon, .footer, .pre-footer, .nav-menu-secondary__icon, .pre-footer-form .btn-submit {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -6891,7 +6891,7 @@ textarea.form-control-lg {
     flex-shrink: 1 !important; }
   .flex-md-wrap {
     flex-wrap: wrap !important; }
-  .flex-md-nowrap {
+  .flex-md-nowrap, .header > .container {
     flex-wrap: nowrap !important; }
   .flex-md-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
@@ -8385,6 +8385,9 @@ b,
 /* HEADER */
 .header {
   padding: 10px 0; }
+  @media (min-width: 768px) {
+    .header > .container {
+      padding-left: 65px; } }
 
 .header__logo {
   width: 140px; }
