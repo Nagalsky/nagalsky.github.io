@@ -18,3 +18,4 @@
 //= components/navigation.js
 //= components/hero-form.js
 //= components/lazy.js
+//= components/products-nav.js
