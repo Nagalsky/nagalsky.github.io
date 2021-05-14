@@ -14,7 +14,7 @@
         .top-0,
         .bg-silver;
         width: 1px;
-        height: calc(100% - 17px);
+        height: calc(100% - 18px);
     }
 
     &--has-arrow {
@@ -47,8 +47,15 @@
     @extend .position-relative,
     .py-2,
     .pe-3,
-    .d-block;
+    .d-block,
+    .text-sky;
     padding-left: 35px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+    }
 
     &:after {
         content: '';
