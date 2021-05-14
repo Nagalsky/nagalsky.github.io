@@ -5534,7 +5534,8 @@ textarea.form-control-lg {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .header > .container, .header__account, .header__sign-in, .header__card .badge, .footer__nav, .navigation-toggle, .navigation__header, .nav-menu-secondary__item, .pre-footer-form, .hero-form, .product {
+.d-flex, .header > .container, .header__account, .header__sign-in, .header__card .badge, .footer__nav, .navigation-toggle, .navigation__header, .nav-menu-secondary__item, .pre-footer-form, .hero-form, .product, .products-filter, .products-filter-pagination,
+.products-filter-sort {
   display: flex !important; }
 
 .d-inline-flex {
@@ -5822,7 +5823,7 @@ textarea.form-control-lg {
 .justify-content-start {
   justify-content: flex-start !important; }
 
-.justify-content-end {
+.justify-content-end, .products-filter {
   justify-content: flex-end !important; }
 
 .justify-content-center, .header__card .badge, .navigation-toggle {
@@ -5843,7 +5844,8 @@ textarea.form-control-lg {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, .header > .container, .header__account, .header__sign-in, .header__card .badge, .navigation-toggle, .navigation__header, .nav-menu-secondary__item, .product {
+.align-items-center, .header > .container, .header__account, .header__sign-in, .header__card .badge, .navigation-toggle, .navigation__header, .nav-menu-secondary__item, .product, .products-filter, .products-filter-pagination,
+.products-filter-sort {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -6269,7 +6271,7 @@ textarea.form-control-lg {
 .text-center, .footer__bottom, .hero-form-select-holder:before, .product {
   text-align: center !important; }
 
-.text-primary, .header__sign-in__icon, .footer-nav__item:hover, .footer-nav__item:focus, .footer-nav__item:active, .footer-nav__item.footer-nav__item--heading:hover, .footer-nav__item.footer-nav__item--heading:focus, .footer-nav__item.footer-nav__item--heading:active, .typeahead-form__icon, .nav-menu--has-arrow .nav-menu__item:hover:before, .nav-menu--has-arrow .nav-menu__item:focus:before, .nav-menu--has-arrow .nav-menu__item:active:before, .nav-menu-secondary__item:hover, .nav-menu-secondary__item:focus, .nav-menu-secondary__item:active, .pre-footer-form .form-control {
+.text-primary, .header__sign-in__icon, .footer-nav__item:hover, .footer-nav__item:focus, .footer-nav__item:active, .footer-nav__item.footer-nav__item--heading:hover, .footer-nav__item.footer-nav__item--heading:focus, .footer-nav__item.footer-nav__item--heading:active, .typeahead-form__icon, .nav-menu--has-arrow .nav-menu__item:hover:before, .nav-menu--has-arrow .nav-menu__item:focus:before, .nav-menu--has-arrow .nav-menu__item:active:before, .nav-menu-secondary__item:hover, .nav-menu-secondary__item:focus, .nav-menu-secondary__item:active, .pre-footer-form .form-control, .breadcrumb-item > a:hover, .breadcrumb-item > a:focus, .breadcrumb-item > a:active {
   color: #04247b !important; }
 
 .text-success {
@@ -6314,7 +6316,7 @@ textarea.form-control-lg {
 .text-gray600 {
   color: #3d3d3d !important; }
 
-.text-gray700, .navigation-toggle {
+.text-gray700, .navigation-toggle, .breadcrumb-item, .breadcrumb-item > a {
   color: #434343 !important; }
 
 .text-danger {
@@ -8247,7 +8249,7 @@ textarea.form-control-lg {
 .font-medium, .footer-nav__item, .hero-form-select-holder:before, .product {
   font-family: "Roboto-Medium" !important; }
 
-.font-bold, .header__sign-in__link {
+.font-bold, .header__sign-in__link, .breadcrumb-item.active {
   font-family: "Roboto-Bold" !important; }
 
 /*************************
@@ -8343,7 +8345,7 @@ b,
 .fs-11, .header__card .badge {
   font-size: 11px !important; }
 
-.fs-12 {
+.fs-12, .breadcrumb {
   font-size: 12px !important; }
 
 .fs-13, .header__create-account {
@@ -8847,3 +8849,21 @@ ul {
 /* PRODUCT */
 .product__img {
   max-width: 110px; }
+
+/* BREADCRUMB */
+.breadcrumb-item + .breadcrumb-item:before {
+  content: '>'; }
+
+/* PRODUCTS FILTER */
+.products-filter-sort .form-select {
+  max-width: 120px; }
+
+/* FORM */
+.form-select {
+  height: 35px; }
+  .form-select:disabled {
+    cursor: not-allowed; }
+
+/* PAGINATION */
+.page-link {
+  padding: 6px .75rem; }
