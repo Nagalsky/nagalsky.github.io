@@ -3,6 +3,7 @@
 .header {
     @extend .bg-white;
     padding: 10px 0;
+    border-bottom: 1px solid $silver100;
 
     >.container {
         @extend .d-flex,
@@ -13,6 +14,11 @@
 
         @include media-breakpoint-up(md) {
             padding-left: 65px;
+        }
+
+        @media (min-width: 1900px) {
+            width: 1400px;
+            max-width: 100%;
         }
     }
 }
