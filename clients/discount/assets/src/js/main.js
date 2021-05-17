@@ -19,3 +19,4 @@
 //= components/hero-form.js
 //= components/lazy.js
 //= components/products-nav.js
+//= components/qty.js

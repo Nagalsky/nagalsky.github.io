@@ -1,0 +1,25 @@
+/* TABLE */
+
+.table {
+    border-color: $silver400;
+
+    >thead {
+        >tr {
+            >th {
+                @extend .font-bold;
+            }
+        }
+    }
+
+    >thead,
+    >tbody {
+        >tr {
+
+            >th,
+            >td {
+                @extend .py-2,
+                .px-3;
+            }
+        }
+    }
+}
