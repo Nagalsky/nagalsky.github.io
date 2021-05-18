@@ -1,0 +1,24 @@
+/* LIST SUCCESS */
+
+.list-success {
+    @extend .d-flex,
+    .flex-column;
+}
+
+.list-success__item {
+    @extend .position-relative,
+    .font-icons,
+    .icon-check-mark,
+    .d-flex,
+    .align-items-center;
+
+    &:before {
+        @extend .text-success,
+        .me-3,
+        .flex-shrink-0;
+    }
+
+    &+.list-success__item {
+        margin-top: 2px;
+    }
+}
