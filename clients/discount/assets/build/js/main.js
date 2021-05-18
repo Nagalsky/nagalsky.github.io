@@ -154,7 +154,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   (function () {
-    $("#field-select-make").change(function () {
+    $("#field-select-make").on("change", function () {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -162,7 +162,7 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-model").change(function () {
+    $("#field-select-model").on("change", function () {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -170,7 +170,10 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-year").change(function () {
+    $("#field-select-year").on("change", function () {
+      $(this)
+        .removeClass("form-select--is-active")
+        .addClass("form-select--is-done");
       $("#field-submit").prop("disabled", false);
     });
   })();
