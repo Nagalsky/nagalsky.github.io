@@ -17,7 +17,7 @@
     border-radius: 10px;
 
     @include media-breakpoint-up(lg) {
-        grid-template-columns: 300px 1fr 296px;
+        grid-template-columns: 300px 240px 1fr 296px;
     }
 
     &+.choice {
@@ -33,14 +33,6 @@
     .flex-column,
     .align-items-center,
     .justify-content-center;
-
-    @include media-breakpoint-down(lg) {
-        border-bottom: 3px solid #f6f8fb;
-    }
-
-    @include media-breakpoint-up(lg) {
-        border-right: 3px solid #f6f8fb;
-    }
 }
 
 .choice-image-box__img {
@@ -50,10 +42,33 @@
     .img-fluid;
 }
 
+.choice-ratings {
+    @extend .text-center,
+    .py-4,
+    .px-3;
+
+    @include media-breakpoint-down(lg) {
+        border-bottom: 3px solid #f6f8fb;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 80px !important;
+        border-left: 3px solid #f6f8fb;
+    }
+}
+
 .choice-description {
     @extend .d-flex,
     .align-items-center;
     padding: 30px 15px;
+
+    @include media-breakpoint-down(lg) {
+        border-bottom: 3px solid #f6f8fb;
+    }
+
+    @include media-breakpoint-up(lg) {
+        border-left: 3px solid #f6f8fb;
+    }
 
     @include media-breakpoint-up(xl) {
         padding: 30px 50px;
