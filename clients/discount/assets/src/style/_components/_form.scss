@@ -2,6 +2,12 @@
 
 $field-height: 35px;
 
+.form-control {
+    &:focus {
+        @include custom-placeholder-opacity($opacity: 0);
+    }
+}
+
 .form-select {
     height: $field-height;
 

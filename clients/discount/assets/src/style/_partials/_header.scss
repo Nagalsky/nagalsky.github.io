@@ -17,7 +17,7 @@
 .header__logo {
     @extend .d-inline-block,
     .order-1;
-    width: 140px;
+    width: 110px;
 
     @include media-breakpoint-up(md) {
         width: 182px;
@@ -71,7 +71,9 @@
 
 .header__sign-in {
     @extend .d-flex,
-    .align-items-center;
+    .align-items-center,
+    .me-2,
+    .me-md-3;
 }
 
 .header__sign-in__icon {
@@ -79,7 +81,8 @@
     .flex-shrink-0,
     .me-md-2,
     .lh-1;
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
 
     @include media-breakpoint-up(md) {
         font-size: 28px;
@@ -113,15 +116,24 @@
     }
 }
 
-.header__card {
+.header__card,
+.header__support {
     @extend .position-relative,
-    .ms-3,
-    .me-4,
-    .ms-md-4;
+    .mx-2,
+    .mx-md-3,
+    .d-flex,
+    .flex-column,
+    .align-items-center;
     font-size: 22px;
 
     @include media-breakpoint-up(md) {
         font-size: 28px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-decoration-none;
     }
 
     .badge {
@@ -136,4 +148,12 @@
         top: -1px;
         right: -8px;
     }
+}
+
+.header__icon-text {
+    @extend .text-center,
+    .fs-12,
+    .text-dark,
+    .font-regular;
+    display: block;
 }
