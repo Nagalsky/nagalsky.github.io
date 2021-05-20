@@ -67,7 +67,13 @@ h4,
 .h4 {}
 
 h5,
-.h5 {}
+.h5 {
+  font-size: 16px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}
 
 h6,
 .h6 {}
@@ -84,7 +90,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    text-decoration: underline !important;
+    text-decoration: underline;
   }
 }
 

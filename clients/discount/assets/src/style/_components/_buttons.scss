@@ -8,6 +8,12 @@
     align-items: center;
     justify-content: center;
 
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+
     &-sky {
         @include button-variants($bg: $sky, $color: $white);
     }
@@ -48,13 +54,16 @@
         font-size: 18px;
         padding: 11.5px 30px;
     }
+
+
 }
 
 .btn-icon {
     @extend .d-inline-flex,
     .align-items-center,
     .justify-content-center,
-    .rounded-circle;
+    .rounded-circle,
+    .flex-shrink-0;
     width: 34px;
     height: 34px;
     @include transition($base-animation);
