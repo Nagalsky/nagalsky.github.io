@@ -13,6 +13,9 @@
 // jQuery Lazyload
 //= ../../../node_modules/jquery-lazy/jquery.lazy.min.js
 
+// Import Swiper
+//= ../../../node_modules/swiper/swiper-bundle.min.js
+
 // Import custom js-files
 //= components/typehead.js
 //= components/navigation.js
@@ -20,3 +23,5 @@
 //= components/lazy.js
 //= components/products-nav.js
 //= components/qty.js
+//= components/related-gallery.js
+//= components/featured-news-gallery.js

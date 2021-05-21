@@ -22,3 +22,28 @@
         font-size: 28px;
     }
 }
+
+.blog-post__list {
+    padding-left: 17px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 17px;
+    }
+
+    >li {
+        @extend .py-1;
+
+        >a {
+            color: $gray400;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $gray800;
+            }
+        }
+    }
+
+
+
+}
