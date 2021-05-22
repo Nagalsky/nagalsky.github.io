@@ -25,3 +25,4 @@
 //= components/qty.js
 //= components/related-gallery.js
 //= components/featured-news-gallery.js
+//= components/product-gallery.js

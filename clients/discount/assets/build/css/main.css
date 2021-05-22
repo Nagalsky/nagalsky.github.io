@@ -7932,13 +7932,13 @@ textarea.form-control-lg {
 .lh-lg {
   line-height: 2 !important; }
 
-.bg-primary, .pre-footer, .tt-suggestion:hover, .tt-suggestion:focus, .tt-suggestion:active {
+.bg-primary, .pre-footer, .tt-suggestion:hover, .tt-suggestion:focus, .tt-suggestion:active, .swiper-pagination-bullet:hover, .swiper-pagination-bullet:active {
   background-color: #04247b !important; }
 
 .bg-success {
   background-color: #22af40 !important; }
 
-.bg-sky {
+.bg-sky, .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #3761bf !important; }
 
 .bg-sky100 {
@@ -8028,7 +8028,7 @@ textarea.form-control-lg {
 .bg-white, .header, .navigation, .navigation-toggle, .tt-menu, .hero-form, .product, .product-list-item__logo-box-link, .featured-news-gallery .swiper-pagination-bullet:hover, .featured-news-gallery .swiper-pagination-bullet:active, .featured-news-gallery .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fff !important; }
 
-.bg-transparent, .tags--popular .tag-link:hover, .tags--popular .tag-link:focus, .tags--popular .tag-link:active, .form-search__submit, .featured-news-gallery .swiper-pagination-bullet {
+.bg-transparent, .tags--popular .tag-link:hover, .tags--popular .tag-link:focus, .tags--popular .tag-link:active, .form-search__submit, .swiper-pagination-bullet, .featured-news-gallery .swiper-pagination-bullet {
   background-color: transparent !important; }
 
 .bg-gradient {
@@ -10943,6 +10943,18 @@ ul {
 .latest-blog__body {
   min-width: 0; }
 
+/* GALLERY */
+.swiper-pagination-bullet {
+  opacity: 1;
+  border: 1px solid #fff;
+  width: 9px;
+  height: 9px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
+  .swiper-pagination-bullet:hover, .swiper-pagination-bullet:active {
+    border-color: #3761bf; }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: #3761bf; }
+
 /* RELATEDD GALLERY */
 .related-gallery {
   padding: 10px 0 20px 0; }
@@ -10998,4 +11010,13 @@ ul {
   border: 1px solid #cdcdcd;
   color: #cdcdcd; }
   .social:hover, .social:focus, .social:active {
+    border-color: #04247b; }
+
+/* PRODUCT GALLERY */
+.product-gallery-thumbnails .swiper-slide {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  overflow: hidden; }
+  .product-gallery-thumbnails .swiper-slide-thumb-active {
     border-color: #04247b; }
