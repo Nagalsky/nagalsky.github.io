@@ -7797,7 +7797,7 @@ textarea.form-control-lg {
 .pb-2 {
   padding-bottom: 0.5rem !important; }
 
-.pb-3, .product, .product-list-item__logo-box-link {
+.pb-3, .product, .product-list-item__logo-box-link, .product-gallery {
   padding-bottom: 1rem !important; }
 
 .pb-4 {
@@ -8846,7 +8846,7 @@ textarea.form-control-lg {
     padding-right: 1.5rem !important; }
   .pe-md-5 {
     padding-right: 3rem !important; }
-  .pb-md-0 {
+  .pb-md-0, .product-gallery {
     padding-bottom: 0 !important; }
   .pb-md-1 {
     padding-bottom: 0.25rem !important; }
@@ -9940,7 +9940,7 @@ textarea.form-control-lg {
 .font-light, .qty-input {
   font-family: "Roboto-Light" !important; }
 
-.font-medium, .footer-nav__item, .nav-menu__item.nav-menu__item--current, .hero-form-select-holder:before, .product, .product-list-item__logo-box-link, .blog-post__title, .list-item, .latest-blog__more {
+.font-medium, .footer-nav__item, .nav-menu__item.nav-menu__item--current, .hero-form-select-holder:before, .blog-post__title, .list-item, .latest-blog__more {
   font-family: "Roboto-Medium" !important; }
 
 .font-bold, .header__sign-in__link, .hero-form-input-holder .form-control, .hero-form-input-holder .qty-input, .breadcrumb-item.active, .qty-control, .table > thead > tr > th {
@@ -10631,7 +10631,10 @@ ul {
 
 /* SECTION */
 .section {
-  padding: 50px 0; }
+  padding: 20px 0; }
+  @media (min-width: 768px) {
+    .section {
+      padding: 50px 0; } }
   .section--sm {
     padding: 20px 0; }
 
@@ -11110,6 +11113,8 @@ ul {
 
 .product-gallery {
   min-width: 0; }
+  .product-gallery .slick-dots {
+    bottom: -12px; }
 
 .product-gallery-thumbnails {
   width: 60px; }
