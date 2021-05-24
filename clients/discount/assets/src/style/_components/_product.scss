@@ -2,7 +2,9 @@
 
 .product {
     @extend .position-relative,
-    .p-3,
+    .px-3,
+    .pb-3,
+    .pt-2,
     .bg-white,
     .text-reset,
     .d-flex,
@@ -18,7 +20,7 @@
         @extend .shadow;
     }
 
-    @include media-breakpoint-only(sm) {
+    @include media-breakpoint-down(sm) {
         font-size: 13px;
     }
 }
@@ -31,4 +33,18 @@
 
 .product-heading {
     font-size: 23px;
+}
+
+.product-title {
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 19px;
+    /* fallback */
+    max-height: 76px;
+    /* fallback */
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
 }

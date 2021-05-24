@@ -5,11 +5,7 @@
       nextEl: ".related-gallery-button--next",
       prevEl: ".related-gallery-button--prev",
     },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
     breakpoints: {
       640: {

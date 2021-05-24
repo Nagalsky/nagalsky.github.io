@@ -16,6 +16,9 @@
 // Import Swiper
 //= ../../../node_modules/swiper/swiper-bundle.min.js
 
+// Import Slick
+//= ../../../node_modules/slick-carousel/slick/slick.min.js
+
 // Import custom js-files
 //= components/typehead.js
 //= components/navigation.js

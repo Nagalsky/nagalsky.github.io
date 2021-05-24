@@ -1,21 +1,20 @@
 (function () {
-  const swiper = new Swiper(".product-gallery-thumbnails", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
+  $(".product-gallery").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: false,
+    asNavFor: ".product-gallery-thumbnails",
+    dots: true,
   });
-
-  const swiper2 = new Swiper(".product-gallery", {
-    loop: true,
-    spaceBetween: 10,
-    thumbs: {
-      swiper: swiper,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+  $(".product-gallery-thumbnails").slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: ".product-gallery",
+    dots: false,
+    focusOnSelect: true,
+    vertical: true,
+    verticalSwiping: true,
+    arrows: false,
   });
 })();

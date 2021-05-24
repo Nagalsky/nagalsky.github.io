@@ -9,37 +9,37 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
 }
 
 .related-gallery-button {
     @extend .position-absolute,
-    .top-50,
-    .translate-middle-y,
     .font-icons,
     .text-silver200;
     z-index: 30;
     font-size: 40px;
     cursor: pointer;
+    top: 75px;
 
     @include media-breakpoint-up(md) {
         font-size: 50px;
+        transform: translateY(-50%);
+        top: 50%;
     }
 
     &--prev {
         @extend .start-0,
         .icon-chevron-left;
-
-        @include media-breakpoint-up(lg) {
-            left: -10px !important;
-        }
+        left: -10px !important;
     }
 
     &--next {
         @extend .end-0,
         .icon-chevron-right;
-
-        @include media-breakpoint-up(lg) {
-            right: -10px !important;
-        }
+        right: -10px !important;
     }
 }
