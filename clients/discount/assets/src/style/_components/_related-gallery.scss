@@ -24,17 +24,7 @@
     }
 
     .slick-arrow {
-        @extend .position-absolute,
-        .font-icons,
-        .text-silver200,
-        .btn,
-        .border-0,
-        .shadow-none,
-        .p-0;
-        z-index: 30;
-        cursor: pointer;
         top: 75px;
-        font-size: 0;
 
         &:before {
             font-size: 40px;
@@ -47,8 +37,7 @@
 
 
         &.slick-prev {
-            @extend .start-0,
-            .icon-chevron-left;
+            @extend .start-0;
             left: -10px !important;
 
             @include media-breakpoint-up(xxl) {
@@ -57,8 +46,7 @@
         }
 
         &.slick-next {
-            @extend .end-0,
-            .icon-chevron-right;
+            @extend .end-0;
             right: -10px !important;
 
             @include media-breakpoint-up(xxl) {

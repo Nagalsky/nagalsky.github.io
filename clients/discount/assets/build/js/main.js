@@ -283,30 +283,6 @@ $(document).ready(function () {
   })();
 });
 (function () {
-  // const swiper = new Swiper(".related-gallery", {
-  //   loop: true,
-  //   navigation: {
-  //     nextEl: ".related-gallery-button--next",
-  //     prevEl: ".related-gallery-button--prev",
-  //   },
-  //   slidesPerView: 2,
-  //   spaceBetween: 10,
-  //   breakpoints: {
-  //     640: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 15,
-  //     },
-  //     768: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 15,
-  //     },
-  //     992: {
-  //       slidesPerView: 4,
-  //       spaceBetween: 15,
-  //     },
-  //   },
-  // });
-
   $(".related-gallery").slick({
     speed: 300,
     slidesToShow: 4,
@@ -330,22 +306,10 @@ $(document).ready(function () {
   });
 })();
 (function () {
-  const swiper = new Swiper(".featured-news-gallery", {
-    loop: true,
-    navigation: {
-      nextEl: ".featured-news-gallery-button--next",
-      prevEl: ".featured-news-gallery-button--prev",
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+  $(".featured-news-gallery").slick({
+    speed: 300,
+    arrows: true,
+    dots: true,
   });
 })();
 (function () {

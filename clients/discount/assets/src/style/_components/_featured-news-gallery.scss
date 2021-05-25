@@ -5,21 +5,25 @@
         margin-bottom: 20px;
     }
 
-    .swiper-pagination-bullet {
-        opacity: 1;
-        border: 1px solid $white;
-        @extend .bg-transparent;
-        width: 9px;
-        height: 9px;
+    .slick-arrow {
+        @extend .top-50,
+        .translate-middle-y;
 
-        &:hover,
-        &:active {
-            @extend .bg-white;
+        &:before {
+            font-size: 30px;
         }
 
-        &.swiper-pagination-bullet-active {
-            @extend .bg-white;
+        &.slick-prev {
+            left: 0.5rem;
         }
+
+        &.slick-next {
+            right: 0.5rem;
+        }
+    }
+
+    .slick-dots {
+        bottom: 10px;
     }
 }
 

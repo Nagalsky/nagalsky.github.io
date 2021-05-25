@@ -34,3 +34,34 @@
         }
     }
 }
+
+.slick-arrow {
+    @extend .position-absolute,
+    .font-icons,
+    .text-silver200,
+    .btn,
+    .border-0,
+    .shadow-none,
+    .p-0;
+    z-index: 30;
+    cursor: pointer;
+    font-size: 0;
+
+    &:before {
+        font-size: 20px;
+    }
+
+
+
+    &.slick-prev {
+        @extend .start-0,
+        .icon-chevron-left;
+        left: 0 !important;
+    }
+
+    &.slick-next {
+        @extend .end-0,
+        .icon-chevron-right;
+        right: 0px !important;
+    }
+}
