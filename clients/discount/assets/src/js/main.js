@@ -26,3 +26,4 @@
 //= components/related-gallery.js
 //= components/featured-news-gallery.js
 //= components/product-gallery.js
+//= components/scroll-to-top.js
