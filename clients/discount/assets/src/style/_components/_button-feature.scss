@@ -1,0 +1,29 @@
+/* BUTTON FEATURE */
+
+.button-feature {
+    @extend .d-flex,
+    .align-items-center,
+    .position-relative,
+    .text-gray600,
+    .py-3,
+    .ps-3,
+    .pe-5,
+    .fs-15,
+    .font-icons,
+    .icon-chevron-right;
+    border: 1px solid $gray700;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-gray700,
+        .text-decoration-none;
+    }
+
+    &:before {
+        @extend .position-absolute,
+        .top-50,
+        .translate-middle-y;
+        right: 0.5rem;
+    }
+}

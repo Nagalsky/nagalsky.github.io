@@ -1,45 +1,69 @@
 /* RELATEDD GALLERY */
 
 .related-gallery {
-    padding: 10px 0 20px 0;
-
-    @include media-breakpoint-up(md) {
-        margin-left: -15px;
-        margin-right: -15px;
-        padding-left: 15px;
-        padding-right: 15px;
+    @include media-breakpoint-up(sm) {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
-    .swiper-slide {
-        height: auto;
+    .item {
+        padding: 5px 5px 20px 5px;
+
+        @include media-breakpoint-up(sm) {
+            padding: 5px 15px 20px 15px;
+        }
+    }
+
+    .slick-track,
+    .slick-slide {
         display: flex;
     }
-}
 
-.related-gallery-button {
-    @extend .position-absolute,
-    .font-icons,
-    .text-silver200;
-    z-index: 30;
-    font-size: 40px;
-    cursor: pointer;
-    top: 75px;
-
-    @include media-breakpoint-up(md) {
-        font-size: 50px;
-        transform: translateY(-50%);
-        top: 50%;
+    .slick-slide {
+        height: auto;
     }
 
-    &--prev {
-        @extend .start-0,
-        .icon-chevron-left;
-        left: -10px !important;
-    }
+    .slick-arrow {
+        @extend .position-absolute,
+        .font-icons,
+        .text-silver200,
+        .btn,
+        .border-0,
+        .shadow-none,
+        .p-0;
+        z-index: 30;
+        cursor: pointer;
+        top: 75px;
+        font-size: 0;
 
-    &--next {
-        @extend .end-0,
-        .icon-chevron-right;
-        right: -10px !important;
+        &:before {
+            font-size: 40px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 50px;
+            }
+        }
+
+
+
+        &.slick-prev {
+            @extend .start-0,
+            .icon-chevron-left;
+            left: -10px !important;
+
+            @include media-breakpoint-up(xxl) {
+                left: -15px !important;
+            }
+        }
+
+        &.slick-next {
+            @extend .end-0,
+            .icon-chevron-right;
+            right: -10px !important;
+
+            @include media-breakpoint-up(xxl) {
+                right: -15px !important;
+            }
+        }
     }
 }
