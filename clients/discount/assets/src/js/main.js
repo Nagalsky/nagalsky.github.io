@@ -13,9 +13,6 @@
 // jQuery Lazyload
 //= ../../../node_modules/jquery-lazy/jquery.lazy.min.js
 
-// Import Swiper
-//= ../../../node_modules/swiper/swiper-bundle.min.js
-
 // Import Slick
 //= ../../../node_modules/slick-carousel/slick/slick.min.js
 
