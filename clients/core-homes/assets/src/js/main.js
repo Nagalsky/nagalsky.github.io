@@ -1,3 +1,6 @@
+// Import jQuery
+//= ../../../node_modules/jquery/dist/jquery.min.js
+
 // Import Popper
 //= ../../../node_modules/@popperjs/core/dist/umd/popper.min.js
 
@@ -5,3 +8,4 @@
 //= ../../../node_modules/bootstrap/dist/js/bootstrap.min.js
 
 // Import custom js-files
+//= components/video-modal.js
