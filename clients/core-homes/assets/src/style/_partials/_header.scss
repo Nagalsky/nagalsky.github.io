@@ -12,8 +12,25 @@
     >.container {
         @extend .d-flex,
         .align-items-center,
-        .justify-content-between,
-        .justify-content-lg-center;
+        .justify-content-between;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            &.active {}
+
+            .nav-link {
+                @extend .text-black,
+                .p-2,
+                .font-regular;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    @extend .text-primary;
+                }
+            }
+        }
     }
 }
 
