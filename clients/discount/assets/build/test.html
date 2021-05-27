@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/site.webmanifest">
+    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/fav/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Shop by make page</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="header__logo">
+                <img alt="img" src="img/elements/logo.png" alt="" class="w-100">
+            </a>
+    
+            <div class="header__account">
+                <!-- <div class="header__sign-in">
+                    <a href="#" class="header__sign-in__icon">
+                        <i class="icon-user"></i>
+                        <span class="header__icon-text d-md-none">Sign In</span>
+                    </a>
+                    <div class="flex-fill d-none d-md-block">
+                        <a href="#" class="header__sign-in__link">Sign In</a>
+                        <p class="header__create-account m-0">or <a href="#" class="text-reset">Create Account</a></p>
+                    </div>
+                </div> -->
+    
+                <a href="#" class="header__support">
+                    <i class="icon-box"></i>
+                    <span class="header__icon-text">Support</span>
+                </a>
+    
+                <a href="#" class="header__card">
+                    <i class="icon-shopping-cart"></i>
+                    <span class="badge bg-danger rounded-pill">0</span>
+                    <span class="header__icon-text">Cart</span>
+                </a>
+    
+                <button class="navigation-toggle ms-3">
+                    <i class="icon-bars"></i>
+                    <span class="header__icon-text">Menu</span>
+                </button>
+            </div>
+    
+            <div id="typeahead-form" class="header__typeahead-form typeahead-form">
+                <input class="form-control typeahead" type="text" placeholder="Search By Keyword, Part or Part #">
+                <i class="typeahead-form__icon icon-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <div class="share-dialog">
+                    <header>
+                        <h3 class="dialog-title">Share this pen</h3>
+                        <button class="close-button"><svg>
+                                <use href="#close"></use>
+                            </svg></button>
+                    </header>
+                    <div class="targets">
+                        <a class="button">
+                            <svg>
+                                <use href="#facebook"></use>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#twitter"></use>
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#linkedin"></use>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a class="button">
+                            <svg>
+                                <use href="#email"></use>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <div class="pen-url">https://codepen.io/ayoisaiah/pen/YbNazJ</div>
+                        <button class="copy-link">Copy Link</button>
+                    </div>
+                </div>
+
+                <button class="share-button" type="button" title="Share this article">
+                    <svg>
+                        <use href="#share-icon"></use>
+                    </svg>
+                    <span>Share</span>
+                </button>
+
+                <svg class="hidden">
+                    <defs>
+                        <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-share">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16 6 12 2 8 6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </symbol>
+
+                        <symbol id="facebook" viewBox="0 0 24 24" fill="#3b5998" stroke="#3b5998" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </symbol>
+
+                        <symbol id="twitter" viewBox="0 0 24 24" fill="#1da1f2" stroke="#1da1f2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </symbol>
+
+                        <symbol id="email" viewBox="0 0 24 24" fill="#777" stroke="#fafafa" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </symbol>
+
+                        <symbol id="linkedin" viewBox="0 0 24 24" fill="#0077B5" stroke="#0077B5" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </symbol>
+
+                        <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </symbol>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <!-- <button class="navigation-toggle">
+        <i class="icon-bars"></i>
+    </button> -->
+    
+    <nav class="navigation">
+        <div class="navigation__header">
+            <button class="navigation-close btn border-0 shadow-none fs-20 text-gray400 flex-shrink-0 me-1 ps-0">
+                <i class="icon-bars"></i>
+            </button>
+            <button type="button" class="btn btn-sky navigation-close" data-bs-toggle="modal"
+                data-bs-target="#popup-vehicle-search">Shop By
+                Vehicle <i class="icon-circle-right ms-3 ms-md-5"></i></button>
+    
+            <button class="navigation-close btn border-0 shadow-none fs-20 text-sky flex-shrink-0 ms-auto px-2 px-md-3">
+                <i class="icon-close"></i>
+            </button>
+        </div>
+    
+        <div class="navigation__body">
+            <h4>Shop By Category</h4>
+    
+            <div class="nav-menu nav-menu--has-arrow mb-md-5">
+                <a href="#" class="nav-menu__item">AC Compressor, Condenser & Climate Control</a>
+                <a href="#" class="nav-menu__item">Air Filters & Intake System Parts</a>
+                <a href="#" class="nav-menu__item">Alternator, Starter, Tune Up & Engine Electrical</a>
+                <a href="#" class="nav-menu__item">Brake Pads, Rotors, Calipers & Brake Parts</a>
+                <a href="#" class="nav-menu__item">Carburetor Parts & Components</a>
+                <a href="#" class="nav-menu__item">Clutch, Flywheel, Flex Plate & Clutch Parts</a>
+                <a href="#" class="nav-menu__item">Diesel Fuel Injectors & Injection Parts</a>
+                <a href="#" class="nav-menu__item">Drive Belts, Serpentine Belts & Components</a>
+                <a href="#" class="nav-menu__item">Fuel Pump, Filters, Tanks, Caps & Fuel Delivery</a>
+                <a href="#" class="nav-menu__item">Headlights, Tail Lights & Body Electrical Parts</a>
+                <a href="#" class="nav-menu__item">Injectors, Oxygen Sensors, Throttle Body & Fuel Injection</a>
+                <a href="#" class="nav-menu__item">Mirrors, Grilles, Body Mechanical & Trim</a>
+                <a href="#" class="nav-menu__item">Mufflers, Exhaust Manifold & Exhaust System</a>
+                <a href="#" class="nav-menu__item">Radiator, Fan, Thermostat, Water Pump & Cooling System</a>
+                <a href="#" class="nav-menu__item">Shocks, Struts, Control Arm, Ball Joint & Suspension</a>
+                <a href="#" class="nav-menu__item">Steering Rack, Pumps & Steering Parts</a>
+                <a href="#" class="nav-menu__item">Timing Belts, Chains, Head Gaskets & Engine Mechanical</a>
+                <a href="#" class="nav-menu__item">Transmission Filter, Mounts & Transmission Parts</a>
+                <a href="#" class="nav-menu__item">Wheel Bearings, Wheels, Driveshaft & Axle</a>
+            </div>
+    
+            <div class="nav-menu-secondary">
+                <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-shopping-cart"></i> my
+                    cart
+                    - $0.00</a>
+                <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-user"></i> my
+                    account</a>
+                <a href="#" class="nav-menu-secondary__item"><i class="nav-menu-secondary__icon icon-live_help"></i>
+                    customer support</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="navigation-mask"></div>
+
+    <button type="button" class="scroll-to-top">
+        <i class="icon-chevrons-up"></i>
+    </button>
+
+    <div class="pre-footer text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 mb-3 mb-lg-0">
+                    <h3>Email Deals</h3>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-md-7 mb-3 mb-md-0">
+                    <h4>Be the first to receive exclusive promotions, updates and product announcements. Subscribe to our
+                        mailing list now.</h4>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-5">
+                    <form class="pre-footer-form">
+                        <input type="email" class="form-control" placeholder="Enter your email address">
+                        <button class="btn btn-success100 btn-submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 mb-4 mb-xl-0">
+                        <a href="#" class="footer__logo">
+                            <img alt="img" src="img/elements/logo.png" alt="" class="w-100">
+                        </a>
+                    </div>
+    
+                    <div class="col-xl-2 col-md-3 col-6 mb-4 md-md-0">
+                        <div class="footer__nav">
+                            <a href="#" class="footer-nav__item footer-nav__item--heading">Support</a>
+                            <a href="#" class="footer-nav__item">FAQ</a>
+                            <a href="#" class="footer-nav__item">Returns</a>
+                            <a href="#" class="footer-nav__item">Retrieve Quote</a>
+                            <a href="#" class="footer-nav__item">Coupons</a>
+                            <a href="#" class="footer-nav__item">Shipping Policy</a>
+                            <a href="#" class="footer-nav__item">Return Policy</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-3 col-6 mb-4 md-md-0">
+                        <div class="footer__nav">
+                            <a href="#" class="footer-nav__item footer-nav__item--heading">About</a>
+                            <a href="#" class="footer-nav__item">Company Info</a>
+                            <a href="#" class="footer-nav__item">Press Releases</a>
+                            <a href="#" class="footer-nav__item">Careers</a>
+                            <a href="#" class="footer-nav__item">Reviews</a>
+                            <a href="#" class="footer-nav__item">Investor Relations</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="footer__nav">
+                            <a href="#" class="footer-nav__item footer-nav__item--heading">Blogs</a>
+                            <a href="#" class="footer-nav__item">In The Garage Home</a>
+                            <a href="#" class="footer-nav__item">Auto Repair 101</a>
+                            <a href="#" class="footer-nav__item">DIY Guides</a>
+                            <a href="#" class="footer-nav__item">OBD - II Trouble Codes</a>
+                            <a href="#" class="footer-nav__item">Automotive Features</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-3 col-6">
+                        <div class="footer__nav">
+                            <a href="#" class="footer-nav__item footer-nav__item--heading">Catalogs</a>
+                            <a href="#" class="footer-nav__item">Shop By Make</a>
+                            <a href="#" class="footer-nav__item">Shop By Parts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="font-medium">© Copyright 2021 - DiscountAutoParts.com ®</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
