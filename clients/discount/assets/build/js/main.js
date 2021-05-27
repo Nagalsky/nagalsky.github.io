@@ -340,9 +340,21 @@ $(document).ready(function () {
     const $body = $("body");
     $menuToggle.on("click", function (e) {
       e.preventDefault();
-      $menu.toggleClass("is-active");
-      $menuMask.toggleClass("is-active");
-      $body.css("overflow", "hidden");
+      if (navigator.share) {
+        navigator
+          .share({
+            title: "WebShare API Demo",
+            url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
+          })
+          .then(() => {
+            console.log("Thanks for sharing!");
+          })
+          .catch(console.error);
+      } else {
+        $menu.toggleClass("is-active");
+        $menuMask.toggleClass("is-active");
+        $body.css("overflow", "hidden");
+      }
     });
 
     $menuClose.on("click", function (e) {
