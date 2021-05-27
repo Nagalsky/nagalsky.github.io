@@ -223,8 +223,8 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   (function () {
-    $(".qty-control--minus").on("click", (event) => {
-      event.preventDefault();
+    $(".qty-control--minus").on("click", function (e) {
+      e.preventDefault();
       var $this = $(this);
       var $input = $this.closest(".qty").find(".qty-input");
       var value = parseInt($input.val());
@@ -238,8 +238,8 @@ $(document).ready(function () {
       $input.val(value);
     });
 
-    $(".qty-control--plus").on("click", (event) => {
-      event.preventDefault();
+    $(".qty-control--plus").on("click", function (e) {
+      e.preventDefault();
       var $this = $(this);
       var $input = $this.closest(".qty").find(".qty-input");
       var value = parseInt($input.val());
@@ -254,7 +254,7 @@ $(document).ready(function () {
     });
 
     // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
-    $(".qty-input").on("blur", () => {
+    $(".qty-input").on("blur", function () {
       var input = $(this);
       var value = parseInt($(this).val());
 
