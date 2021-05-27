@@ -28,3 +28,4 @@
 //= components/product-gallery.js
 //= components/scroll-to-top.js
 //= components/share-menu.js
+//= components/detect-device.js

@@ -168,3 +168,23 @@
     @extend .flex-fill,
     .text-truncate;
 }
+
+.share-product-device {
+    &.is-ios {
+        .default {
+            @extend .d-none;
+        }
+
+        .ios {
+            @extend .d-inline-block;
+        }
+    }
+
+    .default {
+        @extend .d-inline-block;
+    }
+
+    .ios {
+        @extend .d-none;
+    }
+}
