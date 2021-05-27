@@ -129,24 +129,24 @@ $(document).ready(function () {
     const $menuClose = $(".navigation-close");
     const $menuMask = $(".navigation-mask");
     const $body = $("body");
-    $menuToggle.on("click", function (e) {
-      e.preventDefault();
+    $menuToggle.on("click", (event) => {
+      event.preventDefault();
       $menu.toggleClass("is-active");
       $menuMask.toggleClass("is-active");
       $body.toggleClass("modal-open");
     });
 
-    $menuClose.on("click", function (e) {
-      e.preventDefault();
+    $menuClose.on("click", (event) => {
+      event.preventDefault();
       $menu.removeClass("is-active");
       $menuMask.removeClass("is-active");
       $body.removeClass("modal-open");
     });
 
-    $(document).on("click touchstart", function (e) {
+    $(document).on("click touchstart", (event) => {
       if (
-        $(e.target).closest($menu).length == 0 &&
-        $(e.target).closest($menuToggle).length == 0
+        $(event.target).closest($menu).length == 0 &&
+        $(event.target).closest($menuToggle).length == 0
       ) {
         $menu.removeClass("is-active");
         $menuMask.removeClass("is-active");
@@ -157,7 +157,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   (function () {
-    $("#field-select-make").on("change", function () {
+    $("#field-select-make").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -165,7 +165,7 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-model").on("change", function () {
+    $("#field-select-model").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -173,7 +173,7 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-year").on("change", function () {
+    $("#field-select-year").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -195,24 +195,24 @@ $(document).ready(function () {
     const $menuClose = $(".products-nav-close");
     const $menuMask = $(".products-nav-mask");
     const $body = $("body");
-    $menuToggle.on("click", function (e) {
-      e.preventDefault();
+    $menuToggle.on("click", (event) => {
+      event.preventDefault();
       $menu.toggleClass("is-active");
       $menuMask.toggleClass("is-active");
       $body.toggleClass("modal-open");
     });
 
-    $menuClose.on("click", function (e) {
-      e.preventDefault();
+    $menuClose.on("click", (event) => {
+      event.preventDefault();
       $menu.removeClass("is-active");
       $menuMask.removeClass("is-active");
       $body.removeClass("modal-open");
     });
 
-    $(document).on("click touchstart", function (e) {
+    $(document).on("click touchstart", (event) => {
       if (
-        $(e.target).closest($menu).length == 0 &&
-        $(e.target).closest($menuToggle).length == 0
+        $(event.target).closest($menu).length == 0 &&
+        $(event.target).closest($menuToggle).length == 0
       ) {
         $menu.removeClass("is-active");
         $menuMask.removeClass("is-active");
@@ -223,8 +223,8 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   (function () {
-    $(".qty-control--minus").on("click", function (e) {
-      e.preventDefault();
+    $(".qty-control--minus").on("click", (event) => {
+      event.preventDefault();
       var $this = $(this);
       var $input = $this.closest(".qty").find(".qty-input");
       var value = parseInt($input.val());
@@ -238,8 +238,8 @@ $(document).ready(function () {
       $input.val(value);
     });
 
-    $(".qty-control--plus").on("click", function (e) {
-      e.preventDefault();
+    $(".qty-control--plus").on("click", (event) => {
+      event.preventDefault();
       var $this = $(this);
       var $input = $this.closest(".qty").find(".qty-input");
       var value = parseInt($input.val());
@@ -254,7 +254,7 @@ $(document).ready(function () {
     });
 
     // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
-    $(".qty-input").on("blur", function () {
+    $(".qty-input").on("blur", () => {
       var input = $(this);
       var value = parseInt($(this).val());
 
@@ -318,7 +318,7 @@ $(document).ready(function () {
 })();
 $(document).ready(function () {
   //Check to see if the window is top if not then display button
-  $(window).scroll(function () {
+  $(window).scroll(() => {
     if ($(this).scrollTop() > 200) {
       $(".scroll-to-top").addClass("is-visible");
     } else {
@@ -327,7 +327,7 @@ $(document).ready(function () {
   });
 
   //Click event to scroll to top
-  $(".scroll-to-top").click(function () {
+  $(".scroll-to-top").click(() => {
     $("html, body").animate({ scrollTop: "0" });
   });
 });
@@ -335,28 +335,9 @@ $(document).ready(function () {
   (function () {
     const $menu = $(".share-product-menu");
     const $menuToggle = $(".share-product-btn-open");
-    // const shareButton = document.querySelector(".share-product-btn-open");
     const $menuClose = $(".share-product-btn-close");
     const $menuMask = $(".share-product-mask");
     const $body = $("body");
-
-    // shareButton.addEventListener("click", (event) => {
-    //   if (navigator.share) {
-    //     navigator
-    //       .share({
-    //         title: "WebShare API Demo",
-    //         url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
-    //       })
-    //       .then(() => {
-    //         console.log("Thanks for sharing!");
-    //       })
-    //       .catch(console.error);
-    //   } else {
-    //     $menu.toggleClass("is-active");
-    //     $menuMask.toggleClass("is-active");
-    //     $body.css("overflow", "hidden");
-    //   }
-    // });
 
     $menuToggle.on("click", (event) => {
       if (navigator.share) {
@@ -377,17 +358,17 @@ $(document).ready(function () {
       }
     });
 
-    $menuClose.on("click", function (e) {
-      e.preventDefault();
+    $menuClose.on("click", (event) => {
+      event.preventDefault();
       $menu.removeClass("is-active");
       $menuMask.removeClass("is-active");
       $body.css("overflow", "");
     });
 
-    $(document).on("click touchstart", function (e) {
+    $(document).on("click touchstart", (event) => {
       if (
-        $(e.target).closest($menu).length == 0 &&
-        $(e.target).closest($menuToggle).length == 0
+        $(event.target).closest($menu).length == 0 &&
+        $(event.target).closest($menuToggle).length == 0
       ) {
         $menu.removeClass("is-active");
         $menuMask.removeClass("is-active");
@@ -395,29 +376,5 @@ $(document).ready(function () {
       }
     });
   })();
-});
-
-const shareButton = document.querySelector(".share-button");
-const shareDialog = document.querySelector(".share-dialog");
-const closeButton = document.querySelector(".close-button");
-
-shareButton.addEventListener("click", (event) => {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: "WebShare API Demo",
-        url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
-  } else {
-    shareDialog.classList.add("is-open");
-  }
-});
-
-closeButton.addEventListener("click", (event) => {
-  shareDialog.classList.remove("is-open");
 });
 //# sourceMappingURL=main.js.map

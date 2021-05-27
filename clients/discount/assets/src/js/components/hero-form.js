@@ -1,6 +1,6 @@
 $(document).ready(function () {
   (function () {
-    $("#field-select-make").on("change", function () {
+    $("#field-select-make").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -8,7 +8,7 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-model").on("change", function () {
+    $("#field-select-model").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
@@ -16,7 +16,7 @@ $(document).ready(function () {
         .prop("disabled", false)
         .addClass("form-select--is-active");
     });
-    $("#field-select-year").on("change", function () {
+    $("#field-select-year").on("change", () => {
       $(this)
         .removeClass("form-select--is-active")
         .addClass("form-select--is-done");
