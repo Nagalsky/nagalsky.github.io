@@ -1,0 +1,47 @@
+/* NAVBAR */
+
+.navbar {
+    @extend .position-absolute,
+    .start-0,
+    .top-0,
+    .w-100;
+    z-index: 30;
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            @extend .font-medium,
+            .text-dark;
+
+            @include media-breakpoint-up(md) {
+                padding: 30px 20px;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                @extend .text-primary;
+            }
+
+            &.nav-link--cta {
+                @extend .text-primary,
+                .font-semibold;
+            }
+        }
+    }
+}
+
+.navbar-collapse {
+    @include media-breakpoint-down(md) {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &.show,
+        &.collapsing {
+            background-color: $white;
+        }
+    }
+}
