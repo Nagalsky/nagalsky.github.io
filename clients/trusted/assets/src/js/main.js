@@ -10,6 +10,9 @@
 // Import Swiperjs
 //= ../../../node_modules/swiper/swiper-bundle.min.js
 
+// Import AOS animation
+//= ../../../node_modules/aos/dist/aos.js
+
 // Import custom js-files
 //= components/mobile-menu.js
 //= components/popovers.js

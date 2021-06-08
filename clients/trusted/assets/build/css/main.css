@@ -1,3 +1,4 @@
+@import url(../../../node_modules/aos/dist/aos.css);
 /* Customize colors */
 /* Customize fonts */
 /*!
@@ -5665,7 +5666,7 @@ textarea.form-control-lg {
 .d-inline-block, .choice-image-box__img, .btn-toggle-choices[aria-expanded="false"] .full, .btn-toggle-choices .less {
   display: inline-block !important; }
 
-.d-block, .head-box__avatar {
+.d-block, .head-box__avatar, .modal-image {
   display: block !important; }
 
 .d-grid {
@@ -5680,7 +5681,7 @@ textarea.form-control-lg {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .navbar-social-nav, .footer-nav, .choice-image-box, .choice-ratings, .choice-description, .choice-cta, .btn-toggle-choices .icon, .list-success, .list-success__item, .ratings, .pre-choices-description__icon, .feedback, .feedback-gallery, .hero-secondary__header {
+.d-flex, .navbar-social-nav, .footer-nav, .choice-image-box, .choice-ratings, .choice-description, .choice-cta, .btn-toggle-choices .icon, .list-success, .list-success__item, .ratings, .pre-choices-description__icon, .feedback, .feedback-gallery, .hero-secondary__header, .modal-image-box, .modal-content-box {
   display: flex !important; }
 
 .d-inline-flex {
@@ -5698,16 +5699,16 @@ textarea.form-control-lg {
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
-.shadow-none, .navbar-toggler, .btn-toggle-choices {
+.shadow-none, .navbar-toggler, .btn-toggle-choices, .modal-exit .btn-close {
   box-shadow: none !important; }
 
 .position-static {
   position: static !important; }
 
-.position-relative, .navbar, .navbar .container, .choice, .choice-toggle, .list-success__item, .hero-secondary {
+.position-relative, .navbar, .navbar .container, .choice, .choice-toggle, .list-success__item, .hero-secondary, .modal-content-box {
   position: relative !important; }
 
-.position-absolute, .navbar-toggler, .choice:before, .choice__label, .choice__label:before, .choice__label:after, .choice-toggle:before, .choice-toggle:after, .hero-secondary:before {
+.position-absolute, .navbar-toggler, .choice:before, .choice__label, .choice__label:before, .choice__label:after, .choice-toggle:before, .choice-toggle:after, .hero-secondary:before, .modal-exit .btn-close {
   position: absolute !important; }
 
 .position-fixed {
@@ -5764,7 +5765,7 @@ textarea.form-control-lg {
 .border {
   border: 1px solid #dee2e6 !important; }
 
-.border-0, .navbar-toggler, .btn-toggle-choices, .choice-popover {
+.border-0, .navbar-toggler, .btn-toggle-choices, .choice-popover, .modal-exit .modal-content {
   border: 0 !important; }
 
 .border-top {
@@ -5848,7 +5849,7 @@ textarea.form-control-lg {
 .border-body-logo-color {
   border-color: #01ffb8 !important; }
 
-.border-0, .navbar-toggler, .btn-toggle-choices, .choice-popover {
+.border-0, .navbar-toggler, .btn-toggle-choices, .choice-popover, .modal-exit .modal-content {
   border-width: 0 !important; }
 
 .border-1 {
@@ -5875,7 +5876,7 @@ textarea.form-control-lg {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .hero-secondary:before {
+.w-100, .hero-secondary:before, .modal-image {
   width: 100% !important; }
 
 .w-auto {
@@ -5920,7 +5921,7 @@ textarea.form-control-lg {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column, .footer-nav, .choice-image-box, .choice-ratings, .choice-cta, .list-success, .feedback, .hero-secondary__header {
+.flex-column, .footer-nav, .choice-image-box, .choice-ratings, .choice-cta, .list-success, .feedback, .hero-secondary__header, .modal-image-box, .modal-content-box {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -5974,7 +5975,7 @@ textarea.form-control-lg {
 .justify-content-end {
   justify-content: flex-end !important; }
 
-.justify-content-center, .navbar-social-nav, .choice-image-box, .choice-ratings, .choice-cta, .btn-toggle-choices .icon, .ratings, .pre-choices-description__icon, .feedback-gallery {
+.justify-content-center, .navbar-social-nav, .choice-image-box, .choice-ratings, .choice-cta, .btn-toggle-choices .icon, .ratings, .pre-choices-description__icon, .feedback-gallery, .modal-image-box, .modal-content-box {
   justify-content: center !important; }
 
 .justify-content-between {
@@ -5992,7 +5993,7 @@ textarea.form-control-lg {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, .navbar-nav, .footer-nav, .choice-image-box, .choice-ratings, .choice-description, .choice-cta, .btn-toggle-choices .icon, .list-success__item, .ratings, .pre-choices-description__icon, .feedback, .feedback-gallery, .hero-secondary__header {
+.align-items-center, .navbar-nav, .footer-nav, .choice-image-box, .choice-ratings, .choice-description, .choice-cta, .btn-toggle-choices .icon, .list-success__item, .ratings, .pre-choices-description__icon, .feedback, .feedback-gallery, .hero-secondary__header, .modal-image-box, .modal-content-box {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -6222,7 +6223,7 @@ textarea.form-control-lg {
 .ms-auto {
   margin-left: auto !important; }
 
-.p-0, .navbar-toggler, .btn-toggle-choices {
+.p-0, .navbar-toggler, .btn-toggle-choices, .modal-exit .modal-body {
   padding: 0 !important; }
 
 .p-1 {
@@ -6252,7 +6253,7 @@ textarea.form-control-lg {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important; }
 
-.px-3, .navbar-social-nav, .navbar-social-nav .nav-item, .choice-image-box, .choice-ratings {
+.px-3, .navbar-social-nav, .navbar-social-nav .nav-item, .choice-image-box, .choice-ratings, .modal-image-box {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
@@ -6280,7 +6281,7 @@ textarea.form-control-lg {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
-.py-4, .choice-image-box, .choice-ratings {
+.py-4, .choice-image-box, .choice-ratings, .modal-image-box {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
@@ -6414,7 +6415,7 @@ textarea.form-control-lg {
 .text-end {
   text-align: right !important; }
 
-.text-center, .navbar-brand, .footer__top, .footer__bottom, .hero, .choices-header, .choice-image-box, .choice-ratings, .choice-cta, .choice-toggle, .feedback__name, .feedback-gallery {
+.text-center, .navbar-brand, .footer__top, .footer__bottom, .hero, .choices-header, .choice-image-box, .choice-ratings, .choice-cta, .choice-toggle, .feedback__name, .feedback-gallery, .modal-content-box {
   text-align: center !important; }
 
 .text-primary, .footer-nav-item:hover, .footer-nav-item:focus, .footer-nav-item:active, .choice__rate, .btn-toggle-choices, .pre-choices-description__icon {
@@ -6444,7 +6445,7 @@ textarea.form-control-lg {
 .text-silver100 {
   color: #f0f2fa !important; }
 
-.text-silver200 {
+.text-silver200, .modal-exit .btn-close {
   color: #e9e9ee !important; }
 
 .text-muted {
@@ -6558,7 +6559,7 @@ textarea.form-control-lg {
 .bg-body {
   background-color: #ffffff !important; }
 
-.bg-transparent {
+.bg-transparent, .modal-exit .btn-close {
   background-color: transparent !important; }
 
 .bg-gradient {
@@ -6615,7 +6616,7 @@ textarea.form-control-lg {
 .rounded {
   border-radius: 0.25rem !important; }
 
-.rounded-0 {
+.rounded-0, .modal-exit .modal-content {
   border-radius: 0 !important; }
 
 .rounded-1 {
@@ -9661,3 +9662,50 @@ ul {
   @media (min-width: 768px) {
     .content-box {
       margin-bottom: 70px; } }
+
+/* MODAL */
+.modal-exit .modal-dialog {
+  max-width: 100%; }
+  @media (min-width: 576px) {
+    .modal-exit .modal-dialog {
+      max-width: 600px; } }
+
+.modal-exit .modal-content {
+  box-shadow: 0 4px 20px 0 rgba(47, 69, 92, 0.25); }
+
+.modal-exit .modal-body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+  @media (min-width: 576px) {
+    .modal-exit .modal-body {
+      grid-template-columns: 285px 1fr; } }
+
+.modal-exit .btn-close {
+  opacity: 1;
+  background-image: none;
+  top: 20px;
+  right: 20px;
+  font-size: 22px; }
+
+.modal-backdrop {
+  background-color: rgba(41, 37, 38, 0.5); }
+  .modal-backdrop.show {
+    opacity: 1; }
+
+.modal-image-box {
+  background-image: linear-gradient(to bottom, rgba(42, 74, 107, 0), rgba(38, 71, 105, 0.47)); }
+
+.modal-content-box {
+  padding: 25px 15px; }
+  @media (min-width: 576px) {
+    .modal-content-box {
+      padding: 50px 15px 30px 15px; } }
+
+.modal-image {
+  max-width: 180px; }
+
+.modal-title {
+  font-size: 24px; }
+  @media (min-width: 576px) {
+    .modal-title {
+      font-size: 30px; } }
