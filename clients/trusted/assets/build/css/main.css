@@ -9034,10 +9034,8 @@ p {
 /* NAVBAR */
 .navbar {
   background-color: #ffffff;
-  box-shadow: 0 4px 40px 0 rgba(131, 135, 158, 0.11); }
-  @media (min-width: 576px) {
-    .navbar {
-      background-color: #3771ff; } }
+  box-shadow: 0 4px 40px 0 rgba(131, 135, 158, 0.11);
+  background-color: #3771ff; }
   @media (max-width: 575.98px) {
     .navbar:after {
       content: '';
@@ -9050,6 +9048,12 @@ p {
       height: 80px; } }
   .navbar .container {
     z-index: 4; }
+
+@media (max-width: 575.98px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    margin-left: var(---bs-gutter-x, -0.75rem);
+    margin-right: var(---bs-gutter-x, -0.75rem); } }
 
 .navbar-nav .nav-item .nav-link {
   color: #3771ff;

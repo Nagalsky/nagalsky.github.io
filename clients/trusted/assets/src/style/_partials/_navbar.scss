@@ -4,10 +4,7 @@
     @extend .position-relative;
     background-color: $white;
     box-shadow: 0 4px 40px 0 rgba(131, 135, 158, 0.11);
-
-    @include media-breakpoint-up(sm) {
-        background-color: $primary100;
-    }
+    background-color: $primary100;
 
     &:after {
         @include media-breakpoint-down(sm) {
@@ -39,6 +36,14 @@
     .container {
         @extend .position-relative;
         z-index: 4;
+    }
+}
+
+.navbar-collapse {
+    @include media-breakpoint-down(sm) {
+        background-color: $white;
+        margin-left: var(- --bs-gutter-x, -.75rem);
+        margin-right: var(- --bs-gutter-x, -.75rem);
     }
 }
 
