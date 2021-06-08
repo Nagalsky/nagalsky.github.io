@@ -7,5 +7,10 @@
 // Import Bootstrap 5
 //= ../../../node_modules/bootstrap/dist/js/bootstrap.min.js
 
+// Import Swiperjs
+//= ../../../node_modules/swiper/swiper-bundle.min.js
+
 // Import custom js-files
 //= components/mobile-menu.js
+//= components/popovers.js
+//= components/feedback-gallery.js

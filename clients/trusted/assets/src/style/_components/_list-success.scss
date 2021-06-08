@@ -3,6 +3,15 @@
 .list-success {
     @extend .d-flex,
     .flex-column;
+
+    &--active {
+        .list-success__item {
+
+            &:before {
+                @extend .text-success;
+            }
+        }
+    }
 }
 
 .list-success__item {
@@ -10,15 +19,19 @@
     .font-icons,
     .icon-check-mark,
     .d-flex,
-    .align-items-center;
+    .align-items-center,
+    .text-muted100;
 
     &:before {
-        @extend .text-success,
-        .me-3,
+        @extend .me-3,
         .flex-shrink-0;
     }
 
     &+.list-success__item {
-        margin-top: 2px;
+        margin-top: 10px;
+    }
+
+    &.list-success__item--highlited {
+        @extend .text-dark;
     }
 }
