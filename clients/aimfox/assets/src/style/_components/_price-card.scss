@@ -1,0 +1,40 @@
+/* PRICE CARD */
+
+.price-card {
+    @extend .mx-auto,
+    .fs-14;
+    border-radius: $base-radius;
+    max-width: 400px;
+    padding: 30px;
+
+    @include media-breakpoint-up(sm) {
+        padding: 60px 48px;
+    }
+}
+
+.price-card__price {
+    font-size: 48px;
+    @extend .lh-1;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 46px;
+    }
+
+    sup,
+    sub {
+        @extend .fs-14;
+    }
+
+    sup {
+        @extend .me-1;
+        top: -22px;
+    }
+
+    sub {
+        @extend .ms-1,
+        .font-book,
+        .text-silver200;
+        bottom: 0;
+    }
+}

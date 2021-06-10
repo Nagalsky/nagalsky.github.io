@@ -16,6 +16,17 @@
             }
         }
     }
+
+    &--horizontal {
+        @extend .d-flex,
+        .flex-column;
+
+        .list-check__item {
+            &+.list-check__item {
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 .list-check__item {

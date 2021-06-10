@@ -1,0 +1,26 @@
+/* FEEDBACK */
+
+.feedback {
+    @extend .d-flex,
+    .flex-column,
+    .flex-md-row,
+    .align-items-center,
+    .mx-auto;
+    max-width: 890px;
+}
+
+.feedback__avatar {
+    @extend .flex-shrink-0,
+    .rounded-circle,
+    .mb-4,
+    .mb-md-0;
+    width: 160px;
+
+    @include media-breakpoint-up(md) {
+        margin-right: 60px;
+    }
+}
+
+.feedback__body {
+    @extend .flex-fill;
+}
