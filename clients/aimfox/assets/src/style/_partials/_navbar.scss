@@ -1,0 +1,64 @@
+/* NAVBAR */
+
+.navbar {
+    @extend .position-absolute,
+    .w-100,
+    .start-0,
+    .top-0;
+    z-index: 100;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-color: $white;
+    }
+}
+
+.navbar-brand {
+    width: 116px;
+
+    @include media-breakpoint-up(md) {
+        margin-right: 34px;
+    }
+}
+
+.navbar-nav {
+    >.nav-item {
+        >.nav-link {
+            @extend .fs-14;
+
+            @include media-breakpoint-up(md) {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+    }
+}
+
+.navbar-btn.btn {
+    @extend .fs-14,
+    .font-book;
+    padding: 8.5px 26px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 12.5px 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-color: $primary !important;
+        color: $white !important;
+    }
+}
+
+.navbar-toggler {
+    @extend .border-0,
+    .shadow-none,
+    .text-primary;
+    font-size: 24px;
+}

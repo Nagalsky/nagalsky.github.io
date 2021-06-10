@@ -1,0 +1,83 @@
+/* FOOTER */
+
+.footer {
+    @extend .bg-primary,
+    .text-white;
+    padding: 40px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 140px 0;
+    }
+}
+
+.footer-top {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 120px;
+    }
+}
+
+.footer__cliens {
+    @extend .w-100,
+    .d-block;
+    max-width: 220px;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 300px;
+    }
+}
+
+.footer-top__heading {
+    @extend .text-white;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 30px;
+    }
+}
+
+.footer__get-starter {
+    .form-control {
+        @extend .bg-transparent,
+        .text-white;
+        border-color: rgba($white, .2);
+        @include custom-placeholder($color: rgba($white, .45),
+            $font-family: $font-book);
+
+        &:focus {
+            @include custom-placeholder-opacity($opacity: 0);
+        }
+    }
+}
+
+.footer__logo {
+    @extend .d-block;
+    width: 108px;
+}
+
+.footer__navbar {
+    @extend .d-flex,
+    .flex-column;
+}
+
+.footer__navbar-item {
+    color: rgba($white, .5);
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-white;
+    }
+
+    &+.footer__navbar-item {
+        @extend .mt-3;
+    }
+}
+
+.footer-bottom__heading {
+    @extend .text-white;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 20px;
+    }
+}

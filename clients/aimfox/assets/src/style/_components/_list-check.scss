@@ -1,0 +1,37 @@
+/* LIST CHECK */
+
+.list-check {
+    @extend .list-unstyled;
+
+    &--inline {
+        @extend .d-flex,
+        .flex-wrap;
+
+        .list-check__item {
+            margin-right: 15px;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.list-check__item {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.list-check__item-icon {
+    @extend .flex-shrink-0,
+    .rounded-circle,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .bg-success,
+    .fs-12;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+}

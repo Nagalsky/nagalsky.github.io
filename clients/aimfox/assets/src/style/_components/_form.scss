@@ -1,0 +1,18 @@
+/* FORM */
+
+.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 60px;
+    border-width: 2px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: $silver100;
+    @include custom-placeholder($color: darken($silver100, 10%),
+        $font-family: $font-book);
+
+    &:focus {
+        @include custom-placeholder-opacity($opacity: 0);
+    }
+}
