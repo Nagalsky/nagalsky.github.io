@@ -6,32 +6,23 @@
         z-index: 10;
 
         @include media-breakpoint-up(lg) {
-            padding: 140px 0 !important;
+            padding: 70px 0 !important;
+            background-size: 480px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url('../img/bg/section-dc-bg.svg');
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 220px 0 !important;
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 280px 0 !important;
+            background-size: 680px;
         }
 
-        &:after {
-            @include media-breakpoint-up(lg) {
-                content: '';
-                position: absolute;
-                left: 0;
-                z-index: -1;
-                background-repeat: no-repeat;
-                top: 50%;
-                height: 100%;
-                transform: translateY(-50%);
-                width: 48vw;
-                background-size: contain;
-                background-image: url('../img/bg/section-dc-bg.svg');
-                background-position: 100% 50%;
-            }
-
-            @include media-breakpoint-up(xl) {
-                width: 50vw;
-            }
+        @media (min-width: 1600px) {
+            background-size: 870px;
         }
     }
 }

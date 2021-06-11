@@ -5,49 +5,23 @@
         z-index: 10;
 
         @include media-breakpoint-up(lg) {
-            padding: 36px 0;
+            padding: 90px 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left -50px top;
+            background-image: url('../img/bg/home-2.png');
         }
 
         @include media-breakpoint-up(xl) {
-            padding: 90px 0;
+            background-position: left -30px top;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            background-position: left top;
         }
 
         @media (min-width: 1750px) {
             padding: 245px 0;
-        }
-
-        &:before,
-        &:after {
-            @include media-breakpoint-up(lg) {
-                content: '';
-                position: absolute;
-                left: 0;
-                z-index: -1;
-                background-repeat: no-repeat;
-            }
-        }
-
-        &:before {
-            @include media-breakpoint-up(lg) {
-                top: 0;
-                height: 100%;
-                width: 46vw;
-                background-size: cover;
-                background-image: url('../img/bg/home-ld-mask.png');
-
-            }
-        }
-
-        &:after {
-            @include media-breakpoint-up(lg) {
-                top: 50%;
-                height: 100%;
-                transform: translateY(-50%);
-                width: 48vw;
-                background-size: contain;
-                background-image: url('../img/bg/section-ld-bg.svg');
-                background-position: 50% 50%;
-            }
         }
     }
 }
