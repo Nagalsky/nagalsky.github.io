@@ -1,0 +1,33 @@
+/* SECTION SIGN IN MIN */
+
+.section {
+    &--sign-in-minute {
+        @extend .overflow-hidden;
+        z-index: 10;
+
+        @include media-breakpoint-up(lg) {
+            padding: 160px 0;
+            background-size: 800px;
+            background-repeat: no-repeat;
+            background-position: right -300px center;
+            background-image: url('../img/bg/section-lgc-bg.png');
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 200px 0;
+            background-size: 900px;
+            background-position: right -360px center;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: 250px 0;
+            background-size: 1200px;
+            background-position: right -460px center;
+        }
+
+        @media (min-width: 1750px) {
+            padding: 300px 0;
+            background-size: 1400px;
+        }
+    }
+}

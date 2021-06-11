@@ -1,0 +1,27 @@
+/* SECTION MADE SIMPLE */
+
+.section {
+    &--made-simple {
+        z-index: 10;
+
+        @include media-breakpoint-up(lg) {
+            padding: 90px 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left -160px top;
+            background-image: url('../img/bg/howitworks-1.png');
+        }
+
+        @include media-breakpoint-up(xl) {
+            background-position: left -120px top;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            background-position: left -80px top;
+        }
+
+        @media (min-width: 1750px) {
+            padding: 245px 0;
+        }
+    }
+}
