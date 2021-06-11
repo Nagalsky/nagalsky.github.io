@@ -1,0 +1,24 @@
+/* SECTION TRACK */
+
+.section {
+    &--lead-generation-tool {
+        @extend .overflow-hidden;
+        z-index: 10;
+
+        @include media-breakpoint-up(lg) {
+            padding: 90px 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left -20px top;
+            background-image: url('../img/bg/features-4.png');
+        }
+
+        @include media-breakpoint-up(xl) {
+            background-position: left top;
+        }
+
+        @media (min-width: 1750px) {
+            padding: 245px 0;
+        }
+    }
+}
