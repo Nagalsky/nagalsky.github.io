@@ -1,0 +1,26 @@
+/* SECTION FEEDBACKS */
+
+.section {
+    &--feedbacks {
+        z-index: 20;
+
+        @include media-breakpoint-up(md) {
+            padding: 120px 0 25px 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 160px 0 25px 0;
+        }
+
+        &:before {
+            content: '';
+            z-index: -1;
+            @extend .position-absolute,
+            .w-100,
+            .start-0,
+            .bottom-0,
+            .bg-secondary;
+            height: 196px;
+        }
+    }
+}

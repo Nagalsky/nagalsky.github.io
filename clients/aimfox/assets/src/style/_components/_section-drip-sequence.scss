@@ -1,0 +1,37 @@
+/* SECTION DRIP SEQUENCE */
+
+.section {
+    &--drip-sequence {
+        @extend .overflow-hidden;
+        z-index: 10;
+
+        @include media-breakpoint-up(lg) {
+            padding: 140px 0 !important;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: 280px 0 !important;
+        }
+
+        &:after {
+            @include media-breakpoint-up(lg) {
+                content: '';
+                position: absolute;
+                left: 0;
+                z-index: -1;
+                background-repeat: no-repeat;
+                top: 50%;
+                height: 100%;
+                transform: translateY(-50%);
+                width: 48vw;
+                background-size: contain;
+                background-image: url('../img/bg/section-dc-bg.svg');
+                background-position: 100% 50%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 50vw;
+            }
+        }
+    }
+}

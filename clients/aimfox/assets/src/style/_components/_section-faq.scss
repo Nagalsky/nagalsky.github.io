@@ -1,0 +1,37 @@
+/* SECTION FAQ */
+
+.section {
+    &--faq {
+        z-index: 20;
+
+        &:before {
+            content: '';
+            @extend .position-absolute,
+            .start-0,
+            .bottom-0;
+
+            @include media-breakpoint-up(md) {
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: contain;
+                background-image: url('../img/bg/faq-bg.png');
+                z-index: -1;
+                content: '';
+                height: calc(100% - 145px);
+                width: 34vw;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 33vw;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 31vw;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                width: 28vw;
+            }
+        }
+    }
+}

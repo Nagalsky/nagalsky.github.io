@@ -1,19 +1,66 @@
 /* HERO HOME */
 
 .hero-home {
-    @extend .position-relative;
+    @extend .position-relative,
+    .overflow-hidden;
+    z-index: 20;
     padding: 90px 0 80px 0;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
         padding: 180px 0 125px 0;
     }
 
-    @include media-breakpoint-up(md) {
-        padding: 220px 0 165px 0;
+    @include media-breakpoint-up(xl) {
+        padding: 270px 0 225px 0;
     }
 
-    @include media-breakpoint-up(lg) {
-        padding: 270px 0 225px 0;
+    &:before,
+    &:after {
+        @include media-breakpoint-up(lg) {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    &:before {
+        @include media-breakpoint-up(md) {
+            height: 100%;
+            width: 46%;
+            background-size: cover;
+            background-image: url('../img/bg/hero-home-mask.png');
+            top: 0;
+            right: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 44%;
+        }
+    }
+
+    &:after {
+        @include media-breakpoint-up(md) {
+            height: 80%;
+            width: 40%;
+            background-size: cover;
+            background-image: url('../img/bg/hero-home-bg.png');
+            bottom: 0;
+            right: -10px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 52%;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 100%;
+        }
+
+        @media (min-width: 1920px) {
+            background-size: contain;
+            background-position: center bottom;
+        }
     }
 }
 
