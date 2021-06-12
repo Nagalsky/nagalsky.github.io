@@ -1,8 +1,9 @@
-/* HERO HOW IT WORKS */
+/* HERO CONTACT */
 
-.hero-how-it-works {
+.hero-contact {
     @extend .position-relative,
-    .bg-secondary;
+    .bg-secondary,
+    .text-center;
     padding: 120px 0 80px 0;
     z-index: 20;
 
@@ -20,35 +21,38 @@
 
     &:after {
         @extend .position-absolute,
-        .end-0,
+        .start-0,
         .bottom-0;
 
         @include media-breakpoint-up(lg) {
             background-repeat: no-repeat;
-            background-position: right bottom;
+            background-position: left bottom;
             background-size: contain;
-            background-image: url('../img/bg/hero-how-it-works-bg.png');
+            background-image: url('../img/bg/contact-1.png');
             z-index: 1;
             content: '';
             height: 100%;
-            width: 15vw;
+            width: 24vw;
         }
 
         @include media-breakpoint-up(xl) {
-            width: 14vw;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            width: 20vw;
+            width: 26vw;
         }
 
         @media (min-width: 1550px) {
             width: 23vw;
         }
     }
-}
 
-.hero-how-it-works__wrapper {
-    @extend .mx-auto;
-    max-width: 1092px;
+    .mb-xxl {
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 60px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 90px;
+        }
+    }
 }

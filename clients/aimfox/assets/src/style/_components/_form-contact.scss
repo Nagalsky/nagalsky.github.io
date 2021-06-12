@@ -1,0 +1,38 @@
+/* FORM CONTACT */
+
+.form-contact {
+
+    .form-control,
+    .form-select {
+        border-width: 1px;
+        border-color: rgba($primary, .5);
+        box-shadow: 0 5px 20px 0 rgba(10, 23, 83, 0.1);
+        color: rgba($primary, .5);
+        @include custom-placeholder($color: rgba($primary, .5),
+            $font-family: $font-book);
+
+        @include media-breakpoint-up(md) {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+    }
+
+    textarea.form-control {
+        resize: none;
+        height: 240px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+
+    }
+
+    >.row {
+        >* {
+            margin-top: 35px;
+        }
+    }
+}

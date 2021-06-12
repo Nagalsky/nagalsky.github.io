@@ -7,6 +7,34 @@
     .align-items-center,
     .mx-auto;
     max-width: 890px;
+
+    &.feedback--box {
+        max-width: 100%;
+        @extend .bg-white,
+        .base-radius;
+        box-shadow: 0 5px 20px 0 rgba(10, 23, 83, 0.1);
+        padding: 36px 24px;
+
+        @include media-breakpoint-up(md) {
+            padding: 36px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 36px 64px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 48px 120px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: 68px 172px;
+        }
+
+        &+.feedback--box {
+            margin-top: 48px;
+        }
+    }
 }
 
 .feedback__avatar {
