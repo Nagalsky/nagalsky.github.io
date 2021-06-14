@@ -8,7 +8,7 @@
         padding-bottom: 0;
 
         @include media-breakpoint-up(md) {
-            padding: 90px 0 0 0;
+            padding: 90px 0;
 
             &:after {
                 content: '';
@@ -45,6 +45,10 @@
                 >img {
                     max-width: 80%;
                 }
+            }
+
+            @include media-breakpoint-between(md, lg) {
+                transform: translateY(147px);
             }
         }
     }
