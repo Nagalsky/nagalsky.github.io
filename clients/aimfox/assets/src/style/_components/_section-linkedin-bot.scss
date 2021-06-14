@@ -4,6 +4,7 @@
     &--linkedin-bot {
         @extend .overflow-hidden;
         z-index: 10;
+        padding-bottom: 0;
 
         @include media-breakpoint-up(md) {
             padding: 90px 0;
@@ -40,6 +41,10 @@
         }
 
         .content-img {
+            @include media-breakpoint-only(md) {
+                transform: translateY(134px);
+            }
+
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
                 position: absolute;
                 right: 0;

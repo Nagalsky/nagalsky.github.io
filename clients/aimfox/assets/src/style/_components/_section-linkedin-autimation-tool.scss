@@ -2,6 +2,7 @@
 
 .section {
     &--linkedin-autimation-tool {
+        @extend .overflow-hidden;
         z-index: 10;
         padding: 50px 0 0 0;
 
@@ -43,6 +44,10 @@
             }
 
             @media (min-width: 1922px) {
+                transform: translateY(90px);
+            }
+
+            @include media-breakpoint-between(md, lg) {
                 transform: translateY(90px);
             }
         }

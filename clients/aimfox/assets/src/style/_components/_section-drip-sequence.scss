@@ -26,6 +26,10 @@
         }
 
         .content-img {
+            @include media-breakpoint-between(md, lg) {
+                transform: scale(1.15) translateX(-10px);
+            }
+
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
                 position: absolute;
                 left: 0;
