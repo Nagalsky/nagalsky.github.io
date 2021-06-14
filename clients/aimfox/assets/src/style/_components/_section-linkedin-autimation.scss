@@ -4,28 +4,8 @@
     &--linkedin-autimation {
         z-index: 10;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             padding: 90px 0;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: left -130px top;
-            background-image: url('../img/bg/home-2.png');
-        }
-
-        @include media-breakpoint-up(xl) {
-            background-position: left -30px top;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            background-position: left top;
-        }
-
-        @media (min-width: 1750px) {
-            padding: 245px 0;
-        }
-
-        @media (min-width: 2200px) {
-            background-image: none !important;
 
             &:after {
                 content: '';
@@ -34,10 +14,26 @@
                 top: 0;
                 height: 100%;
                 width: 60%;
-                background-color: red;
-                transform: translateX(-35%) skew(20deg);
+                transform: translateX(-30%) skew(14deg);
                 background: linear-gradient(#73ecc1, #3fd48d);
                 z-index: -1;
+            }
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding: 180px 0;
+        }
+
+        @media (min-width: 1750px) {
+            padding: 245px 0;
+        }
+
+        .content-img {
+            @media only screen and (min-width: 992px) and (max-width: 1921px) {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%) translateX(-18%);
             }
         }
     }

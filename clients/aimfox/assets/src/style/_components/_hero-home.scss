@@ -6,32 +6,52 @@
     z-index: 20;
     padding: 120px 0 80px 0;
 
-    @media screen and (min-width: 1400px) and (max-width: 1800px) {
-        background-position: right -200px top !important;
+    @include media-breakpoint-up(lg) {
+        padding: 90px 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 60%;
+            transform: translateX(30%) skew(-14deg);
+            background: linear-gradient(#05caff, #029afe);
+            z-index: -1;
+        }
+    }
+
+    .content-img {
+        @media only screen and (min-width: 992px) and (max-width: 1921px) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateX(8%);
+
+            .desktop {
+                display: none;
+            }
+
+            .tablet {
+                display: block !important;
+            }
+        }
+
+        .tablet {
+            display: none;
+        }
     }
 
     @include media-breakpoint-up(md) {
         padding: 180px 0 125px 0;
     }
 
-    @include media-breakpoint-up(lg) {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right -350px top;
-        background-image: url('../img/bg/home-1.png');
-    }
-
-    @include media-breakpoint-up(xl) {
-        padding: 270px 0 225px 0;
-        background-position: right -480px top;
-    }
-
     @include media-breakpoint-up(xxl) {
-        background-position: right top;
+        padding: 280px 0 140px 0;
     }
 
-    @media (min-width: 2200px) {
-        background-image: none !important;
+    @media (min-width: 1922px) {
         padding: 180px 0 0 0 !important;
     }
 }
