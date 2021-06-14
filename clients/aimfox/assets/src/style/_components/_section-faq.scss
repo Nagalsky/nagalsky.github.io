@@ -28,8 +28,10 @@
         }
 
         &.section--faq-secondary {
-            background-position: right bottom;
-            background-image: url('../img/bg/contact-2.png');
+            @include media-breakpoint-up(lg) {
+                background-position: right bottom;
+                background-image: url('../img/bg/contact-2.png');
+            }
 
             @include media-breakpoint-up(xxl) {
                 background-position: right -80px bottom;
