@@ -20,12 +20,16 @@
             }
         }
 
+        @include media-breakpoint-up(lg) {
+            padding: 140px 0;
+        }
+
         @include media-breakpoint-up(xxl) {
             padding: 180px 0;
         }
 
         @media (min-width: 1750px) {
-            padding: 245px 0;
+            padding: 270px 0;
         }
 
         .content-img {
@@ -33,10 +37,11 @@
                 position: absolute;
                 left: 0;
                 top: 50%;
-                transform: translateY(-50%) translateX(-18%);
+                transform: translateY(-50%) translateX(-11%) scale(1.2);
             }
 
             img {
+
                 @media (min-width: 1921px) {
                     transform: scale(1.5) translateX(-17%);
                 }

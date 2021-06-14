@@ -10,15 +10,15 @@
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 100px 0;
+            padding: 160px 0;
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 120px 0;
+            padding: 215px 0;
         }
 
         @media (min-width: 1750px) {
-            padding: 180px 0;
+            padding: 250px 0;
         }
 
         @media (min-width: 1921px) {
@@ -30,11 +30,19 @@
                 position: absolute;
                 right: 0;
                 top: 50%;
-                transform: translateY(-50%) translateX(8%);
+                transform: translateY(-50%) translateX(16%);
+
+                @include media-breakpoint-up(xxl) {
+                    transform: translateY(-50%) translateX(8%);
+                }
             }
 
             img {
-                @media (min-width: 1921px) {
+                @media only screen and (min-width: 992px) and (max-width: 1921px) {
+                    transform: scale(1.35);
+                }
+
+                @media (min-width: 1922px) {
                     width: 150% !important;
                     transform: scale(1.5) translateX(17%);
                 }
