@@ -5797,7 +5797,7 @@ textarea.form-control-lg {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .hero-home, .accordion-item, .section--best-linkedin-autimation-tool, .section--lead-generation, .section--drip-sequence, .section--leads-dashboard, .section--linkedin-bot, .section--track, .section--personalised-messages, .section--lead-generation-tool, .section--multiple-account, .section--sign-in-minute, .section--highly-targeted, .section--leads-everyday {
+.overflow-hidden, .hero-home, .accordion-item, .section--best-linkedin-autimation-tool, .section--lead-generation, .section--drip-sequence, .section--leads-dashboard, .section--linkedin-bot, .section--track, .section--personalised-messages, .section--lead-generation-tool, .section--multiple-account, .section--made-simple, .section--sign-in-minute, .section--highly-targeted, .section--leads-everyday {
   overflow: hidden !important; }
 
 .overflow-visible {
@@ -9809,91 +9809,109 @@ ul {
 
 /* SECTION MADE SIMPLE */
 .section--made-simple {
-  z-index: 10; }
-  @media (min-width: 992px) {
+  z-index: 10;
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
     .section--made-simple {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left -160px top;
-      background-image: url("../img/bg/howitworks-1.png"); } }
-  @media (min-width: 1200px) {
-    .section--made-simple {
-      background-position: left -120px top; } }
+      padding: 90px 0; }
+      .section--made-simple:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(-88%) skew(32deg);
+        background: linear-gradient(#ffba78, #ff9733);
+        z-index: -1; } }
+    @media (min-width: 768px) and (min-width: 1922px) {
+      .section--made-simple:after {
+        width: 60%;
+        transform: translateX(-30%) skew(14deg); } }
   @media (min-width: 1400px) {
     .section--made-simple {
-      background-position: left -80px top; } }
+      padding: 180px 0; } }
   @media (min-width: 1750px) {
     .section--made-simple {
       padding: 245px 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--made-simple .content-img {
+      position: absolute;
+      left: 0;
+      bottom: 0; } }
 
 /* SECTION SIGN IN MIN */
 .section--sign-in-minute {
   z-index: 10; }
+  @media (min-width: 768px) {
+    .section--sign-in-minute {
+      padding: 90px 0; } }
   @media (min-width: 992px) {
     .section--sign-in-minute {
-      padding: 160px 0;
-      background-size: 800px;
-      background-repeat: no-repeat;
-      background-position: right center; } }
-  @media (min-width: 1200px) {
-    .section--sign-in-minute {
-      padding: 200px 0;
-      background-size: 900px;
-      background-position: right center; } }
+      padding: 110px 0; } }
   @media (min-width: 1400px) {
     .section--sign-in-minute {
-      padding: 250px 0;
-      background-size: 900px;
-      background-position: right center; } }
-  @media (min-width: 1750px) {
+      padding: 160px 0; } }
+  @media (min-width: 1921px) {
     .section--sign-in-minute {
-      padding: 300px 0;
-      background-size: 900px;
-      background-position: right center; } }
+      padding: 90px 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--sign-in-minute .content-img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(16%); } }
 
 /* SECTION DRIP SEQUENCE */
 .section--highly-targeted {
   z-index: 10; }
+  @media (min-width: 768px) {
+    .section--highly-targeted {
+      padding: 30px 0; } }
   @media (min-width: 992px) {
     .section--highly-targeted {
-      padding: 70px 0 !important;
-      background-size: 560px;
-      background-repeat: no-repeat;
-      background-position: left -60px center;
-      background-image: url("../img/bg/kl-bg.png"); } }
-  @media (min-width: 1200px) {
-    .section--highly-targeted {
-      padding: 220px 0 !important; } }
+      padding: 125px 0; } }
   @media (min-width: 1400px) {
     .section--highly-targeted {
-      background-size: 870px; } }
+      padding: 240px 0; } }
+  @media (min-width: 1921px) {
+    .section--highly-targeted {
+      padding: 90px 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--highly-targeted .content-img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(-25%); } }
 
 /* SECTION LEAD GENERATION */
 .section--leads-everyday {
-  z-index: 10; }
-  @media (min-width: 1920px) {
+  z-index: 10;
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
     .section--leads-everyday {
-      padding: 280px 0; } }
+      padding: 90px 0; } }
   @media (min-width: 992px) {
     .section--leads-everyday {
-      background-size: 520px;
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-image: url("../img/bg/section-leads-everyday.png"); } }
-  @media (min-width: 1200px) {
-    .section--leads-everyday {
-      padding: 200px 0;
-      background-size: 640px; } }
+      padding: 110px 0; } }
   @media (min-width: 1400px) {
     .section--leads-everyday {
-      padding: 300px 0;
-      background-position: right -100px bottom;
-      background-size: 800px; } }
-  @media (min-width: 1750px) {
+      padding: 160px 0; } }
+  @media (min-width: 1921px) {
     .section--leads-everyday {
-      padding: 250px 0;
-      background-position: right bottom; } }
+      padding: 90px 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--leads-everyday .content-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateX(16%); } }
+  @media (min-width: 768px) {
+    .section--leads-everyday .content-img {
+      transform: translateY(147px); } }
+  @media (min-width: 1921px) {
+    .section--leads-everyday .content-img {
+      transform: translateY(90px); } }
 
 /* HERO CONTACT */
 .hero-contact {
