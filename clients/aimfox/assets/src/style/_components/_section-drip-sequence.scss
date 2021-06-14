@@ -18,11 +18,11 @@
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 290px 0;
+            padding: 250px 0;
         }
 
         @media (min-width: 1921px) {
-            padding: 30px 0;
+            padding: 160px 0;
         }
 
         .content-img {
@@ -31,6 +31,13 @@
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%) translateX(0%);
+            }
+
+            img {
+                @media (min-width: 1921px) {
+                    width: 108% !important;
+                    transform: scale(1.5) translateX(-23%);
+                }
             }
         }
     }

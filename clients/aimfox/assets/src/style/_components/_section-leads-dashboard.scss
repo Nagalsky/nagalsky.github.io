@@ -14,15 +14,15 @@
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 120px 0 220px 0;
+            padding: 180px 0 300px 0;
         }
 
         @media (min-width: 1750px) {
-            padding: 120px 0 260px 0;
+            padding: 260px 0 320px 0;
         }
 
         @media (min-width: 1921px) {
-            padding: 90px 0;
+            padding: 120px 0 55px 0;
         }
 
         .content-img {
@@ -32,11 +32,22 @@
                 bottom: 0;
                 transform: translateX(8%) translateY(9%);
             }
+
+            img {
+                @media (min-width: 1921px) {
+                    width: 140% !important;
+                    transform: scale(1.5) translateX(15%);
+                }
+            }
         }
 
         .content-box {
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
                 margin-bottom: -100px;
+            }
+
+            @media (min-width: 1921px) {
+                margin-bottom: -200px;
             }
         }
     }
