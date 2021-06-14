@@ -8784,6 +8784,10 @@ p {
     .navbar-btn.btn {
       background-color: #0A1753 !important;
       color: #ffffff !important; } }
+  @media (min-width: 2200px) {
+    .navbar-btn.btn {
+      background-color: #0A1753 !important;
+      color: #ffffff !important; } }
 
 .navbar-toggler {
   font-size: 24px; }
@@ -9065,10 +9069,14 @@ ul {
   @media (min-width: 1200px) {
     .hero-home {
       padding: 270px 0 225px 0;
-      background-position: right -430px top; } }
+      background-position: right -480px top; } }
   @media (min-width: 1400px) {
     .hero-home {
       background-position: right top; } }
+  @media (min-width: 2200px) {
+    .hero-home {
+      background-image: none !important;
+      padding: 180px 0 0 0 !important; } }
 
 .hero-home__form {
   max-width: 500px;
@@ -9344,7 +9352,7 @@ ul {
       padding: 90px 0;
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: left -50px top;
+      background-position: left -130px top;
       background-image: url("../img/bg/home-2.png"); } }
   @media (min-width: 1200px) {
     .section--linkedin-autimation {
@@ -9355,6 +9363,20 @@ ul {
   @media (min-width: 1750px) {
     .section--linkedin-autimation {
       padding: 245px 0; } }
+  @media (min-width: 2200px) {
+    .section--linkedin-autimation {
+      background-image: none !important; }
+      .section--linkedin-autimation:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        background-color: red;
+        transform: translateX(-35%) skew(20deg);
+        background: linear-gradient(#73ecc1, #3fd48d);
+        z-index: -1; } }
 
 /* SECTION LINKEDIN AUTOMATION TOOL */
 .section--linkedin-autimation-tool {
@@ -9680,22 +9702,22 @@ ul {
       padding: 160px 0;
       background-size: 800px;
       background-repeat: no-repeat;
-      background-position: right -300px center;
-      background-image: url("../img/bg/section-lgc-bg.png"); } }
+      background-position: right center; } }
   @media (min-width: 1200px) {
     .section--sign-in-minute {
       padding: 200px 0;
       background-size: 900px;
-      background-position: right -360px center; } }
+      background-position: right center; } }
   @media (min-width: 1400px) {
     .section--sign-in-minute {
       padding: 250px 0;
-      background-size: 1200px;
-      background-position: right -460px center; } }
+      background-size: 900px;
+      background-position: right center; } }
   @media (min-width: 1750px) {
     .section--sign-in-minute {
       padding: 300px 0;
-      background-size: 1400px; } }
+      background-size: 900px;
+      background-position: right center; } }
 
 /* SECTION DRIP SEQUENCE */
 .section--highly-targeted {
@@ -9703,17 +9725,14 @@ ul {
   @media (min-width: 992px) {
     .section--highly-targeted {
       padding: 70px 0 !important;
-      background-size: 480px;
+      background-size: 560px;
       background-repeat: no-repeat;
-      background-position: left center;
-      background-image: url("../img/bg/section-dc-bg.png"); } }
+      background-position: left -60px center;
+      background-image: url("../img/bg/kl-bg.png"); } }
   @media (min-width: 1200px) {
     .section--highly-targeted {
       padding: 220px 0 !important; } }
   @media (min-width: 1400px) {
-    .section--highly-targeted {
-      background-size: 680px; } }
-  @media (min-width: 1600px) {
     .section--highly-targeted {
       background-size: 870px; } }
 
@@ -9822,3 +9841,14 @@ ul {
 
 .form-contact > .row > * {
   margin-top: 35px; }
+
+/* CONTENT IMAGE */
+.content-desktop-img-holder {
+  display: none; }
+  @media (min-width: 2200px) {
+    .content-desktop-img-holder {
+      display: block; } }
+
+@media only screen and (min-width: 992px) and (max-width: 2199px) {
+  .content-desktop-img-holder-secondary {
+    display: none !important; } }
