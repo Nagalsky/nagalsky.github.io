@@ -8561,6 +8561,10 @@ textarea.form-control-lg {
   max-width: 950px;
   width: 100%; }
 
+@media (min-width: 1920px) {
+  .justify-content-fh-center {
+    justify-content: center !important; } }
+
 /* VARIABLES */
 /*************************
 	Base variables
@@ -9472,13 +9476,10 @@ ul {
       padding: 30px 0; } }
   @media (min-width: 992px) {
     .section--drip-sequence {
-      padding: 210px 0; } }
+      padding: 120px 0; } }
   @media (min-width: 1400px) {
     .section--drip-sequence {
-      padding: 220px 0; } }
-  @media (min-width: 1750px) {
-    .section--drip-sequence {
-      padding: 260px 0; } }
+      padding: 290px 0; } }
   @media (min-width: 1921px) {
     .section--drip-sequence {
       padding: 30px 0; } }
@@ -9500,10 +9501,10 @@ ul {
       padding: 160px 0; } }
   @media (min-width: 1400px) {
     .section--leads-dashboard {
-      padding: 280px 0 220px 0; } }
+      padding: 120px 0 220px 0; } }
   @media (min-width: 1750px) {
     .section--leads-dashboard {
-      padding: 360px 0 260px 0; } }
+      padding: 120px 0 260px 0; } }
   @media (min-width: 1921px) {
     .section--leads-dashboard {
       padding: 90px 0; } }
@@ -9512,7 +9513,10 @@ ul {
       position: absolute;
       right: 0;
       bottom: 0;
-      transform: translateX(8%); } }
+      transform: translateX(8%) translateY(9%); } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--leads-dashboard .content-box {
+      margin-bottom: -100px; } }
 
 /* HERO FEATURES */
 .hero-features {
@@ -9577,87 +9581,165 @@ ul {
 /* SECTION LINKEDIN BOT */
 .section--linkedin-bot {
   z-index: 10; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .section--linkedin-bot {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right -20px top;
-      background-image: url("../img/bg/features-1.png"); } }
-  @media (min-width: 1200px) {
+      padding: 90px 0; }
+      .section--linkedin-bot:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(88%) skew(-32deg);
+        background: linear-gradient(#ff9278, #ff5f48);
+        z-index: -1; } }
+  @media (min-width: 1400px) {
     .section--linkedin-bot {
-      background-position: right top; } }
+      padding: 180px 0; } }
   @media (min-width: 1750px) {
     .section--linkedin-bot {
       padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--linkedin-bot {
+      padding-bottom: 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--linkedin-bot .content-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateX(2%); } }
 
 /* SECTION TRACK */
 .section--track {
   z-index: 10; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .section--track {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left -20px top;
-      background-image: url("../img/bg/features-2.png"); } }
-  @media (min-width: 1200px) {
+      padding: 90px 0; }
+      .section--track:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(-88%) skew(32deg);
+        background: linear-gradient(#3bcbf7, #0299fe);
+        z-index: -1; } }
+  @media (min-width: 1400px) {
     .section--track {
-      background-position: left top; } }
+      padding: 180px 0; } }
   @media (min-width: 1750px) {
     .section--track {
       padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--track {
+      padding-bottom: 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--track .content-img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(-4%); } }
 
 /* SECTION TRACK */
 .section--personalised-messages {
   z-index: 10; }
+  @media (min-width: 768px) {
+    .section--personalised-messages {
+      padding: 90px 0; }
+      .section--personalised-messages:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(88%) skew(-32deg);
+        background: linear-gradient(#ad9aff, #896eff);
+        z-index: -1; } }
   @media (min-width: 992px) {
     .section--personalised-messages {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right -20px top;
-      background-image: url("../img/bg/features-3.png"); } }
-  @media (min-width: 1200px) {
-    .section--personalised-messages {
-      background-position: right top; } }
-  @media (min-width: 1750px) {
+      padding: 120px 0; } }
+  @media (min-width: 1400px) {
     .section--personalised-messages {
       padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--personalised-messages {
+      padding-bottom: 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--personalised-messages .content-img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(5%); } }
 
 /* SECTION TRACK */
 .section--lead-generation-tool {
   z-index: 10; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .section--lead-generation-tool {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left -20px top;
-      background-image: url("../img/bg/features-4.png"); } }
-  @media (min-width: 1200px) {
+      padding: 90px 0; }
+      .section--lead-generation-tool:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(-88%) skew(32deg);
+        background: linear-gradient(#6ce9ba, #3fd48d);
+        z-index: -1; } }
+  @media (min-width: 1400px) {
     .section--lead-generation-tool {
-      background-position: left top; } }
+      padding: 180px 0; } }
   @media (min-width: 1750px) {
     .section--lead-generation-tool {
       padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--lead-generation-tool {
+      padding-bottom: 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--lead-generation-tool .content-img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(-2%); } }
 
 /* SECTION TRACK */
 .section--multiple-account {
-  z-index: 10; }
+  z-index: 10;
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
+    .section--multiple-account {
+      padding: 90px 0 0 0; }
+      .section--multiple-account:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(88%) skew(-32deg);
+        background: linear-gradient(#ffec50, #ffda2b);
+        z-index: -1; } }
   @media (min-width: 992px) {
     .section--multiple-account {
-      padding: 90px 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right -20px top;
-      background-image: url("../img/bg/features-5.png"); } }
-  @media (min-width: 1200px) {
-    .section--multiple-account {
-      background-position: right top; } }
-  @media (min-width: 1750px) {
+      padding: 120px 0; } }
+  @media (min-width: 1400px) {
     .section--multiple-account {
       padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--multiple-account {
+      padding-bottom: 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1921px) {
+    .section--multiple-account .content-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateX(5%); }
+      .section--multiple-account .content-img > img {
+        max-width: 80%; } }
 
 /* HERO HOW IT WORKS */
 .hero-how-it-works {

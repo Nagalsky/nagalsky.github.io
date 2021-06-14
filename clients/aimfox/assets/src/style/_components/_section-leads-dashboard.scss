@@ -14,11 +14,11 @@
         }
 
         @include media-breakpoint-up(xxl) {
-            padding: 280px 0 220px 0;
+            padding: 120px 0 220px 0;
         }
 
         @media (min-width: 1750px) {
-            padding: 360px 0 260px 0;
+            padding: 120px 0 260px 0;
         }
 
         @media (min-width: 1921px) {
@@ -30,7 +30,13 @@
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                transform: translateX(8%);
+                transform: translateX(8%) translateY(9%);
+            }
+        }
+
+        .content-box {
+            @media only screen and (min-width: 992px) and (max-width: 1921px) {
+                margin-bottom: -100px;
             }
         }
     }
