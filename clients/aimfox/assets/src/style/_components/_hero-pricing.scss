@@ -4,6 +4,7 @@
     @extend .position-relative,
     .text-center;
     padding-top: 120px;
+    padding-bottom: 0;
     z-index: 20;
 
     @include media-breakpoint-up(sm) {
@@ -24,10 +25,10 @@
         .start-0,
         .top-0,
         .w-100;
-        height: calc(100% - 110px);
+        height: 100%;
         background-color: $secondary;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(lg) {
             height: calc(100% - 145px);
         }
 
