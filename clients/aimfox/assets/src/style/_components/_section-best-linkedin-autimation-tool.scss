@@ -30,6 +30,14 @@
         }
 
         .content-img {
+            @include media-breakpoint-only(xs) {
+                transform: translateX(40px) scale(1.25);
+            }
+
+            @include media-breakpoint-only(sm) {
+                transform: translateX(40px) scale(1.2);
+            }
+
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
                 position: absolute;
                 right: 0;

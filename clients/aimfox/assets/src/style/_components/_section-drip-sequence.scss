@@ -26,6 +26,14 @@
         }
 
         .content-img {
+            @include media-breakpoint-only(xs) {
+                transform: translateX(40px) scale(1.25);
+            }
+
+            @include media-breakpoint-only(sm) {
+                transform: translateX(40px) scale(1.2);
+            }
+
             @include media-breakpoint-between(md, lg) {
                 transform: scale(1.15) translateX(-10px);
             }
