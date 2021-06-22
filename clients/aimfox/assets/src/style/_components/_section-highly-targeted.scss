@@ -22,14 +22,23 @@
         }
 
         .content-img {
-            @include media-breakpoint-only(xs) {
-                transform: translateX(40px) scale(1.25);
-                margin-top: 14%;
+            @include media-breakpoint-down(md) {
+                transform: translateX(25%);
             }
 
             @include media-breakpoint-only(sm) {
-                transform: translateX(40px) scale(1.2);
-                margin-top: 10%;
+                width: 800px;
+                max-width: 800px;
+            }
+
+            @include media-breakpoint-only(xs) {
+                width: 600px;
+                max-width: 600px;
+            }
+
+            @media (max-width: 400px) {
+                width: 450px;
+                max-width: 450px;
             }
 
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
