@@ -28,8 +28,18 @@
 
         .content-img {
             @include media-breakpoint-down(md) {
-                margin-top: 0;
-                transform: translateX(20px) translateY(20px) scale(1.1);
+                transform: translateY(33px);
+                margin-top: 0 !important;
+            }
+
+            @include media-breakpoint-only(sm) {
+                width: 760px;
+                max-width: 760px;
+            }
+
+            @include media-breakpoint-only(xs) {
+                width: 700px;
+                max-width: 700px;
             }
 
             @media only screen and (min-width: 992px) and (max-width: 1921px) {
