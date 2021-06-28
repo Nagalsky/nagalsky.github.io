@@ -17,6 +17,14 @@
         padding: 210px 0 60px 0;
     }
 
+    &--secondary {
+        padding: 120px 0 0 0;
+
+        @include media-breakpoint-up(lg) {
+            padding: 140px 0 186px 0;
+        }
+    }
+
     &:after {
         @extend .position-absolute,
         .start-0;
@@ -26,11 +34,11 @@
             background-repeat: no-repeat;
             background-position: left bottom;
             background-size: contain;
-            background-image: url('../img/bg/hero-features-bg.png');
+            background-image: url('../img/bg/hero-features-secondary-bg.png');
             z-index: 1;
             content: '';
             height: calc(100% - 145px);
-            width: 21vw;
+            width: 27vw;
         }
 
         @include media-breakpoint-up(xl) {
@@ -38,7 +46,7 @@
         }
 
         @include media-breakpoint-up(xxl) {
-            width: 23vw;
+            width: 28vw;
         }
     }
 }

@@ -1,0 +1,110 @@
+/* HERO landing */
+
+.hero-landing {
+    @extend .position-relative,
+    .overflow-hidden,
+    .text-center;
+    z-index: 20;
+    padding: 120px 0 0 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 50px 0 140px 0;
+    }
+
+    // &:after {
+    //     @include media-breakpoint-up(lg) {
+    //         content: '';
+    //         position: absolute;
+    //         right: 0;
+    //         top: 0;
+    //         height: 100%;
+    //         width: 35%;
+    //         transform: translateX(80%) skew(-35deg);
+    //         background: linear-gradient(#05caff, #029afe);
+    //         z-index: -1;
+    //     }
+
+    //     @include media-breakpoint-up(xxl) {
+    //         width: 30%;
+    //     }
+
+    //     @media (min-width: 1920px) {
+    //         transform: translateX(80%) skew(-35deg);
+    //     }
+    // }
+
+    .hero-landing__img {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 350px;
+            z-index: -1;
+        }
+
+        @media (min-width: 1530px) {
+            max-width: 400px;
+        }
+
+        @media (min-width: 1920px) {
+            max-width: 485px;
+        }
+    }
+
+
+
+    // @include media-breakpoint-up(xxl) {
+    //     padding: 280px 0 140px 0;
+    // }
+
+    // @media (min-width: 1922px) {
+    //     padding: 180px 0 0 0 !important;
+    // }
+
+    >.container {
+        max-width: 690px;
+    }
+
+    .navbar-brand {
+        width: 116px;
+        margin-bottom: 40px;
+        display: inline-block;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 60px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 106px;
+        }
+    }
+
+    .content-img {
+        @media only screen and (min-width: 992px) and (max-width: 1921px) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateX(8%);
+
+            .desktop {
+                display: none;
+            }
+
+            .tablet {
+                display: block !important;
+            }
+        }
+
+        .tablet {
+            display: none;
+        }
+    }
+}
+
+.hero-landing__form {
+    margin-bottom: 25px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 45px;
+    }
+}

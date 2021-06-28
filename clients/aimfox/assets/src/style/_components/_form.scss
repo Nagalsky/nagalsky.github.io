@@ -16,4 +16,16 @@
     &:focus {
         @include custom-placeholder-opacity($opacity: 0);
     }
+
+    &--secondary {
+        @extend .bg-transparent,
+        .text-white;
+        border-color: rgba($white, .2);
+        @include custom-placeholder($color: rgba($white, .45),
+            $font-family: $font-book);
+
+        &:focus {
+            @include custom-placeholder-opacity($opacity: 0);
+        }
+    }
 }
