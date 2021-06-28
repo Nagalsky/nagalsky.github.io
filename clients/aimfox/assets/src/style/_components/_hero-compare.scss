@@ -1,0 +1,55 @@
+/* hero-compare */
+
+.hero-compare {
+    padding: 96px 0;
+
+    @include media-breakpoint-up(xl) {
+        padding: 195px 0 200px;
+    }
+
+    .feedback__avatar {
+        width: 90px;
+
+        @include media-breakpoint-up(md) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.hero-compare__header {
+    @extend .mx-auto;
+    max-width: 710px;
+    margin-bottom: 60px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 90px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 150px;
+    }
+}
+
+.hero-compare__logos {
+    @extend .d-flex,
+    .flex-wrap,
+    .flex-column,
+    .flex-md-row,
+    .flex-md-nowrap,
+    .align-items-center,
+    .justify-content-center;
+    margin-top: 60px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 90px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-top: 150px;
+    }
+}
+
+.hero-compare__logo {
+    @extend .w-100;
+    max-width: 260px;
+}

@@ -1,0 +1,42 @@
+/* section--about-expandi */
+
+.section {
+    &--about-expandi {
+        @include media-breakpoint-up(lg) {
+            padding: 170px 0 200px 0;
+        }
+
+        >.container {
+            max-width: 830px
+        }
+    }
+}
+
+.section-about-expandi__header {
+    @extend .mx-auto,
+    .text-center;
+    margin-bottom: 40px;
+    max-width: 730px;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 70px;
+    }
+}
+
+.section-about-expandi-boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-gap: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-gap: 90px;
+    }
+}

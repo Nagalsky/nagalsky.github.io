@@ -1,13 +1,13 @@
 /* LIST CHECK */
 
-.list-check {
+.list-danger {
     @extend .list-unstyled;
 
     &--inline {
         @extend .d-flex,
         .flex-wrap;
 
-        .list-check__item {
+        .list-danger__item {
             margin-right: 15px;
             margin-bottom: 10px;
 
@@ -21,28 +21,29 @@
         @extend .d-flex,
         .flex-column;
 
-        .list-check__item {
-            &+.list-check__item {
+        .list-danger__item {
+            &+.list-danger__item {
                 margin-top: 24px;
             }
         }
     }
 }
 
-.list-check__item {
+.list-danger__item {
     @extend .d-flex,
     .justify-content-start,
     .text-start;
 }
 
-.list-check__item-icon {
+.list-danger__item-icon {
     @extend .flex-shrink-0,
     .rounded-circle,
     .d-flex,
     .align-items-center,
     .justify-content-center,
-    .bg-success,
-    .fs-12;
+    .bg-danger,
+    .fs-10,
+    .text-white;
     width: 18px;
     height: 18px;
     margin-right: 12px;
