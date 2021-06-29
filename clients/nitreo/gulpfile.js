@@ -110,6 +110,10 @@ gulp.task("fonts:build", function () {
   return gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
 });
 
+gulp.task("deploy", function () {
+  return gulp.src("./assets/build/**/*").pipe(deploy());
+});
+
 // обработка картинок
 gulp.task("image:build", function () {
   return gulp

@@ -35,21 +35,20 @@
             padding: 245px 0;
         }
 
-        @media (min-width: 1922px) {
-            padding-bottom: 0;
-            padding-top: 90px;
-        }
-
         .content-img {
             @include media-breakpoint-only(md) {
                 transform: translateY(134px);
             }
 
-            @media only screen and (min-width: 768px) and (max-width: 1921px) {
+            @media only screen and (min-width: 768px) {
                 position: absolute;
                 right: 0;
                 bottom: 0;
                 transform: translateX(4%);
+            }
+
+            @media only screen and (min-width: 1921px) {
+                max-width: 850px;
             }
         }
     }

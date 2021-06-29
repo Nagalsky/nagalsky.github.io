@@ -10,9 +10,45 @@
     @include media-breakpoint-up(md) {
         padding: 36px 0;
     }
+
+    >.container {
+        @extend .d-flex,
+        .align-items-center;
+    }
 }
 
 .header__logo {
-    @extend .d-block;
+    @extend .d-block,
+    .flex-shrink-0,
+    .me-3;
     width: 97px;
+}
+
+.header-links {
+    @extend .ms-auto,
+    .d-flex,
+    .align-items-center;
+}
+
+.header-link {
+    @extend .text-white,
+    .font-semibold;
+    padding-left: 12px;
+    padding-right: 12px;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-warning;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &:last-child {
+        @extend .pe-0;
+    }
 }

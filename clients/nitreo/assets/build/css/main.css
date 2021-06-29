@@ -5097,7 +5097,7 @@ textarea.form-control-lg {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .footer-nav,
+.d-flex, .header > .container, .header-links, .footer-nav,
 .footer-info, .hero__countdown-body, .signup-form, .list-checkmark.list-checkmark--horizontal, .table-indicator {
   display: flex !important; }
 
@@ -5326,7 +5326,7 @@ textarea.form-control-lg {
 .flex-grow-1 {
   flex-grow: 1 !important; }
 
-.flex-shrink-0 {
+.flex-shrink-0, .header__logo {
   flex-shrink: 0 !important; }
 
 .flex-shrink-1 {
@@ -5385,7 +5385,7 @@ textarea.form-control-lg {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, .list-checkmark.list-checkmark--horizontal, .table-indicator {
+.align-items-center, .header > .container, .header-links, .list-checkmark.list-checkmark--horizontal, .table-indicator {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -5561,7 +5561,7 @@ textarea.form-control-lg {
 .me-2 {
   margin-right: 0.5rem !important; }
 
-.me-3 {
+.me-3, .header__logo {
   margin-right: 1rem !important; }
 
 .me-4, .list-checkmark.list-checkmark--horizontal > li {
@@ -5612,7 +5612,7 @@ textarea.form-control-lg {
 .ms-5 {
   margin-left: 3rem !important; }
 
-.ms-auto {
+.ms-auto, .header-links {
   margin-left: auto !important; }
 
 .p-0 {
@@ -5699,7 +5699,7 @@ textarea.form-control-lg {
 .pt-5 {
   padding-top: 3rem !important; }
 
-.pe-0 {
+.pe-0, .header-link:last-child {
   padding-right: 0 !important; }
 
 .pe-1 {
@@ -5849,7 +5849,7 @@ textarea.form-control-lg {
 .text-primary, .footer-nav-link:hover, .footer-nav-link:focus, .footer-nav-link:active, .footer-info-link:hover, .footer-info-link:focus, .footer-info-link:active {
   color: #4443ff !important; }
 
-.text-warning {
+.text-warning, .header-link:hover, .header-link:focus, .header-link:active {
   color: #ffc100 !important; }
 
 .text-secondary, .footer-info-link, .info__item {
@@ -5876,7 +5876,7 @@ textarea.form-control-lg {
 .text-muted {
   color: #6c757d !important; }
 
-.text-white, .footer, .footer-nav-link, .hero, .table-plan > thead > tr > th,
+.text-white, .header-link, .footer, .footer-nav-link, .hero, .table-plan > thead > tr > th,
 .table-plan > thead > tr > td,
 .table-plan > tbody > tr > th,
 .table-plan > tbody > tr > td,
@@ -7754,7 +7754,7 @@ textarea.form-control-lg {
 .font-medium {
   font-family: "EuclidCircularA-Medium"; }
 
-.font-semibold, .footer-nav-link, .hero__countdown-header, .hero__countdown__title:after, .table-cell-recommended {
+.font-semibold, .header-link, .footer-nav-link, .hero__countdown-header, .hero__countdown__title:after, .table-cell-recommended {
   font-family: "EuclidCircularA-SemiBold"; }
 
 .font-semibolditalic {
@@ -7940,6 +7940,14 @@ p {
 
 .header__logo {
   width: 97px; }
+
+.header-link {
+  padding-left: 12px;
+  padding-right: 12px; }
+  @media (min-width: 768px) {
+    .header-link {
+      padding-left: 24px;
+      padding-right: 24px; } }
 
 /* FOOTER */
 .footer {
