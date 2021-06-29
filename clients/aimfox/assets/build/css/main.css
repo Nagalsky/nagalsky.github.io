@@ -5870,7 +5870,7 @@ textarea.form-control-lg {
 .overflow-auto {
   overflow: auto !important; }
 
-.overflow-hidden, .hero-home, .accordion-item, .section--linkedin-autimation, .section--linkedin-autimation-tool, .section--best-linkedin-autimation-tool, .section--lead-generation, .section--drip-sequence, .section--leads-dashboard, .section--linkedin-bot, .section--track, .section--personalised-messages, .section--lead-generation-tool, .section--multiple-account, .section--made-simple, .section--sign-in-minute, .section--highly-targeted, .section--leads-everyday, .hero-landing, .section--expandi-alternative {
+.overflow-hidden, .hero-home, .accordion-item, .section--linkedin-autimation, .section--linkedin-autimation-tool, .section--best-linkedin-autimation-tool, .section--lead-generation, .section--drip-sequence, .section--leads-dashboard, .section--linkedin-bot, .section--track, .section--personalised-messages, .section--lead-generation-tool, .section--multiple-account, .section--made-simple, .section--sign-in-minute, .section--highly-targeted, .section--leads-everyday, .hero-landing, .section--expandi-alternative, .section--compare-linkedin-bot {
   overflow: hidden !important; }
 
 .overflow-visible {
@@ -5900,7 +5900,7 @@ textarea.form-control-lg {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .footer__navbar, .list-check--inline, .list-check--horizontal, .list-check__item, .list-check__item-icon, .feedback, .feedback-card, .feedback-card__rating, .feedback-card__user, .box-link, .box, .hero-compare__logos, .list-danger--inline, .list-danger--horizontal, .list-danger__item, .list-danger__item-icon {
+.d-flex, .footer__navbar, .list-check--inline, .list-check--horizontal, .list-check__item, .list-check__item-icon, .feedback, .feedback-card, .feedback-card__rating, .feedback-card__user, .box-link, .box, .hero-compare__logos, .list-danger--inline, .list-danger--horizontal, .list-danger__item, .list-danger__item-icon, .why-aimfox-grid .title {
   display: flex !important; }
 
 .d-inline-flex, .icon-box {
@@ -6164,7 +6164,7 @@ textarea.form-control-lg {
 .flex-shrink-1 {
   flex-shrink: 1 !important; }
 
-.flex-wrap, .list-check--inline, .hero-compare__logos, .list-danger--inline {
+.flex-wrap, .list-check--inline, .hero-compare__logos, .list-danger--inline, .why-aimfox-grid .title {
   flex-wrap: wrap !important; }
 
 .flex-nowrap {
@@ -6209,13 +6209,13 @@ textarea.form-control-lg {
 .justify-content-evenly {
   justify-content: space-evenly !important; }
 
-.align-items-start, .section-boxes__grid .box {
+.align-items-start, .section-boxes__grid .box, .why-aimfox-grid .box {
   align-items: flex-start !important; }
 
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, .list-check__item-icon, .feedback, .feedback-card__user, .icon-box, .box-link, .box, .hero-compare__logos, .list-danger__item-icon {
+.align-items-center, .list-check__item-icon, .feedback, .feedback-card__user, .icon-box, .box-link, .box, .hero-compare__logos, .list-danger__item-icon, .why-aimfox-grid .title {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -6433,7 +6433,7 @@ textarea.form-control-lg {
 .ms-2 {
   margin-left: 0.5rem !important; }
 
-.ms-3 {
+.ms-3, .why-aimfox-grid .title small, .why-aimfox-grid .title .small {
   margin-left: 1rem !important; }
 
 .ms-4 {
@@ -6637,7 +6637,7 @@ textarea.form-control-lg {
 .lh-lg {
   line-height: 2 !important; }
 
-.text-start, .list-check__item, .list-danger__item, .section-boxes__grid .box {
+.text-start, .list-check__item, .list-danger__item, .section-boxes__grid .box, .why-aimfox-grid .box {
   text-align: left !important; }
 
 .text-end {
@@ -10582,8 +10582,8 @@ ul {
     .section--expandi-alternative .content-img {
       position: absolute;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%) translateX(8%); } }
+      bottom: 0;
+      transform: translateY(-25%) translateX(8%) scale(1.2); } }
   @media (min-width: 768px) and (max-width: 991.98px) {
     .section--expandi-alternative .content-img img {
       transform: scale(1.1) translateX(10px); } }
@@ -10626,3 +10626,87 @@ ul {
     @media (min-width: 768px) {
       .section-boxes__grid .box p {
         font-size: 16px; } }
+
+/* SECTION why-aimfox */
+.section--why-aimfox {
+  z-index: 20; }
+  @media (min-width: 768px) {
+    .section--why-aimfox {
+      padding: 90px 0; } }
+  @media (min-width: 1200px) {
+    .section--why-aimfox {
+      background-size: 280px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 280px;
+      background-image: url("../img/temp/compare-asset2.png"); } }
+  @media (min-width: 1400px) {
+    .section--why-aimfox {
+      background-position: left -80px bottom;
+      background-size: 430px;
+      padding: 200px 0; } }
+  @media (min-width: 1750px) {
+    .section--why-aimfox {
+      background-size: 550px; } }
+
+.why-aimfox-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px; }
+  @media (min-width: 768px) {
+    .why-aimfox-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px; } }
+  @media (min-width: 1200px) {
+    .why-aimfox-grid {
+      grid-template-columns: repeat(2, 400px);
+      grid-gap: 90px;
+      padding-left: 240px; } }
+  @media (min-width: 1400px) {
+    .why-aimfox-grid {
+      padding-left: 420px; } }
+  @media (min-width: 1400px) {
+    .why-aimfox-grid .box {
+      padding-left: 60px;
+      padding-right: 60px; } }
+  .why-aimfox-grid .logo {
+    max-width: 250px; }
+  .why-aimfox-grid .logo-sm {
+    max-width: 208px; }
+  .why-aimfox-grid .title {
+    margin-top: 32px;
+    font-size: 28px; }
+    @media (min-width: 1200px) {
+      .why-aimfox-grid .title {
+        font-size: 42px; } }
+    .why-aimfox-grid .title small, .why-aimfox-grid .title .small {
+      font-size: 50%; }
+
+/* SECTION COMPARE LINKEDIN BOT */
+.section--compare-linkedin-bot {
+  z-index: 10;
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
+    .section--compare-linkedin-bot {
+      padding: 84px 0; } }
+  @media (min-width: 1400px) {
+    .section--compare-linkedin-bot {
+      padding: 180px 0; } }
+  @media (min-width: 1750px) {
+    .section--compare-linkedin-bot {
+      padding: 245px 0; } }
+  @media (min-width: 1922px) {
+    .section--compare-linkedin-bot {
+      padding-bottom: 0;
+      padding-top: 90px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .section--compare-linkedin-bot .content-img {
+      transform: translateY(134px); } }
+  @media only screen and (min-width: 768px) and (max-width: 1921px) {
+    .section--compare-linkedin-bot .content-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateX(4%); } }
