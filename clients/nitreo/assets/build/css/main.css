@@ -5097,7 +5097,7 @@ textarea.form-control-lg {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .header > .container, .header-links, .footer-nav,
+.d-flex, .header-links, .navbar-toggler, .footer-nav,
 .footer-info, .hero__countdown-body, .signup-form, .list-checkmark.list-checkmark--horizontal, .table-indicator {
   display: flex !important; }
 
@@ -5116,16 +5116,16 @@ textarea.form-control-lg {
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
-.shadow-none {
+.shadow-none, .navbar-toggler {
   box-shadow: none !important; }
 
 .position-static {
   position: static !important; }
 
-.position-relative, .hero__countdown, .hero__countdown__title, .signup-form, .list-checkmark > li, .table-cell-recommended, .table-cell-recommended__inner {
+.position-relative, .header > .container, .hero__countdown, .hero__countdown__title, .signup-form, .list-checkmark > li, .table-cell-recommended, .table-cell-recommended__inner {
   position: relative !important; }
 
-.position-absolute, .header, .footer-star, .hero__signup-form:after, .footer__signup-form:after, .hero__countdown__title:not(:last-child):before, .list-checkmark > li:before, .table-plan .filter-text, .table-plan .filter, .table-cell-recommended:before {
+.position-absolute, .header, .navbar-toggler, .footer-star, .hero__signup-form:after, .footer__signup-form:after, .hero__countdown__title:not(:last-child):before, .list-checkmark > li:before, .table-plan .filter-text, .table-plan .filter, .table-cell-recommended:before {
   position: absolute !important; }
 
 .position-fixed {
@@ -5311,7 +5311,7 @@ textarea.form-control-lg {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .header-links, .navbar-toggler {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -5360,7 +5360,7 @@ textarea.form-control-lg {
 .gap-5 {
   gap: 3rem !important; }
 
-.justify-content-start {
+.justify-content-start, .header-links {
   justify-content: flex-start !important; }
 
 .justify-content-end {
@@ -5370,7 +5370,7 @@ textarea.form-control-lg {
 .footer-info, .table-indicator {
   justify-content: center !important; }
 
-.justify-content-between {
+.justify-content-between, .navbar-toggler {
   justify-content: space-between !important; }
 
 .justify-content-around {
@@ -5385,7 +5385,7 @@ textarea.form-control-lg {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, .header > .container, .header-links, .list-checkmark.list-checkmark--horizontal, .table-indicator {
+.align-items-center, .list-checkmark.list-checkmark--horizontal, .table-indicator {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -5864,7 +5864,7 @@ textarea.form-control-lg {
 .text-info, .hero__countdown-header {
   color: #393996 !important; }
 
-.text-dark, .header.header--secondary .header-link, .table-cell-recommended {
+.text-dark, .header.header--secondary .header-link, .header .btn-login, .table-cell-recommended {
   color: #000000 !important; }
 
 .text-gray {
@@ -5876,7 +5876,7 @@ textarea.form-control-lg {
 .text-muted {
   color: #6c757d !important; }
 
-.text-white, .header-link, .footer, .footer-nav-link, .hero, .table-plan > thead > tr > th,
+.text-white, .header.header--secondary .btn-login, .header-link, .footer, .footer-nav-link, .hero, .table-plan > thead > tr > th,
 .table-plan > thead > tr > td,
 .table-plan > tbody > tr > th,
 .table-plan > tbody > tr > td,
@@ -5914,7 +5914,7 @@ textarea.form-control-lg {
 .bg-info {
   background-color: #393996 !important; }
 
-.bg-dark, .footer {
+.bg-dark, .header.header--secondary .navbar-toggler-icon, .header.header--secondary .btn-login, .footer {
   background-color: #000000 !important; }
 
 .bg-gray {
@@ -5929,7 +5929,7 @@ textarea.form-control-lg {
 .bg-body {
   background-color: #fff !important; }
 
-.bg-white, .hero__countdown-header, .signup-form {
+.bg-white, .header .btn-login, .navbar-toggler-icon, .hero__countdown-header, .signup-form {
   background-color: #fff !important; }
 
 .bg-transparent {
@@ -6706,15 +6706,15 @@ textarea.form-control-lg {
     display: table-row !important; }
   .d-lg-table-cell {
     display: table-cell !important; }
-  .d-lg-flex {
+  .d-lg-flex, .header > .container {
     display: flex !important; }
   .d-lg-inline-flex {
     display: inline-flex !important; }
-  .d-lg-none {
+  .d-lg-none, .navbar-toggler {
     display: none !important; }
   .flex-lg-fill {
     flex: 1 1 auto !important; }
-  .flex-lg-row {
+  .flex-lg-row, .header-links {
     flex-direction: row !important; }
   .flex-lg-column {
     flex-direction: column !important; }
@@ -6764,7 +6764,7 @@ textarea.form-control-lg {
     align-items: flex-start !important; }
   .align-items-lg-end {
     align-items: flex-end !important; }
-  .align-items-lg-center {
+  .align-items-lg-center, .header > .container, .header-links {
     align-items: center !important; }
   .align-items-lg-baseline {
     align-items: baseline !important; }
@@ -7934,18 +7934,56 @@ p {
   @media (min-width: 768px) {
     .header {
       padding: 36px 0; } }
+  .header.header--secondary .btn-login {
+    font-size: 20px; }
+    @media (max-width: 991.98px) {
+      .header.header--secondary .btn-login {
+        color: #fff !important;
+        background-color: #212529 !important; } }
+    @media (min-width: 992px) {
+      .header.header--secondary .btn-login {
+        margin-left: 48px; } }
+  .header .btn-login {
+    font-size: 20px; }
+    @media (max-width: 991.98px) {
+      .header .btn-login {
+        color: #fff !important;
+        background-color: #212529 !important; } }
+    @media (min-width: 992px) {
+      .header .btn-login {
+        margin-left: 48px; } }
 
 .header__logo {
   width: 97px; }
 
+@media (max-width: 991.98px) {
+  .header-links {
+    background-color: #fff; } }
+
 .header-link {
   padding-left: 12px;
-  padding-right: 12px; }
-  @media (min-width: 768px) {
+  padding-right: 12px;
+  font-size: 20px; }
+  @media (max-width: 991.98px) {
+    .header-link {
+      color: #212529 !important; } }
+  @media (max-width: 991.98px) {
+    .header-link {
+      padding-bottom: 10px;
+      padding-top: 10px; } }
+  @media (min-width: 992px) {
     .header-link {
       padding-left: 24px;
-      padding-right: 24px;
-      font-size: 20px; } }
+      padding-right: 24px; } }
+
+.navbar-toggler {
+  top: 0;
+  right: 15px;
+  height: 25px; }
+
+.navbar-toggler-icon {
+  height: 2px;
+  border-radius: 6px; }
 
 /* FOOTER */
 .footer {

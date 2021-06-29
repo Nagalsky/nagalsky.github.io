@@ -12,8 +12,9 @@
     }
 
     >.container {
-        @extend .d-flex,
-        .align-items-center;
+        @extend .d-lg-flex,
+        .align-items-lg-center,
+        .position-relative;
     }
 
     &.header--secondary {
@@ -26,6 +27,40 @@
             &:active {
                 @extend .text-warning;
             }
+        }
+
+        .navbar-toggler-icon {
+            @extend .bg-dark;
+        }
+
+        .btn-login {
+            @extend .bg-dark,
+            .text-white;
+            font-size: 20px;
+
+            @include media-breakpoint-down(lg) {
+                color: $white !important;
+                background-color: $dark !important;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-left: 48px;
+            }
+        }
+    }
+
+    .btn-login {
+        @extend .bg-white,
+        .text-dark;
+        font-size: 20px;
+
+        @include media-breakpoint-down(lg) {
+            color: $white !important;
+            background-color: $dark !important;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 48px;
         }
     }
 }
@@ -40,7 +75,14 @@
 .header-links {
     @extend .ms-auto,
     .d-flex,
-    .align-items-center;
+    .flex-column,
+    .flex-lg-row,
+    .justify-content-start,
+    .align-items-lg-center;
+
+    @include media-breakpoint-down(lg) {
+        background-color: $white;
+    }
 }
 
 .header-link {
@@ -48,7 +90,7 @@
     .font-semibold;
     padding-left: 12px;
     padding-right: 12px;
-
+    font-size: 20px;
 
     &:hover,
     &:focus,
@@ -56,9 +98,35 @@
         @extend .text-warning;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(lg) {
+        color: $dark !important;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
         padding-left: 24px;
         padding-right: 24px;
-        font-size: 20px;
     }
+}
+
+.navbar-toggler {
+    @extend .shadow-none,
+    .position-absolute,
+    .d-lg-none,
+    .d-flex,
+    .flex-column,
+    .justify-content-between;
+    top: 0;
+    right: 15px;
+    height: 25px;
+}
+
+.navbar-toggler-icon {
+    height: 2px;
+    border-radius: 6px;
+    @extend .bg-white;
 }
