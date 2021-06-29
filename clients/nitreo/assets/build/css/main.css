@@ -5849,7 +5849,7 @@ textarea.form-control-lg {
 .text-primary, .footer-nav-link:hover, .footer-nav-link:focus, .footer-nav-link:active, .footer-info-link:hover, .footer-info-link:focus, .footer-info-link:active {
   color: #4443ff !important; }
 
-.text-warning, .header-link:hover, .header-link:focus, .header-link:active {
+.text-warning, .header.header--secondary .header-link:hover, .header.header--secondary .header-link:focus, .header.header--secondary .header-link:active, .header-link:hover, .header-link:focus, .header-link:active {
   color: #ffc100 !important; }
 
 .text-secondary, .footer-info-link, .info__item {
@@ -5864,7 +5864,7 @@ textarea.form-control-lg {
 .text-info, .hero__countdown-header {
   color: #393996 !important; }
 
-.text-dark, .table-cell-recommended {
+.text-dark, .header.header--secondary .header-link, .table-cell-recommended {
   color: #000000 !important; }
 
 .text-gray {
@@ -8393,6 +8393,9 @@ ul {
   @media (min-width: 768px) {
     .section {
       padding: 120px 0; } }
+  @media (max-width: 767.98px) {
+    .section--top {
+      padding-top: 80px; } }
 
 /* INFO */
 .info {
