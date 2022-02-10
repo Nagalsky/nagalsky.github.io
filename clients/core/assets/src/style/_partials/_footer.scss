@@ -1,0 +1,39 @@
+/* FOOTER */
+
+
+.footer {
+    @extend .bg-black,
+    .text-white,
+    .text-center,
+    .text-md-left;
+    padding: 35px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 60px 0 25px 0;
+    }
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .text-gold;
+        }
+    }
+}
+
+.footer__logos {
+    @extend .d-flex,
+    .mr-md-4,
+    .mt-3,
+    .mt-md-0,
+    .justify-content-center,
+    .justify-content-md-start;
+}
+
+.footer__logo {
+    @extend .mx-2,
+    .w-100;
+    max-width: 80px;
+}

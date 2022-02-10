@@ -1,0 +1,121 @@
+/* NAVBAR */
+
+.navbar {
+    @extend .position-absolute,
+    .w-100,
+    .start-0,
+    .top-0,
+    .py-lg-3;
+    z-index: 100;
+
+    @include media-breakpoint-down(lg) {
+        background-color: $white;
+        min-height: 54px;
+    }
+
+    &:before {
+        @extend .position-absolute;
+
+        @include media-breakpoint-down(lg) {
+            content: '';
+            width: calc(100% - 24px);
+            left: 12px;
+            height: 1px;
+            bottom: 0;
+            background-color: rgba($success, .5);
+        }
+    }
+
+    &--is-opened {
+        &:before {
+            @include media-breakpoint-down(lg) {
+                content: none !important;
+            }
+        }
+    }
+
+    >.container {
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+        }
+    }
+}
+
+.navbar-collapse {
+    &.collapsing {
+        transition: none;
+        display: none;
+    }
+
+    &.show {
+        @include media-breakpoint-down(lg) {
+            position: fixed;
+            top: 51px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 51px);
+            overflow-y: auto;
+            background-color: $white;
+            z-index: 80;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        @include media-breakpoint-down(md) {
+            top: 47px;
+            height: calc(100% - 47px);
+        }
+    }
+}
+
+.navbar-brand {
+    @extend .py-md-0,
+    .d-block;
+    width: 164px;
+
+    @include media-breakpoint-up(sm) {
+        width: 220px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: 384px;
+    }
+}
+
+.navbar-nav {
+    @extend .pt-4,
+    .pt-lg-0;
+
+    @include media-breakpoint-down(lg) {
+        border-top: 1px solid rgba($success, .5);
+        margin-top: 6px;
+    }
+
+    .nav-item {
+        &:not(:last-child) {
+            .nav-link {
+                @include media-breakpoint-up(lg) {
+                    padding-right: 17.5px;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            .nav-link {
+                @include media-breakpoint-up(lg) {
+                    padding-left: 17.5px;
+                }
+            }
+        }
+
+        .nav-link {
+            @extend .text-uppercase;
+            font-size: 15px;
+        }
+    }
+}
+
+.navbar-toggler {
+    @extend .shadow-none,
+    .text-success;
+}

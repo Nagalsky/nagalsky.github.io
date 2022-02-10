@@ -1,0 +1,56 @@
+/* STEPS */
+
+.steps {
+    @extend .d-flex,
+    .flex-column,
+    .flex-lg-row;
+}
+
+.step {
+    @extend .position-relative,
+    .fs-16,
+    .d-flex,
+    .align-items-center,
+    .text-center,
+    .text-lg-start,
+    .justify-content-center,
+    .justify-content-lg-start;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 55px 15px 30px 15px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 100px 65px;
+    }
+
+    &:after {
+        content: '';
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: 50% 50%;
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+            height: 38px;
+            background-image: url('../img/temp/step-mask-mobile.svg');
+            background-size: contain;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 100%;
+            width: 55px;
+            background-image: url('../img/temp/step-mask-desktop.svg');
+            background-size: cover;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 50px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: 45px;
+        }
+    }
+}

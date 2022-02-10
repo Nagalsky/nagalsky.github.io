@@ -1,0 +1,44 @@
+/* HEADER */
+
+.header {}
+
+.header-top {
+    padding: 15px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 30px 0;
+    }
+
+    >.container {
+        @extend .d-flex,
+        .align-items-center,
+        .justify-content-between;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            &.active {}
+
+            .nav-link {
+                @extend .text-black,
+                .p-2,
+                .font-avenir-book;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    @extend .text-gold;
+                }
+            }
+        }
+    }
+}
+
+.header__logo {
+    @extend .d-block;
+    width: 200px;
+
+    @include media-breakpoint-up(lg) {
+        width: 360px;
+    }
+}

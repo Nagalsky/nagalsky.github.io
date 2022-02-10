@@ -1,0 +1,171 @@
+/* CALENDAR WEEK */
+
+$calendar-month-cell-size: 110px;
+$calendar-month-border-color: rgba(85, 98, 128, 0.09);
+
+.calendar-month {
+    overflow-x: auto;
+    padding-top: 20px;
+    border-bottom: 1px solid $calendar-month-border-color;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 40px;
+    }
+}
+
+.calendar-month__body {
+    @extend .px-3;
+}
+
+.calendar-month__row {
+    @extend .d-flex,
+    .flex-nowrap;
+
+    &:first-child {
+        .calendar-month__cell {
+            height: 10px;
+        }
+    }
+
+    &+.calendar-month__row {
+        .calendar-month__cell {
+            border-top: 1px solid $calendar-month-border-color;
+
+            &:last-child {
+                border-right: 1px solid $calendar-month-border-color;
+            }
+        }
+    }
+}
+
+.calendar-month__cell {
+    @extend .position-relative,
+    .flex-shrink-0;
+    z-index: 10;
+    width: $calendar-month-cell-size;
+    height: 95px;
+    border-left: 1px solid $calendar-month-border-color;
+}
+
+.calendar-month__cell-grid {
+    @extend .position-absolute,
+    .w-100,
+    .h-100,
+    .d-flex;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.calendar-month__cell-grid__item {
+    @extend .flex-fill,
+    .position-relative;
+    width: 38px;
+
+    &+.calendar-month__cell-grid__item {
+        border-left: 1px dashed $calendar-month-border-color;
+    }
+}
+
+.calendar-month__cell-grid-time {
+    @extend .position-absolute,
+    .d-flex,
+    .w-100;
+    top: -20px;
+    left: -19px;
+}
+
+.calendar-month__cell-grid-time__item {
+    @extend .flex-shrink-0,
+    .position-relative,
+    .fs-11,
+    .font-medium,
+    .text-center;
+    width: 38px;
+    color: rgba($primary, .5);
+}
+
+.calendar-month__event {
+    @extend .position-absolute;
+    left: -1px;
+    transform: translateY(-50%);
+    top: 50%;
+    width: $calendar-month-cell-size;
+    height: 42px;
+    border-radius: 0 10px 10px 0;
+    border-left-style: solid;
+    border-left-width: 5px;
+    z-index: 10;
+
+    &--sm {
+        width: 47px;
+    }
+
+    &--xs {
+        width: 42px;
+    }
+
+    &--md {
+        width: 68px;
+    }
+
+    &--gap-1 {
+        margin-left: $calendar-month-cell-size;
+    }
+
+    &--gap-2 {
+        margin-left: calc(#{$calendar-month-cell-size} * 2 + 1px);
+    }
+
+    &--gap-3 {
+        margin-left: calc(#{$calendar-month-cell-size} * 3 + 1px);
+    }
+
+    &--gap-4 {
+        margin-left: calc(#{$calendar-month-cell-size} * 4 + 1px);
+    }
+
+    &--gap-5 {
+        margin-left: calc(#{$calendar-month-cell-size} * 5 + 1px);
+    }
+
+    &--gap-6 {
+        margin-left: calc(#{$calendar-month-cell-size} * 6 + 1px);
+    }
+
+    &--gap-7 {
+        margin-left: calc(#{$calendar-month-cell-size} * 7 + 1px);
+    }
+
+    &--gap-8 {
+        margin-left: calc(#{$calendar-month-cell-size} * 8 + 1px);
+    }
+
+    &--gap-9 {
+        margin-left: calc(#{$calendar-month-cell-size} * 9 + 1px);
+    }
+
+    &--gap-10 {
+        margin-left: calc(#{$calendar-month-cell-size} * 10 + 1px);
+    }
+
+    &--pink {
+        border-left-color: #de65f7;
+        background-color: rgba(#de65f7, .3);
+    }
+
+    &--success {
+        border-left-color: #79d6a7;
+        background-color: rgba(#79d6a7, .3);
+    }
+
+    &--danger {
+        border-left-color: #da6e69;
+        background-color: rgba(#da6e69, .3);
+    }
+
+    &--warning {
+        border-left-color: #efb843;
+        background-color: rgba(#efb843, .3);
+    }
+}

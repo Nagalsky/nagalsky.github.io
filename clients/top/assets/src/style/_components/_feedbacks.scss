@@ -1,0 +1,39 @@
+/* FEEDBACKS */
+
+.feedbacks {
+    &:not(:last-child) {
+        @extend .mb-3;
+    }
+}
+
+.feedback {
+    padding: 20px;
+    @extend .bg-white;
+
+    @include media-breakpoint-up(md) {
+        padding: 30px;
+    }
+
+    &+.feedback {
+        margin-top: 10px;
+    }
+}
+
+.feedback__date {
+    font-size: 13px;
+    color: rgba(38, 71, 105, 0.3);
+
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+}
+
+.feedback__header {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-between;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}

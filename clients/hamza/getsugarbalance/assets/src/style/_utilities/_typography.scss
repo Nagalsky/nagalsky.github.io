@@ -1,0 +1,161 @@
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  font-size: $body-font-size;
+  color: $body-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.45;
+  font-family: $heading-font;
+  font-weight: 700;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+.h1 {
+  @extend .lh-sm;
+  font-size: 2.1rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 6vw;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.3em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 3em;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 4em;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.45em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.2em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.7em;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 2.4em;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.45em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.6em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.65em;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 1.75em;
+  }
+}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {
+  font-size: 16px;
+}
+
+button,
+a {
+  @include transition($base-animation);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b,
+.bold {
+  font-family: $font-base-bold;
+  font-weight: 700;
+}
+
+.should-show {
+  display: none;
+}
+
+.lead-lg {
+  @include media-breakpoint-up(md) {
+    font-size: 1.45em;
+  }
+}
+
+.lead-xl {
+  @include media-breakpoint-up(md) {
+    font-size: 1.6em;
+  }
+}
+
+.img-product {
+  @include media-breakpoint-up(sm) {
+    max-width: 80%;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 70%;
+  }
+}
+
+.text-mobile-sm {
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}

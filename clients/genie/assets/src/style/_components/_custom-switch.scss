@@ -1,0 +1,32 @@
+/* SWITCH */
+
+.custom-switch {
+    .custom-control-input {
+        &:checked {
+            &~.custom-control-label {
+                &:before {
+                    @extend .bg-muted;
+                }
+
+                &:after {
+                    @extend .bg-white;
+                }
+            }
+        }
+    }
+
+    .custom-control-label {
+        line-height: 20px;
+
+        &:before {
+            background-color: rgba($silver-soft, .3);
+            @extend .border-0,
+            .shadow-none;
+        }
+
+        &:after {
+            @extend .bg-white;
+            box-shadow: 0 2px 4px 0 rgba(72, 126, 251, 0.2);
+        }
+    }
+}

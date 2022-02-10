@@ -1,0 +1,62 @@
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+:root {
+  scroll-behavior: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.45;
+  letter-spacing: -1.2px;
+  font-family: $heading-font-family;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+button,
+a {
+  @include transition($base-animation);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b,
+.bold {
+  font-weight: bold;
+}

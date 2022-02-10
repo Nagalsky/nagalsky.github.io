@@ -1,0 +1,72 @@
+/* BUTTONS */
+
+
+.btn {
+    font-size: 13px;
+    font-family: $font-medium;
+    padding: 2.5px 11px;
+
+    &-primary {
+        @include button-variants($bg: $sky, $color: $white);
+
+        &.btn-shadow {
+            box-shadow: 0 10px 14px 0 rgba(72, 126, 251, 0.4);
+        }
+    }
+
+    &-secondary {
+        @include button-variants($bg: $blue-thin, $color: $sky);
+
+        &.btn-shadow {
+            box-shadow: 0 10px 14px 0 rgba(72, 126, 251, 0.4);
+        }
+    }
+
+    &-white {
+        @include button-variants($bg: $white, $color: $sky);
+
+        &.btn-shadow {
+            box-shadow: 0 2px 4px 0 rgba(72, 126, 251, 0.12);
+        }
+    }
+
+    &-muted {
+        @include button-variants($bg: $blue-thin, $color: $primary);
+    }
+
+    &-outline-primary {
+        @extend .bg-transparent,
+        .text-blue;
+        border-color: $sky;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .bg-sky,
+            .text-white;
+            border-color: $sky;
+        }
+    }
+
+    &-rounded {
+        border-radius: 10px;
+    }
+
+    &-sm {
+        @extend .fs-10;
+        padding: 1px 10px;
+    }
+
+    &-md {
+        @extend .fs-12;
+        padding: 10px 15px;
+    }
+
+    &-icon {
+        @extend .bg-transparent,
+        .shadow-none,
+        .border-0;
+        padding: 0;
+        font-size: 18px;
+    }
+}

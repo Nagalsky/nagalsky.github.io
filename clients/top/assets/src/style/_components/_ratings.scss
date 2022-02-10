@@ -1,0 +1,38 @@
+/* RATINGS */
+
+.ratings {
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center;
+
+    &--md {
+        .rating {
+            @extend .fs-20;
+        }
+    }
+}
+
+.rating {
+    @extend .px-1,
+    .text-warning,
+    .font-icons,
+    .fs-17;
+
+    &--full {
+        @extend .icon-star;
+    }
+
+    &--fill {
+        @extend .icon-star-empty;
+    }
+}
+
+.rating-title {
+    @extend .fs-14,
+    .text-uppercase,
+    .text-silver300;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 35px;
+    }
+}

@@ -1,0 +1,21 @@
+/* RATINGS */
+
+.ratings {
+    @extend .d-flex,
+    .flex-wrap;
+}
+
+.rating {
+    @extend .font-icons,
+    .icon-star-empty,
+    .text-warning;
+    font-size: 20px;
+
+    &+.rating {
+        margin-left: 5px;
+    }
+
+    &--full {
+        @extend .icon-star-fill;
+    }
+}

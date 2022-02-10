@@ -1,0 +1,90 @@
+/* MIXINS */
+
+// Placeholder text
+@mixin custom-placeholder(
+  $color: $placeholder-color,
+  $font-size: $placeholder-font-size,
+  $font-family: $placeholder-font-style
+) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+}
+
+//Placeholder opacity
+@mixin custom-placeholder-opacity($opacity: $placeholder-opacity) {
+  &:-moz-placeholder {
+    opacity: $opacity;
+  }
+  &::-moz-placeholder {
+    opacity: $opacity;
+  }
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+  }
+  &::-webkit-input-placeholder {
+    opacity: $opacity;
+  }
+}
+
+//Buttons
+@mixin button-variants($bg: $btn-bg, $color: $btn-color) {
+  background: $bg;
+  color: $color;
+  border-color: $bg;
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background: darken($bg, 10%) !important;
+    border-color: darken($bg, 10%) !important;
+    color: $color !important;
+  }
+}
+
+@mixin button-outline-variants($color: $btn-color) {
+  background: transparent;
+  color: $color;
+  border-color: $color;
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background: $color !important;
+    border-color: $color !important;
+    color: $white !important;
+  }
+}
+
+// Transformations
+@mixin scale($ratio...) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9 only
+  -o-transform: scale($ratio);
+  transform: scale($ratio);
+}
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}

@@ -1,0 +1,35 @@
+/* manufactured-logos */
+
+.manufactured-logos {
+    display: grid;
+    align-items: center;
+
+    &+.manufactured-logos {
+        margin-top: 30px;
+    }
+
+    &--top {
+        grid-template-columns: repeat(1, 2fr 1fr);
+        grid-gap: 15px;
+
+        @include media-breakpoint-up(md) {
+            grid-gap: 25px;
+        }
+    }
+
+    &--bottom {
+        grid-template-columns: repeat(1, 1fr 1.5fr 1fr);
+        grid-gap: 15px;
+
+        @include media-breakpoint-up(md) {
+            grid-gap: 25px;
+        }
+    }
+
+    svg {
+        fill: $white;
+        stroke: $white;
+        width: 100%;
+        display: block;
+    }
+}

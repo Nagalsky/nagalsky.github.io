@@ -1,0 +1,33 @@
+/* MODAL */
+
+.modal-backdrop {
+    &.show {
+        opacity: .54;
+    }
+}
+
+.modal-dialog {
+    @include media-breakpoint-up(md) {
+        max-width: 640px;
+    }
+}
+
+.modal-content {
+    @extend .border-0;
+    border-radius: 10px;
+}
+
+.modal-body {
+    @extend .py-4,
+    .px-md-4;
+}
+
+.modal-footer {
+    @extend .justify-content-center,
+    .py-4,
+    .px-md-4;
+    border-top-color: rgba(85, 98, 128, 0.09);
+    background-color: #f3f7ff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

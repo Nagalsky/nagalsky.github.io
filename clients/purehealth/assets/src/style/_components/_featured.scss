@@ -1,0 +1,42 @@
+/* FEATURED */
+
+.featured {
+    @extend .d-flex,
+    .flex-column,
+    .flex-md-row;
+}
+
+.featured-logos {
+    @extend .w-100,
+    .flex-shrink-0;
+    max-width: 365px;
+    order: 2;
+
+    @include media-breakpoint-up(md) {
+        min-width: 365px;
+        order: 3;
+    }
+}
+
+.featured-doctor {
+    @extend .d-inline-block,
+    .mx-md-4,
+    .mt-4,
+    .my-md-0,
+    .align-self-md-end,
+    .w-100,
+    .flex-shrink-0;
+    max-width: 159px;
+    order: 3;
+
+    @include media-breakpoint-up(md) {
+        order: 2;
+    }
+}
+
+.featured-hr {
+    opacity: 1;
+    background-color: $white;
+    height: 3px !important;
+    margin-right: 40px;
+}

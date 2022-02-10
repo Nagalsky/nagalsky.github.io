@@ -1,0 +1,37 @@
+/* LIST SUCCESS */
+
+.list-success {
+    @extend .d-flex,
+    .flex-column;
+
+    &--active {
+        .list-success__item {
+
+            &:before {
+                @extend .text-success;
+            }
+        }
+    }
+}
+
+.list-success__item {
+    @extend .position-relative,
+    .font-icons,
+    .icon-check-mark,
+    .d-flex,
+    .align-items-center,
+    .text-muted100;
+
+    &:before {
+        @extend .me-3,
+        .flex-shrink-0;
+    }
+
+    &+.list-success__item {
+        margin-top: 10px;
+    }
+
+    &.list-success__item--highlited {
+        @extend .text-dark;
+    }
+}

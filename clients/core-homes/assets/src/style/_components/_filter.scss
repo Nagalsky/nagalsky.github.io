@@ -1,0 +1,36 @@
+/* FILTER */
+
+.filter-nav {
+    @extend .d-flex,
+    .flex-wrap,
+    .justify-content-center,
+    .mt-4;
+}
+
+.filter {
+    img {
+        @extend .h-100;
+        object-fit: cover;
+    }
+}
+
+.filter-btn {
+    @extend .btn,
+    .border-0,
+    .shadow-none,
+    .p-0;
+    font-family: $font-regular;
+
+    &:not(:last-child) {
+        &:after {
+            content: '|';
+            @extend .d-inline-block,
+            .mx-2;
+            font-family: $font-regular !important;
+        }
+    }
+
+    &.active {
+        font-family: $font-bold;
+    }
+}

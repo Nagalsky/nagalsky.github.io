@@ -1,0 +1,69 @@
+/* NAVBAR */
+
+.navbar {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    @extend .bg-white;
+    box-shadow: 0 4px 10px 0 rgba(47, 69, 92, 0.05);
+
+    &.navbar-transparent {
+        @extend .bg-transparent,
+        .position-absolute,
+        .top-0,
+        .start-0,
+        .w-100,
+        .shadow-none;
+        z-index: 100;
+
+        .navbar-collapse {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        @include media-breakpoint-down(lg) {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    @extend .border-0,
+    .shadow-none,
+    .text-silver,
+    .fs-24;
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            @extend .text-uppercase,
+            .fs-15,
+            .ps-lg-3,
+            .text-dark;
+
+            &:not(:last-child) {
+                @extend .pe-lg-3;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    width: 217px;
+
+    @include media-breakpoint-up(md) {
+        width: 280px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: 329px;
+    }
+}

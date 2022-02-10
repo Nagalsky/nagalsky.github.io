@@ -1,0 +1,19 @@
+/* accordion */
+
+
+.accordion-item {
+
+}
+
+.accordion-button {
+    @extend .justify-content-end, .shadow-none;
+    @include media-breakpoint-up(md) {
+        font-size: 22px;
+    }
+    &:after {
+        content: none;
+    }
+    &:not(.collapsed) {
+        @extend .bg-transparent, .text-black;
+    }
+}

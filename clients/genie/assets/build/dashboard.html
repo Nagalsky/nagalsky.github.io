@@ -1,0 +1,2382 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Dashboard page</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="alert alert-warning d-flex align-items-center flex-wrap" role="alert">
+            <div class="text-uppercase mr-3 bold">
+                <i class="icon-warning mr-3"></i> IMPORTANT!
+            </div>
+            <span class="fs-12 text-blue"><b>3</b> Changes to Kindergarten</span>
+            <button type="button" class="close ml-auto" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">
+                <img src="img/elements/logo.svg" alt="" class="w-100">
+            </a>
+        
+            <div class="d-flex align-items-center d-md-none ml-auto mr-3">
+                <button type="button" class="btn btn-icon position-relative mr-3">
+                    <span class="navbar-notification-counter">3</span>
+                    <i class="icon-notification"></i>
+                </button>
+        
+                <div class="dropdown">
+                    <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                        <div class="flex-fill">
+                            <p class="navbar-user__name">Sarah Fisher</p>
+                            <p class="navbar-user__role">Centre Maneger</p>
+                        </div>
+                    </button>
+        
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon-menu"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Daily view </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Weekly Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Staff overview </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admin settings </a>
+                    </li>
+                </ul>
+                <div class="d-none d-md-flex flex-column flex-md-row align-items-md-center">
+                    <button type="button" class="btn btn-icon position-relative mr-4">
+                        <span class="navbar-notification-counter">3</span>
+                        <i class="icon-notification"></i>
+                    </button>
+        
+                    <div class="dropdown">
+                        <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                            <div class="flex-fill">
+                                <p class="navbar-user__name">Sarah Fisher</p>
+                                <p class="navbar-user__role">Centre Maneger</p>
+                            </div>
+                        </button>
+        
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="row">
+                <div class="col-md-4 d-flex">
+                    <div class="collapse-box">
+                        <div class="collapse-box__header">
+                            <div class="collapse-box__divider"></div>
+                            <button type="button" class="collapse-box__toggle"></button>
+                        </div>
+
+                        <div class="collapse-box__body">
+                            <div class="box w-100">
+                                <h5 class="mb-1">Calendar</h5>
+                                <p class="fs-12 text-silver-soft">Choose a day to look at</p>
+
+                                <div class="calendar-panel" id="calendar-panel"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 d-flex">
+                    <div class="collapse-box">
+                        <div class="collapse-box__header">
+                            <div class="collapse-box__divider"></div>
+                            <button type="button" class="collapse-box__toggle"></button>
+                        </div>
+
+                        <div class="collapse-box__body">
+                            <div class="box w-100">
+                                <div class="d-flex flex-column flex-lg-row mb-4">
+                                    <div class="order-lg-1 mb-4 mb-lg-0">
+                                        <button type="button" class="btn btn-secondary">Today</button>
+                                    </div>
+
+                                    <div
+                                        class="order-lg-3 d-flex align-items-center jusityf-content-between mb-4 mb-lg-0">
+                                        <div class="flex-fill mr-2">
+                                            <span class="fs-12 text-silver-soft">NQF : <span
+                                                    class="fs-13 text-primary font-medium">4.6</span>
+                                        </div>
+                                        <button type="button" class="btn btn-primary btn-shadow">Submit Day</button>
+                                    </div>
+
+                                    <div
+                                        class="order-lg-2 flex-fill d-flex align-items-center justify-content-between mx-lg-4">
+                                        <button type="button" class="btn-control flex-shrink-0">
+                                            <i class="fc-icon fc-icon-chevron-left"></i>
+                                        </button>
+                                        <h6 class="mb-0 mx-3">Monday 4th August 2020</h6>
+                                        <button type="button" class="btn-control flex-shrink-0">
+                                            <i class="fc-icon fc-icon-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="d-flex flex-column flex-sm-row align-item-center justify-content-between mb-3">
+                                    <h5 class="mb-3 mb-sm-0">Monday Overview</h5>
+
+                                    <div class="custom-control custom-switch d-flex align-items-center">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                        <label class="custom-control-label fs-12 text-silver-soft" for="customSwitch1"
+                                            data-toggle="modal" data-target="#modal-family-grouping">Turn on
+                                            family grouping</label>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table m-0">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col">
+                                                    Room name
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="d-flex align-items-center">
+                                                        Bookings <button type="button"
+                                                            class="btn btn-white btn-sm btn-rounded btn-shadow ml-2 flex-shrink-0">+
+                                                            Add</button>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    Allocated
+                                                </td>
+                                                <td scope="col">
+                                                    Staff
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Junior Kindy</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                                <th>17</th>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th class="bordered">328.6</th>
+                                                <th class="bordered">12.0</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse-box">
+                <div class="collapse-box__header">
+                    <div class="collapse-box__divider"></div>
+                    <button type="button" class="collapse-box__toggle"></button>
+                </div>
+
+                <div class="collapse-box__body">
+                    <div class="box has-bg" style="background-image: url('img/bg/process-box-bg.svg');">
+                        <div class="d-flex mb-3 align-items-center justify-content-between">
+                            <div class="flex-fill d-flex align-items-center">
+                                <div class="icon-box icon-box--success mr-3">
+                                    <i class="icon-process"></i>
+                                </div>
+                                <h5>Process</h5>
+                            </div>
+                            <h4 class="fs-32 m-0 flex-shrink-0 ml-4 font-black">64 <sup class="fs-15">%</sup></h4>
+                        </div>
+
+                        <div class="progress bg-success-secondary mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <img src="img/icons/info.svg" alt="" class="img-fluid flex-shrink-0 mr-2">
+                            <p class="fs-13">When you have completed a section, hit save to make sure your daily task is
+                                completed </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse-box">
+                <div class="collapse-box__header">
+                    <div class="collapse-box__divider"></div>
+                    <button type="button" class="collapse-box__toggle"></button>
+                </div>
+
+                <div class="collapse-box__body">
+                    <div class="box box--gradient pb-0 pr-md-0">
+                        <div class="day-calendar-grid">
+                            <div class="day-calendar-aside mb-4 md-md-0">
+                                <h5 class="mb-1">Choose a room</h5>
+                                <p class="fs-12 text-silver-soft mb-11">Choose a room to roster</p>
+
+                                <select class="selectpicker" data-style="btn-muted btn-block btn-md mb-4"
+                                    data-width="100%">
+                                    <option
+                                        data-content="<span class='room-badge room-badge--sky'></span> Kindergarten">
+                                        Kindergarten
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--success'></span> Kindergarten2">
+                                        Kindergarten2
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--blue'></span> Kindergarten3">
+                                        Kindergarten3
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--success-soft'></span> Kindergarten4">
+                                        Kindergarten4
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--success-secondary'></span> Kindergarten5">
+                                        Kindergarten5
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--rose'></span> Kindergarten6">
+                                        Kindergarten6
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--warning'></span> Kindergarten7">
+                                        Kindergarten7
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--pink'></span> Kindergarten8">
+                                        Kindergarten8
+                                    </option>
+                                    <option
+                                        data-content="<span class='room-badge room-badge--orange'></span> Kindergarten9">
+                                        Kindergarten9
+                                    </option>
+                                </select>
+
+                                <h5 class="mb-1">Staff list</h5>
+                                <p class="fs-12 text-silver-soft">Choose a room to roster</p>
+
+                                <div class="staff-list">
+                                    <div class="staff-list__item staff-list__item--danger">
+                                        <div class="mb-1 d-flex align-items-center justify-content-between">
+                                            <span class='room-badge room-badge--sky'></span>
+                                            <button type="button" class="staff-list__btn-add">+</button>
+                                        </div>
+                                        <p class="staff-list__name">Samantha Jones</p>
+                                        <p class="staff-list__role">Floating staff</p>
+                                    </div>
+
+                                    <div class="staff-list__item staff-list__item--success">
+                                        <div class="mb-1 d-flex align-items-center justify-content-between">
+                                            <span class='room-badge room-badge--sky'></span>
+                                            <button type="button" class="staff-list__btn-add">+</button>
+                                        </div>
+                                        <p class="staff-list__name">Diana Thomas</p>
+                                        <p class="staff-list__role">Core team</p>
+                                    </div>
+
+                                    <button type="button" class="staff-list__btn-add-member" data-toggle="modal"
+                                        data-target="#modal-staff-selector"><i class="icon-plus mr-2 fs-10"></i> Add
+                                        staff
+                                        member</button>
+                                </div>
+                            </div>
+
+                            <div class="day-calendar-body">
+                                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-4 px-md-3">
+                                    <div class="flex-fill mb-3 mb-sm-0">
+                                        <h5 class="mb-1">Staff allocation calendar</h5>
+                                        <p class="fs-12 text-silver-soft">Plan your day</p>
+                                    </div>
+
+                                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center">
+                                        <div
+                                            class="custom-control custom-switch d-flex align-items-center flex-fill mr-4">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                            <label class="custom-control-label fs-12 text-silver-soft"
+                                                for="customSwitch2">Automate the roster</label>
+                                        </div>
+
+                                        <button type="button"
+                                            class="btn btn-primary btn-shadow flex-shrink-0">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="day-calendar" data-simplebar data-simplebar-auto-hide="false">
+                                    <div class="day-calendar__body">
+                                        <div class="day-calendar__body-row">
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--heading">09:00</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">15</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">30</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">45</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="day-calendar__event">
+                                                    <p class="mb-1"><b>4</b> Children</p>
+                                                    <p><b>3x</b> Staff Required</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--heading">10:00</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">15</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">30</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">45</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="day-calendar__event">
+                                                    <p class="mb-1"><b>4</b> Children</p>
+                                                    <p><b>3x</b> Staff Required</p>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--heading">11:00</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">15</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">30</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">45</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="day-calendar__event">
+                                                    <p class="mb-1"><b>4</b> Children</p>
+                                                    <p><b>3x</b> Staff Required</p>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--heading">12:00</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">15</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">30</span>
+                                                        </div>
+                                                        <div
+                                                            class="day-calendar__body__item__grid-item day-calendar__body__item__grid-item--highlited">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--highlited">12:45</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="day-calendar__event">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p><b>3x</b> Staff Required</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span
+                                                                class="day-calendar__body__time day-calendar__body__time--heading">13:00</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">15</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">30</span>
+                                                        </div>
+                                                        <div class="day-calendar__body__item__grid-item">
+                                                            <span class="day-calendar__body__time">45</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="day-calendar__event">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p><b>3x</b> Staff Required</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="day-calendar__body-row">
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="day-calendar__event day-calendar__event--success day-calendar__event--xl">
+                                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                                        <span class='room-badge room-badge--sky'></span>
+                                                        <div class="d-flex align-items-center text-sky">
+                                                            <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                            <span class="font-medium">09:00-11:00</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="flex-fill">
+                                                            <p class="day-calendar__event__name">Samantha Jones</p>
+                                                            <p class="day-calendar__event__role">Floating staff</p>
+                                                        </div>
+
+                                                        <div class="flex-shrink-0 ml-3">
+                                                            <button type="button"
+                                                                class="day-calendar__event-btn">Shift</button>
+                                                            <button type="button"
+                                                                class="day-calendar__event-btn ml-3">Break</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div
+                                                            class="day-calendar__body__item__grid-item  day-calendar__body__item__grid-item--highlited">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="day-calendar__body-row">
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="day-calendar__event day-calendar__event--danger day-calendar__event--xl">
+                                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                                        <span class='room-badge room-badge--sky'></span>
+                                                        <div class="d-flex align-items-center text-sky">
+                                                            <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                            <span class="font-medium">09:00-11:00</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="flex-fill">
+                                                            <p class="day-calendar__event__name">Diana Thomas</p>
+                                                            <p class="day-calendar__event__role">Core team</p>
+                                                        </div>
+
+                                                        <div class="flex-shrink-0 ml-3">
+                                                            <button type="button"
+                                                                class="day-calendar__event-btn">Shift</button>
+                                                            <button type="button"
+                                                                class="day-calendar__event-btn ml-3">Break</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="day-calendar__event day-calendar__event--add-event
+                                            day-calendar__event--xl day-calendar__event--gap-2">
+                                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                                        <button type="button" class="day-calendar__add-event"
+                                                            data-toggle="modal" data-target="#modal-staff-selector"><i
+                                                                class="icon-plus"></i></button>
+                                                        <div class="d-flex align-items-center text-sky">
+                                                            <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                            <span class="font-medium">09:00-11:00</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="day-calendar__event__name">Add staff member</p>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div
+                                                            class="day-calendar__body__item__grid-item  day-calendar__body__item__grid-item--highlited">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="day-calendar__body-row">
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div
+                                                            class="day-calendar__body__item__grid-item  day-calendar__body__item__grid-item--highlited">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="day-calendar__body-cell">
+                                                <div class="day-calendar__body__item">
+                                                    <div class="day-calendar__body__item__grid">
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                        <div class="day-calendar__body__item__grid-item"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="px-3">
+                                    <div class="calendar-day calendar-day--staff" data-simplebar
+                                        data-simplebar-auto-hide="false">
+                                        <div class="calendar-day__body">
+                                            <div class="calendar-day__row">
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">00:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">00:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">00:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">00:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="day-calendar__event day-calendar__event--xs">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p
+                                                            class="day-calendar__event__label day-calendar__event__label--warning">
+                                                            <b>3x</b> Staff Required
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">01:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">01:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">01:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">01:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="day-calendar__event day-calendar__event--xs">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p
+                                                            class="day-calendar__event__label day-calendar__event__label--warning">
+                                                            <b>3x</b> Staff Required
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span
+                                                            class="calendar-day__cell-grid-time__item calendar-day__cell-grid-time__item--highlited">02:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">02:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">02:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">02:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="day-calendar__event day-calendar__event--xs">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p
+                                                            class="day-calendar__event__label day-calendar__event__label--warning">
+                                                            <b>3x</b> Staff Required
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">03:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">03:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">03:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">03:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="day-calendar__event day-calendar__event--xs">
+                                                        <p class="mb-1"><b>4</b> Children</p>
+                                                        <p
+                                                            class="day-calendar__event__label day-calendar__event__label--warning">
+                                                            <b>3x</b> Staff Required
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">04:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">04:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">04:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">04:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">05:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">05:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">05:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">05:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">06:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">06:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">06:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">06:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">07:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">07:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">07:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">07:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">08:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">08:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">08:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">08:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">09:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">09:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">09:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">09:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">10:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">10:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">10:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">10:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">11:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">11:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">11:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">11:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">12:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">12:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">12:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">12:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">13:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">13:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">13:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">13:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">14:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">14:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">14:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">14:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">15:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">15:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">15:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">15:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">16:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">16:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">16:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">16:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">17:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">17:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">17:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">17:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">18:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">18:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">18:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">18:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">19:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">19:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">19:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">19:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">20:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">20:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">20:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">20:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">21:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">21:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">21:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">21:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">22:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">22:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">22:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">22:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid-time">
+                                                        <span class="calendar-day__cell-grid-time__item">23:00</span>
+                                                        <span class="calendar-day__cell-grid-time__item">23:15</span>
+                                                        <span class="calendar-day__cell-grid-time__item">23:30</span>
+                                                        <span class="calendar-day__cell-grid-time__item">23:45</span>
+                                                    </div>
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="calendar-day__row">
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div
+                                                        class="day-calendar__event day-calendar__event--danger day-calendar__event--xl">
+
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div class="flex-fill d-flex align-items-center">
+                                                                <span class='room-badge room-badge--sky'></span>
+                                                                <div class="d-flex align-items-center text-sky">
+                                                                    <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                                    <span class="font-medium">09:00-11:00</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="flex-shrink-0 ml-4">
+                                                                <button type="button"
+                                                                    class="day-calendar__event-btn">Shift</button>
+                                                                <button type="button"
+                                                                    class="day-calendar__event-btn ml-3">Break</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="calendar-day__row">
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="day-calendar__event day-calendar__event--success
+                                                        day-calendar__event--xl calendar-day__event--gap-8">
+
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div class="flex-fill d-flex align-items-center">
+                                                                <span class='room-badge room-badge--sky'></span>
+                                                                <div class="d-flex align-items-center text-sky">
+                                                                    <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                                    <span class="font-medium">09:00-11:00</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="flex-shrink-0 ml-4">
+                                                                <button type="button"
+                                                                    class="day-calendar__event-btn">Shift</button>
+                                                                <button type="button"
+                                                                    class="day-calendar__event-btn ml-3">Break</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="calendar-day__row">
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                    <div class="day-calendar__event day-calendar__event--blue
+                                                        day-calendar__event--xl calendar-day__event--gap-4">
+
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div class="flex-fill d-flex align-items-center">
+                                                                <button type="button"
+                                                                    class="day-calendar__add-event mr-3"
+                                                                    data-toggle="modal"
+                                                                    data-target="#modal-staff-selector"><i
+                                                                        class="icon-plus"></i></button>
+                                                                <h5 class="fs-12">Add staff member</h5>
+                                                            </div>
+
+                                                            <div class="flex-shrink-0 ml-4">
+                                                                <div class="d-flex align-items-center text-sky">
+                                                                    <i class="icon-time mr-2 text-sky-secondary"></i>
+                                                                    <span class="font-medium">09:00-11:00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-day__cell">
+                                                    <div class="calendar-day__cell-grid">
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                        <span class="calendar-day__cell-grid__item">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-staff-selector" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="text-center mb-2">Staff Selector</h5>
+                    <p class="fs-12 text-center text-silver-soft">Choose the staff you would like to<br
+                            class="d-none d-sm-inline-block" /> add to your roster</p>
+    
+                    <div class="table-responsive">
+                        <table class="table m-0">
+                            <thead>
+                                <tr>
+                                    <td scope="col">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-all" id="customCheck1"
+                                                name="select-all">
+                                            <label class="custom-control-label" for="customCheck1"></label>
+                                        </div>
+                                    </td>
+                                    <td scope="col">
+                                        Room name
+                                    </td>
+                                    <td scope="col">
+                                        Bookings
+                                    </td>
+                                    <td scope="col">
+                                        Shift preference
+                                    </td>
+                                    <td scope="col">
+                                        Qualifications
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck5">
+                                            <label class="custom-control-label" for="customCheck5"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck6">
+                                            <label class="custom-control-label" for="customCheck6"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input select-item"
+                                                id="customCheck7">
+                                            <label class="custom-control-label" for="customCheck7"></label>
+                                        </div>
+                                    </th>
+                                    <th>Emma Kilczynski</th>
+                                    <th>1pm-4pm</th>
+                                    <th>Morning<br />
+                                        7am-12am</th>
+                                    <th>Level 2 teaching </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Add Staff</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-family-grouping" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="text-center mb-2">Family grouping </h5>
+                    <p class="fs-12 text-center text-silver-soft">Family groupings is applied. See changes below by room</p>
+                    <div class="text-center">
+                        <select class="selectpicker" data-style="custom-select" data-width="218px">
+                            <option>
+                                All Rooms
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--sky'></span> Kindergarten">
+                                Kindergarten
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--success'></span> Kindergarten2">
+                                Kindergarten2
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--blue'></span> Kindergarten3">
+                                Kindergarten3
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--success-soft'></span> Kindergarten4">
+                                Kindergarten4
+                            </option>
+                            <option
+                                data-content="<span class='room-badge room-badge--success-secondary'></span> Kindergarten5">
+                                Kindergarten5
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--rose'></span> Kindergarten6">
+                                Kindergarten6
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--warning'></span> Kindergarten7">
+                                Kindergarten7
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--pink'></span> Kindergarten8">
+                                Kindergarten8
+                            </option>
+                            <option data-content="<span class='room-badge room-badge--orange'></span> Kindergarten9">
+                                Kindergarten9
+                            </option>
+                        </select>
+                    </div>
+    
+                    <div class="family-group">
+                        <div class="family-group__item">
+                            <p><a href="#">4 children</a> have been moved from <a href="#">Kindergarten to Junior Kindy</a>
+                            </p>
+                        </div>
+                        <div class="family-group__item">
+                            <p><a href="#">4 children</a> have been moved from <a href="#">Kindergarten to Junior Kindy</a>
+                            </p>
+                        </div>
+                        <div class="family-group__item">
+                            <p><a href="#">4 children</a> have been moved from <a href="#">Kindergarten to Junior Kindy</a>
+                            </p>
+                        </div>
+                        <div class="family-group__item">
+                            <p><a href="#">4 children</a> have been moved from <a href="#">Kindergarten to Junior Kindy</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Add Staff</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+
+    <script>
+        //Init fullcalendar
+        document.addEventListener("DOMContentLoaded", function () {
+            var calendarEl = document.getElementById("calendar-panel");
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                contentHeight: 220,
+                fixedWeekCount: false,
+                headerToolbar: {
+                    left: 'timeGridDay,dayGridWeek,dayGridMonth',
+                    center: 'prev,title,next',
+                    right: ''
+                },
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>

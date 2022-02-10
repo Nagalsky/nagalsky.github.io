@@ -1,0 +1,56 @@
+/* BUTTONS */
+
+.btn {
+    @extend .font-bold,
+    .align-items-center,
+    .justify-content-center;
+    padding: 5px 23px;
+    display: inline-flex;
+    min-height: 46px;
+
+    &-secondary {
+        @include button-variants($bg: $gray500, $color: $black500);
+    }
+
+    &-black {
+        @include button-variants($bg: $black500, $color: $white);
+    }
+
+    &-primary {
+        @include button-variants($bg: $orange500, $color: $black500);
+    }
+
+    &-link {
+        @extend .border-0,
+        .text-black500;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @extend .bg-orange500,
+            .text-black500;
+            text-decoration: none;
+        }
+    }
+
+    &-lg {
+        min-height: 58px;
+        font-size: 16px;
+    }
+
+    &-xl {
+        min-height: 106px;
+        font-size: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 55px;
+            padding-right: 55px;
+        }
+    }
+
+    &-circle {
+        border-radius: 84px;
+    }
+}

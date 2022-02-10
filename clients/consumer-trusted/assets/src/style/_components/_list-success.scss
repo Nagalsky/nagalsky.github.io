@@ -1,0 +1,29 @@
+/* LIST SUCCESS */
+
+.list-success {
+    @extend .d-flex,
+    .flex-column;
+}
+
+.list-success__item {
+    @extend .position-relative,
+    .font-icons,
+    .icon-check-rounded,
+    .d-flex;
+
+    &:before {
+        @extend .text-success,
+        .me-3,
+        .flex-shrink-0;
+        font-size: 20px;
+        line-height: 1.4;
+
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+        }
+    }
+
+    &+.list-success__item {
+        margin-top: 8px;
+    }
+}

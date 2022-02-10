@@ -1,0 +1,50 @@
+/* TYPEHEAD FORM */
+
+.typeahead-form {
+    @extend .position-relative;
+
+    .form-control {
+        @extend .pe-5;
+    }
+}
+
+.tt-menu {
+    @extend .bg-white,
+    .w-100,
+    .mt-3,
+    .overflow-hidden,
+    .border,
+    .border-gray200,
+    .rounded-3,
+    .shadow;
+}
+
+.tt-suggestion {
+    @extend .py-2,
+    .py-md-1,
+    .px-3,
+    .px-md-4,
+    .text-gray300;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-white,
+        .bg-primary;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 18px;
+    }
+}
+
+.typeahead-form__icon {
+    @extend .position-absolute,
+    .top-50,
+    .translate-middle-y,
+    .fs-20,
+    .text-primary;
+    pointer-events: none;
+    right: 15px;
+}

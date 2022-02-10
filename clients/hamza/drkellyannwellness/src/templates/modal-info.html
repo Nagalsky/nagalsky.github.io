@@ -1,0 +1,74 @@
+<div class="fixed inset-0 w-full h-full z-[99999999] bg-black bg-opacity-50 duration-300 overflow-y-auto"
+    x-show="showModalInfo" x-transition:enter="transition duration-300" x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100" x-transition:leave="transition duration-300"
+    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+    <div class="relative sm:w-[500px] mx-2 sm:mx-auto my-10 opacity-100">
+        <div class="relative bg-white shadow-lg rounded-[2px] text-gray-900 z-20" @click.away="showModalInfo = false"
+            x-show="showModalInfo">
+            <header class="flex items-center justify-between p-[15px] border-b border-gray50 border-solid">
+                <h2 class="font-semibold text-[20px]">Information</h2>
+                <button class="focus:outline-none p-2" @click="showModalInfo = false">
+                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 18 18">
+                        <path
+                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                        </path>
+                    </svg>
+                </button>
+            </header>
+            <main class="p-[15px]">
+                <p class="mb-[20px]">
+                    Representations regarding the efficacy and safety of this product have not been evaluated by the
+                    Food and Drug Administration. The FDA does not evaluate supplements. These products are not intended
+                    to diagnose, prevent, treat, or cure any disease.
+                </p>
+                <ul class="list-disc pl-[35px]">
+                    <li><a href="#" data-scroll="anchor" @click="showModalInfo = false" class="text-link500 hover:text-link600 hover:decoration-solid hover:underline
+                            show-content">Get
+                            started</a>
+                    </li>
+                    <li>
+                        <a href="https://visisoothe.com/privacy.html" target="_blank"
+                            class="text-link500 hover:text-link600 hover:decoration-solid hover:underline">
+                            Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://visisoothe.com/terms.html" target="_blank"
+                            class="text-link500 hover:text-link600 hover:decoration-solid hover:underline">
+                            Terms and Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://visisoothe.com/references.html" target="_blank"
+                            class="text-link500 hover:text-link600 hover:decoration-solid hover:underline">
+                            References
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://visisoothe.com/contact" target="_blank"
+                            class="text-link500 hover:text-link600 hover:decoration-solid hover:underline">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://visisoothe.com/disclaimer.html" target="_blank"
+                            class="text-link500 hover:text-link600 hover:decoration-solid hover:underline">
+                            Disclaimer
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="h-[1px] w-full my-[25px] bg-gray50"></div>
+
+                <img src="img/icon.png" alt="" class="d-block mx-auto max-w-[60px] md:max-w-[100px] mb-[20px]">
+
+                <address class="text-center not-italic grid gap-[4px]">
+                    <a href="tel:302-200-3480">302-200-3480</a>
+                    <a href="#" class="text-link500 hover:text-link600">www.visisoothe.com</a>
+                    <span>1201 N Orange Street Suite #7223,<br /> Wilmington, DE, 19801, USA</span>
+                </address>
+            </main>
+        </div>
+    </div>
+</div>

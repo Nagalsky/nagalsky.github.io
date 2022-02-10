@@ -1,0 +1,28 @@
+/* BUTTONS */
+
+.btn {
+    @extend .rounded-0,
+    .base-font-semibold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 12px 29px;
+    letter-spacing: 0.7px;
+
+    &-warning {
+        @include button-variants($bg: $warning, $color: $white);
+    }
+
+    &-success {
+        @include button-variants($bg: $success, $color: $white);
+    }
+
+    &-outline-success {
+        @include button-outline-variants($color: $success);
+    }
+
+    &-equal {
+        min-width: 255px;
+    }
+}

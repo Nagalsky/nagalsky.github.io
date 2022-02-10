@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Admin page</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="alert alert-warning d-flex align-items-center flex-wrap" role="alert">
+            <div class="text-uppercase mr-3 bold">
+                <i class="icon-warning mr-3"></i> IMPORTANT!
+            </div>
+            <span class="fs-12 text-blue"><b>3</b> Changes to Kindergarten</span>
+            <button type="button" class="close ml-auto" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">
+                <img src="img/elements/logo.svg" alt="" class="w-100">
+            </a>
+        
+            <div class="d-flex align-items-center d-md-none ml-auto mr-3">
+                <button type="button" class="btn btn-icon position-relative mr-3">
+                    <span class="navbar-notification-counter">3</span>
+                    <i class="icon-notification"></i>
+                </button>
+        
+                <div class="dropdown">
+                    <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                        <div class="flex-fill">
+                            <p class="navbar-user__name">Sarah Fisher</p>
+                            <p class="navbar-user__role">Centre Maneger</p>
+                        </div>
+                    </button>
+        
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon-menu"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Daily view </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Weekly Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Staff overview </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admin settings </a>
+                    </li>
+                </ul>
+                <div class="d-none d-md-flex flex-column flex-md-row align-items-md-center">
+                    <button type="button" class="btn btn-icon position-relative mr-4">
+                        <span class="navbar-notification-counter">3</span>
+                        <i class="icon-notification"></i>
+                    </button>
+        
+                    <div class="dropdown">
+                        <button type="button" class="navbar-user" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/elements/avatar.png" class="navbar-user__avatar" alt="">
+                            <div class="flex-fill">
+                                <p class="navbar-user__name">Sarah Fisher</p>
+                                <p class="navbar-user__role">Centre Maneger</p>
+                            </div>
+                        </button>
+        
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="row">
+                <div class="col-md-4 d-flex">
+                    <div class="box w-100 pt-2">
+                        <div class="nav naviation">
+                            <a class="naviation-link active" data-toggle="tab" href="#tab-staff-overview">Staff
+                                overview</a>
+                            <a class="naviation-link" data-toggle="tab" href="#tab-admin-settings">Admin settings</a>
+                            <a class="naviation-link" data-toggle="tab" href="#tab-custom-rooms">Custom rooms</a>
+                            <a class="naviation-link" data-toggle="tab" href="#tab-family-grouping-settings">Family
+                                grouping settings</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 d-flex">
+                    <div class="box w-100">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-staff-overview">
+                                <div
+                                    class="d-flex flex-column flex-sm-row align-item-center justify-content-between mb-3">
+                                    <div class="flex-fill mb-3 mb-sm-0">
+                                        <h1 class="h5 mb-1">Admin settings</h1>
+                                        <p class="fs-12 text-silver-soft">Lorem ipsum dolor</p>
+                                    </div>
+
+                                    <div class="table-control-box">
+                                        <select class="selectpicker" data-style="custom-select" title="Filter by"
+                                            data-width="100%">
+                                            <option>
+                                                Option 1
+                                            </option>
+                                            <option>
+                                                Option 2
+                                            </option>
+                                        </select>
+                                        <input type="search" class="form-control ml-sm-4 mt-3 mt-sm-0"
+                                            placeholder="Search All Staff">
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col">
+                                                    Staff name
+                                                </td>
+                                                <td scope="col">
+                                                    Role
+                                                </td>
+                                                <td scope="col">
+                                                    Permissions
+                                                </td>
+                                                <td scope="col">
+                                                    Edit
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>Emma Kilczynski</th>
+                                                <th>Centre Manager</th>
+                                                <th>Dashboard, settings</th>
+                                                <th>
+                                                    <button type="button" class="btn btn-icon fs-14"><i
+                                                            class="icon-pen"></i></button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="text-center mt-md-4">
+                                    <a href="#">Load more</a>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab-admin-settings">
+                                <div
+                                    class="d-flex flex-column flex-sm-row align-item-center justify-content-between mb-3">
+                                    <div class="flex-fill mb-3 mb-sm-0">
+                                        <h5 class="mb-1">Admin settings </h5>
+                                        <p class="fs-12 text-silver-soft">Lorem ipsum dolor</p>
+                                    </div>
+
+                                    <div class="table-control-box">
+                                        <select class="selectpicker" data-style="custom-select" title="Filter by"
+                                            data-width="100%">
+                                            <option>
+                                                Option 1
+                                            </option>
+                                            <option>
+                                                Option 2
+                                            </option>
+                                        </select>
+                                        <input type="search" class="form-control ml-sm-4 mt-3 mt-sm-0"
+                                            placeholder="Search All Staff">
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col">
+                                                    Approval date
+                                                </td>
+                                                <td scope="col">
+                                                    Type of approval
+                                                </td>
+                                                <td scope="col">
+                                                    Reason for excemption
+                                                </td>
+                                                <td scope="col">
+                                                    Approved?
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Monday<br />
+                                                    7th August
+                                                </th>
+                                                <th>Staff overbooking</th>
+                                                <th>Lorem ipsum dolor, lorem. <a href="#">view more</a></th>
+                                                <th>
+                                                    <div class="d-flex">
+                                                        <button type="button"
+                                                            class="icon-box icon-box--sm icon-box--success border-0">
+                                                            <i class="icon-check"></i>
+                                                        </button>
+                                                        <button type="button" class="icon-box icon-box--sm icon-box--danger border-0
+                                                            ml-3">
+                                                            <i class="icon-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="text-center mt-md-4">
+                                    <a href="#">Load more</a>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab-custom-rooms">
+                                <h5 class="mb-1">Custom rooms</h5>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab-family-grouping-settings">
+                                <h5 class="mb-1">Family grouping settings</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

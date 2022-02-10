@@ -1,0 +1,20 @@
+/* BUTTONS */
+
+.btn {
+    font-size: 18px;
+    font-family: $font-semibold;
+    border-radius: 10px;
+    padding: 14px 64px;
+
+    &-primary {
+        @include button-variants($bg: $primary, $color: $white);
+    }
+
+    &-secondary {
+        @include button-variants($bg: $gray, $color: $white);
+    }
+
+    &-success {
+        @include button-variants($bg: $success, $color: $white);
+    }
+}

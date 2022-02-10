@@ -1,0 +1,37 @@
+/* BOX PANEL */
+
+.box-panel {
+    @extend .overflow-hidden,
+    .has-bg, .w-100, .d-flex, .flex-column, .justify-content-start, .align-items-start;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px 0 rgba(132, 140, 173, 0.16);
+    padding: 20px;
+    font-size: 20px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 24px;
+    }
+
+    &--sky {
+        background-image: url('../img/temp/box-panel-bg-1.png');
+    }
+
+    &--blue {
+        background-image: url('../img/temp/box-panel-bg-2.png');
+    }
+    &--blue-soft {
+        background-image: url('../img/temp/box-panel-bg-3.png');
+    }
+}
+
+.box-panel__link {
+    @extend .text-white, .mt-auto;
+    border-bottom: 1px solid $yellow;
+    font-size: 14px;
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+    &:hover, &:focus, &:active {
+        border-bottom-color: transparent;
+    }
+}

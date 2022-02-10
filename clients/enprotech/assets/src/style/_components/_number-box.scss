@@ -1,0 +1,52 @@
+/* NUMBER BOX */
+
+$number-box-size: 200px;
+
+.number-box {
+    @extend .bg-white,
+    .d-flex,
+    .flex-column,
+    .align-items-center,
+    .justify-content-center,
+    .p-4,
+    .text-center;
+    box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    width: 160px;
+    height: 160px;
+
+    @include media-breakpoint-up(md) {
+        width: $number-box-size;
+        height: $number-box-size;
+        font-size: 16px;
+    }
+}
+
+.number-box__heading {
+    @extend .text-orange500,
+    .mb-2;
+    font-size: 40px;
+}
+
+.number-box__text {
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 21px;
+    /* fallback */
+    max-height: 63px;
+    /* fallback */
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+
+    @include media-breakpoint-up(md) {
+        line-height: 27px;
+        /* fallback */
+        max-height: 108px;
+        /* fallback */
+        -webkit-line-clamp: 4;
+        /* number of lines to show */
+    }
+}

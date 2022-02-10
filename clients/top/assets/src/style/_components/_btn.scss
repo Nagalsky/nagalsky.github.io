@@ -1,0 +1,27 @@
+/* BTN */
+
+.btn {
+    font-family: $font-semibold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    font-size: 14px;
+    padding: 12px 30px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+
+    &-primary {
+        @include button-variants($bg: $primary, $color: $white);
+    }
+
+    &-success {
+        @include button-variants($bg: $success, $color: $white);
+    }
+
+    &-outline-success {
+        @include button-outline-variants($color: $success);
+    }
+}

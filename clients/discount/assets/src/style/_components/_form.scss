@@ -1,0 +1,19 @@
+/* FORM */
+
+$field-height: 35px;
+
+.form-control {
+    height: $field-height;
+
+    &:focus {
+        @include custom-placeholder-opacity($opacity: 0);
+    }
+}
+
+.form-select {
+    height: $field-height;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}

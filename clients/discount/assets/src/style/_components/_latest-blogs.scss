@@ -1,0 +1,43 @@
+/* LATEST BLOGS */
+
+.latest-blogs {
+    @extend .fs-13;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.latest-blog {
+    @extend .d-flex,
+    .my-1,
+    .py-1;
+
+    &+.latest-blog {
+        border-top: 1px solid $silver;
+    }
+}
+
+.latest-blog__img {
+    @extend .flex-shrink-0,
+    .me-3;
+    width: 60px;
+}
+
+.latest-blog__body {
+    @extend .flex-fill;
+    min-width: 0;
+}
+
+.latest-blog__more {
+    @extend .d-inline-flex,
+    .align-items-center,
+    .text-gray400,
+    .font-medium;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+    }
+}

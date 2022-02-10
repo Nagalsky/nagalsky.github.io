@@ -1,0 +1,26 @@
+/* PRODUCT BOX */
+
+.product-box {
+    @extend .text-gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-primary;
+
+        .product-box__header {
+            >img {
+                transform: scale(1.25)
+            }
+        }
+    }
+}
+
+.product-box__header {
+    @extend .position-relative,
+    .overflow-hidden;
+
+    >img {
+        @include transition($base-animation);
+    }
+}

@@ -1,0 +1,57 @@
+/* RELATEDD GALLERY */
+
+.related-gallery {
+    @include media-breakpoint-up(sm) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .item {
+        padding: 5px 5px 20px 5px;
+
+        @include media-breakpoint-up(md) {
+            padding: 5px 15px 20px 15px;
+        }
+    }
+
+    .slick-track,
+    .slick-slide {
+        display: flex;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
+
+    .slick-arrow {
+        top: 75px;
+
+        &:before {
+            font-size: 40px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 50px;
+            }
+        }
+
+
+
+        &.slick-prev {
+            @extend .start-0;
+            left: -10px !important;
+
+            @include media-breakpoint-up(xxl) {
+                left: -15px !important;
+            }
+        }
+
+        &.slick-next {
+            @extend .end-0;
+            right: -10px !important;
+
+            @include media-breakpoint-up(xxl) {
+                right: -15px !important;
+            }
+        }
+    }
+}

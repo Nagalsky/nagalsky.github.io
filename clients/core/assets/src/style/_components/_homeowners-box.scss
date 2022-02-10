@@ -1,0 +1,18 @@
+/* homeowners box */
+
+.homeowners-box {
+    @extend .position-relative,
+    .py-3,
+    .pl-4,
+    .lead;
+
+    &:before {
+        content: '';
+        @extend .position-absolute,
+        .h-100,
+        .bg-gold;
+        left: 0;
+        top: 0;
+        width: 10px;
+    }
+}

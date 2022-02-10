@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Watch the video page</title>
+</head>
+
+<body>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">How To Lower Blood Sugar Naturally</h2>
+                <p class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="vup-1" height="24" viewBox="0 0 24 24" width="24">
+                        <path
+                            d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z">
+                        </path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                    Make sure your sound is on
+                    <svg xmlns="http://www.w3.org/2000/svg" id="vup-2" height="24" viewBox="0 0 24 24" width="24">
+                        <path
+                            d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z">
+                        </path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                </p>
+
+                <div class="video-banner-video">
+                    <div class="ratio ratio-16x9 position-relative">
+                        <div id="tapImgDiv" onclick="videoChangeGo()"
+                            style="cursor:pointer; position:absolute; width:100%; height:100%; z-index:9; left:0px; top:0px;">
+                            <img class="playbuttononyoutube tap-image-size lazyload page__tapImage" alt="Image"
+                                style="width: 100%;object-fit: cover;">
+                        </div>
+
+                        <iframe allow="autoplay; encrypted-media" class="videosSize" frameborder="0" height="315"
+                            id="videogogosize"
+                            src="https://www.youtube-nocookie.com/embed/N4TrRg0tWek?enablejsapi=1&playsinline=1&rel=0&controls=0&showinfo=0&autoplay=1&modestbranding=1&iv_load_policy=3"
+                            width="560"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cta pb-0">
+            <div class="container">
+                <div class="featured text-white">
+                    <div class="flex-fill order-1">
+                        <h3 class="mb-1">Dr. Holly Lucille Has Been</h3>
+                        <h2 class="m-0">Featured On:</h2>
+                        <hr class="featured-hr">
+                        <p class="fs-12">Dr. Holly Lucille is not endorsed by, sponsored by, or affiliated with any of
+                            these organizations.</p>
+                    </div>
+                    <img src="img/temp/featuredLogo.svg" alt="" class="featured-logos">
+                    <img src="img/temp/dr-holly.png" alt="" class="featured-doctor">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer--secondary">
+        <div class="container-fluid">
+            <p>
+                The information on this website has not been evaluated by the Food and Drug Administration. These products
+                are not intended to diagnose, treat, cure or prevent any disease.
+            </p>
+    
+            <div class="footer-menu">
+                <span class="footer-menu-item">© PureHealth Research 2021 All Rights Reserved</span>
+                <a href="#" class="footer-menu-item" target="_blank">*&nbsp;Citations</a>
+                <a href="#" class="footer-menu-item" target="_blank">Terms</a>
+                <a href="#" class="footer-menu-item" target="_blank">Privacy</a>
+                <a href="#" class="footer-menu-item" target="_blank">Contact</a>
+                <a href="#" class="footer-menu-item" target="_blank">Return Policy</a>
+                <span class="footer-menu-item">4601 North Fairfax Drive, Suite 1200 Arlington, VA 22203</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+
+    <script>
+        let endImagePathMobile = 'img/temp/BSmobileAfterPlayImage.gif';
+        let endImagePathDesktop = 'img/temp/images/blood-sugar-end-img.jpg';
+        let tapImagePathMobile = 'img/temp/BSGIFsForMobiles.gif';
+        let tapImagePathDesktop = 'img/temp/preview-gallery-BLOOD-SUGAR-GIF.gif';
+        let videoEnd = 30 * 60 + 28 - 1;
+        let dropTime = 26 * 60 + 28;
+        let videoIDMobile = 'jQftVpFL6BE';
+        let videoIDDesktop = 'N4TrRg0tWek';
+
+        let player = null;
+        let videoTime = 0;
+        let timeUpdater = null;
+        let showOrderingProduct = false;
+        let playerLoaded = false;
+        let playingVideoID = videoIDDesktop;
+        let isVideoEndReached = false;
+        let isMobileVideoPlaying = null;
+        let scrollToNext = false;
+        let showBtn = false;
+        let showOrderForms = false;
+
+        init();
+
+        // do not display tapImg if Android FB inapp browser or FB messenger inapp browser
+        if (navigator.userAgent.indexOf("Android") !== -1 && isFacebookApp()) {
+            document.getElementById('tapImgDiv').style.zIndex = 0;
+            document.querySelector('.tap-image-size').style.zIndex = 0;
+            hideElement('.page__tapImage');
+        }
+
+        function init() {
+            switch ('/watch-the-video') {
+                case '/watch-the-video-6':
+                    tapImagePathDesktop = '/assets/images/tap-image-youtube.jpg';
+                    break;
+                case '/watch-the-video-10':
+                    showBtn = false;
+                    break;
+            }
+
+            window['YT'] === undefined ?
+                window['onYouTubeIframeAPIReady'] = onYouTubeIframeAPIReady :
+                onYouTubeIframeAPIReady();
+
+            if (window.innerWidth <= 500) {
+                isMobileVideoPlaying = true;
+                playingVideoID = videoIDMobile;
+                setTapImageSource(tapImagePathMobile);
+            } else {
+                isMobileVideoPlaying = false;
+                playingVideoID = videoIDDesktop;
+                setTapImageSource(tapImagePathDesktop);
+            }
+
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            const firstMetaTag = document.getElementsByTagName('meta')[0];
+            firstMetaTag.parentNode.insertBefore(tag, firstMetaTag);
+            window.addEventListener('resize', adjustVideoPlayerSize);
+        }
+
+        function adjustVideoPlayerSize() {
+            if (window.innerWidth <= 500 && isMobileVideoPlaying === false) {
+                player.loadVideoById(videoIDMobile, videoTime);
+                isMobileVideoPlaying = true;
+                setTapImageSource(player.getPlayerState() === 0 ? endImagePathMobile : tapImagePathMobile);
+            } else if (window.innerWidth > 500 && isMobileVideoPlaying === true) {
+                player.loadVideoById(videoIDDesktop, videoTime);
+                isMobileVideoPlaying = false;
+                setTapImageSource(player.getPlayerState() === 0 ? endImagePathDesktop : tapImagePathDesktop);
+            }
+        }
+
+        function getVideoStartTime() {
+            const watchTime = document.cookie.split('watvideotime=');
+            let startTime = 0;
+
+            if (watchTime.length > 0 && watchTime[1] != '' && !isNaN(parseInt(watchTime[1]))) {
+                startTime = parseInt(watchTime[1]);
+
+                if (startTime > videoEnd) {
+                    startTime = 0;
+                }
+            }
+
+            return startTime;
+        }
+
+        //set timer for show whole page
+        function onProgress() {
+            if (videoTime > dropTime) {
+                if (scrollToNext) {
+                    scrollToNext = !showBtn;
+                }
+
+                showBtn = !showOrderForms;
+
+                if (showBtn) {
+                    showElement('.page__nextStepButtonContainer');
+
+                    if (window.innerWidth <= 500 && scrollToNext) {
+                        smoothScrollTo(document.getElementById('site-btn-1').offsetTop - 150, 1000);
+                    }
+                }
+            }
+        }
+
+        function updateTime() {
+            let oldTime = videoTime;
+
+            if (player && player.getCurrentTime) {
+                videoTime = player.getCurrentTime();
+            }
+
+            if (videoTime !== oldTime) {
+                onProgress();
+            }
+
+            document.cookie = 'watvideotime=' + player.getCurrentTime();
+        }
+
+        function onYouTubeIframeAPIReady() {
+            player = new window['YT'].Player('videogogosize', {
+                events: {
+                    onReady: function (event) {
+                        event.target.cueVideoById(playingVideoID, getVideoStartTime());
+                        playerLoaded = true;
+                        timeUpdater = setInterval(updateTime, 1000);
+                    },
+
+                    onStateChange: function (event) {
+                        switch (event.data) {
+                            // video ended
+                            case 0:
+                                setTapImageSource(window.innerWidth <= 500 ? endImagePathMobile :
+                                    endImagePathDesktop);
+                                showElement('.page__tapImage');
+                                isVideoEndReached = true;
+                                break;
+
+                                // video playing
+                            case 1:
+                                setTimeout(function () {
+                                    hideElement('.page__tapImage');
+                                }, 200);
+                                break;
+
+                                // video buffering
+                            case 3:
+                                setTimeout(function () {
+                                    hideElement('.page__tapImage');
+                                }, 200);
+                                break;
+
+                            default:
+                                showElement('.page__tapImage');
+                                break;
+                        }
+                    }
+                }
+            });
+        }
+
+        function videoChangeGo() {
+            if (typeof player !== 'undefined' && player !== null && !isVideoEndReached) {
+                if (!player.getPlayerState) {
+                    return;
+                }
+
+                const state = player.getPlayerState();
+
+                if (state === 1) {
+                    setTimeout(function () {
+                        player.pauseVideo();
+                        showElement('.page__tapImage');
+                    }, 200);
+                } else {
+                    player.playVideo();
+                    setTimeout(function () {
+                        hideElement('.page__tapImage');
+                    }, 200);
+                }
+            }
+        }
+
+        function setTapImageSource(newSrc) {
+            const targetElement = document.querySelector('.page__tapImage');
+
+            if (targetElement) {
+                targetElement.src = newSrc;
+            }
+        }
+
+        function showElement(query) {
+            const targetElement = document.querySelector(query);
+
+            if (targetElement) {
+                targetElement.style.display = 'block';
+            }
+        }
+
+        function hideElement(query) {
+            const targetElement = document.querySelector(query);
+
+            if (targetElement) {
+                targetElement.style.display = 'none';
+            }
+        }
+
+        function isFacebookApp() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1 || ua.indexOf("Instagram") > -1);
+        }
+
+        // script for HS trck.
+        const urlCurrent = location.search;
+        const query = urlCurrent.substr(1).split("&");
+        const resultUrl = {};
+
+        for (let index = 0; index < query.length; index++) {
+            let item = (query[index]).split("=");
+            resultUrl[item[0]] = decodeURIComponent(item[1]);
+        }
+
+        //console.log('re', resultUrl);
+        if (resultUrl.trid) {
+            sessionStorage.setItem("tridPhr", resultUrl.trid);
+        }
+
+        if (resultUrl.offid) {
+            sessionStorage.setItem("offidPhr", resultUrl.offid);
+        }
+
+        if (resultUrl.affid) {
+            sessionStorage.setItem("affidPhr", resultUrl.affid);
+        }
+
+        if (resultUrl.offerurlid) {
+            sessionStorage.setItem("offerurlidPhr", resultUrl.offerurlid);
+        }
+
+        if (resultUrl.affsub) {
+            sessionStorage.setItem("affsubPhr", resultUrl.affsub);
+        }
+
+        if (resultUrl.affsub2) {
+            sessionStorage.setItem("affsub2Phr", resultUrl.affsub2);
+        }
+        // END script for HS trck.
+    </script>
+</body>
+
+</html>

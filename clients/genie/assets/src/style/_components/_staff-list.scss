@@ -1,0 +1,111 @@
+/* STAFF LIST */
+
+.staff-list {
+    &:not(:last-child) {
+        @extend .mb-3;
+    }
+}
+
+.staff-list__item {
+    @extend .radius-base;
+    padding: 8px 12px 26px 8px;
+
+    &+.staff-list__item {
+        @extend .mt-3;
+    }
+
+    &--success {
+        @extend .bg-success-secondary;
+
+        .staff-list__btn-add {
+            @extend .text-success;
+        }
+    }
+
+    &--danger {
+        @extend .bg-danger-secondary;
+
+        .staff-list__btn-add {
+            @extend .text-danger;
+        }
+    }
+}
+
+.staff-list__btn-add {
+    @extend .bg-white,
+    .radius-base,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .btn,
+    .shadow-none,
+    .p-0;
+    width: 17px;
+    height: 17px;
+    box-shadow: 0 2px 4px 0 rgba(121, 214, 167, 0.17);
+}
+
+.staff-list__name {
+    @extend .fs-10,
+    .font-medium,
+    .mb-0;
+    color: rgba($black, .75);
+}
+
+.staff-list__role {
+    @extend .fs-10;
+    color: rgba($black, .3);
+}
+
+.staff-list__btn-add-member {
+    @extend .btn,
+    .w-100,
+    .border-0,
+    .shadow-none,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .fs-12,
+    .font-medium,
+    .bg-white,
+    .text-primary,
+    .radius-base;
+    min-height: 40px;
+    padding: 10px 15px;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend .text-black;
+    }
+}
+
+
+.staff-list__panel {
+    @extend .mb-3,
+    .radius-base,
+    .p-3;
+
+    &--pink {
+        background-color: #f2daf7;
+    }
+
+    &--danger {
+        background-color: $danger-secondary;
+    }
+
+    &--success {
+        background-color: $success-secondary;
+    }
+
+    &--warning {
+        background-color: #f7e6c1;
+    }
+}
+
+.staff-list__panel-name {
+    @extend .fs-13,
+    .font-medium,
+    .mb-2;
+}

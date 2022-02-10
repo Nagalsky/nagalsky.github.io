@@ -1,0 +1,38 @@
+/* INFO BOX */
+
+.info-box {
+    @extend .bg-white,
+    .text-center,
+    .position-relative,
+    .mx-auto;
+    border-radius: 30px;
+    border: 2px solid $success;
+    padding: 20px 15px;
+    transform: translateY(-50%);
+    margin-bottom: -80px;
+    max-width: 920px;
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 15px;
+        margin-bottom: -30px;
+    }
+}
+
+.info-title {
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 22px;
+    }
+}
+
+.meet-box__avatar {
+    @extend .flex-shrink-0,
+    .me-3;
+    width: 80px;
+    border-radius: 10px;
+
+    @include media-breakpoint-up(md) {
+        width: 160px;
+    }
+}

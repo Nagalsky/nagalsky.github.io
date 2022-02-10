@@ -1,0 +1,44 @@
+/* FOOTER */
+
+.footer {
+    @extend .text-center;
+    padding-bottom: 30px;
+    color: $gray;
+}
+
+.footer-divider {
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    @extend .mx-auto;
+    max-width: 400px;
+    background: #e8e8e8;
+}
+
+.footer-nav {
+    @extend .d-flex,
+    .flex-wrap,
+    .justify-content-center;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 45px;
+    }
+}
+
+.footer-nav-item {
+    color: $gray;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    @extend .py-2;
+
+    &:not(:last-of-type) {
+        &:after {
+            content: '/';
+            display: inline-block;
+            margin: 0 3px;
+        }
+    }
+}

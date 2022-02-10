@@ -1,0 +1,22 @@
+/* SECTION */
+
+.section {
+    @extend .position-relative;
+    padding: 30px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 0;
+    }
+
+    &-pre-info {
+        padding-bottom: 70px;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 100px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 200px;
+        }
+    }
+}

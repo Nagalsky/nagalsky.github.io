@@ -1,0 +1,19 @@
+/* LIST COUNTER */
+
+.list-counter {
+    counter-reset: counter;
+    @extend .list-unstyled;
+
+    >li {
+        @extend .text-break;
+
+        &:before {
+            counter-increment: counter;
+            content: counter(counter) ". ";
+        }
+
+        &+li {
+            @extend .mt-2;
+        }
+    }
+}
