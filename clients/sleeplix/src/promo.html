@@ -113,19 +113,20 @@
   <script src="./js/scripts.js"></script>
 
   <script>
+    const loaderProgressText = $('#loader-progress-text');
     $('.loader-toggle').on('click', function (e) {
       e.preventDefault()
       $('#loader').removeClass('hidden');
       $('.should-hide').hide();
       $('#loader-progress-bar-line').css('width', '100%');
       setTimeout(function () {
-        $('#loader-progress-text').html('Congratulations! Promo Code Valid');
+        loaderProgressText.html('Congratulations! Promo Code Valid');
       }, 1500);
       setTimeout(function () {
-        $('#loader-progress-text').html('Applying Discount...');
+        loaderProgressText.html('Applying Discount...');
       }, 3000);
       setTimeout(function () {
-        $('#loader-progress-text').html('Discount Applied!');
+        loaderProgressText.html('Discount Applied!');
       }, 4500);
     })
   </script>
