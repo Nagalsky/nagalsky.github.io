@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  //= templates/head.html
+  <title>Promo page</title>
+</head>
+
+<body class="font-body text-dark flex flex-col min-h-screen">
+  <div
+    class="bg-success font-medium text-[14px] md:text-[24px] text-center text-white px-4 py-[9.5px] md:py-[12px] uppercase flex-shrink-0 tracking-[0.05em]">
+    Techfibrr Rewards
+  </div>
+
+  <main class="grow py-[40px] md:py-[50px]">
+    <div class="container overflow-y-hidden">
+      <img src="img/promo-img.svg" alt="Promo"
+        class="block mx-auto max-w-[180px] md:max-w-[290px] mb-[30px] md:mb-[35px]">
+
+      <h1 class="text-center font-bold text-[22px] md:text-[48px] mb-[20px]">Your Wallet Will Appreciate<br
+          class="hidden md:block" />
+        These Discounts!</h1>
+
+      <p class="text-center text-[15px] md:text-[20px] mb-[20px] md:mb-[25px]">
+        Enter your
+        exclusive promo code and
+        claim your special offer:
+      </p>
+
+      <div class="mx-[-15px] sm:mx-auto sm:max-w-[655px] px-[15px] md:px-[40px] relative mb-[35px] md:mb-[45px]">
+        <img src="img/promo-form-bg.png" alt="Promo"
+          class=" absolute z-10 w-full left-0 top-[15px] pointer-events-none">
+        <form action="">
+          <div class="rounded-[30px] bg-primary py-[30px] px-[20px] md:py-[42px] md:px-[50px]">
+            <input type="text" class="text-dark placeholder-dark w-full px-4
+                border-0 rounded-[10px] bg-white
+                focus:bg-white focus:outline-none
+                focus:shadow-none text-[12px] md:text-[18px] text-center mb-[20px] uppercase min-h-[40px]
+                md:min-h-[50px]" placeholder="Enter your promo code here!" />
+
+
+            <button class="
+                        text-white
+                        bg-gradient-to-b
+                        from-[#F68E5F]
+                        to-[#E2642A]
+                        hover:from-[#E2642A]
+                        font-semibold
+                        text-[12px]
+                        md:text-[16px]
+                        uppercase
+                        px-4
+                        min-h-[40px]
+                        md:min-h-[50px]
+                        rounded-[10px]
+                        shadow
+                        outline-none
+                        focus:outline-none
+                        border-[1px]
+                        border-solid
+                        border-white
+                        w-full loader-toggle" type="submit">
+              REDEEM
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="sm:mx-auto md:max-w-[575px] mb-[35px] md:mb-[45px] hidden" id="loader">
+        <div class="relative rounded-[60px] overflow-hidden h-[20px] bg-silver200 mb-[20px]" id="loader-progress-bar">
+          <div id="loader-progress-bar-line" class="absolute left-0 top-0 h-full w-[0%] bg-success rounded-[60px] ease-in duration-[4500ms] bg-repeat-x
+            bg-center" style="background-image: url('img/loader-bg.png'); background-size:
+            30%">
+          </div>
+        </div>
+        <p id="loader-progress-text" class="text-[14px] font-semibold text-center">Checking The Validity Of Your Promo
+          Code</p>
+      </div>
+
+      <div
+        class="mx-auto md:max-w-[575px] grid gap-[20px] md:gap-[17px] grid-cols-2 md:grid-cols-4 mb-[20px] uppercase text-[10px] md:text-[14px]">
+        <div class="shadow-sm rounded-[10px] text-center flex flex-col px-[15px] py-[21.5px] items-center text-center">
+          <img src="img/promo-icon-1.svg" alt="promo icon" class="block w-[35px] mb-[15px]">
+          <span>Fast
+            checkout</span>
+        </div>
+        <div class="shadow-sm rounded-[10px] text-center flex flex-col px-[15px] py-[21.5px] items-center text-center">
+          <img src="img/promo-icon-2.svg" alt="promo icon" class="block w-[35px] mb-[15px]">
+          <span>Best price
+            available</span>
+        </div>
+        <div class="shadow-sm rounded-[10px] text-center flex flex-col px-[15px] py-[21.5px] items-center text-center">
+          <img src="img/promo-icon-3.svg" alt="promo icon" class="block w-[35px] mb-[15px]">
+          <span>Free
+            shipping</span>
+        </div>
+        <div class="shadow-sm rounded-[10px] text-center flex flex-col px-[15px] py-[21.5px] items-center text-center">
+          <img src="img/promo-icon-4.svg" alt="promo icon" class="block w-[35px] mb-[15px]">
+          <span>Quality
+            guarantee</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  //= templates/footer-promo.html
+
+  <script src="./js/scripts.js"></script>
+
+  <script>
+    $('.loader-toggle').on('click', function (e) {
+      e.preventDefault()
+      $('#loader').removeClass('hidden');
+      $('#loader-progress-bar-line').css('width', '100%');
+      setTimeout(function () {
+        $('#loader-progress-text').html('Congratulations! Promo Code Valid');
+      }, 1500);
+      setTimeout(function () {
+        $('#loader-progress-text').html('Applying Discount...');
+      }, 3000);
+      setTimeout(function () {
+        $('#loader-progress-text').html('Discount Applied!');
+      }, 4500);
+    })
+  </script>
+</body>
+
+</html>

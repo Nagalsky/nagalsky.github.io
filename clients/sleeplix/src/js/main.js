@@ -16,9 +16,12 @@ window.onload = function () {
 
 //Initial phone dropdown
 var input = document.querySelector("#phone");
-window.intlTelInput(input, {
-  customContainer: "input-phone-box",
-});
+if(input) {
+  window.intlTelInput(input, {
+    customContainer: "input-phone-box",
+  });
+}
+
 
 $(document).ready(function () {
   if ($(window).width() > 960) {
