@@ -11,7 +11,7 @@
 
 <body class="text-dark">
     <main>
-        <section class="min-h-screen min-h-0 relative pt-[15px] pb-[35px] hero bg-[url('../img/video-container_bg.jpg')]
+        <section class="min-h-screen flex flex-col justify-center relative pt-[15px] pb-[35px] hero bg-[url('../img/video-container_bg.jpg')]
             bg-center bg-cover bg-no-repeat
             z-[40] hero-holder">
             <h1 class="font-bold text-[21px] sm:text-[31px] md:text-[38px] text-white
@@ -20,8 +20,8 @@
                 Hack Melts Fat Overnight
             </h1>
 
-            <div class="sm:px-[15px] lg:px-[16.63%]">
-                <div class="absolute left-0 top-[50%] -translate-y-2/4 translate-y-0 lg:translate-y-0 top-0 lg:top-0 w-full relative aspect-video border-2 border-solid border-white
+            <div class="sm:px-[15px] lg:px-[16.63%] w-full">
+                <div class="absolute left-0 top-[50%] -translate-y-2/4 translate-y-0 lg:translate-y-0 top-0 lg:top-0 w-full relative aspect-video border-2 border-solid border-black border-white
                            shadow-[0_1px_4px_0_rgba(0,0,0,0.33)] overflow-hidden max-w-full max-w-[900px] mx-auto"
                     id="player">
                     <script src="https://fast.wistia.com/embed/medias/gsvxqeee05.jsonp" async></script>
@@ -956,14 +956,14 @@
                     if (active) {
                         $(".custom-overlay").toggle();
                         $(".hero-title").hide();
-                        $(".hero-holder").removeClass("min-h-0");
-                        $("#player").removeClass("relative max-w-[900px] top-0 translate-y-0");
+                        $("#player").removeClass(
+                            "relative max-w-[900px] top-0 translate-y-0 border-white");
                         flag = true;
                     } else {
                         $(".custom-overlay").toggle();
                         $(".hero-title").show();
-                        $(".hero-holder").addClass("min-h-0");
-                        $("#player").addClass("relative max-w-[900px] top-0 translate-y-0");
+                        $("#player").addClass(
+                            "relative max-w-[900px] top-0 translate-y-0 border-white");
                         flag = false;
                     }
 
