@@ -8,8 +8,14 @@ $("#player").on("click", function () {
   if (active) {
     $(".custom-overlay").toggle();
     $(".hero-title").hide();
+    $(".hero-holder").removeClass("min-h-0");
+    $("#player").removeClass("relative");
+    $("#player").removeClass("max-w-[900px]");
   } else {
     $(".custom-overlay").toggle();
     $(".hero-title").show();
+    $(".hero-holder").addClass("min-h-0");
+    $("#player").addClass("relative");
+    $("#player").addClass("max-w-[900px]");
   }
 });

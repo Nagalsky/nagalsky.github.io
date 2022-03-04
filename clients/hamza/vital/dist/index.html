@@ -11,16 +11,19 @@
 
 <body class="text-dark">
     <main>
-        <section class="relative pt-[15px] pb-[35px] hero bg-[url('../img/video-container_bg.jpg')] bg-center bg-cover bg-no-repeat
-            z-[40]">
+        <section class="min-h-screen min-h-0 relative pt-[15px] pb-[35px] hero bg-[url('../img/video-container_bg.jpg')]
+            bg-center bg-cover bg-no-repeat
+            z-[40] hero-holder">
             <h1 class="font-bold text-[21px] sm:text-[31px] md:text-[38px] text-white
-                    text-center max-w-[1000px] mx-auto mb-[20px] leading-[1.2] hero-title">New Ancient
+                    text-center max-w-[1000px] mx-auto mb-[20px] leading-[1.2] hero-title" style="text-shadow: 3px 3px
+                    3px rgb(0 0 0 / 75%);">New Ancient
                 Hack Melts Fat Overnight
             </h1>
 
             <div class="sm:px-[10%] md:px-[11.03%] lg:px-[16.63%]">
-                <div class="relative aspect-video border-2 border-solid border-white
-                           shadow-[0_1px_4px_0_rgba(0,0,0,0.33)] overflow-hidden max-w-[900px] mx-auto" id="player">
+                <div class="absolute left-0 top-0 w-full relative aspect-video border-2 border-solid border-white
+                           shadow-[0_1px_4px_0_rgba(0,0,0,0.33)] overflow-hidden max-w-full max-w-[900px] mx-auto"
+                    id="player">
                     <script src="https://fast.wistia.com/embed/medias/gsvxqeee05.jsonp" async></script>
                     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
@@ -28,8 +31,8 @@
                         <img src="img/playscreen-vid.png" alt="" class="absolute z-[10] w-full h-full object-cover left-0 top-0 custom-overlay pointer-events-none
                             animate-[scale_2s_ease-in-out_infinite] bg-black/50">
 
-                        <div
-                            class="w-full h-full relative wistia_embed wistia_async_gsvxqeee05 seo=true videoFoam=true">
+                        <div class="w-full h-full relative wistia_embed wistia_async_gsvxqeee05 seo=true videoFoam=true
+                            autoPlay=false">
                             &nbsp;</div>
                     </div>
                 </div>
@@ -859,10 +862,10 @@
           <h3 class="uppercase text-[red] text-center font-bold text-[36px] mb-[5px]">WAIT!</h3>
           <h4 class="text-center mb-[15px] text-[#003353] font-bold text-[26px]">We're selling out faster than expected and
             stock
-            of VitalProstate is running LOW...</h4>
+            of ExiBurn is running LOW...</h4>
     
           <div class="space-y-[10px] font-medium text-[16px] md:text-[20px]">
-            <p>Remember: Every discounted 3 bottle package of VitalProstate comes with the <span class="font-bold">2 bonus
+            <p>Remember: Every discounted 3 bottle package of ExiBurn comes with the <span class="font-bold">2 bonus
                 books</span> absolutely free.
             </p>
             <p>Or make the smart decision and get the heavily discounted 6 bottle package, which comes with the <span
@@ -872,7 +875,7 @@
     
           <div class="text-center mt-[25px]">
             <a href="#" class="modal-close animate-[scale_1.3s_ease-in-out_infinite] inline-block text-[#00f] font-bold rounded-[8px] border-[3px] border-solid border-[#00f] relative py-[10px] px-[20px]
-                                    text-[22px] bg-[#fffd00]">Yes! Keep Watching Video
+                                    text-[22px] bg-[#fffd00] hover:bg-white">Yes! Keep Watching Video
             </a>
           </div>
         </div>
@@ -937,6 +940,35 @@
 
     <script src="./js/scripts.js"></script>
     <script>
+        window._wq = window._wq || [];
+        _wq.push({
+            id: "gsvxqeee05",
+            onReady: function (video) {
+                $(document).mouseleave(function () {
+                    if (event.clientY <= 0) {
+                        $('body').css('overflow', "hidden");
+                        $('.modal-backdrop').removeClass('hidden');
+                        $('.modal-body').removeClass('hidden');
+                        if (video.state() === "beforeplay") {
+                            return;
+                        }
+                        video.pause();
+                    }
+                });
+
+                $('.modal-close').on('click', function (e) {
+                    e.preventDefault();
+                    $('body').css('overflow', "");
+                    $('.modal-backdrop').addClass('hidden');
+                    $('.modal-body').addClass('hidden');
+                    // console.log('video.state()', video.state())
+                    if (video.state() !== "beforeplay" && video.state() === "paused") {
+                        video.play();
+                    }
+                })
+            }
+        });
+
         var theRandomNumber = 341;
         $('#viewers').html(theRandomNumber);
 
@@ -945,22 +977,6 @@
             theRandomNumber = Math.floor(Math.random() * 1000) + 1;
             $('#viewers').html(theRandomNumber);
         }, 8000);
-
-
-        $(document).mouseleave(function () {
-            if (event.clientY <= 0) {
-                $('body').css('overflow', "hidden");
-                $('.modal-backdrop').removeClass('hidden');
-                $('.modal-body').removeClass('hidden');
-            }
-        });
-
-        $('.modal-close').on('click', function (e) {
-            e.preventDefault();
-            $('body').css('overflow', "");
-            $('.modal-backdrop').addClass('hidden');
-            $('.modal-body').addClass('hidden');
-        })
 
 
         $(".show-content").on("click", function (e) {
@@ -975,7 +991,7 @@
                 500
             );
             $('.hero-time_countdown').countdown({
-                until: 1800, //1800 seconds = 30 mins (For countdown)
+                until: 900, //900 seconds = 15 mins (For countdown)
                 format: 'MS',
                 compact: true
             });
