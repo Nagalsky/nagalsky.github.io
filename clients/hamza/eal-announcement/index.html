@@ -1356,39 +1356,59 @@
     </div>
 
     <script src="./js/scripts.js"></script>
+    <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
     <script>
-        function onMouseOut(event) {
-            if (
-                event.clientY < 50 && event.relatedTarget == null) {
-                $('#exitModal').addClass('shown');
-                $('body').css('overflow', 'hidden');
-                $('.modal-time_countdown').countdown({
-                    until: 300, //300 seconds = 5 mins (For countdown)
-                    format: 'MS',
-                    compact: true
+        window._wq = window._wq || [];
+        _wq.push({
+            id: "bdjiz4odiy",
+            onReady: function (video) {
+                function onMouseOut(event) {
+                    if (
+                        event.clientY < 50 && event.relatedTarget == null) {
+                        $('#exitModal').addClass('shown');
+                        $('body').css('overflow', 'hidden');
+                        $('.modal-time_countdown').countdown({
+                            until: 120, //120 seconds=2 mins (For countdown) 
+                            format: 'MS',
+                            compact: true
+                        });
+
+                        if (!video.isMuted()) {
+                            video.pause();
+                            $(".custom-overlay").show();
+                        }
+
+                        $('.modal-btn-scroll').on('click', function (e) {
+                            e.preventDefault();
+                            var
+                                target = "#" + $(this).data("scroll");
+                            var $target = $(target);
+                            $("html, body").stop().animate({
+                                scrollTop: $target.offset().top,
+                            }, 800, "swing");
+                        })
+                    }
+                }
+                document.addEventListener("mouseout",
+                    onMouseOut);
+                $(".modal-close, .modal-mask, .modal-btn-scroll").click(function () {
+                    $('#exitModal').removeClass('shown');
+                    $('body').attr('style', '');
                 });
-                $('.modal-btn-scroll').on('click', function (e) {
-                    e.preventDefault();
-                    var target = "#" + $(this).data("scroll");
-                    var $target = $(target);
-                    $("html, body").stop().animate({
-                            scrollTop: $target.offset().top,
-                        },
-                        800,
-                        "swing"
-                    );
-                })
+
+
+                $("#player").on("click", function () {
+                    var active = $(this).toggleClass("active").hasClass("active");
+                    if (active) {
+                        $(".custom-overlay").toggle();
+                    } else {
+                        $(".custom-overlay").toggle();
+                        $(".text").html("Tap to play");
+                    }
+                });
             }
-        }
-
-        document.addEventListener("mouseout", onMouseOut);
-
-        $(".modal-close, .modal-mask, .modal-btn-scroll").click(function () {
-            $('#exitModal').removeClass('shown');
-            $('body').attr('style', '');
-            $('.modal-time_countdown').countdown('destroy')
-            return false;
         });
+
 
 
         $(".show-content").on("click", function (e) {
