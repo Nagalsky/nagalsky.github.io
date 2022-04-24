@@ -1,5 +1,6 @@
 $("#player").on("click", function () {
   var active = $(this).toggleClass("active").hasClass("active");
+  $(".video-holder").toggleClass("active");
   if (active) {
     $(".custom-overlay").toggle();
   } else {
