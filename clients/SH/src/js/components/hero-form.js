@@ -1,5 +1,6 @@
 $(document).ready(function () {
-  $(".hero-form-select").select2({
+  const el = $(".hero-form-select");
+  el.select2({
     theme: "hero-form-select",
     width: $(this).data("width")
       ? $(this).data("width")
@@ -9,13 +10,13 @@ $(document).ready(function () {
     placeholder: $(this).data("placeholder"),
   });
 
-  $(".hero-form-select").on("change", function () {
+  el.on("change", function () {
     var none = $(this).find("option:selected").length;
 
     if (none === 0) {
       $(".select2-search").removeClass("hidden");
     } else {
-      $(".select2-search").addClass('hidden');
+      $(".select2-search").addClass("hidden");
     }
   });
 });
