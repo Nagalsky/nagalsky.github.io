@@ -8,6 +8,7 @@ $(document).ready(function () {
       ? "100%"
       : "style",
     placeholder: $(this).data("placeholder"),
+    minimumInputLength: 2,
   });
 
   el.on("change", function () {
