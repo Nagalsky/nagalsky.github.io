@@ -14,6 +14,14 @@ $(document).ready(function () {
     .on("select2:unselecting", function () {
       $(this).data("unselecting", true);
     })
+    // .on("select2:select", function (e) {
+    //   const data = e.params.data;
+    //   console.log("data", data);
+
+    //   $.each(data, function (item) {
+    //     console.log("ololo", item.id);
+    //   });
+    // })
     .on("select2:opening", function (e) {
       var none = $(this).find("option:selected").length;
 
