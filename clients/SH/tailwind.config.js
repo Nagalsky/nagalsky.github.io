@@ -50,11 +50,8 @@ module.exports = {
     },
     screens: {
       sm: "540px",
-
       md: "768px",
-
       lg: "991px",
-
       xl: "1199px",
     },
     extend: {},
