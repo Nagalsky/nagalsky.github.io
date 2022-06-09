@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import "../../node_modules/swiper/swiper-bundle.min";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+  @apply pb-[30px] md:pb-3;
+}
+
+.btn-prev,
+.btn-next {
+  @apply w-[32px] h-[32px] md:w-[50px] md:h-[50px] rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary text-white absolute top-1/2 -translate-y-1/2 z-[10] transition;
+  &.swiper-button-lock {
+    @apply hidden;
+  }
+}
+.btn-prev {
+  @apply left-0 md:-translate-x-1/2;
+}
+.btn-next {
+  @apply right-0 md:translate-x-1/2;
+}
+
+.card {
+  @apply rounded-[10px] shadow-[0_5px_15px_0_rgba(186,194,200,0.25)] overflow-hidden block uppercase text-primary hover:text-blue500 text-center transition;
+  &:hover {
+    >img {
+      @apply scale-125;
+    }
+  }
+  >img {
+    @apply transition ease-out duration-300;
+  }
+
+  >div {
+    @apply relative z-[5] bg-white py-[6.5px];
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  @apply md:hidden bottom-[1px];
+}
+
+.swiper-pagination {
+  @apply flex items-center justify-center;
+  .swiper-pagination-bullet {
+    @apply opacity-100 transition;
+    &:not(.swiper-pagination-bullet-active) {
+      @apply w-[6px] h-[6px] bg-blue300;
+    }
+  }
+}
