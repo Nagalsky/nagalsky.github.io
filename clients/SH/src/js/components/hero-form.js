@@ -35,6 +35,7 @@ $(document).ready(function () {
     minimumInputLength: 1,
     templateResult: formatRepo,
     templateSelection: formatRepoSelection,
+    dropdownParent: $('.hero-form'),
   });
 
   el.on("change", function () {
