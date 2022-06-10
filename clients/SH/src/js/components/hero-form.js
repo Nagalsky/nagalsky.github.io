@@ -9,7 +9,7 @@ $(document).ready(function () {
       },
       dataType: "json",
       delay: 250,
-      data: function (params) {
+      data: function () {
         return null;
       },
       processResults: function (data) {
