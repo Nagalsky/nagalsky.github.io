@@ -26,7 +26,7 @@ $(document).ready(function () {
       data: () => null,
       processResults: (data) => {
         return {
-          results: $.map(data, function (e) {
+          results: $.map(data, (e) => {
             return { id: e.instrumentId, name: e.name, symbol: e.symbol };
           }).sort((a, b) => a.symbol.localeCompare(b.symbol)),
         };
