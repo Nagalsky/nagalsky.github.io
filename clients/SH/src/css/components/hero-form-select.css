@@ -1,6 +1,7 @@
 .select2-container--hero-form-select {
   @apply w-full; }
   .select2-container--hero-form-select .select2-selection--multiple {
+    @apply flex flex-row-reverse justify-end;
     box-shadow: none !important;
     outline: none !important; }
     .select2-container--hero-form-select .select2-selection--multiple .select2-selection__rendered {
@@ -9,10 +10,12 @@
         @apply bg-blue300 text-blue500 rounded-[29px] py-[10px] md:py-[14px] px-[12px] md:px-[15px] text-[12px] md:text-[14px] font-bold tracking-[0.07px] flex flex-row-reverse items-center; }
         .select2-container--hero-form-select .select2-selection--multiple .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
           @apply w-5 h-5 ml-2 flex items-center justify-center text-[22px] mt-[-2px]; }
-  .select2-container--hero-form-select .select2-search--inline .select2-search__field {
-    @apply mt-[4px] md:mt-0 ml-0 h-[26px] placeholder:text-gray400 placeholder:tracking-[0.09px];
-    box-shadow: none !important;
-    outline: none !important; }
+  .select2-container--hero-form-select .select2-search--inline {
+    @apply shrink-0 h-[49px] grow; }
+    .select2-container--hero-form-select .select2-search--inline .select2-search__field {
+      @apply mt-[4px] md:mt-0 ml-0 h-[49px] placeholder:text-gray400 placeholder:tracking-[0.09px] leading-[49px];
+      box-shadow: none !important;
+      outline: none !important; }
   .select2-container--hero-form-select .select2-dropdown {
     @apply md:min-w-[738px] md:ml-[-55px] mt-[32px] lg:min-w-[910px] lg:ml-[-55px] border-none overflow-hidden rounded-[8px];
     box-shadow: 9px 8px 34px 0 rgba(0, 0, 0, 0.05); }
@@ -21,4 +24,4 @@
       .select2-container--hero-form-select .select2-dropdown .select2-results__options .select2-results__option {
         @apply py-[18px] px-[24px] font-bold text-gray600 text-[14px] md:text-[16px] tracking-[0.48px] hover:bg-blue300; }
         .select2-container--hero-form-select .select2-dropdown .select2-results__options .select2-results__option--selected {
-          @apply bg-blue300; }
+          @apply hidden; }

@@ -1,6 +1,7 @@
 .select2-container--hero-form-select {
   @apply w-full;
   .select2-selection--multiple {
+    @apply flex flex-row-reverse justify-end;
     box-shadow: none !important;
     outline: none !important;
 
@@ -18,8 +19,9 @@
   }
 
   .select2-search--inline {
+    @apply shrink-0 h-[49px] grow;
     .select2-search__field {
-      @apply mt-[4px] md:mt-0 ml-0 h-[26px] placeholder:text-gray400 placeholder:tracking-[0.09px];
+      @apply mt-[4px] md:mt-0 ml-0 h-[49px] placeholder:text-gray400 placeholder:tracking-[0.09px] leading-[49px];
       box-shadow: none !important;
       outline: none !important;
     }
@@ -36,7 +38,7 @@
         @apply py-[18px] px-[24px] font-bold text-gray600 text-[14px] md:text-[16px] tracking-[0.48px] hover:bg-blue300;
 
         &--selected {
-          @apply bg-blue300;
+          @apply hidden;
         }
       }
     }

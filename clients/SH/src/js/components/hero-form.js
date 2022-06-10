@@ -1,8 +1,26 @@
 $(document).ready(function () {
-  const el = $(".hero-form-select");
-  const apiURL = "https://stockhawkapi.azurewebsites.net/instruments";
+  const el = $("#hero-form-select");
+  const apiURL = "https://www.stockhawk.io/api/instruments";
 
   el.select2({
+    ajax: {
+      url: function (params) {
+        return `${apiURL}/${params.term}`;
+      },
+      dataType: "json",
+      delay: 250,
+      data: function (params) {
+        return null;
+      },
+      processResults: function (data) {
+        return {
+          results: $.map(data, function (e) {
+            return { id: e.instrumentId, name: e.name, symbol: e.symbol };
+          }),
+        };
+      },
+      cache: true,
+    },
     theme: "hero-form-select",
     width: $(this).data("width")
       ? $(this).data("width")
@@ -11,55 +29,39 @@ $(document).ready(function () {
       : "style",
     placeholder: "Enter tickers or companies to get started...",
     closeOnSelect: false,
-    minimumInputLength: 1,
-    ajax: {
-      url: function (params) {
-        return `${apiURL}/${params.term}`;
-      },
-      dataType: "json",
-      delay: 250,
-      data: function () {
-        return null;
-      },
-      processResults: function (data, params) {
-        // parse the results into the format expected by Select2
-        // since we are using custom formatting functions we do not need to
-        // alter the remote JSON data, except to indicate that infinite
-        // scrolling can be used
-
-        console.log("data", data);
-
-        // params.page = params.page || 1;
-
-        // return {
-        //   results: data.items,
-        //   pagination: {
-        //     more: params.page * 30 < data.total_count,
-        //   },
-        // };
-      },
-      cache: true,
+    escapeMarkup: function (markup) {
+      return markup;
     },
+    minimumInputLength: 1,
+    templateResult: formatRepo,
+    templateSelection: formatRepoSelection,
   });
-  // .on("select2:unselecting", function () {
-  //   $(this).data("unselecting", true);
-  // })
-  // .on("select2:opening", function (e) {
-  //   var none = $(this).find("option:selected").length;
 
-  //   if ($(this).data("unselecting") && none !== 0) {
-  //     $(this).removeData("unselecting");
-  //     e.preventDefault();
-  //   }
-  // });
+  el.on("change", function () {
+    var none = $(this).find("option:selected").length;
 
-  // el.on("change", function () {
-  //   var none = $(this).find("option:selected").length;
+    if (none === 0) {
+      $(".select2-search").removeAttr("style");
+    } else {
+      $(".select2-search").css('flex-grow', '0');
+    }
+  });
 
-  //   if (none === 0) {
-  //     $(".select2-search").removeClass("hidden");
-  //   } else {
-  //     $(".select2-search").addClass("hidden");
-  //   }
-  // });
+  function formatRepo(repo) {
+    if (repo.loading) {
+      return repo.text;
+    }
+
+    var markup = `
+      <div class='flex items-center'>
+        <div class='symbol' style='margin-right: 20px;'>${repo.symbol}</div>
+        <div class='name'>${repo.name}</div>
+      </div>`;
+
+    return markup;
+  }
+
+  function formatRepoSelection(repo) {
+    return repo.name || repo.text;
+  }
 });
