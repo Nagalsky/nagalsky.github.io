@@ -26,9 +26,11 @@
     .select2-container--hero-form-select .select2-dropdown--above {
       @apply mb-[15px]; }
     .select2-container--hero-form-select .select2-dropdown .select2-results__options {
-      @apply divide-y divide-solid divide-gray300 max-h-[315px] overflow-y-auto; }
+      @apply max-h-[315px] overflow-y-auto; }
       .select2-container--hero-form-select .select2-dropdown .select2-results__options .select2-results__option {
         @apply py-[18px] px-[24px] font-bold text-gray600 text-[14px] md:text-[16px] tracking-[0.48px] hover:bg-blue300; }
+        .select2-container--hero-form-select .select2-dropdown .select2-results__options .select2-results__option:not(:last-of-type) {
+          @apply border-b-[1px] border-solid border-gray300; }
         .select2-container--hero-form-select .select2-dropdown .select2-results__options .select2-results__option--selected {
           @apply hidden; }
 

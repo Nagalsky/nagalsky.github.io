@@ -36,11 +36,7 @@ $(document).ready(function () {
     },
     escapeMarkup: (markup) => markup,
     theme: "hero-form-select",
-    width: $(this).data("width")
-      ? $(this).data("width")
-      : $(this).hasClass("w-full")
-      ? "100%"
-      : "style",
+    width: '100%',
     placeholder: "Enter tickers or companies to get started...",
     closeOnSelect: false,
     minimumInputLength: 1,
