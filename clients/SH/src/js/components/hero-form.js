@@ -2,9 +2,11 @@ $(document).ready(function () {
   const el = $("#hero-form-select");
   const hiddenIdsField = $("#array-ids");
   const dropdownParent = $(".hero-form");
+  const searchField = $(".select2-search__field");
   const apiURL = "https://www.stockhawk.io/api/instruments";
 
   const formatRepo = (repo) => {
+    repo.loading ? dropdownParent.addClass('empty') : dropdownParent.removeClass('empty');
     if (repo.loading) {
       return repo.text;
     }
@@ -29,20 +31,22 @@ $(document).ready(function () {
         return {
           results: $.map(data, (e) => {
             return { id: e.instrumentId, name: e.name, symbol: e.symbol };
-          }).sort((a, b) => a.symbol.localeCompare(b.symbol)),
+          }),
         };
       },
       cache: true,
     },
     escapeMarkup: (markup) => markup,
-    theme: "hero-form-select",
     width: '100%',
     placeholder: "Enter tickers or companies to get started...",
     closeOnSelect: false,
-    minimumInputLength: 1,
     templateResult: formatRepo,
     templateSelection: formatRepoSelection,
     dropdownParent: dropdownParent,
+  }).on('select2:select', function (e) {
+    dropdownParent.addClass('hide-search');
+  }).on('select2:close', function (e) {
+    dropdownParent.removeClass('hide-search');
   });
 
   el.on("change", () => {
