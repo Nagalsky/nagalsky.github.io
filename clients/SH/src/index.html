@@ -740,11 +740,13 @@
                         return {
                             isChecked: false,
                             price: 24,
+                            lowPrice: 24,
+                            hightPrice: 29,
                             increase: function () {
                                 this.isChecked = !this.isChecked;
                                 let interval = setInterval(() => {
                                     this.price++;
-                                    if (this.price >= 29) {
+                                    if (this.price >= this.hightPrice) {
                                         clearInterval(interval);
                                     }
                                 }, 50);
@@ -754,7 +756,7 @@
                                 this.isChecked = !this.isChecked;
                                 let interval = setInterval(() => {
                                     this.price--;
-                                    if (this.price <= 24) {
+                                    if (this.price <= this.lowPrice) {
                                         clearInterval(interval);
                                     }
                                 }, 50);
