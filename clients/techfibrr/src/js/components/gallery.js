@@ -19,9 +19,6 @@ const options = {
     1199: {
       slidesPerView: 5,
     },
-    1400: {
-      slidesPerView: 6,
-    },
   },
 }
 
