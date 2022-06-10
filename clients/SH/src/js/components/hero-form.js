@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const el = $("#hero-form-select");
   const hiddenIdsField = $("#array-ids");
+  const dropdownParent = $(".hero-form");
   const apiURL = "https://www.stockhawk.io/api/instruments";
 
   const formatRepo = (repo) => {
@@ -45,7 +46,7 @@ $(document).ready(function () {
     minimumInputLength: 1,
     templateResult: formatRepo,
     templateSelection: formatRepoSelection,
-    dropdownParent: $('.hero-form'),
+    dropdownParent: dropdownParent,
   });
 
   el.on("change", () => {
