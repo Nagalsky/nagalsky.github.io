@@ -21,7 +21,7 @@ const select = new TomSelect(el,{
     hiddenIdsField.setAttribute('value', e.join(','));
     select.close();
 	},
-  load: function(query, callback) {
+  load: (query, callback) => {
     const url = `${apiURL}/${encodeURIComponent(query)}`;
     fetch(url)
       .then(response => response.json())
@@ -33,19 +33,19 @@ const select = new TomSelect(el,{
 
   },
   render: {
-    option: function(item, escape) {
+    option: (item, escape) => {
       return `
         <div class="flex items-center">
           ${item.symbol && `<div style="margin-right: 20px;">${escape(item.symbol)}</div>`}
           <div>${escape(item.name)}</div> 
         </div>`;
     },
-    item: function(item, escape) {
+    item: (item, escape) => {
       return `<div>${escape(item.symbol)}</div>`;
     }
   },
 });
 
-heroForm.addEventListener("submit", function(event) {
+heroForm.addEventListener("submit", (event) => {
   event.preventDefault();
 });
