@@ -36,7 +36,7 @@ const select = new TomSelect(el,{
     option: (item, escape) => {
       return `
         <div class="flex items-center">
-          ${item.symbol && `<div style="margin-right: 20px;">${escape(item.symbol)}</div>`}
+          ${item.symbol && `<div class="bg-[red]" style="margin-right: 20px;">${escape(item.symbol)}</div>`}
           <div>${escape(item.name)}</div> 
         </div>`;
     },
