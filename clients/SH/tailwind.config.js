@@ -39,6 +39,7 @@ module.exports = {
       green300: "#dcf5f2",
       green500: "#14b8a6",
       red500: "#fa4f58",
+      body: "#f6f5ff",
     },
     fontWeight: {
       normal: 400,
