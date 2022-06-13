@@ -46,3 +46,6 @@ const select = new TomSelect(el,{
   },
 });
 
+heroForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+});
