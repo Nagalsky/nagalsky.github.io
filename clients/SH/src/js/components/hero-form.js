@@ -3,7 +3,7 @@ const heroForm = document.querySelector('.hero-form');
 const hiddenIdsField = document.querySelector("#array-ids");
 const apiURL = "https://www.stockhawk.io/api/instruments";
 
-new TomSelect(el,{
+const select = new TomSelect(el,{
   valueField: 'instrumentId',
   labelField: 'symbol',
   searchField: ['symbol', 'name'],
@@ -13,11 +13,13 @@ new TomSelect(el,{
   ],
   plugins: ['remove_button'],
 	persist: false,
+  maxItems: null,
   onInitialize:() => {
     heroForm.classList.remove('before-initialize');
 	},
   onChange:(e) => {
     hiddenIdsField.setAttribute('value', e.join(','));
+    select.close();
 	},
   load: function(query, callback) {
     const url = `${apiURL}/${encodeURIComponent(query)}`;
@@ -30,7 +32,6 @@ new TomSelect(el,{
       });
 
   },
-  // custom rendering functions for options and items
   render: {
     option: function(item, escape) {
       return `
