@@ -11,7 +11,7 @@ const select = new TomSelect(el,{
     { field: 'symbol', direction: 'asc'},
     { field: 'name', direction: 'asc'}
   ],
-  plugins: ['remove_button'],
+  plugins: ['remove_button', 'no_active_items'],
 	persist: false,
   maxItems: null,
   onInitialize:() => {
