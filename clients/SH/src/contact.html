@@ -1,233 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    //= templates/head.html
+    <title>Stock Hawk contact us page</title>
+  </head>
 
-<head>
-  //= templates/head.html
-  <title>Stock Hawk contact us page</title>
-</head>
+  <body
+    class="flex flex-col bg-[url('../img/contact-body-bg.png')] bg-[length:100%] bg-[center_top] bg-no-repeat text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  >
+    //= templates/header.html
 
-<body class="text-dark500 md:min-h-screen flex flex-col text-[16px] md:text-[20px] bg-[url('../img/contact-body-bg.png')]
-  bg-no-repeat bg-[center_top] bg-[length:100%]">
-  //= templates/cookie-pop-up.html
+    <main class="grow">
+      <section class="py-[50px] md:py-[120px] md:pt-[40px]">
+        <div class="container">
+          <h1
+            class="mb-6 text-center text-[36px] font-extrabold leading-[0.26] tracking-[0.26px] md:text-[44px] md:leading-[1.55] lg:text-[51px]"
+          >
+            We’re Here to Help.
+          </h1>
 
-  //= templates/header.html
+          <p
+            class="mx-auto mb-[40px] max-w-[665px] text-center leading-[1.8] text-gray500 md:mb-[85px] md:text-[20px]"
+          >
+            We always want to hear from you! Let us know how we can best help
+            you and we'll do our very best.
+          </p>
 
-  <main class="grow">
-    <section class="py-[50px] md:pt-[40px] md:py-[120px]">
-      <div class="container">
-        <h1 class="font-extrabold text-center tracking-[0.26px] text-[36px] md:text-[44px] lg:text-[51px] leading-[0.26]
-          md:leading-[1.55] mb-6">We’re Here to Help.</h1>
-
-        <p class="text-center md:text-[20px] text-gray500 leading-[1.8] mx-auto max-w-[665px] mb-[40px] md:mb-[85px]">We
-          always want to hear
-          from you! Let us know how we can best help you and we'll do our very best.</p>
-
-        <div class="bg-white rounded-[15px] shadow-[12px_13px_45px_6px_rgba(0,0,0,0.09)] grid lg:grid-cols-[1fr_380px]
-          overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[180px]" data-aos="fade-up" data-aos-duration="1000">
-          <div class="p-6 md:py-[30px] md:px-[40px]">
-            <form action="">
-              <div class="grid gap-6">
-                <div class="grid sm:grid-cols-2 gap-6">
-                  <div class="flex flex-col gap-1">
-                    <label for="form-field-1"
-                      class="form-label inline-block font-bold tracking-[0.08px] text-[16px]">Full
-                      name</label>
-                    <input type="text" class="
-                        block
-                        w-full
-                        px-6
-                        py-1.5
-                        font-normal
-                        bg-white 
-                        border 
-                        border-solid 
-                        border-gray300
-                        rounded-[8px]
-                        transition
-                        ease-in-out
-                        focus:border-blue500
-                        h-[56px]
-                        placeholder:text-gray400
-                        focus:outline-none" id="form-field-1" placeholder="Full name" />
+          <div
+            class="mb-[80px] grid overflow-hidden rounded-[15px] bg-white shadow-[12px_13px_45px_6px_rgba(0,0,0,0.09)] md:mb-[120px] lg:mb-[180px] lg:grid-cols-[1fr_380px]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="p-6 md:py-[30px] md:px-[40px]">
+              <form action="">
+                <div class="grid gap-6">
+                  <div class="grid gap-6 sm:grid-cols-2">
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="form-field-1"
+                        class="form-label inline-block text-[16px] font-bold tracking-[0.08px]"
+                        >Full name</label
+                      >
+                      <input
+                        type="text"
+                        class="block h-[56px] w-full rounded-[8px] border border-solid border-gray300 bg-white px-6 py-1.5 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                        id="form-field-1"
+                        placeholder="Full name"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="form-field-2"
+                        class="form-label inline-block text-[16px] font-bold tracking-[0.08px]"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="block h-[56px] w-full rounded-[8px] border border-solid border-gray300 bg-white px-6 py-1.5 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                        id="form-field-2"
+                        placeholder="hello@domain.com"
+                      />
+                    </div>
                   </div>
+
                   <div class="flex flex-col gap-1">
-                    <label for="form-field-2"
-                      class="form-label inline-block font-bold tracking-[0.08px] text-[16px]">Email</label>
-                    <input type="email" class="
-                        block
-                        w-full
-                        px-6
-                        py-1.5
-                        font-normal
-                        bg-white 
-                        border 
-                        border-solid 
-                        border-gray300
-                        rounded-[8px]
-                        transition
-                        ease-in-out
-                        focus:border-blue500
-                        h-[56px]
-                        placeholder:text-gray400
-                        focus:outline-none" id="form-field-2" placeholder="hello@domain.com" />
+                    <label
+                      for="form-field-3"
+                      class="form-label inline-block text-[16px] font-bold tracking-[0.08px]"
+                      >What can we help you with?</label
+                    >
+                    <textarea
+                      class="block h-[160px] w-full resize-none rounded-[8px] border border-solid border-gray300 bg-white px-6 pb-1.5 pt-3 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none md:h-[220px]"
+                      id="form-field-3"
+                      placeholder="Tell us what we can hel you with!"
+                    ></textarea>
+                  </div>
+
+                  <div class="pt-4">
+                    <button
+                      type="submit"
+                      class="inline-flex rounded-[8px] bg-blue500 py-[12px] px-[40px] text-[16px] font-bold uppercase tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[60px]"
+                    >
+                      Send Message
+                    </button>
                   </div>
                 </div>
+              </form>
+            </div>
 
-                <div class="flex flex-col gap-1">
-                  <label for="form-field-3" class="form-label inline-block font-bold tracking-[0.08px] text-[16px]">What
-                    can we help you with?</label>
-                  <textarea class="
-                        block
-                        w-full
-                        px-6
-                        pb-1.5
-                        pt-3
-                        font-normal
-                        bg-white 
-                        border 
-                        border-solid 
-                        border-gray300
-                        rounded-[8px]
-                        transition
-                        ease-in-out
-                        focus:border-blue500
-                        h-[160px]
-                        md:h-[220px]
-                        placeholder:text-gray400
-                        resize-none
-                        focus:outline-none" id="form-field-3"
-                    placeholder="Tell us what we can hel you with!"></textarea>
+            <div
+              class="bg-dark300 bg-[url('../img/form-dottes.png')] bg-[length:190px] bg-[bottom_-40px_right_-28px] bg-no-repeat p-6 md:p-8"
+            >
+              <h2
+                class="mb-4 text-[34px] font-extrabold capitalize leading-[1.3] tracking-[-0.5px] text-white md:mb-6 md:text-[40px]"
+              >
+                Let us hear<br />
+                from you <span class="block text-blue500">directly!</span>
+              </h2>
+              <p class="leading-[1.8] text-gray50 md:text-[20px]">
+                We always want to hear from you! Let us know how we can best
+                help you and we'll do our very best.
+              </p>
+            </div>
+          </div>
+
+          <p
+            class="mb-3 text-center text-[16px] font-semibold uppercase tracking-[1px] text-red500"
+          >
+            Need Help?
+          </p>
+          <h2
+            class="mb-6 text-center text-[34px] font-extrabold leading-[1.3] tracking-[-0.5px] md:text-[40px]"
+          >
+            Frequently asked questions
+          </h2>
+          <p
+            class="mb-10 text-center leading-[1.8] text-gray500 md:text-[20px]"
+          >
+            We want to make this the ultimate platform for stock monitoring.
+          </p>
+
+          <div x-data="{ openedIndex: 1 }" class="mb-8 grid gap-6 md:mb-12">
+            <div
+              @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Can you explain this in more detail?
+                </p>
+                <div :class="openedIndex == 1 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
+              </div>
 
-                <div class="pt-4">
-                  <button type="submit" class="
-                    ease-in-out 
-                    duration-200 
-                    uppercase 
-                    tracking-[0.11px] 
-                    text-white 
-                    bg-blue500 
-                    inline-flex 
-                    rounded-[8px] 
-                    py-[12px]
-                    px-[40px] 
-                    md:px-[60px]
-                    font-bold
-                    text-[16px] 
-                    hover:bg-blue600">
-                    Send Message
-                  </button>
+              <div x-show="openedIndex == 1" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Can my daily updates be shared?
+                </p>
+                <div :class="openedIndex == 2 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
               </div>
-            </form>
-          </div>
 
-          <div class="bg-dark300 p-6 md:p-8 bg-[url('../img/form-dottes.png')] bg-no-repeat bg-[bottom_-40px_right_-28px]
-            bg-[length:190px]">
-            <h2
-              class="text-[34px] md:text-[40px] font-extrabold tracking-[-0.5px] capitalize mb-4 md:mb-6 leading-[1.3] text-white">
-              Let us hear<br /> from you <span class="text-blue500 block">directly!</span>
-            </h2>
-            <p class="md:text-[20px] text-gray50 leading-[1.8]">We always want to hear from you! Let us know how we can
-              best help you and we'll do our very best.</p>
-          </div>
-        </div>
-
-        <p class="uppercase text-red500 font-semibold tracking-[1px] text-[16px] mb-3 text-center">Need Help?</p>
-        <h2 class="text-[34px] md:text-[40px] font-extrabold tracking-[-0.5px] leading-[1.3] text-center mb-6">
-          Frequently asked questions</h2>
-        <p class="md:text-[20px] text-gray500 leading-[1.8] text-center mb-10">We want to make this the ultimate
-          platform
-          for stock monitoring.</p>
-
-        <div x-data="{ openedIndex: 1 }" class="grid gap-6 mb-8 md:mb-12">
-          <div @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
-            class="bg-white border border-solid border-gray100 rounded-[17px] px-8 py-[20px] cursor-pointer">
-            <div class="flex items-center justify-between">
-              <p class="text font-bold text-[18px] md:text-[22px]">Can you explain this in more detail?</p>
-              <div :class="openedIndex == 1 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+              <div x-show="openedIndex == 2" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
               </div>
             </div>
 
-            <div x-show="openedIndex == 1" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius vel magna lacinia mollis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ligula
-              neque, imperdiet nec est laoreet, pulvinar commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
+            <div
+              @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  What improvements are in your pipeline?
+                </p>
+                <div :class="openedIndex == 3 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
 
-          <div @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
-            class="bg-white border border-solid border-gray100 rounded-[17px] px-8 py-[20px] cursor-pointer">
-            <div class="flex items-center justify-between">
-              <p class="text font-bold text-[18px] md:text-[22px]">Can my daily updates be shared?</p>
-              <div :class="openedIndex == 2 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+              <div x-show="openedIndex == 3" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
               </div>
             </div>
-
-            <div x-show="openedIndex == 2" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius vel magna lacinia mollis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ligula
-              neque, imperdiet nec est laoreet, pulvinar commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
           </div>
 
-          <div @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
-            class="bg-white border border-solid border-gray100 rounded-[17px] px-8 py-[20px] cursor-pointer">
-            <div class="flex items-center justify-between">
-              <p class="text font-bold text-[18px] md:text-[22px]">What improvements are in your pipeline?</p>
-              <div :class="openedIndex == 3 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 3" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius vel magna lacinia mollis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ligula
-              neque, imperdiet nec est laoreet, pulvinar commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
+          <div class="text-center">
+            <button
+              type="button"
+              class="inline-flex rounded-[8px] bg-blue500 py-[13px] px-[32px] text-[16px] font-bold uppercase tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[40px]"
+            >
+              VIEW MORE
+            </button>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="text-center">
-          <button type="button" class="
-            ease-in-out 
-            duration-200 
-            uppercase 
-            tracking-[0.11px] 
-            text-white 
-            bg-blue500 
-            inline-flex 
-            rounded-[8px] 
-            py-[13px]
-            px-[32px] 
-            md:px-[40px]
-            font-bold
-            text-[16px] 
-            hover:bg-blue600">
-            VIEW MORE
-          </button>
-        </div>
-      </div>
-    </section>
-  </main>
+    //= templates/footer.html
 
-  //= templates/footer.html
-
-  <script src="./js/scripts.js"></script>
-</body>
-
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    //= templates/head.html
+    <title>Cookie policy</title>
+  </head>
 
-<head>
-  //= templates/head.html
-  <title>Cookie policy</title>
-</head>
+  <body
+    class="flex flex-col text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  >
+    //= templates/header.html
 
-<body class="text-dark500 md:min-h-screen flex flex-col text-[16px] md:text-[20px]">
-  //= templates/cookie-pop-up.html
+    <main class="grow">
+      <section class="py-[50px]">
+        <div class="container">
+          <h1
+            class="mb-3 text-center text-[36px] font-extrabold leading-[1.25] tracking-[0.26px] md:text-[44px] md:leading-[1.55] lg:text-[51px]"
+          >
+            Cookie Policy
+          </h1>
 
-  //= templates/header.html
+          <a
+            href="https://www.iubenda.com/privacy-policy/40021501/cookie-policy"
+            class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe iub-body-embed hidden"
+            title="Cookie Policy "
+            >Cookie Policy</a
+          >
+          <script type="text/javascript">
+            (function (w, d) {
+              var loader = function () {
+                var s = d.createElement("script"),
+                  tag = d.getElementsByTagName("script")[0];
+                s.src = "https://cdn.iubenda.com/iubenda.js";
+                tag.parentNode.insertBefore(s, tag);
+              };
+              if (w.addEventListener) {
+                w.addEventListener("load", loader, false);
+              } else if (w.attachEvent) {
+                w.attachEvent("onload", loader);
+              } else {
+                w.onload = loader;
+              }
+            })(window, document);
+          </script>
+        </div>
+      </section>
+    </main>
 
-  <main class="grow">
-    <section class="py-[50px]">
-      <div class="container">
-        <h1 class="font-extrabold text-center tracking-[0.26px] text-[36px] md:text-[44px] lg:text-[51px]
-                    leading-[1.25] md:leading-[1.55] mb-3">Cookie Policy</h1>
+    //= templates/footer.html
 
-        <a href="https://www.iubenda.com/privacy-policy/40021501/cookie-policy"
-          class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe iub-body-embed hidden"
-          title="Cookie Policy ">Cookie Policy</a>
-        <script type="text/javascript">
-          (function (w, d) {
-            var loader = function () {
-              var s = d.createElement("script"),
-                tag = d.getElementsByTagName("script")[0];
-              s.src = "https://cdn.iubenda.com/iubenda.js";
-              tag.parentNode.insertBefore(s, tag);
-            };
-            if (w.addEventListener) {
-              w.addEventListener("load", loader, false);
-            } else if (w.attachEvent) {
-              w.attachEvent("onload", loader);
-            } else {
-              w.onload = loader;
-            }
-          })(window, document);
-        </script>
-      </div>
-    </section>
-  </main>
-
-  //= templates/footer.html
-
-  <script src="./js/scripts.js"></script>
-</body>
-
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

@@ -1,27 +1,18 @@
 (() => {
-  const el = "#hero-form-select";
-  const heroForm = document.querySelector(".hero-form");
-  const hiddenIdsField = document.querySelector("#array-ids");
+  const el = "#member-dashboard-select";
+  const dashboardForm = document.querySelector(".member-dashboard-form");
   const apiURL = "https://www.stockhawk.io/api/instruments";
+  let selectedVal = null;
 
-  if (typeof heroForm != "undefined" && heroForm != null) {
+  if (typeof dashboardForm != "undefined" && dashboardForm != null) {
     const select = new TomSelect(el, {
       valueField: "instrumentId",
       labelField: "symbol",
       searchField: ["symbol", "name"],
-      sortField: [
-        { field: "symbol", direction: "asc" },
-        { field: "name", direction: "asc" },
-      ],
-      plugins: ["remove_button", "no_active_items"],
-      persist: false,
-      maxItems: null,
-      onInitialize: () => {
-        heroForm.classList.remove("before-initialize");
-      },
+      plugins: ['dropdown_input'],
       onChange: (e) => {
-        hiddenIdsField.setAttribute("value", e.join(","));
-        select.close();
+        selectedVal = e;
+        console.log('selectedVal+++ ', selectedVal)
         select.clearOptions();
       },
       load: (query, callback) => {
@@ -50,10 +41,6 @@
           return `<div>${escape(item.symbol)}</div>`;
         },
       },
-    });
-
-    heroForm.addEventListener("submit", (event) => {
-      event.preventDefault();
     });
   }
 })();
