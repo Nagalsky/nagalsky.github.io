@@ -2,6 +2,7 @@ $(document).ready(() => {
   const el = $("#member-dashboard-datatable");
   const tableParentBox = $(".datatable-holder");
   const table = el.DataTable({
+    ajax: "https://nagalsky.github.io/clients/ajax-data/member-dashboard.txt",
     initComplete: () => {
       tableParentBox.removeClass("before-initialize");
     },
@@ -15,6 +16,7 @@ $(document).ready(() => {
     oLanguage: {
       sLengthMenu: "_MENU_",
     },
+    columns: [{ data: "companyName" }],
   });
 
   $(".data-table-search-box input").on("keyup", function () {
