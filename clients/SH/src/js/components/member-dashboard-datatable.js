@@ -68,7 +68,7 @@ $(document).ready(() => {
         },
       },
     ],
-    drawCallback: (settings) => {
+    drawCallback: () => {
       $(".field-amount").on("change", function () {
         console.log("field-amount value: ", $(this).val());
       });
