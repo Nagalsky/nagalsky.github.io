@@ -55,7 +55,7 @@ $(document).ready(() => {
       {
         orderable: false,
         data: null,
-        mRender: function () {
+        mRender: () => {
           return `
             <div class="text-center">
               <button class="p-3 text-red500">
