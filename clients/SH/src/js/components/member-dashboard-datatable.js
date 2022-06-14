@@ -2,9 +2,11 @@ $(document).ready(() => {
   const el = $("#member-dashboard-datatable");
   const tableParentBox = $(".datatable-holder");
   const tableSearchInput = $(".data-table-search-input");
+  const apiURL =
+    "https://nagalsky.github.io/clients/ajax-data/member-dashboard.txt";
 
   const table = el.DataTable({
-    ajax: "https://nagalsky.github.io/clients/ajax-data/member-dashboard.txt",
+    ajax: apiURL,
     initComplete: () => {
       tableParentBox.removeClass("before-initialize");
     },
