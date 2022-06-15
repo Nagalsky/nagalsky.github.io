@@ -1,15 +1,15 @@
-.datatable-holder {
-  &.before-initialize {
-
-    .dataTables_wrapper,
-    .table {
-      @apply opacity-0;
-    }
-  }
-}
-
 .dataTable {
   width: 100% !important;
+
+  >thead {
+    >tr {
+
+      >td,
+      th {
+        @apply whitespace-nowrap px-4 py-3 border-l border-r border-gray300;
+      }
+    }
+  }
 
   >tbody {
     >tr {
