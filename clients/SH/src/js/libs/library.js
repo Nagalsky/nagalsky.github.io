@@ -6,3 +6,4 @@
 //= ../../../node_modules/alpinejs/dist/cdn.min.js
 //= ../../../node_modules/aos/dist/aos.js
 //= ../../../node_modules/datatables/media/js/jquery.dataTables.min.js
+//= ../../../node_modules/nprogress/nprogress.js

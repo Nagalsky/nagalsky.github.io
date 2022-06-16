@@ -35,7 +35,6 @@ $(document).ready(() => {
         watchListId = data[0].watchlistId || null;
       })
       .then(() => {
-        tableParentBox.removeClass("hidden");
         table = dataTableEl.DataTable({
           ajax: {
             url: `${watchListEntriesApiURL}/${watchListId}`,
@@ -45,6 +44,9 @@ $(document).ready(() => {
             cache: true,
             type: "GET",
             dataSrc: function (data) {
+              data.length
+                ? tableParentBox.removeClass("hidden")
+                : tableParentBox.addClass("hidden");
               return data;
             },
           },
@@ -178,11 +180,13 @@ $(document).ready(() => {
       },
       load: (query, callback) => {
         const url = `${instrumentsApiURL}/${encodeURIComponent(query)}`;
+        NProgress.start();
         fetch(url)
           .then((response) => response.json())
           .then((json) => {
             watchListArray = json;
             callback(json);
+            NProgress.done();
           })
           .catch(() => {
             callback();
@@ -207,6 +211,10 @@ $(document).ready(() => {
 
   addWatchListEntriesBtn.on("click", () => {
     (() => {
+      if (!watchListEntriesId || !watchListId) {
+        return;
+      }
+
       let raw = JSON.stringify({
         Amount: 1234,
         OpenPrice: 12.3,
@@ -220,6 +228,8 @@ $(document).ready(() => {
         redirect: "follow",
       };
 
+      NProgress.start();
+
       fetch(
         `${watchListEntriesApiURL}/${watchListId}/${watchListEntriesId}`,
         requestOptions
@@ -228,11 +238,13 @@ $(document).ready(() => {
         .then(() => {
           select.clear();
           getWatchLists();
+          NProgress.done();
         })
         .catch((error) => error);
     })();
   });
 
+  //Remove table item
   function tableDeleteRow(id) {
     const requestOptions = {
       method: "DELETE",
