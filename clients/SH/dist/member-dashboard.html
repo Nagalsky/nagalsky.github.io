@@ -24,7 +24,10 @@
       class="shrink-0 bg-white py-4 md:py-[37px]"
       x-data="{ menuOpened: false }"
     >
-      <div class="container flex max-w-full flex-wrap items-center justify-between">
+      <div
+        class="container flex max-w-full flex-wrap items-center justify-between"
+        @click.away="menuOpened = false"
+      >
         <a href="index.html" class="inline-block w-[160px] shrink-0 md:w-[196px]">
           <img src="img/logo-header.svg" alt="" class="w-full" />
         </a>
