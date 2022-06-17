@@ -7,3 +7,4 @@
 //= ../../../node_modules/aos/dist/aos.js
 //= ../../../node_modules/datatables/media/js/jquery.dataTables.min.js
 //= ../../../node_modules/nprogress/nprogress.js
+//= ../../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js
