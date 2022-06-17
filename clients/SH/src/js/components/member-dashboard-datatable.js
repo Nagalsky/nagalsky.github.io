@@ -205,6 +205,11 @@ $(document).ready(() => {
     searchField: ["symbol", "name"],
     plugins: ["dropdown_input"],
     onChange: (value) => {
+      if (value.length) {
+        addWatchListEntriesBtn.prop("disabled", false);
+      } else {
+        addWatchListEntriesBtn.prop("disabled", true);
+      }
       watchListEntriesId = value;
       select.clearOptions();
       console.log("watchListArray old", watchListArray);
@@ -213,6 +218,9 @@ $(document).ready(() => {
       );
       watchListArray = data;
       console.log("watchListArray new", watchListArray);
+    },
+    onDelete: () => {
+      addWatchListEntriesBtn.prop("disabled", true);
     },
     load: (query, callback) => {
       const url = `${instrumentsApiURL}/${encodeURIComponent(query)}`;
