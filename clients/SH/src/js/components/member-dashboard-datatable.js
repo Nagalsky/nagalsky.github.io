@@ -17,7 +17,7 @@ $(document).ready(() => {
     TODO: Change hardcoded token to real
   */
   const bearerToken =
-    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTQ0NzA2MCwiZXhwIjoxNjU1NTMzNDYwLCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.UBx2FnRog7iLcI4F7p97gCVV8RtxPEVyRsgsGq43qM50rn9SoZSenxCEW5xD2HNZl5rrS3YRZ27WMpUgbfUFm9vW5KFMshSGxJgOcbr4Yhb96iKqy09-K3MrrjkqzDrSlKFuVLBSA6kLxXqT8boZ-bkGHqUmrjWTrHiNyHuP4k4EKaqImYVOo2wAztj_fvnTeaJdmMADOS8YywGhNOf7Iyz2_uFCN8hAsqBBdUoaKqMbDRYJf8wmP5F-0F8n91JNULENNZ6IJgZCw-n731Ks4nmWbpAN78in44waJGrPjUKjdYlUK6kmNP3Wi0a3Lwduqi4_ziUF7o_M2f1BwKU4Gw";
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTUzNTM0NiwiZXhwIjoxNjU1NjIxNzQ2LCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.aqqCGU96rBrHokGdw_tgGuYHuXvSMn8F4GyE_nkMP5qZ39KhITzLSmKtWa-CtrcLHVKY5GUI9xsRT7blQ3tI04fOLT8m0nn-nc6G83_pTaFjaf7ptcvE2r2yJ558z3OL5y6nmU_pi6GWNriwYdcZNxgJlu8HK-vEZgg8ZMxfMuuznSwCWHw9Gu84MuZM3vjCnyxlW0c77fmRmNfQiihOzwp9qlXo1vLvsCaI6kLbkadcdfSDajeZB91Wht9V3KJqQddZ4TTcrBqzKTZ5yUL96pD4XjaDjlz61o53TvfgKTZ7Qo8c6s2hlFiLd-Ia44mARa-g46KXdy4YnoCCZvqn9w";
 
   /* 
     Header for API call's
@@ -129,7 +129,7 @@ $(document).ready(() => {
                 return `
                   <div class="text-center">
                     <button class="btn-delete p-3 text-red500" data-id="${row.instrumentId}">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pointer-events-none	" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                       </svg>
                     </button>
@@ -179,7 +179,7 @@ $(document).ready(() => {
         });
       })
       .catch((error) => {
-        console.log("getWatchlists error: ", error);
+        NProgress.done();
       });
   })();
 
@@ -263,9 +263,9 @@ $(document).ready(() => {
       }
 
       let raw = JSON.stringify({
-        Amount: 1234,
-        OpenPrice: 12.3,
-        Comment: "hihihi",
+        Amount: +"",
+        OpenPrice: +"",
+        Comment: "",
       });
 
       const requestOptions = {
