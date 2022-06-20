@@ -204,7 +204,7 @@ $(document).ready(() => {
     valueField: "instrumentId",
     labelField: "symbol",
     searchField: ["symbol", "name"],
-    plugins: ["dropdown_input"],
+    // plugins: ["dropdown_input"],
     onChange: (value) => {
       if (value.length) {
         addWatchListEntriesBtn.prop("disabled", false);
@@ -319,31 +319,29 @@ $(document).ready(() => {
   function tableEditRow(data) {
     const payload = JSON.stringify({
       Amount: +data.amount,
-      OpenPrice: data.openPrice,
+      OpenPrice: +data.openPrice,
       Comment: data.comment,
     });
 
-    console.log("payload", payload);
+    const requestOptions = {
+      method: "PUT",
+      headers: myHeaders,
+      body: payload,
+      redirect: "follow",
+    };
 
-    // const requestOptions = {
-    //   method: "PUT",
-    //   headers: myHeaders,
-    //   body: payload,
-    //   redirect: "follow",
-    // };
+    NProgress.start();
 
-    // NProgress.start();
-
-    // fetch(
-    //   `${watchListEntriesApiURL}/${data.watchlistId}/${data.instrumentId}`,
-    //   requestOptions
-    // )
-    //   .then((response) => response.text())
-    //   .then(() => {
-    //     table.ajax.reload(null, false);
-    //     NProgress.done();
-    //   })
-    //   .catch((error) => error);
+    fetch(
+      `${watchListEntriesApiURL}/${data.watchlistId}/${data.instrumentId}`,
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then(() => {
+        table.ajax.reload(null, false);
+        NProgress.done();
+      })
+      .catch((error) => error);
   }
 
   /* 
