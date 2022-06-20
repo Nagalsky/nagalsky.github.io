@@ -17,7 +17,7 @@ $(document).ready(() => {
     TODO: Change hardcoded token to real
   */
   const bearerToken =
-    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTUzNTM0NiwiZXhwIjoxNjU1NjIxNzQ2LCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.aqqCGU96rBrHokGdw_tgGuYHuXvSMn8F4GyE_nkMP5qZ39KhITzLSmKtWa-CtrcLHVKY5GUI9xsRT7blQ3tI04fOLT8m0nn-nc6G83_pTaFjaf7ptcvE2r2yJ558z3OL5y6nmU_pi6GWNriwYdcZNxgJlu8HK-vEZgg8ZMxfMuuznSwCWHw9Gu84MuZM3vjCnyxlW0c77fmRmNfQiihOzwp9qlXo1vLvsCaI6kLbkadcdfSDajeZB91Wht9V3KJqQddZ4TTcrBqzKTZ5yUL96pD4XjaDjlz61o53TvfgKTZ7Qo8c6s2hlFiLd-Ia44mARa-g46KXdy4YnoCCZvqn9w";
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTYyNTM3MiwiZXhwIjoxNjU1NzExNzcyLCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.mhODqHdSi3UG2mN0AMuFxHmngySPhkJGQCLAc-i9fb221_MIZoBmPmDCexlGrX8oU4fmQ3xsCBEbbe2ESw_WybtCehsbKINiOgeApv--uZlJxidUdRASFEjhZpJSzFzIs61QOgM5QxVO3Z5A1Z5zYUOxB0aKdWmIU66dDmBQj7lJwNQJBzMPzq2GC6KrqBwDGSOS-uTrRaxRsTzlXybbPkhZE8Hg5fT8gcwvhZ8xtjFr7Il5TmVIdcXvBoAGeOPESSHnGkBgwZ7OKfN4DTRLL9hFwbCD7h4ayM77HNGMrYeS0fTgQR1gY2izf34lQw2N__ZQWWfWTEY9YN8gRFRQXg";
 
   /* 
     Header for API call's
@@ -66,12 +66,13 @@ $(document).ready(() => {
             cache: true,
             type: "GET",
             dataSrc: function (data) {
-              data.length
-                ? tableParentBox.removeClass("hidden")
-                : tableParentBox.addClass("hidden");
+              tableParentBox.removeClass("hidden");
               NProgress.done();
               return data;
             },
+          },
+          language: {
+            emptyTable: "Please add the stocks you wish to follow.",
           },
           destroy: true,
           bSort: false,
@@ -88,7 +89,7 @@ $(document).ready(() => {
                     <input
                       type="text"
                       placeholder="Amount"
-                      value="${row.amount}"
+                      value="${row.amount || ""}"
                       data-id="${row.instrumentId}"
                       data-row="${row}"
                       class="field-amount block w-full rounded border border-solid border-gray300 bg-white px-3 py-1.5 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
@@ -103,7 +104,7 @@ $(document).ready(() => {
                     <input
                       type="text"
                       placeholder="Open price"
-                      value="${row.openPrice}"
+                      value="${row.openPrice || ""}"
                       data-id="${row.instrumentId}"
                       class="field-open-price block w-full rounded border border-solid border-gray300 bg-white px-3 py-1.5 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
                     />
@@ -318,29 +319,31 @@ $(document).ready(() => {
   function tableEditRow(data) {
     const payload = JSON.stringify({
       Amount: +data.amount,
-      OpenPrice: +data.openPrice,
+      OpenPrice: data.openPrice,
       Comment: data.comment,
     });
 
-    const requestOptions = {
-      method: "PUT",
-      headers: myHeaders,
-      body: payload,
-      redirect: "follow",
-    };
+    console.log("payload", payload);
 
-    NProgress.start();
+    // const requestOptions = {
+    //   method: "PUT",
+    //   headers: myHeaders,
+    //   body: payload,
+    //   redirect: "follow",
+    // };
 
-    fetch(
-      `${watchListEntriesApiURL}/${data.watchlistId}/${data.instrumentId}`,
-      requestOptions
-    )
-      .then((response) => response.text())
-      .then(() => {
-        table.ajax.reload(null, false);
-        NProgress.done();
-      })
-      .catch((error) => error);
+    // NProgress.start();
+
+    // fetch(
+    //   `${watchListEntriesApiURL}/${data.watchlistId}/${data.instrumentId}`,
+    //   requestOptions
+    // )
+    //   .then((response) => response.text())
+    //   .then(() => {
+    //     table.ajax.reload(null, false);
+    //     NProgress.done();
+    //   })
+    //   .catch((error) => error);
   }
 
   /* 
@@ -350,6 +353,6 @@ $(document).ready(() => {
     $(this).mask("0000000000");
   });
   $(document).on("focus", ".field-open-price", function () {
-    $(this).mask("00.0000");
+    $(this).mask("#.##0,000");
   });
 });
