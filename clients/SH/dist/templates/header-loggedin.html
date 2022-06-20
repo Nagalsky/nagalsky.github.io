@@ -1,87 +1,30 @@
-<header
-  class="shrink-0 bg-white py-4 md:py-[37px]"
-  x-data="{ menuOpened: false }"
->
-  <div
-    class="container flex max-w-full flex-wrap items-center justify-between"
-    @click.away="menuOpened = false"
-  >
-    <a href="index.html" class="inline-block w-[160px] shrink-0 md:w-[196px]">
+<header class="shrink-0 border-b border-gray75 bg-white py-4 md:py-0">
+  <div class="container flex max-w-full flex-wrap items-center justify-between">
+    <a
+      href="index.html"
+      class="flex w-[160px] shrink-0 items-center md:mr-[18px] md:min-h-[79px] md:w-[193px] md:border-r md:border-gray75 md:py-[20px] md:pr-[18px]"
+    >
       <img src="img/logo-header.svg" alt="" class="w-full" />
     </a>
 
-    <button
-      type="button "
-      class="text-blue500 hover:text-blue600 md:hidden"
-      @click="menuOpened = !menuOpened"
-    >
-      <svg
-        x-show="!menuOpened"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-      <svg
-        x-show="menuOpened"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    </button>
-
-    <div
-      class="flex w-full items-start gap-6 pt-6 md:w-auto md:items-center md:pt-0"
-      :class="menuOpened ? 'flex flex-col' : 'hidden md:flex md:flex-row'"
-    >
-      <a
-        href="#"
-        class="header-upgrade-btn inline-flex hidden justify-center rounded-[8px] bg-blue500 py-[12px] px-[26px] text-[16px] font-bold uppercase text-white duration-200 ease-in-out hover:bg-blue600"
-      >
-        Upgrade
-      </a>
-
-      <div x-data="{ open: false }" class="relative leading-none">
+    <div class="items-top flex flex gap-6">
+      <div x-data="{ open: false }" class="relative">
         <a
           href="javascript:;"
-          class="inline-flex items-center"
+          class="inline-flex min-h-[40px] items-center"
           @click="open = ! open"
         >
-          <span class="text-base">Account Settings</span>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="ml-2 h-6 w-6"
-            fill="none"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              d="M4.47464 15.665L5.1813 15.9162H5.1813L4.47464 15.665ZM5.33419 13.2475L6.04085 13.4988H6.04085L5.33419 13.2475ZM18.6658 13.2475L17.9591 13.4988L18.6658 13.2475ZM19.5253 15.665L20.232 15.4137L19.5253 15.665ZM18.5831 16.25H5.41686V17.75H18.5831V16.25ZM5.1813 15.9162L6.04085 13.4988L4.62753 12.9963L3.76798 15.4137L5.1813 15.9162ZM6.52775 10.676V9.22222H5.02775V10.676H6.52775ZM17.4722 9.22222V10.676H18.9722V9.22222H17.4722ZM17.9591 13.4988L18.8186 15.9162L20.232 15.4137L19.3724 12.9963L17.9591 13.4988ZM17.4722 10.676C17.4722 11.6378 17.6369 12.5925 17.9591 13.4988L19.3724 12.9963C19.1076 12.2513 18.9722 11.4666 18.9722 10.676H17.4722ZM6.04085 13.4988C6.36307 12.5925 6.52775 11.6378 6.52775 10.676H5.02775C5.02775 11.4666 4.89239 12.2513 4.62753 12.9963L6.04085 13.4988ZM5.41686 16.25C5.24412 16.25 5.12343 16.079 5.1813 15.9162L3.76798 15.4137C3.36291 16.553 4.20772 17.75 5.41686 17.75V16.25ZM18.5831 17.75C19.7922 17.75 20.637 16.553 20.232 15.4137L18.8186 15.9162C18.8765 16.079 18.7558 16.25 18.5831 16.25V17.75ZM12 3.75C15.0222 3.75 17.4722 6.2 17.4722 9.22222H18.9722C18.9722 5.37157 15.8506 2.25 12 2.25V3.75ZM12 2.25C8.14932 2.25 5.02775 5.37157 5.02775 9.22222H6.52775C6.52775 6.2 8.97775 3.75 12 3.75V2.25ZM7.24997 17C7.24997 19.6234 9.37662 21.75 12 21.75V20.25C10.205 20.25 8.74997 18.7949 8.74997 17H7.24997ZM12 21.75C14.6233 21.75 16.75 19.6234 16.75 17H15.25C15.25 18.7949 13.7949 20.25 12 20.25V21.75Z"
+              fill="#202246"
             />
           </svg>
         </a>
@@ -95,7 +38,7 @@
           x-transition:leave-start="transform opacity-100 scale-100"
           x-transition:leave-end="transform opacity-0 scale-95"
           :class="open ? '' : 'hidden'"
-          class="absolute left-0 top-full z-50 grid min-w-[12rem] origin-top-right gap-2 rounded border border-gray300 bg-white px-4 py-3 text-base shadow-md md:left-auto md:right-0 md:origin-top-left"
+          class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded border border-gray300 bg-white px-4 py-3 text-base shadow-md"
         >
           <a href="#" class="transition hover:text-blue600">Page containing</a>
           <a href="#" class="transition hover:text-blue600">Change email</a>
@@ -103,23 +46,38 @@
         </div>
       </div>
 
-      <a href="#" class="inline-flex items-center">
-        <span class="text-base">Logout</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="ml-2 h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
+      <div x-data="{ open: false }" class="relative">
+        <a
+          href="javascript:;"
+          class="inline-flex items-center gap-[12px]"
+          @click="open = ! open"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+          <img
+            src="https://via.placeholder.com/40"
+            alt="Avatar"
+            class="block h-[40px] w-[40px] shrink-0 rounded-full"
           />
-        </svg>
-      </a>
+          <span class="hidden text-[14px] text-blue700 md:inline-block"
+            >Navid Nos</span
+          >
+        </a>
+        <div
+          x-show="open"
+          @click.away="open = false"
+          x-transition:enter="transition-all duration-200 ease-out"
+          x-transition:enter-start="transform opacity-0 scale-95"
+          x-transition:enter-end="transform opacity-100 scale-100"
+          x-transition:leave="transition-all duration-200 ease-in"
+          x-transition:leave-start="transform opacity-100 scale-100"
+          x-transition:leave-end="transform opacity-0 scale-95"
+          :class="open ? '' : 'hidden'"
+          class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded border border-gray300 bg-white px-4 py-3 text-base shadow-md"
+        >
+          <a href="#" class="transition hover:text-blue600">Page containing</a>
+          <a href="#" class="transition hover:text-blue600">Change email</a>
+          <a href="#" class="transition hover:text-blue600">Delete account</a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
