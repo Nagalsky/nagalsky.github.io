@@ -13,13 +13,13 @@
 //   const tableSearchInput = $(".data-table-search-input");
 //   let watchListArray = [];
 
-//   /* 
+//   /*
 //     TODO: Change hardcoded token to real
 //   */
 //   const bearerToken =
 //     "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTYyNTM3MiwiZXhwIjoxNjU1NzExNzcyLCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.mhODqHdSi3UG2mN0AMuFxHmngySPhkJGQCLAc-i9fb221_MIZoBmPmDCexlGrX8oU4fmQ3xsCBEbbe2ESw_WybtCehsbKINiOgeApv--uZlJxidUdRASFEjhZpJSzFzIs61QOgM5QxVO3Z5A1Z5zYUOxB0aKdWmIU66dDmBQj7lJwNQJBzMPzq2GC6KrqBwDGSOS-uTrRaxRsTzlXybbPkhZE8Hg5fT8gcwvhZ8xtjFr7Il5TmVIdcXvBoAGeOPESSHnGkBgwZ7OKfN4DTRLL9hFwbCD7h4ayM77HNGMrYeS0fTgQR1gY2izf34lQw2N__ZQWWfWTEY9YN8gRFRQXg";
 
-//   /* 
+//   /*
 //     Header for API call's
 //   */
 //   const myHeaders = new Headers({
@@ -29,14 +29,14 @@
 //       "ApplicationGatewayAffinity=7a04715ad5252cab2e2e787b5376885f; ApplicationGatewayAffinityCORS=7a04715ad5252cab2e2e787b5376885f",
 //   });
 
-//   /* 
+//   /*
 //     Check if page has select for adding new tickers, if not, api calls will not started
 //   */
 //   if (!dashboardForm.length) {
 //     return;
 //   }
 
-//   /* 
+//   /*
 //     Call for getting watch list id and then call to getting data for table, based on watch list id
 //   */
 //   (() => {
@@ -54,7 +54,7 @@
 //         watchListId = data[0].watchlistId || null;
 //       })
 //       .then(() => {
-//         /* 
+//         /*
 //           Call for getting data for datatable
 //         */
 //         table = dataTableEl.DataTable({
@@ -184,20 +184,20 @@
 //       });
 //   })();
 
-//   /* 
+//   /*
 //     Datatable initializing
 //   */
 //   table = dataTableEl.DataTable();
 //   table.destroy();
 
-//   /* 
+//   /*
 //     Search field for searching items in datatable
 //   */
 //   tableSearchInput.on("keyup", function () {
 //     table.search(this.value).draw();
 //   });
 
-//   /* 
+//   /*
 //     Form for adding new tickers from select
 //   */
 //   const select = new TomSelect(selectEl, {
@@ -243,7 +243,7 @@
 //               item.symbol &&
 //               `<div style="margin-right: 20px;">${escape(item.symbol)}</div>`
 //             }
-//             <div>${escape(item.name)}</div> 
+//             <div>${escape(item.name)}</div>
 //           </div>`;
 //       },
 //       item: (item, escape) => {
@@ -252,7 +252,7 @@
 //     },
 //   });
 
-//   /* 
+//   /*
 //     Event for call to api for adding new tickers
 //   */
 //   addWatchListEntriesBtn.on("click", () => {
@@ -290,7 +290,7 @@
 //     })();
 //   });
 
-//   /* 
+//   /*
 //     Remove table item
 //   */
 //   function tableDeleteRow(id) {
@@ -311,7 +311,7 @@
 //       .catch((error) => error);
 //   }
 
-//   /* 
+//   /*
 //     Edit table item
 //   */
 //   function tableEditRow(data) {
@@ -327,7 +327,7 @@
 //       body: payload,
 //       redirect: "follow",
 //     };
-    
+
 //     console.log('payload', payload)
 
 //     NProgress.start();
@@ -344,7 +344,7 @@
 //       .catch((error) => error);
 //   }
 
-//   /* 
+//   /*
 //     jQuery mask for fiels
 //   */
 //   $(document).on("focus", ".field-amount", function () {
@@ -354,3 +354,78 @@
 //     $(this).mask("0000.00");
 //   });
 // });
+
+const watchlistsApiUrl = "https://www.stockhawk.io/api/watchlists";
+const watchListEntriesApiUrl = "https://www.stockhawk.io/api/watchlistentries";
+const bearerToken =
+  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkZzVnFVQUFPSTlhT1NkdFpLdFVzTCJ9.eyJodHRwczovL3d3dy5zdG9ja2hhd2suaW8vZW1haWwiOiJuYWdhbHNreS5uaWtpdGFAZ21haWwuY29tIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zdG9ja2hhd2suaW8vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIyNzI4NjE3MzExOTAzNzIzNzkiLCJhdWQiOlsiaHR0cHM6Ly93d3cuc3RvY2toYXdrLmlvIiwiaHR0cHM6Ly9kZXYtemgyaTBnZ2EudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY1NTc0NjEwMiwiZXhwIjoxNjU1ODMyNTAyLCJhenAiOiJkWnJ2NFpZTUJjMEJDRXdhOVB4UTFLZ0hab213a2tiQiIsInNjb3BlIjoib3BlbmlkIGVtYWlsIHN0b2NraGF3azp1c2Ugb2ZmbGluZV9hY2Nlc3MifQ.a7XunUXKynI87Pjqbj-RTN76eTGW3FVkcq3czoItNS-12Buo3hladcdwE30IakeRoPS72kRWVuoukuPxMrkzQiUd8Cy32y9GR5vDxU4B5QCDgYQTv6SblfbzlguGreJZoxWAudC7Yujqqd-M17m5qAK_5fiDkDoXjgAL0H0bhHN08utovjVNyQjc_q_OADkqZVyzdKYaZH2Knf2nxcADW5SU8qQ-aHHiRhLSWjRNYQE5unKUekSO-OEhSjUJS4o604t3qHwQtr5bjM21CPWFC01WXb-6WSbLEy38_D3FSHoo49RNNvYmGLta-fPo3Li_5Ud0ka3tuZ1--EV8-V2eaQ";
+const myHeaders = new Headers({
+  Authorization: `Bearer ${bearerToken}`,
+  "Content-Type": "application/json",
+  Cookie:
+    "ApplicationGatewayAffinity=7a04715ad5252cab2e2e787b5376885f; ApplicationGatewayAffinityCORS=7a04715ad5252cab2e2e787b5376885f",
+});
+
+function init() {
+  return {
+    data: null,
+    // watchListEntries: null,
+    async fetchData() {
+      let temporaryArray = [];
+      // NProgress.start();
+
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      fetch(watchlistsApiUrl, requestOptions)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data", data);
+          this.data = data;
+          // NProgress.done();
+          // this.data = data;
+          // temporaryArray = data;
+          // console.log("temporaryArray", temporaryArray);
+
+          // const ids = temporaryArray.map(
+          //   (temporaryArray) => temporaryArray.watchlistId
+          // );
+          // console.log("temporaryArray: ids", ids);
+
+          // (async () => {
+          //   for (id of ids) {
+          //     const res = await fetch(
+          //       `${watchListEntriesApiUrl}/${id}`,
+          //       requestOptions
+          //     )
+          //       .then((res) => res.json())
+          //       .then((data) => {
+          //         console.log("data", data);
+          //       });
+          //   }
+          // })();
+        });
+    },
+    // fetchWatchListEntries(id) {
+    //   console.log("fetchWatchListEntries", id);
+    //   // const requestOptions = {
+    //   //   method: "GET",
+    //   //   headers: myHeaders,
+    //   //   redirect: "follow",
+    //   // };
+    //   // fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
+    //   //   .then((res) => res.json())
+    //   //   .then((data) => {
+    //   //     console.log("fetchWatchListEntries", data);
+    //   //     // NProgress.done();
+    //   //     this.watchListEntries = data;
+    //   //   });
+    // },
+    test() {
+      console.log("test");
+    },
+  };
+}

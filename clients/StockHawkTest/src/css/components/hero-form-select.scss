@@ -1,0 +1,41 @@
+.hero-form {
+  &.before-initialize {
+    .hero-form-select-box {
+      @apply h-[30px] opacity-0;
+    }
+  }
+  .ts-wrapper.multi {
+    .ts-control {
+      gap: 2px;
+      &>div {
+        @apply m-0 mb-0 bg-none bg-blue300 text-blue500 rounded-[29px] py-[6px] md:py-[10px] px-[8px] md:px-[11px] text-[12px] md:text-[14px] font-bold tracking-[0.07px] inline-flex items-center border-2 border-solid border-white shadow-none;
+        text-shadow: none !important;
+        .remove {
+          @apply border-0 mr-2 font-normal mb-[1px] text-[20px] hover:bg-transparent;
+        }
+      }
+    }
+  }
+
+  .ts-wrapper {
+    @apply static;
+    .no-results {
+      @apply  py-4 px-6 text-[14px] md:text-[16px] font-bold tracking-[0.07px];
+    }
+  }
+  
+  .focus .ts-control,
+  .ts-control {
+    @apply border-0 p-0 shadow-none rounded-none;
+    input {
+      @apply text-base lg:text-xl;
+    }
+  }
+  
+  .ts-wrapper.multi.has-items .ts-control {
+    @apply p-0;
+  }
+}
+
+
+

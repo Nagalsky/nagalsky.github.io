@@ -23,7 +23,20 @@
             </div>
 
             <div x-show="tab === 2">
-              <h2>Update Watchlist content goes here</h2>
+              <div x-data="test(tab)">
+                <!-- <ul>
+                  <template x-for="watchlist in watchlists">
+                    <li>watchlists item</li>
+                  </template>
+                </ul> -->
+              </div>
+              <script type="text/javascript">
+                const test = (state) => {
+                  Alpine.effect(() => {
+                    console.log("state", state);
+                  });
+                };
+              </script>
             </div>
 
             <div x-show="tab === 3">

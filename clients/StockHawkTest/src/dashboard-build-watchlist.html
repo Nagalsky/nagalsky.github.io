@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  //= templates/head.html
+  <title>Stock Hawk member dashboard watch list page</title>
+</head>
+
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
+  //= templates/header-loggedin.html
+
+  <main class="flex grow pb-6 pt-3 lg:py-0">
+    <section class="flex w-full">
+      <div class="container flex max-w-full flex-col gap-4 lg:flex-row lg:gap-0 lg:px-0">
+        //= templates/member-dashboard-aside.html
+
+        <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
+          <div class="mb-5 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <h1 class="text-[17px] font-semibold">Build Watchlists</h1>
+            <button type="button"
+              class="ms-4 inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[29px]">
+              Add Watchlist
+            </button>
+          </div>
+
+          <div x-data="dashboardBuildWatchlistInit()">
+            <template x-if="data" x-init="getData()">
+              <div x-data="{ activeTab: data[0].watchlistId }">
+                <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
+                  <template x-for="tabSwitch in data" :key="tabSwitch.watchlistId">
+                    <button @click.prevent="activeTab = tabSwitch.watchlistId" x-text="tabSwitch.name"
+                      :disabled="isLoading"
+                      :class="activeTab === tabSwitch.watchlistId ? 'text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
+                      class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"></button>
+                  </template>
+                </div>
+
+                <template x-for="tabConent in data" :key="tabConent.watchlistId">
+                  <div x-show="activeTab === tabConent.watchlistId">
+                    <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
+                      x-data="{ view: 'cards'}">
+                      //= templates/loader.html
+
+                      //= templates/dashboard-build-watchlist-cards-header.html
+
+                      //= templates/dashboard-build-watchlist-cards.html
+
+                      <div x-show="view === 'list'">
+                        <p>LIST are here</p>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>

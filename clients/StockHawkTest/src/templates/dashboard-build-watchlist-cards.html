@@ -1,0 +1,228 @@
+<div x-show="view === 'cards'">
+  <div class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4">
+    <template x-for="card in tabConent.entries" :key="card.watchlistEntryId">
+      <div class="break-inside-avoid-column border-y-[8px] border-white relative">
+        <div class="rounded-[9px] bg-[#f9fafb] px-6 py-4">
+          <div class="mb-5 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <img :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
+                :alt="`${card.symbol}`" class="block h-[30px] w-[30px] rounded-full object-cover text-[8px]" />
+              <span x-text="card.instrumentName" class="text-[9px] font-medium text-black"></span>
+            </div>
+
+            <span x-text="card.symbol" class="text-[9px] font-medium text-blue800"></span>
+          </div>
+
+          <div class="space-y-6" x-data="{ 
+            cardData: {
+              amount: card.amount,
+              openPrice: card.openPrice,
+              comment: card.comment
+            }
+          }">
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div class="flex flex-col gap-1" x-data="{ isEditAmount: false }">
+                <span class="text-[12px] font-medium text-[#969fb2]">Amount</span>
+
+                <button type="button" x-show="card.amount && !isEditAmount" x-text="card.amount"
+                  class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2px] px-1 text-[15px] font-bold text-blue800 hover:border-gray75 hover:bg-white"
+                  @click="isEditAmount = !isEditAmount"></button>
+
+                <div x-show="isEditAmount" class="flex space-x-1">
+                  <input type="text" class="block h-[28px] w-full grow rounded-[3px] border border-solid border-gray75
+                    bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-gray400
+                    focus:border-blue500 focus:outline-none" x-model="cardData.amount" placeholder="Add amount"
+                    x-mask:dynamic="amountMask" maxlength="6" />
+
+                  <div class="flex items-center space-x-1">
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-red400 text-white"
+                      @click="() => {
+                      isEditAmount = !isEditAmount;
+                      cardData.amount = card.amount;
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
+                      @click="() => {
+                      isEditAmount = !isEditAmount;
+                      editWatchListEntries(card.watchlistEntryId, cardData);
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div x-show="!card.amount">
+                  <button type="button" @click="isEditAmount = !isEditAmount" x-show="!isEditAmount"
+                    class="inline-flex items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Add Amount
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1" x-data="{ isEditAvgPrice: false }">
+                <span class="text-[12px] font-medium text-[#969fb2]">Avg Price</span>
+
+                <button type="button" x-show="card.openPrice && !isEditAvgPrice" x-text="card.openPrice"
+                  class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2px] px-1 text-[15px] font-bold text-blue800 hover:border-gray75 hover:bg-white"
+                  @click="isEditAvgPrice = !isEditAvgPrice"></button>
+
+                <div x-show="isEditAvgPrice" class="flex space-x-1">
+                  <input type="number"
+                    class="input-number block h-[28px] w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                    x-model="cardData.openPrice" placeholder="Add price" pattern="[0-9]+([,\.][0-9]+)?" />
+
+                  <div class="flex items-center space-x-1">
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-red400 text-white"
+                      @click="() => {
+                      isEditAvgPrice = !isEditAvgPrice;
+                      cardData.openPrice = card.openPrice;
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
+                      @click="() => {
+                      isEditAvgPrice = !isEditAvgPrice;
+                      editWatchListEntries(card.watchlistEntryId, cardData);
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div x-show="!card.openPrice">
+                  <button type="button" @click="isEditAvgPrice = !isEditAvgPrice" x-show="!isEditAvgPrice"
+                    class="flex items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Add Avg Price
+                  </button>
+                </div>
+              </div>
+
+              <img src="https://www.stockhawk.io/files/sparklines/sparkline.png" alt="sparkline"
+                class="block max-w-full" />
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <span class="text-[12px] font-medium text-[#969fb2]">Trades</span>
+
+              <div x-show="card.positions.length" class="mb-2 overflow-hidden rounded-[3px] border-r border-r-gray75">
+                <table class="w-full table-fixed">
+                  <thead>
+                    <tr
+                      class="[&>*]:border-t [&>*]:border-l [&>*]:border-gray75 [&>*]:bg-blue300 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-left [&>*]:text-[10px] [&>*]:font-medium [&>*]:text-blue500">
+                      <th>Date</th>
+                      <th>Amount</th>
+                      <th>Purchase Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <template x-for="tableCell in card.positions" :key="tableCell.positionId">
+                      <tr
+                        class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium">
+                        <td x-text="moment(tableCell.transactionDate).format('DD/MM/YYYY')"></td>
+                        <td x-text="tableCell.amount"></td>
+                        <td x-text="tableCell.transactionPrice"></td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+
+              <div x-show="!card.positions.length">
+                <button type="button"
+                  class="inline-flex items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                  Add Trade
+                </button>
+              </div>
+
+              <div x-data="{ isEditComment: false }">
+                <button type="button" x-show="card.comment && !isEditComment" x-text="card.comment"
+                  class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2px] px-1 text-[15px] font-bold text-blue800 hover:border-gray75 hover:bg-white"
+                  @click="isEditComment = !isEditComment"></button>
+
+                <div x-show="isEditComment" class="flex space-x-1">
+                  <input type="text"
+                    class="block h-[28px] w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                    x-model="cardData.comment" placeholder="Add comment" />
+
+                  <div class="flex items-center space-x-1">
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-red400 text-white"
+                      @click="() => {
+                      isEditComment = !isEditComment;
+                      cardData.comment = card.comment;
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+
+                    <button type="button"
+                      class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
+                      @click="() => {
+                      isEditComment = !isEditComment;
+                      editWatchListEntries(card.watchlistEntryId, cardData);
+                    }">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div x-show="!card.comment">
+                  <button type="button" @click="isEditComment = !isEditComment" x-show="!isEditComment"
+                    class="inline-flex items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Add Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</div>
