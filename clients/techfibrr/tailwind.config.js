@@ -27,10 +27,14 @@ module.exports = {
       blue300: "#deeaf4",
       blue500: "#2191fb",
       silver500: "#9ba3a8",
+      success500: "#0cca4a",
+      danger500: "#fb2121",
     },
     fontWeight: {
       normal: 400,
       medium: 500,
+      semibold: 600,
+      bold: 700,
     },
     screens: {
       sm: "540px",

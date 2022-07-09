@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    //= templates/head.html
+    <title>Techfibrr Support is Here to Help page</title>
+  </head>
+
+  <body
+    class="md:min-h-screen flex flex-col font-normal text-primary text-[14px] lg:text-[16px]"
+  >
+    <!-- TrustBox script -->
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <!-- End TrustBox script -->
+
+    //= templates/header.html
+
+    <main class="grow">
+      <section class="py-[30px] md:py-[80px]">
+        <div class="container">
+          <h1
+            class="text-[22px] md:text-[26px] font-medium leading-[1.5] mb-8 md:mb-[30px]"
+          >
+            Techfibrr Support is Here to Help
+          </h1>
+
+          <div class="mb-10 md:mb-50px space-y-5 text-[14px]">
+            <p>Fill out the form below to contact us.</p>
+            <p>
+              If you are an
+              <span class="font-bold">existing customer</span> please fill your
+              Order ID.<br />Please provide as many details as possible to help
+              us address your case more efficiently.
+            </p>
+          </div>
+
+          <form action="" class="grid gap-5">
+            <div class="grid gap-5 sm:gap-[30px] sm:grid-cols-2">
+              <div class="flex flex-col gap-1">
+                <label
+                  for="field-order"
+                  class="text-[14px] text-silver500 uppercase relative"
+                  >Order id</label
+                >
+                <input
+                  type="text"
+                  class="h-[50px] border border-blue300 rounded-[5px] transition focus:border-blue500 ring-0 placeholder:text-[#b7c9d6] md:placeholder:text-[18px]"
+                  id="field-order"
+                  placeholder="Order ID"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label
+                  for="field-name"
+                  class="text-[14px] text-silver500 uppercase relative"
+                  >Name<sup class="text-danger500 text-[16px] top-[2px] ml-1"
+                    >*</sup
+                  ></label
+                >
+                <input
+                  type="text"
+                  class="h-[50px] border border-blue300 rounded-[5px] transition focus:border-blue500 ring-0 placeholder:text-[#b7c9d6] md:placeholder:text-[18px]"
+                  id="field-name"
+                  placeholder="Name"
+                />
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:gap-[30px] sm:grid-cols-2">
+              <div class="flex flex-col gap-1">
+                <label
+                  for="field-email"
+                  class="text-[14px] text-silver500 uppercase relative"
+                  >Email<sup class="text-danger500 text-[16px] top-[2px] ml-1"
+                    >*</sup
+                  ></label
+                >
+                <input
+                  type="email"
+                  class="h-[50px] border border-blue300 rounded-[5px] transition focus:border-blue500 ring-0 placeholder:text-[#b7c9d6] md:placeholder:text-[18px]"
+                  id="field-email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label
+                  for="field-subject"
+                  class="text-[14px] text-silver500 uppercase relative"
+                  >Subject<sup class="text-danger500 text-[16px] top-[2px] ml-1"
+                    >*</sup
+                  ></label
+                >
+                <input
+                  type="text"
+                  class="h-[50px] border border-blue300 rounded-[5px] transition focus:border-blue500 ring-0 placeholder:text-[#b7c9d6] md:placeholder:text-[18px]"
+                  id="field-subject"
+                  placeholder="Subject"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <label
+                for="field-message"
+                class="text-[14px] text-silver500 uppercase relative"
+                >Message</label
+              >
+              <textarea
+                type="email"
+                class="h-[100px] border border-blue300 rounded-[5px] transition focus:border-blue500 ring-0 placeholder:text-[#b7c9d6] md:placeholder:text-[18px] resize-none"
+                id="field-message"
+                placeholder="Message"
+              ></textarea>
+            </div>
+
+            <div class="mt-[10px]">
+              <button
+                type="submit"
+                class="uppercase inline-flex justify-center transition bg-gradient-to-b from-[#55acff] hover:from-[#2191fb] hover:to-[#2191fb] to-[#2191fb] px-[65px] sm:px-[97px] py-[14.5px] text-white rounded-[10px] text-[14px] font-semibold"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    //= templates/footer.html
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

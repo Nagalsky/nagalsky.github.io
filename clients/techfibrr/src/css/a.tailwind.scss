@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import "../../node_modules/swiper/swiper-bundle.min";
 @tailwind base;
 @tailwind components;
@@ -26,12 +26,15 @@
 .card {
   @apply rounded-[10px] shadow-[0_5px_15px_0_rgba(186,194,200,0.25)] overflow-hidden block uppercase text-primary hover:text-blue500 text-center transition border-[1px] border-solid border-transparent hover:border-blue500;
 
-  >div {
+  > div {
     @apply relative z-[5] bg-white py-[6.5px] break-words px-3;
   }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   @apply lg:hidden bottom-[1px];
 }
 
