@@ -5,3 +5,4 @@ const watchListRecipientsApiUrl =
   "https://www.stockhawk.io/api/watchlistrecipients";
 const watchListPositionsApiUrl =
   "https://www.stockhawk.io/api/watchlistpositions";
+const instrumentsApiURL = "https://www.stockhawk.io/api/instruments";

@@ -33,41 +33,39 @@ function dashboardBuildWatchlistInit() {
         body: raw,
       });
 
-      this.isLoading = true;
+      console.log("requestOptions", requestOptions);
 
-      fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
-        .then((response) => response.text())
-        .then((result) => {
-          if (!result) {
-            Toastify({
-              text: "Entries was edited successfully!",
-              ...toastSuccessConfig,
-            }).showToast();
-            this.getData();
-          } else {
-            const error = JSON.parse(result);
-            Toastify({
-              text: error.title,
-              ...toastDangerConfig,
-            }).showToast();
-          }
-        })
-        .catch((err) => {
-          Toastify({
-            text: err,
-            ...toastDangerConfig,
-          }).showToast();
-        })
-        .finally(() => {
-          this.isLoading = false;
-        });
+      // this.isLoading = true;
+
+      // fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
+      //   .then((response) => response.text())
+      //   .then((result) => {
+      //     if (!result) {
+      //       Toastify({
+      //         text: "Entries was edited successfully!",
+      //         ...toastSuccessConfig,
+      //       }).showToast();
+      //       this.getData();
+      //     } else {
+      //       const error = JSON.parse(result);
+      //       Toastify({
+      //         text: error.title,
+      //         ...toastDangerConfig,
+      //       }).showToast();
+      //     }
+      //   })
+      //   .catch((err) => {
+      //     Toastify({
+      //       text: err,
+      //       ...toastDangerConfig,
+      //     }).showToast();
+      //   })
+      //   .finally(() => {
+      //     this.isLoading = false;
+      //   });
     },
 
     amountMask(input) {
-      let res = input.replace(/[^\d.]+/g, "");
-      return res;
-    },
-    priceMask(input) {
       let res = input.replace(/[^\d.]+/g, "");
       return res;
     },

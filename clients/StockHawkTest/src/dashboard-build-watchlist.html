@@ -6,7 +6,8 @@
   <title>Stock Hawk member dashboard watch list page</title>
 </head>
 
-<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  x-data="{ showModalAddStock: false }" :class="{'overflow-y-hidden': showModalAddStock}">
   //= templates/header-loggedin.html
 
   <main class="flex grow pb-6 pt-3 lg:py-0">
@@ -48,6 +49,8 @@
                       <div x-show="view === 'list'">
                         <p>LIST are here</p>
                       </div>
+
+                      //= templates/modal-add-stocks.html
                     </div>
                   </div>
                 </template>

@@ -13,3 +13,5 @@
 //= ../../../node_modules/@popperjs/core/dist/umd/popper.min.js
 //= ../../../node_modules/tippy.js/dist/tippy-bundle.umd.min.js
 //= ../../../node_modules/moment/min/moment.min.js
+//= ../../../node_modules/inputmask/dist/jquery.inputmask.min.js
+//= ../../../node_modules/inputmask/dist/bindings/inputmask.binding.js
