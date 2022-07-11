@@ -260,13 +260,13 @@
                   <template x-for="tabSwitch in data" :key="tabSwitch.watchlistId">
                     <button @click.prevent="activeTab = tabSwitch.watchlistId" x-effect="getExistingStocks(activeTab)"
                       x-text="tabSwitch.name" :disabled="isLoading"
-                      :class="activeTab === tabSwitch.watchlistId ? 'text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
+                      :class="activeTab === tabSwitch.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
                       class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"></button>
                   </template>
                 </div>
 
-                <template x-for="tabConent in data" :key="tabConent.watchlistId">
-                  <div x-show="activeTab === tabConent.watchlistId">
+                <template x-for="tabContent in data" :key="tabContent.watchlistId">
+                  <div x-show="activeTab === tabContent.watchlistId">
                     <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
                       x-data="{ view: 'cards'}">
                       <div
@@ -298,7 +298,14 @@
                       <div
                         class="mb-6 flex flex-col gap-6 md:mb-12 xl:flex-row xl:items-center xl:justify-between"
                       >
-                        <h3 class="text-[17px] font-semibold" x-text="tabConent.name"></h3>
+                        <div class="flex flex-wrap items-center space-x-4">
+                          <h3 class="text-[17px] font-semibold" x-text="tabContent.name"></h3>
+                          <span
+                            x-show="tabContent.entries.length"
+                            x-text="tabContent.entries.length + ' Stocks'"
+                            class="inline-block rounded-[8px] bg-green300 px-[7px] py-[4.5px] text-[10px] font-medium text-green500"
+                          ></span>
+                        </div>
                       
                         <div
                           class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
@@ -409,7 +416,19 @@
 
                       <div x-show="view === 'cards'">
                         <div class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4">
-                          <template x-for="card in tabConent.entries" :key="card.watchlistEntryId">
+                          <h2 x-show="!tabContent.entries.length" class="text-[16px] font-semibold">
+                            Click
+                            <button
+                              type="button"
+                              @click="showModalAddStock = true"
+                              class="text-blue500 duration-200 ease-in-out hover:text-blue600"
+                            >
+                              here
+                            </button>
+                            to create a list stocks to follow.
+                          </h2>
+                      
+                          <template x-for="card in tabContent.entries" :key="card.watchlistEntryId">
                             <div
                               class="relative break-inside-avoid-column border-y-[8px] border-white"
                             >
@@ -427,10 +446,33 @@
                                     ></span>
                                   </div>
                       
-                                  <span
-                                    x-text="card.symbol"
-                                    class="text-[9px] font-medium text-blue800"
-                                  ></span>
+                                  <div class="flex items-center space-x-4">
+                                    <span
+                                      x-text="card.symbol"
+                                      class="text-[9px] font-medium text-blue800"
+                                    ></span>
+                                    <button
+                                      type="button"
+                                      class="text-gray500 hover:text-gray600"
+                                      data-tippy-content="Delete"
+                                      @click="deleteWatchListEntrie(card.watchlistEntryId);"
+                                    >
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M6 18L18 6M6 6l12 12"
+                                        />
+                                      </svg>
+                                    </button>
+                                  </div>
                                 </div>
                       
                                 <div
@@ -495,7 +537,7 @@
                                             class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                                             @click="() => {
                                             isEditAmount = !isEditAmount;
-                                            editWatchListEntries(card.watchlistEntryId, cardData);
+                                            editWatchListEntrie(card.watchlistEntryId, cardData);
                                           }"
                                           >
                                             <svg
@@ -592,7 +634,7 @@
                                             class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                                             @click="() => {
                                             isEditAvgPrice = !isEditAvgPrice;
-                                            editWatchListEntries(card.watchlistEntryId, cardData);
+                                            editWatchListEntrie(card.watchlistEntryId, cardData);
                                           }"
                                           >
                                             <svg
@@ -748,7 +790,7 @@
                                             class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                                             @click="() => {
                                             isEditComment = !isEditComment;
-                                            editWatchListEntries(card.watchlistEntryId, cardData);
+                                            editWatchListEntrie(card.watchlistEntryId, cardData);
                                           }"
                                           >
                                             <svg
@@ -978,15 +1020,35 @@
                               </button>
                       
                               <button
-                                :disabled="!selectedInstruments.length"
+                                :disabled="!selectedInstruments.length || isLoading"
                                 type="button"
                                 :class="!selectedInstruments.length ? 'cursor-not-allowed' : 'cursor-pointer'"
                                 class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
-                                @click="() => {
-                                  console.log('')
-                                }"
+                                @click="onSubmit()"
                               >
-                                Save
+                                <span x-show="!isLoading">Save</span>
+                                <span x-show="isLoading" class="flex items-center space-x-4"
+                                  ><svg
+                                    class="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <circle
+                                      class="opacity-25"
+                                      cx="12"
+                                      cy="12"
+                                      r="10"
+                                      stroke="currentColor"
+                                      stroke-width="4"
+                                    ></circle>
+                                    <path
+                                      class="opacity-75"
+                                      fill="currentColor"
+                                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                    ></path></svg
+                                  >Processing...</span
+                                >
                               </button>
                             </div>
                           </div>

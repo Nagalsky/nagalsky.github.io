@@ -4,11 +4,13 @@ function loadInstruments() {
     instruments: [],
     existingInstruments: [],
     selectedInstruments: [],
+    watchlistId: null,
     noInstruments: false,
+    isLoading: false,
 
     getExistingInstruments(data) {
-      this.existingInstruments = data;
-      console.log("existingInstruments: ", this.existingInstruments);
+      this.watchlistId = data[0].watchlistId;
+      this.existingInstruments = data[0].entries;
     },
 
     fetchInstruments() {
@@ -28,6 +30,13 @@ function loadInstruments() {
             : (this.noInstruments = false);
 
           this.instruments = data;
+          this.instruments = this.instruments.filter(
+            (arr1) =>
+              !this.existingInstruments.some(
+                (arr2) => arr1.instrumentId === arr2.instrumentId
+              )
+          );
+
           this.instruments = this.instruments.filter(
             (arr1) =>
               !this.selectedInstruments.some(
@@ -65,12 +74,39 @@ function loadInstruments() {
     },
 
     onSubmit() {
-      this.selectedInstruments;
-      console.log("selectedInstruments", this.selectedInstruments);
-      console.log(
-        "selectedInstruments length: ",
-        this.selectedInstruments.length
-      );
+      const payload = this.selectedInstruments.map((item) => ({
+        instrumentid: item.instrumentId,
+      }));
+
+      let raw = JSON.stringify([...payload]);
+
+      const requestOptions = Object.assign(requestPostOptions, {
+        body: raw,
+      });
+
+      this.isLoading = true;
+
+      fetch(`${watchListEntriesListApiUrl}/${this.watchlistId}`, requestOptions)
+        .then((res) => res.text())
+        .then(() => {
+          Toastify({
+            text: "Watch list entries was created successfully!",
+            ...toastSuccessConfig,
+          }).showToast();
+          this.getData();
+          this.showModalAddStock = false;
+          this.search = "";
+          this.selectedInstruments = [];
+        })
+        .catch((err) => {
+          Toastify({
+            text: err,
+            ...toastDangerConfig,
+          }).showToast();
+        })
+        .finally(() => {
+          this.isLoading = true;
+        });
     },
   };
 }

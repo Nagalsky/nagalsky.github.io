@@ -1,7 +1,14 @@
 <div
   class="mb-6 flex flex-col gap-6 md:mb-12 xl:flex-row xl:items-center xl:justify-between"
 >
-  <h3 class="text-[17px] font-semibold" x-text="tabConent.name"></h3>
+  <div class="flex flex-wrap items-center space-x-4">
+    <h3 class="text-[17px] font-semibold" x-text="tabContent.name"></h3>
+    <span
+      x-show="tabContent.entries.length"
+      x-text="tabContent.entries.length + ' Stocks'"
+      class="inline-block rounded-[8px] bg-green300 px-[7px] py-[4.5px] text-[10px] font-medium text-green500"
+    ></span>
+  </div>
 
   <div
     class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"

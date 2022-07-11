@@ -1,6 +1,18 @@
 <div x-show="view === 'cards'">
   <div class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4">
-    <template x-for="card in tabConent.entries" :key="card.watchlistEntryId">
+    <h2 x-show="!tabContent.entries.length" class="text-[16px] font-semibold">
+      Click
+      <button
+        type="button"
+        @click="showModalAddStock = true"
+        class="text-blue500 duration-200 ease-in-out hover:text-blue600"
+      >
+        here
+      </button>
+      to create a list stocks to follow.
+    </h2>
+
+    <template x-for="card in tabContent.entries" :key="card.watchlistEntryId">
       <div
         class="relative break-inside-avoid-column border-y-[8px] border-white"
       >
@@ -18,10 +30,33 @@
               ></span>
             </div>
 
-            <span
-              x-text="card.symbol"
-              class="text-[9px] font-medium text-blue800"
-            ></span>
+            <div class="flex items-center space-x-4">
+              <span
+                x-text="card.symbol"
+                class="text-[9px] font-medium text-blue800"
+              ></span>
+              <button
+                type="button"
+                class="text-gray500 hover:text-gray600"
+                data-tippy-content="Delete"
+                @click="deleteWatchListEntrie(card.watchlistEntryId);"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div
@@ -86,7 +121,7 @@
                       class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                       @click="() => {
                       isEditAmount = !isEditAmount;
-                      editWatchListEntries(card.watchlistEntryId, cardData);
+                      editWatchListEntrie(card.watchlistEntryId, cardData);
                     }"
                     >
                       <svg
@@ -183,7 +218,7 @@
                       class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                       @click="() => {
                       isEditAvgPrice = !isEditAvgPrice;
-                      editWatchListEntries(card.watchlistEntryId, cardData);
+                      editWatchListEntrie(card.watchlistEntryId, cardData);
                     }"
                     >
                       <svg
@@ -339,7 +374,7 @@
                       class="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue500 text-white"
                       @click="() => {
                       isEditComment = !isEditComment;
-                      editWatchListEntries(card.watchlistEntryId, cardData);
+                      editWatchListEntrie(card.watchlistEntryId, cardData);
                     }"
                     >
                       <svg

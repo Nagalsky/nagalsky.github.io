@@ -1,211 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= templates/head.html
-    <title>Stock Hawk member dashboard distribution lists page</title>
-  </head>
 
-  <body
-    class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
-  >
-    //= templates/header-loggedin.html
+<head>
+  //= templates/head.html
+  <title>Stock Hawk member dashboard distribution lists page</title>
+</head>
 
-    <main class="flex grow pb-6 pt-3 lg:py-0">
-      <section class="flex w-full">
-        <div
-          class="container flex max-w-full flex-col gap-4 lg:flex-row lg:gap-0 lg:px-0"
-        >
-          //= templates/member-dashboard-aside.html
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
+  //= templates/header-loggedin.html
 
-          <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
-            <div
-              class="mb-6 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <h1 class="text-[17px] font-semibold">Distribution Lists</h1>
-              <button
-                type="button"
-                class="inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 sm:ml-4 md:px-[29px]"
-              >
-                Add Watchlist
-              </button>
-            </div>
+  <main class="flex grow pb-6 pt-3 lg:py-0">
+    <section class="flex w-full">
+      <div class="container flex max-w-full flex-col gap-4 lg:flex-row lg:gap-0 lg:px-0">
+        //= templates/member-dashboard-aside.html
 
-            <div
-              x-data="dashboardDistributionListsInit()"
-              x-init="getDistributionLists()"
-            >
-              <template x-if="tabs">
-                <div
-                  x-data="{ activeTab: tabs[0].watchlistId }"
-                  x-effect="getWatchListRecipients(activeTab)"
-                >
-                  <div
-                    class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6"
-                  >
-                    <template x-for="tab in tabs" :key="tab.watchlistId">
-                      <button
-                        @click.prevent="activeTab = tab.watchlistId;"
-                        x-text="tab.name"
-                        :disabled="isLoading"
-                        :class="activeTab === tab.watchlistId ? 'text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
-                        class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"
-                      ></button>
-                    </template>
-                  </div>
+        <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
+          <div class="mb-6 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <h1 class="text-[17px] font-semibold">Distribution Lists</h1>
+            <button type="button"
+              class="inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 sm:ml-4 md:px-[29px]">
+              Add Watchlist
+            </button>
+          </div>
 
+          <div x-data="dashboardDistributionListsInit()" x-init="getDistributionLists()">
+            <template x-if="tabs">
+              <div x-data="{ activeTab: tabs[0].watchlistId }" x-effect="getWatchListRecipients(activeTab)">
+                <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
                   <template x-for="tab in tabs" :key="tab.watchlistId">
-                    <div x-show="activeTab === tab.watchlistId">
-                      <div
-                        class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
-                      >
-                        //= templates/loader.html
+                    <button @click.prevent="activeTab = tab.watchlistId;" x-text="tab.name" :disabled="isLoading"
+                      :class="activeTab === tab.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' :
+                        'text-[#a2a6bb] md:before:transparent'"
+                      class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"></button>
+                  </template>
+                </div>
 
-                        <h3
-                          class="mb-6 text-[17px] font-semibold sm:mb-10"
-                          x-text="tab.name"
-                        ></h3>
+                <template x-for="tab in tabs" :key="tab.watchlistId">
+                  <div x-show="activeTab === tab.watchlistId">
+                    <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6">
+                      //= templates/loader.html
 
-                        <form
-                          class="flex flex-col gap-4 rounded-t-sm bg-[#f9fafb] p-4 sm:flex-row sm:items-center xl:gap-8"
-                          x-data="createWatchListRecipientForm()"
-                          @submit.prevent="submitData(tab.watchlistId)"
-                        >
-                          <div
-                            class="grow md:max-w-[280px] xl:max-w-[340px] xxl:max-w-[400px]"
-                          >
-                            <label
-                              for="form-field-name"
-                              class="form-label inline-block text-[12px] font-semibold uppercase text-[#969fb2]"
-                              >Name</label
-                            >
-                            <input
-                              type="text"
-                              class="block h-[38px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
-                              x-model="formData.name"
-                              placeholder="Add name"
-                              id="form-field-name"
-                            />
-                          </div>
+                      <h3 class="mb-6 text-[17px] font-semibold sm:mb-10" x-text="tab.name"></h3>
 
-                          <div
-                            class="grow md:max-w-[280px] xl:max-w-[340px] xxl:max-w-[400px]"
-                          >
-                            <label
-                              for="form-field-email"
-                              class="form-label inline-block text-[12px] font-semibold uppercase text-[#969fb2]"
-                              >email</label
-                            >
-                            <input
-                              type="email"
-                              class="block h-[38px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
-                              required
-                              x-model="formData.email"
-                              placeholder="Add email"
-                              id="form-field-email"
-                            />
-                          </div>
+                      <form
+                        class="flex flex-col gap-4 rounded-t-sm bg-[#f9fafb] p-4 sm:flex-row sm:items-center xl:gap-8"
+                        x-data="createWatchListRecipientForm()" @submit.prevent="submitData(tab.watchlistId)">
+                        <div class="grow md:max-w-[280px] xl:max-w-[340px] xxl:max-w-[400px]">
+                          <label for="form-field-name"
+                            class="form-label inline-block text-[12px] font-semibold uppercase text-[#969fb2]">Name</label>
+                          <input type="text"
+                            class="block h-[38px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                            x-model="formData.name" placeholder="Add name" id="form-field-name" />
+                        </div>
 
-                          <button
-                            type="submit"
-                            class="flex min-h-[38px] shrink-0 items-center justify-center rounded-[4px] bg-blue300 px-[14px] text-[14px] font-semibold text-blue500 sm:self-end"
-                            :class="loading ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'"
-                            :disabled="loading"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="mr-2 h-5 w-5"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                            Add
-                          </button>
-                        </form>
+                        <div class="grow md:max-w-[280px] xl:max-w-[340px] xxl:max-w-[400px]">
+                          <label for="form-field-email"
+                            class="form-label inline-block text-[12px] font-semibold uppercase text-[#969fb2]">email</label>
+                          <input type="email"
+                            class="block h-[38px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                            required x-model="formData.email" placeholder="Add email" id="form-field-email" />
+                        </div>
 
-                        <template x-if="tableData">
-                          <div
-                            x-data="dataTable()"
-                            x-effect="initData()"
-                            class="overflow-x-auto"
-                          >
-                            <table
-                              class="w-full table-auto border-x border-t border-gray75"
-                            >
-                              <tbody>
-                                <template
-                                  x-for="item in items"
-                                  :key="item.recieverId"
-                                >
-                                  <tr
-                                    class="border-b border-gray75 [&>*]:px-4 [&>*]:py-[14px] [&>*]:text-[14px] [&>*]:font-bold [&>*]:md:text-[15px]"
-                                    x-data="{ 
+                        <button type="submit"
+                          class="flex min-h-[38px] shrink-0 items-center justify-center rounded-[4px] bg-blue300 px-[14px] text-[14px] font-semibold text-blue500 sm:self-end"
+                          :class="loading ? 'opacity-50 cursor-not-allowed' : 'opacity-100 cursor-pointer'"
+                          :disabled="loading">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                              clip-rule="evenodd" />
+                          </svg>
+                          Add
+                        </button>
+                      </form>
+
+                      <template x-if="tableData">
+                        <div x-data="dataTable()" x-effect="initData()" class="overflow-x-auto">
+                          <table class="w-full table-auto border-x border-t border-gray75">
+                            <tbody>
+                              <template x-for="item in items" :key="item.recieverId">
+                                <tr
+                                  class="border-b border-gray75 [&>*]:px-4 [&>*]:py-[14px] [&>*]:text-[14px] [&>*]:font-bold [&>*]:md:text-[15px]"
+                                  x-data="{ 
                                       isEdit: false,
                                       name: item.name,
                                       email: item.email,
                                       emailValidationError: false
-                                    }"
-                                  >
-                                    <td
-                                      class="min-w-[160px] break-all md:w-[298px] xl:w-[376px] xxl:w-[436px]"
-                                    >
-                                      <span
-                                        x-text="name"
-                                        x-show="!isEdit"
-                                      ></span>
-                                      <input
-                                        type="text"
-                                        placeholder="Name"
-                                        class="block h-[22px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
-                                        x-model="name"
-                                        x-show="isEdit"
-                                      />
-                                    </td>
-                                    <td
-                                      class="min-w-[200px] break-all md:w-[298px] xl:w-[376px] xxl:w-[436px]"
-                                    >
-                                      <span
-                                        x-text="email"
-                                        x-show="!isEdit"
-                                      ></span>
-                                      <input
-                                        type="email"
-                                        :class="emailValidationError ? 'border-red500' : 'border-gray75'"
-                                        class="block h-[22px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
-                                        placeholder="Email"
-                                        x-model="email"
-                                        x-show="isEdit"
-                                      />
-                                    </td>
-                                    <td>
-                                      <div
-                                        class="flex items-center justify-end space-x-4"
-                                      >
-                                        <button
-                                          class="border-0 bg-transparent p-0 text-blue500"
-                                          x-show="!isEdit"
-                                          @click="isEdit = true"
-                                          data-tippy-content="Edit"
-                                        >
-                                          <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                          >
-                                            <path
-                                              d="M2.5 14.5499V17.0832C2.5 17.3166 2.68333 17.4999 2.91667 17.4999H5.45C5.55833 17.4999 5.66667 17.4582 5.74167 17.3749L14.8417 8.28322L11.7167 5.15822L2.625 14.2499C2.54167 14.3332 2.5 14.4332 2.5 14.5499ZM17.2583 5.86655C17.5833 5.54155 17.5833 5.01655 17.2583 4.69155L15.3083 2.74155C14.9833 2.41655 14.4583 2.41655 14.1333 2.74155L12.6083 4.26655L15.7333 7.39155L17.2583 5.86655V5.86655Z"
-                                            />
-                                          </svg>
-                                        </button>
-                                        <button
-                                          class="border-0 bg-transparent p-0 text-blue500"
-                                          x-show="isEdit"
-                                          @click="() => {
+                                    }">
+                                  <td class="min-w-[160px] break-all md:w-[298px] xl:w-[376px] xxl:w-[436px]">
+                                    <span x-text="name" x-show="!isEdit"></span>
+                                    <input type="text" placeholder="Name"
+                                      class="block h-[22px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                                      x-model="name" x-show="isEdit" />
+                                  </td>
+                                  <td class="min-w-[200px] break-all md:w-[298px] xl:w-[376px] xxl:w-[436px]">
+                                    <span x-text="email" x-show="!isEdit"></span>
+                                    <input type="email"
+                                      :class="emailValidationError ? 'border-red500' : 'border-gray75'"
+                                      class="block h-[22px] w-full rounded-[5px] border border-solid border-gray75 bg-white px-2 py-1.5 text-sm font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                                      placeholder="Email" x-model="email" x-show="isEdit" />
+                                  </td>
+                                  <td>
+                                    <div class="flex items-center justify-end space-x-4">
+                                      <button class="border-0 bg-transparent p-0 text-blue500" x-show="!isEdit"
+                                        @click="isEdit = true" data-tippy-content="Edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                          fill="currentColor">
+                                          <path
+                                            d="M2.5 14.5499V17.0832C2.5 17.3166 2.68333 17.4999 2.91667 17.4999H5.45C5.55833 17.4999 5.66667 17.4582 5.74167 17.3749L14.8417 8.28322L11.7167 5.15822L2.625 14.2499C2.54167 14.3332 2.5 14.4332 2.5 14.5499ZM17.2583 5.86655C17.5833 5.54155 17.5833 5.01655 17.2583 4.69155L15.3083 2.74155C14.9833 2.41655 14.4583 2.41655 14.1333 2.74155L12.6083 4.26655L15.7333 7.39155L17.2583 5.86655V5.86655Z" />
+                                        </svg>
+                                      </button>
+                                      <button class="border-0 bg-transparent p-0 text-blue500" x-show="isEdit" @click="() => {
                                             validateEmail = (email) => {
                                               const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
                                               if (email.match(validRegex)) {
@@ -219,74 +125,52 @@
                                               }
                                             }
                                             validateEmail(email)
-                                          }"
-                                          data-tippy-content="Save"
-                                        >
-                                          <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                          >
-                                            <path
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-                                            />
-                                          </svg>
-                                        </button>
-                                        <button
-                                          @click="onDelete(item.watchlistId, item.recieverId)"
-                                          class="border-0 bg-transparent p-0 text-blue500"
-                                          data-tippy-content="Delete"
-                                        >
-                                          <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-5 w-5"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                          >
-                                            <path
-                                              d="M11.8751 1.58341H9.10425L8.31258 0.791748H4.35425L3.56258 1.58341H0.791748V3.16675H11.8751V1.58341Z"
-                                            />
-                                            <path
-                                              d="M12.6668 7.12516C12.1127 7.12516 11.5822 7.20433 11.0835 7.35475V3.9585H1.5835V13.4585C1.5835 14.3293 2.296 15.0418 3.16683 15.0418H7.6635C8.55016 16.9102 10.4581 18.2085 12.6668 18.2085C15.7306 18.2085 18.2085 15.7306 18.2085 12.6668C18.2085 9.60308 15.7306 7.12516 12.6668 7.12516ZM12.6668 16.6252C10.4818 16.6252 8.7085 14.8518 8.7085 12.6668C8.7085 10.4818 10.4818 8.7085 12.6668 8.7085C14.8518 8.7085 16.6252 10.4818 16.6252 12.6668C16.6252 14.8518 14.8518 16.6252 12.6668 16.6252Z"
-                                            />
-                                            <path
-                                              d="M13.0625 9.5H11.875V13.4583L14.725 15.1208L15.3583 14.1708L13.0625 12.825V9.5Z"
-                                            />
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </template>
-                                <tr x-show="isEmpty()">
-                                  <td
-                                    colspan="5"
-                                    class="border-b border-gray75 py-5 px-4 text-center text-base font-bold"
-                                  >
-                                    Add email to share your daily watchlist
-                                    updates.
+                                          }" data-tippy-content="Save">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                                        </svg>
+                                      </button>
+                                      <button @click="onDelete(item.watchlistId, item.recieverId)"
+                                        class="border-0 bg-transparent p-0 text-blue500" data-tippy-content="Delete">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                          fill="currentColor">
+                                          <path
+                                            d="M11.8751 1.58341H9.10425L8.31258 0.791748H4.35425L3.56258 1.58341H0.791748V3.16675H11.8751V1.58341Z" />
+                                          <path
+                                            d="M12.6668 7.12516C12.1127 7.12516 11.5822 7.20433 11.0835 7.35475V3.9585H1.5835V13.4585C1.5835 14.3293 2.296 15.0418 3.16683 15.0418H7.6635C8.55016 16.9102 10.4581 18.2085 12.6668 18.2085C15.7306 18.2085 18.2085 15.7306 18.2085 12.6668C18.2085 9.60308 15.7306 7.12516 12.6668 7.12516ZM12.6668 16.6252C10.4818 16.6252 8.7085 14.8518 8.7085 12.6668C8.7085 10.4818 10.4818 8.7085 12.6668 8.7085C14.8518 8.7085 16.6252 10.4818 16.6252 12.6668C16.6252 14.8518 14.8518 16.6252 12.6668 16.6252Z" />
+                                          <path
+                                            d="M13.0625 9.5H11.875V13.4583L14.725 15.1208L15.3583 14.1708L13.0625 12.825V9.5Z" />
+                                        </svg>
+                                      </button>
+                                    </div>
                                   </td>
                                 </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </template>
-                      </div>
+                              </template>
+                              <tr x-show="isEmpty()">
+                                <td colspan="5"
+                                  class="border-b border-gray75 py-5 px-4 text-center text-base font-bold">
+                                  Add email to share your daily watchlist
+                                  updates.
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </template>
                     </div>
-                  </template>
-                </div>
-              </template>
-            </div>
+                  </div>
+                </template>
+              </div>
+            </template>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script src="./js/scripts.js"></script>
-  </body>
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>

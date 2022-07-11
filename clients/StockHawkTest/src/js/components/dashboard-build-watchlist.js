@@ -19,7 +19,6 @@ function dashboardBuildWatchlistInit() {
         })
         .finally(() => {
           NProgress.done();
-          // this.isLoading = false;
         });
     },
 
@@ -27,7 +26,7 @@ function dashboardBuildWatchlistInit() {
       this.existingStocks = this.data.filter((el) => el.watchlistId === id);
     },
 
-    editWatchListEntries(id, data) {
+    editWatchListEntrie(id, data) {
       let raw = JSON.stringify({
         Amount: parseFloat(data.amount),
         OpenPrice: parseFloat(data.openPrice),
@@ -56,6 +55,31 @@ function dashboardBuildWatchlistInit() {
               ...toastDangerConfig,
             }).showToast();
           }
+        })
+        .catch((err) => {
+          Toastify({
+            text: err,
+            ...toastDangerConfig,
+          }).showToast();
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
+    },
+
+    deleteWatchListEntrie(id) {
+      this.isLoading = true;
+      fetch(`${watchListEntriesApiUrl}/${id}`, requestDeleteOptions)
+        .then((res) => res.text())
+        .then(() => {
+          this.tabContent.entries = this.tabContent.entries.filter(
+            (el) => el.watchlistEntryId !== id
+          );
+          Toastify({
+            text: "Entries was deleted successfully!",
+            ...toastSuccessConfig,
+          }).showToast();
+          this.getData();
         })
         .catch((err) => {
           Toastify({
