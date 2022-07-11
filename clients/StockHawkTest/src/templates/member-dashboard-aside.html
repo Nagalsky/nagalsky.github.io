@@ -3,7 +3,7 @@
 >
   <nav
     class="grid md:text-lg"
-    x-data="{page: location.pathname.replace('/', '' ).replace('.html', '' )}"
+    x-data="{page: location.pathname.replace('/', '' ).replace('.html', '' )}; $nextTick(() => { console.log(location.pathname) });"
     @hashchange.window="page = location.pathname"
   >
     <a
