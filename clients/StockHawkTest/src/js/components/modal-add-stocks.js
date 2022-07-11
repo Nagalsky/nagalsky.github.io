@@ -2,8 +2,14 @@ function loadInstruments() {
   return {
     search: "",
     instruments: [],
+    existingInstruments: [],
     selectedInstruments: [],
     noInstruments: false,
+
+    getExistingInstruments(data) {
+      this.existingInstruments = data;
+      console.log("existingInstruments: ", this.existingInstruments);
+    },
 
     fetchInstruments() {
       if (this.search === "") {

@@ -1,6 +1,7 @@
 function dashboardBuildWatchlistInit() {
   return {
     data: null,
+    existingStocks: null,
     isLoading: false,
 
     getData() {
@@ -22,10 +23,14 @@ function dashboardBuildWatchlistInit() {
         });
     },
 
+    getExistingStocks(id) {
+      this.existingStocks = this.data.filter((el) => el.watchlistId === id);
+    },
+
     editWatchListEntries(id, data) {
       let raw = JSON.stringify({
         Amount: parseFloat(data.amount),
-        OpenPrice: data.openPrice,
+        OpenPrice: parseFloat(data.openPrice),
         Comment: data.comment,
       });
 
@@ -33,41 +38,47 @@ function dashboardBuildWatchlistInit() {
         body: raw,
       });
 
-      console.log("requestOptions", requestOptions);
+      this.isLoading = true;
 
-      // this.isLoading = true;
-
-      // fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
-      //   .then((response) => response.text())
-      //   .then((result) => {
-      //     if (!result) {
-      //       Toastify({
-      //         text: "Entries was edited successfully!",
-      //         ...toastSuccessConfig,
-      //       }).showToast();
-      //       this.getData();
-      //     } else {
-      //       const error = JSON.parse(result);
-      //       Toastify({
-      //         text: error.title,
-      //         ...toastDangerConfig,
-      //       }).showToast();
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     Toastify({
-      //       text: err,
-      //       ...toastDangerConfig,
-      //     }).showToast();
-      //   })
-      //   .finally(() => {
-      //     this.isLoading = false;
-      //   });
+      fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          if (!result) {
+            Toastify({
+              text: "Entries was edited successfully!",
+              ...toastSuccessConfig,
+            }).showToast();
+            this.getData();
+          } else {
+            const error = JSON.parse(result);
+            Toastify({
+              text: error.title,
+              ...toastDangerConfig,
+            }).showToast();
+          }
+        })
+        .catch((err) => {
+          Toastify({
+            text: err,
+            ...toastDangerConfig,
+          }).showToast();
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
     },
 
     amountMask(input) {
       let res = input.replace(/[^\d.]+/g, "");
       return res;
+    },
+
+    openPriceMask() {
+      new Cleave(this.$refs.inputPriceMask, {
+        numeral: true,
+        numeralDecimalMark: ".",
+        delimiter: ",",
+      });
     },
   };
 }

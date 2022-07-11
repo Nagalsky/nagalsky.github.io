@@ -29,8 +29,8 @@
               <div x-data="{ activeTab: data[0].watchlistId }">
                 <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
                   <template x-for="tabSwitch in data" :key="tabSwitch.watchlistId">
-                    <button @click.prevent="activeTab = tabSwitch.watchlistId" x-text="tabSwitch.name"
-                      :disabled="isLoading"
+                    <button @click.prevent="activeTab = tabSwitch.watchlistId" x-effect="getExistingStocks(activeTab)"
+                      x-text="tabSwitch.name" :disabled="isLoading"
                       :class="activeTab === tabSwitch.watchlistId ? 'text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
                       class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"></button>
                   </template>

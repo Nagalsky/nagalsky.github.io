@@ -12,6 +12,7 @@
     class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
     x-data="loadInstruments()"
     x-init="$watch('search', () => fetchInstruments())"
+    x-effect="getExistingInstruments(existingStocks)"
   >
     <div
       class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
@@ -175,7 +176,9 @@
           type="button"
           :class="!selectedInstruments.length ? 'cursor-not-allowed' : 'cursor-pointer'"
           class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
-          @click="onSubmit()"
+          @click="() => {
+            console.log('')
+          }"
         >
           Save
         </button>
