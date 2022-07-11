@@ -105,7 +105,7 @@ function loadInstruments() {
           }).showToast();
         })
         .finally(() => {
-          this.isLoading = true;
+          this.isLoading = false;
         });
     },
   };
