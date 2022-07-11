@@ -178,7 +178,7 @@
         >
           <nav
             class="grid md:text-lg"
-            x-data="{page: location.pathname.replace('/', '' ).replace('.html', '' )}; $nextTick(() => { console.log(location.pathname) });"
+            x-data="{page: location.pathname.replace(/^.*\/([^/]*)/, '$1').replace('.html', '' )}"
             @hashchange.window="page = location.pathname"
           >
             <a
