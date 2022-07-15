@@ -7,7 +7,8 @@
 </head>
 
 <body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
-  x-data="{ showModalAddStock: false }" :class="{'overflow-y-hidden': showModalAddStock}">
+  x-data="{ showModalAddStock: false, showModalAddingTrade: false }"
+  :class="{'overflow-y-hidden': showModalAddStock || showModalAddingTrade}" x-cloak>
   //= templates/header-loggedin.html
 
   <main class="flex grow pb-6 pt-3 lg:py-0">
@@ -25,7 +26,7 @@
           </div>
 
           <div x-data="dashboardBuildWatchlistInit()">
-            <template x-if="data" x-init="getData()">
+            <template x-if="data" x-effect="initialData()">
               <div x-data="{ activeTab: data[0].watchlistId }">
                 <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
                   <template x-for="tabSwitch in data" :key="tabSwitch.watchlistId">
@@ -51,9 +52,12 @@
                       </div>
 
                       //= templates/modal-add-stocks.html
+
+                      //= templates/modal-adding-trade.html
                     </div>
                   </div>
                 </template>
+
               </div>
             </template>
           </div>

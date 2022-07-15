@@ -8,3 +8,4 @@ const watchListRecipientsApiUrl =
 const watchListPositionsApiUrl =
   "https://www.stockhawk.io/api/watchlistpositions";
 const instrumentsApiURL = "https://www.stockhawk.io/api/instruments";
+const historicpricesApiURL = "https://www.stockhawk.io/api/historicprices";

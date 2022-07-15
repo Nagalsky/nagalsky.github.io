@@ -3,17 +3,19 @@ function dashboardBuildWatchlistInit() {
     data: null,
     existingStocks: null,
     isLoading: false,
+    tradeModalCard: null,
 
-    getData() {
+    initialData() {
       NProgress.start();
-      fetch(watchListsFullApiUrl, requestGetOptions)
-        .then((res) => res.json())
-        .then((data) => {
-          this.data = data;
+
+      axios
+        .get(watchListsFullApiUrl, configHeaders)
+        .then((res) => {
+          this.data = res.data;
         })
         .catch((err) => {
           Toastify({
-            text: err,
+            text: err?.response?.statusText,
             ...toastDangerConfig,
           }).showToast();
         })
@@ -27,38 +29,26 @@ function dashboardBuildWatchlistInit() {
     },
 
     editWatchListEntrie(id, data) {
-      let raw = JSON.stringify({
+      let payload = {
         Amount: parseFloat(data.amount),
         OpenPrice: parseFloat(data.openPrice),
         Comment: data.comment,
-      });
-
-      const requestOptions = Object.assign(requestPutOptions, {
-        body: raw,
-      });
+      };
 
       this.isLoading = true;
 
-      fetch(`${watchListEntriesApiUrl}/${id}`, requestOptions)
-        .then((response) => response.text())
-        .then((result) => {
-          if (!result) {
-            Toastify({
-              text: "Entries was edited successfully!",
-              ...toastSuccessConfig,
-            }).showToast();
-            this.getData();
-          } else {
-            const error = JSON.parse(result);
-            Toastify({
-              text: error.title,
-              ...toastDangerConfig,
-            }).showToast();
-          }
+      axios
+        .post(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
+        .then(() => {
+          Toastify({
+            text: "Entries was edited successfully!",
+            ...toastSuccessConfig,
+          }).showToast();
+          this.initialData();
         })
         .catch((err) => {
           Toastify({
-            text: err,
+            text: err?.response?.statusText,
             ...toastDangerConfig,
           }).showToast();
         })
@@ -69,8 +59,9 @@ function dashboardBuildWatchlistInit() {
 
     deleteWatchListEntrie(id) {
       this.isLoading = true;
-      fetch(`${watchListEntriesApiUrl}/${id}`, requestDeleteOptions)
-        .then((res) => res.text())
+
+      axios
+        .delete(`${watchListEntriesApiUrl}/${id}`, configHeaders)
         .then(() => {
           this.tabContent.entries = this.tabContent.entries.filter(
             (el) => el.watchlistEntryId !== id
@@ -79,11 +70,11 @@ function dashboardBuildWatchlistInit() {
             text: "Entries was deleted successfully!",
             ...toastSuccessConfig,
           }).showToast();
-          this.getData();
+          this.initialData();
         })
         .catch((err) => {
           Toastify({
-            text: err,
+            text: err?.response?.statusText,
             ...toastDangerConfig,
           }).showToast();
         })
@@ -103,6 +94,10 @@ function dashboardBuildWatchlistInit() {
         numeralDecimalMark: ".",
         delimiter: ",",
       });
+    },
+
+    cardItemForTradeModal(card) {
+      this.tradeModalCard = card;
     },
   };
 }

@@ -5,10 +5,16 @@ function dashboardDistributionListsInit() {
     isLoading: false,
 
     getDistributionLists() {
-      fetch(watchListsFullApiUrl, requestGetOptions)
-        .then((res) => res.json())
-        .then((data) => {
-          this.tabs = data;
+      axios
+        .get(watchListsFullApiUrl, configHeaders)
+        .then((res) => {
+          this.tabs = res.data;
+        })
+        .catch((err) => {
+          Toastify({
+            text: err?.response?.statusText,
+            ...toastDangerConfig,
+          }).showToast();
         });
     },
 
@@ -17,15 +23,15 @@ function dashboardDistributionListsInit() {
 
       this.isLoading = true;
 
-      fetch(`${watchListRecipientsApiUrl}/${id}`, requestGetOptions)
-        .then((res) => res.json())
-        .then((data) => {
-          this.tableData = data;
+      axios
+        .get(`${watchListRecipientsApiUrl}/${id}`, configHeaders)
+        .then((res) => {
+          this.tableData = res.data;
           this.isLoading = false;
         })
         .catch((err) => {
           Toastify({
-            text: err,
+            text: err?.response?.statusText,
             ...toastDangerConfig,
           }).showToast();
         })
@@ -46,17 +52,13 @@ function dashboardDistributionListsInit() {
           this.loading = true;
           NProgress.start();
 
-          let raw = JSON.stringify({
+          let payload = {
             name: this.formData.name,
             email: this.formData.email,
-          });
+          };
 
-          const requestOptions = Object.assign(requestPostOptions, {
-            body: raw,
-          });
-
-          fetch(`${watchListRecipientsApiUrl}/${id}`, requestOptions)
-            .then((res) => res.text())
+          axios
+            .post(`${watchListRecipientsApiUrl}/${id}`, payload, configHeaders)
             .then(() => {
               this.getWatchListRecipients(id);
               Toastify({
@@ -66,7 +68,7 @@ function dashboardDistributionListsInit() {
             })
             .catch((err) => {
               Toastify({
-                text: err,
+                text: err?.response?.statusText,
                 ...toastDangerConfig,
               }).showToast();
             })
@@ -91,11 +93,8 @@ function dashboardDistributionListsInit() {
           return this.tableData.length ? false : true;
         },
         onDelete(watchlistId, recieverId) {
-          fetch(
-            `${watchListRecipientsApiUrl}/${recieverId}`,
-            requestDeleteOptions
-          )
-            .then((res) => res.text())
+          axios
+            .delete(`${watchListRecipientsApiUrl}/${recieverId}`, configHeaders)
             .then(() => {
               Toastify({
                 text: "Recipient was deleted successfully!",
@@ -105,23 +104,29 @@ function dashboardDistributionListsInit() {
             })
             .catch((err) => {
               Toastify({
-                text: err,
+                text: err?.response?.statusText,
                 ...toastDangerConfig,
               }).showToast();
+            })
+            .finally(() => {
+              for (var key in this.formData) {
+                delete this.formData[key];
+              }
+              this.loading = false;
             });
         },
         onEdit(watchlistId, recieverId, name, email) {
-          let raw = JSON.stringify({
+          let payload = {
             name: name,
             email: email,
-          });
+          };
 
-          const requestOptions = Object.assign(requestPatchOptions, {
-            body: raw,
-          });
-
-          fetch(`${watchListRecipientsApiUrl}/${recieverId}`, requestOptions)
-            .then((res) => res.text())
+          axios
+            .patch(
+              `${watchListRecipientsApiUrl}/${recieverId}`,
+              payload,
+              configHeaders
+            )
             .then(() => {
               Toastify({
                 text: "Recipient was edited successfully!",
@@ -131,7 +136,7 @@ function dashboardDistributionListsInit() {
             })
             .catch((err) => {
               Toastify({
-                text: err,
+                text: err?.response?.statusText,
                 ...toastDangerConfig,
               }).showToast();
             });

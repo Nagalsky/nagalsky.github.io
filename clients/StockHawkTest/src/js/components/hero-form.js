@@ -25,9 +25,8 @@
         select.clearOptions();
       },
       load: (query, callback) => {
-        const url = `${apiURL}/${encodeURIComponent(query)}`;
-        fetch(url)
-          .then((response) => response.json())
+        axios
+          .get(`${apiURL}/${encodeURIComponent(query)}`)
           .then((json) => {
             callback(json);
           })

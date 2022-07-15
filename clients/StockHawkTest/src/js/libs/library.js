@@ -14,3 +14,5 @@
 //= ../../../node_modules/tippy.js/dist/tippy-bundle.umd.min.js
 //= ../../../node_modules/moment/min/moment.min.js
 //= ../../../node_modules/cleave.js/dist/cleave.min.js
+//= ../../../node_modules/flatpickr/dist/flatpickr.min.js
+//= ../../../node_modules/axios/dist/axios.min.js
