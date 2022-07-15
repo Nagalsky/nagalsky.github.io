@@ -347,6 +347,7 @@
                 <div
                   x-show="card.positions.length"
                   class="mb-2 overflow-hidden rounded-[3px] border-r border-r-gray75"
+                  x-data="{showAllTrades: false}"
                 >
                   <div class="overflow-x-auto">
                     <table class="w-full md:table-fixed">
@@ -360,22 +361,58 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <template
-                          x-for="tableCell in card.positions"
-                          :key="tableCell.positionId"
-                        >
-                          <tr
-                            class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium"
+                        <template x-if="!showAllTrades">
+                          <template
+                            x-for="tableCell in card.positions.slice(0, 3)"
+                            :key="tableCell.positionId"
                           >
-                            <td
-                              x-text="tableCell.transactionDate ? moment(tableCell.transactionDate).format('DD/MM/YYYY') : ''"
-                            ></td>
-                            <td x-text="tableCell.amount"></td>
-                            <td x-text="tableCell.transactionPrice"></td>
-                          </tr>
+                            <tr
+                              class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium"
+                            >
+                              <td
+                                x-text="tableCell.transactionDate ? moment(tableCell.transactionDate).format('DD/MM/YYYY') : ''"
+                              ></td>
+                              <td x-text="tableCell.amount"></td>
+                              <td x-text="tableCell.transactionPrice"></td>
+                            </tr>
+                          </template>
+                        </template>
+                        <template x-if="showAllTrades">
+                          <template
+                            x-for="tableCell in card.positions"
+                            :key="tableCell.positionId"
+                          >
+                            <tr
+                              class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium"
+                            >
+                              <td
+                                x-text="tableCell.transactionDate ? moment(tableCell.transactionDate).format('DD/MM/YYYY') : ''"
+                              ></td>
+                              <td x-text="tableCell.amount"></td>
+                              <td x-text="tableCell.transactionPrice"></td>
+                            </tr>
+                          </template>
                         </template>
                       </tbody>
                     </table>
+                  </div>
+
+                  <div
+                    class="mt-1 text-center"
+                    x-show="card.positions.length > 4"
+                  >
+                    <button
+                      @click="showAllTrades = !showAllTrades"
+                      type="button"
+                      class="inline-flex rounded-[3px] bg-blue300 py-[2px] px-[7px] text-[11px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                      :class="showAllTrades ? `before:content-['']` : `before:content-['+']`"
+                    >
+                      <span
+                        x-show="!showAllTrades"
+                        x-text="card.positions.length -3 + ' Trades'"
+                      ></span>
+                      <span x-show="showAllTrades">Less</span>
+                    </button>
                   </div>
                 </div>
 

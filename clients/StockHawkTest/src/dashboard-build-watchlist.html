@@ -7,8 +7,8 @@
 </head>
 
 <body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
-  x-data="{ showModalAddStock: false, showModalAddingTrade: false }"
-  :class="{'overflow-y-hidden': showModalAddStock || showModalAddingTrade}" x-cloak>
+  x-data="{ showModalAddStock: false, showModalAddingTrade: false, showModalAddwatchlist: false }"
+  :class="{'overflow-y-hidden': showModalAddStock || showModalAddingTrade || showModalAddwatchlist}" x-cloak>
   //= templates/header-loggedin.html
 
   <main class="flex grow pb-6 pt-3 lg:py-0">
@@ -19,7 +19,7 @@
         <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
           <div class="mb-5 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <h1 class="text-[17px] font-semibold">Build Watchlists</h1>
-            <button type="button"
+            <button type="button" @click="showModalAddwatchlist = true"
               class="ms-4 inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[29px]">
               Add Watchlist
             </button>
@@ -50,14 +50,15 @@
                       <div x-show="view === 'list'">
                         <p>LIST are here</p>
                       </div>
-
-                      //= templates/modal-add-stocks.html
-
-                      //= templates/modal-adding-trade.html
                     </div>
                   </div>
                 </template>
 
+                //= templates/modal-add-stocks.html
+
+                //= templates/modal-adding-trade.html
+
+                //= templates/modal-add-watchlist.html
               </div>
             </template>
           </div>
