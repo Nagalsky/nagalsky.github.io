@@ -47,7 +47,7 @@ function dashboardWatchlistCardsInit() {
       this.isLoading = true;
 
       axios
-        .post(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
+        .put(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
         .then(() => {
           Toastify({
             text: "Entries was edited successfully!",
