@@ -48,7 +48,6 @@ function addWatchListModal() {
         .post(`${watchListsApiUrl}`, payload, configHeaders)
         .then((res) => {
           this.isWatchlistCreated = true;
-          console.log("res", res);
         })
         .catch((err) => {
           Toastify({
@@ -100,7 +99,6 @@ function addWatchListModal() {
     },
 
     selectInstrument(obj) {
-      console.log("selectInstrument", obj);
       const arr = [obj].flat() || [];
 
       this.selectedInstruments = [...this.selectedInstruments, ...arr];

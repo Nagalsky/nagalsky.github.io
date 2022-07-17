@@ -147,7 +147,9 @@ function loadAddingTradeModal() {
               this.alertPurchaseDate = false;
               this.isPurchaseDateValid = true;
             } else {
-              field.purchasePrice === "" || field.purchasePrice === "0"
+              field.purchasePrice === "" ||
+              field.purchasePrice === "0" ||
+              field.purchasePrice === 0
                 ? (this.alertPurchaseDate = index)
                 : (this.alertPurchaseDate = false);
 

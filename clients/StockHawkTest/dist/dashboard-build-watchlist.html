@@ -270,7 +270,7 @@
                 <template x-for="tabContent in data" :key="tabContent.watchlistId">
                   <div x-show="activeTab === tabContent.watchlistId">
                     <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
-                      x-data="{ view: 'cards'}">
+                      x-data="{ view: 'list'}">
                       <div
                         x-show="isLoading"
                         class="absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-white/75"
@@ -416,94 +416,103 @@
                         </div>
                       </div>
 
+                      <h2 x-show="!tabContent.entries.length" class="text-[16px] font-semibold">
+                        Click
+                        <button type="button" @click="showModalAddStock = true"
+                          class="text-blue500 duration-200 ease-in-out hover:text-blue600">
+                          here
+                        </button>
+                        to create a list stocks to follow.
+                      </h2>
+
                       <div x-show="view === 'cards'">
-                        <div class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4">
-                          <h2 x-show="!tabContent.entries.length" class="text-[16px] font-semibold">
-                            Click
-                            <button
-                              type="button"
-                              @click="showModalAddStock = true"
-                              class="text-blue500 duration-200 ease-in-out hover:text-blue600"
-                            >
-                              here
-                            </button>
-                            to create a list stocks to follow.
-                          </h2>
-                      
-                          <template x-for="card in tabContent.entries" :key="card.watchlistEntryId">
-                            <div
-                              class="relative break-inside-avoid-column border-y-[8px] border-white"
-                            >
-                              <div class="rounded-[9px] bg-[#f9fafb] px-4 py-4 sm:px-6">
-                                <div class="mb-5 flex min-w-0 items-center justify-between gap-3">
-                                  <div class="flex min-w-0 items-center gap-3">
-                                    <img
-                                      :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
-                                      :alt="`${card.symbol}`"
-                                      class="block h-[30px] w-[30px] rounded-full object-cover text-[8px]"
-                                    />
-                                    <span
-                                      x-text="card.instrumentName"
-                                      class="truncate text-[9px] font-medium text-black"
-                                    ></span>
-                                  </div>
-                      
-                                  <div class="flex flex-col gap-1">
-                                    <div class="flex items-center space-x-4">
+                        <div
+                          class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4"
+                          x-data="dashboardWatchlistCardsInit()"
+                          x-effect="() => {
+                            cardViewInit(tabContent.entries)
+                            $watch('data', () => cardViewInit(tabContent.entries))
+                          }"
+                        >
+                          <template x-if="cardViewData.length">
+                            <template x-for="card in tabContent.entries" :key="card.watchlistEntryId">
+                              <div
+                                class="relative break-inside-avoid-column border-y-[8px] border-white"
+                              >
+                                <div class="rounded-[9px] bg-[#f9fafb] px-4 py-4 sm:px-6">
+                                  <div class="mb-5 flex min-w-0 items-center justify-between gap-3">
+                                    <div class="flex min-w-0 items-center gap-3">
+                                      <img
+                                        :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
+                                        :alt="`${card.symbol}`"
+                                        class="block h-[30px] w-[30px] rounded-full object-cover text-[8px]"
+                                      />
                                       <span
-                                        x-text="card.symbol"
-                                        class="text-[9px] font-medium text-blue800"
+                                        x-text="card.instrumentName"
+                                        class="truncate text-[9px] font-medium text-black"
                                       ></span>
-                                      <button
-                                        type="button"
-                                        class="text-gray500 hover:text-gray600"
-                                        data-tippy-content="Delete"
-                                        @click="deleteWatchListEntrie(card.watchlistEntryId);"
-                                      >
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          class="h-5 w-5"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                          stroke="currentColor"
-                                          stroke-width="2"
-                                        >
-                                          <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M6 18L18 6M6 6l12 12"
-                                          />
-                                        </svg>
-                                      </button>
                                     </div>
-                      
-                                    <template x-if="card.priceChange">
-                                      <div class="text-right text-[11px] font-medium">
+                        
+                                    <div class="flex flex-col gap-1">
+                                      <div class="flex items-center space-x-4">
                                         <span
-                                          class="text-black"
-                                          x-text="card.priceChange + '%'"
-                                          x-show="card.pricePercentChange === 0"
+                                          x-text="card.symbol"
+                                          class="text-[9px] font-medium text-blue800"
                                         ></span>
-                                        <span
-                                          class="text-red500"
-                                          x-text="card.priceChange + '%'"
-                                          x-show="card.pricePercentChange < 0"
-                                        ></span>
-                                        <span
-                                          class="text-green500"
-                                          x-text="'+' + card.priceChange + '%'"
-                                          x-show="card.pricePercentChange > 0"
-                                        ></span>
+                                        <button
+                                          type="button"
+                                          class="text-gray500 hover:text-gray600"
+                                          data-tippy-content="Delete"
+                                          @click="deleteWatchListEntrie(card.watchlistEntryId);"
+                                        >
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M6 18L18 6M6 6l12 12"
+                                            />
+                                          </svg>
+                                        </button>
                                       </div>
-                                    </template>
+                        
+                                      <template x-if="card.priceChange">
+                                        <div class="text-right text-[11px] font-medium">
+                                          <span
+                                            class="text-black"
+                                            x-text="card.priceChange + '%'"
+                                            x-show="card.pricePercentChange === 0"
+                                          ></span>
+                                          <span
+                                            class="text-red500"
+                                            x-text="card.priceChange + '%'"
+                                            x-show="card.pricePercentChange < 0"
+                                          ></span>
+                                          <span
+                                            class="text-green500"
+                                            x-text="'+' + card.priceChange + '%'"
+                                            x-show="card.pricePercentChange > 0"
+                                          ></span>
+                                        </div>
+                                      </template>
+                                    </div>
                                   </div>
-                                </div>
-                      
-                                <div x-data="dashboardBWatchlistCardsInit()">
+                        
                                   <div
                                     class="space-y-6"
-                                    x-effect="$watch('data', () => initCardState(card))"
-                                    x-data="initCardState(card)"
+                                    x-data="{ 
+                                      cardData: {
+                                        amount: card.amount || '',
+                                        openPrice: card.openPrice || '',
+                                        comment: card.comment || ''
+                                      }
+                                    }"
                                   >
                                     <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xxl:gap-8">
                                       <div
@@ -513,7 +522,7 @@
                                         <span class="text-[12px] font-medium text-[#969fb2]"
                                           >Amount</span
                                         >
-                      
+                        
                                         <button
                                           type="button"
                                           x-show="!card.positions.length && (card.amount && !isEditAmount)"
@@ -521,7 +530,7 @@
                                           class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2.5px] px-1 text-[15px] font-bold leading-none text-blue800 hover:border-gray75 hover:bg-white"
                                           @click="isEditAmount = !isEditAmount"
                                         ></button>
-                      
+                        
                                         <div
                                           class="items-top flex justify-between space-x-1"
                                           x-show="card.positions.length"
@@ -546,7 +555,7 @@
                                             />
                                           </svg>
                                         </div>
-                      
+                        
                                         <div x-show="isEditAmount" class="flex space-x-1">
                                           <input
                                             type="text"
@@ -556,15 +565,15 @@
                                             x-mask:dynamic="amountMask"
                                             maxlength="6"
                                           />
-                      
+                        
                                           <div class="flex items-center space-x-1">
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
                                               @click="() => {
-                                              isEditAmount = !isEditAmount;
-                                              cardData.amount = card.amount;
-                                            }"
+                                                isEditAmount = !isEditAmount;
+                                                cardData.amount = card.amount;
+                                              }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -579,14 +588,14 @@
                                                 />
                                               </svg>
                                             </button>
-                      
+                        
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
                                               @click="() => {
-                                              isEditAmount = !isEditAmount;
-                                              editWatchListEntrie(card.watchlistEntryId, cardData);
-                                            }"
+                                                isEditAmount = !isEditAmount;
+                                                editWatchListEntrie(card.watchlistEntryId, cardData);
+                                              }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +612,7 @@
                                             </button>
                                           </div>
                                         </div>
-                      
+                        
                                         <div x-show="!card.amount && !isEditAmount">
                                           <button
                                             type="button"
@@ -628,7 +637,7 @@
                                           </button>
                                         </div>
                                       </div>
-                      
+                        
                                       <div
                                         class="flex flex-col gap-1"
                                         x-data="{ isEditAvgPrice: false }"
@@ -637,7 +646,7 @@
                                         <span class="text-[12px] font-medium text-[#969fb2]"
                                           >Avg Price</span
                                         >
-                      
+                        
                                         <button
                                           type="button"
                                           x-show="!card.positions.length && (card.openPrice && !isEditAvgPrice)"
@@ -669,7 +678,7 @@
                                             />
                                           </svg>
                                         </div>
-                      
+                        
                                         <div x-show="isEditAvgPrice" class="flex space-x-1">
                                           <input
                                             class="block h-[22px] w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-[12px] placeholder:text-gray400 focus:border-blue500 focus:outline-none"
@@ -677,15 +686,15 @@
                                             x-ref="inputPriceMask"
                                             placeholder="Add avg price"
                                           />
-                      
+                        
                                           <div class="flex items-center space-x-1">
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
                                               @click="() => {
-                                            isEditAvgPrice = !isEditAvgPrice;
-                                            cardData.openPrice = card.openPrice;
-                                          }"
+                                              isEditAvgPrice = !isEditAvgPrice;
+                                              cardData.openPrice = card.openPrice;
+                                            }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -700,14 +709,14 @@
                                                 />
                                               </svg>
                                             </button>
-                      
+                        
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
                                               @click="() => {
-                                              isEditAvgPrice = !isEditAvgPrice;
-                                              editWatchListEntrie(card.watchlistEntryId, cardData);
-                                            }"
+                                                isEditAvgPrice = !isEditAvgPrice;
+                                                editWatchListEntrie(card.watchlistEntryId, cardData);
+                                              }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -724,7 +733,7 @@
                                             </button>
                                           </div>
                                         </div>
-                      
+                        
                                         <div x-show="!card.openPrice && !isEditAvgPrice">
                                           <button
                                             type="button"
@@ -749,19 +758,17 @@
                                           </button>
                                         </div>
                                       </div>
-                      
+                        
                                       <img
                                         src="https://www.stockhawk.io/files/sparklines/sparkline.png"
                                         alt="sparkline"
                                         class="block max-w-full"
                                       />
                                     </div>
-                      
+                        
                                     <div class="flex flex-col gap-4">
-                                      <span class="text-[12px] font-medium text-[#969fb2]"
-                                        >Trades</span
-                                      >
-                      
+                                      <span class="text-[12px] font-medium text-[#969fb2]">Trades</span>
+                        
                                       <div
                                         x-show="card.positions.length"
                                         class="mb-2 overflow-hidden rounded-[3px] border-r border-r-gray75"
@@ -781,7 +788,7 @@
                                             <tbody>
                                               <template x-if="!showAllTrades">
                                                 <template
-                                                  x-for="tableCell in card.positions.slice(0, 3)"
+                                                  x-for="tableCell in card.positions.slice(0, 4)"
                                                   :key="tableCell.positionId"
                                                 >
                                                   <tr
@@ -814,7 +821,7 @@
                                             </tbody>
                                           </table>
                                         </div>
-                      
+                        
                                         <div
                                           class="mt-1 text-center"
                                           x-show="card.positions.length > 4"
@@ -827,14 +834,14 @@
                                           >
                                             <span
                                               x-show="!showAllTrades"
-                                              x-text="card.positions.length -3 + ' Trades'"
+                                              x-text="card.positions.length -4 + ' Trades'"
                                             ></span>
                                             <span x-show="showAllTrades">Less</span>
                                           </button>
                                         </div>
                                       </div>
-                      
-                                      <div x-show="!card.positions.length">
+                        
+                                      <div>
                                         <button
                                           type="button"
                                           class="flex min-h-[22px] w-full items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 sm:w-auto"
@@ -857,7 +864,7 @@
                                           Add Trade
                                         </button>
                                       </div>
-                      
+                        
                                       <div x-data="{ isEditComment: false }">
                                         <button
                                           type="button"
@@ -866,7 +873,7 @@
                                           class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2px] px-1 text-[15px] font-bold text-blue800 hover:border-gray75 hover:bg-white"
                                           @click="isEditComment = !isEditComment"
                                         ></button>
-                      
+                        
                                         <div x-show="isEditComment" class="flex space-x-1">
                                           <input
                                             type="text"
@@ -874,15 +881,15 @@
                                             x-model="cardData.comment"
                                             placeholder="Add comment"
                                           />
-                      
+                        
                                           <div class="flex items-center space-x-1">
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
                                               @click="() => {
-                                            isEditComment = !isEditComment;
-                                            cardData.comment = card.comment;
-                                          }"
+                                              isEditComment = !isEditComment;
+                                              cardData.comment = card.comment;
+                                            }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -897,14 +904,14 @@
                                                 />
                                               </svg>
                                             </button>
-                      
+                        
                                             <button
                                               type="button"
                                               class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
                                               @click="() => {
-                                            isEditComment = !isEditComment;
-                                            editWatchListEntrie(card.watchlistEntryId, cardData);
-                                          }"
+                                              isEditComment = !isEditComment;
+                                              editWatchListEntrieComment(card.watchlistEntryId, cardData);
+                                            }"
                                             >
                                               <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -921,7 +928,7 @@
                                             </button>
                                           </div>
                                         </div>
-                      
+                        
                                         <div x-show="!card.comment && !isEditComment">
                                           <button
                                             type="button"
@@ -950,13 +957,250 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </template>
                           </template>
                         </div>
                       </div>
 
                       <div x-show="view === 'list'">
-                        <p>LIST are here</p>
+                        <div
+                          x-data="dashboardWatchlistListInit()"
+                          x-effect="() => {
+                            listViewInit(tabContent.entries)
+                            $watch('data', () => listViewInit(tabContent.entries))
+                          }"
+                        >
+                          <template x-if="listViewData.length">
+                            <table class="w-full table-fixed">
+                              <thead>
+                                <tr
+                                  class="[&>*]:whitespace-nowrap [&>*]:p-2 [&>*]:text-left [&>*]:text-[12px] [&>*]:font-semibold [&>*]:uppercase [&>*]:tracking-[0.6px] [&>*]:text-[#838690]"
+                                >
+                                  <th>Symbol Name</th>
+                                  <th>Comment</th>
+                                  <th>Price</th>
+                                  <th>Amount</th>
+                                  <th></th>
+                                  <th>total gain</th>
+                                  <th>Value</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                        
+                              <template x-for="table in listViewData" :key="table.watchlistEntryId">
+                                <tbody
+                                  x-data="{ isToggled: false }"
+                                  :class="isToggled ? 'border-[#d9d5ec]' : 'border-transparent'"
+                                  class="border"
+                                >
+                                  <tr
+                                    class="[&>*]:px-2 [&>*]:py-4 [&>*]:text-[14px] [&>*]:font-medium [&>*]:text-blue800"
+                                    :class="isToggled ? 'bg-[#f9fafb]' : 'border-b border-b-[#d9d5ec] bg-none'"
+                                  >
+                                    <td>
+                                      <div class="flex items-center gap-3">
+                                        <img
+                                          :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${table.symbol}.png`"
+                                          :alt="`${table.symbol}`"
+                                          class="block h-[36px] w-[36px] rounded-full object-cover text-[8px]"
+                                        />
+                                        <div class="flex flex-col">
+                                          <span x-text="table.symbol" class="text-dark500"></span>
+                                          <span
+                                            x-text="table.instrumentName"
+                                            class="text-[9px] font-medium text-gray700"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td x-text="table.comment"></td>
+                                    <td x-text="table.openPrice ? '$' + table.openPrice : ''"></td>
+                                    <td x-text="table.amount"></td>
+                                    <td>total gain</td>
+                                    <td>total gain</td>
+                                    <td>Value</td>
+                                    <td>
+                                      <div class="flex items-center justify-end space-x-4">
+                                        <button
+                                          class="inline-flex items-center rounded px-1 text-gray700"
+                                          @click="isToggled = ! isToggled"
+                                        >
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              x-show="!isToggled"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M19 9l-7 7-7-7"
+                                            />
+                                            <path
+                                              x-show="isToggled"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M5 15l7-7 7 7"
+                                            />
+                                          </svg>
+                                        </button>
+                        
+                                        <div x-data="{ open: false }" class="relative flex">
+                                          <button
+                                            :class="open ? 'text-dark500' : 'text-gray700'"
+                                            class="inline-flex items-center rounded px-1"
+                                            @click="open = ! open"
+                                          >
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-6 w-6"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <div
+                                            x-show="open"
+                                            @click.away="open = false"
+                                            x-transition:enter="transition-all duration-200 ease-out"
+                                            x-transition:enter-start="transform opacity-0 scale-95"
+                                            x-transition:enter-end="transform opacity-100 scale-100"
+                                            x-transition:leave="transition-all duration-200 ease-in"
+                                            x-transition:leave-start="transform opacity-100 scale-100"
+                                            x-transition:leave-end="transform opacity-0 scale-95"
+                                            :class="open ? '' : 'hidden'"
+                                            class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:text-[14px] [&>*]:transition"
+                                          >
+                                            <a href="#" class="hover:text-blue600">Page containing</a>
+                                            <a href="#" class="hover:text-blue600">Change email</a>
+                                            <a href="#" class="hover:text-blue600">Delete account</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <template x-if="isToggled">
+                                    <tr>
+                                      <td colspan="8" class="p-0">
+                                        <template x-if="table.positions.length">
+                                          <table class="w-full table-fixed">
+                                            <thead>
+                                              <tr
+                                                class="[&>*]:whitespace-nowrap [&>*]:border-b [&>*]:border-b-[#d9d5ec] [&>*]:py-2 [&>*]:px-2 [&>*]:text-left [&>*]:text-[12px] [&>*]:font-semibold [&>*]:uppercase [&>*]:tracking-[0.6px] [&>*]:text-[#838690]"
+                                              >
+                                                <th>Purchase date</th>
+                                                <th>Type</th>
+                                                <th>PURCHASE PRICE</th>
+                                                <th>Amount</th>
+                                                <th></th>
+                                                <th>total gain</th>
+                                                <th>Value</th>
+                                                <th></th>
+                                              </tr>
+                                            </thead>
+                        
+                                            <tbody>
+                                              <template
+                                                x-for="subtable in table.positions"
+                                                :key="subtable.positionId"
+                                              >
+                                                <tr
+                                                  class="border-b border-[#d9d5ec] [&>*]:px-2 [&>*]:py-4 [&>*]:text-[14px] [&>*]:font-medium [&>*]:text-blue800"
+                                                >
+                                                  <td
+                                                    x-text="subtable.transactionDate ? moment(subtable.transactionDate).format('MMM	 d, YYYY') : ''"
+                                                  ></td>
+                                                  <td>Trade data?</td>
+                                                  <td x-text="subtable.transactionPrice"></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>
+                                                    <div
+                                                      class="flex items-center justify-end space-x-4"
+                                                    >
+                                                      <button
+                                                        class="inline-flex items-center rounded px-1 text-gray700 transition hover:text-gray600"
+                                                      >
+                                                        <svg
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          class="h-5 w-5"
+                                                          viewBox="0 0 20 20"
+                                                          fill="currentColor"
+                                                        >
+                                                          <path
+                                                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                                                          />
+                                                        </svg>
+                                                      </button>
+                                                      <button
+                                                        class="inline-flex items-center rounded px-1 text-gray700 transition hover:text-gray600"
+                                                      >
+                                                        <svg
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          class="h-5 w-5"
+                                                          fill="none"
+                                                          viewBox="0 0 24 24"
+                                                          stroke="currentColor"
+                                                          stroke-width="2"
+                                                        >
+                                                          <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                                          />
+                                                        </svg>
+                                                      </button>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                              </template>
+                                            </tbody>
+                                          </table>
+                                        </template>
+                        
+                                        <div class="px-2 py-4">
+                                          <button
+                                            type="button"
+                                            class="inline-flex items-center justify-center gap-1 rounded-[8px] bg-blue300 px-[15px] py-[6px] text-[14px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                                            @click="showModalAddingTrade = true; $nextTick(() => cardItemForTradeModal(table))"
+                                          >
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-4 w-4"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                              />
+                                            </svg>
+                                            Add Trade
+                                          </button>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </template>
+                                </tbody>
+                              </template>
+                            </table>
+                          </template>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1316,7 +1560,7 @@
                                   x-show="alertPurchaseDate === index"
                                   class="text-sm font-semibold text-red500"
                                 >
-                                  This field is required.
+                                  This field is required and can't be <b>0</b>.
                                 </p>
                               </div>
                 
