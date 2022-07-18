@@ -1,4 +1,6 @@
 <div
+  role="dialog"
+  tabindex="-1"
   class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
   x-show="showModalAddwatchlist"
   x-transition:enter="transition duration-300"
@@ -24,12 +26,12 @@
         type="text"
         class="h-[56px] w-full rounded-[8px] border border-gray300 bg-white px-4 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
         placeholder="Watchlist"
-        x-ref="watchlistName"
+        x-ref="watchlistNameRef"
         x-model="watchlistName"
-        x-on:keydown.window.prevent.slash="$refs.watchlistName.focus()"
+        x-on:keydown.window.prevent.slash="$refs.watchlistNameRef.focus()"
       />
 
-      <div class="relative mt-6" x-show="isWatchlistCreated">
+      <div class="relative mt-6" x-show="watchlistName.length">
         <div
           class="relative flex h-[56px] items-center space-x-4 rounded-[8px] border border-gray300 bg-white px-4"
         >
@@ -102,7 +104,7 @@
         </template>
       </div>
 
-      <template x-if="selectedInstruments.length">
+      <template x-if="selectedInstruments.length && selectedInstruments.length">
         <div class="mt-2">
           <template
             x-for="selectedInstrument in selectedInstruments"
@@ -172,18 +174,9 @@
         </button>
 
         <button
-          x-show="!isWatchlistCreated"
-          :disabled="isLoading"
+          :disabled="!watchlistName.length || isLoading"
           type="button"
-          @click="createWatchList()"
-          class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
-          x-html="submitButtonText"
-        ></button>
-        <button
-          x-show="isWatchlistCreated"
-          :disabled="!selectedInstruments.length || isLoading"
-          type="button"
-          :class="!selectedInstruments.length ? 'cursor-not-allowed' : 'cursor-pointer'"
+          :class="!watchlistName.length ? 'cursor-not-allowed' : 'cursor-pointer'"
           class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
           @click="onSubmit()"
           x-html="submitButtonText"

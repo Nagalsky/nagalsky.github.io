@@ -106,11 +106,15 @@
           x-transition:leave-start="transform opacity-100 scale-100"
           x-transition:leave-end="transform opacity-0 scale-95"
           :class="open ? '' : 'hidden'"
-          class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:text-[14px] [&>*]:transition"
+          class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 space-y-1 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:border-0 [&>*]:bg-transparent [&>*]:p-0 [&>*]:text-left [&>*]:text-[14px] [&>*]:text-dark500 [&>*]:transition"
         >
-          <a href="#" class="hover:text-blue600">Page containing</a>
-          <a href="#" class="hover:text-blue600">Change email</a>
-          <a href="#" class="hover:text-blue600">Delete account</a>
+          <button
+            type="button"
+            class="hover:text-blue600"
+            @click="deleteWatchlist(tabContent.watchlistId)"
+          >
+            Delete watchlist
+          </button>
         </div>
       </div>
     </div>

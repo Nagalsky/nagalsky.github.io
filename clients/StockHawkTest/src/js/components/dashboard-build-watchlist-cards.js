@@ -10,17 +10,42 @@ function dashboardWatchlistCardsInit() {
       this.cardViewData = [...data];
     },
 
-    editWatchListEntrie(id, data) {
+    editWatchListEntrieAmount(id, data) {
       let payload = {
         Amount: parseFloat(data.amount),
-        OpenPrice: parseFloat(data.openPrice),
-        Comment: data.comment,
       };
 
       this.isLoading = true;
 
       axios
-        .post(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
+        .put(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
+        .then(() => {
+          Toastify({
+            text: "Entries was edited successfully!",
+            ...toastSuccessConfig,
+          }).showToast();
+          this.initialData();
+        })
+        .catch((err) => {
+          Toastify({
+            text: err?.response?.statusText,
+            ...toastDangerConfig,
+          }).showToast();
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
+    },
+
+    editWatchListEntrieOpenPrice(id, data) {
+      let payload = {
+        OpenPrice: parseFloat(data.openPrice),
+      };
+
+      this.isLoading = true;
+
+      axios
+        .put(`${watchListEntriesApiUrl}/${id}`, payload, configHeaders)
         .then(() => {
           Toastify({
             text: "Entries was edited successfully!",
