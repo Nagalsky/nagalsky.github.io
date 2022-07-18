@@ -10,8 +10,11 @@ function loadInstrumentsModal() {
     submitButtonText: "Save",
 
     getExistingInstruments(data) {
-      this.watchlistId = data[0].watchlistId;
-      this.existingInstruments = data[0].entries;
+      if (!data) {
+        return;
+      }
+      this.watchlistId = data[0]?.watchlistId;
+      this.existingInstruments = data[0]?.entries;
     },
 
     fetchInstruments() {

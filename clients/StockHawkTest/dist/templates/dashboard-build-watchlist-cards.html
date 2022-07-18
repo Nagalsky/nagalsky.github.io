@@ -2,12 +2,12 @@
   class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4"
   x-data="dashboardWatchlistCardsInit()"
   x-effect="() => {
-    cardViewInit(tabContent.entries)
-    $watch('data', () => cardViewInit(tabContent.entries))
+    cardViewInit(tabContent?.entries)
+    $watch('data', () => cardViewInit(tabContent?.entries))
   }"
 >
   <template x-if="cardViewData.length">
-    <template x-for="card in tabContent.entries" :key="card.watchlistEntryId">
+    <template x-for="card in tabContent?.entries" :key="card.watchlistEntryId">
       <div
         class="relative break-inside-avoid-column border-y-[8px] border-white"
       >

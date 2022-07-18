@@ -34,12 +34,6 @@ function addWatchListModal() {
               )
           );
         })
-        .catch((err) => {
-          Toastify({
-            text: err?.response?.statusText,
-            ...toastDangerConfig,
-          }).showToast();
-        })
         .finally(() => {
           NProgress.done();
         });
@@ -112,12 +106,6 @@ function addWatchListModal() {
           this.search = "";
           this.selectedInstruments = [];
           this.watchlistName = "";
-        })
-        .catch((err) => {
-          Toastify({
-            text: err?.response?.statusText,
-            ...toastDangerConfig,
-          }).showToast();
         })
         .finally(() => {
           this.isLoading = false;

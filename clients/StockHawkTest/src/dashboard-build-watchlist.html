@@ -29,9 +29,9 @@
 
           <div x-data="dashboardBuildWatchlistInit()">
             <template x-if="data" x-effect="initialData()">
-              <div x-data="{ activeTab: data[0].watchlistId }">
+              <div>
                 <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
-                  <template x-for="tabSwitch in data" :key="tabSwitch.watchlistId">
+                  <template x-for="(tabSwitch, index) in data" :key="index">
                     <button @click.prevent="activeTab = tabSwitch.watchlistId" x-effect="getExistingStocks(activeTab)"
                       x-text="tabSwitch.name" :disabled="isLoading"
                       :class="activeTab === tabSwitch.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
@@ -39,25 +39,37 @@
                   </template>
                 </div>
 
-                <template x-for="tabContent in data" :key="tabContent.watchlistId">
-                  <div x-show="activeTab === tabContent.watchlistId">
-                    <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
-                      x-data="{ view: 'list'}">
-                      //= templates/loader.html
+                <h2 x-show="!data.length" class="text-[16px] font-semibold">
+                  Click
+                  <button type="button" @click="showModalAddwatchlist = true"
+                    class="text-blue500 duration-200 ease-in-out hover:text-blue600">
+                    here
+                  </button>
+                  to add a Watchlist.
+                </h2>
 
-                      //= templates/dashboard-build-watchlist-cards-header.html
 
-                      //= templates/dashboard-build-watchlist-create-a-list-stocks-placeholder.html
+                <template x-if="!isLoading">
+                  <template x-for="tabContent in data" :key="tabContent.watchlistId">
+                    <div x-show="activeTab === tabContent.watchlistId">
+                      <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
+                        x-data="{ view: 'list'}">
+                        //= templates/loader.html
 
-                      <div x-show="view === 'cards'">
-                        //= templates/dashboard-build-watchlist-cards.html
-                      </div>
+                        //= templates/dashboard-build-watchlist-cards-header.html
 
-                      <div x-show="view === 'list'">
-                        //= templates/dashboard-build-watchlist-list.html
+                        //= templates/dashboard-build-watchlist-create-a-list-stocks-placeholder.html
+
+                        <div x-show="view === 'cards'">
+                          //= templates/dashboard-build-watchlist-cards.html
+                        </div>
+
+                        <div x-show="view === 'list'">
+                          //= templates/dashboard-build-watchlist-list.html
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </template>
                 </template>
 
                 //= templates/modal-add-stocks.html

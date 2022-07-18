@@ -3,7 +3,7 @@ function dashboardWatchlistListInit() {
     listViewData: [],
 
     listViewInit(data) {
-      if (!data) {
+      if (!data.length) {
         return;
       }
 

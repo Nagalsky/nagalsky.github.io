@@ -4,8 +4,8 @@
   <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
     <h3 class="text-[17px] font-semibold" x-text="tabContent.name"></h3>
     <span
-      x-show="tabContent.entries.length"
-      x-text="tabContent.entries.length + ' Stocks'"
+      x-show="tabContent?.entries.length"
+      x-text="tabContent?.entries.length + ' Stocks'"
       class="inline-block rounded-[8px] bg-green300 px-[7px] py-[4.5px] text-[10px] font-medium text-green500"
     ></span>
   </div>
@@ -32,7 +32,7 @@
     <div class="flex items-center justify-between gap-6">
       <div class="flex">
         <button
-          @click.prevent="view = 'list'"
+          @click="view = 'list'"
           type="button"
           class="flex h-[48px] items-center justify-center rounded-l-[12px] px-4"
           :class="view === 'list' ? 'bg-blue500 text-white' : 'bg-blue300 text-dark500'"
@@ -53,7 +53,7 @@
           </svg>
         </button>
         <button
-          @click.prevent="view = 'cards'"
+          @click="view = 'cards'"
           type="button"
           class="flex h-[48px] items-center justify-center rounded-r-[12px] px-4"
           :class="view === 'cards' ? 'bg-blue500 text-white' : 'bg-blue300 text-dark500'"
