@@ -331,6 +331,17 @@
                 </div>
               </div>
 
+              <div
+                x-data="{chartImageUrl: null}"
+                x-init="
+                  axios
+                    .get(`https://www.stockhawk.io/files/sparklines/${card.symbol.toLowerCase()}.png`)
+                    .then((res) => {
+                      console.log('res', res);
+                    });
+                "
+              ></div>
+
               <!-- <div
                 x-data="{ chartImageUrl: null }"
                 x-init="chartImageUrl = await (await fetch(`https://www.stockhawk.io/files/sparklines/${card.symbol.toLowerCase()}.png`))"
