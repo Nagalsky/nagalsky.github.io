@@ -9,8 +9,35 @@ function dashboardWatchlistListInit() {
       }
 
       this.listViewData = [...data];
+    },
 
-      this.subListViewData = [...(this.listViewData[0].positions || [])];
+    subListViewInit(data) {
+      if (!data.length) {
+        return;
+      }
+
+      this.subListViewData = [...data];
+    },
+
+    deleteWatchListEntrie(id) {
+      axios
+        .delete(`${watchListEntriesApiUrl}/${id}`, configHeaders)
+        .then(() => {
+          this.listViewData = this.listViewData.filter(
+            (el) => el.watchlistEntryId !== id
+          );
+          Toastify({
+            text: "Entries was deleted successfully!",
+            ...toastSuccessConfig,
+          }).showToast();
+          this.initialData();
+        })
+        .catch((err) => {
+          Toastify({
+            text: err?.response?.statusText,
+            ...toastDangerConfig,
+          }).showToast();
+        });
     },
   };
 }
