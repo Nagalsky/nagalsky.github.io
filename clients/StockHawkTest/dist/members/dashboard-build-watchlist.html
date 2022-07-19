@@ -1168,9 +1168,7 @@
                                       </div>
                                     </div>
                         
-                                    <div
-                                      class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
-                                    >
+                                    <div class="flex items-start justify-between gap-3">
                                       <p
                                         class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
                                       >
@@ -1556,12 +1554,12 @@
                             >
                               <div class="flex min-w-0 items-center space-x-3">
                                 <div
-                                  class="h-[40px] w-[40px] shrink-0 overflow-hidden rounded-full bg-gray500"
+                                  class="h-[40px] w-[40px] shrink-0 overflow-hidden rounded-full bg-white"
                                 >
                                   <img
                                     :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${selectedInstrument.symbol}.png`"
                                     :alt="`${selectedInstrument.symbol}`"
-                                    class="block h-[40px] w-[40px] object-cover text-[8px]"
+                                    class="block h-[40px] w-[40px] text-[8px]"
                                   />
                                 </div>
                 
@@ -1655,176 +1653,211 @@
                     >
                       <h2 class="mb-4 text-[20px] font-semibold md:mb-8">Adding Trade</h2>
                 
-                      <div
-                        class="mb:mb-8 mb-6 flex flex-col gap-6 rounded-[9px] bg-[#F9FAFB] p-4 sm:flex-row sm:justify-between sm:gap-4"
-                      >
-                        <div class="flex items-center gap-3">
+                      <template x-if="tradeModalData">
+                        <div>
                           <div
-                            class="relative h-[36px] w-[36px] shrink-0 overflow-hidden rounded-full"
+                            class="mb:mb-8 mb-6 flex flex-col gap-6 rounded-[9px] bg-[#F9FAFB] p-4 sm:flex-row sm:justify-between sm:gap-4"
                           >
-                            <div
-                              class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-blue500 pt-[1px] text-center text-[7px] font-bold text-white"
-                              x-text="tradeModalData.symbol"
-                            ></div>
-                            <img
-                              :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${tradeModalData.symbol}.png`"
-                              :alt="`${tradeModalData.symbol}`"
-                              class="absolute left-0 top-0 z-10 block h-[36px] w-[36px] bg-white"
-                              onerror='this.style.display = "none"'
-                            />
-                          </div>
-                          <div class="flex flex-col">
-                            <span
-                              x-text="tradeModalData.symbol"
-                              class="text-[9px] font-medium text-dark500"
-                            ></span>
-                            <span
-                              x-text="tradeModalData.instrumentName"
-                              class="text-[9px] font-medium text-gray700"
-                            ></span>
-                          </div>
-                        </div>
-                
-                        <div class="flex items-center justify-between gap-4 sm:gap-10">
-                          <div class="flex flex-col gap-1">
-                            <p class="text-[12px] font-medium text-[#969FB2]">Price</p>
-                            <div class="text-[15px] font-bold text-blue800">
-                              <span
-                                x-show="tradeModalData.priceCurrent"
-                                x-text="'$ ' + tradeModalData.priceCurrent"
-                              ></span>
-                              <span x-show="!tradeModalData.priceCurrent">-</span>
-                            </div>
-                          </div>
-                
-                          <div class="flex flex-col gap-1">
-                            <template x-if="tradeModalData.priceChange">
-                              <div class="text-right text-[11px] font-medium">
-                                <span
-                                  class="text-black"
-                                  x-text="tradeModalData.priceChange + '%'"
-                                  x-show="tradeModalData.pricePercentChange === 0"
-                                ></span>
-                                <span
-                                  class="text-red500"
-                                  x-text="tradeModalData.priceChange + '%'"
-                                  x-show="tradeModalData.pricePercentChange < 0"
-                                ></span>
-                                <span
-                                  class="text-green500"
-                                  x-text="'+' + tradeModalData.priceChange + '%'"
-                                  x-show="tradeModalData.pricePercentChange > 0"
-                                ></span>
-                              </div>
-                            </template>
-                
-                            <div>chart here</div>
-                          </div>
-                        </div>
-                      </div>
-                
-                      <form @submit.prevent="submit">
-                        <div class="form-row grid gap-6">
-                          <template x-for="(field, index) in fields" :key="index">
-                            <div
-                              class="relative grid gap-4 sm:grid-cols-2 sm:pr-[40px] md:grid-cols-3"
-                              x-init="$watch('field.purchaseDate', () => checkPrice(field))"
-                              x-effect="disableAddFieldsRow()"
-                            >
-                              <div class="flex flex-col gap-1">
-                                <label
-                                  :for="'field-quantity-' + index"
-                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
-                                  >Quantity</label
-                                >
-                                <input
-                                  type="text"
-                                  class="block h-[48px] w-full rounded-[8px] border border-solid bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:outline-none focus:ring-0 disabled:opacity-50"
-                                  :class="alertQuantity === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
-                                  x-mask:dynamic="amountMask"
-                                  maxlength="6"
-                                  :id="'field-quantity-' + index"
-                                  :disabled="isDisabledFields"
-                                  x-model="field.quantity"
-                                  @blur="validateQuantity()"
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="relative h-[36px] w-[36px] shrink-0 overflow-hidden rounded-full"
+                              >
+                                <div
+                                  class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-blue500 pt-[1px] text-center text-[7px] font-bold text-white"
+                                  x-text="tradeModalData.symbol"
+                                ></div>
+                                <img
+                                  :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${tradeModalData.symbol}.png`"
+                                  :alt="`${tradeModalData.symbol}`"
+                                  class="absolute left-0 top-0 z-10 block h-[36px] w-[36px] bg-white"
+                                  onerror='this.style.display = "none"'
                                 />
-                                <p
-                                  x-show="alertQuantity === index"
-                                  class="text-sm font-semibold text-red500"
-                                >
-                                  This field is required.
-                                </p>
                               </div>
+                              <div class="flex flex-col">
+                                <span
+                                  x-text="tradeModalData.symbol"
+                                  class="text-[9px] font-medium text-dark500"
+                                ></span>
+                                <span
+                                  x-text="tradeModalData.instrumentName"
+                                  class="text-[9px] font-medium text-gray700"
+                                ></span>
+                              </div>
+                            </div>
                 
+                            <div class="flex items-center justify-between gap-4 sm:gap-10">
                               <div class="flex flex-col gap-1">
-                                <label
-                                  :for="'field-purchase-date-' + index"
-                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
-                                  >Purchase date</label
-                                >
-                                <div class="relative text-gray300">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="pointer-events-none absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                    />
-                                  </svg>
-                
-                                  <input
-                                    type="text"
-                                    x-ref="datepicker"
-                                    class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] pl-[40px] pr-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
-                                    x-effect="datepicker()"
-                                    :id="'field-purchase-date-' + index"
-                                    :disabled="isDisabledFields"
-                                    x-model="field.purchaseDate"
-                                  />
+                                <p class="text-[12px] font-medium text-[#969FB2]">Price</p>
+                                <div class="text-[15px] font-bold text-blue800">
+                                  <span
+                                    x-show="tradeModalData.priceCurrent"
+                                    x-text="'$ ' + tradeModalData.priceCurrent"
+                                  ></span>
+                                  <span x-show="!tradeModalData.priceCurrent">-</span>
                                 </div>
                               </div>
                 
-                              <div class="flex max-w-[70%] flex-col gap-1 sm:max-w-none">
-                                <label
-                                  :for="'field-purchase-price-' + index"
-                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
-                                  >Purchase price</label
-                                >
-                                <input
-                                  class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
-                                  :class="alertPurchaseDate === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
-                                  x-ref="inputPriceMask"
-                                  :id="'field-purchase-price-' + index"
-                                  :disabled="isDisabledFields"
-                                  x-effect="openPriceMask()"
-                                  x-model="field.purchasePrice"
-                                  @blur="validatePurchaseDate()"
-                                />
-                                <p
-                                  x-show="alertPurchaseDate === index"
-                                  class="text-sm font-semibold text-red500"
-                                >
-                                  This field is required and can't be <b>0</b>.
-                                </p>
-                              </div>
+                              <div class="flex flex-col gap-1">
+                                <template x-if="tradeModalData.priceChange">
+                                  <div class="text-right text-[11px] font-medium">
+                                    <span
+                                      class="text-black"
+                                      x-text="tradeModalData.priceChange + '%'"
+                                      x-show="tradeModalData.pricePercentChange === 0"
+                                    ></span>
+                                    <span
+                                      class="text-red500"
+                                      x-text="tradeModalData.priceChange + '%'"
+                                      x-show="tradeModalData.pricePercentChange < 0"
+                                    ></span>
+                                    <span
+                                      class="text-green500"
+                                      x-text="'+' + tradeModalData.priceChange + '%'"
+                                      x-show="tradeModalData.pricePercentChange > 0"
+                                    ></span>
+                                  </div>
+                                </template>
                 
-                              <div
-                                class="absolute right-0 bottom-0 flex items-start justify-center pt-[23px] sm:bottom-auto sm:top-0"
-                              >
+                                <img
+                                  :src="`https://www.stockhawk.io/files/sparklines/${tradeModalSymbol.toLowerCase()}.png`"
+                                  :alt="`${tradeModalSymbol}`"
+                                  class="ml-auto block w-full max-w-[160px] text-[8px]"
+                                  onerror='this.style.display = "none"'
+                                  onload='this.style.display = "block"'
+                                />
+                              </div>
+                            </div>
+                          </div>
+                
+                          <form @submit.prevent="submit">
+                            <div class="form-row grid gap-6">
+                              <template x-for="(field, index) in fields" :key="index">
+                                <div
+                                  class="relative grid gap-4 sm:grid-cols-2 sm:pr-[40px] md:grid-cols-3"
+                                  x-init="$watch('field.purchaseDate', () => checkPrice(field))"
+                                  x-effect="disableAddFieldsRow()"
+                                >
+                                  <div class="flex flex-col gap-1">
+                                    <label
+                                      :for="'field-quantity-' + index"
+                                      class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                      >Quantity</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="block h-[48px] w-full rounded-[8px] border border-solid bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:outline-none focus:ring-0 disabled:opacity-50"
+                                      :class="alertQuantity === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
+                                      x-mask:dynamic="amountMask"
+                                      maxlength="6"
+                                      :id="'field-quantity-' + index"
+                                      :disabled="isDisabledFields"
+                                      x-model="field.quantity"
+                                      @blur="validateQuantity()"
+                                    />
+                                    <p
+                                      x-show="alertQuantity === index"
+                                      class="text-sm font-semibold text-red500"
+                                    >
+                                      This field is required.
+                                    </p>
+                                  </div>
+                
+                                  <div class="flex flex-col gap-1">
+                                    <label
+                                      :for="'field-purchase-date-' + index"
+                                      class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                      >Purchase date</label
+                                    >
+                                    <div class="relative text-gray300">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="pointer-events-none absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
+                                      </svg>
+                
+                                      <input
+                                        type="text"
+                                        x-ref="datepicker"
+                                        class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] pl-[40px] pr-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
+                                        x-effect="datepicker()"
+                                        :id="'field-purchase-date-' + index"
+                                        :disabled="isDisabledFields"
+                                        x-model="field.purchaseDate"
+                                      />
+                                    </div>
+                                  </div>
+                
+                                  <div class="flex max-w-[70%] flex-col gap-1 sm:max-w-none">
+                                    <label
+                                      :for="'field-purchase-price-' + index"
+                                      class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                      >Purchase price</label
+                                    >
+                                    <input
+                                      class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
+                                      :class="alertPurchaseDate === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
+                                      x-ref="inputPriceMask"
+                                      :id="'field-purchase-price-' + index"
+                                      :disabled="isDisabledFields"
+                                      x-effect="openPriceMask()"
+                                      x-model="field.purchasePrice"
+                                      @blur="validatePurchaseDate()"
+                                    />
+                                    <p
+                                      x-show="alertPurchaseDate === index"
+                                      class="text-sm font-semibold text-red500"
+                                    >
+                                      This field is required and can't be <b>0</b>.
+                                    </p>
+                                  </div>
+                
+                                  <div
+                                    class="absolute right-0 bottom-0 flex items-start justify-center pt-[23px] sm:bottom-auto sm:top-0"
+                                  >
+                                    <button
+                                      class="shrink-0 border-0 bg-transparent p-0 px-1 py-[14px] text-blue500"
+                                      data-tippy-content="Delete"
+                                      @click="removeField(index)"
+                                    >
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                        />
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </template>
+                
+                              <div class="mt-4 sm:mt-6">
                                 <button
-                                  class="shrink-0 border-0 bg-transparent p-0 px-1 py-[14px] text-blue500"
-                                  data-tippy-content="Delete"
-                                  @click="removeField(index)"
+                                  type="button"
+                                  class="inline-flex items-center justify-center gap-1 rounded-[8px] border-0 bg-blue300 px-[14px] py-[7px] text-[14px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 disabled:opacity-50"
+                                  :class="isDisabledAddRow ? 'cursor-not-allowed' : ''"
+                                  :disabled="isDisabledAddRow"
+                                  @click.prevent="addFieldsRow()"
                                 >
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="h-6 w-6"
+                                    class="h-5 w-5 shrink-0"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -1833,59 +1866,34 @@
                                     <path
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
-                                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                                     />
                                   </svg>
+                                  Add trades
                                 </button>
                               </div>
                             </div>
-                          </template>
                 
-                          <div class="mt-4 sm:mt-6">
-                            <button
-                              type="button"
-                              class="inline-flex items-center justify-center gap-1 rounded-[8px] border-0 bg-blue300 px-[14px] py-[7px] text-[14px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 disabled:opacity-50"
-                              :class="isDisabledAddRow ? 'cursor-not-allowed' : ''"
-                              :disabled="isDisabledAddRow"
-                              @click.prevent="addFieldsRow()"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
+                            <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
+                              <button
+                                type="button"
+                                @click="cancel()"
+                                class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
                               >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                />
-                              </svg>
-                              Add trades
-                            </button>
-                          </div>
-                        </div>
+                                Cancel
+                              </button>
                 
-                        <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
-                          <button
-                            type="button"
-                            @click="cancel()"
-                            class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
-                          >
-                            Cancel
-                          </button>
-                
-                          <button
-                            type="submit"
-                            :disabled="isLoading || !fields?.length || (!isQuantityValid || !isPurchaseDateValid)"
-                            :class="isLoading || !fields?.length ? 'cursor-not-allowed' : ''"
-                            class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
-                            x-html="submitButtonText"
-                          ></button>
+                              <button
+                                type="submit"
+                                :disabled="isLoading || !fields?.length || (!isQuantityValid || !isPurchaseDateValid)"
+                                :class="isLoading || !fields?.length ? 'cursor-not-allowed' : ''"
+                                class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
+                                x-html="submitButtonText"
+                              ></button>
+                            </div>
+                          </form>
                         </div>
-                      </form>
+                      </template>
                     </div>
                   </div>
                 </div>

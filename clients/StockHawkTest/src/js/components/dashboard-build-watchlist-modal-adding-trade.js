@@ -1,7 +1,7 @@
 function dashboardBuildWatchlistLoadAddingTradeModal() {
   return {
     tradeModalData: "",
-    tradeModalSymbol: null,
+    tradeModalSymbol: "",
     fields: null,
 
     getTradeInfo(cardInfo) {
@@ -244,6 +244,8 @@ function dashboardBuildWatchlistLoadAddingTradeModal() {
           this.alertQuantity = false;
           this.alertPurchaseDate = false;
           this.isFormValid = true;
+          this.tradeModalData = "";
+          this.tradeModalSymbol = "";
           this.disableAddFieldsRow();
         },
       };
