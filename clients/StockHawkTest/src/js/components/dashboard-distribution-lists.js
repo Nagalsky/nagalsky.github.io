@@ -1,14 +1,18 @@
 function dashboardDistributionListsInit() {
   return {
-    tabs: null,
+    data: null,
     tableData: null,
     isLoading: false,
+    activeTab: 0,
 
     getDistributionLists() {
       axios
         .get(watchListsFullApiUrl, configHeaders)
         .then((res) => {
-          this.tabs = res.data;
+          this.data = res.data;
+          if (this.activeTab === 0) {
+            this.activeTab = this.data.length ? this.data[0].watchlistId : 0;
+          }
         })
         .catch((err) => {
           Toastify({
@@ -19,6 +23,10 @@ function dashboardDistributionListsInit() {
     },
 
     getWatchListRecipients(id) {
+      if (!id) {
+        return;
+      }
+
       NProgress.start();
 
       this.isLoading = true;

@@ -1,4 +1,4 @@
-function loadInstrumentsModal() {
+function dashboardBuildWatchlistLoadInstrumentsModal() {
   return {
     search: "",
     instruments: [],

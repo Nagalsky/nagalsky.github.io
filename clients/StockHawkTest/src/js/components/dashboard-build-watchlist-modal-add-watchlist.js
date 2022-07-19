@@ -1,4 +1,4 @@
-function addWatchListModal() {
+function dashboardBuildWatchlistAddWatchListModal() {
   return {
     watchlistName: "",
     search: "",

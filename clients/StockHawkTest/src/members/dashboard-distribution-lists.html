@@ -8,7 +8,9 @@
   <title>Stock Hawk member dashboard distribution lists page</title>
 </head>
 
-<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  x-data="{ showModalAddStock: false, showModalAddingTrade: false, showModalAddwatchlist: false }"
+  :class="{'overflow-y-hidden': showModalAddwatchlist}" x-cloak>
   //= ./templates/header-loggedin.html
 
   <main class="flex grow pb-6 pt-3 lg:py-0">
@@ -19,17 +21,17 @@
         <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
           <div class="mb-6 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <h1 class="text-[17px] font-semibold">Distribution Lists</h1>
-            <button type="button"
+            <button type="button" @click="showModalAddwatchlist = true"
               class="inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 sm:ml-4 md:px-[29px]">
               Add Watchlist
             </button>
           </div>
 
           <div x-data="dashboardDistributionListsInit()" x-init="getDistributionLists()">
-            <template x-if="tabs">
-              <div x-data="{ activeTab: tabs[0].watchlistId }" x-effect="getWatchListRecipients(activeTab)">
+            <template x-if="data">
+              <div x-effect="getWatchListRecipients(activeTab)">
                 <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
-                  <template x-for="tab in tabs" :key="tab.watchlistId">
+                  <template x-for="tab in data" :key="tab.watchlistId">
                     <button @click.prevent="activeTab = tab.watchlistId;" x-text="tab.name" :disabled="isLoading"
                       :class="activeTab === tab.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' :
                         'text-[#a2a6bb] md:before:transparent'"
@@ -37,7 +39,16 @@
                   </template>
                 </div>
 
-                <template x-for="tab in tabs" :key="tab.watchlistId">
+                <h2 x-show="!data.length" class="text-[16px] font-semibold">
+                  Click
+                  <button type="button" @click="showModalAddwatchlist = true"
+                    class="text-blue500 duration-200 ease-in-out hover:text-blue600">
+                    here
+                  </button>
+                  to add a Distribution Lists.
+                </h2>
+
+                <template x-for="tab in data" :key="tab.watchlistId">
                   <div x-show="activeTab === tab.watchlistId">
                     <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6">
                       <h3 class="mb-6 text-[17px] font-semibold sm:mb-10" x-text="tab.name"></h3>
@@ -168,6 +179,8 @@
                 </template>
               </div>
             </template>
+
+            //= ./templates/dashboard-distribution-lists-modal-add-watchlist.html
           </div>
         </div>
       </div>

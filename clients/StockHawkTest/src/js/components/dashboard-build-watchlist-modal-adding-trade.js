@@ -1,4 +1,4 @@
-function loadAddingTradeModal() {
+function dashboardBuildWatchlistLoadAddingTradeModal() {
   return {
     tradeModalData: "",
     tradeModalSymbol: null,

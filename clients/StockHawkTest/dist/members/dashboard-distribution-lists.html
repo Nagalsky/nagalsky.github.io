@@ -42,7 +42,9 @@
   <title>Stock Hawk member dashboard distribution lists page</title>
 </head>
 
-<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  x-data="{ showModalAddStock: false, showModalAddingTrade: false, showModalAddwatchlist: false }"
+  :class="{'overflow-y-hidden': showModalAddwatchlist}" x-cloak>
   <script type="text/javascript">
     var _iub = _iub || [];
     _iub.csConfiguration = {
@@ -278,17 +280,17 @@
         <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
           <div class="mb-6 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <h1 class="text-[17px] font-semibold">Distribution Lists</h1>
-            <button type="button"
+            <button type="button" @click="showModalAddwatchlist = true"
               class="inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 sm:ml-4 md:px-[29px]">
               Add Watchlist
             </button>
           </div>
 
           <div x-data="dashboardDistributionListsInit()" x-init="getDistributionLists()">
-            <template x-if="tabs">
-              <div x-data="{ activeTab: tabs[0].watchlistId }" x-effect="getWatchListRecipients(activeTab)">
+            <template x-if="data">
+              <div x-effect="getWatchListRecipients(activeTab)">
                 <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
-                  <template x-for="tab in tabs" :key="tab.watchlistId">
+                  <template x-for="tab in data" :key="tab.watchlistId">
                     <button @click.prevent="activeTab = tab.watchlistId;" x-text="tab.name" :disabled="isLoading"
                       :class="activeTab === tab.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' :
                         'text-[#a2a6bb] md:before:transparent'"
@@ -296,7 +298,16 @@
                   </template>
                 </div>
 
-                <template x-for="tab in tabs" :key="tab.watchlistId">
+                <h2 x-show="!data.length" class="text-[16px] font-semibold">
+                  Click
+                  <button type="button" @click="showModalAddwatchlist = true"
+                    class="text-blue500 duration-200 ease-in-out hover:text-blue600">
+                    here
+                  </button>
+                  to add a Distribution Lists.
+                </h2>
+
+                <template x-for="tab in data" :key="tab.watchlistId">
                   <div x-show="activeTab === tab.watchlistId">
                     <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6">
                       <h3 class="mb-6 text-[17px] font-semibold sm:mb-10" x-text="tab.name"></h3>
@@ -451,6 +462,60 @@
                 </template>
               </div>
             </template>
+
+            <div
+              role="dialog"
+              tabindex="-1"
+              class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
+              x-show="showModalAddwatchlist"
+              x-transition:enter="transition duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition duration-300"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+            >
+              <div
+                class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
+                x-data="distributionListsAddWatchListModal()"
+              >
+                <div
+                  class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
+                  @click.away="cancel()"
+                >
+                  <h2 class="mb-4 text-[20px] font-semibold">Add watchlist</h2>
+                  <p class="mb-4 text-[12px] text-gray500">Supporting text comes here</p>
+            
+                  <input
+                    type="text"
+                    class="h-[56px] w-full rounded-[8px] border border-gray300 bg-white px-4 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
+                    placeholder="Watchlist"
+                    x-ref="watchlistNameRef"
+                    x-model="watchlistName"
+                    x-on:keydown.window.prevent.slash="$refs.watchlistNameRef.focus()"
+                  />
+            
+                  <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
+                    <button
+                      type="button"
+                      class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
+                      @click="cancel()"
+                    >
+                      Cancel
+                    </button>
+            
+                    <button
+                      :disabled="!watchlistName.length || isLoading"
+                      type="button"
+                      :class="!watchlistName.length ? 'cursor-not-allowed' : 'cursor-pointer'"
+                      class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
+                      @click="onSubmit()"
+                      x-html="submitButtonText"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

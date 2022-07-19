@@ -2,7 +2,7 @@
   role="dialog"
   tabindex="-1"
   class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
-  x-show="showModalAddwatchlist"
+  x-show="showModalAddStock"
   x-transition:enter="transition duration-300"
   x-transition:enter-start="opacity-0"
   x-transition:enter-end="opacity-100"
@@ -12,26 +12,22 @@
 >
   <div
     class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
-    x-data="addWatchListModal()"
+    x-data="dashboardBuildWatchlistLoadInstrumentsModal()"
     x-init="$watch('search', () => fetchInstruments())"
+    x-effect="getExistingInstruments(existingStocks)"
   >
     <div
       class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
-      @click.away="cancel()"
+      @click.away="()  => {
+        showModalAddStock = false;
+        search = '';
+        selectedInstruments = [];
+      }"
     >
-      <h2 class="mb-4 text-[20px] font-semibold">Add watchlist</h2>
+      <h2 class="mb-4 text-[20px] font-semibold">Add Stocks</h2>
       <p class="mb-4 text-[12px] text-gray500">Supporting text comes here</p>
 
-      <input
-        type="text"
-        class="h-[56px] w-full rounded-[8px] border border-gray300 bg-white px-4 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
-        placeholder="Watchlist"
-        x-ref="watchlistNameRef"
-        x-model="watchlistName"
-        x-on:keydown.window.prevent.slash="$refs.watchlistNameRef.focus()"
-      />
-
-      <div class="relative mt-6" x-show="watchlistName.length">
+      <div class="relative">
         <div
           class="relative flex h-[56px] items-center space-x-4 rounded-[8px] border border-gray300 bg-white px-4"
         >
@@ -104,7 +100,7 @@
         </template>
       </div>
 
-      <template x-if="selectedInstruments.length && selectedInstruments.length">
+      <template x-if="selectedInstruments.length">
         <div class="mt-2">
           <template
             x-for="selectedInstrument in selectedInstruments"
@@ -167,16 +163,20 @@
       <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
         <button
           type="button"
+          @click="()  => {
+            showModalAddStock = false;
+            search = '';
+            selectedInstruments = [];
+          }"
           class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
-          @click="cancel()"
         >
           Cancel
         </button>
 
         <button
-          :disabled="!watchlistName.length || isLoading"
+          :disabled="!selectedInstruments.length || isLoading"
           type="button"
-          :class="!watchlistName.length ? 'cursor-not-allowed' : 'cursor-pointer'"
+          :class="!selectedInstruments.length ? 'cursor-not-allowed' : 'cursor-pointer'"
           class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
           @click="onSubmit()"
           x-html="submitButtonText"
