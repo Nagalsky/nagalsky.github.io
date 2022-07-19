@@ -492,7 +492,7 @@
                                     <div class="mb-5 flex min-w-0 items-center justify-between gap-3">
                                       <div class="flex min-w-0 items-center gap-3">
                                         <div
-                                          class="relative h-[30px] w-[30px] overflow-hidden rounded-full"
+                                          class="relative h-[30px] w-[30px] shrink-0 overflow-hidden rounded-full"
                                         >
                                           <div
                                             class="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-blue500 pt-[1px] text-center text-[7px] font-bold text-white"
@@ -501,7 +501,7 @@
                                           <img
                                             :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
                                             :alt="`${card.symbol}`"
-                                            class="absolute left-0 top-0 z-10 block h-[30px] w-[30px]"
+                                            class="absolute left-0 top-0 z-10 block h-[30px] w-[30px] bg-white"
                                             onerror='this.style.display = "none"'
                                           />
                                         </div>
@@ -1057,7 +1057,7 @@
                                         </p>
                                         <div class="flex min-w-0 items-center gap-3">
                                           <div
-                                            class="relative h-[36px] w-[36px] overflow-hidden rounded-full"
+                                            class="relative h-[36px] w-[36px] shrink-0 overflow-hidden rounded-full"
                                           >
                                             <div
                                               class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-blue500 pt-[1px] text-center text-[7px] font-bold text-white"
@@ -1066,7 +1066,7 @@
                                             <img
                                               :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${table.symbol}.png`"
                                               :alt="`${table.symbol}`"
-                                              class="absolute left-0 top-0 z-10 block h-[36px] w-[36px]"
+                                              class="absolute left-0 top-0 z-10 block h-[36px] w-[36px] bg-white"
                                               onerror='this.style.display = "none"'
                                             />
                                           </div>
@@ -1649,7 +1649,9 @@
                         class="mb:mb-8 mb-6 flex flex-col gap-6 rounded-[9px] bg-[#F9FAFB] p-4 sm:flex-row sm:justify-between sm:gap-4"
                       >
                         <div class="flex items-center gap-3">
-                          <div class="relative h-[36px] w-[36px] overflow-hidden rounded-full">
+                          <div
+                            class="relative h-[36px] w-[36px] shrink-0 overflow-hidden rounded-full"
+                          >
                             <div
                               class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-blue500 pt-[1px] text-center text-[7px] font-bold text-white"
                               x-text="tradeModalData.symbol"
@@ -1657,7 +1659,7 @@
                             <img
                               :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${tradeModalData.symbol}.png`"
                               :alt="`${tradeModalData.symbol}`"
-                              class="absolute left-0 top-0 z-10 block h-[36px] w-[36px]"
+                              class="absolute left-0 top-0 z-10 block h-[36px] w-[36px] bg-white"
                               onerror='this.style.display = "none"'
                             />
                           </div>
