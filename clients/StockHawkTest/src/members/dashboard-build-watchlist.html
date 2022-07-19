@@ -49,27 +49,25 @@
                 </h2>
 
 
-                <template x-if="!isLoading">
-                  <template x-for="tabContent in data" :key="tabContent.watchlistId">
-                    <div x-show="activeTab === tabContent.watchlistId">
-                      <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
-                        x-data="{ view: 'list'}">
-                        //= ./templates/loader.html
+                <template x-for="tabContent in data" :key="tabContent.watchlistId">
+                  <div x-show="activeTab === tabContent.watchlistId">
+                    <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
+                      x-data="{ view: 'list'}">
+                      //= ./templates/loader.html
 
-                        //= ./templates/dashboard-build-watchlist-cards-header.html
+                      //= ./templates/dashboard-build-watchlist-cards-header.html
 
-                        //= ./templates/dashboard-build-watchlist-create-a-list-stocks-placeholder.html
+                      //= ./templates/dashboard-build-watchlist-create-a-list-stocks-placeholder.html
 
-                        <div x-show="view === 'cards'">
-                          //= ./templates/dashboard-build-watchlist-cards.html
-                        </div>
+                      <div x-show="view === 'cards'">
+                        //= ./templates/dashboard-build-watchlist-cards.html
+                      </div>
 
-                        <div x-show="view === 'list'">
-                          //= ./templates/dashboard-build-watchlist-list.html
-                        </div>
+                      <div x-show="view === 'list'">
+                        //= ./templates/dashboard-build-watchlist-list.html
                       </div>
                     </div>
-                  </template>
+                  </div>
                 </template>
 
                 //= ./templates/dashboard-build-watchlist-modal-add-stocks.html
