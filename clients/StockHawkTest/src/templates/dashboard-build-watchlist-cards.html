@@ -17,7 +17,7 @@
               <img
                 :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
                 :alt="`${card.symbol}`"
-                class="block h-[30px] w-[30px] rounded-full object-cover text-[8px]"
+                class="block h-[30px] w-[30px] rounded-full text-[8px]"
               />
               <span
                 x-text="card.instrumentName"
@@ -331,15 +331,12 @@
                 </div>
               </div>
 
-              <div
-                x-data="{chartImageUrl: null}"
-                x-init="
-                  axios.get(`https://www.stockhawk.io/files/sparklines/${card.symbol.toLowerCase()}.png`)
-                  .then((res) => {
-                    console.log('res', res);
-                  });
-                "
-              ></div>
+              <img
+                :src="`https://www.stockhawk.io/files/sparklines/${card.symbol.toLowerCase()}.png`"
+                :alt="`${card.symbol}`"
+                class="order-first ml-auto block w-full max-w-[160px] text-[8px] md:order-none md:max-w-full"
+                onerror='this.style.display = "none"'
+              />
             </div>
 
             <div class="flex flex-col gap-4">
