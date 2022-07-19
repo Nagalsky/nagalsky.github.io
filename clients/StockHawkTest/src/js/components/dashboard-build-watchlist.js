@@ -13,10 +13,8 @@ function dashboardBuildWatchlistInit() {
         .get(watchListsFullApiUrl, configHeaders)
         .then((res) => {
           this.data = res?.data;
-          if (this.data.length) {
+          if (this.activeTab === 0) {
             this.activeTab = this.data.length ? this.data[0].watchlistId : 0;
-          } else {
-            this.activeTab = 0;
           }
         })
         .finally(() => {
@@ -43,10 +41,8 @@ function dashboardBuildWatchlistInit() {
           this.data = this.data.filter((el) => el.watchlistId !== id);
           this.initialData();
           this.getExistingStocks(id);
-          if (this.data.length) {
-            this.activeTab = this.data[0].watchlistId;
-          } else {
-            this.activeTab = 0;
+          if (this.activeTab !== 0) {
+            this.activeTab = this.data.length ? this.data[0].watchlistId : 0;
           }
         })
         .finally(() => {
