@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{'darkMode': false}" x-init="
+  darkMode = JSON.parse(localStorage.getItem('darkMode'));
+  $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="../../img/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+    <link rel="manifest" href="../../img/site.webmanifest" />
+    <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  
+    <meta property="article:publisher" content="https://www.facebook.com/StockHawkApp" />
+    <meta property="article:modified_time" content="2022-06-21T10:00:00+00:00" />
+    <meta name="twitter:creator" content="@@StockHawkApp" />
+    <meta name="twitter:site" content="@@StockHawkApp" />
+    <meta name="description" content="Track your stocks. Get a bigger picture. Stay updated and save time." />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A smarter way track stocks | StockHawk" />
+    <meta property="og:description"
+      content=" Simple and powerful stock monitoring. Get summarized daily developments for your stocks now." />
+    <meta property="og:url" content="https://www.stockhawk.io/" />
+    <meta property="og:site_name" content="StockHawk" />
+    <meta property="og:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="129" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
+  <title>Stock Hawk member dashboard watch list page</title>
+</head>
+
+<body class="flex flex-col bg-body text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+  x-data="{ showModalAddStock: false, showModalAddingTrade: false, showModalAddwatchlist: false }"
+  :class="{'overflow-y-hidden': showModalAddStock || showModalAddingTrade || showModalAddwatchlist}" x-cloak>
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      ccpaAcknowledgeOnDisplay: true,
+      ccpaApplies: true,
+      consentOnContinuedBrowsing: false,
+      enableCcpa: true,
+      floatingPreferencesButtonDisplay: "anchored-bottom-left",
+      invalidateConsentWithoutLog: true,
+      lang: "en",
+      perPurposeConsent: true,
+      siteId: 2665149,
+      whitelabel: false,
+      cookiePolicyId: 40021501,
+      banner: {
+        acceptButtonCaptionColor: "#FFFFFF",
+        acceptButtonColor: "#0073CE",
+        acceptButtonDisplay: true,
+        backgroundColor: "#FFFFFF",
+        brandBackgroundColor: "#FFFFFF",
+        brandTextColor: "#000000",
+        closeButtonDisplay: false,
+        customizeButtonCaptionColor: "#4D4D4D",
+        customizeButtonColor: "#DADADA",
+        customizeButtonDisplay: true,
+        explicitWithdrawal: true,
+        fontSize: "12px",
+        listPurposes: true,
+        logo: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnDQogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iDQogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIg0KICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIg0KICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHZpZXdCb3g9IjAgMCAyNDE4LjU1NzYgMzkyLjA0OCINCiAgIGhlaWdodD0iMzkyLjA0OCINCiAgIHdpZHRoPSIyNDE4LjU1NzYiDQogICB4bWw6c3BhY2U9InByZXNlcnZlIg0KICAgaWQ9InN2ZzIiDQogICB2ZXJzaW9uPSIxLjEiPjxtZXRhZGF0YQ0KICAgICBpZD0ibWV0YWRhdGE4Ij48cmRmOlJERj48Y2M6V29yaw0KICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlDQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzDQogICAgIGlkPSJkZWZzNiI+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoMTgiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDE2Ig0KICAgICAgICAgZD0iTSAwLDQ4MSBIIDIwMDEgViAwIEggMCBaIiAvPjwvY2xpcFBhdGg+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoNjIiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDYwIg0KICAgICAgICAgZD0ibSAzNzguMDM5LDM1OC4yOTIgMC4wMDQsMC4wMTMgLTAuMTgyLC0wLjE4MSBjIC0xLjU5OSwtMS41MTMgLTMuMjE0LC0zLjA5MiAtNC44NDMsLTQuNzQ0IHYgMCBjIC0xMi41NzYsOS44NjIgLTI3Ljk0NiwxNS40MjcgLTQ1LjE3OSwxMy42MjcgdiAwIGMgLTE2LjMzNSwtMS43MDUgLTMxLjQyMiwtOS4xMzggLTQ0Ljk5OCwtMTguNDkzIHYgMCBMIDkzLjU0MSwyMzEuNzUzIGMgMTIuNzgsLTQuNzMyIDI2LjE3NSwtOS4wMTcgMzkuOTY2LC0xMi42OTEgdiAwIGMgMjguNTgyLC03LjYxNyA1OC44NzQsLTEyLjU4OSA4OC45ODYsLTEzLjM0NSB2IDAgYyA1My42MDcsLTEuMzQ0IDEwNi42MzEsMTAuNjY5IDE0OC4zNTcsNDQuOTAxIHYgMCBjIDkuNzMzLDcuOTgzIDE4LjEzNSwxNi41NDYgMjMuOTg1LDI2Ljc3NiB2IDAgYyAtNC4yNTYsLTEzLjM4IC0xMi42NTUsLTI0LjYyNCAtMjIuOTY5LC0zNS4yOSB2IDAgYyAtNi4xLC02LjMwOCAtMTIuNTcsLTEyLjA1NyAtMTkuMzQ5LC0xNy4zIHYgMCBjIC0zMS44MiwtMjQuNjEzIC03MC41NTgsLTM3Ljg0MyAtMTExLjAzNSwtNDMuMDUxIHYgMCBjIC0xMC41ODEsLTEuMzYyIC0yMS4yOCwtMi4xNzcgLTMyLjAwNSwtMi41MDIgdiAwIGMgLTQuMjUxLC0wLjEyOSAtOC41MDUsLTAuMTg3IC0xMi43NTksLTAuMTY1IHYgMCBsIC04Ni43MSwtODUuNjA0IGggNTYuODcgYyAxNi4xMiwxMC41MDMgMzQuMTU3LDE4LjAwNSA1My4yNDgsMjEuOTg0IHYgMCBjIDQuOTA0LDEuMDI0IDkuOTcyLDEuNzcxIDE0Ljk2MiwyLjIxNCB2IDAgYyA2Ny44NSw2LjAyMiAxMzEuNTI3LDM5LjYzNSAxNzQuNzQzLDk0LjY2OSB2IDAgYyA1LjMzNCw2LjE5NiAxMC4wOTYsMTIuODM0IDE0LjE2NiwxOS45NTQgdiAwIGMgMCwwLjAwMSAwLDAuMDAxIDAsMC4wMDEgdiAwIGMgMjUuMTY1LDQ0LjAzOSAzOC4wMzYsNjguODYxIDQ2LjUyNyw4Mi4wOTkgdiAwIGMgMTIuNjg3LDIwLjc3MyAzNS43MzMsMS4zNjggMzUuNzMzLDEuMzY4IHYgMCBjIDUuNTUzLDE3Ljc0OCAtNy40MTgsMjcuNTg1IC0xMi40NzYsMzAuNjUxIHYgMCBjIC05LjY4NywxOC42MDcgLTI3LjE0Miw0MS4wOTMgLTU0LjkxLDQxLjA5NiB2IDAgYyAtMTYuNDcxLDAuMDAxIC0zNi41NjcsLTcuOTA3IC02MC44MzIsLTI5LjIyNiIgLz48L2NsaXBQYXRoPjxsaW5lYXJHcmFkaWVudA0KICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDcyIg0KICAgICAgIHNwcmVhZE1ldGhvZD0icGFkIg0KICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTE5OC4wOTUyMSwtMTkyLjg2MjUsLTE5Mi44NjI1LDE5OC4wOTUyMSwzNzkuNjA4MDksMzQ1LjA1MDk5KSINCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSINCiAgICAgICB5Mj0iMCINCiAgICAgICB4Mj0iMSINCiAgICAgICB5MT0iMCINCiAgICAgICB4MT0iMCI+PHN0b3ANCiAgICAgICAgIGlkPSJzdG9wNjgiDQogICAgICAgICBvZmZzZXQ9IjAiDQogICAgICAgICBzdHlsZT0ic3RvcC1vcGFjaXR5OjE7c3RvcC1jb2xvcjojMDBhNGM3IiAvPjxzdG9wDQogICAgICAgICBpZD0ic3RvcDcwIg0KICAgICAgICAgb2Zmc2V0PSIxIg0KICAgICAgICAgc3R5bGU9InN0b3Atb3BhY2l0eToxO3N0b3AtY29sb3I6Izk0ZDhlOSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Zw0KICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsLTEyNC43MjEzMyw1MTYuNjkwNjUpIg0KICAgICBpZD0iZzEwIj48Zw0KICAgICAgIGlkPSJnMTIiPjxnDQogICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgxOCkiDQogICAgICAgICBpZD0iZzE0Ij48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NzcuNDcyMiwyODUuMjgxMikiDQogICAgICAgICAgIGlkPSJnMjAiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGgyMiINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Im0gMCwwIGMgLTkuNzA2LDEwLjIwMSAtMjYuNjIsMTQuNjc4IC00MC4zMDMsMTQuNjc4IC0xNy4xNjYsMCAtMzEuMDk2LC03LjIxNCAtMzEuMDk2LC0xOS4xNTQgMCwtMTUuOTIyIDE1LjE3NCwtMTguOTA5IDM3LjU2MywtMjAuODk4IDM0LjMzMSwtMi45ODQgNjYuOTIzLC0xNi4xNzEgNjYuOTIzLC01Ni40NzIgMCwtMzguODA5IC0zNS44MjUsLTU1LjcyNCAtNzMuMzksLTU1Ljk3NCAtMzAuMTAyLC0wLjI0OCAtNjEuNDQ4LDExLjQ0NSAtNzYuMTI1LDM1LjgyNCBsIDIzLjEzNSwyNC4xMyBjIDEzLjQzNiwtMTcuMTY1IDM1LjU3NSwtMjQuNjI3IDUzLjI0LC0yNC42MjcgMjAuNjQ1LDAgMzQuODI3LDguMjA4IDM0LjgyNywyMC42NDcgMC4yNSwxNC42NzggLTExLjQ0NCwyMS4zOTUgLTM1LjA3NywyMy4zODYgLTM2LjgxOSwzLjQ4MSAtNjkuNjU2LDEyLjY4NyAtNjkuMTU5LDUzLjczNCAwLjI0OCwzNC41OCAzMy4wODcsNTIuOTg4IDY4LjkwOSw1Mi45ODggMjYuODcsMCA0Ny4wMTgsLTUuOTcgNjQuOTMyLC0yNi44NjcgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzc4Ljk4LDMwOS42NjA2KSINCiAgICAgICAgICAgaWQ9ImcyNCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDI2Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgViAtMzQuMzI5IEggMzEuMDk0IFYgLTY0LjE4MyBIIC0wLjI1IHYgLTQ2LjI3MSBjIDAsLTEyLjkzNiA3LjIxNCwtMTYuNDE5IDEzLjkzMywtMTYuNDE5IDQuMjI3LDAgMTAuOTQ2LDAuOTk1IDE0LjkyMywyLjk4NiBsIDguMjEzLC0yOS44NTMgYyAtOC45NTgsLTMuNDg0IC0xNi4xNzIsLTQuOTc1IC0yNS44NzMsLTUuNDc0IC0yNi42MTgsLTEuMjQ0IC00Ni43NzEsMTAuNDQ4IC00Ni43NzEsNDguNzYgdiA0Ni4yNzEgaCAtMjEuODkxIHYgMjkuODU0IGggMjEuODkxIHYgMzAuMzUgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTI1LjUxMDMsMjE0LjM4MTgpIg0KICAgICAgICAgICBpZD0iZzI4Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzAiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIDAsMTUuNDI0IC05LjQ1MiwzMi4zNCAtMzEuMDk0LDMyLjM0IC0yMS4zOTcsMCAtMzAuODQ5LC0xNi45MTYgLTMwLjg0OSwtMzIuMzQgMCwtMTUuNDI1IDkuMjAzLC0zMi4wOTMgMzAuODQ5LC0zMi4wOTMgQyAtOS4yMDMsLTMyLjA5MyAwLC0xNi4xNzIgMCwwIG0gLTk4LjI2MiwwIGMgMCwzNy4wNjggMjYuMzY3LDY0LjQzMyA2Ny4xNjgsNjQuNDMzIDQxLjA0NSwwIDY3LjQxOCwtMjcuMzY1IDY3LjQxOCwtNjQuNDMzIDAsLTM3LjA2NiAtMjUuNjI0LC02My45MzYgLTY3LjQxOCwtNjMuOTM2IC00MS41NDUsMCAtNjcuMTY4LDI2Ljg3IC02Ny4xNjgsNjMuOTM2IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDkyLjkzNTUsMTY5LjM1NDUpIg0KICAgICAgICAgICBpZD0iZzMyIj48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzQiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0xNC42NzYsLTE0LjQzIC0zMi4zMzYsLTE4LjkwOCAtNDguMDA4LC0xOC45MDggLTM1LjgyNCwwIC02Ny4xNzIsMTkuNjUzIC02Ny4xNzIsNjMuOTM1IDAsNDEuMjk3IDMxLjA5OCw2NC40MzMgNjYuOTIzLDY0LjQzMyAxNy45MDksMCAzMi4wOTIsLTMuOTgxIDQ0LjUyOSwtMTYuOTE4IGwgLTE5LjksLTIyLjYzOSBjIC03LjQ2NCw1LjcyMyAtMTUuNjcyLDcuMjE3IC0yMy4xMzYsNy4yMTcgLTE3LjkxNCwwIC0zMi4zNDIsLTExLjY5MyAtMzIuMzQyLC0zMi4wOTMgMCwtMTkuNjUzIDE0LjkyNywtMzAuODQ4IDMxLjU5MywtMzAuODQ4IDcuOTYzLDAgMTguOTA5LDMuMjM0IDI0Ljg3OSw5LjIwNCB6IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTQ3LjE3NzcsMzI3LjA3NTcpIg0KICAgICAgICAgICBpZD0iZzM2Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzgiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCB2IC05OS4yNiBsIDM2LjMyNCw0OC4wMTMgaCA0Mi4yODkgdiAtMi4yNCBsIC00NS4wMjYsLTU1LjQ3NSA1MS45OTEsLTYyLjE5MyB2IC0yLjczNyBIIDQyLjU0NCBMIDAsLTExOS45MDggdiAtNTMuOTg0IEggLTM1LjgxOSBWIDAgWiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM3Ni43OTc5LDIzMS43OTY5KSINCiAgICAgICAgICAgaWQ9Imc0MCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDQyIg0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0ibSAwLDAgaCAtOTkuNTExIHYgLTc4LjYxMyBoIC0yMS42NDEgViA5NS41MjkgaCAyMS42NDEgViAyMC4xNSBIIDAgViA5NS41MjkgSCAyMS42NDYgViAtNzguNjEzIEggMCBaIiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkzLjQ4NzMsMjU4LjY2NDEpIg0KICAgICAgICAgICBpZD0iZzQ0Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoNDYiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0yNC4zOCwwIC00NC4wMzMsLTE3LjQxNSAtNDQuMDMzLC00NC43NzkgMCwtMjcuMzY2IDE5LjY1MywtNDUuMDMgNDQuMDMzLC00NS4wMyA1OS4yMDksMCA1OS4yMDksOTAuMDU2IDAuMjQ5LDkwLjA1NiB6IG0gNDQuNzc3LC0xMDUuOTc4IC0wLjQ5NSwyMi4zODkgYyAtOS43MDIsLTE2LjkxNiAtMjguMzYxLC0yNC44NzcgLTQ1LjI3NiwtMjQuODc3IC0zNS4zMjUsMCAtNjIuOTQyLDI0LjM4IC02Mi45NDIsNjQuNDMzIDAsMzkuODA0IDI4LjExMSw2My42ODYgNjMuMTg3LDYzLjQzNiAxOC40MDksMCAzNi41NzMsLTguNDU4IDQ1LjUyNiwtMjQuMzc5IGwgMC4yNDksMjIuMzg5IEggNjQuOTMgViAtMTA1LjQ4IEggNDUuMjc2IFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2MDcuNDI5NywyNzYuMDc2NykiDQogICAgICAgICAgIGlkPSJnNDgiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGg1MCINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Ik0gMCwwIDMzLjA4NywtMTAxLjI1IDY1LjY3OSwwIEggODIuMzQ1IEwgMTE0LjkzMywtMTAxLjI1IDE0OC4wMiwwIGggMjIuMzkgTCAxMjcuMzcyLC0xMjMuMTQzIEggMTAzLjk4NiBMIDg3LjMyLC03Ny4zNjcgNzQuMTM3LC0zMi41ODcgNjAuNzAzLC03Ny4zNjcgNDQuMDMyLC0xMjMuMTQzIEggMjAuODk3IEwgLTIyLjYzNiwwIFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4MjQuNjE0MywyMjQuMzMzKSINCiAgICAgICAgICAgaWQ9Imc1MiI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDU0Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgNTAuNTAyLDUxLjc0NCBIIDc1Ljg3NiBWIDUwLjUgTCAxOS4xNTgsLTYuMjIgODIuODQ1LC02OS42NTYgdiAtMS40OTMgSCA1Ny45NjYgTCAwLC0xMy4xODcgViAtNzEuMTQ5IEggLTIwLjE0NyBWIDEwMi45OTMgSCAwIFoiIC8+PC9nPjwvZz48L2c+PGcNCiAgICAgICBpZD0iZzU2Ij48Zw0KICAgICAgICAgY2xpcC1wYXRoPSJ1cmwoI2NsaXBQYXRoNjIpIg0KICAgICAgICAgaWQ9Imc1OCI+PGcNCiAgICAgICAgICAgaWQ9Imc2NCI+PGcNCiAgICAgICAgICAgICBpZD0iZzY2Ij48cGF0aA0KICAgICAgICAgICAgICAgaWQ9InBhdGg3NCINCiAgICAgICAgICAgICAgIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQ3Mik7c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgICBkPSJtIDM3OC4wMzksMzU4LjI5MiAwLjAwNCwwLjAxMyAtMC4xODIsLTAuMTgxIGMgLTEuNTk5LC0xLjUxMyAtMy4yMTQsLTMuMDkyIC00Ljg0MywtNC43NDQgdiAwIGMgLTEyLjU3Niw5Ljg2MiAtMjcuOTQ2LDE1LjQyNyAtNDUuMTc5LDEzLjYyNyB2IDAgYyAtMTYuMzM1LC0xLjcwNSAtMzEuNDIyLC05LjEzOCAtNDQuOTk4LC0xOC40OTMgdiAwIEwgOTMuNTQxLDIzMS43NTMgYyAxMi43OCwtNC43MzIgMjYuMTc1LC05LjAxNyAzOS45NjYsLTEyLjY5MSB2IDAgYyAyOC41ODIsLTcuNjE3IDU4Ljg3NCwtMTIuNTg5IDg4Ljk4NiwtMTMuMzQ1IHYgMCBjIDUzLjYwNywtMS4zNDQgMTA2LjYzMSwxMC42NjkgMTQ4LjM1Nyw0NC45MDEgdiAwIGMgOS43MzMsNy45ODMgMTguMTM1LDE2LjU0NiAyMy45ODUsMjYuNzc2IHYgMCBjIC00LjI1NiwtMTMuMzggLTEyLjY1NSwtMjQuNjI0IC0yMi45NjksLTM1LjI5IHYgMCBjIC02LjEsLTYuMzA4IC0xMi41NywtMTIuMDU3IC0xOS4zNDksLTE3LjMgdiAwIGMgLTMxLjgyLC0yNC42MTMgLTcwLjU1OCwtMzcuODQzIC0xMTEuMDM1LC00My4wNTEgdiAwIGMgLTEwLjU4MSwtMS4zNjIgLTIxLjI4LC0yLjE3NyAtMzIuMDA1LC0yLjUwMiB2IDAgYyAtNC4yNTEsLTAuMTI5IC04LjUwNSwtMC4xODcgLTEyLjc1OSwtMC4xNjUgdiAwIGwgLTg2LjcxLC04NS42MDQgaCA1Ni44NyBjIDE2LjEyLDEwLjUwMyAzNC4xNTcsMTguMDA1IDUzLjI0OCwyMS45ODQgdiAwIGMgNC45MDQsMS4wMjQgOS45NzIsMS43NzEgMTQuOTYyLDIuMjE0IHYgMCBjIDY3Ljg1LDYuMDIyIDEzMS41MjcsMzkuNjM1IDE3NC43NDMsOTQuNjY5IHYgMCBjIDUuMzM0LDYuMTk2IDEwLjA5NiwxMi44MzQgMTQuMTY2LDE5Ljk1NCB2IDAgYyAwLDAuMDAxIDAsMC4wMDEgMCwwLjAwMSB2IDAgYyAyNS4xNjUsNDQuMDM5IDM4LjAzNiw2OC44NjEgNDYuNTI3LDgyLjA5OSB2IDAgYyAxMi42ODcsMjAuNzczIDM1LjczMywxLjM2OCAzNS43MzMsMS4zNjggdiAwIGMgNS41NTMsMTcuNzQ4IC03LjQxOCwyNy41ODUgLTEyLjQ3NiwzMC42NTEgdiAwIGMgLTkuNjg3LDE4LjYwNyAtMjcuMTQyLDQxLjA5MyAtNTQuOTEsNDEuMDk2IHYgMCBjIC0xNi40NzEsMC4wMDEgLTM2LjU2NywtNy45MDcgLTYwLjgzMiwtMjkuMjI2IiAvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+",
+        position: "float-bottom-center",
+        rejectButtonCaptionColor: "#FFFFFF",
+        rejectButtonColor: "#0073CE",
+        rejectButtonDisplay: true,
+        textColor: "#000000",
+      },
+    };
+  </script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+  <script
+    type="text/javascript"
+    src="//cdn.iubenda.com/cs/iubenda_cs.js"
+    charset="UTF-8"
+    async
+  ></script>
+  
+  <header class="shrink-0 border-b border-gray75 bg-white py-4 md:py-0">
+    <div class="container flex max-w-full flex-wrap items-center justify-between">
+      <a
+        href="index.html"
+        class="flex w-[140px] shrink-0 items-center sm:w-[160px] md:mr-[18px] md:min-h-[79px] md:w-[193px] md:py-[20px] md:pr-[18px] lg:border-r lg:border-gray75"
+      >
+        <img src="../../img/logo-header.svg" alt="" class="w-full" />
+      </a>
+  
+      <div class="flex flex items-center gap-3 sm:gap-6">
+        <div>
+          <button
+            class="inline-flex min-h-[30px] items-center px-1 focus:outline-none"
+            @click="darkMode = !darkMode"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                x-show="darkMode"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+              <path
+                x-show="!darkMode"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+          </button>
+        </div>
+  
+        <div x-data="{ open: false }" class="relative">
+          <button
+            :class="open ? 'bg-blue300' : 'transparent'"
+            class="inline-flex min-h-[30px] items-center rounded px-1"
+            @click="open = ! open"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+            >
+              <path
+                d="M4.47464 15.665L5.1813 15.9162H5.1813L4.47464 15.665ZM5.33419 13.2475L6.04085 13.4988H6.04085L5.33419 13.2475ZM18.6658 13.2475L17.9591 13.4988L18.6658 13.2475ZM19.5253 15.665L20.232 15.4137L19.5253 15.665ZM18.5831 16.25H5.41686V17.75H18.5831V16.25ZM5.1813 15.9162L6.04085 13.4988L4.62753 12.9963L3.76798 15.4137L5.1813 15.9162ZM6.52775 10.676V9.22222H5.02775V10.676H6.52775ZM17.4722 9.22222V10.676H18.9722V9.22222H17.4722ZM17.9591 13.4988L18.8186 15.9162L20.232 15.4137L19.3724 12.9963L17.9591 13.4988ZM17.4722 10.676C17.4722 11.6378 17.6369 12.5925 17.9591 13.4988L19.3724 12.9963C19.1076 12.2513 18.9722 11.4666 18.9722 10.676H17.4722ZM6.04085 13.4988C6.36307 12.5925 6.52775 11.6378 6.52775 10.676H5.02775C5.02775 11.4666 4.89239 12.2513 4.62753 12.9963L6.04085 13.4988ZM5.41686 16.25C5.24412 16.25 5.12343 16.079 5.1813 15.9162L3.76798 15.4137C3.36291 16.553 4.20772 17.75 5.41686 17.75V16.25ZM18.5831 17.75C19.7922 17.75 20.637 16.553 20.232 15.4137L18.8186 15.9162C18.8765 16.079 18.7558 16.25 18.5831 16.25V17.75ZM12 3.75C15.0222 3.75 17.4722 6.2 17.4722 9.22222H18.9722C18.9722 5.37157 15.8506 2.25 12 2.25V3.75ZM12 2.25C8.14932 2.25 5.02775 5.37157 5.02775 9.22222H6.52775C6.52775 6.2 8.97775 3.75 12 3.75V2.25ZM7.24997 17C7.24997 19.6234 9.37662 21.75 12 21.75V20.25C10.205 20.25 8.74997 18.7949 8.74997 17H7.24997ZM12 21.75C14.6233 21.75 16.75 19.6234 16.75 17H15.25C15.25 18.7949 13.7949 20.25 12 20.25V21.75Z"
+                fill="#202246"
+              />
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            @click.away="open = false"
+            x-transition:enter="transition-all duration-200 ease-out"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition-all duration-200 ease-in"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            :class="open ? '' : 'hidden'"
+            class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:text-[14px] [&>*]:transition"
+          >
+            <a href="#" class="hover:text-blue600">Page containing</a>
+            <a href="#" class="hover:text-blue600">Change email</a>
+            <a href="#" class="hover:text-blue600">Delete account</a>
+          </div>
+        </div>
+  
+        <div x-data="{ open: false }" class="relative">
+          <a
+            href="javascript:;"
+            class="inline-flex items-center gap-[12px]"
+            @click="open = ! open"
+          >
+            <img
+              src="https://via.placeholder.com/40"
+              alt="Avatar"
+              class="block h-[40px] w-[40px] shrink-0 rounded-full"
+            />
+            <span class="hidden text-[14px] text-blue700 sm:inline-block"
+              >Navid Nos</span
+            >
+          </a>
+          <div
+            x-show="open"
+            @click.away="open = false"
+            x-transition:enter="transition-all duration-200 ease-out"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition-all duration-200 ease-in"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            :class="open ? '' : 'hidden'"
+            class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:text-[14px] [&>*]:transition"
+          >
+            <a href="/member/logout" class="hover:text-blue600">Logout</a>
+            <a href="#" class="hover:text-blue600">Change email</a>
+            <a href="#" class="hover:text-blue600">Delete account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex grow pb-6 pt-3 lg:py-0">
+    <section class="flex w-full">
+      <div class="container flex max-w-full flex-col gap-4 lg:flex-row lg:gap-0 lg:px-0">
+        <aside
+          class="-mx-[15px] w-[calc(100%_+30px)] shrink-0 bg-white lg:mx-0 lg:w-full lg:w-[208px] lg:border-r lg:border-gray75 lg:pt-[40px] xl:pb-6"
+        >
+          <nav
+            class="grid md:text-lg lg:sticky lg:top-3"
+            x-data="{page: location.pathname.replace(/^.*\/([^/]*)/, '$1').replace('.html', '' )}"
+            @hashchange.window="page = location.pathname"
+          >
+            <a
+              href="dashboard-daily-stock-summary.html"
+              :class="page === 'dashboard-daily-stock-summary' ? 'bg-[#edf6ff] font-medium before:opacity-100' : 'before:opacity-0'"
+              class="group relative flex items-center px-4 py-[9px] text-[12px] capitalize text-dark500 transition before:absolute before:left-0 before:top-0 before:h-full before:w-[5px] before:rounded-r-[4px] before:bg-[#0085ff] hover:bg-[#edf6ff] md:px-6"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="page === 'dashboard-daily-stock-summary' ? 'fill-[#0085ff]' : 'fill-[#97a2ac]'"
+                class="mr-3 h-6 w-6 shrink-0 transition"
+              >
+                <path
+                  d="M6.6124 3.819C6.26666 4.04711 6.1713 4.51231 6.39942 4.85805C6.62753 5.2038 7.09273 5.29915 7.43847 5.07104L6.6124 3.819ZM10.5741 3.74633C10.9863 3.70541 11.2873 3.33809 11.2463 2.9259C11.2054 2.51371 10.8381 2.21275 10.4259 2.25367L10.5741 3.74633ZM2.25367 10.4259C2.21275 10.8381 2.51371 11.2054 2.9259 11.2463C3.33809 11.2873 3.70541 10.9863 3.74633 10.5741L2.25367 10.4259ZM5.07104 7.43847C5.29915 7.09273 5.20379 6.62753 4.85805 6.39942C4.51231 6.1713 4.04711 6.26666 3.819 6.6124L5.07104 7.43847ZM20.325 6.83725C20.1064 6.48542 19.6439 6.37743 19.2921 6.59604C18.9403 6.81466 18.8323 7.27709 19.0509 7.62891L20.325 6.83725ZM20.2537 10.5741C20.2946 10.9863 20.6619 11.2873 21.0741 11.2463C21.4863 11.2054 21.7873 10.8381 21.7463 10.4259L20.2537 10.5741ZM13.5741 2.25367C13.1619 2.21275 12.7946 2.51371 12.7537 2.9259C12.7127 3.33809 13.0137 3.70541 13.4259 3.74633L13.5741 2.25367ZM16.5615 5.07104C16.9073 5.29915 17.3725 5.2038 17.6006 4.85805C17.8287 4.51231 17.7333 4.04711 17.3876 3.819L16.5615 5.07104ZM21.7463 13.5741C21.7873 13.1619 21.4863 12.7946 21.0741 12.7537C20.6619 12.7127 20.2946 13.0137 20.2537 13.4259L21.7463 13.5741ZM18.929 16.5615C18.7008 16.9073 18.7962 17.3725 19.1419 17.6006C19.4877 17.8287 19.9529 17.7333 20.181 17.3876L18.929 16.5615ZM17.3876 20.181C17.7333 19.9529 17.8287 19.4877 17.6006 19.1419C17.3725 18.7962 16.9073 18.7008 16.5615 18.929L17.3876 20.181ZM13.4259 20.2537C13.0137 20.2946 12.7127 20.6619 12.7537 21.0741C12.7946 21.4863 13.1619 21.7873 13.5741 21.7463L13.4259 20.2537ZM10.4259 21.7463C10.8381 21.7873 11.2054 21.4863 11.2463 21.0741C11.2873 20.6619 10.9863 20.2946 10.5741 20.2537L10.4259 21.7463ZM7.43847 18.929C7.09273 18.7008 6.62753 18.7962 6.39942 19.1419C6.1713 19.4877 6.26666 19.9529 6.6124 20.181L7.43847 18.929ZM3.819 17.3876C4.04711 17.7333 4.51231 17.8287 4.85805 17.6006C5.20379 17.3725 5.29915 16.9073 5.07104 16.5615L3.819 17.3876ZM3.74633 13.4259C3.70541 13.0137 3.33809 12.7127 2.9259 12.7537C2.51371 12.7946 2.21274 13.1619 2.25367 13.5741L3.74633 13.4259ZM12 9L12.5303 8.46967C12.2374 8.17678 11.7626 8.17678 11.4697 8.46967L12 9ZM9 12L8.46967 11.4697C8.17678 11.7626 8.17678 12.2374 8.46967 12.5303L9 12ZM12 15L11.4697 15.5303C11.7626 15.8232 12.2374 15.8232 12.5303 15.5303L12 15ZM15 12L15.5303 12.5303C15.8232 12.2374 15.8232 11.7626 15.5303 11.4697L15 12ZM7.43847 5.07104C8.61717 4.29336 9.27638 3.87518 10.5741 3.74633L10.4259 2.25367C8.73675 2.42138 7.81389 3.02628 6.6124 3.819L7.43847 5.07104ZM3.74633 10.5741C3.87518 9.27638 4.29336 8.61717 5.07104 7.43847L3.819 6.6124C3.02628 7.81389 2.42138 8.73675 2.25367 10.4259L3.74633 10.5741ZM19.0509 7.62891C19.7596 8.76944 20.1327 9.35591 20.2537 10.5741L21.7463 10.4259C21.5878 8.82931 21.0362 7.98188 20.325 6.83725L19.0509 7.62891ZM13.4259 3.74633C14.7236 3.87518 15.3828 4.29336 16.5615 5.07104L17.3876 3.819C16.1861 3.02628 15.2633 2.42138 13.5741 2.25367L13.4259 3.74633ZM20.2537 13.4259C20.1248 14.7236 19.7066 15.3828 18.929 16.5615L20.181 17.3876C20.9737 16.1861 21.5786 15.2633 21.7463 13.5741L20.2537 13.4259ZM16.5615 18.929C15.3828 19.7066 14.7236 20.1248 13.4259 20.2537L13.5741 21.7463C15.2633 21.5786 16.1861 20.9737 17.3876 20.181L16.5615 18.929ZM10.5741 20.2537C9.27638 20.1248 8.61717 19.7066 7.43847 18.929L6.6124 20.181C7.81389 20.9737 8.73675 21.5786 10.4259 21.7463L10.5741 20.2537ZM5.07104 16.5615C4.29336 15.3828 3.87518 14.7236 3.74633 13.4259L2.25367 13.5741C2.42138 15.2633 3.02628 16.1861 3.819 17.3876L5.07104 16.5615ZM20.25 5C20.25 5.69036 19.6904 6.25 19 6.25V7.75C20.5188 7.75 21.75 6.51878 21.75 5H20.25ZM19 6.25C18.3096 6.25 17.75 5.69036 17.75 5H16.25C16.25 6.51878 17.4812 7.75 19 7.75V6.25ZM17.75 5C17.75 4.30964 18.3096 3.75 19 3.75V2.25C17.4812 2.25 16.25 3.48122 16.25 5H17.75ZM19 3.75C19.6904 3.75 20.25 4.30964 20.25 5H21.75C21.75 3.48122 20.5188 2.25 19 2.25V3.75ZM20.25 19C20.25 19.6904 19.6904 20.25 19 20.25V21.75C20.5188 21.75 21.75 20.5188 21.75 19H20.25ZM19 20.25C18.3096 20.25 17.75 19.6904 17.75 19H16.25C16.25 20.5188 17.4812 21.75 19 21.75V20.25ZM17.75 19C17.75 18.3096 18.3096 17.75 19 17.75V16.25C17.4812 16.25 16.25 17.4812 16.25 19H17.75ZM19 17.75C19.6904 17.75 20.25 18.3096 20.25 19H21.75C21.75 17.4812 20.5188 16.25 19 16.25V17.75ZM6.25 19C6.25 19.6904 5.69036 20.25 5 20.25V21.75C6.51878 21.75 7.75 20.5188 7.75 19H6.25ZM5 20.25C4.30964 20.25 3.75 19.6904 3.75 19H2.25C2.25 20.5188 3.48122 21.75 5 21.75V20.25ZM3.75 19C3.75 18.3096 4.30964 17.75 5 17.75V16.25C3.48122 16.25 2.25 17.4812 2.25 19H3.75ZM5 17.75C5.69036 17.75 6.25 18.3096 6.25 19H7.75C7.75 17.4812 6.51878 16.25 5 16.25V17.75ZM6.25 5C6.25 5.69036 5.69036 6.25 5 6.25V7.75C6.51878 7.75 7.75 6.51878 7.75 5H6.25ZM5 6.25C4.30964 6.25 3.75 5.69036 3.75 5H2.25C2.25 6.51878 3.48122 7.75 5 7.75V6.25ZM3.75 5C3.75 4.30964 4.30964 3.75 5 3.75V2.25C3.48122 2.25 2.25 3.48122 2.25 5H3.75ZM5 3.75C5.69036 3.75 6.25 4.30964 6.25 5H7.75C7.75 3.48122 6.51878 2.25 5 2.25V3.75ZM11.4697 8.46967L8.46967 11.4697L9.53033 12.5303L12.5303 9.53033L11.4697 8.46967ZM8.46967 12.5303L11.4697 15.5303L12.5303 14.4697L9.53033 11.4697L8.46967 12.5303ZM12.5303 15.5303L15.5303 12.5303L14.4697 11.4697L11.4697 14.4697L12.5303 15.5303ZM15.5303 11.4697L12.5303 8.46967L11.4697 9.53033L14.4697 12.5303L15.5303 11.4697Z"
+                />
+              </svg>
+              Daily Stock Summary
+            </a>
+            <a
+              href="dashboard-build-watchlist.html"
+              :class="page === 'dashboard-build-watchlist' ? 'bg-[#edf6ff] font-medium before:opacity-100' : 'before:opacity-0'"
+              class="group relative flex items-center px-4 py-[9px] text-[12px] capitalize text-dark500 transition before:absolute before:left-0 before:top-0 before:h-full before:w-[5px] before:rounded-r-[4px] before:bg-[#0085ff] hover:bg-[#edf6ff] md:px-6"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="page === 'dashboard-build-watchlist' ? 'fill-[#0085ff]' : 'fill-[#97a2ac]'"
+                class="mr-3 h-6 w-6 shrink-0 transition"
+              >
+                <path
+                  d="M10.0902 21.7272C10.5014 21.6774 10.7944 21.3037 10.7446 20.8925C10.6948 20.4812 10.3211 20.1883 9.90984 20.238L10.0902 21.7272ZM3.75 9C3.75 8.58579 3.41421 8.25 3 8.25C2.58579 8.25 2.25 8.58579 2.25 9H3.75ZM3.75 12C3.75 11.5858 3.41421 11.25 3 11.25C2.58579 11.25 2.25 11.5858 2.25 12H3.75ZM9.0607 14.7075C9.47355 14.674 9.78106 14.3122 9.74754 13.8993C9.71402 13.4864 9.35216 13.1789 8.9393 13.2125L9.0607 14.7075ZM9 18.25C9.41421 18.25 9.75 17.9142 9.75 17.5C9.75 17.0858 9.41421 16.75 9 16.75V18.25ZM3.75 15C3.75 14.5858 3.41421 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15H3.75ZM3.75 6C3.75 5.58579 3.41421 5.25 3 5.25C2.58579 5.25 2.25 5.58579 2.25 6H3.75ZM13.75 6C13.75 5.58579 13.4142 5.25 13 5.25C12.5858 5.25 12.25 5.58579 12.25 6H13.75ZM16.4697 4.46967C16.1768 4.76256 16.1768 5.23744 16.4697 5.53033C16.7626 5.82322 17.2374 5.82322 17.5303 5.53033L16.4697 4.46967ZM19 3L19.5303 2.46967C19.2374 2.17678 18.7626 2.17678 18.4697 2.46967L19 3ZM20.4697 5.53033C20.7626 5.82322 21.2374 5.82322 21.5303 5.53033C21.8232 5.23744 21.8232 4.76256 21.5303 4.46967L20.4697 5.53033ZM18.25 8C18.25 8.41421 18.5858 8.75 19 8.75C19.4142 8.75 19.75 8.41421 19.75 8H18.25ZM20.25 16C20.25 18.3472 18.3472 20.25 16 20.25V21.75C19.1756 21.75 21.75 19.1756 21.75 16H20.25ZM16 20.25C13.6528 20.25 11.75 18.3472 11.75 16H10.25C10.25 19.1756 12.8244 21.75 16 21.75V20.25ZM11.75 16C11.75 13.6528 13.6528 11.75 16 11.75V10.25C12.8244 10.25 10.25 12.8244 10.25 16H11.75ZM16 11.75C18.3472 11.75 20.25 13.6528 20.25 16H21.75C21.75 12.8244 19.1756 10.25 16 10.25V11.75ZM8 20.2326C6.73109 20.2326 5.6187 19.9242 4.84869 19.4649C4.06307 18.9963 3.75 18.4545 3.75 18H2.25C2.25 19.1927 3.05622 20.1423 4.08024 20.7531C5.11988 21.3733 6.50749 21.7326 8 21.7326V20.2326ZM9.90984 20.238C9.81032 20.2501 9.45845 20.2525 9.01606 20.2473C8.61843 20.2427 8.17461 20.2326 8 20.2326V21.7326C8.16786 21.7326 8.56248 21.7421 8.99846 21.7472C9.38967 21.7518 9.86657 21.7542 10.0902 21.7272L9.90984 20.238ZM12.25 5.5C12.25 5.75323 12.0252 6.1844 11.2001 6.59695C10.4199 6.98706 9.28952 7.25 8 7.25V8.75C9.4719 8.75 10.8415 8.45329 11.8709 7.93859C12.8555 7.44631 13.75 6.62748 13.75 5.5H12.25ZM8 7.25C6.71048 7.25 5.58011 6.98706 4.79988 6.59695C3.97478 6.1844 3.75 5.75323 3.75 5.5H2.25C2.25 6.62748 3.14451 7.44631 4.12906 7.93859C5.15847 8.45329 6.5281 8.75 8 8.75V7.25ZM3.75 5.5C3.75 5.24677 3.97478 4.8156 4.79988 4.40305C5.58011 4.01294 6.71048 3.75 8 3.75V2.25C6.5281 2.25 5.15847 2.54671 4.12906 3.06141C3.14451 3.55369 2.25 4.37252 2.25 5.5H3.75ZM8 3.75C9.28952 3.75 10.4199 4.01294 11.2001 4.40305C12.0252 4.8156 12.25 5.24677 12.25 5.5H13.75C13.75 4.37252 12.8555 3.55369 11.8709 3.06141C10.8415 2.54671 9.4719 2.25 8 2.25V3.75ZM12.25 9C12.25 9.00347 12.2513 9.08265 12.0917 9.23357C11.9306 9.38599 11.6571 9.55781 11.257 9.71786C10.4609 10.0363 9.30972 10.25 8 10.25V11.75C9.4517 11.75 10.8005 11.516 11.8141 11.1106C12.3188 10.9087 12.7775 10.6495 13.1224 10.3234C13.4688 9.99578 13.75 9.54882 13.75 9H12.25ZM8 10.25C6.69028 10.25 5.53908 10.0363 4.74301 9.71786C4.34289 9.55781 4.06943 9.38599 3.90826 9.23357C3.74867 9.08265 3.75 9.00347 3.75 9H2.25C2.25 9.54882 2.53115 9.99578 2.87759 10.3234C3.22245 10.6495 3.68122 10.9087 4.18592 11.1106C5.19949 11.516 6.5483 11.75 8 11.75V10.25ZM8 13.25C6.69028 13.25 5.53908 13.0363 4.74301 12.7179C4.34289 12.5578 4.06943 12.386 3.90826 12.2336C3.74867 12.0827 3.75 12.0035 3.75 12H2.25C2.25 12.5488 2.53115 12.9958 2.87759 13.3234C3.22245 13.6495 3.68122 13.9087 4.18592 14.1106C5.19949 14.516 6.5483 14.75 8 14.75V13.25ZM8.9393 13.2125C8.63661 13.237 8.32244 13.25 8 13.25V14.75C8.36249 14.75 8.71717 14.7354 9.0607 14.7075L8.9393 13.2125ZM9 16.75C6.5454 16.75 5.19843 16.4033 4.4897 16.0089C3.84293 15.6489 3.75 15.2693 3.75 15H2.25C2.25 15.8353 2.65707 16.7056 3.7603 17.3196C4.80157 17.899 6.4546 18.25 9 18.25V16.75ZM2.25 6V18H3.75V6H2.25ZM12.25 6V9H13.75V6H12.25ZM17.5303 5.53033L19.5303 3.53033L18.4697 2.46967L16.4697 4.46967L17.5303 5.53033ZM18.4697 3.53033L20.4697 5.53033L21.5303 4.46967L19.5303 2.46967L18.4697 3.53033ZM18.25 3V8H19.75V3H18.25Z"
+                />
+              </svg>
+              Build Watchlists
+            </a>
+            <a
+              href="dashboard-distribution-lists.html"
+              :class="page === 'dashboard-distribution-lists' ? 'bg-[#edf6ff] font-medium before:opacity-100' : 'before:opacity-0'"
+              class="group relative flex items-center px-4 py-[9px] text-[12px] capitalize text-dark500 transition before:absolute before:left-0 before:top-0 before:h-full before:w-[5px] before:rounded-r-[4px] before:bg-[#0085ff] hover:bg-[#edf6ff] md:px-6"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="page === 'dashboard-distribution-lists' ? 'fill-[#0085ff]' : 'fill-[#97a2ac]'"
+                class="mr-3 h-6 w-6 shrink-0 transition"
+              >
+                <path
+                  d="M17.6773 13.3508C17.3188 13.5582 17.1962 14.017 17.4037 14.3755C17.6111 14.7341 18.0699 14.8566 18.4284 14.6492L17.6773 13.3508ZM9.3508 5.57159C9.14339 5.93014 9.26591 6.38893 9.62446 6.59634C9.983 6.80375 10.4418 6.68123 10.6492 6.32268L9.3508 5.57159ZM9 12L9.53033 11.4697C9.23744 11.1768 8.76256 11.1768 8.46967 11.4697L9 12ZM6 15L5.46967 14.4697C5.17678 14.7626 5.17678 15.2374 5.46967 15.5303L6 15ZM9 18L8.46967 18.5303C8.76256 18.8232 9.23744 18.8232 9.53033 18.5303L9 18ZM12 15L12.5303 15.5303C12.8232 15.2374 12.8232 14.7626 12.5303 14.4697L12 15ZM3.75 3C3.75 2.58579 3.41421 2.25 3 2.25C2.58579 2.25 2.25 2.58579 2.25 3H3.75ZM3 6H2.25C2.25 6.41421 2.58579 6.75 3 6.75V6ZM6 6.75C6.41421 6.75 6.75 6.41421 6.75 6C6.75 5.58579 6.41421 5.25 6 5.25V6.75ZM20.25 21C20.25 21.4142 20.5858 21.75 21 21.75C21.4142 21.75 21.75 21.4142 21.75 21H20.25ZM21 18H21.75C21.75 17.5858 21.4142 17.25 21 17.25V18ZM18 17.25C17.5858 17.25 17.25 17.5858 17.25 18C17.25 18.4142 17.5858 18.75 18 18.75V17.25ZM6.53033 3.53033C6.82322 3.23744 6.82322 2.76256 6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967L6.53033 3.53033ZM17.4697 20.4697C17.1768 20.7626 17.1768 21.2374 17.4697 21.5303C17.7626 21.8232 18.2374 21.8232 18.5303 21.5303L17.4697 20.4697ZM14.25 15C14.25 17.8995 11.8995 20.25 9 20.25V21.75C12.7279 21.75 15.75 18.7279 15.75 15H14.25ZM9 20.25C6.10051 20.25 3.75 17.8995 3.75 15H2.25C2.25 18.7279 5.27208 21.75 9 21.75V20.25ZM3.75 15C3.75 12.1005 6.10051 9.75 9 9.75V8.25C5.27208 8.25 2.25 11.2721 2.25 15H3.75ZM9 9.75C11.8995 9.75 14.25 12.1005 14.25 15H15.75C15.75 11.2721 12.7279 8.25 9 8.25V9.75ZM15.1057 3.75C17.9468 3.75 20.25 6.05317 20.25 8.89427H21.75C21.75 5.22474 18.7753 2.25 15.1057 2.25V3.75ZM20.25 8.89427C20.25 10.7974 19.2169 12.4602 17.6773 13.3508L18.4284 14.6492C20.4124 13.5015 21.75 11.3545 21.75 8.89427H20.25ZM10.6492 6.32268C11.5398 4.7831 13.2026 3.75 15.1057 3.75V2.25C12.6455 2.25 10.4985 3.58757 9.3508 5.57159L10.6492 6.32268ZM8.46967 11.4697L5.46967 14.4697L6.53033 15.5303L9.53033 12.5303L8.46967 11.4697ZM5.46967 15.5303L8.46967 18.5303L9.53033 17.4697L6.53033 14.4697L5.46967 15.5303ZM9.53033 18.5303L12.5303 15.5303L11.4697 14.4697L8.46967 17.4697L9.53033 18.5303ZM12.5303 14.4697L9.53033 11.4697L8.46967 12.5303L11.4697 15.5303L12.5303 14.4697ZM2.25 3V6H3.75V3H2.25ZM3 6.75H6V5.25H3V6.75ZM21.75 21V18H20.25V21H21.75ZM21 17.25H18V18.75H21V17.25ZM3.53033 6.53033L6.53033 3.53033L5.46967 2.46967L2.46967 5.46967L3.53033 6.53033ZM20.4697 17.4697L17.4697 20.4697L18.5303 21.5303L21.5303 18.5303L20.4697 17.4697Z"
+                />
+              </svg>
+              Distribution lists
+            </a>
+          </nav>
+        </aside>
+
+        <div class="grow rounded py-4 lg:px-6 lg:pb-6 lg:pt-[40px]">
+          <div class="mb-5 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <h1 class="text-[17px] font-semibold">Build Watchlists</h1>
+            <button type="button" @click="showModalAddwatchlist = true"
+              class="ms-4 inline-flex shrink-0 justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[29px]">
+              Add Watchlist
+            </button>
+          </div>
+
+          <div x-data="dashboardBuildWatchlistInit()">
+            <template x-if="data" x-effect="initialData()">
+              <div>
+                <div class="mb-5 flex flex-wrap gap-y-2 gap-x-4 border-b border-b-gray75 sm:gap-x-6">
+                  <template x-for="(tabSwitch, index) in data" :key="index">
+                    <button @click.prevent="activeTab = tabSwitch.watchlistId" x-effect="getExistingStocks(activeTab)"
+                      x-text="tabSwitch.name" :disabled="isLoading"
+                      :class="activeTab === tabSwitch.watchlistId ? 'text-blue500 md:text-dark500 md:before:bg-blue500' : 'text-[#a2a6bb] md:before:transparent'"
+                      class="relative pb-2 text-[13px] font-semibold uppercase disabled:opacity-50 md:pb-4 md:before:absolute md:before:left-0 md:before:bottom-[-1px] md:before:h-[3px] md:before:w-full md:before:rounded-t-sm"></button>
+                  </template>
+                </div>
+
+                <h2 x-show="!data.length" class="text-[16px] font-semibold">
+                  Click
+                  <button type="button" @click="showModalAddwatchlist = true"
+                    class="text-blue500 duration-200 ease-in-out hover:text-blue600">
+                    here
+                  </button>
+                  to add a Watchlist.
+                </h2>
+
+
+                <template x-if="!isLoading">
+                  <template x-for="tabContent in data" :key="tabContent.watchlistId">
+                    <div x-show="activeTab === tabContent.watchlistId">
+                      <div class="relative rounded-[12px] border-[1px] border-[#eaeaea] bg-white px-4 py-6"
+                        x-data="{ view: 'list'}">
+                        <div
+                          x-show="isLoading"
+                          class="absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-white/75"
+                        >
+                          <svg
+                            class="h-7 w-7 animate-spin text-blue500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              class="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="4"
+                            ></circle>
+                            <path
+                              class="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
+                          </svg>
+                        </div>
+
+                        <div
+                          class="mb-6 flex flex-col gap-6 md:mb-12 xl:flex-row xl:items-center xl:justify-between"
+                        >
+                          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                            <h3 class="text-[17px] font-semibold" x-text="tabContent.name"></h3>
+                            <span
+                              x-show="tabContent?.entries.length"
+                              x-text="tabContent?.entries.length + ' Stocks'"
+                              class="inline-block rounded-[8px] bg-green300 px-[7px] py-[4.5px] text-[10px] font-medium text-green500"
+                            ></span>
+                          </div>
+                        
+                          <div
+                            class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+                          >
+                            <div class="flex flex-col gap-6 sm:flex-row sm:justify-between">
+                              <button
+                                type="button"
+                                class="ms-4 inline-flex shrink-0 grow justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:px-[29px]"
+                              >
+                                Daily Summary
+                              </button>
+                              <button
+                                type="button"
+                                @click="showModalAddStock = true"
+                                class="ms-4 inline-flex shrink-0 grow justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[29px]"
+                              >
+                                Add Stocks
+                              </button>
+                            </div>
+                        
+                            <div class="flex items-center justify-between gap-6">
+                              <div class="flex">
+                                <button
+                                  @click.prevent="view = 'list'"
+                                  type="button"
+                                  class="flex h-[48px] items-center justify-center rounded-l-[12px] px-4"
+                                  :class="view === 'list' ? 'bg-blue500 text-white' : 'bg-blue300 text-dark500'"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                                    />
+                                  </svg>
+                                </button>
+                                <button
+                                  @click.prevent="view = 'cards'"
+                                  type="button"
+                                  class="flex h-[48px] items-center justify-center rounded-r-[12px] px-4"
+                                  :class="view === 'cards' ? 'bg-blue500 text-white' : 'bg-blue300 text-dark500'"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                        
+                              <div x-data="{ open: false }" class="relative">
+                                <button
+                                  :class="open ? 'text-dark500' : 'text-gray700'"
+                                  class="inline-flex items-center rounded px-1"
+                                  @click="open = ! open"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                    />
+                                  </svg>
+                                </button>
+                                <div
+                                  x-show="open"
+                                  @click.away="open = false"
+                                  x-transition:enter="transition-all duration-200 ease-out"
+                                  x-transition:enter-start="transform opacity-0 scale-95"
+                                  x-transition:enter-end="transform opacity-100 scale-100"
+                                  x-transition:leave="transition-all duration-200 ease-in"
+                                  x-transition:leave-start="transform opacity-100 scale-100"
+                                  x-transition:leave-end="transform opacity-0 scale-95"
+                                  :class="open ? '' : 'hidden'"
+                                  class="absolute top-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 space-y-1 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:border-0 [&>*]:bg-transparent [&>*]:p-0 [&>*]:text-left [&>*]:text-[14px] [&>*]:text-dark500 [&>*]:transition"
+                                >
+                                  <button
+                                    type="button"
+                                    class="hover:text-blue600"
+                                    @click="deleteWatchlist(tabContent.watchlistId)"
+                                  >
+                                    Delete watchlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <h2 x-show="!tabContent?.entries.length" class="text-[16px] font-semibold">
+                          Click
+                          <button
+                            type="button"
+                            @click="showModalAddStock = true"
+                            class="text-blue500 duration-200 ease-in-out hover:text-blue600"
+                          >
+                            here
+                          </button>
+                          to create a list stocks to follow.
+                        </h2>
+
+                        <div x-show="view === 'cards'">
+                          <div
+                            class="columns-1 gap-4 md:columns-2 xxl:columns-3 huge:columns-4"
+                            x-data="dashboardWatchlistCardsInit()"
+                            x-effect="() => {
+                              cardViewInit(tabContent?.entries)
+                              $watch('data', () => cardViewInit(tabContent?.entries))
+                            }"
+                          >
+                            <template x-if="cardViewData.length">
+                              <template x-for="card in tabContent?.entries" :key="card.watchlistEntryId">
+                                <div
+                                  class="relative break-inside-avoid-column border-y-[8px] border-white"
+                                >
+                                  <div class="rounded-[9px] bg-[#f9fafb] px-4 py-4 sm:px-6">
+                                    <div class="mb-5 flex min-w-0 items-center justify-between gap-3">
+                                      <div class="flex min-w-0 items-center gap-3">
+                                        <img
+                                          :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${card.symbol}.png`"
+                                          :alt="`${card.symbol}`"
+                                          class="block h-[30px] w-[30px] rounded-full object-cover text-[8px]"
+                                        />
+                                        <span
+                                          x-text="card.instrumentName"
+                                          class="truncate text-[9px] font-medium text-black"
+                                        ></span>
+                                      </div>
+                          
+                                      <div class="flex flex-col gap-1">
+                                        <div class="flex items-center space-x-4">
+                                          <span
+                                            x-text="card.symbol"
+                                            class="text-[9px] font-medium text-blue800"
+                                          ></span>
+                                          <button
+                                            type="button"
+                                            class="text-gray500 hover:text-gray600"
+                                            data-tippy-content="Delete"
+                                            @click="deleteWatchListEntrie(card.watchlistEntryId);"
+                                          >
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-5 w-5"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12"
+                                              />
+                                            </svg>
+                                          </button>
+                                        </div>
+                          
+                                        <template x-if="card.priceChange">
+                                          <div class="text-right text-[11px] font-medium">
+                                            <span
+                                              class="text-black"
+                                              x-text="card.priceChange + '%'"
+                                              x-show="card.pricePercentChange === 0"
+                                            ></span>
+                                            <span
+                                              class="text-red500"
+                                              x-text="card.priceChange + '%'"
+                                              x-show="card.pricePercentChange < 0"
+                                            ></span>
+                                            <span
+                                              class="text-green500"
+                                              x-text="'+' + card.priceChange + '%'"
+                                              x-show="card.pricePercentChange > 0"
+                                            ></span>
+                                          </div>
+                                        </template>
+                                      </div>
+                                    </div>
+                          
+                                    <div
+                                      class="space-y-6"
+                                      x-data="{ 
+                                        cardData: {
+                                          amount: card.amount || '',
+                                          openPrice: card.openPrice || '',
+                                          comment: card.comment || ''
+                                        }
+                                      }"
+                                    >
+                                      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xxl:gap-8">
+                                        <div
+                                          class="flex flex-col space-y-1"
+                                          x-data="{ isEditAmount: false }"
+                                        >
+                                          <span class="text-[12px] font-medium text-[#969fb2]"
+                                            >Amount</span
+                                          >
+                          
+                                          <button
+                                            type="button"
+                                            x-show="!card.positions.length && (card.amount && !isEditAmount)"
+                                            x-text="card.amount"
+                                            class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2.5px] px-1 text-[15px] font-bold leading-none text-blue800 hover:border-gray75 hover:bg-white"
+                                            @click="isEditAmount = !isEditAmount"
+                                          ></button>
+                          
+                                          <div
+                                            class="items-top flex justify-between space-x-1"
+                                            x-show="card.positions.length"
+                                          >
+                                            <p
+                                              x-text="card.amount"
+                                              class="text-[15px] font-bold leading-none text-blue800"
+                                            ></p>
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-[14px] w-[14px] cursor-pointer stroke-gray600"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              data-tippy-content="Amount and OpenPrice are calculated based on entered positions/trades. They cannot be manually changed unless you first remove the trades/positions."
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                              />
+                                            </svg>
+                                          </div>
+                          
+                                          <div x-show="isEditAmount" class="flex space-x-1">
+                                            <input
+                                              type="text"
+                                              class="block h-[22px] w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-[12px] placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                                              x-model="cardData.amount"
+                                              placeholder="Add amount"
+                                              x-mask:dynamic="amountMask"
+                                              maxlength="6"
+                                            />
+                          
+                                            <div class="flex items-center space-x-1">
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
+                                                @click="() => {
+                                                  isEditAmount = !isEditAmount;
+                                                  cardData.amount = card.amount;
+                                                }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                          
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
+                                                @click="() => {
+                                                  isEditAmount = !isEditAmount;
+                                                  editWatchListEntrieAmount(card.watchlistEntryId, cardData);
+                                                }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </div>
+                                          </div>
+                          
+                                          <div x-show="!card.amount && !isEditAmount">
+                                            <button
+                                              type="button"
+                                              @click="isEditAmount = !isEditAmount"
+                                              class="flex min-h-[22px] w-full items-center justify-center gap-1 whitespace-nowrap rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                                            >
+                                              <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4 shrink-0"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                              >
+                                                <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                />
+                                              </svg>
+                                              Add Amount
+                                            </button>
+                                          </div>
+                                        </div>
+                          
+                                        <div
+                                          class="flex flex-col gap-1"
+                                          x-data="{ isEditAvgPrice: false }"
+                                          x-effect="openPriceMask()"
+                                        >
+                                          <span class="text-[12px] font-medium text-[#969fb2]"
+                                            >Avg Price</span
+                                          >
+                          
+                                          <button
+                                            type="button"
+                                            x-show="!card.positions.length && (card.openPrice && !isEditAvgPrice)"
+                                            x-text="card.openPrice"
+                                            class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2.5px] px-1 text-[15px] font-bold leading-none text-blue800 hover:border-gray75 hover:bg-white"
+                                            @click="isEditAvgPrice = !isEditAvgPrice"
+                                          ></button>
+                                          <div
+                                            class="items-top flex justify-between space-x-1"
+                                            x-show="card.positions.length"
+                                          >
+                                            <p
+                                              x-text="card.openPrice"
+                                              class="text-[15px] font-bold leading-none text-blue800"
+                                            ></p>
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-[14px] w-[14px] cursor-pointer stroke-gray600"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              data-tippy-content="Amount and OpenPrice are calculated based on entered positions/trades. They cannot be manually changed unless you first remove the trades/positions."
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                              />
+                                            </svg>
+                                          </div>
+                          
+                                          <div x-show="isEditAvgPrice" class="flex space-x-1">
+                                            <input
+                                              class="block h-[22px] w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-[12px] placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                                              x-model="cardData.openPrice"
+                                              x-ref="inputPriceMask"
+                                              placeholder="Add avg price"
+                                            />
+                          
+                                            <div class="flex items-center space-x-1">
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
+                                                @click="() => {
+                                                isEditAvgPrice = !isEditAvgPrice;
+                                                cardData.openPrice = card.openPrice;
+                                              }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                          
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
+                                                @click="() => {
+                                                  isEditAvgPrice = !isEditAvgPrice;
+                                                  editWatchListEntrieOpenPrice(card.watchlistEntryId, cardData);
+                                                }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </div>
+                                          </div>
+                          
+                                          <div x-show="!card.openPrice && !isEditAvgPrice">
+                                            <button
+                                              type="button"
+                                              @click="isEditAvgPrice = !isEditAvgPrice"
+                                              class="flex min-h-[22px] w-full items-center justify-center gap-1 whitespace-nowrap rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                                            >
+                                              <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4 shrink-0"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                              >
+                                                <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                />
+                                              </svg>
+                                              Add Avg Price
+                                            </button>
+                                          </div>
+                                        </div>
+                          
+                                        <!-- <div
+                                          x-data="{ chartImageUrl: null }"
+                                          x-init="chartImageUrl = await (await fetch(`https://www.stockhawk.io/files/sparklines/${card.symbol.toLowerCase()}.png`))"
+                                        >
+                                          <p x-text="chartImageUrl"></p>
+                                        </div> -->
+                                      </div>
+                          
+                                      <div class="flex flex-col gap-4">
+                                        <span class="text-[12px] font-medium text-[#969fb2]">Trades</span>
+                          
+                                        <div
+                                          x-show="card.positions.length"
+                                          class="mb-2 overflow-hidden rounded-[3px] border-r border-r-gray75"
+                                          x-data="{showAllTrades: false}"
+                                        >
+                                          <div class="overflow-x-auto">
+                                            <table class="w-full md:table-fixed">
+                                              <thead>
+                                                <tr
+                                                  class="[&>*]:whitespace-nowrap [&>*]:border-t [&>*]:border-l [&>*]:border-gray75 [&>*]:bg-blue300 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-left [&>*]:text-[10px] [&>*]:font-medium [&>*]:text-blue500"
+                                                >
+                                                  <th>Date</th>
+                                                  <th>Amount</th>
+                                                  <th>Purchase Price</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <template x-if="!showAllTrades">
+                                                  <template
+                                                    x-for="tableCell in card.positions.slice(0, 4)"
+                                                    :key="tableCell.positionId"
+                                                  >
+                                                    <tr
+                                                      class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium"
+                                                    >
+                                                      <td
+                                                        x-text="tableCell.transactionDate ? moment(tableCell.transactionDate).format('DD/MM/YYYY') : ''"
+                                                      ></td>
+                                                      <td x-text="tableCell.amount"></td>
+                                                      <td x-text="tableCell.transactionPrice"></td>
+                                                    </tr>
+                                                  </template>
+                                                </template>
+                                                <template x-if="showAllTrades">
+                                                  <template
+                                                    x-for="tableCell in card.positions"
+                                                    :key="tableCell.positionId"
+                                                  >
+                                                    <tr
+                                                      class="[&>*]:text-gray-900 [&>*]:border-t [&>*]:border-l [&>*]:border-b [&>*]:border-gray75 [&>*]:px-3 [&>*]:py-[7px] [&>*]:text-sm [&>*]:font-medium"
+                                                    >
+                                                      <td
+                                                        x-text="tableCell.transactionDate ? moment(tableCell.transactionDate).format('DD/MM/YYYY') : ''"
+                                                      ></td>
+                                                      <td x-text="tableCell.amount"></td>
+                                                      <td x-text="tableCell.transactionPrice"></td>
+                                                    </tr>
+                                                  </template>
+                                                </template>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                          
+                                          <div
+                                            class="mt-1 text-center"
+                                            x-show="card.positions.length > 4"
+                                          >
+                                            <button
+                                              @click="showAllTrades = !showAllTrades"
+                                              type="button"
+                                              class="inline-flex rounded-[3px] bg-blue300 py-[2px] px-[7px] text-[11px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                                              :class="showAllTrades ? `before:content-['']` : `before:content-['+']`"
+                                            >
+                                              <span
+                                                x-show="!showAllTrades"
+                                                x-text="card.positions.length -4 + ' Trades'"
+                                              ></span>
+                                              <span x-show="showAllTrades">Less</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                          
+                                        <div>
+                                          <button
+                                            type="button"
+                                            class="flex min-h-[22px] w-full items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 sm:w-auto"
+                                            @click="showModalAddingTrade = true; $nextTick(() => cardItemForTradeModal(card))"
+                                          >
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-4 w-4"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                              />
+                                            </svg>
+                                            Add Trade
+                                          </button>
+                                        </div>
+                          
+                                        <div x-data="{ isEditComment: false }">
+                                          <button
+                                            type="button"
+                                            x-show="card.comment && !isEditComment"
+                                            x-text="card.comment"
+                                            class="flex w-full justify-start rounded-[3px] border-[1px] border-dashed border-transparent py-[2px] px-1 text-[15px] font-bold text-blue800 hover:border-gray75 hover:bg-white"
+                                            @click="isEditComment = !isEditComment"
+                                          ></button>
+                          
+                                          <div x-show="isEditComment" class="flex space-x-1">
+                                            <input
+                                              type="text"
+                                              class="block w-full grow rounded-[3px] border border-solid border-gray75 bg-white px-1 py-[2px] text-sm font-normal transition ease-in-out placeholder:text-[12px] placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                                              :class="card.positions.length ? 'h-[28.5px]' : 'h-[22px]'"
+                                              x-model="cardData.comment"
+                                              placeholder="Add comment"
+                                            />
+                          
+                                            <div class="flex items-center space-x-1">
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-red400 text-white"
+                                                @click="() => {
+                                                isEditComment = !isEditComment;
+                                                cardData.comment = card.comment;
+                                              }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-blue500 text-white"
+                                                @click="() => {
+                                                  isEditComment = !isEditComment;
+                                                  editWatchListEntrieComment(card.watchlistEntryId, cardData);
+                                                }"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-3 w-3"
+                                                  viewBox="0 0 20 20"
+                                                  fill="currentColor"
+                                                >
+                                                  <path
+                                                    fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </div>
+                                          </div>
+                          
+                                          <div x-show="!card.comment && !isEditComment">
+                                            <button
+                                              type="button"
+                                              @click="isEditComment = !isEditComment"
+                                              class="flex min-h-[22px] w-full items-center justify-center gap-1 rounded-[3px] bg-blue300 px-1 py-[2px] text-[11px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 sm:w-auto"
+                                            >
+                                              <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                              >
+                                                <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                />
+                                              </svg>
+                                              Add Comment
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </template>
+                            </template>
+                          </div>
+                        </div>
+
+                        <div x-show="view === 'list'">
+                          <div
+                            x-data="dashboardWatchlistListInit()"
+                            x-effect="() => {
+                              listViewInit(tabContent?.entries)
+                              $watch('data', () => listViewInit(tabContent?.entries))
+                            }"
+                          >
+                            <template x-if="listViewData.length">
+                              <div class="flex flex-col gap-2 text-blue800 xl:gap-0">
+                                <div
+                                  class="mb-1 hidden gap-6 px-2 xl:grid xl:grid-cols-[120px_1fr_1fr_1fr_160px_100px] xxl:grid-cols-[180px_1fr_1fr_1fr_160px_100px] huge:grid-cols-[240px_1fr_1fr_1fr_160px_100px] huge:gap-[70px] [&>*]:text-[12px] [&>*]:font-semibold [&>*]:uppercase [&>*]:tracking-[0.6px] [&>*]:text-[#838690]"
+                                >
+                                  <p>Symbol Name</p>
+                                  <p>Comment</p>
+                                  <p>Price</p>
+                                  <p>Amount</p>
+                                  <p>total gain</p>
+                                  <p></p>
+                                </div>
+                          
+                                <template x-for="table in listViewData" :key="table.watchlistEntryId">
+                                  <div x-data="{ isToggled: false }" class="flex flex-col">
+                                    <div
+                                      class="grid gap-6 border-x border-b border-t py-4 px-2 text-[14px] font-medium xl:grid-cols-[120px_1fr_1fr_1fr_160px_100px] xl:items-center xxl:grid-cols-[180px_1fr_1fr_1fr_160px_100px] huge:grid-cols-[240px_1fr_1fr_1fr_160px_100px] huge:gap-[70px]"
+                                      :class="isToggled ? 'bg-[#f9fafb] border-b-[#f9fafb]  border-x-[#d9d5ec] border-t-[#d9d5ec]' : 'border-b-[#d9d5ec] bg-transparent border-x-transparent  border-t-transparent'"
+                                    >
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          Symbol Name
+                                        </p>
+                                        <div class="flex min-w-0 items-center gap-3">
+                                          <img
+                                            :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${table.symbol}.png`"
+                                            :alt="`${table.symbol}`"
+                                            class="block h-[36px] w-[36px] rounded-full object-cover text-[8px]"
+                                          />
+                                          <div class="flex min-w-0 flex-col">
+                                            <span
+                                              x-text="table.symbol"
+                                              class="truncate text-dark500"
+                                            ></span>
+                                            <span
+                                              x-text="table.instrumentName"
+                                              class="truncate text-[9px] font-medium text-gray700"
+                                            ></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                          
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          Comment
+                                        </p>
+                                        <div x-text="table.comment"></div>
+                                      </div>
+                          
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          Price
+                                        </p>
+                                        <div x-text="table.openPrice ? '$' + table.openPrice : ''"></div>
+                                      </div>
+                          
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          Amount
+                                        </p>
+                                        <div x-text="table.amount"></div>
+                                      </div>
+                          
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          total gain
+                                        </p>
+                                        <div>
+                                          <div class="flex items-center space-x-6">
+                                            <div class="text-[14px] font-medium">
+                                              <span
+                                                class="text-black"
+                                                x-text="'$' + table.priceCurrent"
+                                                x-show="table.priceCurrent === 0"
+                                              ></span>
+                                              <span
+                                                class="text-red500"
+                                                x-text="'-$' + table.priceCurrent"
+                                                x-show="table.priceCurrent < 0"
+                                              ></span>
+                                              <span
+                                                class="text-green500"
+                                                x-text="'+$' + table.priceCurrent"
+                                                x-show="table.priceCurrent > 0"
+                                              ></span>
+                                            </div>
+                          
+                                            <div
+                                              class="text-[14px] font-medium [&>*]:rounded-[8px] [&>*]:px-[13px] [&>*]:py-[8px]"
+                                            >
+                                              <span
+                                                class="text-black"
+                                                x-text="table.priceChange + '%'"
+                                                x-show="table.pricePercentChange === 0"
+                                              ></span>
+                                              <span
+                                                class="bg-red300 text-red500"
+                                                x-text="table.priceChange + '%'"
+                                                x-show="table.pricePercentChange < 0"
+                                              ></span>
+                                              <span
+                                                class="bg-green300 text-green500"
+                                                x-text="'+' + table.priceChange + '%'"
+                                                x-show="table.pricePercentChange > 0"
+                                              ></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                          
+                                      <div class="flex items-start justify-between gap-3">
+                                        <p
+                                          class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                        >
+                                          Action
+                                        </p>
+                                        <div>
+                                          <div class="flex items-center justify-end space-x-4">
+                                            <button
+                                              class="inline-flex items-center rounded px-1 text-gray700"
+                                              @click="isToggled = ! isToggled"
+                                            >
+                                              <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                              >
+                                                <path
+                                                  x-show="!isToggled"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M19 9l-7 7-7-7"
+                                                />
+                                                <path
+                                                  x-show="isToggled"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M5 15l7-7 7 7"
+                                                />
+                                              </svg>
+                                            </button>
+                          
+                                            <div x-data="{ open: false }" class="relative flex">
+                                              <div
+                                                x-show="open"
+                                                @click.away="open = false"
+                                                x-transition:enter="transition-all duration-200 ease-out"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition-all duration-200 ease-in"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                :class="open ? '' : 'hidden'"
+                                                class="absolute bottom-full right-0 z-50 grid min-w-[12rem] origin-top-left gap-2 rounded-[4px] bg-white px-4 py-3 text-base shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] [&>*]:text-[14px] [&>*]:transition"
+                                              >
+                                                <a href="#" class="hover:text-blue600">Page containing</a>
+                                                <a href="#" class="hover:text-blue600">Change email</a>
+                                                <a href="#" class="hover:text-blue600">Delete account</a>
+                                              </div>
+                          
+                                              <button
+                                                :class="open ? 'text-dark500' : 'text-gray700'"
+                                                class="inline-flex items-center rounded px-1"
+                                                @click="open = ! open"
+                                              >
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  class="h-6 w-6"
+                                                  fill="none"
+                                                  viewBox="0 0 24 24"
+                                                  stroke="currentColor"
+                                                  stroke-width="2"
+                                                >
+                                                  <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                    <template x-if="isToggled">
+                                      <div class="border-x border-b border-[#d9d5ec]">
+                                        <div
+                                          class="mb-1 hidden gap-6 border-b border-[#d9d5ec] px-2 xl:grid xl:grid-cols-[120px_1fr_1fr_1fr_160px_100px] xxl:grid-cols-[180px_1fr_1fr_1fr_160px_100px] huge:grid-cols-[240px_1fr_1fr_1fr_160px_100px] huge:gap-[70px] [&>*]:py-2 [&>*]:text-[12px] [&>*]:font-semibold [&>*]:uppercase [&>*]:tracking-[0.6px] [&>*]:text-[#838690]"
+                                          x-show="subListViewData.length"
+                                        >
+                                          <p></p>
+                                          <p>Purchase date</p>
+                                          <p>Trade Date</p>
+                                          <p>Amount</p>
+                                          <p>total gain</p>
+                                          <p></p>
+                                        </div>
+                          
+                                        <template
+                                          x-for="subtable in subListViewData"
+                                          :key="subtable.positionId"
+                                        >
+                                          <div
+                                            class="grid gap-6 border-b border-[#d9d5ec] px-2 py-3 xl:grid xl:grid-cols-[120px_1fr_1fr_1fr_160px_100px] xl:py-0 xxl:grid-cols-[180px_1fr_1fr_1fr_160px_100px] huge:grid-cols-[240px_1fr_1fr_1fr_160px_100px] huge:gap-[70px] [&>*]:text-[14px] [&>*]:font-medium [&>*]:xl:py-[21px]"
+                                          >
+                                            <div class="hidden xl:block"></div>
+                          
+                                            <div class="flex items-start justify-between gap-3">
+                                              <p
+                                                class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                              >
+                                                Purchase date
+                                              </p>
+                                              <div
+                                                x-text="subtable.transactionDate ? moment(subtable.transactionDate).format('MMM	 D, YYYY') : ''"
+                                              ></div>
+                                            </div>
+                          
+                                            <div class="flex items-start justify-between gap-3">
+                                              <p
+                                                class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                              >
+                                                Trade Date
+                                              </p>
+                                              <div x-text="subtable.transactionPrice"></div>
+                                            </div>
+                          
+                                            <div class="flex items-start justify-between gap-3">
+                                              <p
+                                                class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                              >
+                                                Amount
+                                              </p>
+                                              <div x-text="subtable.amount"></div>
+                                            </div>
+                          
+                                            <div class="flex items-start justify-between gap-3">
+                                              <p
+                                                class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                              >
+                                                total gain
+                                              </p>
+                                              <div class="flex items-center space-x-6">
+                                                <div class="text-[14px] font-medium">
+                                                  <span
+                                                    class="text-black"
+                                                    x-text="'$' + table.priceCurrent"
+                                                    x-show="table.priceCurrent === 0"
+                                                  ></span>
+                                                  <span
+                                                    class="text-red500"
+                                                    x-text="'-$' + table.priceCurrent"
+                                                    x-show="table.priceCurrent < 0"
+                                                  ></span>
+                                                  <span
+                                                    class="text-green500"
+                                                    x-text="'+$' + table.priceCurrent"
+                                                    x-show="table.priceCurrent > 0"
+                                                  ></span>
+                                                </div>
+                          
+                                                <div
+                                                  class="text-[14px] font-medium [&>*]:rounded-[8px] [&>*]:px-[13px] [&>*]:py-[8px]"
+                                                >
+                                                  <span
+                                                    class="text-black"
+                                                    x-text="table.priceChange + '%'"
+                                                    x-show="table.pricePercentChange === 0"
+                                                  ></span>
+                                                  <span
+                                                    class="bg-red300 text-red500"
+                                                    x-text="table.priceChange + '%'"
+                                                    x-show="table.pricePercentChange < 0"
+                                                  ></span>
+                                                  <span
+                                                    class="bg-green300 text-green500"
+                                                    x-text="'+' + table.priceChange + '%'"
+                                                    x-show="table.pricePercentChange > 0"
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                          
+                                            <div class="flex items-start justify-between gap-3">
+                                              <p
+                                                class="text-[12px] font-semibold uppercase tracking-[0.6px] text-[#838690] xl:hidden"
+                                              >
+                                                Action
+                                              </p>
+                                              <div class="flex items-center justify-end space-x-4">
+                                                <button
+                                                  class="inline-flex items-center rounded px-1 text-gray700 transition hover:text-gray600"
+                                                >
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 w-5"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                  >
+                                                    <path
+                                                      d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  class="inline-flex items-center rounded px-1 text-gray700 transition hover:text-gray600"
+                                                >
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 w-5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </template>
+                          
+                                        <div class="px-2 py-4">
+                                          <button
+                                            type="button"
+                                            class="inline-flex items-center justify-center gap-1 rounded-[8px] bg-blue300 px-[15px] py-[6px] text-[14px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400"
+                                            @click="showModalAddingTrade = true; $nextTick(() => cardItemForTradeModal(table))"
+                                          >
+                                            <svg
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              class="h-4 w-4"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                              />
+                                            </svg>
+                                            Add Trade
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </template>
+                                  </div>
+                                </template>
+                              </div>
+                            </template>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </template>
+
+                <div
+                  role="dialog"
+                  tabindex="-1"
+                  class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
+                  x-show="showModalAddStock"
+                  x-transition:enter="transition duration-300"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition duration-300"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                >
+                  <div
+                    class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
+                    x-data="loadInstrumentsModal()"
+                    x-init="$watch('search', () => fetchInstruments())"
+                    x-effect="getExistingInstruments(existingStocks)"
+                  >
+                    <div
+                      class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
+                      @click.away="()  => {
+                        showModalAddStock = false;
+                        search = '';
+                        selectedInstruments = [];
+                      }"
+                    >
+                      <h2 class="mb-4 text-[20px] font-semibold">Add Stocks</h2>
+                      <p class="mb-4 text-[12px] text-gray500">Supporting text comes here</p>
+                
+                      <div class="relative">
+                        <div
+                          class="relative flex h-[56px] items-center space-x-4 rounded-[8px] border border-gray300 bg-white px-4"
+                        >
+                          <div class="shrink-0 text-gray400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                              />
+                            </svg>
+                          </div>
+                
+                          <input
+                            type="text"
+                            class="grow border-0 px-0 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
+                            placeholder="Enter tickers or companies to get started..."
+                            x-model="search"
+                            x-ref="searchField"
+                            x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+                            @click.away="search = ''"
+                          />
+                        </div>
+                
+                        <template x-if="instruments.length">
+                          <div
+                            class="absolute left-0 top-[calc(100%_+_2px)] z-20 max-h-[280px] w-full overflow-auto rounded-[8px] border border-gray300 bg-white shadow-[9px_8px_34px_rgba(0,0,0,0.05)] md:max-h-[340px]"
+                          >
+                            <template
+                              x-for="instrument in instruments"
+                              :key="instrument.instrumentId"
+                            >
+                              <div
+                                @click="() => {
+                                  selectInstrument(instrument);
+                                  search = '';
+                                }"
+                                class="flex min-w-0 cursor-pointer flex-nowrap space-x-[20px] border-b border-b-gray300 px-4 py-4 text-[14px] font-bold text-black transition last-of-type:border-b-0 hover:bg-blue300 md:px-6 md:py-[17.5px] md:text-[16px]"
+                              >
+                                <span x-text="instrument.symbol" class="shrink-0"></span>
+                                <span x-text="instrument.name" class="truncate"></span>
+                              </div>
+                            </template>
+                            <template x-if="noInstruments">
+                              <p class="text-[16px] font-bold text-black">No results found</p>
+                            </template>
+                          </div>
+                        </template>
+                
+                        <template x-if="noInstruments">
+                          <div
+                            class="absolute left-0 top-[calc(100%_+_2px)] z-20 max-h-[280px] w-full overflow-auto rounded-[8px] border border-gray300 bg-white shadow-[9px_8px_34px_rgba(0,0,0,0.05)] md:max-h-[340px]"
+                          >
+                            <div
+                              class="cursor-pointer px-4 transition hover:bg-blue300 md:px-6 md:py-[17.5px]"
+                              @click="search = ''"
+                            >
+                              <p class="text-[14px] font-bold text-black md:text-[16px]">
+                                No results found
+                              </p>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                
+                      <template x-if="selectedInstruments.length">
+                        <div class="mt-2">
+                          <template
+                            x-for="selectedInstrument in selectedInstruments"
+                            :key="selectedInstrument.instrumentId"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5 border-b border-b-gray300 py-6"
+                            >
+                              <div class="flex min-w-0 items-center space-x-3">
+                                <div
+                                  class="h-[40px] w-[40px] shrink-0 overflow-hidden rounded-full bg-gray500"
+                                >
+                                  <img
+                                    :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${selectedInstrument.symbol}.png`"
+                                    :alt="`${selectedInstrument.symbol}`"
+                                    class="block h-[40px] w-[40px] object-cover text-[8px]"
+                                  />
+                                </div>
+                
+                                <div class="flex min-w-0 flex-col">
+                                  <span
+                                    x-text="selectedInstrument.symbol"
+                                    class="text-[14px] font-medium text-dark400"
+                                  ></span>
+                                  <span
+                                    x-text="selectedInstrument.name"
+                                    class="truncate text-[14px] text-gray700"
+                                  ></span>
+                                </div>
+                              </div>
+                
+                              <button
+                                type="button"
+                                class="shrink-0 text-blue500 hover:text-blue600"
+                                @click="() => {
+                                    onDeleteSelectInstrument(selectedInstrument.instrumentId);
+                                    search = '';
+                                  }"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </template>
+                        </div>
+                      </template>
+                
+                      <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
+                        <button
+                          type="button"
+                          @click="()  => {
+                            showModalAddStock = false;
+                            search = '';
+                            selectedInstruments = [];
+                          }"
+                          class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
+                        >
+                          Cancel
+                        </button>
+                
+                        <button
+                          :disabled="!selectedInstruments.length || isLoading"
+                          type="button"
+                          :class="!selectedInstruments.length ? 'cursor-not-allowed' : 'cursor-pointer'"
+                          class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
+                          @click="onSubmit()"
+                          x-html="submitButtonText"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  role="dialog"
+                  tabindex="-1"
+                  class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
+                  x-show="showModalAddingTrade"
+                  x-transition:enter="transition duration-300"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition duration-300"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-data="loadAddingTradeModal()"
+                >
+                  <div
+                    class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
+                    x-effect="getTradeInfo(tradeModalCard)"
+                    x-data="createTradeForm()"
+                  >
+                    <div
+                      class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
+                      @click.away="cancel()"
+                    >
+                      <h2 class="mb-4 text-[20px] font-semibold md:mb-8">Adding Trade</h2>
+                
+                      <div
+                        class="mb:mb-8 mb-6 flex flex-col gap-6 rounded-[9px] bg-[#F9FAFB] p-4 sm:flex-row sm:justify-between sm:gap-4"
+                      >
+                        <div class="flex items-center gap-3">
+                          <img
+                            :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${tradeModalData.symbol}.png`"
+                            :alt="`${tradeModalData.symbol}`"
+                            class="block h-[36px] w-[36px] rounded-full object-cover text-[8px]"
+                          />
+                          <div class="flex flex-col">
+                            <span
+                              x-text="tradeModalData.symbol"
+                              class="text-[9px] font-medium text-dark500"
+                            ></span>
+                            <span
+                              x-text="tradeModalData.instrumentName"
+                              class="text-[9px] font-medium text-gray700"
+                            ></span>
+                          </div>
+                        </div>
+                
+                        <div class="flex items-center justify-between gap-4 sm:gap-10">
+                          <div class="flex flex-col gap-1">
+                            <p class="text-[12px] font-medium text-[#969FB2]">Price</p>
+                            <div class="text-[15px] font-bold text-blue800">
+                              <span
+                                x-show="tradeModalData.priceCurrent"
+                                x-text="'$ ' + tradeModalData.priceCurrent"
+                              ></span>
+                              <span x-show="!tradeModalData.priceCurrent">-</span>
+                            </div>
+                          </div>
+                
+                          <div class="flex flex-col gap-1">
+                            <template x-if="tradeModalData.priceChange">
+                              <div class="text-right text-[11px] font-medium">
+                                <span
+                                  class="text-black"
+                                  x-text="tradeModalData.priceChange + '%'"
+                                  x-show="tradeModalData.pricePercentChange === 0"
+                                ></span>
+                                <span
+                                  class="text-red500"
+                                  x-text="tradeModalData.priceChange + '%'"
+                                  x-show="tradeModalData.pricePercentChange < 0"
+                                ></span>
+                                <span
+                                  class="text-green500"
+                                  x-text="'+' + tradeModalData.priceChange + '%'"
+                                  x-show="tradeModalData.pricePercentChange > 0"
+                                ></span>
+                              </div>
+                            </template>
+                
+                            <div>chart here</div>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <form @submit.prevent="submit">
+                        <div class="form-row grid gap-6">
+                          <template x-for="(field, index) in fields" :key="index">
+                            <div
+                              class="relative grid gap-4 sm:grid-cols-2 sm:pr-[40px] md:grid-cols-3"
+                              x-init="$watch('field.purchaseDate', () => checkPrice(field))"
+                              x-effect="disableAddFieldsRow()"
+                            >
+                              <div class="flex flex-col gap-1">
+                                <label
+                                  :for="'field-quantity-' + index"
+                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                  >Quantity</label
+                                >
+                                <input
+                                  type="text"
+                                  class="block h-[48px] w-full rounded-[8px] border border-solid bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:outline-none focus:ring-0 disabled:opacity-50"
+                                  :class="alertQuantity === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
+                                  x-mask:dynamic="amountMask"
+                                  maxlength="6"
+                                  :id="'field-quantity-' + index"
+                                  :disabled="isDisabledFields"
+                                  x-model="field.quantity"
+                                  @blur="validateQuantity()"
+                                />
+                                <p
+                                  x-show="alertQuantity === index"
+                                  class="text-sm font-semibold text-red500"
+                                >
+                                  This field is required.
+                                </p>
+                              </div>
+                
+                              <div class="flex flex-col gap-1">
+                                <label
+                                  :for="'field-purchase-date-' + index"
+                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                  >Purchase date</label
+                                >
+                                <div class="relative text-gray300">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="pointer-events-none absolute top-1/2 left-2 z-10 h-6 w-6 -translate-y-1/2"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                    />
+                                  </svg>
+                
+                                  <input
+                                    type="text"
+                                    x-ref="datepicker"
+                                    class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] pl-[40px] pr-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
+                                    x-effect="datepicker()"
+                                    :id="'field-purchase-date-' + index"
+                                    :disabled="isDisabledFields"
+                                    x-model="field.purchaseDate"
+                                  />
+                                </div>
+                              </div>
+                
+                              <div class="flex max-w-[70%] flex-col gap-1 sm:max-w-none">
+                                <label
+                                  :for="'field-purchase-price-' + index"
+                                  class="text-[14px] font-semibold text-dark500 md:text-[16px]"
+                                  >Purchase price</label
+                                >
+                                <input
+                                  class="block h-[48px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-[2px] px-[12px] text-[14px] font-normal text-dark500 transition ease-in-out focus:border-blue500 focus:outline-none disabled:opacity-50"
+                                  :class="alertPurchaseDate === index ? 'border-red500 focus:border-red500' : 'border-gray300 focus:border-blue500'"
+                                  x-ref="inputPriceMask"
+                                  :id="'field-purchase-price-' + index"
+                                  :disabled="isDisabledFields"
+                                  x-effect="openPriceMask()"
+                                  x-model="field.purchasePrice"
+                                  @blur="validatePurchaseDate()"
+                                />
+                                <p
+                                  x-show="alertPurchaseDate === index"
+                                  class="text-sm font-semibold text-red500"
+                                >
+                                  This field is required and can't be <b>0</b>.
+                                </p>
+                              </div>
+                
+                              <div
+                                class="absolute right-0 bottom-0 flex items-start justify-center pt-[23px] sm:bottom-auto sm:top-0"
+                              >
+                                <button
+                                  class="shrink-0 border-0 bg-transparent p-0 px-1 py-[14px] text-blue500"
+                                  data-tippy-content="Delete"
+                                  @click="removeField(index)"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </template>
+                
+                          <div class="mt-4 sm:mt-6">
+                            <button
+                              type="button"
+                              class="inline-flex items-center justify-center gap-1 rounded-[8px] border-0 bg-blue300 px-[14px] py-[7px] text-[14px] font-semibold text-blue500 duration-200 ease-in-out hover:bg-blue400 disabled:opacity-50"
+                              :class="isDisabledAddRow ? 'cursor-not-allowed' : ''"
+                              :disabled="isDisabledAddRow"
+                              @click.prevent="addFieldsRow()"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                />
+                              </svg>
+                              Add trades
+                            </button>
+                          </div>
+                        </div>
+                
+                        <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
+                          <button
+                            type="button"
+                            @click="cancel()"
+                            class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
+                          >
+                            Cancel
+                          </button>
+                
+                          <button
+                            type="submit"
+                            :disabled="isLoading || !fields?.length || (!isQuantityValid || !isPurchaseDateValid)"
+                            :class="isLoading || !fields?.length ? 'cursor-not-allowed' : ''"
+                            class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
+                            x-html="submitButtonText"
+                          ></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  role="dialog"
+                  tabindex="-1"
+                  class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-[#11142D]/50 duration-300"
+                  x-show="showModalAddwatchlist"
+                  x-transition:enter="transition duration-300"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition duration-300"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                >
+                  <div
+                    class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
+                    x-data="addWatchListModal()"
+                    x-init="$watch('search', () => fetchInstruments())"
+                  >
+                    <div
+                      class="relative z-20 w-full rounded-[14px] border border-[#f2f2f2] bg-white bg-[url('../img/modal-mask.svg')] bg-[length:300px_250px] bg-[right_-138px_top_-2px] bg-no-repeat px-4 py-6 shadow-[0_67px_109px_0_rgba(0,0,0,0.05)] md:w-[612px] md:px-6 md:py-12"
+                      @click.away="cancel()"
+                    >
+                      <h2 class="mb-4 text-[20px] font-semibold">Add watchlist</h2>
+                      <p class="mb-4 text-[12px] text-gray500">Supporting text comes here</p>
+                
+                      <input
+                        type="text"
+                        class="h-[56px] w-full rounded-[8px] border border-gray300 bg-white px-4 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
+                        placeholder="Watchlist"
+                        x-ref="watchlistNameRef"
+                        x-model="watchlistName"
+                        x-on:keydown.window.prevent.slash="$refs.watchlistNameRef.focus()"
+                      />
+                
+                      <div class="relative mt-6" x-show="watchlistName.length">
+                        <div
+                          class="relative flex h-[56px] items-center space-x-4 rounded-[8px] border border-gray300 bg-white px-4"
+                        >
+                          <div class="shrink-0 text-gray400">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                              />
+                            </svg>
+                          </div>
+                
+                          <input
+                            type="text"
+                            class="grow border-0 px-0 placeholder:tracking-[0.09px] placeholder:text-gray400 focus:ring-0 focus:placeholder:text-transparent"
+                            placeholder="Enter tickers or companies to get started..."
+                            x-model="search"
+                            x-ref="searchField"
+                            x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+                            @click.away="search = ''"
+                          />
+                        </div>
+                
+                        <template x-if="instruments.length">
+                          <div
+                            class="absolute left-0 top-[calc(100%_+_2px)] z-20 max-h-[280px] w-full overflow-auto rounded-[8px] border border-gray300 bg-white shadow-[9px_8px_34px_rgba(0,0,0,0.05)] md:max-h-[340px]"
+                          >
+                            <template
+                              x-for="instrument in instruments"
+                              :key="instrument.instrumentId"
+                            >
+                              <div
+                                @click="() => {
+                                  selectInstrument(instrument);
+                                  search = '';
+                                }"
+                                class="flex min-w-0 cursor-pointer flex-nowrap space-x-[20px] border-b border-b-gray300 px-4 py-4 text-[14px] font-bold text-black transition last-of-type:border-b-0 hover:bg-blue300 md:px-6 md:py-[17.5px] md:text-[16px]"
+                              >
+                                <span x-text="instrument.symbol" class="shrink-0"></span>
+                                <span x-text="instrument.name" class="truncate"></span>
+                              </div>
+                            </template>
+                            <template x-if="noInstruments">
+                              <p class="text-[16px] font-bold text-black">No results found</p>
+                            </template>
+                          </div>
+                        </template>
+                
+                        <template x-if="noInstruments">
+                          <div
+                            class="absolute left-0 top-[calc(100%_+_2px)] z-20 max-h-[280px] w-full overflow-auto rounded-[8px] border border-gray300 bg-white shadow-[9px_8px_34px_rgba(0,0,0,0.05)] md:max-h-[340px]"
+                          >
+                            <div
+                              class="cursor-pointer px-4 transition hover:bg-blue300 md:px-6 md:py-[17.5px]"
+                              @click="search = ''"
+                            >
+                              <p class="text-[14px] font-bold text-black md:text-[16px]">
+                                No results found
+                              </p>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                
+                      <template x-if="selectedInstruments.length && selectedInstruments.length">
+                        <div class="mt-2">
+                          <template
+                            x-for="selectedInstrument in selectedInstruments"
+                            :key="selectedInstrument.instrumentId"
+                          >
+                            <div
+                              class="flex items-center justify-between space-x-5 border-b border-b-gray300 py-6"
+                            >
+                              <div class="flex min-w-0 items-center space-x-3">
+                                <div
+                                  class="h-[40px] w-[40px] shrink-0 overflow-hidden rounded-full bg-gray500"
+                                >
+                                  <img
+                                    :src="`https://storage.googleapis.com/iexcloud-hl37opg/api/logos/${selectedInstrument.symbol}.png`"
+                                    :alt="`${selectedInstrument.symbol}`"
+                                    class="block h-[40px] w-[40px] object-cover text-[8px]"
+                                  />
+                                </div>
+                
+                                <div class="flex min-w-0 flex-col">
+                                  <span
+                                    x-text="selectedInstrument.symbol"
+                                    class="text-[14px] font-medium text-dark400"
+                                  ></span>
+                                  <span
+                                    x-text="selectedInstrument.name"
+                                    class="truncate text-[14px] text-gray700"
+                                  ></span>
+                                </div>
+                              </div>
+                
+                              <button
+                                type="button"
+                                class="shrink-0 text-blue500 hover:text-blue600"
+                                @click="() => {
+                                    onDeleteSelectInstrument(selectedInstrument.instrumentId);
+                                    search = '';
+                                  }"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </template>
+                        </div>
+                      </template>
+                
+                      <div class="mt-14 flex justify-end space-x-4 md:space-x-6">
+                        <button
+                          type="button"
+                          class="ms-4 inline-flex justify-center rounded-[8px] bg-blue300 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-blue500 duration-200 ease-in-out hover:bg-blue400 md:w-[157px] md:px-[29px]"
+                          @click="cancel()"
+                        >
+                          Cancel
+                        </button>
+                
+                        <button
+                          :disabled="!watchlistName.length || isLoading"
+                          type="button"
+                          :class="!watchlistName.length ? 'cursor-not-allowed' : 'cursor-pointer'"
+                          class="ms-4 inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[24px] text-[16px] font-semibold capitalize tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 disabled:opacity-50 md:w-[157px] md:px-[29px]"
+                          @click="onSubmit()"
+                          x-html="submitButtonText"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/scripts.js"></script>
+</body>
+
+</html>
