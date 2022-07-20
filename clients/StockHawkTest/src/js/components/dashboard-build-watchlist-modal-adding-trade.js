@@ -143,7 +143,7 @@ function dashboardBuildWatchlistLoadAddingTradeModal() {
 
         validatePurchaseDate() {
           this.fields?.every((field, index) => {
-            if (!!+field.purchasePrice) {
+            if (field.purchasePrice !== "" || field.purchasePrice !== 0) {
               this.alertPurchaseDate = false;
               this.isPurchaseDateValid = true;
             } else {
@@ -181,7 +181,7 @@ function dashboardBuildWatchlistLoadAddingTradeModal() {
 
           const payload = this.fields.map((item) => ({
             amount: item.quantity,
-            transactionPrice: item.purchasePrice,
+            transactionPrice: parseFloat(item.purchasePrice),
             transactionDate: item.purchaseDate
               ? moment(item.purchaseDate, "DD-MM-YYYY").format()
               : "",
@@ -244,8 +244,6 @@ function dashboardBuildWatchlistLoadAddingTradeModal() {
           this.alertQuantity = false;
           this.alertPurchaseDate = false;
           this.isFormValid = true;
-          this.tradeModalData = "";
-          this.tradeModalSymbol = "";
           this.disableAddFieldsRow();
         },
       };

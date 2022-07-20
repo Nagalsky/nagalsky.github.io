@@ -1,22 +1,19 @@
 function dashboardWatchlistListInit() {
   return {
     listViewData: [],
-    subListViewData: [],
+    isLoading: false,
 
     listViewInit(data) {
+      this.isLoading = true;
       if (!data.length) {
+        this.isLoading = false;
         return;
       }
 
-      this.listViewData = [...data];
-    },
-
-    subListViewInit(data) {
-      if (!data.length) {
-        return;
-      }
-
-      this.subListViewData = [...data];
+      setTimeout(() => {
+        this.listViewData = data;
+        this.isLoading = false;
+      }, 10);
     },
 
     deleteWatchListEntrie(id) {

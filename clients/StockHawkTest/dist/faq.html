@@ -1,516 +1,644 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{'darkMode': false}" x-init="
+<html
+  lang="en"
+  x-data="{'darkMode': false}"
+  x-init="
   darkMode = JSON.parse(localStorage.getItem('darkMode'));
-  $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+  $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="./img/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
+    <link rel="manifest" href="./img/site.webmanifest" />
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/StockHawkApp" />
+    <meta property="article:modified_time" content="2022-06-21T10:00:00+00:00" />
+    <meta name="twitter:creator" content="@@StockHawkApp" />
+    <meta name="twitter:site" content="@@StockHawkApp" />
+    <meta name="description" content="Track your stocks. Get a bigger picture. Stay updated and save time." />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A smarter way track stocks | StockHawk" />
+    <meta property="og:description"
+      content=" Simple and powerful stock monitoring. Get summarized daily developments for your stocks now." />
+    <meta property="og:url" content="https://www.stockhawk.io/" />
+    <meta property="og:site_name" content="StockHawk" />
+    <meta property="og:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="129" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
+    <title>Stock Hawk FAQ page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-config" content="./img/browserconfig.xml" />
-  <meta name="theme-color" content="#ffffff" />
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
-  <link rel="manifest" href="./img/site.webmanifest" />
-  <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
-  <link rel="shortcut icon" href="./img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  
-  <meta property="article:publisher" content="https://www.facebook.com/StockHawkApp" />
-  <meta property="article:modified_time" content="2022-06-21T10:00:00+00:00" />
-  <meta name="twitter:creator" content="@@StockHawkApp" />
-  <meta name="twitter:site" content="@@StockHawkApp" />
-  <meta name="description" content="Track your stocks. Get a bigger picture. Stay updated and save time." />
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="A smarter way track stocks | StockHawk" />
-  <meta property="og:description"
-    content=" Simple and powerful stock monitoring. Get summarized daily developments for your stocks now." />
-  <meta property="og:url" content="https://www.stockhawk.io/" />
-  <meta property="og:site_name" content="StockHawk" />
-  <meta property="og:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
-  <meta property="og:image:width" content="800" />
-  <meta property="og:image:height" content="129" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.stockhawk.io/files/logos/logo-horizontal.svg" />
-  <title>Stock Hawk FAQ page</title>
-</head>
-
-<body
-  class="flex flex-col bg-[url('../img/faq-body-bg.png')] bg-[length:100%] bg-[center_top] bg-no-repeat text-[16px] text-dark500 md:min-h-screen md:text-[20px]">
-  <script type="text/javascript">
-    var _iub = _iub || [];
-    _iub.csConfiguration = {
-      ccpaAcknowledgeOnDisplay: true,
-      ccpaApplies: true,
-      consentOnContinuedBrowsing: false,
-      enableCcpa: true,
-      floatingPreferencesButtonDisplay: "anchored-bottom-left",
-      invalidateConsentWithoutLog: true,
-      lang: "en",
-      perPurposeConsent: true,
-      siteId: 2665149,
-      whitelabel: false,
-      cookiePolicyId: 40021501,
-      banner: {
-        acceptButtonCaptionColor: "#FFFFFF",
-        acceptButtonColor: "#0073CE",
-        acceptButtonDisplay: true,
-        backgroundColor: "#FFFFFF",
-        brandBackgroundColor: "#FFFFFF",
-        brandTextColor: "#000000",
-        closeButtonDisplay: false,
-        customizeButtonCaptionColor: "#4D4D4D",
-        customizeButtonColor: "#DADADA",
-        customizeButtonDisplay: true,
-        explicitWithdrawal: true,
-        fontSize: "12px",
-        listPurposes: true,
-        logo: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnDQogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iDQogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIg0KICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIg0KICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHZpZXdCb3g9IjAgMCAyNDE4LjU1NzYgMzkyLjA0OCINCiAgIGhlaWdodD0iMzkyLjA0OCINCiAgIHdpZHRoPSIyNDE4LjU1NzYiDQogICB4bWw6c3BhY2U9InByZXNlcnZlIg0KICAgaWQ9InN2ZzIiDQogICB2ZXJzaW9uPSIxLjEiPjxtZXRhZGF0YQ0KICAgICBpZD0ibWV0YWRhdGE4Ij48cmRmOlJERj48Y2M6V29yaw0KICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlDQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzDQogICAgIGlkPSJkZWZzNiI+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoMTgiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDE2Ig0KICAgICAgICAgZD0iTSAwLDQ4MSBIIDIwMDEgViAwIEggMCBaIiAvPjwvY2xpcFBhdGg+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoNjIiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDYwIg0KICAgICAgICAgZD0ibSAzNzguMDM5LDM1OC4yOTIgMC4wMDQsMC4wMTMgLTAuMTgyLC0wLjE4MSBjIC0xLjU5OSwtMS41MTMgLTMuMjE0LC0zLjA5MiAtNC44NDMsLTQuNzQ0IHYgMCBjIC0xMi41NzYsOS44NjIgLTI3Ljk0NiwxNS40MjcgLTQ1LjE3OSwxMy42MjcgdiAwIGMgLTE2LjMzNSwtMS43MDUgLTMxLjQyMiwtOS4xMzggLTQ0Ljk5OCwtMTguNDkzIHYgMCBMIDkzLjU0MSwyMzEuNzUzIGMgMTIuNzgsLTQuNzMyIDI2LjE3NSwtOS4wMTcgMzkuOTY2LC0xMi42OTEgdiAwIGMgMjguNTgyLC03LjYxNyA1OC44NzQsLTEyLjU4OSA4OC45ODYsLTEzLjM0NSB2IDAgYyA1My42MDcsLTEuMzQ0IDEwNi42MzEsMTAuNjY5IDE0OC4zNTcsNDQuOTAxIHYgMCBjIDkuNzMzLDcuOTgzIDE4LjEzNSwxNi41NDYgMjMuOTg1LDI2Ljc3NiB2IDAgYyAtNC4yNTYsLTEzLjM4IC0xMi42NTUsLTI0LjYyNCAtMjIuOTY5LC0zNS4yOSB2IDAgYyAtNi4xLC02LjMwOCAtMTIuNTcsLTEyLjA1NyAtMTkuMzQ5LC0xNy4zIHYgMCBjIC0zMS44MiwtMjQuNjEzIC03MC41NTgsLTM3Ljg0MyAtMTExLjAzNSwtNDMuMDUxIHYgMCBjIC0xMC41ODEsLTEuMzYyIC0yMS4yOCwtMi4xNzcgLTMyLjAwNSwtMi41MDIgdiAwIGMgLTQuMjUxLC0wLjEyOSAtOC41MDUsLTAuMTg3IC0xMi43NTksLTAuMTY1IHYgMCBsIC04Ni43MSwtODUuNjA0IGggNTYuODcgYyAxNi4xMiwxMC41MDMgMzQuMTU3LDE4LjAwNSA1My4yNDgsMjEuOTg0IHYgMCBjIDQuOTA0LDEuMDI0IDkuOTcyLDEuNzcxIDE0Ljk2MiwyLjIxNCB2IDAgYyA2Ny44NSw2LjAyMiAxMzEuNTI3LDM5LjYzNSAxNzQuNzQzLDk0LjY2OSB2IDAgYyA1LjMzNCw2LjE5NiAxMC4wOTYsMTIuODM0IDE0LjE2NiwxOS45NTQgdiAwIGMgMCwwLjAwMSAwLDAuMDAxIDAsMC4wMDEgdiAwIGMgMjUuMTY1LDQ0LjAzOSAzOC4wMzYsNjguODYxIDQ2LjUyNyw4Mi4wOTkgdiAwIGMgMTIuNjg3LDIwLjc3MyAzNS43MzMsMS4zNjggMzUuNzMzLDEuMzY4IHYgMCBjIDUuNTUzLDE3Ljc0OCAtNy40MTgsMjcuNTg1IC0xMi40NzYsMzAuNjUxIHYgMCBjIC05LjY4NywxOC42MDcgLTI3LjE0Miw0MS4wOTMgLTU0LjkxLDQxLjA5NiB2IDAgYyAtMTYuNDcxLDAuMDAxIC0zNi41NjcsLTcuOTA3IC02MC44MzIsLTI5LjIyNiIgLz48L2NsaXBQYXRoPjxsaW5lYXJHcmFkaWVudA0KICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDcyIg0KICAgICAgIHNwcmVhZE1ldGhvZD0icGFkIg0KICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTE5OC4wOTUyMSwtMTkyLjg2MjUsLTE5Mi44NjI1LDE5OC4wOTUyMSwzNzkuNjA4MDksMzQ1LjA1MDk5KSINCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSINCiAgICAgICB5Mj0iMCINCiAgICAgICB4Mj0iMSINCiAgICAgICB5MT0iMCINCiAgICAgICB4MT0iMCI+PHN0b3ANCiAgICAgICAgIGlkPSJzdG9wNjgiDQogICAgICAgICBvZmZzZXQ9IjAiDQogICAgICAgICBzdHlsZT0ic3RvcC1vcGFjaXR5OjE7c3RvcC1jb2xvcjojMDBhNGM3IiAvPjxzdG9wDQogICAgICAgICBpZD0ic3RvcDcwIg0KICAgICAgICAgb2Zmc2V0PSIxIg0KICAgICAgICAgc3R5bGU9InN0b3Atb3BhY2l0eToxO3N0b3AtY29sb3I6Izk0ZDhlOSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Zw0KICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsLTEyNC43MjEzMyw1MTYuNjkwNjUpIg0KICAgICBpZD0iZzEwIj48Zw0KICAgICAgIGlkPSJnMTIiPjxnDQogICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgxOCkiDQogICAgICAgICBpZD0iZzE0Ij48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NzcuNDcyMiwyODUuMjgxMikiDQogICAgICAgICAgIGlkPSJnMjAiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGgyMiINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Im0gMCwwIGMgLTkuNzA2LDEwLjIwMSAtMjYuNjIsMTQuNjc4IC00MC4zMDMsMTQuNjc4IC0xNy4xNjYsMCAtMzEuMDk2LC03LjIxNCAtMzEuMDk2LC0xOS4xNTQgMCwtMTUuOTIyIDE1LjE3NCwtMTguOTA5IDM3LjU2MywtMjAuODk4IDM0LjMzMSwtMi45ODQgNjYuOTIzLC0xNi4xNzEgNjYuOTIzLC01Ni40NzIgMCwtMzguODA5IC0zNS44MjUsLTU1LjcyNCAtNzMuMzksLTU1Ljk3NCAtMzAuMTAyLC0wLjI0OCAtNjEuNDQ4LDExLjQ0NSAtNzYuMTI1LDM1LjgyNCBsIDIzLjEzNSwyNC4xMyBjIDEzLjQzNiwtMTcuMTY1IDM1LjU3NSwtMjQuNjI3IDUzLjI0LC0yNC42MjcgMjAuNjQ1LDAgMzQuODI3LDguMjA4IDM0LjgyNywyMC42NDcgMC4yNSwxNC42NzggLTExLjQ0NCwyMS4zOTUgLTM1LjA3NywyMy4zODYgLTM2LjgxOSwzLjQ4MSAtNjkuNjU2LDEyLjY4NyAtNjkuMTU5LDUzLjczNCAwLjI0OCwzNC41OCAzMy4wODcsNTIuOTg4IDY4LjkwOSw1Mi45ODggMjYuODcsMCA0Ny4wMTgsLTUuOTcgNjQuOTMyLC0yNi44NjcgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzc4Ljk4LDMwOS42NjA2KSINCiAgICAgICAgICAgaWQ9ImcyNCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDI2Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgViAtMzQuMzI5IEggMzEuMDk0IFYgLTY0LjE4MyBIIC0wLjI1IHYgLTQ2LjI3MSBjIDAsLTEyLjkzNiA3LjIxNCwtMTYuNDE5IDEzLjkzMywtMTYuNDE5IDQuMjI3LDAgMTAuOTQ2LDAuOTk1IDE0LjkyMywyLjk4NiBsIDguMjEzLC0yOS44NTMgYyAtOC45NTgsLTMuNDg0IC0xNi4xNzIsLTQuOTc1IC0yNS44NzMsLTUuNDc0IC0yNi42MTgsLTEuMjQ0IC00Ni43NzEsMTAuNDQ4IC00Ni43NzEsNDguNzYgdiA0Ni4yNzEgaCAtMjEuODkxIHYgMjkuODU0IGggMjEuODkxIHYgMzAuMzUgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTI1LjUxMDMsMjE0LjM4MTgpIg0KICAgICAgICAgICBpZD0iZzI4Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzAiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIDAsMTUuNDI0IC05LjQ1MiwzMi4zNCAtMzEuMDk0LDMyLjM0IC0yMS4zOTcsMCAtMzAuODQ5LC0xNi45MTYgLTMwLjg0OSwtMzIuMzQgMCwtMTUuNDI1IDkuMjAzLC0zMi4wOTMgMzAuODQ5LC0zMi4wOTMgQyAtOS4yMDMsLTMyLjA5MyAwLC0xNi4xNzIgMCwwIG0gLTk4LjI2MiwwIGMgMCwzNy4wNjggMjYuMzY3LDY0LjQzMyA2Ny4xNjgsNjQuNDMzIDQxLjA0NSwwIDY3LjQxOCwtMjcuMzY1IDY3LjQxOCwtNjQuNDMzIDAsLTM3LjA2NiAtMjUuNjI0LC02My45MzYgLTY3LjQxOCwtNjMuOTM2IC00MS41NDUsMCAtNjcuMTY4LDI2Ljg3IC02Ny4xNjgsNjMuOTM2IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDkyLjkzNTUsMTY5LjM1NDUpIg0KICAgICAgICAgICBpZD0iZzMyIj48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzQiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0xNC42NzYsLTE0LjQzIC0zMi4zMzYsLTE4LjkwOCAtNDguMDA4LC0xOC45MDggLTM1LjgyNCwwIC02Ny4xNzIsMTkuNjUzIC02Ny4xNzIsNjMuOTM1IDAsNDEuMjk3IDMxLjA5OCw2NC40MzMgNjYuOTIzLDY0LjQzMyAxNy45MDksMCAzMi4wOTIsLTMuOTgxIDQ0LjUyOSwtMTYuOTE4IGwgLTE5LjksLTIyLjYzOSBjIC03LjQ2NCw1LjcyMyAtMTUuNjcyLDcuMjE3IC0yMy4xMzYsNy4yMTcgLTE3LjkxNCwwIC0zMi4zNDIsLTExLjY5MyAtMzIuMzQyLC0zMi4wOTMgMCwtMTkuNjUzIDE0LjkyNywtMzAuODQ4IDMxLjU5MywtMzAuODQ4IDcuOTYzLDAgMTguOTA5LDMuMjM0IDI0Ljg3OSw5LjIwNCB6IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTQ3LjE3NzcsMzI3LjA3NTcpIg0KICAgICAgICAgICBpZD0iZzM2Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzgiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCB2IC05OS4yNiBsIDM2LjMyNCw0OC4wMTMgaCA0Mi4yODkgdiAtMi4yNCBsIC00NS4wMjYsLTU1LjQ3NSA1MS45OTEsLTYyLjE5MyB2IC0yLjczNyBIIDQyLjU0NCBMIDAsLTExOS45MDggdiAtNTMuOTg0IEggLTM1LjgxOSBWIDAgWiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM3Ni43OTc5LDIzMS43OTY5KSINCiAgICAgICAgICAgaWQ9Imc0MCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDQyIg0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0ibSAwLDAgaCAtOTkuNTExIHYgLTc4LjYxMyBoIC0yMS42NDEgViA5NS41MjkgaCAyMS42NDEgViAyMC4xNSBIIDAgViA5NS41MjkgSCAyMS42NDYgViAtNzguNjEzIEggMCBaIiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkzLjQ4NzMsMjU4LjY2NDEpIg0KICAgICAgICAgICBpZD0iZzQ0Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoNDYiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0yNC4zOCwwIC00NC4wMzMsLTE3LjQxNSAtNDQuMDMzLC00NC43NzkgMCwtMjcuMzY2IDE5LjY1MywtNDUuMDMgNDQuMDMzLC00NS4wMyA1OS4yMDksMCA1OS4yMDksOTAuMDU2IDAuMjQ5LDkwLjA1NiB6IG0gNDQuNzc3LC0xMDUuOTc4IC0wLjQ5NSwyMi4zODkgYyAtOS43MDIsLTE2LjkxNiAtMjguMzYxLC0yNC44NzcgLTQ1LjI3NiwtMjQuODc3IC0zNS4zMjUsMCAtNjIuOTQyLDI0LjM4IC02Mi45NDIsNjQuNDMzIDAsMzkuODA0IDI4LjExMSw2My42ODYgNjMuMTg3LDYzLjQzNiAxOC40MDksMCAzNi41NzMsLTguNDU4IDQ1LjUyNiwtMjQuMzc5IGwgMC4yNDksMjIuMzg5IEggNjQuOTMgViAtMTA1LjQ4IEggNDUuMjc2IFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2MDcuNDI5NywyNzYuMDc2NykiDQogICAgICAgICAgIGlkPSJnNDgiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGg1MCINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Ik0gMCwwIDMzLjA4NywtMTAxLjI1IDY1LjY3OSwwIEggODIuMzQ1IEwgMTE0LjkzMywtMTAxLjI1IDE0OC4wMiwwIGggMjIuMzkgTCAxMjcuMzcyLC0xMjMuMTQzIEggMTAzLjk4NiBMIDg3LjMyLC03Ny4zNjcgNzQuMTM3LC0zMi41ODcgNjAuNzAzLC03Ny4zNjcgNDQuMDMyLC0xMjMuMTQzIEggMjAuODk3IEwgLTIyLjYzNiwwIFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4MjQuNjE0MywyMjQuMzMzKSINCiAgICAgICAgICAgaWQ9Imc1MiI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDU0Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgNTAuNTAyLDUxLjc0NCBIIDc1Ljg3NiBWIDUwLjUgTCAxOS4xNTgsLTYuMjIgODIuODQ1LC02OS42NTYgdiAtMS40OTMgSCA1Ny45NjYgTCAwLC0xMy4xODcgViAtNzEuMTQ5IEggLTIwLjE0NyBWIDEwMi45OTMgSCAwIFoiIC8+PC9nPjwvZz48L2c+PGcNCiAgICAgICBpZD0iZzU2Ij48Zw0KICAgICAgICAgY2xpcC1wYXRoPSJ1cmwoI2NsaXBQYXRoNjIpIg0KICAgICAgICAgaWQ9Imc1OCI+PGcNCiAgICAgICAgICAgaWQ9Imc2NCI+PGcNCiAgICAgICAgICAgICBpZD0iZzY2Ij48cGF0aA0KICAgICAgICAgICAgICAgaWQ9InBhdGg3NCINCiAgICAgICAgICAgICAgIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQ3Mik7c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgICBkPSJtIDM3OC4wMzksMzU4LjI5MiAwLjAwNCwwLjAxMyAtMC4xODIsLTAuMTgxIGMgLTEuNTk5LC0xLjUxMyAtMy4yMTQsLTMuMDkyIC00Ljg0MywtNC43NDQgdiAwIGMgLTEyLjU3Niw5Ljg2MiAtMjcuOTQ2LDE1LjQyNyAtNDUuMTc5LDEzLjYyNyB2IDAgYyAtMTYuMzM1LC0xLjcwNSAtMzEuNDIyLC05LjEzOCAtNDQuOTk4LC0xOC40OTMgdiAwIEwgOTMuNTQxLDIzMS43NTMgYyAxMi43OCwtNC43MzIgMjYuMTc1LC05LjAxNyAzOS45NjYsLTEyLjY5MSB2IDAgYyAyOC41ODIsLTcuNjE3IDU4Ljg3NCwtMTIuNTg5IDg4Ljk4NiwtMTMuMzQ1IHYgMCBjIDUzLjYwNywtMS4zNDQgMTA2LjYzMSwxMC42NjkgMTQ4LjM1Nyw0NC45MDEgdiAwIGMgOS43MzMsNy45ODMgMTguMTM1LDE2LjU0NiAyMy45ODUsMjYuNzc2IHYgMCBjIC00LjI1NiwtMTMuMzggLTEyLjY1NSwtMjQuNjI0IC0yMi45NjksLTM1LjI5IHYgMCBjIC02LjEsLTYuMzA4IC0xMi41NywtMTIuMDU3IC0xOS4zNDksLTE3LjMgdiAwIGMgLTMxLjgyLC0yNC42MTMgLTcwLjU1OCwtMzcuODQzIC0xMTEuMDM1LC00My4wNTEgdiAwIGMgLTEwLjU4MSwtMS4zNjIgLTIxLjI4LC0yLjE3NyAtMzIuMDA1LC0yLjUwMiB2IDAgYyAtNC4yNTEsLTAuMTI5IC04LjUwNSwtMC4xODcgLTEyLjc1OSwtMC4xNjUgdiAwIGwgLTg2LjcxLC04NS42MDQgaCA1Ni44NyBjIDE2LjEyLDEwLjUwMyAzNC4xNTcsMTguMDA1IDUzLjI0OCwyMS45ODQgdiAwIGMgNC45MDQsMS4wMjQgOS45NzIsMS43NzEgMTQuOTYyLDIuMjE0IHYgMCBjIDY3Ljg1LDYuMDIyIDEzMS41MjcsMzkuNjM1IDE3NC43NDMsOTQuNjY5IHYgMCBjIDUuMzM0LDYuMTk2IDEwLjA5NiwxMi44MzQgMTQuMTY2LDE5Ljk1NCB2IDAgYyAwLDAuMDAxIDAsMC4wMDEgMCwwLjAwMSB2IDAgYyAyNS4xNjUsNDQuMDM5IDM4LjAzNiw2OC44NjEgNDYuNTI3LDgyLjA5OSB2IDAgYyAxMi42ODcsMjAuNzczIDM1LjczMywxLjM2OCAzNS43MzMsMS4zNjggdiAwIGMgNS41NTMsMTcuNzQ4IC03LjQxOCwyNy41ODUgLTEyLjQ3NiwzMC42NTEgdiAwIGMgLTkuNjg3LDE4LjYwNyAtMjcuMTQyLDQxLjA5MyAtNTQuOTEsNDEuMDk2IHYgMCBjIC0xNi40NzEsMC4wMDEgLTM2LjU2NywtNy45MDcgLTYwLjgzMiwtMjkuMjI2IiAvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+",
-        position: "float-bottom-center",
-        rejectButtonCaptionColor: "#FFFFFF",
-        rejectButtonColor: "#0073CE",
-        rejectButtonDisplay: true,
-        textColor: "#000000",
-      },
-    };
-  </script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
-  <script
-    type="text/javascript"
-    src="//cdn.iubenda.com/cs/iubenda_cs.js"
-    charset="UTF-8"
-    async
-  ></script>
-  
-  <header class="shrink-0 py-4 md:py-[37px]">
-    <div class="container flex items-center justify-between">
-      <a
-        href="index.html"
-        class="inline-block w-[140px] shrink-0 sm:w-[160px] md:w-[196px]"
-      >
-        <img src="img/logo-header.svg" alt="" class="w-full" />
-      </a>
-  
-      <a
-        href="/member/login"
-        class="inline-flex rounded-[8px] bg-blue500 py-[7.5px] px-[28px] text-[16px] font-bold uppercase tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[38px] md:text-[22px]"
-        >SIGN IN</a
-      >
-    </div>
-  </header>
-
-  <main class="grow">
-    <section class="py-[50px] md:py-[40px]">
-      <div class="container">
-        <h1
-          class="mb-6 text-center text-[36px] font-extrabold leading-[0.26] tracking-[0.26px] md:text-[44px] md:leading-[1.55] lg:text-[51px]">
-          Frequently Asked Questions
-        </h1>
-
-        <p class="mb-4 text-center leading-[1.8] text-gray500 md:text-[20px]">
-          Have questions! We’re here to help
-        </p>
-
-        <form action="" class="mx-auto max-w-[465px]">
-          <div class="relative text-gray400">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              class="pointer-events-none absolute left-[26px] top-1/2 h-6 w-6 -translate-y-1/2" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input type="search"
-              class="block h-[61px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-1.5 pl-[60px] pr-6 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
-              placeholder="Search" />
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="py-[50px] md:pb-[75px]" data-aos="fade-up" data-aos-duration="1000">
-      <div class="container">
-        <h2 class="mb-6 text-[34px] font-extrabold capitalize leading-[1.3] tracking-[-0.5px] md:text-[40px]">
-          General
-        </h2>
-        <div x-data="{ openedIndex: false }" class="mb-6 grid gap-6 md:mb-12">
-          <div @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                Can you explain this in more detail?
-              </p>
-              <div :class="openedIndex == 1 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 1" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                Can my daily updates be shared?
-              </p>
-              <div :class="openedIndex == 2 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 2" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                What improvements are in your pipeline?
-              </p>
-              <div :class="openedIndex == 3 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 3" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-        </div>
-
-        <h2 class="mb-6 text-[34px] font-extrabold capitalize leading-[1.3] tracking-[-0.5px] md:text-[40px]">
-          Membership
-        </h2>
-
-        <div x-data="{ openedIndex: false }" class="grid gap-6">
-          <div @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                Can I cancel at any time?
-              </p>
-              <div :class="openedIndex == 1 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 1" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                What kind payment do you accept?
-              </p>
-              <div :class="openedIndex == 2 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 2" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                Will I need to enter my credit card to sign up?
-              </p>
-              <div :class="openedIndex == 3 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 3" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 4 ? openedIndex = -1 : openedIndex = 4"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                What happens at the end of my free trial?
-              </p>
-              <div :class="openedIndex == 4 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 4" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-
-          <div @click="openedIndex == 5 ? openedIndex = -1 : openedIndex = 5"
-            class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]">
-            <div class="flex items-center justify-between">
-              <p class="text text-[18px] font-bold md:text-[22px]">
-                What happens if I don't renew my subscription?
-              </p>
-              <div :class="openedIndex == 5 ? '-rotate-180' : ''">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-
-            <div x-show="openedIndex == 5" class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
-              Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-              commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-              porta eu gravida ut, maximus non erat.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray200 py-[50px] text-center md:py-[100px]">
-      <div class="container">
-        <p class="mb-3 text-[16px] font-semibold uppercase tracking-[1px] text-red500">
-          VALUES
-        </p>
-        <h2 class="mb-3 text-[34px] font-extrabold leading-[1.3] tracking-[-0.5px] md:text-[40px]">
-          Still have questions
-        </h2>
-        <p class="mb-6 leading-[1.8] text-gray500 md:mb-12">
-          Can't find the answer you re looking for? Please chat to our
-          friendly team
-        </p>
-
-        <a href="contact.html"
-          class="inline-flex justify-center rounded-[8px] bg-blue500 py-[13px] px-[26px] text-[16px] font-bold uppercase text-white duration-200 ease-in-out hover:bg-blue600 md:px-[35px]">
-          CONTACT US
+  <body
+    class="flex flex-col bg-[url('../img/faq-body-bg.png')] bg-[length:100%] bg-[center_top] bg-no-repeat text-[16px] text-dark500 md:min-h-screen md:overflow-hidden md:overflow-y-auto md:text-[20px]"
+  >
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        ccpaAcknowledgeOnDisplay: true,
+        ccpaApplies: true,
+        consentOnContinuedBrowsing: false,
+        enableCcpa: true,
+        floatingPreferencesButtonDisplay: "anchored-bottom-left",
+        invalidateConsentWithoutLog: true,
+        lang: "en",
+        perPurposeConsent: true,
+        siteId: 2665149,
+        whitelabel: false,
+        cookiePolicyId: 40021501,
+        banner: {
+          acceptButtonCaptionColor: "#FFFFFF",
+          acceptButtonColor: "#0073CE",
+          acceptButtonDisplay: true,
+          backgroundColor: "#FFFFFF",
+          brandBackgroundColor: "#FFFFFF",
+          brandTextColor: "#000000",
+          closeButtonDisplay: false,
+          customizeButtonCaptionColor: "#4D4D4D",
+          customizeButtonColor: "#DADADA",
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          fontSize: "12px",
+          listPurposes: true,
+          logo: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnDQogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iDQogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIg0KICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIg0KICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHZpZXdCb3g9IjAgMCAyNDE4LjU1NzYgMzkyLjA0OCINCiAgIGhlaWdodD0iMzkyLjA0OCINCiAgIHdpZHRoPSIyNDE4LjU1NzYiDQogICB4bWw6c3BhY2U9InByZXNlcnZlIg0KICAgaWQ9InN2ZzIiDQogICB2ZXJzaW9uPSIxLjEiPjxtZXRhZGF0YQ0KICAgICBpZD0ibWV0YWRhdGE4Ij48cmRmOlJERj48Y2M6V29yaw0KICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlDQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzDQogICAgIGlkPSJkZWZzNiI+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoMTgiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDE2Ig0KICAgICAgICAgZD0iTSAwLDQ4MSBIIDIwMDEgViAwIEggMCBaIiAvPjwvY2xpcFBhdGg+PGNsaXBQYXRoDQogICAgICAgaWQ9ImNsaXBQYXRoNjIiDQogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoDQogICAgICAgICBpZD0icGF0aDYwIg0KICAgICAgICAgZD0ibSAzNzguMDM5LDM1OC4yOTIgMC4wMDQsMC4wMTMgLTAuMTgyLC0wLjE4MSBjIC0xLjU5OSwtMS41MTMgLTMuMjE0LC0zLjA5MiAtNC44NDMsLTQuNzQ0IHYgMCBjIC0xMi41NzYsOS44NjIgLTI3Ljk0NiwxNS40MjcgLTQ1LjE3OSwxMy42MjcgdiAwIGMgLTE2LjMzNSwtMS43MDUgLTMxLjQyMiwtOS4xMzggLTQ0Ljk5OCwtMTguNDkzIHYgMCBMIDkzLjU0MSwyMzEuNzUzIGMgMTIuNzgsLTQuNzMyIDI2LjE3NSwtOS4wMTcgMzkuOTY2LC0xMi42OTEgdiAwIGMgMjguNTgyLC03LjYxNyA1OC44NzQsLTEyLjU4OSA4OC45ODYsLTEzLjM0NSB2IDAgYyA1My42MDcsLTEuMzQ0IDEwNi42MzEsMTAuNjY5IDE0OC4zNTcsNDQuOTAxIHYgMCBjIDkuNzMzLDcuOTgzIDE4LjEzNSwxNi41NDYgMjMuOTg1LDI2Ljc3NiB2IDAgYyAtNC4yNTYsLTEzLjM4IC0xMi42NTUsLTI0LjYyNCAtMjIuOTY5LC0zNS4yOSB2IDAgYyAtNi4xLC02LjMwOCAtMTIuNTcsLTEyLjA1NyAtMTkuMzQ5LC0xNy4zIHYgMCBjIC0zMS44MiwtMjQuNjEzIC03MC41NTgsLTM3Ljg0MyAtMTExLjAzNSwtNDMuMDUxIHYgMCBjIC0xMC41ODEsLTEuMzYyIC0yMS4yOCwtMi4xNzcgLTMyLjAwNSwtMi41MDIgdiAwIGMgLTQuMjUxLC0wLjEyOSAtOC41MDUsLTAuMTg3IC0xMi43NTksLTAuMTY1IHYgMCBsIC04Ni43MSwtODUuNjA0IGggNTYuODcgYyAxNi4xMiwxMC41MDMgMzQuMTU3LDE4LjAwNSA1My4yNDgsMjEuOTg0IHYgMCBjIDQuOTA0LDEuMDI0IDkuOTcyLDEuNzcxIDE0Ljk2MiwyLjIxNCB2IDAgYyA2Ny44NSw2LjAyMiAxMzEuNTI3LDM5LjYzNSAxNzQuNzQzLDk0LjY2OSB2IDAgYyA1LjMzNCw2LjE5NiAxMC4wOTYsMTIuODM0IDE0LjE2NiwxOS45NTQgdiAwIGMgMCwwLjAwMSAwLDAuMDAxIDAsMC4wMDEgdiAwIGMgMjUuMTY1LDQ0LjAzOSAzOC4wMzYsNjguODYxIDQ2LjUyNyw4Mi4wOTkgdiAwIGMgMTIuNjg3LDIwLjc3MyAzNS43MzMsMS4zNjggMzUuNzMzLDEuMzY4IHYgMCBjIDUuNTUzLDE3Ljc0OCAtNy40MTgsMjcuNTg1IC0xMi40NzYsMzAuNjUxIHYgMCBjIC05LjY4NywxOC42MDcgLTI3LjE0Miw0MS4wOTMgLTU0LjkxLDQxLjA5NiB2IDAgYyAtMTYuNDcxLDAuMDAxIC0zNi41NjcsLTcuOTA3IC02MC44MzIsLTI5LjIyNiIgLz48L2NsaXBQYXRoPjxsaW5lYXJHcmFkaWVudA0KICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDcyIg0KICAgICAgIHNwcmVhZE1ldGhvZD0icGFkIg0KICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTE5OC4wOTUyMSwtMTkyLjg2MjUsLTE5Mi44NjI1LDE5OC4wOTUyMSwzNzkuNjA4MDksMzQ1LjA1MDk5KSINCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSINCiAgICAgICB5Mj0iMCINCiAgICAgICB4Mj0iMSINCiAgICAgICB5MT0iMCINCiAgICAgICB4MT0iMCI+PHN0b3ANCiAgICAgICAgIGlkPSJzdG9wNjgiDQogICAgICAgICBvZmZzZXQ9IjAiDQogICAgICAgICBzdHlsZT0ic3RvcC1vcGFjaXR5OjE7c3RvcC1jb2xvcjojMDBhNGM3IiAvPjxzdG9wDQogICAgICAgICBpZD0ic3RvcDcwIg0KICAgICAgICAgb2Zmc2V0PSIxIg0KICAgICAgICAgc3R5bGU9InN0b3Atb3BhY2l0eToxO3N0b3AtY29sb3I6Izk0ZDhlOSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Zw0KICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsLTEyNC43MjEzMyw1MTYuNjkwNjUpIg0KICAgICBpZD0iZzEwIj48Zw0KICAgICAgIGlkPSJnMTIiPjxnDQogICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgxOCkiDQogICAgICAgICBpZD0iZzE0Ij48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NzcuNDcyMiwyODUuMjgxMikiDQogICAgICAgICAgIGlkPSJnMjAiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGgyMiINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Im0gMCwwIGMgLTkuNzA2LDEwLjIwMSAtMjYuNjIsMTQuNjc4IC00MC4zMDMsMTQuNjc4IC0xNy4xNjYsMCAtMzEuMDk2LC03LjIxNCAtMzEuMDk2LC0xOS4xNTQgMCwtMTUuOTIyIDE1LjE3NCwtMTguOTA5IDM3LjU2MywtMjAuODk4IDM0LjMzMSwtMi45ODQgNjYuOTIzLC0xNi4xNzEgNjYuOTIzLC01Ni40NzIgMCwtMzguODA5IC0zNS44MjUsLTU1LjcyNCAtNzMuMzksLTU1Ljk3NCAtMzAuMTAyLC0wLjI0OCAtNjEuNDQ4LDExLjQ0NSAtNzYuMTI1LDM1LjgyNCBsIDIzLjEzNSwyNC4xMyBjIDEzLjQzNiwtMTcuMTY1IDM1LjU3NSwtMjQuNjI3IDUzLjI0LC0yNC42MjcgMjAuNjQ1LDAgMzQuODI3LDguMjA4IDM0LjgyNywyMC42NDcgMC4yNSwxNC42NzggLTExLjQ0NCwyMS4zOTUgLTM1LjA3NywyMy4zODYgLTM2LjgxOSwzLjQ4MSAtNjkuNjU2LDEyLjY4NyAtNjkuMTU5LDUzLjczNCAwLjI0OCwzNC41OCAzMy4wODcsNTIuOTg4IDY4LjkwOSw1Mi45ODggMjYuODcsMCA0Ny4wMTgsLTUuOTcgNjQuOTMyLC0yNi44NjcgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzc4Ljk4LDMwOS42NjA2KSINCiAgICAgICAgICAgaWQ9ImcyNCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDI2Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgViAtMzQuMzI5IEggMzEuMDk0IFYgLTY0LjE4MyBIIC0wLjI1IHYgLTQ2LjI3MSBjIDAsLTEyLjkzNiA3LjIxNCwtMTYuNDE5IDEzLjkzMywtMTYuNDE5IDQuMjI3LDAgMTAuOTQ2LDAuOTk1IDE0LjkyMywyLjk4NiBsIDguMjEzLC0yOS44NTMgYyAtOC45NTgsLTMuNDg0IC0xNi4xNzIsLTQuOTc1IC0yNS44NzMsLTUuNDc0IC0yNi42MTgsLTEuMjQ0IC00Ni43NzEsMTAuNDQ4IC00Ni43NzEsNDguNzYgdiA0Ni4yNzEgaCAtMjEuODkxIHYgMjkuODU0IGggMjEuODkxIHYgMzAuMzUgeiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTI1LjUxMDMsMjE0LjM4MTgpIg0KICAgICAgICAgICBpZD0iZzI4Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzAiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIDAsMTUuNDI0IC05LjQ1MiwzMi4zNCAtMzEuMDk0LDMyLjM0IC0yMS4zOTcsMCAtMzAuODQ5LC0xNi45MTYgLTMwLjg0OSwtMzIuMzQgMCwtMTUuNDI1IDkuMjAzLC0zMi4wOTMgMzAuODQ5LC0zMi4wOTMgQyAtOS4yMDMsLTMyLjA5MyAwLC0xNi4xNzIgMCwwIG0gLTk4LjI2MiwwIGMgMCwzNy4wNjggMjYuMzY3LDY0LjQzMyA2Ny4xNjgsNjQuNDMzIDQxLjA0NSwwIDY3LjQxOCwtMjcuMzY1IDY3LjQxOCwtNjQuNDMzIDAsLTM3LjA2NiAtMjUuNjI0LC02My45MzYgLTY3LjQxOCwtNjMuOTM2IC00MS41NDUsMCAtNjcuMTY4LDI2Ljg3IC02Ny4xNjgsNjMuOTM2IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDkyLjkzNTUsMTY5LjM1NDUpIg0KICAgICAgICAgICBpZD0iZzMyIj48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzQiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0xNC42NzYsLTE0LjQzIC0zMi4zMzYsLTE4LjkwOCAtNDguMDA4LC0xOC45MDggLTM1LjgyNCwwIC02Ny4xNzIsMTkuNjUzIC02Ny4xNzIsNjMuOTM1IDAsNDEuMjk3IDMxLjA5OCw2NC40MzMgNjYuOTIzLDY0LjQzMyAxNy45MDksMCAzMi4wOTIsLTMuOTgxIDQ0LjUyOSwtMTYuOTE4IGwgLTE5LjksLTIyLjYzOSBjIC03LjQ2NCw1LjcyMyAtMTUuNjcyLDcuMjE3IC0yMy4xMzYsNy4yMTcgLTE3LjkxNCwwIC0zMi4zNDIsLTExLjY5MyAtMzIuMzQyLC0zMi4wOTMgMCwtMTkuNjUzIDE0LjkyNywtMzAuODQ4IDMxLjU5MywtMzAuODQ4IDcuOTYzLDAgMTguOTA5LDMuMjM0IDI0Ljg3OSw5LjIwNCB6IiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTQ3LjE3NzcsMzI3LjA3NTcpIg0KICAgICAgICAgICBpZD0iZzM2Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoMzgiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCB2IC05OS4yNiBsIDM2LjMyNCw0OC4wMTMgaCA0Mi4yODkgdiAtMi4yNCBsIC00NS4wMjYsLTU1LjQ3NSA1MS45OTEsLTYyLjE5MyB2IC0yLjczNyBIIDQyLjU0NCBMIDAsLTExOS45MDggdiAtNTMuOTg0IEggLTM1LjgxOSBWIDAgWiIgLz48L2c+PGcNCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM3Ni43OTc5LDIzMS43OTY5KSINCiAgICAgICAgICAgaWQ9Imc0MCI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDQyIg0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0ibSAwLDAgaCAtOTkuNTExIHYgLTc4LjYxMyBoIC0yMS42NDEgViA5NS41MjkgaCAyMS42NDEgViAyMC4xNSBIIDAgViA5NS41MjkgSCAyMS42NDYgViAtNzguNjEzIEggMCBaIiAvPjwvZz48Zw0KICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkzLjQ4NzMsMjU4LjY2NDEpIg0KICAgICAgICAgICBpZD0iZzQ0Ij48cGF0aA0KICAgICAgICAgICAgIGlkPSJwYXRoNDYiDQogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzU2NzE3NTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSINCiAgICAgICAgICAgICBkPSJtIDAsMCBjIC0yNC4zOCwwIC00NC4wMzMsLTE3LjQxNSAtNDQuMDMzLC00NC43NzkgMCwtMjcuMzY2IDE5LjY1MywtNDUuMDMgNDQuMDMzLC00NS4wMyA1OS4yMDksMCA1OS4yMDksOTAuMDU2IDAuMjQ5LDkwLjA1NiB6IG0gNDQuNzc3LC0xMDUuOTc4IC0wLjQ5NSwyMi4zODkgYyAtOS43MDIsLTE2LjkxNiAtMjguMzYxLC0yNC44NzcgLTQ1LjI3NiwtMjQuODc3IC0zNS4zMjUsMCAtNjIuOTQyLDI0LjM4IC02Mi45NDIsNjQuNDMzIDAsMzkuODA0IDI4LjExMSw2My42ODYgNjMuMTg3LDYzLjQzNiAxOC40MDksMCAzNi41NzMsLTguNDU4IDQ1LjUyNiwtMjQuMzc5IGwgMC4yNDksMjIuMzg5IEggNjQuOTMgViAtMTA1LjQ4IEggNDUuMjc2IFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2MDcuNDI5NywyNzYuMDc2NykiDQogICAgICAgICAgIGlkPSJnNDgiPjxwYXRoDQogICAgICAgICAgICAgaWQ9InBhdGg1MCINCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojNTY3MTc1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIg0KICAgICAgICAgICAgIGQ9Ik0gMCwwIDMzLjA4NywtMTAxLjI1IDY1LjY3OSwwIEggODIuMzQ1IEwgMTE0LjkzMywtMTAxLjI1IDE0OC4wMiwwIGggMjIuMzkgTCAxMjcuMzcyLC0xMjMuMTQzIEggMTAzLjk4NiBMIDg3LjMyLC03Ny4zNjcgNzQuMTM3LC0zMi41ODcgNjAuNzAzLC03Ny4zNjcgNDQuMDMyLC0xMjMuMTQzIEggMjAuODk3IEwgLTIyLjYzNiwwIFoiIC8+PC9nPjxnDQogICAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4MjQuNjE0MywyMjQuMzMzKSINCiAgICAgICAgICAgaWQ9Imc1MiI+PHBhdGgNCiAgICAgICAgICAgICBpZD0icGF0aDU0Ig0KICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiM1NjcxNzU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgZD0iTSAwLDAgNTAuNTAyLDUxLjc0NCBIIDc1Ljg3NiBWIDUwLjUgTCAxOS4xNTgsLTYuMjIgODIuODQ1LC02OS42NTYgdiAtMS40OTMgSCA1Ny45NjYgTCAwLC0xMy4xODcgViAtNzEuMTQ5IEggLTIwLjE0NyBWIDEwMi45OTMgSCAwIFoiIC8+PC9nPjwvZz48L2c+PGcNCiAgICAgICBpZD0iZzU2Ij48Zw0KICAgICAgICAgY2xpcC1wYXRoPSJ1cmwoI2NsaXBQYXRoNjIpIg0KICAgICAgICAgaWQ9Imc1OCI+PGcNCiAgICAgICAgICAgaWQ9Imc2NCI+PGcNCiAgICAgICAgICAgICBpZD0iZzY2Ij48cGF0aA0KICAgICAgICAgICAgICAgaWQ9InBhdGg3NCINCiAgICAgICAgICAgICAgIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQ3Mik7c3Ryb2tlOm5vbmUiDQogICAgICAgICAgICAgICBkPSJtIDM3OC4wMzksMzU4LjI5MiAwLjAwNCwwLjAxMyAtMC4xODIsLTAuMTgxIGMgLTEuNTk5LC0xLjUxMyAtMy4yMTQsLTMuMDkyIC00Ljg0MywtNC43NDQgdiAwIGMgLTEyLjU3Niw5Ljg2MiAtMjcuOTQ2LDE1LjQyNyAtNDUuMTc5LDEzLjYyNyB2IDAgYyAtMTYuMzM1LC0xLjcwNSAtMzEuNDIyLC05LjEzOCAtNDQuOTk4LC0xOC40OTMgdiAwIEwgOTMuNTQxLDIzMS43NTMgYyAxMi43OCwtNC43MzIgMjYuMTc1LC05LjAxNyAzOS45NjYsLTEyLjY5MSB2IDAgYyAyOC41ODIsLTcuNjE3IDU4Ljg3NCwtMTIuNTg5IDg4Ljk4NiwtMTMuMzQ1IHYgMCBjIDUzLjYwNywtMS4zNDQgMTA2LjYzMSwxMC42NjkgMTQ4LjM1Nyw0NC45MDEgdiAwIGMgOS43MzMsNy45ODMgMTguMTM1LDE2LjU0NiAyMy45ODUsMjYuNzc2IHYgMCBjIC00LjI1NiwtMTMuMzggLTEyLjY1NSwtMjQuNjI0IC0yMi45NjksLTM1LjI5IHYgMCBjIC02LjEsLTYuMzA4IC0xMi41NywtMTIuMDU3IC0xOS4zNDksLTE3LjMgdiAwIGMgLTMxLjgyLC0yNC42MTMgLTcwLjU1OCwtMzcuODQzIC0xMTEuMDM1LC00My4wNTEgdiAwIGMgLTEwLjU4MSwtMS4zNjIgLTIxLjI4LC0yLjE3NyAtMzIuMDA1LC0yLjUwMiB2IDAgYyAtNC4yNTEsLTAuMTI5IC04LjUwNSwtMC4xODcgLTEyLjc1OSwtMC4xNjUgdiAwIGwgLTg2LjcxLC04NS42MDQgaCA1Ni44NyBjIDE2LjEyLDEwLjUwMyAzNC4xNTcsMTguMDA1IDUzLjI0OCwyMS45ODQgdiAwIGMgNC45MDQsMS4wMjQgOS45NzIsMS43NzEgMTQuOTYyLDIuMjE0IHYgMCBjIDY3Ljg1LDYuMDIyIDEzMS41MjcsMzkuNjM1IDE3NC43NDMsOTQuNjY5IHYgMCBjIDUuMzM0LDYuMTk2IDEwLjA5NiwxMi44MzQgMTQuMTY2LDE5Ljk1NCB2IDAgYyAwLDAuMDAxIDAsMC4wMDEgMCwwLjAwMSB2IDAgYyAyNS4xNjUsNDQuMDM5IDM4LjAzNiw2OC44NjEgNDYuNTI3LDgyLjA5OSB2IDAgYyAxMi42ODcsMjAuNzczIDM1LjczMywxLjM2OCAzNS43MzMsMS4zNjggdiAwIGMgNS41NTMsMTcuNzQ4IC03LjQxOCwyNy41ODUgLTEyLjQ3NiwzMC42NTEgdiAwIGMgLTkuNjg3LDE4LjYwNyAtMjcuMTQyLDQxLjA5MyAtNTQuOTEsNDEuMDk2IHYgMCBjIC0xNi40NzEsMC4wMDEgLTM2LjU2NywtNy45MDcgLTYwLjgzMiwtMjkuMjI2IiAvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+",
+          position: "float-bottom-center",
+          rejectButtonCaptionColor: "#FFFFFF",
+          rejectButtonColor: "#0073CE",
+          rejectButtonDisplay: true,
+          textColor: "#000000",
+        },
+      };
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/iubenda_cs.js"
+      charset="UTF-8"
+      async
+    ></script>
+    
+    <header class="shrink-0 py-4 md:py-[37px]">
+      <div class="container flex items-center justify-between">
+        <a
+          href="index.html"
+          class="inline-block w-[140px] shrink-0 sm:w-[160px] md:w-[196px]"
+        >
+          <img src="img/logo-header.svg" alt="" class="w-full" />
         </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="shrink-0 bg-dark300 py-[50px] text-white md:pb-[100px]">
-    <div class="container">
-      <div class="md:px-8">
-        <div
-          class="flex flex-col justify-center sm:flex-row sm:items-center sm:justify-between"
+    
+        <a
+          href="/member/login"
+          class="inline-flex rounded-[8px] bg-blue500 py-[7.5px] px-[28px] text-[16px] font-bold uppercase tracking-[0.11px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[38px] md:text-[22px]"
+          >SIGN IN</a
         >
-          <a
-            href="index.html"
-            class="mx-auto mb-4 block w-[58px] sm:mx-0 sm:mb-0"
+      </div>
+    </header>
+
+    <main class="grow">
+      <section class="py-[50px] md:py-[40px]">
+        <div class="container">
+          <h1
+            class="mb-6 text-center text-[36px] font-extrabold leading-[0.26] tracking-[0.26px] md:text-[44px] md:leading-[1.55] lg:text-[51px]"
           >
-            <img src="img/logo-footer.svg" alt="" class="w-full" />
-          </a>
-          <div class="flex flex-wrap items-center justify-center gap-6">
-            <p class="text-[16px] tracking-[-0.3px] md:text-[22px]">
-              Ready to get started?
-            </p>
-            <a
-              href="#"
-              class="inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[26px] text-[16px] font-bold tracking-[-0.23px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[41px] md:text-[17px]"
+            Frequently Asked Questions
+          </h1>
+
+          <p class="mb-4 text-center leading-[1.8] text-gray500 md:text-[20px]">
+            Have questions! We’re here to help
+          </p>
+
+          <form action="" class="mx-auto max-w-[465px]">
+            <div class="relative text-gray400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="pointer-events-none absolute left-[26px] top-1/2 h-6 w-6 -translate-y-1/2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              <input
+                type="search"
+                class="block h-[61px] w-full rounded-[8px] border border-solid border-gray300 bg-white py-1.5 pl-[60px] pr-6 font-normal transition ease-in-out placeholder:text-gray400 focus:border-blue500 focus:outline-none"
+                placeholder="Search"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section
+        class="py-[50px] md:pb-[75px] md:transition md:duration-1000"
+        x-data="{ shown: false }"
+        x-intersect:enter="shown = true"
+        x-intersect:leave="shown = false"
+        x-cloak
+        :class="shown ? 'md:opacity-100 md:translate-y-0' : 'md:opacity-0 md:translate-y-[100px]'"
+      >
+        <div class="container">
+          <h2
+            class="mb-6 text-[34px] font-extrabold capitalize leading-[1.3] tracking-[-0.5px] md:text-[40px]"
+          >
+            General
+          </h2>
+          <div x-data="{ openedIndex: false }" class="mb-6 grid gap-6 md:mb-12">
+            <div
+              @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
             >
-              Get started
-            </a>
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Can you explain this in more detail?
+                </p>
+                <div :class="openedIndex == 1 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 1" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Can my daily updates be shared?
+                </p>
+                <div :class="openedIndex == 2 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 2" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  What improvements are in your pipeline?
+                </p>
+                <div :class="openedIndex == 3 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 3" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+          </div>
+
+          <h2
+            class="mb-6 text-[34px] font-extrabold capitalize leading-[1.3] tracking-[-0.5px] md:text-[40px]"
+          >
+            Membership
+          </h2>
+
+          <div x-data="{ openedIndex: false }" class="grid gap-6">
+            <div
+              @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Can I cancel at any time?
+                </p>
+                <div :class="openedIndex == 1 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 1" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  What kind payment do you accept?
+                </p>
+                <div :class="openedIndex == 2 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 2" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  Will I need to enter my credit card to sign up?
+                </p>
+                <div :class="openedIndex == 3 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 3" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 4 ? openedIndex = -1 : openedIndex = 4"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  What happens at the end of my free trial?
+                </p>
+                <div :class="openedIndex == 4 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 4" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+
+            <div
+              @click="openedIndex == 5 ? openedIndex = -1 : openedIndex = 5"
+              class="cursor-pointer rounded-[17px] border border-solid border-gray100 bg-white px-8 py-[20px]"
+            >
+              <div class="flex items-center justify-between">
+                <p class="text text-[18px] font-bold md:text-[22px]">
+                  What happens if I don't renew my subscription?
+                </p>
+                <div :class="openedIndex == 5 ? '-rotate-180' : ''">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div x-show="openedIndex == 5" class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
           </div>
         </div>
-        <div class="my-[40px] h-[1px] bg-white/10"></div>
-  
-        <div
-          class="grid grid-cols-2 gap-6 text-[15px] tracking-[-0.21px] lg:grid-cols-4 lg:gap-4"
-        >
-          <div class="flex flex-col gap-[20px]">
-            <p class="text-[17px] tracking-[-0.23px] text-blue500">Links</p>
+      </section>
+
+      <section class="bg-gray200 py-[50px] text-center md:py-[100px]">
+        <div class="container">
+          <p
+            class="mb-3 text-[16px] font-semibold uppercase tracking-[1px] text-red500"
+          >
+            VALUES
+          </p>
+          <h2
+            class="mb-3 text-[34px] font-extrabold leading-[1.3] tracking-[-0.5px] md:text-[40px]"
+          >
+            Still have questions
+          </h2>
+          <p class="mb-6 leading-[1.8] text-gray500 md:mb-12">
+            Can't find the answer you re looking for? Please chat to our
+            friendly team
+          </p>
+
+          <a
+            href="contact.html"
+            class="inline-flex justify-center rounded-[8px] bg-blue500 py-[13px] px-[26px] text-[16px] font-bold uppercase text-white duration-200 ease-in-out hover:bg-blue600 md:px-[35px]"
+          >
+            CONTACT US
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shrink-0 bg-dark300 py-[50px] text-white md:pb-[100px]">
+      <div class="container">
+        <div class="md:px-8">
+          <div
+            class="flex flex-col justify-center sm:flex-row sm:items-center sm:justify-between"
+          >
             <a
-              href="how-it-works.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >How It Works</a
+              href="index.html"
+              class="mx-auto mb-4 block w-[58px] sm:mx-0 sm:mb-0"
             >
-            <a
-              href="about.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >About Us</a
-            >
+              <img src="img/logo-footer.svg" alt="" class="w-full" />
+            </a>
+            <div class="flex flex-wrap items-center justify-center gap-6">
+              <p class="text-[16px] tracking-[-0.3px] md:text-[22px]">
+                Ready to get started?
+              </p>
+              <a
+                href="#"
+                class="inline-flex justify-center rounded-[8px] bg-blue500 py-[12px] px-[26px] text-[16px] font-bold tracking-[-0.23px] text-white duration-200 ease-in-out hover:bg-blue600 md:px-[41px] md:text-[17px]"
+              >
+                Get started
+              </a>
+            </div>
           </div>
-          <div class="flex flex-col gap-[20px]">
-            <p class="text-[17px] tracking-[-0.23px] text-blue500">Legal</p>
-            <a
-              href="terms.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >Terms and Conditions</a
-            >
-            <a
-              href="privacy.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >Privacy Policy</a
-            >
-  
-            <a
-              href="cookie-policy.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              title="Cookie Policy "
-              >Cookie Policy</a
-            >
-          </div>
-          <div class="flex flex-col gap-[20px]">
-            <p class="text-[17px] tracking-[-0.23px] text-blue500">Help</p>
-            <a
-              href="#"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >FAQs</a
-            >
-            <a
-              href="contact.html"
-              class="text-white duration-200 ease-in-out hover:text-blue500"
-              >Contact Us</a
-            >
-          </div>
-          <div class="flex flex-col gap-[20px]">
-            <p class="text-[17px] tracking-[-0.23px] text-blue500">Social</p>
-            <nav class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+          <div class="my-[40px] h-[1px] bg-white/10"></div>
+    
+          <div
+            class="grid grid-cols-2 gap-6 text-[15px] tracking-[-0.21px] lg:grid-cols-4 lg:gap-4"
+          >
+            <div class="flex flex-col gap-[20px]">
+              <p class="text-[17px] tracking-[-0.23px] text-blue500">Links</p>
               <a
-                href="https://www.facebook.com/StockHawkApp"
+                href="how-it-works.html"
                 class="text-white duration-200 ease-in-out hover:text-blue500"
-                target="_blank"
+                >How It Works</a
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 320 512"
-                  class="h-5 w-5"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                  />
-                </svg>
-              </a>
               <a
-                href="https://twitter.com/StockHawkApp"
+                href="about.html"
                 class="text-white duration-200 ease-in-out hover:text-blue500"
-                target="_blank"
+                >About Us</a
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="h-5 w-5"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                  />
-                </svg>
-              </a>
+            </div>
+            <div class="flex flex-col gap-[20px]">
+              <p class="text-[17px] tracking-[-0.23px] text-blue500">Legal</p>
               <a
-                href="https://www.instagram.com/stockhawkapp"
+                href="terms.html"
                 class="text-white duration-200 ease-in-out hover:text-blue500"
-                target="_blank"
+                >Terms and Conditions</a
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  class="h-5 w-5"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  />
-                </svg>
-              </a>
               <a
-                href="https://www.linkedin.com/company/stockhawk"
+                href="privacy.html"
                 class="text-white duration-200 ease-in-out hover:text-blue500"
-                target="_blank"
+                >Privacy Policy</a
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  class="h-5 w-5"
+    
+              <a
+                href="cookie-policy.html"
+                class="text-white duration-200 ease-in-out hover:text-blue500"
+                title="Cookie Policy "
+                >Cookie Policy</a
+              >
+            </div>
+            <div class="flex flex-col gap-[20px]">
+              <p class="text-[17px] tracking-[-0.23px] text-blue500">Help</p>
+              <a
+                href="#"
+                class="text-white duration-200 ease-in-out hover:text-blue500"
+                >FAQs</a
+              >
+              <a
+                href="contact.html"
+                class="text-white duration-200 ease-in-out hover:text-blue500"
+                >Contact Us</a
+              >
+            </div>
+            <div class="flex flex-col gap-[20px]">
+              <p class="text-[17px] tracking-[-0.23px] text-blue500">Social</p>
+              <nav class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+                <a
+                  href="https://www.facebook.com/StockHawkApp"
+                  class="text-white duration-200 ease-in-out hover:text-blue500"
+                  target="_blank"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  />
-                </svg>
-              </a>
-            </nav>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://twitter.com/StockHawkApp"
+                  class="text-white duration-200 ease-in-out hover:text-blue500"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/stockhawkapp"
+                  class="text-white duration-200 ease-in-out hover:text-blue500"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/stockhawk"
+                  class="text-white duration-200 ease-in-out hover:text-blue500"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                    />
+                  </svg>
+                </a>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="./js/scripts.js"></script>
-</body>
-
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

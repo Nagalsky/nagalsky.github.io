@@ -46,7 +46,7 @@
   </head>
 
   <body
-    class="flex flex-col bg-[url('../img/bogy-bg.png')] bg-contain bg-[center_top] bg-no-repeat text-[16px] text-dark500 md:min-h-screen md:text-[20px]"
+    class="flex flex-col bg-[url('../img/bogy-bg.png')] bg-contain bg-[center_top] bg-no-repeat text-[16px] text-dark500 md:min-h-screen md:overflow-hidden md:overflow-y-auto md:text-[20px]"
   >
     <script type="text/javascript">
       var _iub = _iub || [];
@@ -212,19 +212,25 @@
           <input type="hidden" id="array-ids" value="" />
 
           <img
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
+            x-intersect:leave="shown = false"
+            x-cloak
             src="img/hero-img.png"
             alt=""
-            class="mx-auto block w-full max-w-[980px]"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            class="mx-auto block w-full max-w-[980px] md:transition md:duration-1000"
+            :class="shown ? 'md:opacity-100 md:translate-y-0' : 'md:opacity-0 md:translate-y-[100px]'"
           />
         </div>
       </section>
 
       <section
-        class="py-[35px] md:py-[60px]"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+        class="py-[35px] md:py-[60px] md:transition md:duration-1000"
+        x-data="{ shown: false }"
+        x-intersect:enter="shown = true"
+        x-intersect:leave="shown = false"
+        x-cloak
+        :class="shown ? 'md:opacity-100 md:translate-y-0' : 'md:opacity-0 md:translate-y-[100px]'"
       >
         <div class="container">
           <h2
@@ -247,9 +253,12 @@
       </section>
 
       <section
-        class="py-[35px] md:py-[60px]"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+        class="py-[35px] md:py-[60px] md:transition md:duration-1000"
+        x-data="{ shown: false }"
+        x-intersect:enter="shown = true"
+        x-intersect:leave="shown = false"
+        x-cloak
+        :class="shown ? 'md:opacity-100 md:translate-y-0' : 'md:opacity-0 md:translate-y-[100px]'"
       >
         <div class="container">
           <h2
@@ -409,12 +418,22 @@
             <img
               src="img/the-loop.png"
               alt=""
-              class="block w-full md:mt-[-35px]"
-              data-aos="fade-right"
-              data-aos-duration="1000"
+              class="block w-full md:mt-[-35px] md:transition md:duration-1000"
+              x-data="{ shown: false }"
+              x-intersect:enter="shown = true"
+              x-intersect:leave="shown = false"
+              x-cloak
+              :class="shown ? 'md:opacity-100 md:translate-x-0' : 'md:opacity-0 md:-translate-x-[100px]'"
             />
 
-            <div data-aos="fade-left" data-aos-duration="1000">
+            <div
+              class="md:transition md:duration-1000"
+              x-data="{ shown: false }"
+              x-intersect:enter="shown = true"
+              x-intersect:leave="shown = false"
+              x-cloak
+              :class="shown ? 'md:opacity-100 md:translate-x-0' : 'md:opacity-0 md:translate-x-[100px]'"
+            >
               <p
                 class="mb-3 text-[16px] font-semibold uppercase tracking-[1px] text-red500"
               >
@@ -495,7 +514,14 @@
       >
         <div class="container">
           <div class="grid gap-6 md:grid-cols-[370px_1fr] xl:gap-[20px]">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div
+              x-data="{ shown: false }"
+              x-intersect:enter="shown = true"
+              x-intersect:leave="shown = false"
+              x-cloak
+              class="md:transition md:duration-1000"
+              :class="shown ? 'md:opacity-100 md:translate-x-0' : 'md:opacity-0 md:-translate-x-[100px]'"
+            >
               <p
                 class="mb-3 text-[16px] font-semibold uppercase tracking-[1px] text-red500"
               >
@@ -617,9 +643,12 @@
             <img
               src="img/drag-and-drop-img.png"
               alt=""
-              class="block w-full md:mt-[-35px]"
-              data-aos="fade-left"
-              data-aos-duration="1000"
+              class="block w-full md:mt-[-35px] md:transition md:duration-1000"
+              x-data="{ shown: false }"
+              x-intersect:enter="shown = true"
+              x-intersect:leave="shown = false"
+              x-cloak
+              :class="shown ? 'md:opacity-100 md:translate-x-0' : 'md:opacity-0 md:translate-x-[100px]'"
             />
           </div>
         </div>

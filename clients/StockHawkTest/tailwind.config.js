@@ -3,6 +3,7 @@ const bodyFontFamily = '"Inter", sans-serif';
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.html"],
+  darkMode: "class",
   theme: {
     fontFamily: {
       sans: [bodyFontFamily],
@@ -43,8 +44,10 @@ module.exports = {
       gray700: "#898989",
       green300: "#dcf5f2",
       green500: "#14b8a6",
+      red300: "#E2D4D4",
       red400: "#f67a6f",
       red500: "#fa4f58",
+      dark400: "#202020",
       dark500: "#323232",
       body: "#f8f8f8",
     },
