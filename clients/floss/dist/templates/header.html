@@ -30,7 +30,7 @@
       </svg>
     </button>
     <nav
-      class="absolute left-0 top-full w-full flex-col gap-4 bg-white py-2 shadow-[0_0_20px_0_rgba(6,24,38,0.1)] md:static md:flex-row md:items-center md:justify-center md:gap-[50px] md:py-0 md:shadow-none lg:gap-[80px] [&>*]:relative [&>*]:py-2 [&>*]:text-[14px]"
+      class="absolute left-0 top-full w-full flex-col bg-white py-2 shadow-[0_0_20px_0_rgba(6,24,38,0.1)] md:static md:flex-row md:items-center md:justify-center md:gap-4 md:gap-[50px] md:py-0 md:shadow-none lg:gap-[80px] [&>*]:relative [&>*]:py-2 [&>*]:text-[14px]"
       :class="isOpen ? 'flex' : 'hidden md:flex'"
       x-data="{isHomeActive: true, isMainFeaturesActive: false, isHowToBuyActive: false}"
     >
@@ -38,21 +38,21 @@
         href="#home"
         class="px-4 transition after:content-[''] hover:text-blue md:px-0"
         :class="isHomeActive ? 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-blue text-blue' : 'text-primary'"
-        @click="isHomeActive = true; isHowToBuyActive = false; isMainFeaturesActive = false;"
+        @click="isHomeActive = true; isHowToBuyActive = false; isMainFeaturesActive = false; isOpen = false"
         >Home</a
       >
       <a
         href="#main-features"
         class="px-4 transition after:content-[''] hover:text-blue md:px-0"
         :class="isMainFeaturesActive ? 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-blue text-blue' : 'text-primary'"
-        @click="isHomeActive = false; isHowToBuyActive = false; isMainFeaturesActive = true;"
+        @click="isHomeActive = false; isHowToBuyActive = false; isMainFeaturesActive = true; isOpen = false"
         >Main Features</a
       >
       <a
         href="#how-to-buy"
         class="px-4 transition after:content-[''] hover:text-blue md:px-0"
         :class="isHowToBuyActive ? 'after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-blue text-blue' : 'text-primary'"
-        @click="isHomeActive = false; isHowToBuyActive = true; isMainFeaturesActive = false;"
+        @click="isHomeActive = false; isHowToBuyActive = true; isMainFeaturesActive = false; isOpen = false"
         >How To Buy</a
       >
     </nav>
