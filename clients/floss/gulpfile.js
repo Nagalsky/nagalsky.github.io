@@ -162,12 +162,6 @@ function prodImages() {
     .pipe(dest(options.paths.build.img));
 }
 
-function prodFonts() {
-  return src(`${options.paths.src.fonts}/**/*`).pipe(
-    dest(options.paths.build.fonts)
-  );
-}
-
 function prodPreview(done) {
   browserSync.init({
     server: {
@@ -203,7 +197,7 @@ exports.default = series(
 
 exports.prod = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodScripts, prodImages, prodHTML, prodFonts), //Run All tasks in parallel
+  parallel(prodStyles, prodScripts, prodImages, prodHTML), //Run All tasks in parallel
   //prodPreview, // Live Preview Build
   buildFinish
 );
