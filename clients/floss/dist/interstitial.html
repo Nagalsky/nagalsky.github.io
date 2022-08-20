@@ -18,7 +18,10 @@
     <title>Interstitial page</title>
   </head>
 
-  <body class="font-base text-[14px] md:text-[18px]">
+  <body
+    class="font-base text-[14px] md:text-[18px]"
+    x-data="{showStickyBox: true}"
+  >
     <header
       class="bg-white py-[16.5px] px-[15px] shadow-[0_0_20px_0_rgba(6,24,38,0.1)] md:px-[60px] xl:min-h-[70px]"
     >
@@ -966,7 +969,8 @@
     </main>
 
     <section
-      class="fixed bottom-0 z-20 w-full bg-white py-[10px] px-4 shadow-[0_0_20px_0_rgba(6,24,38,0.1)]"
+      class="sticky bottom-0 z-20 w-full bg-white py-[10px] px-4 shadow-[0_0_20px_0_rgba(6,24,38,0.1)]"
+      :class="showStickyBox ? 'block' : 'hidden'"
     >
       <div class="container">
         <a
@@ -979,6 +983,8 @@
 
     <footer
       class="relative z-40 bg-silver py-[30px] text-[14px] text-silver-300 md:py-[60px]"
+      x-intersect:enter="showStickyBox = false"
+      x-intersect:leave="showStickyBox = true"
     >
       <div class="container space-y-6">
         <p>

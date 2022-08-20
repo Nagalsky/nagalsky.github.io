@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     //= templates/head.html
     <title>Home page</title>
   </head>
 
-  <body class="font-base text-[14px] md:text-[18px]">
+  <body
+    class="font-base text-[14px] md:text-[18px]"
+    x-data="{
+      showStickyBox: true,
+    }"
+  >
     //= templates/header.html
 
     <main>
-      <section class="bg-silver py-[30px] md:py-[60px]">
+      <section
+        class="py-[30px scroll-mt-[57px] bg-silver md:scroll-mt-[70px] md:py-[60px]"
+        id="home"
+      >
         <div class="container">
           <h1
             class="mb-5 font-black text-[18px] md:mb-8 md:text-[28px] lg:text-[36px]"
           >
             Plaque buildup can lead to cavities, gum disease, and even tooth
-            loss.1 So, here’s what you need to do.
+            loss.<sup><small>1</small></sup> So, here’s what you need to do.
           </h1>
 
           <img
@@ -173,7 +181,10 @@
           </div>
 
           <div class="space-y-4 md:space-y-8">
-            <h2 class="font-black text-[18px] md:text-[30px]">
+            <h2
+              class="scroll-mt-[57px] font-black text-[18px] md:scroll-mt-[70px] md:text-[30px]"
+              id="main-features"
+            >
               How does it work?
             </h2>
             <p>
@@ -673,7 +684,8 @@
             </p>
 
             <div
-              class="flex flex-col gap-8 border border-blue bg-white py-4 px-4 md:flex-row md:items-center md:pr-[60px] md:pl-[30px] lg:pr-[100px] lg:pl-[60px] xl:pr-[135px] xl:pl-[90px]"
+              class="flex scroll-mt-[57px] flex-col gap-8 border border-blue bg-white py-4 px-4 md:scroll-mt-[70px] md:flex-row md:items-center md:pr-[60px] md:pl-[30px] lg:pr-[100px] lg:pl-[60px] xl:pr-[135px] xl:pl-[90px]"
+              id="how-to-buy"
             >
               <img
                 src="img/offering.png"
@@ -893,7 +905,8 @@
     </main>
 
     <section
-      class="fixed bottom-0 z-20 w-full bg-white py-[10px] px-4 shadow-[0_0_20px_0_rgba(6,24,38,0.1)]"
+      class="sticky bottom-0 z-20 w-full bg-white py-[10px] px-4 shadow-[0_0_20px_0_rgba(6,24,38,0.1)]"
+      :class="showStickyBox ? 'block' : 'hidden'"
     >
       <div class="container">
         <a
