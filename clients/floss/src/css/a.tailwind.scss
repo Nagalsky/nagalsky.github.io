@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../../node_modules/swiper/swiper-bundle.min";
 
 @layer base {
   @font-face {
@@ -24,5 +25,34 @@
   @font-face {
     font-family: "Avenir-Heavy";
     src: url("../fonts/avenir/Avenir-Heavy.woff");
+  }
+}
+
+:root {
+  --swiper-pagination-bullet-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --swiper-pagination-bullet-size: 15px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  @apply bottom-0;
+
+  .swiper-pagination-bullet {
+    @apply bg-blue;
+    &.swiper-pagination-bullet-active-prev-prev,
+    &.swiper-pagination-bullet-active-next-next {
+      @apply opacity-[.4];
+    }
+    &.swiper-pagination-bullet-active-prev,
+    &.swiper-pagination-bullet-active-next {
+      @apply opacity-[.7];
+    }
   }
 }
