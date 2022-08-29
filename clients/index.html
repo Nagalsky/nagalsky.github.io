@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "15px",
+            },
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Home page</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div x-data="{slidedText : [1, 2, 3, 4, 5, 'olo']}">
+            <div class="text-[24px] text-clifford">
+              ggg
+              <p x-text="slidedText"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
