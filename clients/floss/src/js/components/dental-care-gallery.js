@@ -1,5 +1,10 @@
 (() => {
   const swiper = new Swiper(".dental-care-gallery", {
+    on: {
+      init: (el) => {
+        el.$el[0].classList.remove("hidden");
+      },
+    },
     slidesPerView: 2,
     spaceBetween: 20,
     pagination: {
