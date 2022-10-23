@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-    <link rel="manifest" href="img/fav/site.webmanifest">
-    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="img/fav/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="img/fav/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    //= templates/head.html
     <title>Home page</title>
   </head>
 
@@ -24,58 +12,14 @@
     @keydown.escape="showModalTips = false"
     x-cloak
   >
-    <header class="header">
-      <div class="flex flex-wrap px-4 py-5 md:py-[30px] 2xl:px-[150px]">
-        <a href="#" class="order-first mb-5 block w-[196px] flex-shrink-0 md:mb-0">
-          <img src="img/logo.svg" alt="" class="w-full" />
-        </a>
-    
-        <a
-          href="#"
-          class="ml-auto inline-flex h-9 w-9 items-center justify-center rounded-full bg-gray-800 transition hover:bg-gray-600 md:order-last md:h-[50px] md:w-[50px]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-5 w-5"
-          >
-            <path
-              d="M17.5525 17.5V15.8333C17.5525 14.9493 17.2013 14.1014 16.5762 13.4763C15.9511 12.8512 15.1032 12.5 14.2192 12.5H7.55251C6.66846 12.5 5.82061 12.8512 5.19549 13.4763C4.57037 14.1014 4.21918 14.9493 4.21918 15.8333V17.5"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10.8859 9.16667C12.7268 9.16667 14.2192 7.67428 14.2192 5.83333C14.2192 3.99238 12.7268 2.5 10.8859 2.5C9.04494 2.5 7.55255 3.99238 7.55255 5.83333C7.55255 7.67428 9.04494 9.16667 10.8859 9.16667Z"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
-    
-        <nav
-          class="font-heading mb-5 flex w-full grow flex-row items-start justify-center gap-5 md:mx-5 md:mb-0 md:w-auto md:justify-center md:gap-[50px] md:text-[18px]"
-        >
-          <a href="#" class="border-b border-b-white font-bold transition"
-            >Create</a
-          >
-          <a
-            href="#"
-            class="border-b border-b-transparent transition hover:border-b-white"
-            >Discover</a
-          >
-        </nav>
-      </div>
-    </header>
+    //= templates/header.html
 
     <main>
-      <section class="relative">
+      <section>
         <div class="container">
-          <div class="grid gap-8 lg:grid-cols-2 xl:gap-16 2xl:gap-[90px]">
+          <div
+            class="relative grid gap-8 lg:grid-cols-2 xl:gap-16 2xl:gap-[90px]"
+          >
             <div
               class="space-y-6 py-6 md:py-14 lg:space-y-[60px] lg:py-24 lg:pt-36"
             >
@@ -135,6 +79,14 @@
             </div>
 
             <div class="lg:relative">
+              <div
+                class="absolute left-0 top-0 z-40 flex w-full items-center justify-center bg-black/80 py-48 text-center lg:h-full lg:py-10"
+              >
+                <p class="font-medium text-gray-500 md:text-lg">
+                  Wait a few seconds for the image to appear
+                </p>
+              </div>
+
               <div class="hidden lg:block">
                 <img
                   src="img/landing-images-group.png"
@@ -223,112 +175,7 @@
       </section>
     </main>
 
-    <div
-      role="dialog"
-      tabindex="-1"
-      class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-black/90 duration-300"
-      x-show="showModalTips"
-      x-transition:enter="transition duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      x-transition:leave="transition duration-300"
-      x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0"
-    >
-      <div
-        class="relative mx-4 w-auto py-8 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
-      >
-        <div
-          class="container space-y-5 px-0 md:px-5"
-          @click.away="showModalTips = false"
-        >
-          <div class="flex items-center gap-4">
-            <h4 class="grow">Tips for Talking to an AI</h4>
-            <button
-              type="button"
-              @click="showModalTips = false"
-              class="flex-shrink-0"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-8 w-8"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-    
-          <ol class="list-inside list-decimal">
-            <li>
-              The more specific the idea you have of what you want to see, the more
-              relevant words you’ll need to type to produce it.
-            </li>
-            <li>
-              When talking to the AI, a useful tip is to have a subject and several
-              words next to specify the style which you desire.
-            </li>
-            <li>
-              The style can be the names of the artists you want to take inspiration
-              from, the name of the artistic movement, the name of the style, the
-              perspective from where the image is seen, geographical areas,
-              historical periods, or even words such as “8k” and “award-winning” to
-              tell the AI you want something great looking!
-            </li>
-            <li>
-              Experiment with punctuation: use commas, +, dots, semicolons, and
-              more. Nobody knows what’s the right punctuation!
-            </li>
-            <li>
-              Practice and Trial and Error make you perfect. The more you talk to
-              the AI, the more you will understand how to talk to it.
-            </li>
-          </ol>
-    
-          <p>
-            Examples:<br />
-            <i>How not to talk to an AI: “sunset in Bali”</i>
-          </p>
-    
-          <p>How to talk to an AI:</p>
-          <p>
-            “portrait photo of a african old warrior chief, tribal panther make up,
-            gold on white, side profile, looking away, serious eyes, 50mm portrait
-            photography, hard rim lighting photography”;
-          </p>
-          <p>
-            “temple in ruines, forest, stairs, columns, cinematic, detailed,
-            atmospheric, epic, concept art, Matte painting, background, mist,
-            photo-realistic, concept art, volumetric light, cinematic epic + rule of
-            thirds octane render, 8k, corona render, movie concept art, octane
-            render, cinematic, trending on artstation, movie concept art, cinematic
-            composition , ultra-detailed, realistic , hyper-realistic , volumetric
-            lighting, 8k”;
-          </p>
-          <p>
-            “ultrarealistic, (native american old woman ) portrait, cinematic
-            lighting, award winning photo, no color, 80mm lense”;
-          </p>
-          <p>
-            “Residential home high end futuristic interior, olson kundig::1 Interior
-            Design by Dorothy Draper, maison de verre, axel vervoordt::2 award
-            winning photography of an indoor-outdoor living library space,
-            minimalist modern designs::1 high end indoor/outdoor residential living
-            space, rendered in vray, rendered in octane, rendered in unreal engine,
-            architectural photography, photorealism, featured in dezeen, cristobal
-            palma::2.5 chaparral landscape outside, black surfaces/textures for
-            furnishings in outdoor space”
-          </p>
-        </div>
-      </div>
-    </div>
+    //= templates/modal-tips.html
 
     <script src="./js/scripts.js"></script>
   </body>

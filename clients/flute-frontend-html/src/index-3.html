@@ -15,12 +15,12 @@
     //= templates/header.html
 
     <main>
-      <section class="relative">
+      <section class="py-6 md:py-14 lg:py-24 lg:pt-36">
         <div class="container">
-          <div class="grid gap-8 lg:grid-cols-2 xl:gap-16 2xl:gap-[90px]">
-            <div
-              class="space-y-6 py-6 md:py-14 lg:space-y-[60px] lg:py-24 lg:pt-36"
-            >
+          <div
+            class="grid gap-8 lg:grid-cols-[1fr_1fr] xl:grid-cols-[600px_1fr] xl:gap-[100px] 2xl:gap-[200px]"
+          >
+            <div class="space-y-6 lg:space-y-[60px]">
               <h1>Create your artwork by typing here!</h1>
 
               <form>
@@ -76,89 +76,21 @@
               </div>
             </div>
 
-            <div class="lg:relative">
-              <div class="hidden lg:block">
-                <img
-                  src="img/landing-images-group.png"
-                  alt="landing-images-group"
-                  class="block w-full"
-                />
+            <div class="space-y-6 lg:space-y-[30px]">
+              <h2>Select the image you prefer or generate again!</h2>
+
+              <div
+                class="grid grid-cols-2 gap-5 [&>*]:w-full [&>*]:overflow-hidden [&>*]:rounded"
+              >
+                <img src="img/nft-image-1.png" alt="nft-image" />
+                <img src="img/nft-image-2.png" alt="nft-image" />
+                <img src="img/nft-image-3.png" alt="nft-image" />
+                <img src="img/nft-image-4.png" alt="nft-image" />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="pt-6 pb-12 md:py-14 lg:py-32">
-        <div class="container">
-          <h2 class="mb-8 lg:mb-14">Your recent AI pictures which you made</h2>
-
-          <div
-            class="grid grid-cols-2 gap-x-5 gap-y-6 md:grid-cols-4 md:gap-y-12"
-          >
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
-            </div>
-            <div class="flex flex-col gap-5">
-              <img
-                src="img/nft-image-1.png"
-                alt="img"
-                class="block rounded-lg"
-              />
-              <p class="text-base font-medium md:text-2xl">Input Text</p>
+              <button type="button" class="btn btn-white w-full">
+                Generate Again
+              </button>
             </div>
           </div>
         </div>
