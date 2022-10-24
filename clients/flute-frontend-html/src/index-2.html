@@ -29,7 +29,7 @@
                 <textarea
                   type="text"
                   placeholder="Name"
-                  class="mb-[30px] block w-full resize-none border-x-0 border-t-0 border-b-2 border-b-gray-700 bg-transparent px-4 pb-5 text-[18px] text-white transition placeholder:text-white focus:border-b-white focus:ring-0 md:text-[24px]"
+                  class="mb-[30px] block w-full resize-none border-x-0 border-t-0 border-b-2 border-b-gray-700 bg-transparent px-4 pb-5 text-lg text-white transition placeholder:text-white focus:border-b-white focus:ring-0 md:text-2xl"
                   x-data="{ resize: () => { $el.style.height = '58px'; $el.style.height = $el.scrollHeight + 'px' } }"
                   x-init="resize()"
                   @input="resize()"
@@ -37,7 +37,7 @@
 
                 <div class="grid gap-5 sm:grid-cols-[1fr_1fr]">
                   <button type="button" class="btn btn-white grow px-3">
-                    Create Again
+                    Creating...
                   </button>
                   <button type="button" class="btn btn-dark grow px-3">
                     <svg
@@ -80,8 +80,16 @@
 
             <div class="lg:relative">
               <div
-                class="absolute left-0 top-0 z-40 flex w-full items-center justify-center bg-black/80 py-48 text-center lg:h-full lg:py-10"
+                class="absolute left-0 top-0 z-40 flex h-screen w-full flex-col items-center justify-center gap-8 bg-black/80 py-6 text-center lg:h-full lg:py-10"
               >
+                <div
+                  class="relative mx-auto flex h-[280px] w-[280px] flex-shrink-0 flex-col items-center justify-center gap-3 rounded-full border-[5px] border-white/30 before:absolute before:top-[-5px] before:left-[-5px] before:h-[280px] before:w-[280px] before:animate-loading before:rounded-full before:border-[5px] before:border-l-transparent before:border-b-transparent before:border-t-white before:border-r-white sm:h-[350px] sm:w-[350px] before:sm:h-[350px] before:sm:w-[350px]"
+                >
+                  <p class="text-[80px] font-bold leading-none sm:text-[100px]">
+                    56%
+                  </p>
+                  <p class="text-xl font-bold sm:text-2xl">Loading</p>
+                </div>
                 <p class="font-medium text-gray-500 md:text-lg">
                   Wait a few seconds for the image to appear
                 </p>
