@@ -14,7 +14,7 @@
     <meta name="msapplication-config" content="img/fav/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Discover page</title>
+    <title>Artwork page</title>
   </head>
 
   <body class="bg-black text-white antialiased">
@@ -67,157 +67,1069 @@
     </header>
 
     <main>
-      <section class="py-6 md:py-14 lg:py-24 lg:pt-36">
+      <section class="py-6 md:py-14 lg:py-16">
         <div class="container">
           <div
-            class="grid gap-8 lg:grid-cols-2 lg:items-center xl:gap-24 2xl:gap-40"
+            class="grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-5 xl:grid-cols-4 2xl:grid-cols-5"
           >
-            <div>
-              <a
-                href="#"
-                class="mb-8 inline-flex items-center gap-3 font-medium"
-              >
-                <span
-                  class="flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-full bg-gray-800"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
-                    />
-                  </svg>
-                </span>
-                Back to Create page
-              </a>
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
 
-              <form
-                class="space-y-6 md:space-y-8 [&>*]:flex [&>*]:flex-col [&>*]:gap-2"
-              >
-                <div>
-                  <label
-                    for="field-artwork-name"
-                    class="text-lg font-bold md:text-xl"
-                    >Artwork Name</label
-                  >
-                  <div
-                    class="relative"
-                    x-data="{ count: 0 }"
-                    x-init="count = $refs.artworkName.value.length"
-                  >
-                    <input
-                      id="field-artwork-name"
-                      type="text"
-                      placeholder="Start type here"
-                      class="block w-full border-x-0 border-t-0 border-b-2 border-b-gray-700 bg-transparent pl-4 pr-[70px] pb-4 text-lg text-white transition placeholder:text-gray-500 focus:border-b-white focus:ring-0"
-                      maxlength="20"
-                      x-ref="artworkName"
-                      @keyup="count = $refs.artworkName.value.length"
-                    />
-                    <div class="absolute right-0 top-[12px] text-gray-600">
-                      <span x-html="count"></span> /
-                      <span x-html="$refs.artworkName.maxLength"></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    for="field-description-name"
-                    class="text-lg font-bold md:text-xl"
-                    >Description</label
-                  >
-                  <div
-                    class="relative"
-                    x-data="{ 
-                        count: 0, 
-                        resize: () => { 
-                            $refs.description.height = '54px'; 
-                            $refs.description.style.height = $refs.description.scrollHeight + 'px' 
-                        } 
-                    }"
-                  >
-                    <textarea
-                      id="field-description-name"
-                      placeholder="Start type here"
-                      class="block h-[54px] w-full resize-none border-x-0 border-t-0 border-b-2 border-b-gray-700 bg-transparent pl-4 pr-[70px] pb-4 text-lg text-white transition placeholder:text-gray-500 focus:border-b-white focus:ring-0"
-                      x-ref="description"
-                      maxlength="100"
-                      @keyup="count = $refs.description.value.length"
-                      x-init="resize()"
-                      @input="resize()"
-                    ></textarea>
-                    <div class="absolute right-0 top-[12px] text-gray-600">
-                      <span x-html="count"></span> /
-                      <span x-html="$refs.description.maxLength"></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    for="field-price-name"
-                    class="text-lg font-bold md:text-xl"
-                    >Price</label
-                  >
-                  <div class="relative">
-                    <input
-                      id="field-price-name"
-                      x-data
-                      x-mask="999999999999"
-                      type="text"
-                      placeholder="Start type here"
-                      class="block w-full border-x-0 border-t-0 border-b-2 border-b-gray-700 bg-transparent pl-4 pr-[70px] pb-4 text-lg text-white transition placeholder:text-gray-500 focus:border-b-white focus:ring-0"
-                    />
-                    <div class="absolute right-0 top-[12px] text-white">
-                      ETH
-                    </div>
-                  </div>
-                </div>
-
-                <div class="space-y-2 rounded bg-gray-800 py-5 px-8">
-                  <p class="font-medium md:text-lg">
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="inline-block h-5 w-5 align-text-top"
+                      class="h-4 w-4"
                     >
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
                       />
                     </svg>
-                    Mint as NFT
-                    <span class="uppercase text-gray-600">OPTIONAL</span>
-                  </p>
-                  <p class="text-gray-500">
-                    Your art will not be editable and will be auto-published.
-                  </p>
+                  </a>
                 </div>
 
-                <button type="submit" class="btn btn-white w-full px-3">
-                  Publish
-                </button>
-              </form>
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div>
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
               <img
-                src="img/discover.png"
-                alt="discover"
-                class="w-full rounded-xl"
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
               />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-md bg-gray-800 p-2.5 md:p-4">
+              <img
+                src="img/nft-image-1.png"
+                alt="img"
+                class="mb-[10px] rounded-md"
+              />
+              <p class="mb-1.5 truncate text-[10px] text-gray-500 sm:text-sm">
+                16 Oct, 2022 at 11:23 PM
+              </p>
+
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm text-white sm:text-lg">
+                    Freshness of Nature
+                  </p>
+                  <a href="#" class="flex-shrink-0 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="flex items-center justify-between gap-3">
+                  <p class="font-bold text-white sm:text-2xl">2.34 ETH</p>
+                  <span class="flex-shrink-0 text-xs text-gray-500 sm:text-base"
+                    >( ≈ $3,052 )</span
+                  >
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <img
+                    src="img/nft-image-1.png"
+                    alt="avatar"
+                    class="h-5 w-5 rounded-full md:h-[30px] md:w-[30px]"
+                  />
+                  <p class="text-[10px] text-gray-500 md:text-base">
+                    by Jane Cooper
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
