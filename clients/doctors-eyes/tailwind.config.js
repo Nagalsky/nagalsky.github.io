@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.html"],
@@ -24,8 +26,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        "gray-500": "#f6f6f6",
         "dark-500": "#232323",
+        "gray-500": "#f6f6f6",
+        body: "#f6f6f6",
       },
       // backgroundImage: {
       //   "body-gradient":
