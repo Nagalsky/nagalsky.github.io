@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     //= templates/head.html
     <title>Gulp with TailwindCSS</title>
-</head>
-<body>
+  </head>
+  <body>
     //= templates/header.html
 
     <main>
-        <section>
-            <div class="container">
-                <h1 class="py-5 text-red-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus optio corrupti nostrum enim odit quos laborum aperiam placeat autem, fugiat quas voluptatibus facilis iure harum id cupiditate vero ipsa reprehenderit?</h1>
-            </div>
-        </section>
+      <section>
+        <div class="container" x-data="{ showBar: false }">
+          <h1
+            class="text-heading-1 py-5"
+            @click="showBar = !showBar"
+            :class="showBar ? 'text-gray-500' : 'text-dark-500'"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            optio corrupti nostrum enim odit quos laborum aperiam placeat autem,
+            fugiat quas voluptatibus facilis iure harum id cupiditate vero ipsa
+            reprehenderit?
+          </h1>
+        </div>
+      </section>
     </main>
 
     <script src="./js/scripts.js"></script>
-</body>
+  </body>
 </html>
