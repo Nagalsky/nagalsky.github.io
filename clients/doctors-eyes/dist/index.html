@@ -38,11 +38,17 @@
     <title>Homepage</title>
   </head>
 
-  <body class="flex min-h-screen flex-col">
+  <body
+    class="flex min-h-screen flex-col"
+    x-data="{ modalOurStandarts: false }"
+    :class="{'overflow-hidden': modalOurStandarts }"
+    @keydown.escape="modalOurStandarts = false"
+    x-cloak
+  >
     <header
       x-data="{ headerTransparent: true, isMenuOpened: false }"
       @scroll.window="headerTransparent = (window.pageYOffset > 1) ? false : true"
-      class="left-0 top-0 z-[100] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
+      class="left-0 top-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
       :class="{
         'bg-transparent absolute': headerTransparent,
         'bg-white fixed': !headerTransparent || isMenuOpened,
@@ -53,7 +59,7 @@
     >
       <a
         href="#"
-        class="mt-1 block w-[148px] shrink-0 self-start md:w-[180px] xl:mt-0"
+        class="mt-2 block w-[148px] shrink-0 self-start md:w-[180px] xl:mt-0"
         :class="{
           'text-white': headerTransparent && !isMenuOpened,
           'text-dark-500': !headerTransparent,
@@ -107,7 +113,7 @@
     
       <button
         type="button"
-        class="absolute right-8 top-[13px] z-20 m-0 flex h-8 w-8 border-none bg-transparent p-0 xl:hidden"
+        class="absolute right-8 top-4 z-20 m-0 flex h-8 w-8 border-none bg-transparent p-0 xl:hidden"
         :class="{
           'text-white': headerTransparent && !isMenuOpened,
           'text-dark-500': !headerTransparent || isMenuOpened,
@@ -296,7 +302,7 @@
       >
         <a
           href="#"
-          class="absolute left-0 top-[68px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
+          class="absolute left-0 top-[64px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
         >
           Novinka: <span class="font-bold">Kavo OP 3D™ PRO</span>
           <svg
@@ -382,6 +388,138 @@
             alt="OP3D"
             class="absolute right-0 bottom-0 hidden w-full max-w-[143px]"
           />
+        </div>
+      </section>
+
+      <section class="overflow-hidden overflow-y-auto bg-gray-300 py-6 md:py-9">
+        <div
+          class="container relative grid grid-cols-[auto_1px_1fr] items-center gap-6"
+        >
+          <p class="shrink-0 text-sm uppercase tracking-[-0.14px]">
+            Naši<br />
+            partneri
+          </p>
+          <div class="h-[72px] w-[1px] bg-gray-400"></div>
+
+          <div class="w-screen">
+            <div
+              class="keen-slider [&>*]:flex [&>*]:items-center"
+              id="partner-brand-slider"
+            >
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-dark-500 py-16 text-white md:py-24 lg:py-32 xl:py-36">
+        <div class="container grid gap-10 md:grid-cols-2 md:items-center lg:gap-32">
+          <h2 class="h1">Najvyšší štandard pre vašu ambulanciu</h2>
+          <button
+            type="button"
+            class="btn btn-secondary min-h-[72px] !text-white hover:!bg-white hover:!text-dark-500 focus:!bg-white focus:!text-dark-500 active:!bg-white active:!text-dark-500 md:min-h-[111px] md:!gap-8 md:text-2xl"
+            @click="modalOurStandarts = true"
+          >
+            Chcem najvyšší štandard
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 25"
+              stroke-width="2"
+              stroke="currentColor"
+              class="h-6 w-6"
+            >
+              <path d="M3 12.5H21" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M16 7.5L21 12.5L16 17.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </section>
     </main>
@@ -586,6 +724,121 @@
         </div>
       </div>
     </footer>
+
+    <!-- modal -->
+    <div
+      role="dialog"
+      tabindex="-1"
+      class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-dark-500/[0.8] duration-300"
+      x-show="modalOurStandarts"
+      x-transition:enter="transition duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    >
+      <div
+        class="relative mx-4 w-auto py-10 opacity-100 md:mx-auto md:flex md:min-h-screen md:items-center md:justify-center"
+      >
+        <div
+          class="relative z-20 w-full rounded bg-white p-6 md:w-[649px] md:p-14"
+          @click.away="modalOurStandarts = false"
+        >
+          <button
+            @click="modalOurStandarts = false"
+            type="button"
+            class="absolute top-0 right-0 z-10 -translate-y-full p-0 text-white md:-translate-y-[calc(100%_+_16px)] md:translate-x-[calc(100%_+_16px)]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="h-8 w-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <form action="" class="grid gap-6">
+            <div class="relative">
+              <input
+                type="text"
+                id="modal-our-standarts-field-1"
+                class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-400 focus:outline-none focus:ring-0"
+                placeholder=" "
+              />
+              <label
+                for="modal-our-standarts-field-1"
+                class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-white px-2 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2"
+                >Vaše meno</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                type="email"
+                id="modal-our-standarts-field-2"
+                class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-400 focus:outline-none focus:ring-0"
+                placeholder=" "
+              />
+              <label
+                for="modal-our-standarts-field-2"
+                class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-white px-2 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2"
+                >E-mail</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                type="tel"
+                id="modal-our-standarts-field-3"
+                class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-400 focus:outline-none focus:ring-0"
+                placeholder=" "
+              />
+              <label
+                for="modal-our-standarts-field-3"
+                class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-white px-2 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2"
+                >Tel. číslo</label
+              >
+            </div>
+            <div class="relative">
+              <textarea
+                type="tel"
+                id="modal-our-standarts-field-4"
+                class="border-1 peer block h-[124px] w-full resize-none appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-400 focus:outline-none focus:ring-0"
+                placeholder=" "
+              ></textarea>
+              <label
+                for="modal-our-standarts-field-4"
+                class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-white px-2 text-sm duration-300 peer-placeholder-shown:top-8 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2"
+                >Správa</label
+              >
+            </div>
+    
+            <div class="flex items-center gap-3">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 border-dark-500 text-dark-600 focus:ring-2 focus:ring-dark-500"
+              />
+              <label for="default-checkbox"
+                >Súhlasím so
+                <a href="#" class="underline">spracovaním osobných údajov</a></label
+              >
+            </div>
+    
+            <button type="submit" class="btn btn-lg btn-primary mt-10 w-full">
+              Odoslať
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/scripts.js"></script>
   </body>

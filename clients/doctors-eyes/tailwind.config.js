@@ -31,12 +31,16 @@ module.exports = {
         "dark-400": "#333333",
         "dark-500": "#232323",
         "dark-600": "#292929",
+        "gray-200": "#e0e0e0",
+        "gray-300": "#f6f6f6",
+        "gray-400": "#ededed",
         "gray-500": "#c7c7c7",
       },
       boxShadow: {
         DEFAULT: "0px 4px 24px rgba(0, 0, 0, 0.08)",
       },
       borderRadius: {
+        sm: "8px",
         DEFAULT: "16px",
         xl: "60px",
       },

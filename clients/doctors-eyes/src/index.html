@@ -5,7 +5,13 @@
     <title>Homepage</title>
   </head>
 
-  <body class="flex min-h-screen flex-col">
+  <body
+    class="flex min-h-screen flex-col"
+    x-data="{ modalOurStandarts: false }"
+    :class="{'overflow-hidden': modalOurStandarts }"
+    @keydown.escape="modalOurStandarts = false"
+    x-cloak
+  >
     //= templates/header-transparent.html
 
     <main class="grow">
@@ -14,7 +20,7 @@
       >
         <a
           href="#"
-          class="absolute left-0 top-[68px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
+          class="absolute left-0 top-[64px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
         >
           Novinka: <span class="font-bold">Kavo OP 3D™ PRO</span>
           <svg
@@ -102,9 +108,118 @@
           />
         </div>
       </section>
+
+      <section class="overflow-hidden overflow-y-auto bg-gray-300 py-6 md:py-9">
+        <div
+          class="container relative grid grid-cols-[auto_1px_1fr] items-center gap-6"
+        >
+          <p class="shrink-0 text-sm uppercase tracking-[-0.14px]">
+            Naši<br />
+            partneri
+          </p>
+          <div class="h-[72px] w-[1px] bg-gray-400"></div>
+
+          <div class="w-screen">
+            <div
+              class="keen-slider [&>*]:flex [&>*]:items-center"
+              id="partner-brand-slider"
+            >
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-1.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-2.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-3.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+              <div class="keen-slider__slide">
+                <img
+                  src="img/partner-brand-4.svg"
+                  alt="partner-brand"
+                  class="block w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      //= templates/our-standarts.html
     </main>
 
     //= templates/footer.html
+
+    <!-- modal -->
+    //= templates/modal-our-standarts.html
 
     <script src="./js/scripts.js"></script>
   </body>

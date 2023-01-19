@@ -1,7 +1,7 @@
 <header
   x-data="{ headerTransparent: true, isMenuOpened: false }"
   @scroll.window="headerTransparent = (window.pageYOffset > 1) ? false : true"
-  class="left-0 top-0 z-[100] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
+  class="left-0 top-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
   :class="{
     'bg-transparent absolute': headerTransparent,
     'bg-white fixed': !headerTransparent || isMenuOpened,
@@ -12,7 +12,7 @@
 >
   <a
     href="#"
-    class="mt-1 block w-[148px] shrink-0 self-start md:w-[180px] xl:mt-0"
+    class="mt-2 block w-[148px] shrink-0 self-start md:w-[180px] xl:mt-0"
     :class="{
       'text-white': headerTransparent && !isMenuOpened,
       'text-dark-500': !headerTransparent,
@@ -66,7 +66,7 @@
 
   <button
     type="button"
-    class="absolute right-8 top-[13px] z-20 m-0 flex h-8 w-8 border-none bg-transparent p-0 xl:hidden"
+    class="absolute right-8 top-4 z-20 m-0 flex h-8 w-8 border-none bg-transparent p-0 xl:hidden"
     :class="{
       'text-white': headerTransparent && !isMenuOpened,
       'text-dark-500': !headerTransparent || isMenuOpened,
