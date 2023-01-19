@@ -11,6 +11,7 @@ module.exports = {
       js: "./src/js",
       img: "./src/img",
       fonts: "./src/fonts",
+      video: "./src/video",
     },
     dist: {
       base: "./dist",
@@ -18,6 +19,7 @@ module.exports = {
       js: "./dist/js",
       img: "./dist/img",
       fonts: "./dist/fonts",
+      video: "./dist/video",
     },
     build: {
       base: "./build",
@@ -25,6 +27,7 @@ module.exports = {
       js: "./build/js",
       img: "./build/img",
       fonts: "./build/fonts",
+      video: "./build/video",
     },
   },
 };

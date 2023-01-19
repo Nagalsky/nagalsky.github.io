@@ -85,6 +85,12 @@ function devFonts() {
   );
 }
 
+function devVideo() {
+  return src(`${options.paths.src.video}/**/*`).pipe(
+    dest(options.paths.dist.video)
+  );
+}
+
 function watchFiles() {
   watch(
     `${options.paths.src.base}/**/*.html`,
@@ -97,6 +103,7 @@ function watchFiles() {
   watch(`${options.paths.src.js}/**/*.js`, series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
   watch(`${options.paths.src.fonts}/**/*`, series(devFonts, previewReload));
+  watch(`${options.paths.src.video}/**/*`, series(devVideo, previewReload));
   console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
 }
 
@@ -166,7 +173,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devHTML, devFonts), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devHTML, devFonts, devVideo), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

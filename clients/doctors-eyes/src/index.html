@@ -2,27 +2,109 @@
 <html lang="en">
   <head>
     //= templates/head.html
-    <title>Gulp with TailwindCSS</title>
+    <title>Homepage</title>
   </head>
-  <body>
-    //= templates/header.html
 
-    <main>
-      <section>
-        <div class="container" x-data="{ showBar: false }">
-          <h1
-            class="text-heading-1 py-5"
-            @click="showBar = !showBar"
-            :class="showBar ? 'text-gray-500' : 'text-dark-500'"
+  <body class="flex min-h-screen flex-col">
+    //= templates/header-transparent.html
+
+    <main class="grow">
+      <section
+        class="relative z-20 min-h-screen py-14 pt-[190px] before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:pb-6 md:pt-[220px] lg:pt-[260px] xl:flex xl:flex-col xl:pt-[280px] xxl:pt-[330px]"
+      >
+        <a
+          href="#"
+          class="absolute left-0 top-[68px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
+        >
+          Novinka: <span class="font-bold">Kavo OP 3D™ PRO</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 25"
+            stroke-width="2"
+            stroke="currentColor"
+            class="ml-2 h-5 w-5"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            optio corrupti nostrum enim odit quos laborum aperiam placeat autem,
-            fugiat quas voluptatibus facilis iure harum id cupiditate vero ipsa
-            reprehenderit?
+            <path
+              d="M7.5 12H17.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13.5 8L17.5 12L13.5 16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <video
+          playsinline
+          autoplay
+          muted
+          loop
+          poster="img/footer-banner.jpg"
+          class="absolute inset-0 z-[-2] h-full w-full object-cover"
+        >
+          <source src="video/herovideo.mp4" type="video/mp4" />
+        </video>
+        <div
+          class="container xl:mb-2.5 xl:flex xl:grow xl:flex-col xl:justify-center"
+        >
+          <h1 class="text-heading-1 mb-6 text-white md:mb-12">
+            Ponúkame distribúciu<br class="hidden md:block" />
+            exkluzívneho prístrojového<br class="hidden md:block" />
+            vybavenia, inštaláciu a servis.
           </h1>
+
+          <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+            <a href="#" class="btn btn-lg btn-primary">Naše produkty</a>
+            <a href="#" class="btn btn-lg btn-white">Zistiť viac</a>
+          </div>
+        </div>
+
+        <div
+          class="relative mr-6 ml-auto mt-auto hidden max-w-[368px] rounded bg-dark-500 p-8 text-white xl:block"
+        >
+          <div class="w-64">
+            <p class="mb-2 tracking-[-0.14px]">Novinka</p>
+            <h3 class="mb-20 text-[28px] font-semibold tracking-[-0.56px]">
+              Kavo<br />OP 3D™ PRO
+            </h3>
+            <a
+              href="#"
+              class="inline-flex items-center gap-2.5 border-b border-b-white pb-4"
+              >Zistiť viac
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 25"
+                stroke-width="2"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  d="M3 12.5H21"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 7.5L21 12.5L16 17.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <img
+            src="img/OP3D_header_1 1.png"
+            alt="OP3D"
+            class="absolute right-0 bottom-0 hidden w-full max-w-[143px]"
+          />
         </div>
       </section>
     </main>
+
+    //= templates/footer.html
 
     <script src="./js/scripts.js"></script>
   </body>

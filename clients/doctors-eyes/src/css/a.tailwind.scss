@@ -1,7 +1,43 @@
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/poppins/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @layer base {
   html {
-    @apply text-dark-500;
+    @apply text-base text-dark-500 antialiased;
   }
 }
 
@@ -9,3 +45,7 @@
 @tailwind utilities;
 
 @import "./utilities/typography.scss";
+
+[x-cloak] {
+  display: none !important;
+}
