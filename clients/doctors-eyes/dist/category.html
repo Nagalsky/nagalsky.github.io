@@ -35,7 +35,7 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Homepage</title>
+    <title>Category</title>
   </head>
 
   <body
@@ -45,26 +45,19 @@
     @keydown.escape="modalOurStandarts = false"
   >
     <header
-      x-data="{ headerTransparent: true, isMenuOpened: false }"
-      @scroll.window="headerTransparent = (window.pageYOffset > 1) ? false : true"
-      class="sticky top-0 left-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
+      x-data="{ isScolled: false, isMenuOpened: false }"
+      @scroll.window="isScolled = (window.pageYOffset > 1) ? true : false"
+      class="top-0 left-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 bg-white px-8 py-4 text-dark-500 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
       :class="{
-        'bg-transparent': headerTransparent,
-        'bg-white': !headerTransparent || isMenuOpened,
-        'shadow-sm': !headerTransparent,
-        'sticky': !isMenuOpened,
+        'shadow-sm': isScolled,
         'h-full overflow-auto xl:overflow-visible xl:h-auto fixed': isMenuOpened,
+        'sticky': !isMenuOpened,
       }"
       x-cloak
     >
       <a
         href="#"
         class="mt-[5px] block w-[148px] shrink-0 self-start md:mt-1 md:w-[180px] xl:mt-0 xl:self-center"
-        :class="{
-          'text-white': headerTransparent && !isMenuOpened,
-          'text-dark-500': !headerTransparent,
-          'text-dark-500': isMenuOpened,
-        }"
       >
         <svg
           viewBox="0 0 360 56"
@@ -114,10 +107,6 @@
       <button
         type="button"
         class="absolute right-8 top-4 z-20 m-0 flex h-8 w-8 border-none bg-transparent p-0 xl:hidden"
-        :class="{
-          'text-white': headerTransparent && !isMenuOpened,
-          'text-dark-500': !headerTransparent || isMenuOpened,
-        }"
         @click="isMenuOpened = !isMenuOpened; document.body.classList.toggle('overflow-hidden');"
       >
         <svg
@@ -150,13 +139,7 @@
         class="mt-6 w-full gap-6 bg-white xl:static xl:mt-0 xl:w-auto xl:items-center xl:gap-8 xl:bg-transparent"
         :class="isMenuOpened ? 'flex flex-col xl:flex-row' : 'hidden xl:flex'"
       >
-        <nav
-          class="flex flex-col gap-4 xl:flex-row xxl:gap-6"
-          :class="{
-            'text-white': headerTransparent && !isMenuOpened,
-            'text-dark-500': !headerTransparent || isMenuOpened,
-          }"
-        >
+        <nav class="xxl:gap- flex flex-col gap-4 xl:flex-row">
           <a href="#" class="py-1">O nás</a>
           <div
             class="relative"
@@ -241,10 +224,7 @@
     
         <div
           class="h-[1px] w-full xl:h-[32px] xl:w-[1px]"
-          :class="{
-            'bg-white/[0.3]': headerTransparent && !isMenuOpened,
-            'bg-dark-500': !headerTransparent || isMenuOpened,
-          }"
+          :class="isMenuOpened ? 'bg-dark-500' : 'bg-white/[0.3]'"
         ></div>
     
         <div
@@ -283,243 +263,101 @@
               />
             </svg>
           </a>
-          <a
-            href="#"
-            class="btn btn-secondary"
-            :class="{
-              '!text-white': headerTransparent && !isMenuOpened,
-              '!text-dark-500': !headerTransparent || isMenuOpened,
-            }"
-            >Podpora</a
-          >
+          <a href="#" class="btn btn-secondary">Podpora</a>
         </div>
       </div>
     </header>
 
-    <main class="-mt-[64px] grow xl:-mt-[120px]">
+    <main>
       <section
-        class="relative z-20 py-14 pt-[190px] before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:min-h-screen md:pb-6 md:pt-[220px] lg:pt-[260px] xl:flex xl:flex-col xl:pt-[280px] xxl:pt-[330px]"
+        class="relative text-white before:absolute before:inset-0 before:-z-10 before:bg-dark-500 before:xl:inset-x-6 before:xl:rounded"
       >
-        <a
-          href="#"
-          class="absolute left-0 top-[64px] flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
-        >
-          Novinka: <span class="font-bold">Kavo OP 3D™ PRO</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 25"
-            stroke-width="2"
-            stroke="currentColor"
-            class="ml-2 h-5 w-5"
+        <div class="container py-8 md:py-6">
+          <div
+            class="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between"
           >
-            <path
-              d="M7.5 12H17.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13.5 8L17.5 12L13.5 16"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
-        <video
-          playsinline
-          autoplay
-          muted
-          loop
-          poster="img/footer-banner.jpg"
-          class="absolute inset-0 z-[-2] h-full w-full object-cover"
-        >
-          <source src="video/herovideo.mp4" type="video/mp4" />
-        </video>
-        <div
-          class="container xl:mb-2.5 xl:flex xl:grow xl:flex-col xl:justify-center"
-        >
-          <h1 class="text-heading-1 mb-6 text-white md:mb-12">
-            Ponúkame distribúciu<br class="hidden md:block" />
-            exkluzívneho prístrojového<br class="hidden md:block" />
-            vybavenia, inštaláciu a servis.
-          </h1>
+            <div class="shrink-0 lg:w-[488px]">
+              <h1 class="mb-6 md:mb-10">RTG Technika & Diagnostika</h1>
+              <p class="md:text-lg">
+                Prezrite si naše röntgeny: 2D panoramatický / OPG, 3D / CBCT,
+                prístroje pre priamu a nepriamu viziografiu a intraorálnu
+                kameru.
+              </p>
+            </div>
 
-          <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
-            <a href="#our-products" class="btn btn-lg btn-primary"
-              >Naše produkty</a
-            >
-            <a href="#about-us" class="btn btn-lg btn-white">Zistiť viac</a>
-          </div>
-        </div>
-
-        <div
-          class="relative mr-6 ml-auto mt-auto hidden max-w-[368px] rounded bg-dark-500 p-8 text-white xl:block"
-        >
-          <div class="w-64">
-            <p class="mb-2 tracking-[-0.14px]">Novinka</p>
-            <h3 class="mb-20 text-[28px] font-semibold tracking-[-0.56px]">
-              Kavo<br />OP 3D™ PRO
-            </h3>
-            <a
-              href="#"
-              class="inline-flex items-center gap-2.5 border-b border-b-white pb-4"
-              >Zistiť viac
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 25"
-                stroke-width="2"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  d="M3 12.5H21"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16 7.5L21 12.5L16 17.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <img
-            src="img/OP3D_header_1 1.png"
-            alt="OP3D"
-            class="absolute right-0 bottom-0 hidden w-full max-w-[143px]"
-          />
-        </div>
-      </section>
-
-      <section class="overflow-hidden overflow-y-auto bg-gray-300 py-6 md:py-9">
-        <div
-          class="container relative grid grid-cols-[auto_1px_1fr] items-center gap-6"
-        >
-          <p class="shrink-0 text-sm uppercase tracking-[-0.14px]">
-            Naši<br />
-            partneri
-          </p>
-          <div class="h-[72px] w-[1px] bg-gray-400"></div>
-
-          <div class="w-screen">
-            <div class="swiper" id="partner-brand-slider">
-              <div
-                class="swiper-wrapper [&>*]:flex [&>*]:h-auto [&>*]:items-center"
-              >
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-2.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-3.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-2.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-3.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-2.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-3.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/partner-brand-1.svg"
-                    alt="partner-brand"
-                    class="block w-full"
-                  />
-                </div>
-              </div>
+            <div class="lg:max-w-[488px]">
+              <img
+                src="img/category-hero.jpg"
+                alt="category-hero"
+                class="block w-full rounded"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="scroll-mt-[64px] py-16 md:scroll-mt-[120px] md:py-20 xl:py-24"
-        id="about-us"
-      >
-        <div class="overflow-hidden overflow-y-auto">
-          <div class="container relative">
-            <div
-              class="mb:mb-[72px] mb-16 grid gap-6 md:grid-cols-2 md:gap-16 lg:gap-28 xl:gap-48"
-            >
-              <p class="text-lg md:text-2xl">
-                Spoznajte dodávateľa dentálneho vybavenia Doctors Eyes
-              </p>
+      <section class="py-8 md:py-16 lg:py-24">
+        <div class="container">
+          <div
+            class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 [&>*]:flex [&>*]:flex-col [&>*]:items-start [&>*]:rounded [&>*]:bg-gray-300 [&>*]:p-8 [&>*]:lg:p-10"
+          >
+            <div>
+              <img
+                src="img/category-product-1.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™
+                </h3>
+                <p class="mb-6">Najefektívnejší vstup do RTG sveta KaVo 3D.</p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-              <div>
-                <p class="title mb-12">
-                  V našom portfóliu nájdete širokú škálu prístrojového vybavenia
-                  pre stomatologické ambulancie so zameraním na 3D technológie.
+            <div>
+              <img
+                src="img/category-product-2.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <p class="mb-1 text-sm">Novinka</p>
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™ PRO
+                </h3>
+                <p class="mb-6">
+                  Upgradovateľný 3D röntgenový systém, pokryje náročné
+                  požiadavky
                 </p>
                 <a
                   href="#"
                   class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Dozvedieť sa viac o nás
+                  >Detail produktu
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -541,971 +379,252 @@
                   </svg>
                 </a>
               </div>
-            </div>
-
-            <div class="w-screen">
-              <div class="swiper static" id="about-us-slider">
-                <div
-                  class="swiper-wrapper static [&>*]:flex [&>*]:h-auto [&>*]:items-center"
-                >
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-1.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="img/gallery-about-us-2.png"
-                      alt="partner-brand"
-                      class="block w-full rounded"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="absolute bottom-6 right-0 z-10 hidden gap-2 md:flex [&>*]:inline-flex [&>*]:h-14 [&>*]:w-14 [&>*]:items-center [&>*]:justify-center [&>*]:rounded-full [&>*]:bg-white"
-                >
-                  <div class="about-us-slider-button-prev">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-7 w-7"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                      />
-                    </svg>
-                  </div>
-                  <div class="about-us-slider-button-next">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-7 w-7"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="scroll-mt-[64px] bg-gray-300 py-16 md:scroll-mt-[120px] md:py-20 lg:py-28"
-        id="our-products"
-      >
-        <div class="container">
-          <div class="mb-12 grid gap-6 md:mb-[72] md:grid-cols-2 md:gap-8">
-            <p class="text-lg md:text-2xl">Naše produkty</p>
-            <h3 class="title">
-              Široká ponuka produktov prispôsobených pre vaše potreby
-            </h3>
-          </div>
-
-          <div
-            class="grid gap-8 md:grid-cols-2 [&>*]:relative [&>*]:flex [&>*]:flex-col [&>*]:rounded [&>*]:bg-white [&>*]:p-6 [&>*]:md:p-12"
-          >
-            <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-1.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  RTG prístroje
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  KaVo dentálne röntgeny Vám ponúkajú najlepšie riešenie pre
-                  vašu prax.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="img/product-desktop-1.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
-              />
             </div>
 
             <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-2.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  Stomatologické kreslá
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  KaVo stomatologické súpravy Vám ponúkajú ergonomické riešenie
-                  pre vašu ambulanciu.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
               <img
-                src="img/product-desktop-2.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
+                src="img/category-product-1.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
               />
-            </div>
-
-            <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-3.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  CAD/CAM
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  Urna imperdiet laoreet sed id purus accumsan tellus sed. Eu id
-                  odio leo leo.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="img/product-desktop-3.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
-              />
-            </div>
-
-            <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-4.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  Inštrumenty
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  KaVo ponúka širokú škálu vysoko kvalitných inštrumentov.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="img/product-desktop-4.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
-              />
-            </div>
-
-            <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-5.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  Dentium implantáty
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  Urna imperdiet laoreet sed id purus accumsan tellus sed. Eu id
-                  odio leo leo.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="img/product-desktop-5.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
-              />
-            </div>
-
-            <div>
-              <div
-                class="-mx-6 mb-6 -mt-6 overflow-hidden rounded-t bg-gray-400 md:-mx-12 md:-mt-12 lg:hidden"
-              >
-                <img
-                  src="img/product-desktop-6.png"
-                  alt=""
-                  class="mx-auto block aspect-[3/2] max-w-[75%] object-contain"
-                />
-              </div>
-              <div class="flex grow flex-col items-start lg:w-1/2">
-                <h4 class="mb-4 text-2xl leading-[1.3] md:mb-8 md:text-[32px]">
-                  Prístrojové vybavenie
-                </h4>
-                <p class="mb-8 text-black/60 md:mb-[70px]">
-                  Urna imperdiet laoreet sed id purus accumsan tellus sed. Eu id
-                  odio leo leo.
-                </p>
-
-                <a
-                  href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
-                  >Pozrieť produkty
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 25"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="h-6 w-6"
-                  >
-                    <path
-                      d="M3 12.5H21"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 7.5L21 12.5L16 17.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="img/product-desktop-6.png"
-                alt=""
-                class="absolute right-0 bottom-0 hidden max-h-[300px] w-full max-w-[45%] object-contain lg:block"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-24">
-        <div class="container">
-          <div class="flex flex-col gap-8 lg:flex-row-reverse lg:items-center">
-            <div class="grow lg:w-1/2">
-              <div class="lg:ml-auto lg:max-w-[380px] xl:max-w-[488px]">
-                <h3 class="title mb-4 md:mb-8">
-                  Odborný prístup k zariadeniu zubnej ambulancie
-                </h3>
-                <p class="mb-4 text-lg text-black/60 md:mb-10">
-                  Vďaka naším skúsenostiam sme pre Vás schopní navrhnúť a
-                  zrealizovať ambulancie na kľúč.
-                </p>
-
-                <div
-                  class="flex flex-col divide-y [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6"
-                >
-                  <div>
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="h-6 w-6"
-                      >
-                        <path
-                          d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p class="self-center text-lg font-medium">
-                      Konektivita s technológiami vo vašej ambulancii
-                    </p>
-                  </div>
-
-                  <div>
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="h-6 w-6"
-                      >
-                        <path
-                          d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p class="self-center text-lg font-medium">
-                      Odborný záručný aj pozáručný servis
-                    </p>
-                  </div>
-
-                  <div>
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="h-6 w-6"
-                      >
-                        <path
-                          d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p class="self-center text-lg font-medium">
-                      Inštalácia prístroja a zaškolenie personálu
-                    </p>
-                  </div>
-
-                  <div>
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="h-6 w-6"
-                      >
-                        <path
-                          d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p class="self-center text-lg font-medium">
-                      Exkluzívne prístrojové vybavenie
-                    </p>
-                  </div>
-
-                  <div>
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        class="h-6 w-6"
-                      >
-                        <path
-                          d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <p class="self-center text-lg font-medium">
-                      Konfigurácia na kľúč pre vašu ambulanciu
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="grow lg:w-1/2">
-              <img src="img/banner-1.jpg" alt="banner" class="w-full rounded" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- smartclinic section -->
-      <section
-        class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-28 before:xl:inset-6 before:xl:rounded"
-      >
-        <div class="container">
-          <div class="grid gap-16 lg:grid-cols-2 lg:gap-[32px] xl:gap-[240px]">
-            <div class="flex flex-col lg:items-start lg:py-8">
-              <p class="mb-10 text-lg md:text-2xl">Smartclinic</p>
-              <h3 class="title mb-4">
-                Moderné technológie vo vašej ambulancii, jednoducho a bez starostí
-              </h3>
               <div class="mt-auto">
-                <p class="mb-10 text-lg">
-                  Návrh celej ambulancie na mieru prispôsobený vašim potrebám s
-                  technológiami, ktoré spolupracujú.
-                </p>
-                <a href="#" class="btn btn-primary btn-lg">Zistiť viac</a>
-              </div>
-            </div>
-      
-            <img src="img/banner-2.jpg" alt="banner" class="w-full rounded" />
-          </div>
-        </div>
-      </section>
-
-      <!-- contact section -->
-      <section class="py-24">
-        <div class="container">
-          <div class="grid gap-8 xl:grid-cols-[488px_1fr] [&>*]:rounded">
-            <div
-              class="flex flex-col gap-[72px] bg-dark-500 p-8 text-white md:p-10 lg:flex-col-reverse lg:gap-24"
-            >
-              <div
-                class="flex flex-col gap-4 lg:flex-row-reverse lg:items-end lg:justify-between"
-              >
-                <div
-                  class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white text-dark-500 md:h-20 md:w-20"
-                >
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™
+                </h3>
+                <p class="mb-6">Najefektívnejší vstup do RTG sveta KaVo 3D.</p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
-                    viewBox="0 0 36 36"
+                    viewBox="0 0 24 25"
                     stroke-width="2"
                     stroke="currentColor"
-                    class="h-7 w-7 md:h-9 md:w-9"
+                    class="h-6 w-6"
                   >
                     <path
-                      d="M11.7799 5.14258H7.84959C6.35468 5.14258 5.14282 6.35444 5.14282 7.84935C5.14282 20.556 15.4436 30.8569 28.1503 30.8569C29.6452 30.8569 30.8571 29.645 30.8571 28.1501V24.2198C30.8571 23.0515 30.1458 22.0009 29.0611 21.567L25.2959 20.0609C24.3215 19.6712 23.2118 19.847 22.4056 20.5188L21.433 21.3294C20.2977 22.2754 18.6285 22.1997 17.5836 21.1548L14.8449 18.4161C13.8 17.3712 13.7243 15.7019 14.6703 14.5667L15.4809 13.5941C16.1527 12.7878 16.3285 11.6782 15.9388 10.7038L14.4327 6.9386C13.9988 5.85387 12.9482 5.14258 11.7799 5.14258Z"
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-                <a href="tel:+421901234567" class="title text-white"
-                  >+421 901 234 567</a
-                >
+                </a>
               </div>
-              <p class="text-lg lg:w-64">
-                Ak vás zaujala ponuka našich služieb a produktov zavolajte nám.
-              </p>
             </div>
-      
-            <div class="relative bg-gray-300 p-8 md:p-10 lg:mt-10 xl:mt-0">
+
+            <div>
               <img
-                src="img/person.png"
-                alt="person"
-                class="absolute bottom-0 left-4 hidden w-full max-w-[272px] lg:block"
+                src="img/category-product-2.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
               />
-              <div class="lg:pl-[280px]">
-                <img
-                  src="img/preson-avatar.jpg"
-                  alt=""
-                  class="mb-12 h-[88px] w-[88px] rounded-full lg:hidden"
-                />
-                <p class="mb-4 text-black/60 md:mb-8">
-                  Náš skúsený tím je pre vás k dispozícii kedykoľvek, ručíme za
-                  kvalitné dodanie služieb a produktov našim klientom. Dlhoročné
-                  skúsenosti a desiatky pozitívnych referencií sú toho dôkazom.
+              <div class="mt-auto">
+                <p class="mb-1 text-sm">Novinka</p>
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™ PRO
+                </h3>
+                <p class="mb-6">
+                  Upgradovateľný 3D röntgenový systém, pokryje náročné
+                  požiadavky
                 </p>
-                <h6 class="md:md-4 mb-6 text-lg font-medium">
-                  Tomáš Varinský, obchodný riaditeľ
-                </h6>
-                <img
-                  src="img/sign.png"
-                  alt="sign"
-                  class="block w-full max-w-[240px]"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="overflow-hidden overflow-y-auto bg-gray-300 py-16 md:py-24"
-      >
-        <div class="container">
-          <div class="grid gap-8 xl:grid-cols-[488px_1fr]">
-            <div>
-              <p class="text-lg md:text-2xl xl:mb-28">Referencie</p>
-
-              <div
-                class="hidden h-[176px] w-[176px] rotate-45 items-center justify-center rounded-full border border-gray-500 border-t-dark-500 xl:flex"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  class="h-6 w-6 -rotate-45"
-                >
-                  <path
-                    d="M0 23H10.3597V11.1462H5.09353V9.37692C5.09353 5.39615 6.73381 3.71538 10.3597 3.71538V0H9.23741C6.73381 0 4.23022 1.06154 2.67626 2.83077C0.776978 4.86539 0 7.51923 0 11.5885V23ZM13.6403 23H24V11.1462H18.7338V9.37692C18.7338 5.39615 20.3741 3.71538 24 3.71538V0H22.8777C20.3741 0 17.9568 1.06154 16.3165 2.83077C14.4173 4.86539 13.6403 7.51923 13.6403 11.5885V23Z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="title mb-16 lg:mb-[72px] xl:max-w-[488px]">
-                Spätná väzba od spokojných klientov je najlepšia záruka
-              </h3>
-
-              <div class="w-screen">
-                <div class="swiper swiper-reference" id="reference-slider">
-                  <div
-                    class="swiper-wrapper [&>*]:flex [&>*]:h-auto [&>*]:flex-col [&>*]:items-stretch [&>*]:rounded [&>*]:bg-white [&>*]:p-8 [&>*]:md:p-10"
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
                   >
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
+            <div>
+              <img
+                src="img/category-product-1.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™
+                </h3>
+                <p class="mb-6">Najefektívnejší vstup do RTG sveta KaVo 3D.</p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
+            <div>
+              <img
+                src="img/category-product-2.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <p class="mb-1 text-sm">Novinka</p>
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™ PRO
+                </h3>
+                <p class="mb-6">
+                  Upgradovateľný 3D röntgenový systém, pokryje náročné
+                  požiadavky
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu.
-                      </p>
+            <div>
+              <img
+                src="img/category-product-1.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™
+                </h3>
+                <p class="mb-6">Najefektívnejší vstup do RTG sveta KaVo 3D.</p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu.
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu.
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <p class="mb-10 text-lg md:mb-12 md:text-2xl">
-                        “Chcel by som poďakovať tímu DoctorsEyes za tvrdú prácu,
-                        ktorú ich tím vložil do projektu. Ich veľká pozornosť
-                        venovaná detailom a plánovaniu dopredu bola
-                        neoceniteľná.”
-                      </p>
-
-                      <div class="mt-auto flex items-center gap-6">
-                        <div
-                          class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border border-gray-500 p-4 md:h-[104px] md:w-[104px] md:p-6"
-                        >
-                          <img
-                            src="img/reference-logo.png"
-                            alt="reference-logo"
-                            class="w-full"
-                          />
-                        </div>
-
-                        <div class="grow">
-                          <p class="text-lg font-medium">Wade Warren</p>
-                          <p>IDB Clinica, Dentist</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div>
+              <img
+                src="img/category-product-2.jpg"
+                alt="category-product"
+                class="mb-14 block aspect-[3/2] w-full object-contain md:mb-16"
+              />
+              <div class="mt-auto">
+                <p class="mb-1 text-sm">Novinka</p>
+                <h3 class="mb-2 text-2xl font-semibold md:text-[28px]">
+                  OP 3D™ PRO
+                </h3>
+                <p class="mb-6">
+                  Upgradovateľný 3D röntgenový systém, pokryje náročné
+                  požiadavky
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  >Detail produktu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 25"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M3 12.5H21"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 7.5L21 12.5L16 17.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- our-standarts -->
       <section class="bg-dark-500 py-16 text-white md:py-24 lg:py-32 xl:py-36">
         <div class="container grid gap-10 lg:grid-cols-2 lg:items-center xl:gap-32">
           <h2 class="h1">Najvyšší štandard pre vašu ambulanciu</h2>
