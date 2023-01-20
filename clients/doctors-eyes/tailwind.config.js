@@ -35,6 +35,7 @@ module.exports = {
         "gray-300": "#f6f6f6",
         "gray-400": "#ededed",
         "gray-500": "#c7c7c7",
+        "red-500": "#FF0000",
       },
       boxShadow: {
         DEFAULT: "0px 4px 24px rgba(0, 0, 0, 0.08)",
