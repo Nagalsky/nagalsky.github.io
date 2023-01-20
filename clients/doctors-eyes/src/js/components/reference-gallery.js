@@ -7,7 +7,7 @@ var swiper = new Swiper("#reference-slider", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    540: {
+    1280: {
       slidesPerView: 2.2,
       spaceBetween: 32,
     },
