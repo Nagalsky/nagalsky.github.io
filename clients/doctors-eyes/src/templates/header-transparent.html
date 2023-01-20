@@ -1,12 +1,13 @@
 <header
   x-data="{ headerTransparent: true, isMenuOpened: false }"
   @scroll.window="headerTransparent = (window.pageYOffset > 1) ? false : true"
-  class="left-0 top-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
+  class="sticky top-0 left-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
   :class="{
-    'bg-transparent absolute': headerTransparent,
-    'bg-white fixed': !headerTransparent || isMenuOpened,
+    'bg-transparent': headerTransparent,
+    'bg-white': !headerTransparent || isMenuOpened,
     'shadow-sm': !headerTransparent,
-    'h-full overflow-auto xl:overflow-visible xl:h-auto': isMenuOpened,
+    'sticky': !isMenuOpened,
+    'h-full overflow-auto xl:overflow-visible xl:h-auto fixed': isMenuOpened,
   }"
   x-cloak
 >
