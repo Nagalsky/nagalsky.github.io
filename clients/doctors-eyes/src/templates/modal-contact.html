@@ -2,7 +2,7 @@
   role="dialog"
   tabindex="-1"
   class="fixed inset-0 z-[1000] h-full w-full overflow-y-auto bg-dark-500/[0.8] duration-300"
-  x-show="modalOurStandarts"
+  x-show="modalContact"
   x-transition:enter="transition duration-300"
   x-transition:enter-start="opacity-0"
   x-transition:enter-end="opacity-100"
@@ -16,10 +16,10 @@
   >
     <div
       class="relative z-20 w-full rounded bg-white p-6 md:w-[649px] md:p-14"
-      @click.away="modalOurStandarts = false"
+      @click.away="modalContact = false"
     >
       <button
-        @click="modalOurStandarts = false"
+        @click="modalContact = false"
         type="button"
         class="absolute top-0 right-0 z-10 -translate-y-full p-0 text-white md:-translate-y-[calc(100%_+_16px)] md:translate-x-[calc(100%_+_16px)]"
       >
