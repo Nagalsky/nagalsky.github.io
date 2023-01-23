@@ -1,0 +1,338 @@
+<header
+  class="py-6 lg:left-0 lg:top-0 lg:py-[67px]"
+  :class="isMenuOpened ? 'fixed top-0 left-0 z-50 w-full overflow-y-auto h-full bg-black' : 'lg:absolute lg:w-full'"
+  x-data="{isMenuOpened: false}"
+  x-cloak
+>
+  <div
+    class="container flex flex-wrap justify-between gap-4 lg:flex-nowrap lg:items-center"
+  >
+    <a href="#" class="block w-[180px] shrink-0 lg:w-[215px]">
+      <img src="img/logo.png" alt="logo" class="w-full" />
+    </a>
+
+    <button
+      type="button"
+      class="lg:hidden"
+      @click="isMenuOpened = !isMenuOpened; document.body.classList.toggle('overflow-hidden');"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-8 w-8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+
+    <nav
+      class="relative w-full flex-col gap-4 pt-4 font-secondary font-bold lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:pt-0 2xl:text-[22px] [&>*]:uppercase"
+      :class="isMenuOpened ? 'flex' : 'hidden lg:flex'"
+    >
+      <div x-data="{isOpened: false}">
+        <button
+          class="flex w-full items-center justify-between gap-4 text-left uppercase lg:w-auto"
+          @click="isOpened = !isOpened"
+          @click.away="isOpened = false"
+        >
+          home
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6 lg:hidden"
+          >
+            <path
+              x-show="!isOpened"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+            <path
+              x-show="isOpened"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </button>
+        <div
+          x-show="isOpened"
+          class="z-10 rounded-b-[20px] bg-white px-4 py-6 text-black shadow-dropdown lg:absolute lg:top-full lg:left-0 lg:mt-8 lg:w-full lg:px-[45px] lg:py-[45px] 2xl:px-[75px]"
+        >
+          <div class="grid lg:grid-cols-2 lg:gap-20 xl:gap-44">
+            <div
+              class="flex flex-col gap-4 [&>*]:flex [&>*]:items-center [&>*]:gap-4 [&>*]:px-4 [&>*]:py-2 [&>*]:font-secondary [&>*]:font-medium [&>*]:uppercase [&>*]:lg:text-lg"
+            >
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+            </div>
+            <div
+              class="flex flex-col gap-4 [&>*]:flex [&>*]:items-center [&>*]:gap-4 [&>*]:px-4 [&>*]:py-2 [&>*]:font-secondary [&>*]:font-medium [&>*]:uppercase [&>*]:lg:text-lg"
+            >
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+              <a
+                href="#"
+                class="bg:text-white bg:text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white active:bg-transparent active:text-green-500"
+              >
+                <img
+                  src="img/header-dropdown-icon.svg"
+                  alt="icon"
+                  class="w-6 shrink-0"
+                />
+                ADA COMPLIANCE
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#">ABOUT US</a>
+      <a href="#">ABOUT US</a>
+      <div x-data="{isOpened: false}">
+        <button
+          class="flex w-full items-center justify-between gap-4 text-left uppercase lg:w-auto"
+          @click="isOpened = !isOpened"
+          @click.away="isOpened = false"
+        >
+          SERVICES
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6 lg:hidden"
+          >
+            <path
+              x-show="!isOpened"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+            <path
+              x-show="isOpened"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </button>
+        <div
+          x-show="isOpened"
+          class="z-10 rounded-b-[20px] bg-white px-4 py-6 text-black shadow-dropdown lg:absolute lg:top-full lg:left-0 lg:mt-8 lg:w-full lg:px-[45px] lg:py-[45px] 2xl:px-[75px]"
+        >
+          <div
+            class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-12"
+          >
+            <div class="flex flex-col items-start gap-1">
+              <h3
+                class="font-secondary text-[21px] font-black text-green-500 underline"
+              >
+                MEMPHIS
+              </h3>
+              <div
+                class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
+              >
+                <p>663 S Rowlett St</p>
+                <p>Collierville, TN 38017</p>
+                <a href="tel:(901)3759212">Tel: (901) 375-9212</a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-start gap-1">
+              <h3
+                class="font-secondary text-[21px] font-black text-green-500 underline"
+              >
+                NASHVILLE
+              </h3>
+              <div
+                class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
+              >
+                <p>204 Shady Grove Rd</p>
+                <p>Nashville, TN 37214</p>
+                <a href="tel:(615)4572506">Tel: (615) 457-2506</a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-start gap-1">
+              <h3
+                class="font-secondary text-[21px] font-black text-green-500 underline"
+              >
+                BIRMINGHAM
+              </h3>
+              <div
+                class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
+              >
+                <p>3165 Dublin Ln.</p>
+                <p>Bessemer, AL 35022</p>
+                <a href="tel:(205)216-4544">Tel: (205) 216-4544</a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-start gap-1">
+              <h3
+                class="font-secondary text-[21px] font-black text-green-500 underline"
+              >
+                CHATTANOOGA
+              </h3>
+              <div
+                class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
+              >
+                <p>6111 Dayton Blvd.</p>
+                <p>Hixson, TN 37343</p>
+                <a href="tel:(423)475-6753">Tel: (423) 475-6753</a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-start gap-1">
+              <h3
+                class="font-secondary text-[21px] font-black text-green-500 underline"
+              >
+                HUNTSVILLE
+              </h3>
+              <div
+                class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
+              >
+                <p>3105 12th Ave. SW</p>
+                <p>Huntsville, AL 35805</p>
+                <a href="tel:(256)529-4993">Tel: (256) 529-4993</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#">PROJECTS</a>
+      <a href="#">CONTACT</a>
+      <a href="#" class="bg-green-500 py-2 px-1 text-center text-white"
+        >GET A QUOTE</a
+      >
+    </nav>
+  </div>
+</header>
