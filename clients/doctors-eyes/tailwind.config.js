@@ -18,7 +18,8 @@ module.exports = {
       md: "768px",
       lg: "991px",
       xl: "1280px",
-      xxl: "1400px",
+      "2xl": "1400px",
+      "3xl": "2100px",
     },
     container: {
       center: true,

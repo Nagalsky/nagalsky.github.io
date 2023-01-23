@@ -15,7 +15,7 @@
 
     <main class="-mt-[64px] grow xl:-mt-[120px]">
       <section
-        class="xl:pb-26 relative z-20 pb-8 pt-[190px] text-white before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:min-h-screen md:pb-14 md:pt-[220px] lg:pb-20 lg:pt-[260px] xl:flex xl:flex-col xl:pt-[280px] xxl:pt-[330px]"
+        class="xl:pb-26 relative z-20 pb-8 pt-[190px] text-white before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:min-h-screen md:pb-14 md:pt-[220px] lg:pb-20 lg:pt-[260px] xl:flex xl:flex-col xl:pt-[280px] 2xl:pt-[330px]"
       >
         <video
           playsinline
@@ -256,7 +256,7 @@
       >
         <div class="container">
           <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 xxl:gap-60"
+            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 2xl:gap-60"
           >
             <div>
               <h2 class="title mb-8">
@@ -286,7 +286,7 @@
       <section class="relative py-16 md:py-[88px]">
         <div class="container">
           <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 xxl:gap-60"
+            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 2xl:gap-60"
           >
             <div class="lg:order-last">
               <h2 class="title mb-8">
@@ -316,7 +316,7 @@
       >
         <div class="container">
           <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 xxl:gap-60"
+            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48 2xl:gap-60"
           >
             <div>
               <h2 class="title mb-8">Návrh, konzultácie a poradenstvo</h2>
@@ -407,28 +407,39 @@
         </div>
       </section>
 
-      <section class="relative mt-24 mb-4 lg:mb-40 lg:mt-48 xxl:py-[220px]">
+      <section
+        class="relative mt-24 mb-4 lg:mb-40 lg:mt-48 2xl:py-[220px] 3xl:py-28"
+      >
         <img
           src="img/MacBook-Pro.png"
           alt="MacBook-Pro"
-          class="absolute left-0 top-1/2 -z-10 hidden -translate-y-1/2 lg:block lg:max-h-[420px] xl:max-h-[640px] xxl:max-h-[740px]"
+          class="absolute left-0 top-1/2 -z-10 hidden -translate-y-1/2 lg:block lg:max-h-[420px] xl:max-h-[640px] 2xl:max-h-[740px] 3xl:hidden"
         />
         <div class="container">
-          <div class="lg:ml-auto lg:w-[380px]">
-            <h2 class="title mb-8">Výhody systému SmartClinic</h2>
-            <p class="mb-12 text-lg text-black/60 md:mb-16">
-              Systém SmartClinic je obrovským pomocníkom v jednej ambulancii no
-              nevyhnutnosťou na klinike s niekoľkými ambulanciami, technickým
-              zázemím, digitálnym pracoviskom… Je to dostupná možnosť pre
-              každého kto chce moderné, výkonné a bezpečné pracovisko pripravené
-              na budúcnosť.
-            </p>
-            <button
-              @click="modalContact = true"
-              class="btn btn-lg btn-primary md:!px-10"
-            >
-              Mám záujem
-            </button>
+          <div class="3xl:flex 3xl:items-center 3xl:justify-between">
+            <div class="hidden max-w-[1500px] grow 3xl:block">
+              <img
+                src="img/MacBook-Pro-xl.png"
+                alt="MacBook-Pro"
+                class="w-full"
+              />
+            </div>
+            <div class="lg:ml-auto lg:w-[380px]">
+              <h2 class="title mb-8">Výhody systému SmartClinic</h2>
+              <p class="mb-12 text-lg text-black/60 md:mb-16">
+                Systém SmartClinic je obrovským pomocníkom v jednej ambulancii
+                no nevyhnutnosťou na klinike s niekoľkými ambulanciami,
+                technickým zázemím, digitálnym pracoviskom… Je to dostupná
+                možnosť pre každého kto chce moderné, výkonné a bezpečné
+                pracovisko pripravené na budúcnosť.
+              </p>
+              <button
+                @click="modalContact = true"
+                class="btn btn-lg btn-primary md:!px-10"
+              >
+                Mám záujem
+              </button>
+            </div>
           </div>
         </div>
         <div class="mt-12 flex justify-end lg:hidden">
