@@ -2,10 +2,6 @@ var swiper = new Swiper("#about-us-slider", {
   slidesPerView: 1.2,
   spaceBetween: 16,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
   navigation: {
     nextEl: ".about-us-slider-button-next",
     prevEl: ".about-us-slider-button-prev",

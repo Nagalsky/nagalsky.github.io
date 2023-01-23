@@ -4,7 +4,7 @@
   class="sticky top-0 left-0 z-[100] min-h-[64px] w-full shrink-0 gap-6 px-8 py-4 xl:flex xl:items-center xl:justify-between xl:px-14 xl:py-[35px]"
   :class="{
     'bg-transparent': headerTransparent,
-    'bg-white': !headerTransparent || isMenuOpened,
+    '!bg-white': !headerTransparent || isMenuOpened,
     'shadow-sm': !headerTransparent,
     'sticky': !isMenuOpened,
     'h-full overflow-auto xl:overflow-visible xl:h-auto fixed': isMenuOpened,
@@ -111,7 +111,14 @@
         'text-dark-500': !headerTransparent || isMenuOpened,
       }"
     >
-      <a href="#" class="py-1">O nás</a>
+      <a
+        href="#"
+        class="py-1"
+        :class="{
+          'hover:!text-dark-500': headerTransparent,
+        }"
+        >O nás</a
+      >
       <div
         class="relative"
         x-data="{isOpened: false}"
@@ -121,6 +128,10 @@
           type="button"
           @click="isOpened = !isOpened"
           class="flex w-full items-center gap-2.5 py-1"
+          :class="{
+            'hover:!text-dark-500': headerTransparent,
+            'text-dark-500': headerTransparent && isOpened,
+          }"
         >
           Produkty
           <svg
@@ -151,7 +162,14 @@
           <a href="#">Prístrojové vybavenie</a>
         </div>
       </div>
-      <a href="#" class="py-1">Smartclinic</a>
+      <a
+        href="#"
+        class="py-1"
+        :class="{
+        'hover:!text-dark-500': headerTransparent,
+      }"
+        >Smartclinic</a
+      >
       <div
         class="relative"
         x-data="{isOpened: false}"
@@ -161,6 +179,10 @@
           type="button"
           @click="isOpened = !isOpened"
           class="flex w-full items-center gap-2.5 py-1"
+          :class="{
+            'hover:!text-dark-500': headerTransparent,
+            'text-dark-500': headerTransparent && isOpened,
+          }"
         >
           Služby
           <svg
@@ -188,9 +210,30 @@
           <a href="#">BTK</a>
         </div>
       </div>
-      <a href="#" class="py-1">Novinky</a>
-      <a href="#" class="py-1">Školenia</a>
-      <a href="#" class="py-1">Kontakt</a>
+      <a
+        href="#"
+        class="py-1"
+        :class="{
+        'hover:!text-dark-500': headerTransparent,
+      }"
+        >Novinky</a
+      >
+      <a
+        href="#"
+        class="py-1"
+        :class="{
+        'hover:!text-dark-500': headerTransparent,
+      }"
+        >Školenia</a
+      >
+      <a
+        href="#"
+        class="py-1"
+        :class="{
+        'hover:!text-dark-500': headerTransparent,
+      }"
+        >Kontakt</a
+      >
     </nav>
 
     <div

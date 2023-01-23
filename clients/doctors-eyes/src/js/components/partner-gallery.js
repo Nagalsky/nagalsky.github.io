@@ -2,10 +2,6 @@ var swiper = new Swiper("#partner-brand-slider", {
   slidesPerView: 3.5,
   spaceBetween: 32,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
   breakpoints: {
     540: {
       slidesPerView: 6,
