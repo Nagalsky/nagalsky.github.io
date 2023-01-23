@@ -1,5 +1,5 @@
 <header
-  class="py-6 lg:left-0 lg:top-0 lg:py-[67px]"
+  class="z-50 bg-black py-6 text-white lg:left-0 lg:top-0 lg:bg-transparent lg:py-[67px]"
   :class="isMenuOpened ? 'fixed top-0 left-0 z-50 w-full overflow-y-auto h-full bg-black' : 'lg:absolute lg:w-full'"
   x-data="{isMenuOpened: false}"
   x-cloak
@@ -33,7 +33,7 @@
     </button>
 
     <nav
-      class="relative w-full flex-col gap-4 pt-4 font-secondary font-bold lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:pt-0 2xl:text-[22px] [&>*]:uppercase"
+      class="relative w-full flex-col gap-4 pt-4 font-secondary font-bold lg:w-auto lg:flex-row lg:items-center lg:pt-0 xl:gap-8 2xl:text-[22px] [&>*]:uppercase"
       :class="isMenuOpened ? 'flex' : 'hidden lg:flex'"
     >
       <div x-data="{isOpened: false}">
@@ -252,11 +252,12 @@
             class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-12"
           >
             <div class="flex flex-col items-start gap-1">
-              <h3
+              <a
+                href="#"
                 class="font-secondary text-[21px] font-black text-green-500 underline"
               >
                 MEMPHIS
-              </h3>
+              </a>
               <div
                 class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
               >
@@ -267,11 +268,12 @@
             </div>
 
             <div class="flex flex-col items-start gap-1">
-              <h3
+              <a
+                href="#"
                 class="font-secondary text-[21px] font-black text-green-500 underline"
               >
                 NASHVILLE
-              </h3>
+              </a>
               <div
                 class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
               >
@@ -282,11 +284,12 @@
             </div>
 
             <div class="flex flex-col items-start gap-1">
-              <h3
+              <a
+                href="#"
                 class="font-secondary text-[21px] font-black text-green-500 underline"
               >
                 BIRMINGHAM
-              </h3>
+              </a>
               <div
                 class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
               >
@@ -297,11 +300,12 @@
             </div>
 
             <div class="flex flex-col items-start gap-1">
-              <h3
+              <a
+                href="#"
                 class="font-secondary text-[21px] font-black text-green-500 underline"
               >
                 CHATTANOOGA
-              </h3>
+              </a>
               <div
                 class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
               >
@@ -312,11 +316,12 @@
             </div>
 
             <div class="flex flex-col items-start gap-1">
-              <h3
+              <a
+                href="#"
                 class="font-secondary text-[21px] font-black text-green-500 underline"
               >
                 HUNTSVILLE
-              </h3>
+              </a>
               <div
                 class="flex flex-col gap-1 font-secondary font-medium lg:text-lg"
               >
@@ -330,7 +335,7 @@
       </div>
       <a href="#">PROJECTS</a>
       <a href="#">CONTACT</a>
-      <a href="#" class="bg-green-500 py-2 px-1 text-center text-white"
+      <a href="#" class="bg-green-500 py-2 px-4 text-center text-white"
         >GET A QUOTE</a
       >
     </nav>
