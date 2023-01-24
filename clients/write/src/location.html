@@ -223,24 +223,24 @@
           <div
             class="grid grid-cols-2 gap-8 font-secondary text-base font-medium md:text-lg lg:grid-cols-4 lg:text-2xl"
           >
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-center gap-2">
               <a href="#">Brentwood</a>
               <a href="#">La Vergne</a>
               <a href="#">Springfield</a>
               <a href="#">Dickson</a>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-center gap-2">
               <a href="#">Goodlettsville</a>
               <a href="#">Franklin</a>
               <a href="#">Lebanon</a>
               <a href="#">Columbia</a>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-center gap-2">
               <a href="#">Hendersonville</a>
               <a href="#">Smyrna</a>
               <a href="#">Spring Hill</a>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-center gap-2">
               <a href="#">Mount Juliet</a>
               <a href="#">Gallatin</a>
               <a href="#">Murfreesboro</a>
@@ -249,7 +249,7 @@
         </div>
       </section>
 
-      <section class="py-16 md:py-28 xl:py-44">
+      <section class="py-16 md:py-28 xl:py-44" x-data="{isCollapsed: false}">
         <div class="container">
           <h2
             class="mb-8 text-center text-[36px] font-black leading-[1.2] tracking-[8px] md:mb-12 md:text-[40px] lg:text-[46px] xl:text-[50px]"
@@ -404,13 +404,92 @@
                 >
               </div>
             </div>
+
+            <div
+              class="flex flex-col items-center gap-4 sm:gap-6"
+              x-show="isCollapsed"
+            >
+              <img
+                src="img/avatar.webp"
+                alt="avatar"
+                class="block w-full max-w-[260px] rounded-full xl:max-w-[330px]"
+              />
+              <div
+                class="flex flex-col gap-1 text-center font-secondary text-lg font-bold 2xl:text-xl"
+              >
+                <p class="text-yellow-500">BILLY WEAVER</p>
+                <p>division manager</p>
+                <a class="underline" href="mailto:bweaver@wcc-nashville.com"
+                  >bweaver@wcc-nashville.com</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-4 sm:gap-6"
+              x-show="isCollapsed"
+            >
+              <img
+                src="img/avatar.webp"
+                alt="avatar"
+                class="block w-full max-w-[260px] rounded-full xl:max-w-[330px]"
+              />
+              <div
+                class="flex flex-col gap-1 text-center font-secondary text-lg font-bold 2xl:text-xl"
+              >
+                <p class="text-yellow-500">BILLY WEAVER</p>
+                <p>division manager</p>
+                <a class="underline" href="mailto:bweaver@wcc-nashville.com"
+                  >bweaver@wcc-nashville.com</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-4 sm:gap-6"
+              x-show="isCollapsed"
+            >
+              <img
+                src="img/avatar.webp"
+                alt="avatar"
+                class="block w-full max-w-[260px] rounded-full xl:max-w-[330px]"
+              />
+              <div
+                class="flex flex-col gap-1 text-center font-secondary text-lg font-bold 2xl:text-xl"
+              >
+                <p class="text-yellow-500">BILLY WEAVER</p>
+                <p>division manager</p>
+                <a class="underline" href="mailto:bweaver@wcc-nashville.com"
+                  >bweaver@wcc-nashville.com</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-4 sm:gap-6"
+              x-show="isCollapsed"
+            >
+              <img
+                src="img/avatar.webp"
+                alt="avatar"
+                class="block w-full max-w-[260px] rounded-full xl:max-w-[330px]"
+              />
+              <div
+                class="flex flex-col gap-1 text-center font-secondary text-lg font-bold 2xl:text-xl"
+              >
+                <p class="text-yellow-500">BILLY WEAVER</p>
+                <p>division manager</p>
+                <a class="underline" href="mailto:bweaver@wcc-nashville.com"
+                  >bweaver@wcc-nashville.com</a
+                >
+              </div>
+            </div>
           </div>
 
           <div class="text-center">
             <button
               class="bg-green-500 py-5 px-8 text-center text-lg font-extrabold uppercase text-white hover:bg-green-600 focus:bg-green-600 lg:text-2xl"
+              @click="isCollapsed = !isCollapsed"
             >
-              MORE STAFF PHOTOS
+              <span x-show="!isCollapsed">MORE</span>
+              <span x-show="isCollapsed">Less</span> STAFF PHOTOS
             </button>
           </div>
         </div>
