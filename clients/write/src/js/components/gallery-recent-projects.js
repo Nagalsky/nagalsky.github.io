@@ -2,7 +2,7 @@ var swiper = new Swiper("#gallery-recent-projects", {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 16,
-  slidesPerView: 1.9,
+  slidesPerView: 1.3,
   loop: true,
   navigation: {
     nextEl: ".gallery-button-next",
