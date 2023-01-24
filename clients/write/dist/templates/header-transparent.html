@@ -38,7 +38,8 @@
     >
       <div x-data="{isOpened: false}">
         <button
-          class="flex w-full items-center justify-between gap-4 text-left uppercase lg:w-auto"
+          class="flex w-full items-center justify-between gap-4 text-left uppercase hover:text-yellow-500 lg:w-auto"
+          :class="isOpened && 'text-yellow-500'"
           @click="isOpened = !isOpened"
           @click.away="isOpened = false"
         >
@@ -213,11 +214,12 @@
           </div>
         </div>
       </div>
-      <a href="#">ABOUT US</a>
-      <a href="#">ABOUT US</a>
+      <a href="#" class="hover:text-yellow-500">ABOUT US</a>
+      <a href="#" class="hover:text-yellow-500">ABOUT US</a>
       <div x-data="{isOpened: false}">
         <button
-          class="flex w-full items-center justify-between gap-4 text-left uppercase lg:w-auto"
+          class="flex w-full items-center justify-between gap-4 text-left uppercase hover:text-yellow-500 lg:w-auto"
+          :class="isOpened && 'text-yellow-500'"
           @click="isOpened = !isOpened"
           @click.away="isOpened = false"
         >
@@ -333,8 +335,8 @@
           </div>
         </div>
       </div>
-      <a href="#">PROJECTS</a>
-      <a href="#">CONTACT</a>
+      <a href="#" class="hover:text-yellow-500">PROJECTS</a>
+      <a href="#" class="hover:text-yellow-500">CONTACT</a>
       <a href="#" class="bg-green-500 py-2 px-4 text-center text-white"
         >GET A QUOTE</a
       >
