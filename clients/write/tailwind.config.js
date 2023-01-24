@@ -27,6 +27,7 @@ module.exports = {
         "green-500": "#499661",
         "green-600": "#316f39",
         "yellow-500": "#ffa500",
+        "grey-400": "#f8f8f8",
         "grey-500": "#494949",
       },
       boxShadow: {
