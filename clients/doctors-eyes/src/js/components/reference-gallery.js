@@ -37,16 +37,17 @@
     }
 
     if (counter === 1) {
-      quote.classList.remove("border-t-dark-500");
       quote.classList.add("border-r-dark-500");
     } else if (counter === 2) {
-      quote.classList.remove("border-r-dark-500");
       quote.classList.add("border-b-dark-500");
     } else if (counter === 3) {
-      quote.classList.remove("border-b-dark-500");
       quote.classList.add("border-l-dark-500");
     } else if (counter === 0) {
-      quote.classList.remove("border-l-dark-500");
+      quote.classList.remove(
+        "border-r-dark-500",
+        "border-b-dark-500",
+        "border-l-dark-500"
+      );
       quote.classList.add("border-t-dark-500");
     }
   });
