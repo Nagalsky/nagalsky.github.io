@@ -10,7 +10,6 @@
     slidesPerView: 1.25,
     spaceBetween: 16,
     loop: true,
-    allowTouchMove: false,
     autoplay: {
       delay: 6000,
       disableOnInteraction: false,
