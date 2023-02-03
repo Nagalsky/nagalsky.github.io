@@ -1,10 +1,14 @@
 (() => {
   const quote = document.querySelector("#reference-quote");
-  quote.classList.remove(
-    "border-r-dark-500",
-    "border-b-dark-500",
-    "border-l-dark-500"
-  );
+
+  if (typeof quote != "undefined" && quote != null) {
+    quote.classList.remove(
+      "border-r-dark-500",
+      "border-b-dark-500",
+      "border-l-dark-500"
+    );
+  }
+
   let counter = 0;
   var swiper = new Swiper("#reference-slider", {
     slidesPerView: 1.25,
