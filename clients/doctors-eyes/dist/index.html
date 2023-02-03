@@ -159,10 +159,7 @@
         >
           <a
             href="#"
-            class="py-1"
-            :class="{
-              'hover:!text-dark-500': headerTransparent,
-            }"
+            class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
             >O nás</a
           >
           <div
@@ -173,10 +170,9 @@
             <button
               type="button"
               @click="isOpened = !isOpened"
-              class="flex w-full items-center gap-2.5 py-1"
+              class="relative flex w-full items-center gap-2.5 py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
               :class="{
-                'hover:!text-dark-500': headerTransparent,
-                'text-dark-500': headerTransparent && isOpened,
+                'before:xl:opacity-100': isOpened,
               }"
             >
               Produkty
@@ -210,10 +206,7 @@
           </div>
           <a
             href="#"
-            class="py-1"
-            :class="{
-            'hover:!text-dark-500': headerTransparent,
-          }"
+            class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
             >Smartclinic</a
           >
           <div
@@ -224,10 +217,9 @@
             <button
               type="button"
               @click="isOpened = !isOpened"
-              class="flex w-full items-center gap-2.5 py-1"
+              class="relative flex w-full items-center gap-2.5 py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
               :class="{
-                'hover:!text-dark-500': headerTransparent,
-                'text-dark-500': headerTransparent && isOpened,
+                'before:xl:opacity-100': isOpened,
               }"
             >
               Služby
@@ -258,26 +250,17 @@
           </div>
           <a
             href="#"
-            class="py-1"
-            :class="{
-            'hover:!text-dark-500': headerTransparent,
-          }"
+            class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
             >Novinky</a
           >
           <a
             href="#"
-            class="py-1"
-            :class="{
-            'hover:!text-dark-500': headerTransparent,
-          }"
+            class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
             >Školenia</a
           >
           <a
             href="#"
-            class="py-1"
-            :class="{
-            'hover:!text-dark-500': headerTransparent,
-          }"
+            class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
             >Kontakt</a
           >
         </nav>
@@ -328,10 +311,10 @@
           </a>
           <a
             href="#"
-            class="btn btn-secondary"
+            class="btn"
             :class="{
-              '!text-white': headerTransparent && !isMenuOpened,
-              '!text-dark-500': !headerTransparent || isMenuOpened,
+              'btn-secondary': headerTransparent && !isMenuOpened,
+              'btn-outline-dark': !headerTransparent || isMenuOpened,
             }"
             >Podpora</a
           >
@@ -341,11 +324,11 @@
 
     <main class="-mt-[64px] grow xl:-mt-[120px]">
       <section
-        class="relative z-20 py-14 pt-[190px] before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:min-h-screen md:pb-6 md:pt-[220px] lg:pt-[232px] xl:flex xl:flex-col"
+        class="relative z-20 py-14 pt-[190px] before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-hero-overlay md:min-h-screen md:pt-[220px] lg:pb-[112px] lg:pt-[232px] xl:flex xl:flex-col"
       >
         <a
           href="#"
-          class="fixed left-0 top-[64px] z-50 flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
+          class="absolute left-0 top-[64px] z-50 flex w-full items-center justify-center gap-1 bg-dark-500 px-4 py-1 text-center text-white xl:hidden"
         >
           Novinka: <span class="font-bold">Kavo OP 3D™ PRO</span>
           <svg
@@ -378,7 +361,8 @@
         >
           <source src="video/herovideo.mp4" type="video/mp4" />
         </video>
-        <div class="container xl:mb-2.5">
+
+        <div class="container lg:max-w-full lg:pl-28 lg:pr-12">
           <h1 class="text-heading-1 mb-6 text-white md:mb-12">
             Ponúkame distribúciu<br class="hidden md:block" />
             exkluzívneho prístrojového<br class="hidden md:block" />
@@ -389,14 +373,12 @@
             <a href="#our-products" class="btn btn-lg btn-primary"
               >Naše produkty</a
             >
-            <a href="#about-us" class="btn btn-lg btn-outline-white"
-              >Zistiť viac</a
-            >
+            <a href="#about-us" class="btn btn-lg btn-secondary">Zistiť viac</a>
           </div>
         </div>
 
         <div
-          class="fixed right-6 bottom-6 z-40 hidden max-w-[368px] rounded bg-dark-500 p-8 text-white xl:block"
+          class="absolute right-6 bottom-6 -z-[1] hidden max-w-[368px] rounded bg-dark-500 p-8 text-white xl:block"
         >
           <div class="w-64">
             <p class="mb-2 tracking-[-0.14px]">Novinka</p>
@@ -405,7 +387,7 @@
             </h3>
             <a
               href="#"
-              class="inline-flex items-center gap-2.5 border-b border-b-white pb-4"
+              class="inline-flex items-center justify-between gap-2.5 border-b border-b-white pb-4 hover:gap-6"
               >Zistiť viac
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -561,7 +543,7 @@
                 </p>
                 <a
                   href="#"
-                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="inline-flex items-center gap-2.5 border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Dozvedieť sa viac o nás
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -754,7 +736,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -805,7 +787,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -856,7 +838,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -906,7 +888,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -957,7 +939,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1008,7 +990,7 @@
 
                 <a
                   href="#"
-                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium"
+                  class="mt-auto inline-flex items-center gap-2.5 whitespace-nowrap border-b border-b-dark-500 pb-4 text-lg font-medium hover:gap-6"
                   >Pozrieť produkty
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1561,7 +1543,7 @@
           </h2>
           <button
             type="button"
-            class="btn btn-secondary min-h-[72px] !text-white hover:!bg-white hover:!text-dark-500 focus:!bg-white focus:!text-dark-500 active:!bg-white active:!text-dark-500 md:min-h-[111px] md:!gap-8 md:text-2xl"
+            class="btn btn-secondary min-h-[72px] md:min-h-[111px] md:!gap-8 md:text-2xl"
             @click="modalContact = true"
           >
             Chcem najvyšší štandard

@@ -113,10 +113,7 @@
     >
       <a
         href="#"
-        class="py-1"
-        :class="{
-          'hover:!text-dark-500': headerTransparent,
-        }"
+        class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
         >O nás</a
       >
       <div
@@ -127,10 +124,9 @@
         <button
           type="button"
           @click="isOpened = !isOpened"
-          class="flex w-full items-center gap-2.5 py-1"
+          class="relative flex w-full items-center gap-2.5 py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
           :class="{
-            'hover:!text-dark-500': headerTransparent,
-            'text-dark-500': headerTransparent && isOpened,
+            'before:xl:opacity-100': isOpened,
           }"
         >
           Produkty
@@ -164,10 +160,7 @@
       </div>
       <a
         href="#"
-        class="py-1"
-        :class="{
-        'hover:!text-dark-500': headerTransparent,
-      }"
+        class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
         >Smartclinic</a
       >
       <div
@@ -178,10 +171,9 @@
         <button
           type="button"
           @click="isOpened = !isOpened"
-          class="flex w-full items-center gap-2.5 py-1"
+          class="relative flex w-full items-center gap-2.5 py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
           :class="{
-            'hover:!text-dark-500': headerTransparent,
-            'text-dark-500': headerTransparent && isOpened,
+            'before:xl:opacity-100': isOpened,
           }"
         >
           Služby
@@ -212,26 +204,17 @@
       </div>
       <a
         href="#"
-        class="py-1"
-        :class="{
-        'hover:!text-dark-500': headerTransparent,
-      }"
+        class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
         >Novinky</a
       >
       <a
         href="#"
-        class="py-1"
-        :class="{
-        'hover:!text-dark-500': headerTransparent,
-      }"
+        class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
         >Školenia</a
       >
       <a
         href="#"
-        class="py-1"
-        :class="{
-        'hover:!text-dark-500': headerTransparent,
-      }"
+        class="relative py-1 xl:py-2 before:xl:absolute before:xl:left-0 before:xl:bottom-0 before:xl:h-[1px] before:xl:w-full before:xl:bg-current before:xl:opacity-0 hover:before:xl:opacity-100"
         >Kontakt</a
       >
     </nav>
@@ -282,10 +265,10 @@
       </a>
       <a
         href="#"
-        class="btn btn-secondary"
+        class="btn"
         :class="{
-          '!text-white': headerTransparent && !isMenuOpened,
-          '!text-dark-500': !headerTransparent || isMenuOpened,
+          'btn-secondary': headerTransparent && !isMenuOpened,
+          'btn-outline-dark': !headerTransparent || isMenuOpened,
         }"
         >Podpora</a
       >
