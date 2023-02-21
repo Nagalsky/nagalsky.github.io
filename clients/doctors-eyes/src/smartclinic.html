@@ -1,605 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= templates/head.html
-    <title>Smartclinic</title>
-  </head>
 
-  <body
-    class="flex min-h-screen flex-col"
-    x-data="{ modalContact: false }"
-    :class="{'overflow-hidden': modalContact }"
-    @keydown.escape="modalContact = false"
-  >
-    //= templates/header-transparent.html
+<head>
+  //= templates/head.html
+  <title>Smartclinic</title>
+</head>
 
-    <main class="-mt-[64px] grow xl:-mt-[120px]">
-      <section
-        class="xl:pb-26 relative z-20 pb-8 pt-[190px] text-white before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-[#1E1E1E/50] after:absolute after:inset-0 after:-z-10 after:bg-[url('../img/hero-smartclinic.jpg')] after:bg-cover after:bg-top md:min-h-screen md:pb-14 md:pt-[220px] lg:pb-[112px] lg:pt-[232px] xl:flex xl:flex-col"
-      >
-        <div class="container flex grow flex-col lg:max-w-full lg:px-28">
-          <div class="mb-8 grow xl:w-[675px]">
-            <p class="mb-6 text-lg md:mb-10 md:text-2xl">Smartclinic</p>
-            <h1 class="text-heading-1 mb-6 md:mb-10">
-              Moderné technológie vo vašej ambulancii, jednoducho a bez starostí
-            </h1>
-            <button
-              @click="modalContact = true"
-              class="btn btn-lg btn-primary md:!px-10"
-            >
-              Mám záujem
-            </button>
-          </div>
+<body class="flex min-h-screen flex-col" x-data="{ modalContact: false }" :class="{'overflow-hidden': modalContact }"
+  @keydown.escape="modalContact = false">
+  //= templates/header-transparent.html
 
-          <div
-            class="flex flex-col items-start gap-[72px] md:flex-row md:items-center md:justify-between md:gap-4"
-          >
-            <p class="text-lg md:max-w-[488px]">
-              Návrh celej ambulancie na mieru prispôsobený vašim potrebám s
-              technológiami, ktoré spolupracujú.
-            </p>
-            <a
-              href="#learn"
-              class="btn-arrow mt-auto border-b-white font-medium"
-              >Zistiť viac
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 25"
-                stroke-width="2"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  d="M12 3.5V21.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17 16.5L12 21.5L7 16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
+  <main class="-mt-[64px] grow xl:-mt-[120px]">
+    <section
+      class="xl:pb-26 relative z-20 pb-8 pt-[190px] text-white before:absolute before:inset-0 before:z-[-1] before:h-full before:w-full before:bg-[#1E1E1E/50] after:absolute after:inset-0 after:-z-10 after:bg-[url('../img/hero-smartclinic.jpg')] after:bg-cover after:bg-top md:min-h-screen md:pb-14 md:pt-[220px] lg:pb-[112px] lg:pt-[232px] xl:flex xl:flex-col">
+      <div class="container flex grow flex-col lg:max-w-full lg:px-28">
+        <div class="mb-8 grow xl:w-[675px]">
+          <p class="mb-6 text-lg md:mb-10 md:text-2xl">Smartclinic</p>
+          <h1 class="text-heading-1 mb-6 md:mb-10">
+            Inteligentné priestory uľahčujú prácu a vytvárajú príjemné prostredie.
+          </h1>
+          <button @click="modalContact = true" class="btn btn-lg btn-primary md:!px-10">
+            Mám záujem
+          </button>
         </div>
-      </section>
 
-      <section id="learn" class="scroll-mt-[64px] pt-24 md:scroll-mt-[120px]">
-        <div class="container">
-          <div
-            class="grid gap-4 md:grid-cols-[1fr_2fr] md:gap-8 lg:grid-cols-[1fr_590px]"
-          >
+        <div class="flex flex-col items-start gap-[72px] md:flex-row md:items-center md:justify-between md:gap-4">
+          <p class="text-lg md:max-w-[488px]">
+            Majte prepojenú celú ambulanciu cez jedinú aplikáciu. Osvetlenie, kúrenie, bezpečnostnú kameru či rádio, ale
+            dokonca aj dentálne kreslo,
+            kompresor či odsávanie.
+          </p>
+          <a href="#learn" class="btn-arrow mt-auto border-b-white font-medium text-lg">Chcem vedieť viac
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 25" stroke-width="2"
+              stroke="currentColor" class="h-6 w-6">
+              <path d="M12 3.5V21.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M17 16.5L12 21.5L7 16.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="scroll-mt-[64px] pt-24 md:scroll-mt-[120px]">
+      <div class="container">
+        <div class="grid gap-4 md:grid-cols-[1fr_2fr] md:gap-8 lg:gap-12 lg:grid-cols-[1fr_590px]">
+          <div class='flex flex-col'>
             <p class="text-lg md:text-2xl">
-              Intuitívne ovládanie a vysoká spolahlivosť
+              Čo je smart clinic?
             </p>
-            <div>
-              <h2 class="title">
-                Systém SmartClinic ponúka vysoko efektívne a ergonomické návrhy
-                ambulancií spolu s výkonným systémovým riešením
-                elektroinštálácií pre zubné ambulancie a kliniky.
-              </h2>
-            </div>
+            <p class="mt-auto text-black/60 text-lg">SMART clinic nie je len o technológiách ale aj o tom, ako je
+              priestor navhrnutý, aby bol ergonomický,
+              čiže príjemný, zdravý, dokonale využiteľný a fungoval v rôznych situáciách a pre rôzne skupiny ľudí.</p>
+          </div>
+          <div>
+            <h2 class="title">
+              Je to priestor ambulancie
+              alebo viacerých ambulancií,
+              ktoré sú vybavené prepojenými technológiami, ktoré komunikujú
+              s vami ale aj medzi sebou navzájom.
+            </h2>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="overflow-hidden overflow-y-auto py-16 md:py-24">
-        <div class="container relative">
-          <div class="w-screen">
-            <div class="swiper static" id="about-us-slider">
-              <div
-                class="swiper-wrapper static [&>*]:flex [&>*]:h-auto [&>*]:items-center"
-              >
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-1.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="img/gallery-about-us-2.png"
-                    alt="partner-brand"
-                    class="block w-full rounded"
-                  />
-                </div>
+    <section class="overflow-hidden overflow-y-auto py-16 md:py-24">
+      <div class="container relative">
+        <div class="w-screen">
+          <div class="swiper static" id="about-us-slider">
+            <div class="swiper-wrapper static [&>*]:flex [&>*]:h-auto [&>*]:items-center">
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
               </div>
-              <div
-                class="absolute bottom-6 right-0 z-10 hidden gap-2 md:flex [&>*]:inline-flex [&>*]:h-14 [&>*]:w-14 [&>*]:items-center [&>*]:justify-center [&>*]:rounded-full [&>*]:bg-white"
-              >
-                <div class="about-us-slider-button-prev">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-7 w-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                    />
-                  </svg>
-                </div>
-                <div class="about-us-slider-button-next">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-7 w-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-1.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/gallery-about-us-2.png" alt="partner-brand" class="block w-full rounded" />
+              </div>
+            </div>
+            <div
+              class="absolute bottom-6 right-0 z-10 hidden gap-2 md:flex [&>*]:inline-flex [&>*]:h-14 [&>*]:w-14 [&>*]:items-center [&>*]:justify-center [&>*]:rounded-full [&>*]:bg-white">
+              <div class="about-us-slider-button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="h-7 w-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                </svg>
+              </div>
+              <div class="about-us-slider-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="h-7 w-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section
-        id="anchor-section"
-        class="scroll-mt-[64px] pb-24 md:scroll-mt-[120px]"
-      >
-        <div class="container">
-          <div class="flex flex-col gap-8 md:ml-auto lg:w-[590px]">
-            <p class="text-lg md:text-2xl">Ako to funguje?</p>
-            <div class="space-y-4 text-lg text-black/60">
-              <p>
-                Pri zapnutí konkrétnej ambulancie systém SmartClinic prispôsobí
-                osvetlenie a upravý teplotu podľa preferencií doktora, zapne sa
-                voda a vzduch do kresla. Sputí sa oblúbená stanica alebo hudba z
-                úložiska z integrovaných repreduktorov na stene alebo strope.
+    <section id="anchor-section" class="scroll-mt-[64px] pb-24 md:scroll-mt-[120px]">
+      <div class="container">
+        <div class="flex flex-col gap-8 md:ml-auto lg:w-[590px]">
+          <p class="text-lg md:text-2xl">Ako to funguje?</p>
+          <div class="space-y-4 text-lg text-black/60">
+            <p>Predstavte si, že si v kalendári nastavíte dovolenku. Aplikácia sa vás opýta, či bude vtedy ordinácia
+              zatvorená. Ak odpoviete áno,
+              v ambulancii sa na toto obdobie zatiahnu žalúzie, zníži sa teplota, vypnú sa prístroje a zapne sa
+              bezpečnostná kamera. Vďaka tomu sa ambulancia dostáva do úsporného režimu a vy sa nemusíte na dovolenke
+              trápiť, či ste vypli odsávanie.</p>
+            <p>Pred návratom do ambulancie vám aplikácia ponúkne možnosť pripraviť ambulanciu na pohotovostný režim.
+              Vďaka tomu prídete do ambulancie, v ktorej je už späť vaša obľúbená teplota, hrá príjemná hudba z
+              integrovaných reproduktorov, odsávanie
+              a prívod vody do kresla je zapnutý. Po zapnutí mikroskopu sa automaticky zapína aj monitor, na ktorý sa
+              prenáša obraz.</p>
+            <p>A všetky tieto úkony vie za vás vykonávať SMART clinic denne pred príchodom do práce.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded">
+      <div class="container">
+        <h2 class="title mb-10">Ako to funguje?</h2>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6 gap-x-10">
+          <div class='border-b border-gray-200'>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Moderná ambulancia
               </p>
-              <p>
-                Po zapnutí mikroskopu sa zapne monitor alebo televízor a
-                prenesia sa na neho obraz.
+              <p>pokročilá technológia,
+                moderný dizajn</p>
+            </div>
+          </div>
+
+          <div class='border-b border-gray-200'>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Úsporná ambulancia
               </p>
+              <p>šetrí Váš čas, energiu i peniaze</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section
-        class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded"
-      >
-        <div class="container">
-          <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48"
-          >
-            <div>
-              <h2 class="title mb-8">
-                Stomatologické ambulancie, inteligentne a moderne
-              </h2>
-              <div class="space-y-4 text-lg text-black/60">
-                <p>
-                  Všetko o Vašej ambulancii prostredníctvom aplikácie vo Vašom
-                  mobilnom telefóne, tablete, či inom zariadení. Stačí sa
-                  prihlásiť.
-                </p>
-                <p>
-                  Už pri príchode prvého člena personálu sa deaktivuje
-                  zabezpečovací systém a klinika sa prepne do jedného z
-                  preddefinovaných režimov (práca / víkend / dovolenka /
-                  upratovačka) ktorý je práve požadovaný. Ak je to bežný
-                  pracovný deň aktivuje sa technické zázemie kliniky.
-                </p>
-              </div>
+          <div class='border-b border-gray-200'>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
-
-            <img src="img/banner-3.jpg" alt="banner" class="w-full rounded" />
-          </div>
-        </div>
-      </section>
-
-      <section class="relative py-16 md:py-[88px]">
-        <div class="container">
-          <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48"
-          >
-            <div class="lg:order-last">
-              <h2 class="title mb-8">
-                Budovanie, rekonštrukcia a technologický dozor
-              </h2>
-              <div class="space-y-4 text-lg text-black/60">
-                <p>
-                  Či sa jedná o novú kliniku, alebo o rekonštrukciu, náš tím sa
-                  pod odborným dohľadom postará o vysoko kvalifikovanú prácu.
-                </p>
-                <p>
-                  Či sa rozhodnete pre klasické alebo “inteligentné” riešenie.
-                  Dobre navrhnutá klinika nastavý obraz kvality starostlivosti a
-                  služieb, ktorú môžu vaši pacieni od Vás očakávať a zároveň sa
-                  to stane Vaše pohodlné a výkonné pracovisko
-                </p>
-              </div>
-            </div>
-
-            <img src="img/banner-3.jpg" alt="banner" class="w-full rounded" />
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded"
-      >
-        <div class="container">
-          <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48"
-          >
-            <div>
-              <h2 class="title mb-8">Návrh, konzultácie a poradenstvo</h2>
-              <p class="mb-6 text-lg text-black/60 md:mb-16">
-                Zabezpečíme kompletnú realizáciu Vášho projektu. Vašu predstavu
-                uvedieme do života.
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Bezpečná ambulancia
               </p>
-
-              <div
-                class="flex flex-col divide-y divide-gray-500 [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6"
-              >
-                <div class="first:pt-0">
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Projektová štúdia
-                  </p>
-                </div>
-
-                <div>
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Príprava projektu
-                  </p>
-                </div>
-
-                <div>
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Realizácia Smart Clinic
-                  </p>
-                </div>
-              </div>
+              <p>zabezpečovacie a kamerové systémy, požiarne hlásiče</p>
             </div>
-
-            <img src="img/banner-3.jpg" alt="banner" class="w-full rounded" />
           </div>
-        </div>
-      </section>
 
-      <section class="relative mt-24 mb-4 lg:mb-40 lg:mt-48">
-        <img
-          src="img/MacBook-Pro.png"
-          alt="MacBook-Pro"
-          class="absolute left-0 top-1/2 -z-10 hidden -translate-y-1/2 lg:block lg:max-h-[420px] xl:max-h-[640px]"
-        />
-        <div class="container">
-          <div class="lg:ml-auto lg:w-[380px]">
-            <h2 class="title mb-8">Výhody systému SmartClinic</h2>
-            <p class="mb-12 text-lg text-black/60 md:mb-16">
-              Systém SmartClinic je obrovským pomocníkom v jednej ambulancii no
-              nevyhnutnosťou na klinike s niekoľkými ambulanciami, technickým
-              zázemím, digitálnym pracoviskom… Je to dostupná možnosť pre
-              každého kto chce moderné, výkonné a bezpečné pracovisko pripravené
-              na budúcnosť.
-            </p>
-            <button
-              @click="modalContact = true"
-              class="btn btn-lg btn-primary md:!px-10"
-            >
-              Mám záujem
-            </button>
+          <div class='border-b border-gray-200 xl:border-b-transparent'>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Intuitívna ambulancia
+              </p>
+              <p>jednoduché a prehladné ovládanie</p>
+            </div>
           </div>
-        </div>
-        <div class="mt-12 flex justify-end lg:hidden">
-          <img
-            src="img/MacBook-Pro-mobile.png"
-            alt="MacBook-Pro-mobile"
-            class=""
-          />
-        </div>
-      </section>
 
-      <section class="py-8">
-        <div class="container">
-          <div
-            class="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3 [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:border-b [&>*]:border-b-gray-400 [&>*]:py-6"
-          >
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Moderná ambulancia</p>
-                <p>pokročilá technológia, moderný dizajn</p>
-              </div>
+          <div class='border-b border-gray-200 md:border-b-transparent'>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
-
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Úsporná ambulancia</p>
-                <p>šetrí Váš čas, energiu i peniaze</p>
-              </div>
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Efektívna ambulancia
+              </p>
+              <p>zjednoduší procesy, zefektívni prácu</p>
             </div>
+          </div>
 
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Bezpečná ambulancia</p>
-                <p>zabezpečovacie a kamerové systémy, požiarne hlásiče</p>
-              </div>
+          <div>
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6">
+                <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
-
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Intuitívna ambulancia</p>
-                <p>jednoduché a prehladné ovládanie</p>
-              </div>
-            </div>
-
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Efektívna ambulancia</p>
-                <p>zjednoduší procesy, zefektívni prácu</p>
-              </div>
-            </div>
-
-            <div>
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="h-6 w-6"
-                >
-                  <path
-                    d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p class="mb-2 text-lg font-medium">Prispôsobivá ambulancia</p>
-                <p>ušitá na mieru Vašim potrebám a požiadavkám</p>
-              </div>
+            <div class="flex flex-col gap-2 justify-start items-start">
+              <p class="text-lg font-medium">
+                Prispôsobivá ambulancia
+              </p>
+              <p>ušitá na mieru Vašim potrebám
+                a požiadavkám</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- contact section -->
-      //= templates/contact.html
+    <section class="py-16 md:py-24">
+      <div class="container">
+        <h2 class="title mb-8 text-center">Ako na SMART clinic.</h2>
+        <p class="mx-auto max-w-[480px] text-center text-black/60 mb-10 md:mb-16 text-lg">SMART clinic je možné
+          zapezpečiť počas
+          rekonštrukcie existujúcej ambulancie alebo v úplne nových priestoroch.</p>
 
-      <!-- our-standarts section -->
-      //= templates/our-standarts.html
-    </main>
+        <div class="grid gap-8">
+          <div class="grid lg:grid-cols-[488px_1fr] gap-6 xl:gap-[136px] lg:items-center">
+            <div class='lg:order-last flex gap-6 md:gap-8 items-center'>
+              <span
+                class="w-12 h-12 lg:w-16 lg:h-16 xl:w-[104px] xl:h-[104px] rounded-full border border-gray-200 flex items-center justify-center text-lg lg:text-2xl xl:text-[32px] shrink-0">
+                1.</span>
+              <div class="grow">
+                <p class="text-lg text-black/60">Povieme si vaše očakávania a nápady čo všetko môže SMART clinic
+                  obsiahnuť.</p>
+              </div>
+            </div>
 
-    //= templates/footer.html
+            <div>
+              <img src="img/banner-4.jpg" alt="banner" class="w-full rounded">
+            </div>
+          </div>
 
-    <!-- modal -->
-    //= templates/modal-contact.html
+          <div class="grid lg:grid-cols-[488px_1fr] gap-6 xl:gap-[136px] lg:items-center">
+            <div class='lg:order-last flex gap-6 md:gap-8 items-center'>
+              <span
+                class="w-12 h-12 lg:w-16 lg:h-16 xl:w-[104px] xl:h-[104px] rounded-full border border-gray-200 flex items-center justify-center text-lg lg:text-2xl xl:text-[32px] shrink-0">
+                2.</span>
+              <div class="grow">
+                <p class="text-lg text-black/60">Vytvoríme projekt, v ktorom zjednotíme všetky aspekty - od
+                  priestorových limitácií cez funkčné očakávania až po finančné možnosti.</p>
+              </div>
+            </div>
 
-    <script src="./js/scripts.js"></script>
-  </body>
+            <div>
+              <img src="img/banner-4.jpg" alt="banner" class="w-full rounded">
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-[488px_1fr] gap-6 xl:gap-[136px] lg:items-center">
+            <div class='lg:order-last flex gap-6 md:gap-8 items-center'>
+              <span
+                class="w-12 h-12 lg:w-16 lg:h-16 xl:w-[104px] xl:h-[104px] rounded-full border border-gray-200 flex items-center justify-center text-lg lg:text-2xl xl:text-[32px] shrink-0">
+                3.</span>
+              <div class="grow">
+                <p class="text-lg text-black/60">Zabezpečíme realizáciu a dozor nad projektom.</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="img/banner-4.jpg" alt="banner" class="w-full rounded">
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-[488px_1fr] gap-6 xl:gap-[136px] lg:items-center">
+            <div class='lg:order-last flex gap-6 md:gap-8 items-center'>
+              <span
+                class="w-12 h-12 lg:w-16 lg:h-16 xl:w-[104px] xl:h-[104px] rounded-full border border-gray-200 flex items-center justify-center text-lg lg:text-2xl xl:text-[32px] shrink-0">
+                4.</span>
+              <div class="grow">
+                <p class="text-lg text-black/60">Zabezpečíme inštaláciu, automatizáciu procesov, zaškolenie, skúšobnú
+                  prevádzku až kým sa nebudete v ambulancii cítiť ako doma</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="img/banner-4.jpg" alt="banner" class="w-full rounded">
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-[488px_1fr] gap-6 xl:gap-[136px] lg:items-center">
+            <div class='lg:order-last flex gap-6 md:gap-8 items-center'>
+              <span
+                class="w-12 h-12 lg:w-16 lg:h-16 xl:w-[104px] xl:h-[104px] rounded-full border border-gray-200 flex items-center justify-center text-lg lg:text-2xl xl:text-[32px] shrink-0">
+                5.</span>
+              <div class="grow">
+                <p class="text-lg text-black/60">Dohliadneme na pravidelnú starostlivosť,
+                  záručný aj pozáručný servis</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="img/banner-4.jpg" alt="banner" class="w-full rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    //= templates/contact.html
+
+    <!-- our-standarts section -->
+    //= templates/our-standarts.html
+  </main>
+
+  //= templates/footer.html
+
+  <!-- modal -->
+  //= templates/modal-contact.html
+
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>

@@ -1,337 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= templates/head.html
-    <title>Courses</title>
-  </head>
 
-  <body
-    class="flex min-h-screen flex-col"
-    x-data="{ modalContact: false }"
-    :class="{'overflow-hidden': modalContact }"
-    @keydown.escape="modalContact = false"
-  >
-    //= templates/header-white.html
+<head>
+  //= templates/head.html
+  <title>Courses</title>
+</head>
 
-    <main>
-      <section class="pt-10 pb-16 md:pb-[80px]">
+<body class="flex min-h-screen flex-col" x-data="{ modalContact: false }" :class="{'overflow-hidden': modalContact }"
+  @keydown.escape="modalContact = false">
+  //= templates/header-white.html
+
+  <main>
+    <section class="pt-10 pb-16 md:pb-[80px]">
+      <div class="container">
+        <div
+          class="grid lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[592px_1fr] gap-6 lg:flex-row lg:items-center mb-10 lg:mb-28 xl:gap-[136px]">
+          <h1>Školenia</h1>
+          <p class="text-lg">
+            Reagujeme na vaše potreby, preto sme do portfólia služieb priniesli aj rôzne iné školenia.
+          </p>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[592px_1fr] xl:gap-[136px]">
+          <div class="lg:py-6">
+            <p class='mb-4 lg:mb-10 text-lg md:text-2xl'>Smart sestrička</p>
+            <h2 class="title mb-8 md:mb-10">Najmodernejšie prístroje
+              si vyžadujú odborné zaobchádzanie</h2>
+            <p class="text-lg mb-10 md:mb-10">Aj napriek tomu, že súčasné technológie sú intuitívne na manipuláciu,
+              správne zaobchádzanie s nimi je základ pre ich dlhú životnosť. Preto si dávame záležať na zaškolení
+              každého nového človeka z personálu našim odborným technickým tímom.</p>
+
+            <div class="flex flex-col divide-y [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6 mb-4 md:mb-10">
+              <div class="first:pt-0">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="h-6 w-6">
+                    <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p class="self-center text-lg font-medium">
+                  Vo vašich priestoroch
+                </p>
+              </div>
+              <div>
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="h-6 w-6">
+                    <path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p class="self-center text-lg font-medium">
+                  Podané praktickým a zaujímavým spôsobom
+                </p>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+          </div>
+
+          <div class="lg:order-first">
+            <img src="img/banner-5.jpg" alt="banner" class="w-full rounded">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="space-y-4 py-16 md:py-24">
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
         <div class="container">
-          <div
-            class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
-          >
-            <h1>Školenia</h1>
-            <p class="md:text-lg lg:max-w-[488px]">
-              Zabezpečujeme kompletný odborný záručný aj pozáručný servis pre
-              všetky dodávané prístroje a softvérové riešenia, elektrické
-              revízie zdravotníckych zariadení a tlakových nádob.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="space-y-4">
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="relative rounded bg-gray-300 p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:rounded before:xl:bg-gray-300"
-        >
-          <div class="container">
-            <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
-              <div>
-                <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
-                  Školenie
-                </p>
-                <h2
-                  class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]"
-                >
-                  Parodentológia v každodennej dentálnej hygienistike
-                </h2>
-              </div>
-              <div>
-                <p class="mb-4 text-sm font-bold md:text-base">
-                  14.01.2023 - 10.00 do 16.00 h
-                </p>
-                <div class="flex flex-col gap-1 text-sm md:text-base">
-                  <p>Bratislava</p>
-                  <p>Klincová 16637/37A</p>
-                </div>
-              </div>
-              <div>
-                <a href="#" class="btn btn-primary btn-lg font-medium"
-                  >Prihlásiť sa</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="relative py-16 md:py-[88px]">
-        <div class="container">
-          <div
-            class="grid gap-12 lg:grid-cols-[1fr_488px] lg:items-center lg:justify-between lg:gap-20 xl:grid-cols-[488px_488px] xl:gap-48"
-          >
-            <div class="lg:order-last">
-              <h2 class="title mb-8">Čo získate na odbornom školení</h2>
-              <p class="mb-6 text-lg text-black/60 md:mb-16">
-                Nibh rhoncus at ornare at et in nibh. Et proin elit elit eget
-                dignissim suscipit bibendum nunc. Et adipiscing.
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
               </p>
-
-              <div
-                class="flex flex-col divide-y divide-gray-500 [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6"
-              >
-                <div class="first:pt-0">
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Vestibulum vitae sem tristique erat at.
-                  </p>
-                </div>
-
-                <div>
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Et odio sed a venenatis in ullamcorper
-                  </p>
-                </div>
-
-                <div>
-                  <div
-                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        d="M6 12L10.2426 16.2426L18.7279 7.75732"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="self-center text-lg font-medium">
-                    Enim risus pharetra proin et eu tellus turpis.
-                  </p>
-                </div>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
               </div>
             </div>
-
-            <img src="img/banner-3.jpg" alt="banner" class="w-full rounded" />
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- contact section -->
-      //= templates/our-standarts.html
-    </main>
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
+        <div class="container">
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
+              </p>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    //= templates/footer.html
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
+        <div class="container">
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
+              </p>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- modal -->
-    //= templates/modal-contact.html
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
+        <div class="container">
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
+              </p>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="./js/scripts.js"></script>
-  </body>
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
+        <div class="container">
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
+              </p>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="relative rounded p-8 py-16 text-black before:-z-10 md:p-0 md:py-28 before:xl:absolute before:xl:inset-x-6 before:xl:inset-y-0 before:xl:rounded before:xl:bg-gray-300">
+        <div class="container">
+          <div class="grid gap-6 xl:grid-cols-[510px_316px_1fr] xl:gap-20">
+            <div>
+              <p class="mb-2 text-sm uppercase -tracking-[0.14px]">
+                Školenie
+              </p>
+              <h2 class="text-lg font-semibold -tracking-[0.56px] md:text-2xl lg:text-[28px]">
+                Parodentológia v každodennej dentálnej hygienistike
+              </h2>
+            </div>
+            <div>
+              <p class="mb-4 text-sm font-bold md:text-base">
+                14.01.2023 - 10.00 do 16.00 h
+              </p>
+              <div class="flex flex-col gap-1 text-sm md:text-base">
+                <p>Bratislava</p>
+                <p>Klincová 16637/37A</p>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg font-medium">Prihlásiť sa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    //= templates/our-standarts.html
+  </main>
+
+  //= templates/footer.html
+
+  <!-- modal -->
+  //= templates/modal-contact.html
+
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>

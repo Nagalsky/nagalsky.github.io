@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	//= templates/head.html
+	<title>BTK</title>
+</head>
+
+<body class="flex min-h-screen flex-col" x-data="{ modalContact: false }" :class="{'overflow-hidden': modalContact }"
+	@keydown.escape="modalContact = false">
+	//= templates/header-white.html
+
+	<main>
+		<section class="pt-10 pb-16 md:pb-[88px]">
+			<div class="container">
+				<div
+					class="grid lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[592px_1fr] gap-6 lg:flex-row lg:items-center mb-10 lg:mb-40 xl:gap-[136px]">
+					<h1>Bezpečnostno-technická kontrola</h1>
+					<p class="text-lg">
+						Revízie elektrického ručného náradia a elektrických spotrebičov
+					</p>
+				</div>
+
+				<div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[592px_1fr] xl:gap-[136px] lg:items-center">
+					<div>
+						<h2 class="title mb-4 md:mb-10">Prečo je potrebná?</h2>
+						<p class="text-xl mb-4 md:mb-10 text-black/60">Kontrolu elektrických spotrebičov, ručného náradia ako aj
+							elektrickej
+							inštalácie je potrebné vykonávať raz za rok. Túto povinnosť určuje platná legislatíva a týka sa každej
+							ambulancie poskytovateľa zdravotnej staroslitovsti či miestností, kde sa zdržiava zdravotnícky personál
+							alebo pacienti.</p>
+					</div>
+
+					<div>
+						<img src="img/banner-6.jpg" alt="banner" class="w-full rounded">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded">
+			<div class="container">
+				<div
+					class="grid gap-12 lg:items-center lg:justify-between lg:gap-20 lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[592px_1fr]] xl:gap-48">
+					<div class="lg:order-last">
+						<h2 class="title mb-8">Ako kontrola prebieha</h2>
+						<p class="mb-10 text-lg text-black/60 md:mb-16">
+							Kontrolu vykonáva osoba s odbornou spôsobilosťou
+							a trvá niekoľko hodín, v závislosti od priestorov
+							a množstva vybavenia. Prevádzka ambulancie musí byť vtedy pozastavená.
+						</p>
+
+						<div class="flex flex-col divide-y divide-gray-200 [&>*]:flex [&>*]:items-start [&>*]:gap-10 [&>*]:py-6">
+							<div class="first:pt-0">
+								<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+										stroke="currentColor" class="h-6 w-6">
+										<path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="self-center text-lg font-medium">
+									Skontrolujú sa elektrické prístroje a zariadenia
+								</p>
+							</div>
+
+							<div>
+								<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+										stroke="currentColor" class="h-6 w-6">
+										<path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="self-center text-lg font-medium">
+									Prebehne funkčná + elektrická skúška
+								</p>
+							</div>
+
+							<div>
+								<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+										stroke="currentColor" class="h-6 w-6">
+										<path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="self-center text-lg font-medium">
+									Posúdi sa technický stav, zvolí sa následná oprava alebo vyradenie
+								</p>
+							</div>
+
+							<div>
+								<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+										stroke="currentColor" class="h-6 w-6">
+										<path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="self-center text-lg font-medium">
+									Môže nasledovať školenie personálu
+								</p>
+							</div>
+
+							<div>
+								<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-500">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+										stroke="currentColor" class="h-6 w-6">
+										<path d="M6 12L10.2426 16.2426L18.7279 7.75732" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="self-center text-lg font-medium">
+									Vypíše sa protokol a karta prístroja
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<img src="img/banner-7.jpg" alt="banner" class="w-full rounded" />
+				</div>
+			</div>
+		</section>
+
+		<!-- our-standarts section -->
+		//= templates/contact.html
+
+
+		<!-- contact section -->
+		//= templates/our-standarts.html
+	</main>
+
+	//= templates/footer.html
+
+	<!-- modal -->
+	//= templates/modal-contact.html
+
+	<script src="./js/scripts.js"></script>
+</body>
+
+</html>

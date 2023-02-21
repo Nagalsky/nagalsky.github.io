@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	//= templates/head.html
+	<title>Support</title>
+</head>
+
+<body class="flex min-h-screen flex-col" x-data="{ modalContact: false }" :class="{'overflow-hidden': modalContact }"
+	@keydown.escape="modalContact = false">
+	//= templates/header-white.html
+
+	<main>
+		<section class="pt-10 pb-16 md:pb-24">
+			<div class="container">
+				<div class="grid lg:grid-cols-2 xl:grid-cols-[488px_488px] gap-10 lg:justify-between">
+					<div>
+						<p class="mb-6 text-lg md:mb-10 md:text-2xl">Podpora</p>
+						<h1>Pomôžeme
+							vám s vašimi produktami</h1>
+					</div>
+
+					<div class="bg-dark-500 p-8 md:py-20 text-white rounded text-center">
+						<p class="text-lg md:text-2xl mb-8">Pre efektívne riešenie problémov si stiahnite TeamViewer 11
+						</p>
+
+						<button type="submit" class="btn btn-lg btn-white !p-[34px] md:!p-[39px]">
+							<img src="img/logo-teamviewer.svg" alt="teamviewer" class="d-block w-full max-w-[180px]">
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded">
+			<div class="container">
+				<div class="grid mb-12 lg:grid-cols-[390px_480px] gap-10 justify-between items-start">
+					<h2 class="title font-semibold">Hľadáte dokumenty
+						pre konkrétny prístroj?</h2>
+
+					<div class="relative">
+						<select type="text" id="support-select-1"
+							class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-600 focus:outline-none focus:ring-0 font-semibold">
+							<option value="" disabled selected>Vybrať prístroj....</option>
+							<option>OP 3D™ PRO</option>
+							<option>1</option>
+							<option>1</option>
+							<option>1</option>
+						</select>
+						<label for="support-select-1"
+							class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-gray-300 px-2 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2">Zvolený
+							prístroj</label>
+					</div>
+				</div>
+
+				<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="w-6 h-6">
+								<path
+									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<div class='flex flex-col gap-2'>
+							<p class="text-xs uppercase font-semibold">PDF</p>
+							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
+							<div class="text-xs flex flex-col gap-1">
+								<p>Jazyk: ENG</p>
+								<p>Vezia: 2.1</p>
+								<p>Veľkosť súboru: 2.82 MB</p>
+							</div>
+						</div>
+
+						<a href="#"
+							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6">
+								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
+								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- our-standarts section -->
+		//= templates/contact.html
+
+
+		<section class="bg-dark-500 py-16 text-white md:py-36">
+			<div class="container grid justify-between gap-10 lg:grid-cols-2 lg:items-center xl:grid-cols-[488px_448px]">
+				<h2 class="h1">
+					Zašleme vám vždy akutálnu dokumentáciu
+				</h2>
+				<form>
+					<div class="mb-4 flex items-center gap-4 rounded-xl bg-white p-2 md:mb-6">
+						<input type="email"
+							class="block h-[51px] w-full grow border-none bg-transparent py-4 text-dark-500 placeholder:text-black/60 focus:outline-none focus:ring-0"
+							placeholder="Váš email" />
+
+						<button type="submit"
+							class="btn btn-primary h-14 w-14 shrink-0 self-stretch !px-0 md:h-auto md:w-auto md:!px-8">
+							<span class="hidden md:block">Odoberať</span>
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" class="h-6 w-6 md:hidden">
+								<path d="M10.3086 13.6923L15.1547 8.84619" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M3.2326 10.27C2.42568 9.86652 2.52346 8.68509 3.38572 8.41978L19.1948 3.55543C19.9621 3.31935 20.6808 4.03802 20.4447 4.8053L15.5804 20.6144C15.315 21.4767 14.1336 21.5745 13.7302 20.7675L10.38 14.0673C10.2833 13.8738 10.1264 13.7169 9.93283 13.6201L3.2326 10.27Z"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="flex items-center gap-3 md:px-6">
+						<input id="checkbox-súhlasím" type="checkbox"
+							class="h-4 w-4 rounded-[2px] border-white/60 bg-transparent text-white/60 focus:ring-2 focus:ring-white/60" />
+						<label for="checkbox-súhlasím" class='text-white/60'>Súhlasím so
+							<a href="#" class="underline">spracovaním osobných údajov</a></label>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+		<img src="img/footer-banner.jpg" alt="" class="block w-full" />
+	</main>
+
+	//= templates/footer.html
+
+	<!-- modal -->
+	//= templates/modal-contact.html
+
+	<script src="./js/scripts.js"></script>
+</body>
+
+</html>
