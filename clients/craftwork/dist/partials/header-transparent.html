@@ -1,7 +1,11 @@
 <header
+  x-cloak
   class="absolute left-0 top-0 z-20 w-full flex-shrink-0 py-6 lg:py-10"
   x-data="{ isMobileMenuOpened: false }"
   :class="isMobileMenuOpened ? 'bg-white lg:bg-transparent' : 'bg-transparent'"
+  @keydown.escape="isMobileMenuOpened = false"
+  @click.away="isMobileMenuOpened = false"
+  @scroll.window.throttle="isMobileMenuOpened = false"
 >
   <div class="container flex flex-wrap items-center gap-10 lg:gap-[72px]">
     <a href="#" class="block w-[176px]"
