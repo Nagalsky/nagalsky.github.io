@@ -1,0 +1,39 @@
+/* BUTTONS */
+
+.btn {
+	border-radius: 4px;
+	padding: 8px 32px;
+
+	&-primary {
+		@include button-variants($bg: $primary, $color: $white);
+	}
+
+	&-link-primary {
+		@include button-link-variants($color: $primary)
+	}
+
+	&-long {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+
+	&-lg {
+		padding: 10px 32px;
+		font-size: 14px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+			padding: 15.5px 31px;
+		}
+	}
+
+	&-md {
+		padding: 9px 32px;
+		font-size: 14px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+			padding: 11.5px 31px;
+		}
+	}
+}

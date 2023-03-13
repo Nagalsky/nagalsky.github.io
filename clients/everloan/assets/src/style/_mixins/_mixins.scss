@@ -1,0 +1,110 @@
+/* MIXINS */
+
+// Placeholder text
+@mixin custom-placeholder($color: $placeholder-color,
+  $font-size: $placeholder-font-size,
+  $font-family: $placeholder-font-style) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+}
+
+@mixin custom-placeholder-font-style($font-style: $placeholder-font-style) {
+  &:-moz-placeholder {
+    font-style: $font-style;
+  }
+
+  &::-moz-placeholder {
+    font-style: $font-style;
+  }
+
+  &:-ms-input-placeholder {
+    font-style: $font-style;
+  }
+
+  &::-webkit-input-placeholder {
+    font-style: $font-style;
+  }
+}
+
+//Placeholder opacity
+@mixin custom-placeholder-opacity($opacity: $placeholder-opacity) {
+  &:-moz-placeholder {
+    opacity: $opacity;
+  }
+
+  &::-moz-placeholder {
+    opacity: $opacity;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: $opacity;
+  }
+}
+
+//Buttons
+@mixin button-variants($bg: $btn-bg, $color: $btn-color) {
+  background: $bg;
+  color: $color;
+  border-color: $bg;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background: darken($bg, 10%) !important;
+    border-color: darken($bg, 10%) !important;
+    color: $color !important;
+  }
+}
+
+@mixin button-link-variants($color: $btn-color) {
+  color: $color;
+  padding: 0;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    color: darken($color, 10%) !important;
+  }
+}
+
+@mixin button-outline-variants($color: $btn-color) {
+  background: transparent;
+  color: $color;
+  border-color: $color;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    background: $color !important;
+    border-color: $color !important;
+    color: $white !important;
+  }
+}
