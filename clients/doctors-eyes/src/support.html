@@ -33,7 +33,8 @@
 		</section>
 
 		<section
-			class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded">
+			class="relative py-16 before:absolute before:inset-0 before:-z-10 before:bg-gray-300 md:py-[88px] before:xl:inset-x-6 before:xl:rounded"
+			x-data="{selectedOption: 'all'}">
 			<div class="container">
 				<div class="grid mb-12 lg:grid-cols-[390px_480px] gap-10 justify-between items-start">
 					<h2 class="title font-semibold">Hľadáte dokumenty
@@ -41,12 +42,13 @@
 
 					<div class="relative">
 						<select type="text" id="support-select-1"
-							class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-600 focus:outline-none focus:ring-0 font-semibold">
-							<option value="" disabled selected>Vybrať prístroj....</option>
-							<option>OP 3D™ PRO</option>
-							<option>1</option>
-							<option>1</option>
-							<option>1</option>
+							class="border-1 peer block h-[62px] w-full appearance-none rounded-sm border-gray-200 bg-transparent px-6 py-4 focus:border-gray-600 focus:outline-none focus:ring-0 font-semibold"
+							x-model="selectedOption">
+							<option value="all">Vybrať prístroj....</option>
+							<option value="pro">OP 3D™ PRO</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
 						</select>
 						<label for="support-select-1"
 							class="absolute top-2 left-5 z-10 origin-[0] -translate-y-4 transform bg-gray-300 px-2 text-sm duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2">Zvolený
@@ -55,39 +57,8 @@
 				</div>
 
 				<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
-						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-								stroke="currentColor" class="w-6 h-6">
-								<path
-									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
-									stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-
-						<div class='flex flex-col gap-2'>
-							<p class="text-xs uppercase font-semibold">PDF</p>
-							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
-							<div class="text-xs flex flex-col gap-1">
-								<p>Jazyk: ENG</p>
-								<p>Vezia: 2.1</p>
-								<p>Veľkosť súboru: 2.82 MB</p>
-							</div>
-						</div>
-
-						<a href="#"
-							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between !justify-between">Stiahnuť
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
-								stroke="currentColor" class="h-6 w-6">
-								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === 'pro' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -119,7 +90,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '1' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -151,7 +123,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '2' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -183,7 +156,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '3' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -215,7 +189,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === 'pro' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -247,7 +222,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '1' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -279,7 +255,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '2' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -311,7 +288,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '3' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -343,7 +321,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === 'pro' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -375,7 +354,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '1' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -407,7 +387,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '2' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -439,7 +420,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '3' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -471,7 +453,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === 'pro' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -503,7 +486,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '1' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -535,7 +519,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '2' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -567,7 +552,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '3' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -599,7 +585,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === 'pro' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -631,7 +618,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '1' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -663,7 +651,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '2' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
@@ -695,103 +684,8 @@
 						</a>
 					</div>
 
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
-						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-								stroke="currentColor" class="w-6 h-6">
-								<path
-									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
-									stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-
-						<div class='flex flex-col gap-2'>
-							<p class="text-xs uppercase font-semibold">PDF</p>
-							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
-							<div class="text-xs flex flex-col gap-1">
-								<p>Jazyk: ENG</p>
-								<p>Vezia: 2.1</p>
-								<p>Veľkosť súboru: 2.82 MB</p>
-							</div>
-						</div>
-
-						<a href="#"
-							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
-								stroke="currentColor" class="h-6 w-6">
-								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
-						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-								stroke="currentColor" class="w-6 h-6">
-								<path
-									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
-									stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-
-						<div class='flex flex-col gap-2'>
-							<p class="text-xs uppercase font-semibold">PDF</p>
-							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
-							<div class="text-xs flex flex-col gap-1">
-								<p>Jazyk: ENG</p>
-								<p>Vezia: 2.1</p>
-								<p>Veľkosť súboru: 2.82 MB</p>
-							</div>
-						</div>
-
-						<a href="#"
-							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
-								stroke="currentColor" class="h-6 w-6">
-								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
-						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-								stroke="currentColor" class="w-6 h-6">
-								<path
-									d="M18 21H6C5.44772 21 5 20.5523 5 20L5 4C5 3.44772 5.44772 3 6 3L13.5631 3C13.8416 3 14.1076 3.11619 14.2968 3.32059L18.7338 8.11246C18.9049 8.29731 19 8.53995 19 8.79187L19 20C19 20.5523 18.5523 21 18 21Z"
-									stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M19 9L14 9C13.4477 9 13 8.55228 13 8L13 3" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-
-						<div class='flex flex-col gap-2'>
-							<p class="text-xs uppercase font-semibold">PDF</p>
-							<p class="font-semibold">Servisný a inštalačný manuál OP 3D™ PRO</p>
-							<div class="text-xs flex flex-col gap-1">
-								<p>Jazyk: ENG</p>
-								<p>Vezia: 2.1</p>
-								<p>Veľkosť súboru: 2.82 MB</p>
-							</div>
-						</div>
-
-						<a href="#"
-							class="btn btn-outline-dark btn-lg !py-[16.5px] !text-base !gap-8 md:text-lg font-medium !justify-between">Stiahnuť
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="2"
-								stroke="currentColor" class="h-6 w-6">
-								<path d="M6.5 21.5H18.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M12.5 3.5L12.5 17.5" " stroke-linecap=" round" stroke-linejoin="round" />
-								<path d="M17.5 12.5L12.5 17.5L7.5 12.5" " stroke-linecap=" round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-
-					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'>
+					<div class='rounded bg-white text-center py-8 px-10 flex flex-col gap-8 justify-center'
+						x-show="selectedOption === '3' || selectedOption === 'all'">
 						<div class="flex items-center justify-center w-14 h-14 bg-gray-300 rounded-full mx-auto">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 								stroke="currentColor" class="w-6 h-6">
