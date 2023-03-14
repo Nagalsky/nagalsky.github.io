@@ -39,13 +39,7 @@
 	.p-0,
 	.text-dark-500,
 	.position-relative,
-	.rounded-0,
-	.bg-transparent,
-	.border,
-	.border-2,
-	.border-end-0,
-	.border-start-0,
-	.border-dark-500;
+	.rounded-0;
 	width: 18px;
 	height: 16px;
 	border: none;
@@ -58,7 +52,45 @@
 		content: '';
 		height: 2px;
 		transform: translateY(-50%);
+		@include transition($base-animation);
 		top: 50%;
+	}
+
+	&:not(.collapsed) {
+		&:before {
+			opacity: 0;
+		}
+	}
+
+	&.collapsed {
+		.navbar-toggler-bar {
+			&--top {
+				@extend .top-0;
+				transform: rotate(0);
+			}
+
+			&--bottom {
+				@extend .bottom-0;
+				transform: rotate(-0);
+			}
+		}
+	}
+}
+
+.navbar-toggler-bar {
+	@extend .position-absolute,
+	.w-100,
+	.bg-dark-500,
+	.start-0;
+	height: 2px;
+	@include transition($base-animation);
+
+	&--top {
+		transform: rotate(45deg);
+	}
+
+	&--bottom {
+		transform: rotate(-45deg);
 	}
 }
 

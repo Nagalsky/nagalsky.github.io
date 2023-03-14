@@ -6397,7 +6397,7 @@ textarea.form-control-lg {
 .position-relative, .navbar-toggler, .hero, .rental-properties-cards, .card, .svg-map-holder {
   position: relative !important; }
 
-.position-absolute, .navbar-toggler:before {
+.position-absolute, .navbar-toggler:before, .navbar-toggler-bar {
   position: absolute !important; }
 
 .position-fixed {
@@ -6406,7 +6406,7 @@ textarea.form-control-lg {
 .position-sticky, .navbar {
   position: sticky !important; }
 
-.top-0, .navbar {
+.top-0, .navbar, .navbar-toggler.collapsed .navbar-toggler-bar--top {
   top: 0 !important; }
 
 .top-50 {
@@ -6415,7 +6415,7 @@ textarea.form-control-lg {
 .top-100 {
   top: 100% !important; }
 
-.bottom-0 {
+.bottom-0, .navbar-toggler.collapsed .navbar-toggler-bar--bottom {
   bottom: 0 !important; }
 
 .bottom-50 {
@@ -6424,7 +6424,7 @@ textarea.form-control-lg {
 .bottom-100 {
   bottom: 100% !important; }
 
-.start-0, .navbar, .navbar-toggler:before {
+.start-0, .navbar, .navbar-toggler:before, .navbar-toggler-bar {
   left: 0 !important; }
 
 .start-50 {
@@ -6451,7 +6451,7 @@ textarea.form-control-lg {
 .translate-middle-y {
   transform: translateY(-50%) !important; }
 
-.border, .navbar-toggler {
+.border {
   border: 1px solid #dee2e6 !important; }
 
 .border-0, .dropdown-toggle:after, .our-experts-form .form-control {
@@ -6466,7 +6466,7 @@ textarea.form-control-lg {
 .border-end {
   border-right: 1px solid #dee2e6 !important; }
 
-.border-end-0, .navbar-toggler, .accordion-item {
+.border-end-0, .accordion-item {
   border-right: 0 !important; }
 
 .border-bottom {
@@ -6478,7 +6478,7 @@ textarea.form-control-lg {
 .border-start {
   border-left: 1px solid #dee2e6 !important; }
 
-.border-start-0, .navbar-toggler, .accordion-item {
+.border-start-0, .accordion-item {
   border-left: 0 !important; }
 
 .border-primary {
@@ -6505,7 +6505,7 @@ textarea.form-control-lg {
 .border-dark {
   border-color: #212529 !important; }
 
-.border-dark-500, .navbar-toggler {
+.border-dark-500 {
   border-color: #000929 !important; }
 
 .border-dark-600 {
@@ -6556,7 +6556,7 @@ textarea.form-control-lg {
 .border-1 {
   border-width: 1px !important; }
 
-.border-2, .navbar-toggler {
+.border-2 {
   border-width: 2px !important; }
 
 .border-3 {
@@ -6577,7 +6577,7 @@ textarea.form-control-lg {
 .w-75 {
   width: 75% !important; }
 
-.w-100, .navbar-toggler:before, .rental-properties-banner, .rental-properties-cards .card, .fix-rent-banner {
+.w-100, .navbar-toggler:before, .navbar-toggler-bar, .rental-properties-banner, .rental-properties-cards .card, .fix-rent-banner {
   width: 100% !important; }
 
 .w-auto {
@@ -7311,7 +7311,7 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important; }
 
-.bg-dark-500, .navbar-toggler:before {
+.bg-dark-500, .navbar-toggler:before, .navbar-toggler-bar {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-500-rgb), var(--bs-bg-opacity)) !important; }
 
@@ -7375,7 +7375,7 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important; }
 
-.bg-transparent, .navbar-toggler, .accordion-button {
+.bg-transparent, .accordion-button {
   --bs-bg-opacity: 1;
   background-color: transparent !important; }
 
@@ -9443,7 +9443,28 @@ p {
     content: '';
     height: 2px;
     transform: translateY(-50%);
+    transition: 250ms;
     top: 50%; }
+    @media (prefers-reduced-motion: reduce) {
+      .navbar-toggler:before {
+        transition: none; } }
+  .navbar-toggler:not(.collapsed):before {
+    opacity: 0; }
+  .navbar-toggler.collapsed .navbar-toggler-bar--top {
+    transform: rotate(0); }
+  .navbar-toggler.collapsed .navbar-toggler-bar--bottom {
+    transform: rotate(0); }
+
+.navbar-toggler-bar {
+  height: 2px;
+  transition: 250ms; }
+  @media (prefers-reduced-motion: reduce) {
+    .navbar-toggler-bar {
+      transition: none; } }
+  .navbar-toggler-bar--top {
+    transform: rotate(45deg); }
+  .navbar-toggler-bar--bottom {
+    transform: rotate(-45deg); }
 
 @media (min-width: 1200px) {
   .navbar-nav {
@@ -9688,6 +9709,8 @@ ul {
     font-family: 'icomoon';
     content: "\e904";
     font-size: 12px; }
+  .dropdown-toggle.show:after {
+    transform: rotate(-180deg); }
 
 /* HERO */
 .hero {
