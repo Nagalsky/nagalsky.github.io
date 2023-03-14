@@ -8,3 +8,5 @@
 //= ../../../node_modules/bootstrap/dist/js/bootstrap.min.js
 
 // Import custom js-files
+//= components/svg-map.js
+//= components/navbar.js

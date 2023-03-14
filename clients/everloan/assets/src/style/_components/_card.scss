@@ -1,7 +1,10 @@
 /* CARD */
 
 .card {
-	@extend .position-relative;
+	@extend .position-relative,
+	.d-flex,
+	.flex-column,
+	.align-items-start;
 	border-radius: 20px;
 	background-color: $white;
 	padding: 35px 25px;
@@ -20,6 +23,7 @@
 }
 
 .card-text {
+	@extend .flex-grow-1;
 	font-size: 18px;
 	line-height: 1.67;
 	color: $gray-600;
