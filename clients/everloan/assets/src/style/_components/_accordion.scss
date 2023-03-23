@@ -1,10 +1,7 @@
 /* ACCORDION */
 
 .accordion-item {
-	@extend .border-top-0,
-	.border-start-0,
-	.border-end-0,
-	.rounded-0;
+	@extend .border-top-0, .border-start-0, .border-end-0, .rounded-0;
 	padding: 20px 0;
 	border-color: $gray-100;
 
@@ -19,52 +16,51 @@
 
 .accordion-button {
 	@extend .p-0,
-	.d-flex,
-	.align-items-center,
-	.justify-content-between,
-	.bg-transparent,
-	.shadow-none,
-	.text-dark-700,
-	.font-base-semibold;
+		.d-flex,
+		.align-items-center,
+		.justify-content-between,
+		.bg-transparent,
+		.shadow-none,
+		.text-dark-700,
+		.font-base-semibold;
 	gap: 20px;
-	font-size: 18px;
+	font-size: 16px;
 
 	@include media-breakpoint-up(md) {
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	&.collapsed {
 		&:after {
-			content: "\e90c";
+			content: '\e90c';
 		}
 	}
 
 	&:after {
 		@extend .flex-shrink-0,
-		.d-inline-flex,
-		.align-items-center,
-		.justify-content-center,
-		.rounded-circle,
-		.bg-dark-700,
-		.text-white,
-		.fs-16;
+			.d-inline-flex,
+			.align-items-center,
+			.justify-content-center,
+			.rounded-circle,
+			.bg-dark-700,
+			.text-white,
+			.fs-16;
 		width: 24px;
 		height: 24px;
 		transform: rotate(0) !important;
 		background-image: none !important;
 		font-family: 'icomoon';
-		content: "\e90d";
+		content: '\e90d';
 	}
 }
 
 .accordion-body {
-	@extend .px-0,
-	.pb-0;
+	@extend .px-0, .pb-0;
 	padding-top: 8px;
 
 	@include media-breakpoint-up(md) {
 		padding-top: 26px;
-		font-size: 18px;
+		font-size: 16px;
 		max-width: 85%;
 	}
 }

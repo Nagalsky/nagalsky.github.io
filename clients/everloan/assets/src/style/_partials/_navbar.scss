@@ -1,15 +1,12 @@
 /* NAVBAR */
 
 .navbar {
-	@extend .position-sticky,
-	.top-0,
-	.start-0,
-	.flex-shrink-0;
+	@extend .position-sticky, .top-0, .start-0, .flex-shrink-0;
 	z-index: 30;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background-color: $pink-300;
-	border-bottom: 1px solid rgba($gray-500, .1);
+	border-bottom: 1px solid rgba($gray-500, 0.1);
 
 	@include media-breakpoint-up(lg) {
 		background-color: $white;
@@ -20,7 +17,7 @@
 
 	&--scroll {
 		@include media-breakpoint-up(lg) {
-			border-bottom: 1px solid rgba($gray-500, .1);
+			border-bottom: 1px solid rgba($gray-500, 0.1);
 		}
 	}
 }
@@ -35,20 +32,13 @@
 }
 
 .navbar-toggler {
-	@extend .shadow-none,
-	.p-0,
-	.text-dark-500,
-	.position-relative,
-	.rounded-0;
+	@extend .shadow-none, .p-0, .text-dark-500, .position-relative, .rounded-0;
 	width: 18px;
 	height: 16px;
 	border: none;
 
 	&:before {
-		@extend .position-absolute,
-		.w-100,
-		.bg-dark-500,
-		.start-0;
+		@extend .position-absolute, .w-100, .bg-dark-500, .start-0;
 		content: '';
 		height: 2px;
 		transform: translateY(-50%);
@@ -78,10 +68,7 @@
 }
 
 .navbar-toggler-bar {
-	@extend .position-absolute,
-	.w-100,
-	.bg-dark-500,
-	.start-0;
+	@extend .position-absolute, .w-100, .bg-dark-500, .start-0;
 	height: 2px;
 	@include transition($base-animation);
 
@@ -121,9 +108,10 @@
 		}
 
 		.nav-link {
-			@extend .font-mono-medium,
-			.text-dark-600,
-			.p-lg-0;
+			@extend .font-mono-medium, .text-dark-600, .p-lg-0;
+			@include media-breakpoint-up(lg) {
+				font-size: 14px;
+			}
 			border-bottom: 1px solid transparent;
 
 			&:hover,
