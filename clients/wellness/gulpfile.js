@@ -52,6 +52,12 @@ function devHTML() {
     .pipe(dest(options.paths.dist.base));
 }
 
+function devVideo() {
+  return src(`${options.paths.src.video}/**/*`).pipe(
+    dest(options.paths.dist.video)
+  );
+}
+
 function devStyles() {
   const tailwindcss = require("tailwindcss");
   return src(`${options.paths.src.css}/**/*.scss`)
@@ -91,6 +97,7 @@ function watchFiles() {
     [options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`],
     series(devStyles, previewReload)
   );
+  watch(`${options.paths.src.video}/**/*`, series(devVideo, previewReload));
   watch(`${options.paths.src.js}/**/*.js`, series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
   console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
@@ -170,7 +177,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devFonts, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devFonts, devHTML, devVideo), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
