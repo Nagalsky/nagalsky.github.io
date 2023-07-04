@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[url('../img/bg.webp')] bg-cover bg-center bg-no-repeat font-default text-xl;
+}
+
+a {
+  @apply text-blue-600 underline hover:text-blue-500;
+}
+
+.counter {
+  @apply flex text-center justify-center items-center w-10 h-10 bg-blue-500 text-white font-bold text-base md:text-[30px] md:w-[72px] md:h-[72px] left-0 top-0 z-10;
+  @media (min-width: 1250px) {
+    position: absolute;
+    transform: translateX(-102px);
+  }
+}
+
+.btn-cta {
+  @apply w-full text-center text-white text-[20px] md:text-[25px] rounded-[8px] border-b-2 md:border-b-[3px] border-b-[#7e005b] block no-underline bg-gradient-to-b from-[#b70284] to-[#d900a4] hover:text-white hover:to-[#b70284] hover:from-[#d900a4] font-bold px-4 py-[17px] md:py-[22.5px];
+}
