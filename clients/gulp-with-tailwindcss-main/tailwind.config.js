@@ -3,9 +3,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 const allPlugins = {
   typography: require("@tailwindcss/typography"),
-  forms: require("@tailwindcss/forms"),
-  lineClamp: require("@tailwindcss/line-clamp"),
-  containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
