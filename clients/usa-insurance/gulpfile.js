@@ -52,7 +52,6 @@ function devHTML() {
     .pipe(dest(options.paths.dist.base));
 }
 
-
 function devStyles() {
   const tailwindcss = require("tailwindcss");
   return src(`${options.paths.src.css}/**/*.scss`)
@@ -115,10 +114,13 @@ function prodHTML() {
 }
 
 function prodStyles() {
-  return src(`${options.paths.dist.css}/**/*`)
+  const tailwindcss = require("tailwindcss");
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on("error", sass.logError)) // Compile SASS
+    .pipe(postcss([tailwindcss(options.config.tailwindjs)])) // Process with PostCSS (Tailwind)
     .pipe(
       purgecss({
-        content: ["src/**/*.{html,js,php}"],
+        content: ["src/**/*.{html,js,php}"], // Remove unused CSS
         defaultExtractor: (content) => {
           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
           const innerMatches =
@@ -127,7 +129,7 @@ function prodStyles() {
         },
       })
     )
-    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(cleanCSS({ compatibility: "ie8" })) // Minify CSS
     .pipe(dest(options.paths.build.css));
 }
 
