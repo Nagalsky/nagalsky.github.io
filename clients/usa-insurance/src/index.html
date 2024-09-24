@@ -5,20 +5,16 @@
     <title>Home page</title>
   </head>
 
-  <body class="flex flex-col min-h-screen">
+  <body class="flex min-h-screen flex-col">
     @@include('./partials/header.html')
 
     <main class="grow">
       <section class="py-12 md:py-28 lg:py-36">
         <div
-          class="container grid gap-10 lg:gap-7 xl:grid-cols-2 xl:items-center"
+          class="container grid gap-10 lg:gap-7 xl:grid-cols-2 xl:items-center 2xl:grid-cols-[600px_1.2fr]"
         >
-          <div class="xl:order-2">
-            <img
-              src="img/hero.jpg"
-              alt="Hero"
-              class="w-full [@media(min-width:1800px)]:-translate-y-[19px] [@media(min-width:1800px)]:translate-x-[86px] [@media(min-width:1800px)]:scale-[1.25]"
-            />
+          <div class="xl:order-2 xl:place-self-end">
+            <img src="img/hero.jpg" alt="Hero" class="max-w-full" />
           </div>
           <div class="">
             <h1
@@ -31,7 +27,7 @@
             >
               <li>
                 <svg
-                  class="fill-current size-5 md:size-6"
+                  class="size-5 fill-current md:size-6"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -43,7 +39,7 @@
               </li>
               <li>
                 <svg
-                  class="fill-current size-5 md:size-6"
+                  class="size-5 fill-current md:size-6"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -56,19 +52,28 @@
             </ul>
 
             <form action="" class="mb-3.5 flex flex-col gap-3.5 md:flex-row">
-              <input
-                type="text"
-                name=""
-                class="min-h-[54px] grow rounded-md border border-gray-400 p-4 text-base placeholder:text-base placeholder:text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 md:text-xl md:placeholder:text-xl"
-                placeholder="Enter ZIP Code"
-              />
+              <div class="relative grow">
+                <input
+                  id="field-zip"
+                  type="text"
+                  name=""
+                  class="peer min-h-[54px] w-full rounded-md border border-gray-400 p-4 text-base font-bold placeholder:text-base placeholder:font-normal placeholder:text-gray-900 focus:border-blue-500 focus:bg-blue-400 focus:outline-none focus:ring-[3px] focus:ring-blue-500 md:min-h-[72px] md:text-xl md:placeholder:text-xl"
+                  placeholder="Enter ZIP Code"
+                />
+                <label
+                  for="field-zip"
+                  class="absolute left-4 top-1 text-xs font-medium text-gray-700 opacity-100 duration-100 ease-linear peer-placeholder-shown:opacity-0 md:text-sm"
+                  >ZIP Code:</label
+                >
+              </div>
+
               <button
                 type="submit"
                 class="flex shrink-0 items-center justify-between gap-4 rounded-md bg-blue-500 px-4 py-[14px] text-xl font-bold text-white transition hover:bg-blue-700 md:gap-9 md:px-7 md:py-[22px]"
               >
                 Get Quotes
                 <svg
-                  class="fill-current size-6"
+                  class="size-6 fill-current"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -83,7 +88,7 @@
               class="flex min-h-[32px] items-center justify-center gap-3 rounded-md border border-gray-400 bg-gray-300 text-xs text-gray-700 md:min-h-[42px] md:text-sm"
             >
               <svg
-                class="fill-current size-4"
+                class="size-4 fill-current"
                 viewBox="0 0 18 18"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -97,7 +102,298 @@
         </div>
       </section>
 
-      <section class="py-4 bg-blue-700 md:py-10">
+      <section class="py-12 md:py-28 lg:py-36">
+        <div
+          class="container grid gap-10 lg:gap-7 xl:grid-cols-2 xl:items-center 2xl:grid-cols-[600px_1.2fr]"
+        >
+          <div class="xl:order-2 xl:place-self-end">
+            <img
+              src="img/hero-4.jpg"
+              alt="Hero"
+              class="mx-auto max-w-full 2xl:w-[90%]"
+            />
+          </div>
+          <div class="">
+            <h1
+              class="mb-3.5 text-[32px] font-bold leading-tight text-blue-700 md:mb-9 md:leading-[1.05] lg:text-[42px] xl:text-[56px] 2xl:text-[64px]"
+            >
+              Compare & Get Cheaper Auto Insurance Quotes
+            </h1>
+            <ul
+              class="mb-9 flex list-none flex-col gap-1.5 text-base md:gap-3 md:text-xl xl:mb-12 [&>*]:flex [&>*]:items-center [&>*]:gap-3"
+            >
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0503 12.0498L21 16.9996L16.0503 21.9493L14.636 20.5351L17.172 17.9988L4 17.9996V15.9996L17.172 15.9988L14.636 13.464L16.0503 12.0498ZM7.94975 2.0498L9.36396 3.46402L6.828 5.9988L20 5.99955V7.99955L6.828 7.9988L9.36396 10.5351L7.94975 11.9493L3 6.99955L7.94975 2.0498Z"
+                  />
+                </svg>
+                Compare Rates In 2 Minutes
+              </li>
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.0049 22.0027C6.48204 22.0027 2.00488 17.5256 2.00488 12.0027C2.00488 6.4799 6.48204 2.00275 12.0049 2.00275C17.5277 2.00275 22.0049 6.4799 22.0049 12.0027C22.0049 17.5256 17.5277 22.0027 12.0049 22.0027ZM12.0049 20.0027C16.4232 20.0027 20.0049 16.421 20.0049 12.0027C20.0049 7.58447 16.4232 4.00275 12.0049 4.00275C7.5866 4.00275 4.00488 7.58447 4.00488 12.0027C4.00488 16.421 7.5866 20.0027 12.0049 20.0027ZM8.50488 14.0027H14.0049C14.281 14.0027 14.5049 13.7789 14.5049 13.5027C14.5049 13.2266 14.281 13.0027 14.0049 13.0027H10.0049C8.62417 13.0027 7.50488 11.8835 7.50488 10.5027C7.50488 9.12203 8.62417 8.00275 10.0049 8.00275H11.0049V6.00275H13.0049V8.00275H15.5049V10.0027H10.0049C9.72874 10.0027 9.50488 10.2266 9.50488 10.5027C9.50488 10.7789 9.72874 11.0027 10.0049 11.0027H14.0049C15.3856 11.0027 16.5049 12.122 16.5049 13.5027C16.5049 14.8835 15.3856 16.0027 14.0049 16.0027H13.0049V18.0027H11.0049V16.0027H8.50488V14.0027Z"
+                  />
+                </svg>
+                Save Money
+              </li>
+            </ul>
+
+            <form action="" class="mb-3.5 flex flex-col gap-3.5 md:flex-row">
+              <div class="relative grow">
+                <input
+                  id="field-zip-2"
+                  type="text"
+                  name=""
+                  class="peer min-h-[54px] w-full rounded-md border border-gray-400 p-4 text-base font-bold placeholder:text-base placeholder:font-normal placeholder:text-gray-900 focus:border-blue-500 focus:bg-blue-400 focus:outline-none focus:ring-[3px] focus:ring-blue-500 md:min-h-[72px] md:text-xl md:placeholder:text-xl"
+                  placeholder="Enter ZIP Code"
+                />
+                <label
+                  for="field-zip-2"
+                  class="absolute left-4 top-1 text-xs font-medium text-gray-700 opacity-100 duration-100 ease-linear peer-placeholder-shown:opacity-0 md:text-sm"
+                  >ZIP Code:</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="flex shrink-0 items-center justify-between gap-4 rounded-md bg-blue-500 px-4 py-[14px] text-xl font-bold text-white transition hover:bg-blue-700 md:gap-9 md:px-7 md:py-[22px]"
+              >
+                Get Quotes
+                <svg
+                  class="size-6 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 11V8L16 12L12 16V13H8V11H12ZM12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20Z"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <div
+              class="flex min-h-[32px] items-center justify-center gap-3 rounded-md border border-gray-400 bg-gray-300 text-xs text-gray-700 md:min-h-[42px] md:text-sm"
+            >
+              <svg
+                class="size-4 fill-current"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 7.5V15H14.25V7.5H4.5ZM13.5 6H15C15.4142 6 15.75 6.33579 15.75 6.75V15.75C15.75 16.1642 15.4142 16.5 15 16.5H3C2.58579 16.5 2.25 16.1642 2.25 15.75V6.75C2.25 6.33579 2.58579 6 3 6H4.5V5.25C4.5 2.76472 6.51472 0.75 9 0.75C11.4853 0.75 13.5 2.76472 13.5 5.25V6ZM12 6V5.25C12 3.59314 10.6568 2.25 9 2.25C7.34314 2.25 6 3.59314 6 5.25V6H12ZM5.25 8.25H6.75V9.75H5.25V8.25ZM5.25 10.5H6.75V12H5.25V10.5ZM5.25 12.75H6.75V14.25H5.25V12.75Z"
+                />
+              </svg>
+              Secure Form. No Spam
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 md:py-28 lg:py-36">
+        <div
+          class="container grid gap-10 lg:gap-7 xl:grid-cols-2 xl:items-center 2xl:grid-cols-[600px_1.2fr]"
+        >
+          <div class="xl:order-2 xl:place-self-end">
+            <img
+              src="img/hero-6.jpg"
+              alt="Hero"
+              class="mx-auto max-w-full 2xl:w-[80%]"
+            />
+          </div>
+          <div class="">
+            <h1
+              class="mb-3.5 text-[32px] font-bold leading-tight text-blue-700 md:mb-9 md:leading-[1.05] lg:text-[42px] xl:text-[56px] 2xl:text-[64px]"
+            >
+              Compare & Get Cheaper Auto Insurance Quotes
+            </h1>
+            <ul
+              class="mb-9 flex list-none flex-col gap-1.5 text-base md:gap-3 md:text-xl xl:mb-12 [&>*]:flex [&>*]:items-center [&>*]:gap-3"
+            >
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0503 12.0498L21 16.9996L16.0503 21.9493L14.636 20.5351L17.172 17.9988L4 17.9996V15.9996L17.172 15.9988L14.636 13.464L16.0503 12.0498ZM7.94975 2.0498L9.36396 3.46402L6.828 5.9988L20 5.99955V7.99955L6.828 7.9988L9.36396 10.5351L7.94975 11.9493L3 6.99955L7.94975 2.0498Z"
+                  />
+                </svg>
+                Compare Rates In 2 Minutes
+              </li>
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.0049 22.0027C6.48204 22.0027 2.00488 17.5256 2.00488 12.0027C2.00488 6.4799 6.48204 2.00275 12.0049 2.00275C17.5277 2.00275 22.0049 6.4799 22.0049 12.0027C22.0049 17.5256 17.5277 22.0027 12.0049 22.0027ZM12.0049 20.0027C16.4232 20.0027 20.0049 16.421 20.0049 12.0027C20.0049 7.58447 16.4232 4.00275 12.0049 4.00275C7.5866 4.00275 4.00488 7.58447 4.00488 12.0027C4.00488 16.421 7.5866 20.0027 12.0049 20.0027ZM8.50488 14.0027H14.0049C14.281 14.0027 14.5049 13.7789 14.5049 13.5027C14.5049 13.2266 14.281 13.0027 14.0049 13.0027H10.0049C8.62417 13.0027 7.50488 11.8835 7.50488 10.5027C7.50488 9.12203 8.62417 8.00275 10.0049 8.00275H11.0049V6.00275H13.0049V8.00275H15.5049V10.0027H10.0049C9.72874 10.0027 9.50488 10.2266 9.50488 10.5027C9.50488 10.7789 9.72874 11.0027 10.0049 11.0027H14.0049C15.3856 11.0027 16.5049 12.122 16.5049 13.5027C16.5049 14.8835 15.3856 16.0027 14.0049 16.0027H13.0049V18.0027H11.0049V16.0027H8.50488V14.0027Z"
+                  />
+                </svg>
+                Save Money
+              </li>
+            </ul>
+
+            <form action="" class="mb-3.5 flex flex-col gap-3.5 md:flex-row">
+              <div class="relative grow">
+                <input
+                  id="field-zip-3"
+                  type="text"
+                  name=""
+                  class="peer min-h-[54px] w-full rounded-md border border-gray-400 p-4 text-base font-bold placeholder:text-base placeholder:font-normal placeholder:text-gray-900 focus:border-blue-500 focus:bg-blue-400 focus:outline-none focus:ring-[3px] focus:ring-blue-500 md:min-h-[72px] md:text-xl md:placeholder:text-xl"
+                  placeholder="Enter ZIP Code"
+                />
+                <label
+                  for="field-zip-3"
+                  class="absolute left-4 top-1 text-xs font-medium text-gray-700 opacity-100 duration-100 ease-linear peer-placeholder-shown:opacity-0 md:text-sm"
+                  >ZIP Code:</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="flex shrink-0 items-center justify-between gap-4 rounded-md bg-blue-500 px-4 py-[14px] text-xl font-bold text-white transition hover:bg-blue-700 md:gap-9 md:px-7 md:py-[22px]"
+              >
+                Get Quotes
+                <svg
+                  class="size-6 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 11V8L16 12L12 16V13H8V11H12ZM12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20Z"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <div
+              class="flex min-h-[32px] items-center justify-center gap-3 rounded-md border border-gray-400 bg-gray-300 text-xs text-gray-700 md:min-h-[42px] md:text-sm"
+            >
+              <svg
+                class="size-4 fill-current"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 7.5V15H14.25V7.5H4.5ZM13.5 6H15C15.4142 6 15.75 6.33579 15.75 6.75V15.75C15.75 16.1642 15.4142 16.5 15 16.5H3C2.58579 16.5 2.25 16.1642 2.25 15.75V6.75C2.25 6.33579 2.58579 6 3 6H4.5V5.25C4.5 2.76472 6.51472 0.75 9 0.75C11.4853 0.75 13.5 2.76472 13.5 5.25V6ZM12 6V5.25C12 3.59314 10.6568 2.25 9 2.25C7.34314 2.25 6 3.59314 6 5.25V6H12ZM5.25 8.25H6.75V9.75H5.25V8.25ZM5.25 10.5H6.75V12H5.25V10.5ZM5.25 12.75H6.75V14.25H5.25V12.75Z"
+                />
+              </svg>
+              Secure Form. No Spam
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 md:py-28 lg:py-36">
+        <div
+          class="container grid gap-10 lg:gap-7 xl:grid-cols-2 xl:items-center 2xl:grid-cols-[600px_1.2fr]"
+        >
+          <div class="xl:order-2 xl:place-self-end">
+            <img
+              src="img/hero-7.jpg"
+              alt="Hero"
+              class="mx-auto max-w-full 2xl:w-[80%]"
+            />
+          </div>
+          <div class="">
+            <h1
+              class="mb-3.5 text-[32px] font-bold leading-tight text-blue-700 md:mb-9 md:leading-[1.05] lg:text-[42px] xl:text-[56px] 2xl:text-[64px]"
+            >
+              Compare & Get Cheaper Auto Insurance Quotes
+            </h1>
+            <ul
+              class="mb-9 flex list-none flex-col gap-1.5 text-base md:gap-3 md:text-xl xl:mb-12 [&>*]:flex [&>*]:items-center [&>*]:gap-3"
+            >
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.0503 12.0498L21 16.9996L16.0503 21.9493L14.636 20.5351L17.172 17.9988L4 17.9996V15.9996L17.172 15.9988L14.636 13.464L16.0503 12.0498ZM7.94975 2.0498L9.36396 3.46402L6.828 5.9988L20 5.99955V7.99955L6.828 7.9988L9.36396 10.5351L7.94975 11.9493L3 6.99955L7.94975 2.0498Z"
+                  />
+                </svg>
+                Compare Rates In 2 Minutes
+              </li>
+              <li>
+                <svg
+                  class="size-5 fill-current md:size-6"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.0049 22.0027C6.48204 22.0027 2.00488 17.5256 2.00488 12.0027C2.00488 6.4799 6.48204 2.00275 12.0049 2.00275C17.5277 2.00275 22.0049 6.4799 22.0049 12.0027C22.0049 17.5256 17.5277 22.0027 12.0049 22.0027ZM12.0049 20.0027C16.4232 20.0027 20.0049 16.421 20.0049 12.0027C20.0049 7.58447 16.4232 4.00275 12.0049 4.00275C7.5866 4.00275 4.00488 7.58447 4.00488 12.0027C4.00488 16.421 7.5866 20.0027 12.0049 20.0027ZM8.50488 14.0027H14.0049C14.281 14.0027 14.5049 13.7789 14.5049 13.5027C14.5049 13.2266 14.281 13.0027 14.0049 13.0027H10.0049C8.62417 13.0027 7.50488 11.8835 7.50488 10.5027C7.50488 9.12203 8.62417 8.00275 10.0049 8.00275H11.0049V6.00275H13.0049V8.00275H15.5049V10.0027H10.0049C9.72874 10.0027 9.50488 10.2266 9.50488 10.5027C9.50488 10.7789 9.72874 11.0027 10.0049 11.0027H14.0049C15.3856 11.0027 16.5049 12.122 16.5049 13.5027C16.5049 14.8835 15.3856 16.0027 14.0049 16.0027H13.0049V18.0027H11.0049V16.0027H8.50488V14.0027Z"
+                  />
+                </svg>
+                Save Money
+              </li>
+            </ul>
+
+            <form action="" class="mb-3.5 flex flex-col gap-3.5 md:flex-row">
+              <div class="relative grow">
+                <input
+                  id="field-zip-4"
+                  type="text"
+                  name=""
+                  class="peer min-h-[54px] w-full rounded-md border border-gray-400 p-4 text-base font-bold placeholder:text-base placeholder:font-normal placeholder:text-gray-900 focus:border-blue-500 focus:bg-blue-400 focus:outline-none focus:ring-[3px] focus:ring-blue-500 md:min-h-[72px] md:text-xl md:placeholder:text-xl"
+                  placeholder="Enter ZIP Code"
+                />
+                <label
+                  for="field-zip-4"
+                  class="absolute left-4 top-1 text-xs font-medium text-gray-700 opacity-100 duration-100 ease-linear peer-placeholder-shown:opacity-0 md:text-sm"
+                  >ZIP Code:</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="flex shrink-0 items-center justify-between gap-4 rounded-md bg-blue-500 px-4 py-[14px] text-xl font-bold text-white transition hover:bg-blue-700 md:gap-9 md:px-7 md:py-[22px]"
+              >
+                Get Quotes
+                <svg
+                  class="size-6 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 11V8L16 12L12 16V13H8V11H12ZM12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20Z"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <div
+              class="flex min-h-[32px] items-center justify-center gap-3 rounded-md border border-gray-400 bg-gray-300 text-xs text-gray-700 md:min-h-[42px] md:text-sm"
+            >
+              <svg
+                class="size-4 fill-current"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 7.5V15H14.25V7.5H4.5ZM13.5 6H15C15.4142 6 15.75 6.33579 15.75 6.75V15.75C15.75 16.1642 15.4142 16.5 15 16.5H3C2.58579 16.5 2.25 16.1642 2.25 15.75V6.75C2.25 6.33579 2.58579 6 3 6H4.5V5.25C4.5 2.76472 6.51472 0.75 9 0.75C11.4853 0.75 13.5 2.76472 13.5 5.25V6ZM12 6V5.25C12 3.59314 10.6568 2.25 9 2.25C7.34314 2.25 6 3.59314 6 5.25V6H12ZM5.25 8.25H6.75V9.75H5.25V8.25ZM5.25 10.5H6.75V12H5.25V10.5ZM5.25 12.75H6.75V14.25H5.25V12.75Z"
+                />
+              </svg>
+              Secure Form. No Spam
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-blue-700 py-4 md:py-10">
         <div
           class="container flex flex-wrap items-center justify-center gap-x-5 gap-y-6 xl:gap-x-16 [&>*]:max-w-[80px] [&>*]:md:max-w-[135px]"
         >
@@ -111,7 +407,7 @@
         </div>
       </section>
 
-      <section class="py-16 bg-gray-300 md:py-24">
+      <section class="bg-gray-300 py-16 md:py-24">
         <div class="container">
           <h2 class="mb-4 text-center text-2xl font-bold md:text-[32px]">
             Find Your Best Rate with USAInsurance.org
@@ -247,14 +543,14 @@
             Frequently Asked Questions
           </h2>
           <p
-            class="mb-8 text-base text-center text-gray-800 md:mb-12 md:text-xl"
+            class="mb-8 text-center text-base text-gray-800 md:mb-12 md:text-xl"
           >
             Comprehensive Guide to Your Inquiries
           </p>
 
           <div class="relative mx-auto mb-8 max-w-[550px] md:mb-20">
             <svg
-              class="absolute -translate-y-1/2 left-4 top-1/2 size-6 fill-gray-900"
+              class="absolute left-4 top-1/2 size-6 -translate-y-1/2 fill-gray-900"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -276,7 +572,7 @@
           >
             <div class="first:border-t first:border-t-gray-500">
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 How do I get an auto insurance quote on USAInsurance.org?
                 <svg
@@ -287,7 +583,7 @@
                   <path d="M5 11V13H19V11H5Z" />
                 </svg>
               </button>
-              <div class="pt-4 space-y-3">
+              <div class="space-y-3 pt-4">
                 <p>
                   Simply enter your zip code and follow the prompts to compare
                   quotes from top insurance providers instantly.
@@ -297,7 +593,7 @@
 
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -318,7 +614,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -339,7 +635,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -360,7 +656,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -381,7 +677,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -402,7 +698,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -423,7 +719,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -444,7 +740,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -465,7 +761,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -486,7 +782,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
@@ -507,7 +803,7 @@
             </div>
             <div>
               <button
-                class="flex items-center justify-between w-full gap-4 font-bold text-left text-blue-900 transition hover:text-blue-500"
+                class="flex w-full items-center justify-between gap-4 text-left font-bold text-blue-900 transition hover:text-blue-500"
               >
                 Will checking quotes affect my credit score?
                 <svg
