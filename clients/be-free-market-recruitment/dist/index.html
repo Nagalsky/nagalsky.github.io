@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Free market recruitment</title>
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@basecoat/ui@0.1.0/dist/basecoat.css" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-By6rzezS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-mXUIjP_a.css">
+  </head>
+  <body>
+    <header class="bg-white shadow-sm">
+    	<div x-data="{ 
+        isDrawerOpen: false,
+        toggleDrawer() {
+          this.isDrawerOpen = !this.isDrawerOpen;
+          document.body.style.overflow = this.isDrawerOpen ? 'hidden' : '';
+        }
+      }" class="relative flex justify-between items-center p-4">
+    		<button class="btn" @click="toggleDrawer">Open Drawer</button>
+    		<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    		  <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    		    <circle cx="12" cy="12" r="5"></circle>
+    		    <line x1="12" y1="1" x2="12" y2="3"></line>
+    		    <line x1="12" y1="21" x2="12" y2="23"></line>
+    		    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    		    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    		    <line x1="1" y1="12" x2="3" y2="12"></line>
+    		    <line x1="21" y1="12" x2="23" y2="12"></line>
+    		    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    		    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    		  </svg>
+    		  <svg class="dark:hidden block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    		    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    		  </svg>
+    		</button> 		
+    		<!-- Overlay -->
+    		<div 
+    			x-show="isDrawerOpen" 
+    			x-transition:enter="transition ease-out duration-300"
+    			x-transition:enter-start="opacity-0"
+    			x-transition:enter-end="opacity-100"
+    			x-transition:leave="transition ease-in duration-200"
+    			x-transition:leave-start="opacity-100"
+    			x-transition:leave-end="opacity-0"
+    			class="fixed inset-0 bg-foreground/50 z-40"
+    			@click="toggleDrawer"
+    		></div>
+    
+    		<!-- Drawer -->
+    		<div 
+    			x-show="isDrawerOpen"
+    			x-transition:enter="transition ease-out duration-300"
+    			x-transition:enter-start="-translate-x-full"
+    			x-transition:enter-end="translate-x-0"
+    			x-transition:leave="transition ease-in duration-200"
+    			x-transition:leave-start="translate-x-0"
+    			x-transition:leave-end="-translate-x-full"
+    			class="fixed left-0 top-0 h-dvh w-[90%] gap-0 sm:max-w-[564px] shadow-lg z-50 p-4 bg-background"
+    		>
+    			<div class="flex justify-between items-center mb-4">
+    				<h3 class="text-xl font-bold">Drawer Title</h3>
+    				<button @click="toggleDrawer" class="btn btn-ghost">
+    					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    					</svg>
+    				</button>
+    			</div>
+    			<div class="space-y-4">
+    				<p>This is the drawer content. You can put any content here.</p>
+    				<button class="btn btn-primary w-full">Action Button</button>
+    			</div>
+    		</div>
+    	</div>
+    </header>    <main class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold underline font-secondary bg-green-500">Hello world!</h1>
+      <p class='font-bold'>A space where you can share your work in a way that honors your process, passion and life story.</p>
+
+      <div class="flex gap-4 my-4">
+        <button class="btn">Default Button</button>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-destructive">Destructive Button</button>
+        <button class="btn btn-outline">Outline Button</button>
+        <button class="btn btn-ghost">Ghost Button</button>
+      </div>
+
+
+      
+
+      <!-- First Dialog Component -->
+      <div 
+        x-data="{ 
+          isDialogOpen: false,
+          toggleDialog() {
+            this.isDialogOpen = !this.isDialogOpen;
+            document.body.style.overflow = this.isDialogOpen ? 'hidden' : '';
+          }
+        }" 
+        class="relative"
+      >
+        <!-- Trigger Buttons -->
+        <div class="flex gap-4 my-4">
+          <button class="btn" @click="toggleDialog">Open Dialog 1</button>
+          <button class="btn btn-primary" @click="toggleDialog">Open Dialog 2</button>
+          <button class="btn btn-secondary" @click="toggleDialog">Open Dialog 3</button>
+        </div>
+
+        <!-- Overlay -->
+        <div 
+          x-show="isDialogOpen" 
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 bg-secondary/30 backdrop-blur-sm z-40"
+          @click="toggleDialog"
+        ></div>
+
+        <!-- Dialog -->
+        <div 
+          x-show="isDialogOpen"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-95"
+          class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-lg shadow-xl z-50 p-6"
+        >
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">First Dialog</h3>
+            <button @click="toggleDialog" class="btn btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="space-y-4">
+            <p>This is the first dialog content. You can put any content here.</p>
+            <div class="flex justify-end gap-2">
+              <button @click="toggleDialog" class="btn btn-ghost">Cancel</button>
+              <button class="btn btn-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Dialog Component -->
+      <div 
+        x-data="{ 
+          isDialogOpen: false,
+          toggleDialog() {
+            this.isDialogOpen = !this.isDialogOpen;
+            document.body.style.overflow = this.isDialogOpen ? 'hidden' : '';
+          }
+        }" 
+        class="relative"
+      >
+        <!-- Trigger Buttons -->
+        <div class="flex gap-4 my-4">
+          <button class="btn btn-destructive" @click="toggleDialog">Delete Item</button>
+          <button class="btn btn-outline" @click="toggleDialog">Edit Settings</button>
+        </div>
+
+        <!-- Overlay -->
+        <div 
+          x-show="isDialogOpen" 
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 bg-black bg-opacity-50 z-40"
+          @click="toggleDialog"
+        ></div>
+
+        <!-- Dialog -->
+        <div 
+          x-show="isDialogOpen"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-95"
+          class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-lg shadow-xl z-50 p-6"
+        >
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Second Dialog</h3>
+            <button @click="toggleDialog" class="btn btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="space-y-4">
+            <p>This is the second dialog with different content and styling.</p>
+            <div class="flex flex-col gap-2">
+              <input type="text" class="input" placeholder="Enter some text">
+              <select class="select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+            <div class="flex justify-end gap-2">
+              <button @click="toggleDialog" class="btn btn-ghost">Cancel</button>
+              <button class="btn btn-destructive">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Initialize Alpine.js -->
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('dialog', () => ({
+          dialogOpen: false,
+          open() {
+            this.dialogOpen = true;
+          },
+          close() {
+            this.dialogOpen = false;
+          }
+        }));
+      });
+    </script>
+  </body>
+</html>

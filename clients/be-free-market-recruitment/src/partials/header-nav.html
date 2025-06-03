@@ -1,0 +1,64 @@
+<nav class="flex items-center gap-2.5 max-md:hidden">
+  <a
+    href="#"
+    @click.prevent="activeSection = 'home'; window.scrollTo({top: 0, behavior: 'smooth'})"
+    :class="{'bg-foreground text-background': activeSection === 'home', 'bg-secondary hover:bg-foreground hover:text-background': activeSection !== 'home'}"
+    class="py-3 px-[17px] transition-all rounded-full"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="stroke-1"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-house-icon lucide-house"
+    >
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+      <path
+        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+      />
+    </svg>
+  </a>
+  <a
+    href="#our-vision"
+    @click.prevent="activeSection = 'our-vision'; const element = document.getElementById('our-vision'); const headerOffset = 112; const elementPosition = element.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - headerOffset; window.scrollTo({top: offsetPosition, behavior: 'smooth'})"
+    :class="{'bg-foreground text-background': activeSection === 'our-vision', 'bg-secondary hover:bg-foreground hover:text-background': activeSection !== 'our-vision'}"
+    class="py-3 px-8 transition-all rounded-full font-medium flex items-center gap-3 group"
+  >
+    Our vision
+  </a>
+  <a
+    href="#how-it-works"
+    @click.prevent="activeSection = 'how-it-works'; const element = document.getElementById('how-it-works'); const headerOffset = 112; const elementPosition = element.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - headerOffset; window.scrollTo({top: offsetPosition, behavior: 'smooth'})"
+    :class="{'bg-foreground text-background': activeSection === 'how-it-works', 'bg-secondary hover:bg-foreground hover:text-background': activeSection !== 'how-it-works'}"
+    class="py-3 px-8 transition-all rounded-full font-medium flex items-center gap-3 group max-[900px]:hidden"
+  >
+    How it works
+  </a>
+  <a
+    href="#promo-box"
+    @click.prevent="activeSection = 'promo-box'; const element = document.getElementById('promo-box'); const headerOffset = 112; const elementPosition = element.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - headerOffset; window.scrollTo({top: offsetPosition, behavior: 'smooth'})"
+    :class="{'bg-foreground text-background': activeSection === 'promo-box', 'bg-secondary hover:bg-foreground hover:text-background': activeSection !== 'promo-box'}"
+    class="py-3 px-8 transition-all rounded-full font-medium flex items-center gap-3 group max-[1290px]:hidden"
+  >
+    <img
+      src="assets/images/icon-promo-box.webp"
+      alt="promo-box"
+      class="h-auto w-5 dark:invert group-hover:invert dark:group-hover:invert-0 transition-all"
+    />
+    Free promo box
+  </a>
+  <a
+    href="#contact-us"
+    @click.prevent="activeSection = 'contact-us'; const element = document.getElementById('contact-us'); const headerOffset = 112; const elementPosition = element.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - headerOffset; window.scrollTo({top: offsetPosition, behavior: 'smooth'})"
+    :class="{'bg-foreground text-background': activeSection === 'contact-us', 'bg-secondary hover:bg-foreground hover:text-background': activeSection !== 'contact-us'}"
+    class="py-3 px-8 transition-all rounded-full font-medium flex items-center gap-3 group max-[1070px]:hidden"
+  >
+    Contact us
+  </a>
+</nav>

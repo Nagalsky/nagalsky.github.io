@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Free market recruitment</title>
+    <script type="module" src="./main.ts"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@basecoat/ui@0.1.0/dist/basecoat.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    x-data="{ 
+      activeDialogs: new Set(),
+      toggleDialog(dialogId) {
+        if (this.activeDialogs.has(dialogId)) {
+          this.activeDialogs.delete(dialogId);
+        } else {
+          this.activeDialogs.add(dialogId);
+        }
+        document.body.style.overflow = this.activeDialogs.size > 0 ? 'hidden' : '';
+      },
+      isDialogOpen(dialogId) {
+        return this.activeDialogs.has(dialogId);
+      }
+    }"
+  >
+    {{> header }}
+    <main class="container">
+      <h1 class="text-3xl font-bold underline font-secondary bg-green-500">Hello world!</h1>
+      {{> theme-toggle }}
+      <p class="font-bold">
+        A space where you can share your work in a way that honors your process, passion and life
+        story.
+      </p>
+
+      <section id="our-vision">
+        <div class="container">
+          <h1>OUR VISION</h1>
+        </div>
+      </section>
+      <section id="how-it-works" class="py-96">
+        <div class="container">
+          <h1>HOW IT WORKS</h1>
+        </div>
+      </section>
+    </main>
+
+    {{> dialog-get-me-stated }}
+
+    <!-- Initialize Alpine.js -->
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('dialog', () => ({
+          dialogOpen: false,
+          open() {
+            this.dialogOpen = true;
+          },
+          close() {
+            this.dialogOpen = false;
+          },
+        }));
+      });
+    </script>
+  </body>
+</html>

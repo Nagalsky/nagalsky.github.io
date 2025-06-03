@@ -1,0 +1,64 @@
+<header
+  class="bg-background py-8 sticky top-0 z-50"
+  x-data="{ activeSection: 'home' }"
+  x-init="
+    window.addEventListener('scroll', () => {
+      const headerHeight = 112;
+      const scrollPosition = window.scrollY + headerHeight;
+      
+      if (scrollPosition < 200) {
+        activeSection = 'home';
+        return;
+      }
+      
+      const sections = ['our-vision', 'how-it-works', 'promo-box', 'contact-us'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+          
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+            activeSection = section;
+            break;
+          }
+        }
+      }
+    });
+  "
+>
+  <div class="container">
+    <div class="flex items-center">
+      {{> header-menu }}
+      <a href="#" class="mx-2 sm:ml-8 sm:mr-10 shrink-0">
+        <img
+          src="assets/images/logo.png"
+          alt="logo"
+          class="h-auto w-[90px] sm:w-[120px] dark:invert"
+        />
+      </a>
+      {{> header-nav }}
+
+      <button class="btn ml-auto btn-cta" @click="toggleDialog('dialog-get-me-stated')">
+        <svg
+          class="stroke-0 fill-secondary/50 max-sm:hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+          />
+        </svg>
+        Get <span class="max-sm:hidden">me</span> started
+      </button>
+    </div>
+  </div>
+</header>
