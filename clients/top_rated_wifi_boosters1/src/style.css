@@ -51,11 +51,19 @@
 }
 
 @theme inline {
-	--color-brand-500: var(--brand-500);
+	--color-green-500: var(--green-500);
+	--color-gray-50: var(--gray-50);
+	--color-gray-100: var(--gray-100);
+	--color-slate-600: var(--slate-600);
+	--color-slate-800: var(--slate-800);
 }
 
 :root {
-	--brand-500: #4f46e5;
+	--green-500: #00c24e;
+	--gray-50: #fafafd;
+	--gray-100: #e5e5e5;
+	--slate-600: #2f455c;
+	--slate-800: #1c2733;
 	--font-primary: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -68,8 +76,12 @@
 		font-family: var(--font-primary);
 		@apply antialiased;
 	}
+
+	h1 {
+		@apply text-2xl md:text-3xl lg:text-[40px] font-bold leading-snug;
+	}
 }
 
 @utility container {
-	@apply mx-auto w-full px-4;
+	@apply mx-auto w-full px-4 2xl:max-w-[1142px];
 }
