@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-cta {
+  @apply text-center text-white bg-orange-500 text-[16px] md:text-[24px] rounded-[20px] inline-flex justify-center items-center gap-3 no-underline hover:text-white hover:bg-orange-600 active:bg-orange-600 focus:bg-orange-600 font-semibold px-8 min-h-[52px] md:min-h-[70px] transition -tracking-[0.84px];
+}
+
+.title-l-1 {
+  @apply text-[24px] md:text-[32px] lg:text-[48px];
+}
+
+.title-l-2 {
+  @apply text-[20px] md:text-[26px] lg:text-[32px] -tracking-[0.53px] md:-tracking-[1.12px];
+}
+
+.title-l-4 {
+  @apply text-[14px] md:text-[26px] lg:text-[24px] -tracking-[0.49px] md:-tracking-[0.84px];
+}
+
+.title-l-5 {
+  @apply text-[16px] md:text-[24px] lg:text-[24px];
+}
+
+.faq-toggle {
+  @apply gap-4 after:w-[40px] after:h-[40px] after:md:w-[56px] after:md:h-[56px] after:bg-cover after:bg-center after:bg-[url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIvPg0KPHBhdGggZD0iTTE3IDkuNUwxMiAxNC41TDcgOS41IiBzdHJva2U9IiM4Mjc3NmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+)];
+}
+
+.faq-item.active .faq-toggle {
+  @apply after:bg-[url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgLz4NCjxwYXRoIGQ9Ik03IDE0LjVMMTIgOS41TDE3IDE0LjUiIHN0cm9rZT0iIzgyNzc2ZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQo8L3N2Zz4=)];
+}
+.faq-item.active .faq-content {
+  @apply block;
+}
+.faq-item .faq-content {
+  @apply hidden;
+}
