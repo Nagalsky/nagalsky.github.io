@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'nato-sans';
+	src:
+		url('./assets/fonts/nato-sans/NotoSans-Bold.woff2') format('woff2'),
+		url('./assets/fonts/nato-sans/NotoSans-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nato-sans';
+	src:
+		url('./assets/fonts/nato-sans/NotoSans-Medium.woff2') format('woff2'),
+		url('./assets/fonts/nato-sans/NotoSans-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nato-sans';
+	src:
+		url('./assets/fonts/nato-sans/NotoSans-SemiBold.woff2') format('woff2'),
+		url('./assets/fonts/nato-sans/NotoSans-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nato-sans';
+	src:
+		url('./assets/fonts/nato-sans/NotoSans-Regular.woff2') format('woff2'),
+		url('./assets/fonts/nato-sans/NotoSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'nato-sans';
+	src:
+		url('./assets/fonts/nato-sans/NotoSans-Light.woff2') format('woff2'),
+		url('./assets/fonts/nato-sans/NotoSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-green-500: var(--green-500);
+	--color-gray-50: var(--gray-50);
+	--color-gray-100: var(--gray-100);
+	--color-gray-300: var(--gray-300);
+	--color-slate-600: var(--slate-600);
+	--color-slate-800: var(--slate-800);
+	--color-red-500: var(--red-500);
+	--color-orange-500: var(--orange-500);
+	--color-brand: var(--brand);
+}
+
+:root {
+	--green-500: #00c24e;
+	--gray-50: #fafafd;
+	--gray-100: #aeaeae;
+	--gray-300: #deeaf4;
+	--slate-600: #2a2b2e;
+	--slate-800: #1c2733;
+	--red-500: #bc3908;
+	--orange-500: #f98948;
+	--brand: #85cb33;
+	--font-primary: 'nato-sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-primary);
+		@apply antialiased;
+	}
+
+	h1 {
+		@apply text-2xl md:text-3xl lg:text-[40px] font-bold leading-snug;
+	}
+
+	h2 {
+		@apply text-2xl md:text-3xl font-bold leading-snug;
+	}
+
+	.btn {
+		@apply inline-flex px-6 py-4 rounded-lg text-sm font-semibold items-center justify-center gap-x-2.5;
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1024px] 2xl:max-w-[1142px];
+}
