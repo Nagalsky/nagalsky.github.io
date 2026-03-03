@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {{> head}}
+  <title>{{siteName}} - Home</title>
+</head>
+
+<body>
+  {{> header}}
+
+  <main>
+    <section class="pb-16 md:py-32 relative">
+      <img src="./assets/images/hero-shadow.webp" alt="Hero Background"
+        class="absolute top-0 right-0 w-1/2 max-md:hidden">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-10 lg:items-center">
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-2.5">
+                <div class="flex shrink-0 gap-0.5">
+                  <img src="./assets/images/star-gold.svg" alt="Star" class="size-5">
+                  <img src="./assets/images/star-gold.svg" alt="Star" class="size-5">
+                  <img src="./assets/images/star-gold.svg" alt="Star" class="size-5">
+                  <img src="./assets/images/star-gold.svg" alt="Star" class="size-5">
+                  <img src="./assets/images/star-gold.svg" alt="Star" class="size-5">
+                </div>
+                <p class="md:text-base"><strong>4.9 / 5</strong> Based on <strong>287</strong>
+                  Reviews</p>
+              </div>
+              <h1 class="text-[32px] md:text-4xl font-extrabold mb-6">Unlock your math potential with a <span
+                  class="text-brand relative">personalized <img src="./assets/images/line.svg" alt=""
+                    class="absolute -bottom-2 left-0 w-full"></span> AI
+                Tutor</h1>
+              <ul class="space-y-2.5 list-inside text-gray-500 text-lg md:text-[22px]">
+                <li class="flex items-center gap-2.5">
+                  <img src="./assets/images/icon-bullet.svg" alt="Bullet" class="size-6">
+                  <p class="font-secondary">Struggling with algebra?</p>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <img src="./assets/images/icon-bullet.svg" alt="Bullet" class="size-6">
+                  <p class="font-secondary">Preparing for exams?</p>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <img src="./assets/images/icon-bullet.svg" alt="Bullet" class="size-6">
+                  <p class="font-secondary">Or just want to ace your math class?</p>
+                </li>
+              </ul>
+              <p class="font-bold text-xl md:text-2xl">Discover the easiest way to <span class="text-brand">master
+                  math</span> at your own pace.</p>
+            </div>
+            <a href="#" class="btn btn-primary">Start the quiz</a>
+          </div>
+          <div>
+            <img src="./assets/images/hero-illustration.webp" alt="Hero Illustration" class="w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

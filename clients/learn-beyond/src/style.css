@@ -1,0 +1,200 @@
+@import 'tailwindcss';
+
+:root {
+	--brand: #ff5410;
+	--brand-accent: #ff6b35;
+	--brand-magenta: #d43800;
+	--brand-purple: #b83000;
+	--brand-dark: #1a1a1a;
+	--brand-light: #fff3ee;
+	--brand-50: #fff8f5;
+
+	--gray-50: #fafafa;
+	--gray-100: #9ca3af;
+	--gray-200: #e5e5e5;
+	--gray-300: #e0e0e0;
+	--gray-500: #685e57;
+	--slate-600: #555555;
+	--slate-800: #1a1a1a;
+
+	--font-primary: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-secondary: 'Gochi Hand', ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility font-secondary {
+	font-family: var(--font-secondary);
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src:
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Bold.woff2')
+			format('woff2'),
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Bold.woff')
+			format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src:
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-ExtraBold.woff2')
+			format('woff2'),
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-ExtraBold.woff')
+			format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src:
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.woff2')
+			format('woff2'),
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.woff')
+			format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans';
+	src:
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.woff2')
+			format('woff2'),
+		url('./assets/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.woff')
+			format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gochi Hand';
+	src:
+		url('./assets/fonts/gochi_hand/GochiHand-Regular.woff2') format('woff2'),
+		url('./assets/fonts/gochi_hand/GochiHand-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-gray-50: var(--gray-50);
+	--color-gray-100: var(--gray-100);
+	--color-gray-200: var(--gray-200);
+	--color-gray-300: var(--gray-300);
+	--color-gray-500: var(--gray-500);
+	--color-slate-50: var(--slate-50);
+	--color-slate-100: var(--slate-100);
+	--color-slate-500: var(--slate-500);
+	--color-slate-600: var(--slate-600);
+	--color-slate-800: var(--slate-800);
+	--color-brand: var(--brand);
+	--color-brand-accent: var(--brand-accent);
+	--color-brand-magenta: var(--brand-magenta);
+	--color-brand-purple: var(--brand-purple);
+	--color-brand-dark: var(--brand-dark);
+	--color-brand-light: var(--brand-light);
+	--color-brand-50: var(--brand-50);
+	--shadow-quiz-active: 0 4px 16px rgb(255 84 16 / 0.15);
+}
+
+:root {
+	--brand: #ff5410;
+	--brand-accent: #ff6b35;
+	--brand-magenta: #d43800;
+	--brand-purple: #b83000;
+	--brand-dark: #1a1a1a;
+	--brand-light: #fff3ee;
+	--brand-50: #fff8f5;
+
+	--gray-50: #fafafa;
+	--gray-100: #9ca3af;
+	--gray-200: #e5e5e5;
+	--gray-300: #e0e0e0;
+	--gray-500: #685e57;
+	--slate-50: #faf6f5;
+	--slate-100: #a1a1a1;
+	--slate-500: #595959;
+	--slate-600: #555555;
+	--slate-800: #1a1a1a;
+
+	--font-primary: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-secondary: 'Gochi Hand', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-primary);
+		@apply antialiased text-brand-dark text-sm md:text-lg;
+	}
+
+	h1 {
+		@apply text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight;
+	}
+
+	h2 {
+		@apply text-3xl md:text-4xl lg:text-[40px] font-bold leading-snug;
+	}
+
+	h3 {
+		@apply text-2xl md:text-3xl font-bold leading-snug;
+	}
+
+	.btn {
+		@apply inline-flex px-8 py-3 font-bold items-center justify-center gap-x-2.5 rounded-xl cursor-pointer select-none transition-colors duration-200;
+	}
+
+	.btn-sm {
+		@apply px-3.5 py-[7px] text-sm md:text-base rounded;
+	}
+
+	.btn-primary {
+		@apply bg-brand text-white hover:bg-brand-magenta active:bg-brand-purple;
+	}
+
+	.btn-outline {
+		@apply bg-white text-brand-dark border border-brand-dark hover:bg-brand-dark hover:text-white;
+	}
+
+	.btn-dark {
+		@apply bg-brand-dark text-white hover:opacity-85;
+	}
+
+	.quiz-group {
+		@apply flex flex-col gap-3;
+	}
+
+	.quiz-option {
+		@apply flex items-center justify-between gap-4 px-5 py-[18px] border border-gray-300 rounded-[10px] bg-white cursor-pointer select-none transition-colors duration-150 ease-in-out hover:border-brand has-checked:border-brand has-checked:shadow-quiz-active;
+	}
+
+	.quiz-option__label {
+		@apply flex-1 text-base leading-normal text-slate-800;
+	}
+
+	.quiz-option__check {
+		@apply shrink-0 size-[22px] text-brand opacity-0 transition-opacity duration-150 group-has-checked:opacity-100;
+	}
+
+	.quiz-progress {
+		@apply h-1 bg-gray-200 rounded-sm overflow-hidden;
+	}
+
+	.quiz-progress__bar {
+		@apply h-full bg-brand rounded-sm transition-[width] duration-300 ease-in-out;
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1024px] 2xl:max-w-[1330px];
+}
