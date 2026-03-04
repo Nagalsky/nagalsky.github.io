@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{{> head}}
+	<title>{{siteName}} - Quiz 1</title>
+</head>
+
+<body class="min-h-dvh flex flex-col">
+	{{> header-quiz}}
+
+	<main class="grow">
+		<div class="px-4">
+			<div class="space-y-4 text-center">
+				<div class="quiz-progress">
+					<div class="quiz-progress__bar" style="width: 5%;"></div>
+				</div>
+				<p class="text-sm md:text-bases">Progress: <strong>1/20</strong></p>
+			</div>
+		</div>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8 mx-auto max-w-4xl">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Ready to level up your math skills?</h1>
+						<p class="text-gray-500">Our AI Tutor LearnBeyond crafts a customized learning plan
+							tailored to your
+							goals, current skills, and unique learning
+							style. In minutes, you'll unlock a daily study routine, targeted problem-solving exercises, and instant
+							support—all
+							within a dynamic, easy-to-use app.</p>
+					</div>
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How AI Tutor Works</h1>
+						<p class="text-gray-500">Learn more about LearnBeyond platform.</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-8">
+						<div class="gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-8 flex flex-row sm:flex-col">
+							<img src="./assets/images/icon-quiz.svg" alt="AI Tutor Works"
+								class="size-10 sm:size-16 sm:mx-auto shrink-0">
+							<div class="flex flex-col sm:items-center items-start gap-2 sm:text-center text-left">
+								<h3 class="font-bold text-base sm:text-lg">Take a quick quiz (5-7 minutes only)</h3>
+								<p class="text-gray-500 text-xs sm:text-sm/relaxed">Share details about your math skills, current
+									struggles, and
+									goals. This helps us identify your ideal starting point and
+									customize a learning path just for you.
+								</p>
+							</div>
+						</div>
+						<div class="gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-8 flex flex-row sm:flex-col">
+							<img src="./assets/images/icon-personalized.svg" alt="AI Tutor Works"
+								class="size-10 sm:size-16 sm:mx-auto shrink-0">
+							<div class="flex flex-col sm:items-center items-start gap-2 sm:text-center text-left">
+								<h3 class="font-bold text-base sm:text-lg">Receive your personalized tutoring lan</h3>
+								<p class="text-gray-500 text-xs sm:text-sm/relaxed">Based on your quiz responses, our AI Tutor generates
+									a tailored
+									math study plan instantly. Whether you’re revisiting
+									basic arithmetic or tackling advanced calculus, you’ll receive step-by-step lessons, practice quizzes,
+									and expert
+									guidance.
+								</p>
+							</div>
+						</div>
+						<div class="gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-8 flex flex-row sm:flex-col">
+							<img src="./assets/images/icon-solve.svg" alt="AI Tutor Works"
+								class="size-10 sm:size-16 sm:mx-auto shrink-0">
+							<div class="flex flex-col sm:items-center items-start gap-2 sm:text-center text-left">
+								<h3 class="font-bold text-base sm:text-lg">Snap & solve problems instantly</h3>
+								<p class="text-gray-500 text-xs sm:text-sm/relaxed">Stuck on a tricky question? Just take a photo of the
+									problem.
+									The AI Tutor will analyze it, break it down into simple
+									steps, and provide helpful hints to guide you through the solution.
+								</p>
+							</div>
+						</div>
+						<div class="gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-8 flex flex-row sm:flex-col">
+							<img src="./assets/images/icon-track.svg" alt="AI Tutor Works"
+								class="size-10 sm:size-16 sm:mx-auto shrink-0">
+							<div class="flex flex-col sm:items-center items-start gap-2 sm:text-center text-left">
+								<h3 class="font-bold text-base sm:text-lg">Practice and track your progress</h3>
+								<p class="text-gray-500 text-xs sm:text-sm/relaxed">Stay on track with daily exercises, engaging
+									challenges, and
+									progress monitoring. Real-time feedback ensures you see
+									exactly how far you’ve come and keeps you motivated to achieve your math goals.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Continue</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What’s your main goal for using this math tutor?</h1>
+						<p class="text-gray-500">Select all that apply.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q1" value="1" class="sr-only">
+								<span class="quiz-option__label">Improve grades in schoolImprove grades in school</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q1" value="2" class="sr-only">
+								<span class="quiz-option__label">Prepare for standardized tests (SAT, ACT, etc.)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q1" value="3" class="sr-only">
+								<span class="quiz-option__label">Brush up on math for college or career</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q1" value="4" class="sr-only">
+								<span class="quiz-option__label">Solve specific problems (e.g., algebra, geometry)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q1" value="5" class="sr-only">
+								<span class="quiz-option__label">Build confidence with math basics</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What’s your current math level?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q2" value="1" class="sr-only">
+								<span class="quiz-option__label">Beginner (basic operations)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q2" value="2" class="sr-only">
+								<span class="quiz-option__label">Intermediate (algebra, geometry)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q2" value="3" class="sr-only">
+								<span class="quiz-option__label">Advanced (calculus, statistics)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How do you currently feel about math?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q3" value="1" class="sr-only">
+								<span class="quiz-option__label">I love it but want to get better</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q3" value="2" class="sr-only">
+								<span class="quiz-option__label">It’s okay, but I need help</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q3" value="3" class="sr-only">
+								<span class="quiz-option__label">I don’t like it, but I know it’s important</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q3" value="4" class="sr-only">
+								<span class="quiz-option__label">I feel completely stuck</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What’s the hardest part of learning math for you?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q4" value="1" class="sr-only">
+								<span class="quiz-option__label">Understanding the concepts</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q4" value="2" class="sr-only">
+								<span class="quiz-option__label">Solving problems without getting stuck</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q4" value="3" class="sr-only">
+								<span class="quiz-option__label">Memorizing formulas</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q4" value="4" class="sr-only">
+								<span class="quiz-option__label">Staying motivated</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q4" value="5" class="sr-only">
+								<span class="quiz-option__label">All of the above</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What’s the most challenging area in math for you?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="1" class="sr-only">
+								<span class="quiz-option__label">Basic arithmetic (addition, subtraction, etc.)</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="2" class="sr-only">
+								<span class="quiz-option__label">Algebra</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="3" class="sr-only">
+								<span class="quiz-option__label">Geometry</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="4" class="sr-only">
+								<span class="quiz-option__label">Trigonometry</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="5" class="sr-only">
+								<span class="quiz-option__label">Calculus</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q5" value="6" class="sr-only">
+								<span class="quiz-option__label">Other</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Why is LearnBeyond the ultimate learning partner for you?
+						</h1>
+						<p class="text-gray-500">Learn more about our AI platform.</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-y-6 sm:gap-x-8">
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-personalized-plans.svg" alt="Personalized Plans"
+								class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">Personalized Learning Plans</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Adapts to your strengths and weaknesses for
+									efficient progress.
+								</p>
+							</div>
+						</div>
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-expert.svg" alt="Personalized Plans" class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">Expert-Curated Content</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Lessons and practice sets are designed by experienced
+									educators, ensuring accuracy and quality.
+								</p>
+							</div>
+						</div>
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-assistance.svg" alt="Personalized Plans"
+								class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">24/7 Instant Assistance</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Solve math problems anytime, anywhere with step-by-step
+									guidance.
+								</p>
+							</div>
+						</div>
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-analytics.svg" alt="Personalized Plans"
+								class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">In-Depth Analytics</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Track your speed, accuracy, and skill mastery. Celebrate
+									milestones and see exactly where you need extra practice.
+								</p>
+							</div>
+						</div>
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-practice.svg" alt="Personalized Plans" class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">Interactive Practice</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Master concepts with quizzes, visual explanations, and
+									real-time feedback.
+								</p>
+							</div>
+						</div>
+						<div class='gap-4 rounded-xl bg-slate-50 p-3 sm:px-6 sm:py-6 flex items-center'>
+							<img src="./assets/images/icon-device.svg" alt="Personalized Plans" class="size-12 sm:size-16 shrink-0">
+							<div class="flex-1 space-y-1">
+								<h3 class="font-bold text-base sm:text-lg">Seamless Multi-Device Access</h3>
+								<p class="text-gray-500 text-xs sm:text-sm">Learn anytime on mobile, tablet, or desktop with a smooth,
+									synced experience.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Continue Quiz</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How many days per week do you want to spend practicing
+							math?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q6" value="1" class="sr-only">
+								<span class="quiz-option__label">1 day</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q6" value="2" class="sr-only">
+								<span class="quiz-option__label">2 days</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q6" value="3" class="sr-only">
+								<span class="quiz-option__label">3 days</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q6" value="4" class="sr-only">
+								<span class="quiz-option__label">3+ days</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How much time can you dedicate to learning each day?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q7" value="1" class="sr-only">
+								<span class="quiz-option__label">10–15 minutes</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q7" value="2" class="sr-only">
+								<span class="quiz-option__label">20–30 minutes</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q7" value="3" class="sr-only">
+								<span class="quiz-option__label">1 hour or more</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How confident are you in your current math skills?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q8" value="1" class="sr-only">
+								<span class="quiz-option__label">Not confident at all</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q8" value="2" class="sr-only">
+								<span class="quiz-option__label">Somewhat confident</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q8" value="3" class="sr-only">
+								<span class="quiz-option__label">Very confident</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Do you often make these mistakes?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q9" value="1" class="sr-only">
+								<span class="quiz-option__label">Forgetting basic math facts</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q9" value="2" class="sr-only">
+								<span class="quiz-option__label">Mixing up formulas</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q9" value="3" class="sr-only">
+								<span class="quiz-option__label">Skipping steps in calculations</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q9" value="4" class="sr-only">
+								<span class="quiz-option__label">Misreading questions</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q9" value="5" class="sr-only">
+								<span class="quiz-option__label">I rarely make mistakes</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What’s your preferred learning style?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q10" value="1" class="sr-only">
+								<span class="quiz-option__label">Step-by-step explanations</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q10" value="2" class="sr-only">
+								<span class="quiz-option__label">Interactive quizzes and challenges</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q10" value="3" class="sr-only">
+								<span class="quiz-option__label">Watching video tutorials</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q10" value="4" class="sr-only">
+								<span class="quiz-option__label">Practicing with real-world examples</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Testimonials
+						</h1>
+						<p class="text-gray-500">What our users say.</p>
+					</div>
+
+					<div class="space-y-2 sm:space-y-4">
+						<div class="p-4 sm:p-8 bg-slate-50 space-y-2 sm:space-y-3">
+							<p class='italic'>"I’ve always struggled with math, but LearnBeyond changed everything! It adapts to my
+								needs, highlights mistakes, and
+								makes learning fun with quizzes. I now look forward to studying and feel much more confident!"</p>
+							<div class="flex items-center gap-2.5 justify-between">
+								<p class="font-bold text-brand max-sm:text-xs">— Jordan, High School Student</p>
+								<div class="flex shrink-0 gap-0.5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+								</div>
+							</div>
+						</div>
+						<div class="p-4 sm:p-8 bg-slate-50 space-y-2 sm:space-y-3">
+							<p class='italic'>“LearnBeyond is like having a private tutor in your pocket! The lessons are interactive
+								and easy to
+								follow. I love
+								earning badges for progress, though I wish there were more advanced topics. Great for brushing up on
+								skills!”</p>
+							<div class="flex items-center gap-2.5 justify-between">
+								<p class="font-bold text-brand max-sm:text-xs">— Maya, College Freshman</p>
+								<div class="flex shrink-0 gap-0.5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+								</div>
+							</div>
+						</div>
+						<div class="p-4 sm:p-8 bg-slate-50 space-y-2 sm:space-y-3">
+							<p class='italic'>"Using this AI tutor for my SAT prep was a lifesaver! It targeted my weak spots and
+								boosted my score from the 70th to
+								the 90th percentile. The explanations are clear, even for tough topics. Worth every penny!”</p>
+							<div class="flex items-center gap-2.5 justify-between">
+								<p class="font-bold text-brand max-sm:text-xs">— Simon, College Sophomore</p>
+								<div class="flex shrink-0 gap-0.5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+									<img src="./assets/images/star-brand.svg" alt="Star" class="size-5">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Continue Quiz</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Which math skill would you like to master first?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q11" value="1" class="sr-only">
+								<span class="quiz-option__label">Fractions and decimals</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q11" value="2" class="sr-only">
+								<span class="quiz-option__label">Solving equations</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q11" value="3" class="sr-only">
+								<span class="quiz-option__label">Graphing</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q11" value="4" class="sr-only">
+								<span class="quiz-option__label">Word problems</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q11" value="5" class="sr-only">
+								<span class="quiz-option__label">Real-life math applications</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How do you usually prepare for math exams?</h1>
+						<p class="text-gray-500">Select all that apply.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q12" value="1" class="sr-only">
+								<span class="quiz-option__label">Reviewing class notes</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q12" value="2" class="sr-only">
+								<span class="quiz-option__label">Watching online videos</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q12" value="3" class="sr-only">
+								<span class="quiz-option__label">Practicing problems</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q12" value="4" class="sr-only">
+								<span class="quiz-option__label">I don’t have a set method</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">How often would you like to receive learning tips or
+							updates?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q13" value="1" class="sr-only">
+								<span class="quiz-option__label">Daily reminders</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q13" value="2" class="sr-only">
+								<span class="quiz-option__label">Weekly updates</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q13" value="3" class="sr-only">
+								<span class="quiz-option__label">As needed</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">What kind of rewards or motivation works for you?</h1>
+						<p class="text-gray-500">Select one that describes it best.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q14" value="1" class="sr-only">
+								<span class="quiz-option__label">Fun games or challenges</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q14" value="2" class="sr-only">
+								<span class="quiz-option__label">Achieving milestones and earning badges</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q14" value="3" class="sr-only">
+								<span class="quiz-option__label">Seeing measurable progress in skills</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="radio" name="quiz-q14" value="4" class="sr-only">
+								<span class="quiz-option__label">Encouraging feedback from a tutor</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Would you like to track your progress with:</h1>
+						<p class="text-gray-500">Select all that apply.</p>
+					</div>
+					<div class="space-y-5 mx-auto max-w-[590px]">
+						<fieldset class="quiz-group">
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q15" value="1" class="sr-only">
+								<span class="quiz-option__label">Visual graphs and charts</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q15" value="2" class="sr-only">
+								<span class="quiz-option__label">Earning badges or achievements</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q15" value="3" class="sr-only">
+								<span class="quiz-option__label">Seeing improvements in speed and accuracy</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+
+							<label class="quiz-option group">
+								<input type="checkbox" name="quiz-q15" value="4" class="sr-only">
+								<span class="quiz-option__label">All of the above</span>
+								<span class="quiz-option__check" aria-hidden="true">
+									<img src="./assets/images/icon-check-mark.svg" alt="Check Mark" class="size-5">
+								</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="text-center">
+						<a href="#" class="btn btn-primary sm:px-14">Next</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 md:py-24">
+			<div class="container">
+				<div class="space-y-4 sm:space-y-8">
+					<div class="space-y-4 text-center">
+						<img src="./assets/images/avatar.webp" alt="Avatar" class="mx-auto size-32">
+						<h1 class="font-bold text-[22px] md:text-[28px]">Congrats, you've created your personalized math plan!</h1>
+						<p class="text-gray-500">Enter your email to see what math results you can achieve with the help of
+							LearnBeyond.</p>
+					</div>
+					<div class="p-4 sm:p-10 space-y-4 mx-auto max-w-[590px] rounded-xl bg-[#f3eeeb]">
+						<input type="email" placeholder="Enter your email here..."
+							class="w-full py-2 px-4 rounded-xl border border-[#bcb2aa] bg-white placeholder:text-gray-[#64625f] focus-within:border-brand focus:border-brand focus:outline-none h-[44px] md:h-[55px] text-base">
+						<button type="submit" class="btn btn-primary w-full">See my results</button>
+						<div class="flex items-start gap-2">
+							<img src="./assets/images/icon-secure.svg" alt="Secure" class="size-5">
+							<p class="text-slate-500 text-sm">Your personal data is safe with us. We don’t send spam or share email
+								addresses with third parties.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script type="module" src="./main.js"></script>
+</body>
+
+</html>
