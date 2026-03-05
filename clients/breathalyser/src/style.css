@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./assets/fonts/montserrat/Montserrat-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./assets/fonts/montserrat/Montserrat-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-navy: var(--navy);
+	--color-navy-light: var(--navy-light);
+	--color-green-500: var(--green-500);
+	--color-green-600: var(--green-600);
+	--color-footer-bg: var(--footer-bg);
+	--color-menu-icon: var(--menu-icon);
+	--color-shadow-soft: var(--shadow-soft);
+}
+
+:root {
+	--navy: #2a425b;
+	--navy-light: #2f455c;
+
+	--green-500: #05c653;
+	--green-600: #00a843;
+
+	--footer-bg: #f2f6fb;
+
+	--menu-icon: #b6bdc6;
+	--shadow-soft: #acafbb;
+
+	--font-primary: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-primary);
+		color: var(--navy);
+		background-color: #fff;
+		@apply antialiased;
+	}
+
+	h1 {
+		@apply text-3xl leading-tight font-bold text-navy sm:text-3xl lg:text-5xl xl:text-[56px];
+	}
+
+	h2 {
+		@apply text-2xl font-bold text-navy md:text-4xl;
+	}
+
+	h3 {
+		@apply text-lg font-bold text-navy md:text-xl;
+	}
+
+	p {
+		@apply text-[15px] md:text-lg;
+	}
+
+	a {
+		@apply transition-colors duration-150;
+	}
+
+	.btn-primary {
+		@apply inline-flex items-center justify-center rounded-[10px] bg-green-500 px-7 py-3 text-sm font-semibold tracking-[0.7px] uppercase text-white transition-all duration-200 hover:bg-green-600 active:scale-[0.98];
+	}
+
+	.nav-link {
+		@apply text-[15px] font-light text-navy hover:text-navy/70 transition-colors duration-150;
+	}
+
+	.date-badge {
+		@apply inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-medium text-green-500 md:text-lg md:px-6 md:py-2;
+	}
+
+	.check-icon {
+		@apply shrink-0 mt-0.5 flex size-5 items-center justify-center rounded-full bg-green-500 text-[10px] font-bold text-white;
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1140px];
+}
+
+@utility hero-gradient {
+	background: linear-gradient(
+		to bottom,
+		rgba(42, 74, 107, 0) 0%,
+		rgba(38, 71, 105, 0.29) 100%
+	);
+}
