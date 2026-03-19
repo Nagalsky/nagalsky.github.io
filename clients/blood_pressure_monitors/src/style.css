@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Roboto';
+	src:
+		url('./assets/fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('./assets/fonts/roboto/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src:
+		url('./assets/fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+		url('./assets/fonts/roboto/Roboto-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-navy: var(--navy);
+	--color-navy-light: var(--navy-light);
+	--color-cyan: var(--cyan);
+	--color-green-500: var(--green-500);
+	--color-green-600: var(--green-600);
+	--color-green-light: var(--green-light);
+	--color-red-500: var(--red-500);
+	--color-red-light: var(--red-light);
+	--color-footer-bg: var(--footer-bg);
+	--color-section-bg: var(--section-bg);
+	--color-text-gray: var(--text-gray);
+	--color-border-color: var(--border-color);
+	--color-body-bg: var(--body-bg);
+	--color-muted: var(--muted);
+	--color-muted-soft: var(--muted-soft);
+}
+
+:root {
+	--cyan: #00aeef;
+
+	--muted: #838383;
+	--muted-soft: #484848;
+
+	--green-500: #00c24e;
+	--green-600: #00a843;
+	--green-light: #f2fcf6;
+
+	--red-500: #c20303;
+	--red-light: #fcf4f5;
+
+	--body-bg: #fbfbfb;
+
+	--font-primary: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	body {
+		font-family: var(--font-primary);
+		@apply antialiased bg-body-bg text-black md:text-lg;
+	}
+
+	h1 {
+		@apply text-[2rem] leading-tight font-bold  sm:text-4xl lg:text-5xl xl:text-[52px];
+	}
+
+	h2 {
+		@apply text-[22px] font-bold  md:text-[30px] md:leading-tight;
+	}
+
+	h3 {
+		@apply text-lg font-bold md:text-xl;
+	}
+
+	h4 {
+		@apply text-lg font-semibold;
+	}
+
+	a {
+		@apply transition-colors duration-150;
+	}
+
+	.btn-primary {
+		@apply inline-flex items-center justify-center rounded-[10px] bg-cyan px-8 py-3 text-sm font-bold tracking-[0.8px] uppercase text-white transition-all duration-200 hover:opacity-90 active:scale-[0.97];
+		height: 50px;
+	}
+
+	.btn-outline {
+		@apply inline-flex items-center justify-center rounded-[9px] border-2 border-cyan px-8 text-sm font-bold tracking-[0.8px] uppercase text-cyan transition-all duration-200 hover:bg-cyan hover:text-white active:scale-[0.97];
+		height: 48px;
+	}
+
+	.nav-link {
+		@apply text-[13px] font-semibold tracking-[0.6px] uppercase  hover:text-cyan transition-colors duration-150;
+	}
+
+	.date-badge {
+		@apply inline-flex items-center rounded-full bg-green-light border border-green-500/25 px-4 py-2 text-sm font-semibold text-green-500;
+	}
+
+	.rating-bar {
+		@apply relative h-2 overflow-hidden rounded-full;
+		background-color: rgba(72, 72, 72, 0.1);
+	}
+
+	.rating-fill {
+		@apply absolute left-0 top-0 h-full rounded-full bg-green-500 transition-all duration-700;
+	}
+
+	.grade-badge {
+		@apply inline-flex items-center justify-center rounded-lg px-3 py-1 text-sm font-bold text-white tracking-wide;
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1170px];
+}
