@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Arimo';
+	src:
+		url('./assets/fonts/arimo/Arimo-Bold.woff2') format('woff2'),
+		url('./assets/fonts/arimo/Arimo-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Arimo';
+	src:
+		url('./assets/fonts/arimo/Arimo-Regular.woff2') format('woff2'),
+		url('./assets/fonts/arimo/Arimo-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-navy: var(--navy);
+	--color-navy-light: var(--navy-light);
+	--color-cyan: var(--cyan);
+	--color-green-500: var(--green-500);
+	--color-green-600: var(--green-600);
+	--color-green-light: var(--green-light);
+	--color-red-500: var(--red-500);
+	--color-red-light: var(--red-light);
+	--color-footer-bg: var(--footer-bg);
+	--color-section-bg: var(--section-bg);
+	--color-text-gray: var(--text-gray);
+	--color-border-color: var(--border-color);
+	--color-body-bg: var(--body-bg);
+	--color-muted: var(--muted);
+	--color-muted-soft: var(--muted-soft);
+	--color-muted-light: var(--muted-light);
+}
+
+:root {
+	--cyan: #3771ff;
+	--cyan-rgb: 55 113 255;
+
+	--muted: #303030;
+	--muted-soft: #484848;
+	--muted-light: #404347;
+
+	--green-500: #419d78;
+	--green-600: #00a843;
+	--green-light: #f2fcf6;
+
+	--red-500: #c20303;
+	--red-light: #fcf4f5;
+
+	--body-bg: #fbfbfb;
+
+	--font-primary: 'Arimo', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+	body {
+		font-family: var(--font-primary);
+		@apply antialiased text-muted md:text-lg;
+	}
+
+	h1 {
+		@apply text-2xl leading-tight font-bold text-muted-light sm:text-4xl lg:text-5xl xl:text-[52px];
+	}
+
+	h2 {
+		@apply text-[22px] font-bold text-muted-light md:text-[30px] md:leading-tight;
+	}
+
+	h3 {
+		@apply text-lg font-bold text-muted-light md:text-xl;
+	}
+
+	h4 {
+		@apply text-lg font-semibold text-muted-light;
+	}
+
+	a {
+		@apply transition-colors duration-150;
+	}
+
+	.btn-primary {
+		@apply inline-flex items-center justify-center bg-cyan px-8 py-3 font-bold tracking-[0.8px] uppercase text-white transition-all duration-200 hover:opacity-90 h-[60px] shadow-[0_4px_12px_#3771ff40];
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1170px];
+}
