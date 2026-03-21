@@ -1,0 +1,34 @@
+import EmblaCarousel from 'embla-carousel'
+import './style.css'
+
+const mainEl = document.getElementById('embla-main')
+const thumbsEl = document.getElementById('embla-thumbs')
+
+if (mainEl && thumbsEl) {
+  const mainCarousel = EmblaCarousel(mainEl, {
+    loop: false,
+    align: 'start',
+    dragFree: false,
+  })
+
+  const thumbButtons = thumbsEl.querySelectorAll('.gallery__thumb')
+
+  const selectThumb = (index) => {
+    thumbButtons.forEach((btn, i) => {
+      btn.classList.toggle('gallery__thumb--selected', i === index)
+    })
+  }
+
+  selectThumb(mainCarousel.selectedScrollSnap())
+
+  mainCarousel.on('select', () => {
+    selectThumb(mainCarousel.selectedScrollSnap())
+  })
+
+  thumbButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = Number(btn.dataset.index)
+      mainCarousel.scrollTo(index)
+    })
+  })
+}
