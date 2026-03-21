@@ -24,7 +24,7 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, 'src/partials'),
       context: {
-        siteName: 'Parents Purchase',
+        siteName: 'AXEG Pro Bundle',
         currentYear: new Date().getFullYear(),
       },
     }),
