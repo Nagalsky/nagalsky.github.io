@@ -11,12 +11,35 @@ if (mainEl && thumbsEl) {
     dragFree: false,
   })
 
+  let thumbsCarousel = null
+
+  const initThumbsCarousel = () => {
+    if (window.innerWidth < 768) {
+      if (!thumbsCarousel) {
+        thumbsCarousel = EmblaCarousel(thumbsEl, {
+          containScroll: 'keepSnaps',
+          dragFree: true,
+          axis: 'x',
+        })
+      }
+    } else {
+      if (thumbsCarousel) {
+        thumbsCarousel.destroy()
+        thumbsCarousel = null
+      }
+    }
+  }
+
+  initThumbsCarousel()
+  window.addEventListener('resize', initThumbsCarousel)
+
   const thumbButtons = thumbsEl.querySelectorAll('.gallery__thumb')
 
   const selectThumb = (index) => {
     thumbButtons.forEach((btn, i) => {
       btn.classList.toggle('gallery__thumb--selected', i === index)
     })
+    thumbsCarousel?.scrollTo(index)
   }
 
   selectThumb(mainCarousel.selectedScrollSnap())
