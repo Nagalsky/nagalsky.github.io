@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('./assets/fonts/inter/Inter-Bold.woff2') format('woff2'),
+		url('./assets/fonts/inter/Inter-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('./assets/fonts/inter/Inter-Italic.woff2') format('woff2'),
+		url('./assets/fonts/inter/Inter-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('./assets/fonts/inter/Inter-Regular.woff2') format('woff2'),
+		url('./assets/fonts/inter/Inter-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('./assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'),
+		url('./assets/fonts/inter/Inter-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-violet-600: var(--violet-600);
+	--color-violet-900: var(--violet-900);
+	--color-gray-200: var(--gray-200);
+	--color-gray-300: var(--gray-300);
+	--color-violet-800: var(--violet-800);
+	--color-magenta-500: var(--magenta-500);
+	--color-purple-900: var(--purple-900);
+	--color-blue-500: var(--blue-500);
+	--color-blue-900: var(--blue-900);
+	--color-green-500: var(--green-500);
+	--color-green-300: var(--green-300);
+}
+
+:root {
+	--violet-600: #400875;
+	--violet-900: #1c1233;
+	--violet-800: #252641;
+	--gray-200: #f8f8f8;
+	--gray-300: #eeeeee;
+	--magenta-500: #f41585;
+	--purple-900: #650462;
+	--blue-500: #009bbb;
+	--blue-900: #232b32;
+	--green-300: #9ec69e;
+	--green-500: #4bae4f;
+
+	--font-primary: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	body {
+		font-family: var(--font-primary);
+		@apply antialiased bg-gray-200 md:text-lg;
+	}
+
+	h1 {
+		@apply text-3xl leading-tight font-bold sm:text-3xl xl:text-[42px];
+	}
+
+	h2 {
+		@apply text-2xl font-bold md:text-4xl;
+	}
+
+	h3 {
+		@apply text-xl font-bold md:text-2xl;
+	}
+
+	a {
+		@apply transition-colors duration-150;
+	}
+
+	.btn-primary {
+		@apply inline-flex items-center justify-center rounded-lg bg-linear-to-t from-[#3BBD48] to-[#0C6F46] px-4 py-3.5 font-bold tracking-[0.7px] text-white transition-all duration-200 hover:brightness-90 border-b-3 border-[#0C6F46] text-center;
+	}
+}
+
+@utility container {
+	@apply mx-auto w-full px-4 xl:max-w-[1240px];
+}
